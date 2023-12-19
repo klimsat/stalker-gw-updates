@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<game_dialogs>
+    <dialog id="dialog_leader_stalker">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_stalker</init_func>
+    </dialog>
+    <dialog id="dialog_leader_bandit">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_bandit</init_func>
+    </dialog>
+    <dialog id="dialog_leader_csky">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_csky</init_func>
+    </dialog>
+    <dialog id="dialog_leader_army">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_army</init_func>
+    </dialog>
+    <dialog id="dialog_leader_freedom">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_freedom</init_func>
+    </dialog>
+    <dialog id="dialog_leader_dolg">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_dolg</init_func>
+    </dialog>
+    <dialog id="dialog_leader_ecolog">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_ecolog</init_func>
+    </dialog>
+    <dialog id="dialog_leader_killer">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_killer</init_func>
+    </dialog>
+    <dialog id="dialog_leader_monolith">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_monolith</init_func>
+    </dialog>
+    <dialog id="dialog_leader_zombied">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_zombied</init_func>
+    </dialog>
+    <dialog id="dialog_leader_isg">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_isg</init_func>
+    </dialog>
+    <dialog id="dialog_leader_darkstalker">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_darkstalker</init_func>
+    </dialog>
+    <dialog id="dialog_leader_renegate">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_renegate</init_func>
+    </dialog>
+    <dialog id="dialog_leader_varyag">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_varyag</init_func>
+    </dialog>
+    <dialog id="dialog_leader_slizni">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_slizni</init_func>
+    </dialog>
+    <dialog id="dialog_leader_velhan">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_velhan</init_func>
+    </dialog>
+    <dialog id="dialog_leader_fantom">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_fantom</init_func>
+    </dialog>
+    <dialog id="dialog_leader_veter">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_veter</init_func>
+    </dialog>
+    <dialog id="dialog_leader_osoznanie">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_osoznanie</init_func>
+    </dialog>
+    <dialog id="dialog_leader_alfa">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_alfa</init_func>
+    </dialog>
+    <dialog id="dialog_leader_apocalypse">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_apocalypse</init_func>
+    </dialog>
+    <dialog id="dialog_leader_adinkvizicia">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_adinkvizicia</init_func>
+    </dialog>
+    <dialog id="dialog_leader_hunter">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_hunter</init_func>
+    </dialog>
+    <dialog id="dialog_leader_voenstal">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_voenstal</init_func>
+    </dialog>
+    <dialog id="dialog_leader_mirotvorec">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_mirotvorec</init_func>
+    </dialog>
+    <dialog id="dialog_leader_ryskuspecnaz">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_ryskuspecnaz</init_func>
+    </dialog>
+    <dialog id="dialog_leader_sby">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_sby</init_func>
+    </dialog>
+    <dialog id="dialog_leader_angel">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_angel</init_func>
+    </dialog>
+    <dialog id="dialog_leader_posleduden">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_posleduden</init_func>
+    </dialog>
+    <dialog id="dialog_leader_greh">
+        <dont_has_info>actor_bought_leader</dont_has_info>
+        <precondition>xr_conditions.sameFaction</precondition>
+        <init_func>dlg_init_leader_greh</init_func>
+    </dialog>
+</game_dialogs>

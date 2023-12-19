@@ -1,0 +1,358 @@
+;---------------------------------------------------------------------------------------------
+;		Пацанский плащ
+;---------------------------------------------------------------------------------------------
+[slizni_trenchcoat_outfit]:outfit_novice_base
+$spawn                                   = "outfit\slizni_trenchcoat_outfit"
+visual                                   = dynamics\outfit\slizni_trenchcoat_outfit
+actor_visual                             = actors\stalker_slizni\slizni_plash_mask_1_0.ogf
+npc_visual                               = actors\stalker_slizni\slizni_plash_mask_1_0.ogf
+player_hud_section                       = actor_hud_bandit_trench
+
+
+inv_name                                 = slizni_trenchcoat_outfit_name
+inv_name_short                           = slizni_trenchcoat_outfit_name
+description                              = slizni_trenchcoat_outfit_description
+
+inv_weight                               = 1.0
+
+inv_grid_height                          = 3
+
+inv_grid_x                               = 52
+inv_grid_y                               = 46
+
+upgr_icon_x                              = 636
+upgr_icon_y                              = 0
+
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+
+cost                                     = 1500
+
+immunities_sect                          = sect_trenchcoat_outfit_immunities
+
+; NO RESISTANCE
+burn_protection                          = 0.0233
+shock_protection                         = 0.0933
+radiation_protection                     = 0.0035
+chemical_burn_protection                 = 0.0233
+telepatic_protection                     = 0.0
+strike_protection                        = 0.0350
+explosion_protection                     = 0.0350
+wound_protection                         = 0.0350
+
+bones_koeff_protection                   = actor_armor_trench
+
+character_portrait							 = ui_inGame2_slizni_plash_mask_1_0
+
+[sect_slizni_trenchcoat_outfit_immunities]
+burn_immunity                            = 0.05	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.05
+wound_immunity                           = 0.05
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.05
+explosion_immunity                       = 0.05
+fire_wound_immunity                      = 0.02
+
+[sect_slizni_trenchcoat_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.005
+
+;---------------------------------------------------------------------------------------------
+;       Пацанская куртка
+;---------------------------------------------------------------------------------------------
+[slizni_novice_outfit]:outfit_novice_base
+$spawn                                   = "outfit\slizni_novice_outfit"
+visual                                   = dynamics\outfit\novice_slizni_outfit
+actor_visual                             = actors\stalker_slizni\slizni_rukzak_mask_0_0.ogf
+npc_visual                               = actors\stalker_slizni\slizni_rukzak_mask_0_0.ogf
+player_hud_section                       = actor_hud_bandit_novice
+
+
+inv_name                                 = slizni_novice_outfit_name
+inv_name_short                           = slizni_novice_outfit_name
+description                              = slizni_novice_outfit_description
+
+
+inv_grid_x                               = 62
+inv_grid_y                               = 32
+
+upgr_icon_x                              = 1239
+upgr_icon_y                              = 340
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+
+character_portrait						 = ui_inGame2_slizni_rukzak_mask_0_0
+
+upgrades                                 = up_gr_firstab_rookie_outfit, up_gr_seconab_rookie_outfit, up_gr_thirdab_rookie_outfit
+
+;---------------------------------------------------------------------------------------------
+;		Пацанский бронежилет
+;---------------------------------------------------------------------------------------------
+[slizni_outfit]:outfit_base
+$spawn                                   = "outfit\slizni_specops_outfit"
+visual                                   = dynamics\outfit\slizni_leader_outfit
+actor_visual                             = actors\stalker_slizni\slizni_mask_2_0.ogf
+npc_visual                               = actors\stalker_slizni\slizni_mask_2_0.ogf
+player_hud_section                       = actor_hud_bandit_merc
+
+ef_equipment_type                        = 3
+
+inv_name                                 = slizni_outfit_name
+inv_name_short                           = slizni_outfit_name
+description                              = slizni_outfit_description
+
+inv_weight                               = 11.0
+
+inv_grid_x         						 = 54
+inv_grid_y        						 = 46
+
+upgr_icon_x                              = 3139
+upgr_icon_y                              = 660
+upgr_icon_width                          = 301
+upgr_icon_height                         = 132
+
+full_icon_name                           = npc_icon_bandit_specops_outfit
+
+cost                                     = 15500
+full_scale_icon                          = 4,6	                                       ;иконка сталкера в костюме в полный рост
+power_loss                               = 0.8
+immunities_sect                          = sect_slizni_outfit_immunities
+
+; LOW RESISTANCE
+burn_protection                          = 0.0333
+shock_protection                         = 0.1333
+radiation_protection                     = 0.0050
+chemical_burn_protection                 = 0.0333
+telepatic_protection                     = 0.0
+strike_protection                        = 0.2275
+explosion_protection                     = 0.2275
+wound_protection                         = 0.2275
+
+hit_fraction_actor                       = 0.5
+bones_koeff_protection                   = actor_armor_berill
+
+artefact_count                           = 0
+control_inertion_factor                  = 1.5
+
+upgrades                                 = up_gr_firstab_specops_outfit, up_gr_seconab_specops_outfit, up_gr_thirdab_specops_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_specops
+character_portrait						 = ui_inGame2_slizni_mask_2_0
+
+[sect_slizni_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_slizni_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		Пацанский УП-1
+;---------------------------------------------------------------------------------------------
+[slizni_trenchcoat_brown_outfit]:outfit_base
+$spawn                                   = "outfit\slizni_trenchcoat_outfit"
+visual                                   = dynamics\outfit\slizni_fallout_3_outfit
+actor_visual                             = actors\stalker_slizni\slizni_follaut_3.ogf
+npc_visual                               = actors\stalker_slizni\slizni_follaut_3.ogf
+player_hud_section                       = actor_hud_brown_trench
+
+ef_equipment_type                        = 3
+
+inv_name                                 = slizni_trenchcoat_brown_outfit_name
+inv_name_short                           = slizni_trenchcoat_brown_outfit_name
+description                              = slizni_trenchcoat_brown_outfit_description
+
+inv_weight                               = 6.0
+
+inv_grid_height                          = 3
+
+inv_grid_x      						 = 64
+inv_grid_y								 = 31
+
+upgr_icon_x                              = 942
+upgr_icon_y                              = 0
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+full_icon_name                           = npc_icon_dolg_outfit
+
+cost                                     = 16500
+full_scale_icon                          = 8,11	                                       ;иконка сталкера в костюме в полный рост
+
+immunities_sect                          = sect_trenchcoat_brown_outfit_immunities
+
+; LOW RESISTANCE
+burn_protection                          = 0.0333
+shock_protection                         = 0.1333
+radiation_protection                     = 0.0050
+chemical_burn_protection                 = 0.0333
+telepatic_protection                     = 0.0
+strike_protection                        = 0.2100
+explosion_protection                     = 0.2100
+wound_protection                         = 0.2100
+
+hit_fraction_actor                       = 0.6
+bones_koeff_protection                   = actor_armor_duty_suit
+
+artefact_count                           = 1
+control_inertion_factor                  = 1.2
+power_loss                               = 0.6
+
+upgrades                                 = up_gr_firstab_dolg_outfit, up_gr_seconab_dolg_outfit, up_gr_thirdab_dolg_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_dolg_outfit
+character_portrait						 = ui_inGame2_slizni_follaut_3
+
+[sect_slizni_trenchcoat_brown_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_slizni_trenchcoat_brown_outfit_immunities_add]
+burn_immunity                            = -0.015	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.015
+wound_immunity                           = -0.015
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.015
+explosion_immunity                       = -0.015
+fire_wound_immunity                      = -0.003
+;---------------------------------------------------------------------------------------------
+;		Leader Slizni Outfit
+;---------------------------------------------------------------------------------------------
+[leader_slizni_outfit]:outfit_base
+$spawn                                   = "outfit\leader_slizni_outfit"
+visual                                   = dynamics\outfit\slizni_leader_outfit
+actor_visual                             = actors\stalker_slizni\slizni_leader.ogf
+npc_visual                               = actors\stalker_slizni\slizni_leader.ogf
+player_hud_section                       = actor_hud_slizni_suit
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_slizni_outfit_name
+inv_name_short                           = leader_slizni_outfit_name
+description                              = leader_slizni_outfit_description
+
+inv_weight                               = 2.5
+
+inv_grid_x         						 = 54
+inv_grid_y        						 = 46
+
+upgr_icon_x                              = 3440
+upgr_icon_y                              = 984
+upgr_icon_width                          = 320
+upgr_icon_height                         = 164
+
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 53800 
+
+full_scale_icon                          = 14,11
+
+immunities_sect                          = sect_leader_slizni_outfit_immunities
+
+; LOW RESISTANCE
+burn_protection                          = 0.0432
+shock_protection                         = 0.1732
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0432
+telepatic_protection                     = 0.0000
+strike_protection                        = 0.3487
+explosion_protection                     = 0.3487
+wound_protection                         = 0.3487
+
+fire_wound_protection                    = 0.1950
+
+hit_fraction_actor                       = 0.45
+control_inertion_factor                  = 1.2
+bones_koeff_protection                   = sby_leader
+
+health_restore_speed                     = 0.00045
+bleeding_restore_speed                   = 0.003
+power_restore_speed                      = 0.005
+power_loss                               = 0.85
+
+additional_inventory_weight              = 25
+additional_inventory_weight2             = 25
+
+artefact_count                           = 5
+
+character_portrait						 = ui_inGame2_slizni_gas_2_0
+
+[sect_leader_slizni_outfit_immunities]
+burn_immunity                            = 0.0001
+strike_immunity                          = 0.0150
+shock_immunity                           = 0.0250
+wound_immunity                           = 0.0001
+radiation_immunity                       = 0.0000
+telepatic_immunity                       = 0.0000
+chemical_burn_immunity                   = 0.0001
+explosion_immunity                       = 0.0001
+fire_wound_immunity                      = 0.0120
+;---------------------------------------------------------------------------------------------
+;OUTFIT IN AZAZEL MODE: Leader Slizni Outfit
+;---------------------------------------------------------------------------------------------
+[leader_azazel_slizni_outfit]:outfit_leader_exo_base
+$spawn                                   = "outfit\leader_azazel_slizni_outfit"
+visual                                   = dynamics\outfit\slizni_leader_outfit
+actor_visual                             = actors\stalker_slizni\slizni_leader.ogf
+npc_visual                               = actors\stalker_slizni\slizni_leader.ogf
+player_hud_section                       = actor_hud_slizni_suit
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_slizni_outfit_name
+inv_name_short                           = leader_slizni_outfit_name
+description                              = leader_slizni_outfit_description
+
+inv_weight                               = 2.5
+
+inv_grid_x         						 = 54
+inv_grid_y        						 = 46
+
+upgr_icon_x                              = 3440
+upgr_icon_y                              = 984
+upgr_icon_width                          = 320
+upgr_icon_height                         = 164
+
+cost                                     = 53800
+
+artefact_count                           = 1
+
+helmet_avaliable						 = false
+
+sprint_allowed							 = true
+
+power_loss                               = 0.75
+
+character_portrait						 = ui_inGame2_slizni_gas_2_0

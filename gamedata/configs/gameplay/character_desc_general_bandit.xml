@@ -1,0 +1,4107 @@
+<specific_character id="sim_default_bandit_leader_sultan" team_default = "1">
+    <name>Султан</name>
+    <icon>ui_inGame2_bandit_9sultan</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Лидер Бандитов.</bio>
+    <class>sim_default_bandit_leader_sultan</class>
+    <community>bandit</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>18950</rank>
+    <reputation>1000</reputation>
+    <visual>actors\stalker_bandit\bandit_leader</visual>
+    <money min="22000" max="91750" infinitive="0"/>
+    <supplies>
+    [spawn] \n
+    wpn_m4bm \n
+    ammo_6.8x43_fmj = 2 \n
+    wpn_desert_eagle_357 \n
+    ammo_357_fmj = 2 \n
+    grenade_f1 = 4 \n
+    medkit = 5 \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs_leaders.xml"
+    <actor_dialog>dialog_leader_bandit</actor_dialog>
+</specific_character>
+
+<specific_character id="sim_default_bandit_djentlmen" team_default = "1">
+    <name>Джентльмен</name>
+    <icon>ui_inGame2_bandit_9exo</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_bandit_djentlmen</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1500</reputation>
+    <money min="10000" max="50000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_exo</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_kastet" team_default = "1">
+    <name>Кастет</name>
+    <icon>ui_inGame2_bandit_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_kastet</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>-5000</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+<specific_character id="sim_default_bandit_kocherga" team_default = "1">
+    <name>Кочерга</name>
+    <icon>ui_inGame2_bandit_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_kocherga</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>-5000</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+<!--  bandit zelen  -->
+    <specific_character id="stalker_bandit_1_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_zelen_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>500</rank>
+    <reputation>-100</reputation>
+    <money min="250" max="1000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="stalker_bandit1a_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_zelen_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>500</rank>
+    <reputation>-100</reputation>
+    <money min="250" max="1000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="stalker_bandit1b_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_zelen_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>500</rank>
+    <reputation>-100</reputation>
+    <money min="250" max="1000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1b</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="stalker_bandit1c_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_zelen_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>500</rank>
+    <reputation>-100</reputation>
+    <money min="250" max="1000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1c</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="stalker_bandit_1_mask_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_zelen_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>500</rank>
+    <reputation>-100</reputation>
+    <money min="250" max="1000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="stalker_bandit1a_mask_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_zelen_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>500</rank>
+    <reputation>-100</reputation>
+    <money min="250" max="1000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1a_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="stalker_bandit1b_mask_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_zelen_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>500</rank>
+    <reputation>-100</reputation>
+    <money min="250" max="1000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1b_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="stalker_bandit1c_mask_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_zelen_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>500</rank>
+    <reputation>-100</reputation>
+    <money min="250" max="1000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1c_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="stalker_bandit_a_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_zelen_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>500</rank>
+    <reputation>-100</reputation>
+    <money min="250" max="1000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="stalker_bandita1_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_zelen_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>500</rank>
+    <reputation>-100</reputation>
+    <money min="250" max="1000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandita1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="stalker_bandita2_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_zelen_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>500</rank>
+    <reputation>-100</reputation>
+    <money min="250" max="1000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandita2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="stalker_bandita3_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_zelen_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>500</rank>
+    <reputation>-100</reputation>
+    <money min="250" max="1000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandita3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="stalker_bandit_1_2_build_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_zelen_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>500</rank>
+    <reputation>-100</reputation>
+    <money min="250" max="1000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1_2_build</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="bandit_novice_3_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_zelen_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>500</rank>
+    <reputation>-100</reputation>
+    <money min="250" max="1000" infinitive="0"/>
+    <visual>actors\stalker_bandit\bandit_novice_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="stalker_bandit_s20_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_zelen_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>500</rank>
+    <reputation>-100</reputation>
+    <money min="250" max="1000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_s20</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="stalker_bandit1a_nohood_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_zelen_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>500</rank>
+    <reputation>-100</reputation>
+    <money min="250" max="1000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1a_nohood</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="stalker_bandit1a_nohood_mask_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_zelen_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>500</rank>
+    <reputation>-100</reputation>
+    <money min="250" max="1000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1a_nohood_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="stalker_bandits2b_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_zelen_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>500</rank>
+    <reputation>-100</reputation>
+    <money min="250" max="1000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandits2b</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="stalker_bandits2c_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_zelen_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>500</rank>
+    <reputation>-100</reputation>
+    <money min="250" max="1000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandits2c</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="stalker_bandits4b_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_zelen_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>500</rank>
+    <reputation>-100</reputation>
+    <money min="250" max="1000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandits4b</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="stalker_bandits4c_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_zelen_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>500</rank>
+    <reputation>-100</reputation>
+    <money min="250" max="1000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandits4c</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<!--  bandit novice  -->
+    <specific_character id="sim_default_bandit_0_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1b</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_0_default_3" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1c</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_0_default_4" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_0_default_5" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1a_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_0_default_6" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1b_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_0_default_7" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1c_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_0_default_8" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_0_default_9" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandita1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_0_default_10" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandita2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_0_default_11" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandita3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_0_default_12" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1_gas</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_0_default_13" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1a_gas</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_0_default_14" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1b_gas</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_0_default_15" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1c_gas</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_0_default_16" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1_2_build</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_0_default_17" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\bandit_novice_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_0_default_18" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_0_default_20" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_s20</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_0_default_21" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1a_bala</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_0_default_22" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1a_merc</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_0_default_23" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1a_bala</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_0_default_24" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1a_nohood</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_0_default_25" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1a_nohood_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_0_default_26" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1a_oldgas</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_0_default_27" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandits2b</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_0_default_28" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandits2c</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_0_default_29" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandits4b</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_0_default_30" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_0</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>1000</rank>
+    <reputation>-300</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandits4c</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<!--  bandit expirienced  -->
+    <specific_character id="sim_default_bandit_1_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>1253</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>343</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_3" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>1741</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit3b</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_4" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>369</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit3c</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_5" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>1213</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_6" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>1978</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1b</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_7" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>-1022</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1c</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_8" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>1049</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_9" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>94</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1a_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_10" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>2490</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1b_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_11" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>-1267</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit1c_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_1_default_12" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>-681</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1_1_helm_m40</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_13" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>685</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1_1_helm_resperator</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_14" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>1889</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1_1_hood</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_15" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>-2060</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1_1_hood_painted</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_16" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>1849</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1_1_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_17" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>1040</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1_2_helm_m40</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_18" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>503</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1_2_helm_resperator</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_19" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>193</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1_2_hood</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_20" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>-829</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1_2_hood_painted</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_21" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>-1505</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1_2_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_22" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>1327</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1_helm_m40</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_23" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>107</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1_helm_resperator</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_24" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>-938</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1_hood</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_25" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_1_hood_painted</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>830</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1_hood_painted</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_1_default_26" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>-1484</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_1_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_1_default_27" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_10</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>-1484</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_10</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_1_default_28" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_11</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>-1484</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_11</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_1_default_29" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_12</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>-1484</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_12</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_1_default_30" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>-1484</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_15</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_1_default_31" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_9fborov</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>-1484</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_1_default_32" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>-1484</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_15</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_1_default_34" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\killer\</snd_config>
+    <rank>3000</rank>
+    <reputation>-1484</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\bandit_cor_plash_shram_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_1_default_35" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>-1484</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\bandit_plash_maska</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_1_default_36" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>-1484</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandits2a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_1_default_37" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>-1484</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandits4a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_1_default_38" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>-1484</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_neutral_1_5_helm_resperator</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_1_default_39" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>-1484</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_neutral_1_5_hood</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_1_default_40" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>-1484</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_neutral_1_5_hood_painted</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_1_default_41" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>-1484</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_neutral_1_5_m40</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_1_default_42" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_1</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>3000</rank>
+    <reputation>-1484</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_neutral_1_5_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<!--  bandit expirienced 2  -->
+    <specific_character id="sim_default_bandit_2_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>-508</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1209</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_2" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1893</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit2a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_3" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1655</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit4a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_4" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>-2</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_band_2_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_5" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1826</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_band2a_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_6" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>-835</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit4b</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_7" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1707</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit4c</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_8" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>145</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_2_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_9" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>-2072</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit2a_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_10" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>-25</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_2a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_11" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>-353</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_2a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_12" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>-524</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit5a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_13" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>169</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit5b</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_14" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>-357</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit5c</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_15" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>2196</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit5d</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_16" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>646</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit2a_old</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_17" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>-213</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_2a_merc</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_18" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>2191</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_2a_gp5</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_19" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1349</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit6a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_20" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>-2037</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit6b</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_21" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>203</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit6c</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_22" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>774</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit6d</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_23" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>-1887</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit6e</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_24" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1515</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit6f</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_25" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>-1710</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit6g</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_2_default_26" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1879</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit6h</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_27" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1879</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_2_balloon</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_28" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1879</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_2_balloon_hood_painted</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_29" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1879</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_2_balloon_on_hood</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_30" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1879</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_2_balloon_on_hood_painted</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_31" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_2_helm_m40</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1879</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_2_helm_m40</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_32" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1879</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_2_helm_resperator</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_33" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1879</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_2_hood_painted</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_34" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1879</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_2_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_2_default_35" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1879</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\bandit_degterev_black_plash_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_2_default_36" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_3_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1879</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_2_default_37" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_3_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1879</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_2_default_38" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1879</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_face_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_2_default_39" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1879</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_2_default_40" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1879</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_b4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_2_default_41" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1879</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_banditb2camo2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_2_default_42" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1879</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit2camo</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_2_default_43" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_14</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1879</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_14</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_44" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_1_backpack_helm_m40</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_45" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_1_backpack_helm_resperator</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_46" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_1_backpack_hood</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_47" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_1_backpack_hood_painted</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_48" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_1_backpack_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_49" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_1_balloon_hood</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_50" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_1_balloon_hood_painted</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_51" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_1_balloon_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_52" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_1_balloon_on</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_53" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_1_balloon_on_painted</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_54" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_1_helm_m40</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_55" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_1_helm_m40</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_56" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_3_1_hood</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_1_hood</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_57" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_3_1_hood_painted</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_1_hood_painted</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_2_default_58" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_1_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_2_default_59" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1457</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_hood_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_2_default_60" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1457</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_hood_5</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_2_default_61" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1457</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_hood_6</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_2_default_62" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1457</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_hood_uzor</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_2_default_63" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1457</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_rukzak_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_2_default_64" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1457</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_rukzak_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_2_default_65" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1457</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_balon_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_2_default_66" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1457</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_balon_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_2_default_67" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_2</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1457</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_balon_5</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<!--  bandit veteran  -->
+    <specific_character id="sim_default_bandit_3_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>2131</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit4a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_5_gas</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>2336</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_5_gas</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_2" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_4_bulat</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>-144</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_4_bulat</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_3" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1457</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_4" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>324</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_5" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>2189</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit4c</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_6" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1825</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit2a_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_7" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1242</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_2_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_8" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1916</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_2a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_9" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>-262</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_2a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_10" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>277</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit5a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_11" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1228</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit5b</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_12" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>-2481</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit5c</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_13" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>433</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit5d</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_14" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>-545</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit2a_old</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_15" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>-2209</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_2a_merc</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_16" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>2448</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_2a_gp5</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_17" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>-300</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit6a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_18" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>-574</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit6b</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_19" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1385</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit6c</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_20" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>457</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit6d</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_21" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1334</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit6e</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_22" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>938</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit6f</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_23" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>931</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit6g</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_bandit_3_default_24" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit6h</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_3_default_25" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_helm_m40</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_3_default_26" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_backpack_helm_resperator</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_3_default_27" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_backpack_hood</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_3_default_28" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_backpack_hood_painted</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_3_default_29" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_backpack_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_3_default_30" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_balloon_hood</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_3_default_31" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_balloon_hood_painted</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_3_default_32" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_balloon_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_3_default_33" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_balloon_on</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_3_default_34" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_balloon_on_painted</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_3_default_35" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_3_helm_m40</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_helm_m40</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_3_default_36" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_hood</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_3_default_37" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_hood</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_3_default_38" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_hood_painted</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_3_default_39" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_3_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_3_default_40" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_band_ha</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_3_default_41" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_8</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <specific_character id="sim_default_bandit_3_default_42" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_14</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_3</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>7000</rank>
+    <reputation>1852</reputation>
+    <money min="3000" max="4000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_14</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<!--  bandit master  -->
+<specific_character id="bandit_degterev_skat_4_0_default_4" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_4</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>15000</rank>
+    <reputation>431</reputation>
+    <money min="4000" max="8000" infinitive="0"/>
+    <visual>actors\stalker_bandit\bandit_degterev_skat_4_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_4_default_2" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_4</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>9000</rank>
+    <reputation>431</reputation>
+    <money min="4000" max="8000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_soldier_fc2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_4_default_3" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_9exo</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_4</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>9000</rank>
+    <reputation>431</reputation>
+    <money min="4000" max="8000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_exo</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<!--  bandit legend  -->
+<specific_character id="bandit_exo_4_0_default_5" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_9exo</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_5</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>15000</rank>
+    <reputation>1597</reputation>
+    <money min="4000" max="8000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_exo</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="bandit_exoseva_4_0_default_5" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_bandit_icon</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_5</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\bandit\</snd_config>
+    <rank>15000</rank>
+    <reputation>1597</reputation>
+    <money min="4000" max="8000" infinitive="0"/>
+    <visual>actors\stalker_bandit\bandit_exoseva_4_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+
+
+
+
+
+
+
+<specific_character id="sim_default_bandit_nps_0" team_default = "1">
+    <name>Джентльмен</name>
+    <icon>ui_inGame2_bandit_9exo</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_bandit_nps</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>1500</reputation>
+    <money min="10000" max="50000" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_exo</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_bandit_nps_1" team_default = "1">
+    <name>Кастет</name>
+    <icon>ui_inGame2_bandit_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_nps</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>-5000</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+<specific_character id="sim_default_bandit_nps_2" team_default = "1">
+    <name>Кочерга</name>
+    <icon>ui_inGame2_bandit_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_bandit_nps</class>
+    <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\bandit\</snd_config>
+    <rank>5000</rank>
+    <reputation>-5000</reputation>
+    <money min="250" max="1750" infinitive="0"/>
+    <visual>actors\stalker_bandit\stalker_bandit_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>

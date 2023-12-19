@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<game_dialogs>
+    <dialog id="dialog_hunter_order">
+        <init_func>greatwar_init_orders_hunter</init_func>
+    </dialog>
+</game_dialogs>

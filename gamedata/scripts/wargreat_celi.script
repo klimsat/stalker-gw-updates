@@ -1,0 +1,1048 @@
+local target_tactics = {
+  default = function(smart, other)
+    local level = game_graph():vertex(smart.m_game_vertex_id):level_id()
+    local other_level = game_graph():vertex(other.m_game_vertex_id):level_id()
+    local faction = smart.owning_faction
+    local level_id_from = alife():level_name(level)
+    local level_id_to = alife():level_name(other_level)
+    local priority = 0
+    local dist = smart.global_position:distance_to_sqr(other.global_position)
+
+    if (other.props.base > 0) and (level_id_from == level_id_to) then
+      priority = priority + 450
+
+      if other.owning_faction == "none" and (level_id_from == level_id_to) then
+        priority = priority + 440
+      end
+    end
+
+    if (other.props.resource > 0) and (level_id_from == level_id_to) then
+      priority = priority + 400
+    end
+
+    if sim_smart.isPoint(other) and (level_id_from == level_id_to) then
+      priority = priority + 390
+    end
+
+    if (other.target_smarts) and (level_id_from == level_id_to) then
+      if (other.target_smarts[smart.id]) and (level_id_from == level_id_to) then
+        priority = priority + 350
+      end
+    end
+
+    if (other.props.camp > 0) and (level_id_from == level_id_to) then
+      priority = priority + 210
+    end
+
+    if (other.props.territory > 0) and (level_id_from == level_id_to) then
+      priority = priority + 200
+    end
+
+    if not (other.props.lair) and (level_id_from == level_id_to) then
+      if (other_level == level) and (level_id_from == level_id_to) then
+        priority = priority + 190
+      end
+    end
+
+    if (other.props.lair > 0) and (level_id_from == level_id_to) then
+      priority = priority + 180
+    end
+
+    if (other.props[faction]) and (level_id_from == level_id_to) then
+      priority = priority + (other.props[faction] * 1)
+    end
+
+
+    if (other.props[faction]) then
+      priority = priority + (other.props[faction] * 1)
+    end
+
+    if (other.props.base > 0) then
+      priority = priority + 15
+
+      if other.owning_faction == "none" then
+        priority = priority + 5
+      end
+    end
+
+    if (other.props.resource > 0) then
+      priority = priority + 10
+    end
+
+    if (other.target_smarts) then
+      if (other.target_smarts[smart.id]) then
+        priority = priority + 7
+      end
+    end
+
+    if sim_smart.isPoint(other) then
+      priority = priority + 5
+    end
+
+    if (other.props.territory > 0) then
+      priority = priority + 3
+    end
+
+    if (other.props.camp > 0) then
+      priority = priority + 3
+    end
+
+    if (other.props.lair > 0) then
+      priority = priority + 1
+    end
+
+    if not (other.props.lair) then
+      if (other_level == level) then
+        priority = priority + 5
+      end
+    end
+
+    return priority
+  end,
+  novice = function(smart, other)
+    local level = game_graph():vertex(smart.m_game_vertex_id):level_id()
+    local other_level = game_graph():vertex(other.m_game_vertex_id):level_id()
+    local faction = smart.owning_faction
+    local level_id_from = alife():level_name(level)
+    local level_id_to = alife():level_name(other_level)
+    local priority = 0
+
+    if (other.props.base > 0) and (level_id_from == level_id_to) then
+      priority = priority + 450
+
+      if other.owning_faction == "none" and (level_id_from == level_id_to) then
+        priority = priority + 210
+      end
+    end
+
+    if (other.props.resource > 0) and (level_id_from == level_id_to) then
+      priority = priority + 400
+    end
+
+    if sim_smart.isPoint(other) and (level_id_from == level_id_to) then
+      priority = priority + 390
+    end
+
+    if (other.target_smarts) and (level_id_from == level_id_to) then
+      if (other.target_smarts[smart.id]) and (level_id_from == level_id_to) then
+        priority = priority + 350
+      end
+    end
+
+    if (other.props.camp > 0) and (level_id_from == level_id_to) then
+      priority = priority + 210
+    end
+
+    if (other.props.territory > 0) and (level_id_from == level_id_to) then
+      priority = priority + 200
+    end
+
+    if not (other.props.lair) and (level_id_from == level_id_to) then
+      if (other_level == level) and (level_id_from == level_id_to) then
+        priority = priority + 190
+      end
+    end
+
+    if (other.props.lair > 0) and (level_id_from == level_id_to) then
+      priority = priority + 180
+    end
+
+    if (other.props[faction]) and (level_id_from == level_id_to) then
+      priority = priority + (other.props[faction] * 1)
+    end
+
+
+    if (other.props[faction]) then
+      priority = priority + (other.props[faction] * 1)
+    end
+
+    if (other.props.base > 0) then
+      priority = priority + 15
+
+      if other.owning_faction == "none" then
+        priority = priority + 5
+      end
+    end
+
+    if (other.props.resource > 0) then
+      priority = priority + 10
+    end
+
+    if (other.target_smarts) then
+      if (other.target_smarts[smart.id]) then
+        priority = priority + 7
+      end
+    end
+
+    if sim_smart.isPoint(other) then
+      priority = priority + 5
+    end
+
+    if (other.props.territory > 0) then
+      priority = priority + 3
+    end
+
+    if (other.props.camp > 0) then
+      priority = priority + 3
+    end
+
+    if (other.props.lair > 0) then
+      priority = priority + 1
+    end
+
+    if not (other.props.lair) then
+      if (other_level == level) then
+        priority = priority + 5
+      end
+    end
+
+    return priority
+  end,
+  experienced = function(smart, other)
+    local level = game_graph():vertex(smart.m_game_vertex_id):level_id()
+    local other_level = game_graph():vertex(other.m_game_vertex_id):level_id()
+    local faction = smart.owning_faction
+    local level_id_from = alife():level_name(level)
+    local level_id_to = alife():level_name(other_level)
+    local priority = 0
+
+    if (other.props.base > 0) and (level_id_from == level_id_to) then
+      priority = priority + 450
+
+      if other.owning_faction == "none" and (level_id_from == level_id_to) then
+        priority = priority + 210
+      end
+    end
+
+    if (other.props.resource > 0) and (level_id_from == level_id_to) then
+      priority = priority + 400
+    end
+
+    if sim_smart.isPoint(other) and (level_id_from == level_id_to) then
+      priority = priority + 390
+    end
+
+    if (other.target_smarts) and (level_id_from == level_id_to) then
+      if (other.target_smarts[smart.id]) and (level_id_from == level_id_to) then
+        priority = priority + 350
+      end
+    end
+
+    if (other.props.camp > 0) and (level_id_from == level_id_to) then
+      priority = priority + 210
+    end
+
+    if (other.props.territory > 0) and (level_id_from == level_id_to) then
+      priority = priority + 200
+    end
+
+    if not (other.props.lair) and (level_id_from == level_id_to) then
+      if (other_level == level) and (level_id_from == level_id_to) then
+        priority = priority + 190
+      end
+    end
+
+    if (other.props.lair > 0) and (level_id_from == level_id_to) then
+      priority = priority + 180
+    end
+
+    if (other.props[faction]) and (level_id_from == level_id_to) then
+      priority = priority + (other.props[faction] * 1)
+    end
+
+
+    if (other.props[faction]) then
+      priority = priority + (other.props[faction] * 1)
+    end
+
+    if (other.props.base > 0) then
+      priority = priority + 15
+
+      if other.owning_faction == "none" then
+        priority = priority + 5
+      end
+    end
+
+    if (other.props.resource > 0) then
+      priority = priority + 10
+    end
+
+    if (other.target_smarts) then
+      if (other.target_smarts[smart.id]) then
+        priority = priority + 7
+      end
+    end
+
+    if sim_smart.isPoint(other) then
+      priority = priority + 5
+    end
+
+    if (other.props.territory > 0) then
+      priority = priority + 3
+    end
+
+    if (other.props.camp > 0) then
+      priority = priority + 3
+    end
+
+    if (other.props.lair > 0) then
+      priority = priority + 1
+    end
+
+    if not (other.props.lair) then
+      if (other_level == level) then
+        priority = priority + 5
+      end
+    end
+
+    return priority
+  end,
+  proffi = function(smart, other)
+    local level = game_graph():vertex(smart.m_game_vertex_id):level_id()
+    local other_level = game_graph():vertex(other.m_game_vertex_id):level_id()
+    local faction = smart.owning_faction
+    local level_id_from = alife():level_name(level)
+    local level_id_to = alife():level_name(other_level)
+    local priority = 0
+
+    if (other.props.base > 0) and (level_id_from == level_id_to) then
+      priority = priority + 450
+
+      if other.owning_faction == "none" and (level_id_from == level_id_to) then
+        priority = priority + 210
+      end
+    end
+
+    if (other.props.resource > 0) and (level_id_from == level_id_to) then
+      priority = priority + 400
+    end
+
+    if sim_smart.isPoint(other) and (level_id_from == level_id_to) then
+      priority = priority + 390
+    end
+
+    if (other.target_smarts) and (level_id_from == level_id_to) then
+      if (other.target_smarts[smart.id]) and (level_id_from == level_id_to) then
+        priority = priority + 350
+      end
+    end
+
+    if (other.props.camp > 0) and (level_id_from == level_id_to) then
+      priority = priority + 210
+    end
+
+    if (other.props.territory > 0) and (level_id_from == level_id_to) then
+      priority = priority + 200
+    end
+
+    if not (other.props.lair) and (level_id_from == level_id_to) then
+      if (other_level == level) and (level_id_from == level_id_to) then
+        priority = priority + 190
+      end
+    end
+
+    if (other.props.lair > 0) and (level_id_from == level_id_to) then
+      priority = priority + 180
+    end
+
+    if (other.props[faction]) and (level_id_from == level_id_to) then
+      priority = priority + (other.props[faction] * 1)
+    end
+
+
+    if (other.props[faction]) then
+      priority = priority + (other.props[faction] * 1)
+    end
+
+    if (other.props.base > 0) then
+      priority = priority + 15
+
+      if other.owning_faction == "none" then
+        priority = priority + 5
+      end
+    end
+
+    if (other.props.resource > 0) then
+      priority = priority + 10
+    end
+
+    if (other.target_smarts) then
+      if (other.target_smarts[smart.id]) then
+        priority = priority + 7
+      end
+    end
+
+    if sim_smart.isPoint(other) then
+      priority = priority + 5
+    end
+
+    if (other.props.territory > 0) then
+      priority = priority + 3
+    end
+
+    if (other.props.camp > 0) then
+      priority = priority + 3
+    end
+
+    if (other.props.lair > 0) then
+      priority = priority + 1
+    end
+
+    if not (other.props.lair) then
+      if (other_level == level) then
+        priority = priority + 5
+      end
+    end
+
+    return priority
+  end,
+  veteran = function(smart, other)
+    local level = game_graph():vertex(smart.m_game_vertex_id):level_id()
+    local other_level = game_graph():vertex(other.m_game_vertex_id):level_id()
+    local faction = smart.owning_faction
+    local level_id_from = alife():level_name(level)
+    local level_id_to = alife():level_name(other_level)
+    local priority = 0
+
+    if (other.props.base > 0) and (level_id_from == level_id_to) then
+      priority = priority + 450
+
+      if other.owning_faction == "none" and (level_id_from == level_id_to) then
+        priority = priority + 210
+      end
+    end
+
+    if (other.props.resource > 0) and (level_id_from == level_id_to) then
+      priority = priority + 400
+    end
+
+    if sim_smart.isPoint(other) and (level_id_from == level_id_to) then
+      priority = priority + 390
+    end
+
+    if (other.target_smarts) and (level_id_from == level_id_to) then
+      if (other.target_smarts[smart.id]) and (level_id_from == level_id_to) then
+        priority = priority + 350
+      end
+    end
+
+    if (other.props.camp > 0) and (level_id_from == level_id_to) then
+      priority = priority + 210
+    end
+
+    if (other.props.territory > 0) and (level_id_from == level_id_to) then
+      priority = priority + 200
+    end
+
+    if not (other.props.lair) and (level_id_from == level_id_to) then
+      if (other_level == level) and (level_id_from == level_id_to) then
+        priority = priority + 190
+      end
+    end
+
+    if (other.props.lair > 0) and (level_id_from == level_id_to) then
+      priority = priority + 180
+    end
+
+    if (other.props[faction]) and (level_id_from == level_id_to) then
+      priority = priority + (other.props[faction] * 1)
+    end
+
+
+    if (other.props[faction]) then
+      priority = priority + (other.props[faction] * 1)
+    end
+
+    if (other.props.base > 0) then
+      priority = priority + 15
+
+      if other.owning_faction == "none" then
+        priority = priority + 5
+      end
+    end
+
+    if (other.props.resource > 0) then
+      priority = priority + 10
+    end
+
+    if (other.target_smarts) then
+      if (other.target_smarts[smart.id]) then
+        priority = priority + 7
+      end
+    end
+
+    if sim_smart.isPoint(other) then
+      priority = priority + 5
+    end
+
+    if (other.props.territory > 0) then
+      priority = priority + 3
+    end
+
+    if (other.props.camp > 0) then
+      priority = priority + 3
+    end
+
+    if (other.props.lair > 0) then
+      priority = priority + 1
+    end
+
+    if not (other.props.lair) then
+      if (other_level == level) then
+        priority = priority + 5
+      end
+    end
+
+    return priority
+  end,
+  master = function(smart, other)
+    local level = game_graph():vertex(smart.m_game_vertex_id):level_id()
+    local other_level = game_graph():vertex(other.m_game_vertex_id):level_id()
+    local faction = smart.owning_faction
+    local level_id_from = alife():level_name(level)
+    local level_id_to = alife():level_name(other_level)
+    local priority = 0
+
+    if (other.props.base > 0) and (level_id_from == level_id_to) then
+      priority = priority + 450
+
+      if other.owning_faction == "none" and (level_id_from == level_id_to) then
+        priority = priority + 210
+      end
+    end
+
+    if (other.props.resource > 0) and (level_id_from == level_id_to) then
+      priority = priority + 400
+    end
+
+    if sim_smart.isPoint(other) and (level_id_from == level_id_to) then
+      priority = priority + 390
+    end
+
+    if (other.target_smarts) and (level_id_from == level_id_to) then
+      if (other.target_smarts[smart.id]) and (level_id_from == level_id_to) then
+        priority = priority + 350
+      end
+    end
+
+    if (other.props.camp > 0) and (level_id_from == level_id_to) then
+      priority = priority + 210
+    end
+
+    if (other.props.territory > 0) and (level_id_from == level_id_to) then
+      priority = priority + 200
+    end
+
+    if not (other.props.lair) and (level_id_from == level_id_to) then
+      if (other_level == level) and (level_id_from == level_id_to) then
+        priority = priority + 190
+      end
+    end
+
+    if (other.props.lair > 0) and (level_id_from == level_id_to) then
+      priority = priority + 180
+    end
+
+    if (other.props[faction]) and (level_id_from == level_id_to) then
+      priority = priority + (other.props[faction] * 1)
+    end
+
+
+    if (other.props[faction]) then
+      priority = priority + (other.props[faction] * 1)
+    end
+
+    if (other.props.base > 0) then
+      priority = priority + 15
+
+      if other.owning_faction == "none" then
+        priority = priority + 5
+      end
+    end
+
+    if (other.props.resource > 0) then
+      priority = priority + 10
+    end
+
+    if (other.target_smarts) then
+      if (other.target_smarts[smart.id]) then
+        priority = priority + 7
+      end
+    end
+
+    if sim_smart.isPoint(other) then
+      priority = priority + 5
+    end
+
+    if (other.props.territory > 0) then
+      priority = priority + 3
+    end
+
+    if (other.props.camp > 0) then
+      priority = priority + 3
+    end
+
+    if (other.props.lair > 0) then
+      priority = priority + 1
+    end
+
+    if not (other.props.lair) then
+      if (other_level == level) then
+        priority = priority + 5
+      end
+    end
+
+    return priority
+  end,
+  legend = function(smart, other)
+    local level = game_graph():vertex(smart.m_game_vertex_id):level_id()
+    local other_level = game_graph():vertex(other.m_game_vertex_id):level_id()
+    local faction = smart.owning_faction
+    local level_id_from = alife():level_name(level)
+    local level_id_to = alife():level_name(other_level)
+    local priority = 0
+
+    if (other.props.base > 0) and (level_id_from == level_id_to) then
+      priority = priority + 450
+
+      if other.owning_faction == "none" and (level_id_from == level_id_to) then
+        priority = priority + 210
+      end
+    end
+
+    if (other.props.resource > 0) and (level_id_from == level_id_to) then
+      priority = priority + 400
+    end
+
+    if sim_smart.isPoint(other) and (level_id_from == level_id_to) then
+      priority = priority + 390
+    end
+
+    if (other.target_smarts) and (level_id_from == level_id_to) then
+      if (other.target_smarts[smart.id]) and (level_id_from == level_id_to) then
+        priority = priority + 350
+      end
+    end
+
+    if (other.props.camp > 0) and (level_id_from == level_id_to) then
+      priority = priority + 210
+    end
+
+    if (other.props.territory > 0) and (level_id_from == level_id_to) then
+      priority = priority + 200
+    end
+
+    if not (other.props.lair) and (level_id_from == level_id_to) then
+      if (other_level == level) and (level_id_from == level_id_to) then
+        priority = priority + 190
+      end
+    end
+
+    if (other.props.lair > 0) and (level_id_from == level_id_to) then
+      priority = priority + 180
+    end
+
+    if (other.props[faction]) and (level_id_from == level_id_to) then
+      priority = priority + (other.props[faction] * 1)
+    end
+
+
+    if (other.props[faction]) then
+      priority = priority + (other.props[faction] * 1)
+    end
+
+    if (other.props.base > 0) then
+      priority = priority + 15
+
+      if other.owning_faction == "none" then
+        priority = priority + 5
+      end
+    end
+
+    if (other.props.resource > 0) then
+      priority = priority + 10
+    end
+
+    if (other.target_smarts) then
+      if (other.target_smarts[smart.id]) then
+        priority = priority + 7
+      end
+    end
+
+    if sim_smart.isPoint(other) then
+      priority = priority + 5
+    end
+
+    if (other.props.territory > 0) then
+      priority = priority + 3
+    end
+
+    if (other.props.camp > 0) then
+      priority = priority + 3
+    end
+
+    if (other.props.lair > 0) then
+      priority = priority + 1
+    end
+
+    if not (other.props.lair) then
+      if (other_level == level) then
+        priority = priority + 5
+      end
+    end
+
+    return priority
+  end,
+  aggressive = function(smart, other)
+    local level = game_graph():vertex(smart.m_game_vertex_id):level_id()
+    local other_level = game_graph():vertex(other.m_game_vertex_id):level_id()
+    local faction = smart.owning_faction
+    local level_id_from = alife():level_name(level)
+    local level_id_to = alife():level_name(other_level)
+    local priority = 0
+
+    if (other.props.base > 0) and (level_id_from == level_id_to) then
+      priority = priority + 500
+
+      if other.owning_faction == "none" and (level_id_from == level_id_to) then
+        priority = priority + 500
+      end
+    end
+
+    if (other.props.resource > 0) and (level_id_from == level_id_to) then
+      priority = priority + 500
+    end
+
+    if sim_smart.isPoint(other) and (level_id_from == level_id_to) then
+      priority = priority + 500
+    end
+
+    if (other.target_smarts) and (level_id_from == level_id_to) then
+      if (other.target_smarts[smart.id]) and (level_id_from == level_id_to) then
+        priority = priority + 500
+      end
+    end
+
+    if (other.props.camp > 0) and (level_id_from == level_id_to) then
+      priority = priority + 500
+    end
+
+    if (other.props.territory > 0) and (level_id_from == level_id_to) then
+      priority = priority + 500
+    end
+
+    if not (other.props.lair) and (level_id_from == level_id_to) then
+      if (other_level == level) and (level_id_from == level_id_to) then
+        priority = priority + 500
+      end
+    end
+
+    if (other.props.lair > 0) and (level_id_from == level_id_to) then
+      priority = priority + 500
+    end
+
+    if (other.props[faction]) and (level_id_from == level_id_to) then
+      priority = priority + (other.props[faction] * 1)
+    end
+
+    if (other.props.base > 0) then
+      priority = priority + 45
+
+      if other.owning_faction == "none" then
+        priority = priority + 45
+      end
+    end
+
+    if (other.props[faction]) then
+      priority = priority + (other.props[faction] * 1)
+    end
+
+    if (other.props.resource > 0) then
+      priority = priority + 45
+    end
+
+    if (other.target_smarts) then
+      if (other.target_smarts[smart.id]) then
+        priority = priority + 45
+      end
+    end
+
+    if sim_smart.isPoint(other) then
+      priority = priority + 45
+    end
+
+    if (other.props.territory > 0) then
+      priority = priority + 45
+    end
+
+    if (other.props.camp > 0) then
+      priority = priority + 45
+    end
+
+    if (other.props.lair > 0) then
+      priority = priority + 45
+    end
+
+    if not (other.props.lair) then
+      if (other_level == level) then
+        priority = priority + 45
+      end
+    end
+
+    return priority
+  end,
+  passive = function(smart, other)
+    return 0
+  end,
+  defense = function(smart, other)
+    local level = game_graph():vertex(smart.m_game_vertex_id):level_id()
+    local other_level = game_graph():vertex(other.m_game_vertex_id):level_id()
+    local faction = smart.owning_faction
+    local faction2 = other.owning_faction
+    local level_id_from = alife():level_name(level)
+    local level_id_to = alife():level_name(other_level)
+    local priority = 0
+
+    if (other.props.base > 0) and (level_id_from == level_id_to) and (faction == faction2) then
+      priority = priority + 1500
+
+      if other.owning_faction == "none" and (level_id_from == level_id_to) and (faction == faction2) then
+        priority = priority + 500
+      end
+    end
+
+    if (other.props.resource > 0) and (level_id_from == level_id_to) and (faction == faction2) then
+      priority = priority + 1200
+    end
+
+    if sim_smart.isPoint(other) and (level_id_from == level_id_to) and (faction == faction2) then
+      priority = priority + 500
+    end
+
+    if (other.target_smarts) and (level_id_from == level_id_to) and (faction == faction2) then
+      if (other.target_smarts[smart.id]) and (level_id_from == level_id_to) then
+        priority = priority + 500
+      end
+    end
+
+    if (other.props.camp > 0) and (level_id_from == level_id_to) and (faction == faction2) then
+      priority = priority + 500
+    end
+
+    if (other.props.territory > 0) and (level_id_from == level_id_to) and (faction == faction2) then
+      priority = priority + 500
+    end
+
+    if (other.props.lair > 0) and (level_id_from == level_id_to) then
+      priority = priority + 500
+    end
+
+    if not (other.props.lair) and (level_id_from == level_id_to) and (faction == faction2) then
+      if (other_level == level) and (level_id_from == level_id_to) and (faction == faction2) then
+        priority = priority + 500
+      end
+    end
+
+    if (other.props[faction]) and (level_id_from == level_id_to) and (faction == faction2) then
+      priority = priority + (other.props[faction] * 1)
+    end
+
+    if (other.props.base > 0) and faction == faction2 then
+      priority = priority + 1500
+
+      if other.owning_faction == "none" and faction == faction2 then
+        priority = priority + 45
+      end
+    end
+
+    if (other.props[faction]) and faction == faction2 then
+      priority = priority + (other.props[faction] * 1)
+    end
+
+    if (other.props.resource > 0) and faction == faction2 then
+      priority = priority + 1200
+    end
+
+    if (other.target_smarts) and faction == faction2 then
+      if (other.target_smarts[smart.id]) and faction == faction2 then
+        priority = priority + 45
+      end
+    end
+
+    if sim_smart.isPoint(other) and faction == faction2 then
+      priority = priority + 45
+    end
+
+    if (other.props.territory > 0) and faction == faction2 then
+      priority = priority + 45
+    end
+
+    if (other.props.lair > 0) then
+      priority = priority + 45
+    end
+
+    if (other.props.camp > 0) and faction == faction2 then
+      priority = priority + 45
+    end
+
+    if not (other.props.lair) and faction == faction2 then
+      if (other_level == level) and faction == faction2 then
+        priority = priority + 45
+      end
+    end
+
+    return priority
+  end,
+  economy = function(smart, other)
+    local level = game_graph():vertex(smart.m_game_vertex_id):level_id()
+    local other_level = game_graph():vertex(other.m_game_vertex_id):level_id()
+    local faction = smart.owning_faction
+    local level_id_from = alife():level_name(level)
+    local level_id_to = alife():level_name(other_level)
+    local priority = 0
+
+    if (other.props.resource > 0) and (level_id_from == level_id_to) then
+      priority = priority + 1400
+    end
+
+    if (other.props.base > 0) and (level_id_from == level_id_to) then
+      priority = priority + 1000
+    end
+
+    if sim_smart.isPoint(other) and (level_id_from == level_id_to) then
+      priority = priority + 390
+    end
+
+    if (other.target_smarts) and (level_id_from == level_id_to) then
+      if (other.target_smarts[smart.id]) and (level_id_from == level_id_to) then
+        priority = priority + 350
+      end
+    end
+
+    if (other.props.camp > 0) and (level_id_from == level_id_to) then
+      priority = priority + 210
+    end
+
+    if (other.props.territory > 0) and (level_id_from == level_id_to) then
+      priority = priority + 200
+    end
+
+    if not (other.props.lair) and (level_id_from == level_id_to) then
+      if (other_level == level) and (level_id_from == level_id_to) then
+        priority = priority + 190
+      end
+    end
+
+    if (other.props.lair > 0) and (level_id_from == level_id_to) then
+      priority = priority + 180
+    end
+
+    if (other.props[faction]) and (level_id_from == level_id_to) then
+      priority = priority + (other.props[faction] * 1)
+    end
+
+    if other.owning_faction == "none" and (level_id_from == level_id_to) then
+      priority = priority + 210
+    end
+
+    if (other.props[faction]) then
+      priority = priority + (other.props[faction] * 1)
+    end
+
+    if (other.props.resource > 0) then
+      priority = priority + 1000
+    end
+
+    if (other.props.base > 0) then
+      priority = priority + 800
+    end
+
+    if other.owning_faction == "none" then
+      priority = priority + 5
+    end
+
+    if (other.target_smarts) then
+      if (other.target_smarts[smart.id]) then
+        priority = priority + 7
+      end
+    end
+
+    if sim_smart.isPoint(other) then
+      priority = priority + 5
+    end
+
+    if (other.props.territory > 0) then
+      priority = priority + 3
+    end
+
+    if (other.props.lair > 0) then
+      priority = priority + 1
+    end
+
+    if (other.props.camp > 0) then
+      priority = priority + 3
+    end
+
+    if not (other.props.lair) then
+      if (other_level == level) then
+        priority = priority + 5
+      end
+    end
+
+    return priority
+  end
+}
+
+function find_targets(smart, other)
+  local level = game_graph():vertex(smart.m_game_vertex_id):level_id()
+  local linked = sim_tables.level_links[level]
+  local currentLevelSmarts = sim_levels.level_information[level].smarts
+  local smartCollection = {}
+  local faction = smart.owning_faction or "none"
+  local enable_arena_mode = axr_main.config:r_value("mm_options", "enable_arena_mode", 1, false)
+
+  for i = 1, #currentLevelSmarts do
+    smartCollection[#smartCollection + 1] = currentLevelSmarts[i]
+  end
+
+  if not enable_arena_mode then
+    for lvl, _ in pairs(linked) do
+      local smarts = sim_levels.level_information[lvl].smarts
+
+      for i = 1, #smarts do
+        smartCollection[#smartCollection + 1] = smarts[i]
+      end
+    end
+  end
+
+  local targets = {}
+
+  for i = 1, #smartCollection do
+    local other = alife_object(smartCollection[i])
+
+    if other and other.props then
+      local dist = 1
+
+      if not other.global_position then
+        sim_smart.get_smart_global_position(other)
+      end
+
+      dist = smart.global_position:distance_to_sqr(other.global_position)
+
+      local faction2 = other.owning_faction or "none"
+      local relation = game_relations.get_factions_community(faction, faction2)
+      local behavior = axr_main.config:r_value("mm_options", "behavior_" .. faction, 0, "proffi")
+      local priority = target_tactics[behavior](smart, other)
+
+      if faction2 == "none" or (priority ~= "defense" and relation and relation < 0) then
+        targets[#targets + 1] = {math.abs((dist) / priority), other.id}
+      end
+      if priority == "defense" and faction2 == faction then
+        targets[#targets + 1] = {math.abs((dist) / priority), other.id}
+      end
+    end
+  end
+
+  targets = sim_brain.sort_priority_table(targets)
+  return targets
+end

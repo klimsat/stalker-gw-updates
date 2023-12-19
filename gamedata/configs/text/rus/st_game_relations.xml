@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+  <!-- Communities -->
+  <string id="ui_st_community">
+    <text>Группа</text>
+  </string>
+  <!-- Actor Factions -->
+  <string id="actor">
+    <text>«Перехват»</text>
+  </string>
+  <string id="actor_bandit">
+    <text>«Бандиты»</text>
+  </string>
+  <string id="actor_csky">
+    <text>«Чистое Небо»</text>
+  </string>
+  <string id="actor_dolg">
+    <text>«Долг»</text>
+  </string>
+  <string id="actor_ecolog">
+    <text>«Учёные»</text>
+  </string>
+  <string id="actor_freedom">
+    <text>«Свобода»</text>
+  </string>
+  <string id="actor_killer">
+    <text>«Наёмники»</text>
+  </string>
+  <string id="actor_stalker">
+    <text>«Одиночки»</text>
+  </string>
+  <string id="actor_army">
+    <text>«Военные»</text>
+  </string>
+  <string id="actor_monolith">
+    <text>«Монолит»</text>
+  </string>
+  <string id="actor_zombied">
+    <text>«Зомбированные»</text>
+  </string>
+  <string id="actor_isg">
+    <text>«ИИГ»</text>
+  </string>
+  <string id="actor_darkstalker">
+    <text>«Темные Сталкеры»</text>
+  </string>
+  <string id="actor_renegate">
+    <text>«Ренегаты»</text>
+  </string>
+  <string id="actor_varyag">
+    <text>«Варяги»</text>
+  </string>
+  <string id="actor_slizni">
+    <text>«Черные Слизни»</text>
+  </string>
+  <string id="actor_velhan">
+    <text>«Великие Ханы»</text>
+  </string>
+  <string id="actor_fantom">
+    <text>«Фантомы»</text>
+  </string>
+  <string id="actor_veter">
+    <text>«Ветер»</text>
+  </string>
+  <string id="actor_osoznanie">
+    <text>«О-Сознание»</text>
+  </string>
+  <string id="actor_alfa">
+    <text>ЧВК «Альфа»</text>
+  </string>
+  <string id="actor_apocalypse">
+    <text>«Апокалипсис»</text>
+  </string>
+  <string id="actor_adinkvizicia">
+    <text>«Адская Инквизиция»</text>
+  </string>
+  <string id="actor_hunter">
+    <text>«Охотники»</text>
+  </string>
+  <string id="actor_voenstal">
+    <text>«Перехват»</text>
+  </string>
+  <string id="actor_mirotvorec">
+    <text>«Миротворцы»</text>
+  </string>
+  <string id="actor_ryskuspecnaz">
+    <text>«В.Г.Р.»</text>
+  </string>
+  <string id="actor_sby">
+    <text>«СБУ»</text>
+  </string>
+  <string id="actor_angel">
+    <text>«Падшие Ангелы»</text>
+  </string>
+  <string id="actor_posleduden">
+    <text>«Последний День»</text>
+  </string>
+  <string id="actor_greh">
+    <text>«Грех»</text>
+  </string>
+  <string id="army">
+    <text>«Военные»</text>
+  </string>
+  <string id="bandit">
+    <text>«Бандиты»</text>
+  </string>
+  <string id="csky">
+    <text>«Чистое Небо»</text>
+  </string>
+  <string id="dolg">
+    <text>«Долг»</text>
+  </string>
+  <string id="ecolog">
+    <text>«Учёные»</text>
+  </string>
+  <string id="freedom">
+    <text>«Свобода»</text>
+  </string>
+  <string id="killer">
+    <text>«Наёмники»</text>
+  </string>
+  <string id="monolith">
+    <text>«Монолит»</text>
+  </string>
+  <string id="monster">
+    <text>Мутант</text>
+  </string>
+  <string id="zombied">
+    <text>«Зомбированные»</text>
+  </string>
+  <string id="isg">
+    <text>«ИИГ»</text>
+  </string>
+  <string id="darkstalker">
+    <text>«Темные Сталкеры»</text>
+  </string>
+  <string id="renegate">
+    <text>«Ренегаты»</text>
+  </string>
+  <string id="varyag">
+    <text>«Варяги»</text>
+  </string>
+  <string id="slizni">
+    <text>«Черные Слизни»</text>
+  </string>
+  <string id="velhan">
+    <text>«Великие Ханы»</text>
+  </string>
+  <string id="fantom">
+    <text>«Фантомы»</text>
+  </string>
+  <string id="veter">
+    <text>«Ветер»</text>
+  </string>
+  <string id="osoznanie">
+    <text>«О-Сознание»</text>
+  </string>
+  <string id="alfa">
+    <text>ЧВК «Альфа»</text>
+  </string>
+  <string id="apocalypse">
+    <text>«Апокалипсис»</text>
+  </string>
+  <string id="adinkvizicia">
+    <text>«Адская Инквизиция»</text>
+  </string>
+  <string id="hunter">
+    <text>«Охотники»</text>
+  </string>
+  <string id="voenstal">
+    <text>«Перехват»</text>
+  </string>
+  <string id="mirotvorec">
+    <text>«Миротворцы»</text>
+  </string>
+  <string id="ryskuspecnaz">
+    <text>«В.Г.Р.»</text>
+  </string>
+  <string id="sby">
+    <text>«СБУ»</text>
+  </string>
+  <string id="angel">
+    <text>«Падшие Ангелы»</text>
+  </string>
+  <string id="posleduden">
+    <text>«Последний День»</text>
+  </string>
+  <string id="greh">
+    <text>«Грех»</text>
+  </string>
+
+
+  <!-- Goodwill -->
+  <string id="ui_st_relation">
+    <text>Отношение</text>
+  </string>
+  <string id="st_goodwill_enemy">
+    <text>Враг</text>
+  </string>
+  <string id="st_goodwill_indifferent">
+    <text>Нейтрал</text>
+  </string>
+  <string id="st_goodwill_friendly">
+    <text>Друг</text>
+  </string>
+
+  <!-- Ranks -->
+  <string id="ui_st_rank">
+    <text>Ранг</text>
+  </string>
+  <string id="st_rank_novice">
+    <text>Новичок</text>
+  </string>
+  <string id="st_rank_trainee">
+    <text>Стажёр</text>
+  </string>
+  <string id="st_rank_experienced">
+    <text>Опытный</text>
+  </string>
+  <string id="st_rank_professional">
+    <text>Профессионал</text>
+  </string>
+  <string id="st_rank_veteran">
+    <text>Ветеран</text>
+  </string>
+  <string id="st_rank_expert">
+    <text>Эксперт</text>
+  </string>
+  <string id="st_rank_master">
+    <text>Мастер</text>
+  </string>
+  <string id="st_rank_legend">
+    <text>Легенда</text>
+  </string>
+
+  <!-- Reputations -->
+  <string id="ui_st_reputation">
+    <text>Репутация</text>
+  </string>
+  <string id="st_reputation_terrible">
+    <text>Хуже всех</text>
+  </string>
+  <string id="st_reputation_really_bad">
+    <text>Ужасно</text>
+  </string>
+  <string id="st_reputation_very_bad">
+    <text>Очень плохо</text>
+  </string>
+  <string id="st_reputation_bad">
+    <text>Плохо</text>
+  </string>
+  <string id="st_reputation_neutral">
+    <text>Безразлично</text>
+  </string>
+  <string id="st_reputation_good">
+    <text>Хорошо</text>
+  </string>
+  <string id="st_reputation_very_good">
+    <text>Очень хорошо</text>
+  </string>
+  <string id="st_reputation_really_good">
+    <text>Отлично</text>
+  </string>
+  <string id="st_reputation_excellent">
+    <text>Великолепно</text>
+  </string>
+
+  <!-- Notifications -->
+  <string id="st_rank_increased">
+    <text>Ранг повышен.</text>
+  </string>
+  <string id="st_rank_decreased">
+    <text>Ранг понижен.</text>
+  </string>
+  <string id="st_reputation_increased">
+    <text>Репутация улучшилась.</text>
+  </string>
+  <string id="st_reputation_decreased">
+    <text>Репутация ухудшилась.</text>
+  </string>
+</string_table>

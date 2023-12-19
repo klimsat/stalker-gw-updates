@@ -1,0 +1,40 @@
+[smart_terrain]
+squad_id = 30
+max_population = 5
+respawn_params = respawn@mil_bar
+respawn_idle = 30000
+
+
+
+[respawn@mil_bar]
+spawn_army@novice
+spawn_army@advanced
+
+[spawn_army@novice]
+spawn_squads = army_sim_squad_novice
+spawn_num = 3
+
+[spawn_army@advanced]
+spawn_squads = army_sim_squad_novice, army_sim_squad_advanced
+spawn_num = 3
+
+[exclusive]
+barmen = military\mil_bar_smart_logic.ltx
+
+mil_bar_barik_work_1 = military\mil_bar_smart_logic.ltx
+mil_bar_barik_work_2 = military\mil_bar_smart_logic.ltx
+mil_bar_barik_work_3 = military\mil_bar_smart_logic.ltx
+mil_bar_barik_work_4 = military\mil_bar_smart_logic.ltx
+mil_bar_barik_work_5 = military\mil_bar_smart_logic.ltx
+mil_bar_barik_work_6 = military\mil_bar_smart_logic.ltx
+mil_bar_barik_work_7 = military\mil_bar_smart_logic.ltx
+mil_bar_barik_work_8 = military\mil_bar_smart_logic.ltx
+
+mil_bar_camp_work_1 = military\mil_bar_smart_logic.ltx
+mil_bar_camp_work_2 = military\mil_bar_smart_logic.ltx
+mil_bar_camp_work_3 = military\mil_bar_smart_logic.ltx
+mil_bar_camp_work_4 = military\mil_bar_smart_logic.ltx
+mil_bar_camp_work_5 = military\mil_bar_smart_logic.ltx
+mil_bar_camp_work_6 = military\mil_bar_smart_logic.ltx
+mil_bar_camp_work_7 = military\mil_bar_smart_logic.ltx
+mil_bar_camp_work_8 = military\mil_bar_smart_logic.ltx

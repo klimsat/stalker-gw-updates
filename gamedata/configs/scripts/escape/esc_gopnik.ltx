@@ -1,0 +1,114 @@
+[logic@esc_gopnik_1]
+active = walker@esc_gopnik_1
+suitable = {-esc_gopnik_win =check_npc_name(esc_bandit_gopnik_1)} true
+prior = 200
+
+[logic@esc_gopnik_2]
+active = walker@esc_gopnik_2
+suitable = {-esc_gopnik_win =check_npc_name(esc_bandit_gopnik_2)} true
+prior = 200
+
+[logic@esc_gopnik_3]
+active = walker@esc_gopnik_3
+suitable = {-esc_gopnik_win =check_npc_name(esc_bandit_gopnik_3)} true
+prior = 200
+
+[logic@esc_gopnik_4]
+active = walker@esc_gopnik_4
+suitable = {-esc_gopnik_win =check_npc_name(esc_bandit_gopnik_4)} true
+prior = 200
+
+[walker@esc_gopnik_1]
+path_walk = surge_9_walk
+path_look  = surge_7_walk
+combat_ignore_cond = {-esc_gopnik_enrage} true, false
+; combat_ignore_keep_when_attacked = true
+gather_items_enabled = false
+; help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = {-esc_gopnik_enrage} true, false
+meet = meet@esc_gopnik_1
+on_info = {+esc_gopnik_fail} walker@loshara
+on_info2 = {+esc_gopnik_win} %=set_squad_neutral_to_actor(esc_bandit_gopnik_squad) =set_squad_neutral_to_actor(esc_bandit_gopnik_squad) =set_squad_neutral_to_actor(esc_bandit_gopnik_squad)%
+on_info3 = {+esc_gopnik_enrage} walker@ready_attack
+; on_info4 = {+esc_gopnik_enrage !actor_on_level(l01_escape)} walker@delete, {+esc_gopnik_fail !actor_on_level(l01_escape)} walker@delete, {+esc_gopnik_win !actor_on_level(l01_escape)} walker@delete
+
+[walker@delete]
+path_walk = surge_9_walk
+path_look  = surge_7_walk
+combat_ignore_cond = true
+on_info = %=remove_squad(esc_bandit_gopnik_squad)% nil
+
+[walker@loshara]
+path_walk = surge_9_walk
+path_look  = surge_7_walk
+combat_ignore_cond = true
+invulnerable = {-esc_gopnik_enrage} true, false
+on_info = %=esc_gopnik_loh% walker@delete
+
+[meet@esc_gopnik_1]
+; close_snd_hello = esc_wolf_meet
+; close_snd_bye = esc_wolf_bye
+close_anim 		= threat
+close_victim 	= actor
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 5
+far_distance 	= 10
+close_snd_distance = 5
+; use = {-esc_gopnik_enrage} true, {-esc_gopnik_fail} true, {-esc_gopnik_win} true, false
+use = {-esc_gopnik_enrage =dist_to_actor_le(8) =see_actor} self, {-esc_gopnik_fail =dist_to_actor_le(8) =see_actor} self, {-esc_gopnik_win =dist_to_actor_le(8) =see_actor} self, false
+; use_wpn = true
+; meet_on_talking = false
+allow_break = false
+trade_enable = false
+meet_dialog = esc_gopnik_dialog_1
+
+[walker@esc_gopnik_2]
+path_walk = gopnik_2_walk
+path_look = surge_7_walk
+def_state_standing = hide_na
+target = story | actor
+combat_ignore_cond = {-esc_gopnik_enrage} true, false
+; combat_ignore_keep_when_attacked = true
+gather_items_enabled = false
+; help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = {-esc_gopnik_enrage} true, false
+meet = no_meet
+on_info = {+esc_gopnik_enrage !actor_on_level(l01_escape)} walker@delete, {+esc_gopnik_fail !actor_on_level(l01_escape)} walker@delete, {+esc_gopnik_win !actor_on_level(l01_escape)} walker@delete
+on_info2 = {+esc_gopnik_enrage} walker@ready_attack
+
+[walker@esc_gopnik_3]:walker@esc_gopnik_2
+path_walk = gopnik_3_walk
+
+[walker@esc_gopnik_4]:walker@esc_gopnik_2
+path_walk = gopnik_4_walk
+
+[walker@ready_attack]
+path_walk = surge_7_walk
+def_state_moving = assault
+def_state_standing = threat
+combat_ignore_cond = {-esc_gopnik_enrage} true, false
+; combat_ignore_keep_when_attacked = true
+gather_items_enabled = false
+; help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = {-esc_gopnik_enrage} true, false
+meet = no_meet
+on_info = {+esc_gopnik_enrage !actor_on_level(l01_escape)} walker@delete, {+esc_gopnik_fail !actor_on_level(l01_escape)} walker@delete, {+esc_gopnik_win !actor_on_level(l01_escape)} walker@delete
+; хуй знает как единожды прописать этот момент
+on_info2 = %=make_actor_visible_to_squad(esc_bandit_gopnik_squad)% walker@attack
+
+[walker@attack]
+path_walk = surge_7_walk
+def_state_moving = assault
+def_state_standing = threat
+combat_ignore_cond = {-esc_gopnik_enrage} true, false
+; combat_ignore_keep_when_attacked = true
+gather_items_enabled = false
+; help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = {-esc_gopnik_enrage} true, false
+meet = no_meet
+on_info = {+esc_gopnik_enrage !actor_on_level(l01_escape)} walker@delete, {+esc_gopnik_fail !actor_on_level(l01_escape)} walker@delete, {+esc_gopnik_win !actor_on_level(l01_escape)} walker@delete

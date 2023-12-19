@@ -1,0 +1,348 @@
+local gs = GetString
+local order_squads_table = {
+  {
+    rank = "novice",
+    list = {
+      {count = 1, price = "30000"},
+      {count = 2, price = "60000"},
+      {count = 3, price = "90000"},
+      {count = 4, price = "120000"},
+      {count = 5, price = "150000"}
+    }
+  },
+  {
+    rank = "experienced",
+    list = {
+      {count = 1, price = "40000"},
+      {count = 2, price = "70000"},
+      {count = 3, price = "100000"},
+      {count = 4, price = "130000"},
+      {count = 5, price = "160000"}
+    }
+  },
+  {
+    rank = "professional",
+    list = {
+      {count = 1, price = "50000"},
+      {count = 2, price = "80000"},
+      {count = 3, price = "100000"},
+      {count = 4, price = "140000"},
+      {count = 5, price = "170000"}
+    }
+  },
+  {
+    rank = "veteran",
+    list = {
+      {count = 1, price = "60000"},
+      {count = 2, price = "90000"},
+      {count = 3, price = "110000"},
+      {count = 4, price = "150000"},
+      {count = 5, price = "180000"}
+    }
+  },
+  {
+    rank = "master",
+    list = {
+      {count = 1, price = "70000"},
+      {count = 2, price = "100000"},
+      {count = 3, price = "120000"},
+      {count = 4, price = "160000"},
+      {count = 5, price = "190000"}
+    }
+  }
+}
+
+local saved_dialog
+function add_dialog(p_id, id, phrase_id, cond, act)
+  if not (saved_dialog) then
+    return
+  end
+
+  local phrase = saved_dialog:AddPhrase(phrase_id, tostring(id), tostring(p_id), -10000)
+  if not (phrase) then
+    return
+  end
+
+  local phrase_script = phrase:GetPhraseScript()
+  if (cond) then
+    if (type(cond) == "table") then
+      for key, value in pairs(cond) do
+        if (alun_utils.findfunction(value, _G)) then
+          phrase_script:AddPrecondition(value)
+        else
+          printf("dialog_manager:Error: No such function exists '%s'", value)
+        end
+      end
+    else
+      if (alun_utils.findfunction(cond, _G)) then
+        phrase_script:AddPrecondition(cond)
+      else
+        printf("dialog_manager:Error: No such function exists '%s'", cond)
+      end
+    end
+  end
+
+  if (act) then
+    if (type(act) == "table") then
+      for key, value in pairs(act) do
+        if (alun_utils.findfunction(value, _G)) then
+          phrase_script:AddAction(value)
+        else
+          printf("dialog_manager:Error: No such function exists '%s'", value)
+        end
+      end
+    else
+      if (alun_utils.findfunction(act, _G)) then
+        phrase_script:AddAction(act)
+      else
+        printf("dialog_manager:Error: No such function exists '%s'", act)
+      end
+    end
+  end
+  return phrase_script
+end
+
+function add_script_dialog(p_id, id, phrase_id, cond, act)
+  local d = add_dialog(p_id, id, phrase_id, cond, act)
+  if (d) then
+    d:SetScriptText(phrase_id)
+  end
+end
+
+function order_squad(first_speaker, second_speaker, rank, count)
+  utils.news(
+    ("Заказа на отряд"),
+    (strformat(
+      "Вы сделали заказ на найм отряда ранга %s кол-во: %s",
+      gs(strformat("dialog_order_squads_actor_answer_%s", rank)),
+      count
+    ))
+  )
+  local rank_table = nil
+
+  for _, list in pairs(order_squads_table) do
+    if list.rank == rank then
+      rank_table = list.list
+    end
+  end
+
+  if rank_table == nil then
+    utils.debug_stack("order_squad(), rank_table is nil")
+  end
+
+  for _, order in pairs(rank_table) do
+    utils.debug("order_squad, rank %s, %s %s (%s)", rank, count, order.count, count == order.count)
+    if count == order.count then
+      dialogs.relocate_money_from_actor(first_speaker, second_speaker, order.price)
+    end
+  end
+
+  local k = dialogs.who_is_npc(first_speaker, second_speaker)
+  local npc = k and alife_object(k:id())
+  local smart = alife_object(npc.m_smart_terrain_id)
+
+  if not (smart) then
+    return
+  end
+
+  local section = "master"
+
+  if rank == "novice" then
+    section = "rybech"
+  elseif rank == "experienced" then
+    section = "nachunaushu"
+  elseif rank == "professional" then
+    section = "advanced"
+  elseif rank == "veteran" then
+    section = "veteran"
+  elseif rank == "master" then
+    section = "master"
+  end
+
+  for i = 1, count do
+    local squad
+
+    squad = alun_utils.create_squad(sim_brain.actor_faction .. "_sim_squad_" .. section, smart:name())
+
+    if not IsSquad(squad) then
+      return
+    end
+
+    axr_companions.companion_squads[squad.id] = squad
+    SIMBOARD:assign_squad_to_smart(squad, nil)
+
+    utils.addSquadToActorCompanion(squad)
+  end
+end
+
+-- TODO: Блядские функции. Сократить после правок в движке
+function actor_has_30000_money(first_speaker, second_speaker)
+  return first_speaker:money() >= 30000
+end
+function actor_has_60000_money(first_speaker, second_speaker)
+  return first_speaker:money() >= 60000
+end
+function actor_has_90000_money(first_speaker, second_speaker)
+  return first_speaker:money() >= 90000
+end
+function actor_has_120000_money(first_speaker, second_speaker)
+  return first_speaker:money() >= 120000
+end
+function actor_has_150000_money(first_speaker, second_speaker)
+  return first_speaker:money() >= 150000
+end
+function actor_has_40000_money(first_speaker, second_speaker)
+  return first_speaker:money() >= 40000
+end
+function actor_has_70000_money(first_speaker, second_speaker)
+  return first_speaker:money() >= 70000
+end
+function actor_has_100000_money(first_speaker, second_speaker)
+  return first_speaker:money() >= 100000
+end
+function actor_has_130000_money(first_speaker, second_speaker)
+  return first_speaker:money() >= 130000
+end
+function actor_has_160000_money(first_speaker, second_speaker)
+  return first_speaker:money() >= 160000
+end
+function actor_has_50000_money(first_speaker, second_speaker)
+  return first_speaker:money() >= 50000
+end
+function actor_has_80000_money(first_speaker, second_speaker)
+  return first_speaker:money() >= 80000
+end
+function actor_has_140000_money(first_speaker, second_speaker)
+  return first_speaker:money() >= 140000
+end
+function actor_has_170000_money(first_speaker, second_speaker)
+  return first_speaker:money() >= 170000
+end
+function actor_has_110000_money(first_speaker, second_speaker)
+  return first_speaker:money() >= 110000
+end
+function actor_has_180000_money(first_speaker, second_speaker)
+  return first_speaker:money() >= 180000
+end
+function actor_has_190000_money(first_speaker, second_speaker)
+  return first_speaker:money() >= 190000
+end
+
+function actor_order_squad_novice_1(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "novice", 1)
+end
+function actor_order_squad_novice_2(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "novice", 2)
+end
+function actor_order_squad_novice_3(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "novice", 3)
+end
+function actor_order_squad_novice_4(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "novice", 4)
+end
+function actor_order_squad_novice_5(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "novice", 5)
+end
+function actor_order_squad_experienced_1(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "experienced", 1)
+end
+function actor_order_squad_experienced_2(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "experienced", 2)
+end
+function actor_order_squad_experienced_3(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "experienced", 3)
+end
+function actor_order_squad_experienced_4(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "experienced", 4)
+end
+function actor_order_squad_experienced_5(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "experienced", 5)
+end
+function actor_order_squad_professional_1(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "professional", 1)
+end
+function actor_order_squad_professional_2(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "professional", 2)
+end
+function actor_order_squad_professional_3(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "professional", 3)
+end
+function actor_order_squad_professional_4(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "professional", 4)
+end
+function actor_order_squad_professional_5(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "professional", 5)
+end
+function actor_order_squad_veteran_1(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "veteran", 1)
+end
+function actor_order_squad_veteran_2(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "veteran", 2)
+end
+function actor_order_squad_veteran_3(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "veteran", 3)
+end
+function actor_order_squad_veteran_4(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "veteran", 4)
+end
+function actor_order_squad_veteran_5(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "veteran", 5)
+end
+function actor_order_squad_master_1(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "master", 1)
+end
+function actor_order_squad_master_2(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "master", 2)
+end
+function actor_order_squad_master_3(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "master", 3)
+end
+function actor_order_squad_master_4(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "master", 4)
+end
+function actor_order_squad_master_5(first_speaker, second_speaker)
+  order_squad(first_speaker, second_speaker, "master", 5)
+end
+-- Конец блядских функций
+
+function initDialog(dialog)
+  saved_dialog = dialog
+
+  add_dialog("", 0, gs("dialog_order_squads_actor_ask_1"))
+  add_dialog(0, 1, gs("dialog_order_squads_trader_answer_1"))
+
+  local i = 2
+  for _, list in pairs(order_squads_table) do
+    add_dialog(1, i, strformat("dialog_order_squads_actor_answer_%s", list.rank))
+    add_dialog(i, i + 100, "dialog_order_squads_trader_ask_111")
+
+    local j = 2
+    for _, order in pairs(list.list) do
+      add_dialog(
+        i + 100,
+        i * 100 + j,
+        strformat(gs("dialog_order_squads_actor_answer_1111"), order.count, utils.declination(order.count, "отряд")),
+        nil,
+        nil
+      )
+      add_dialog(i * 100 + j, i * 1000 + j, strformat(gs("dialog_order_squads_trader_ask_11111"), order.price))
+
+      add_dialog(
+        i * 1000 + j,
+        i * 10000 + j,
+        "dialog_order_squads_actor_answer_confirm",
+        strformat("wargreat_dialogs_order_squads.actor_has_%s_money", order.price),
+        strformat("wargreat_dialogs_order_squads.actor_order_squad_%s_%s", list.rank, order.count)
+      )
+      add_dialog(i * 1000 + j, 9997, "dialog_order_squads_actor_answer_reject")
+
+      j = j + 1
+    end
+
+    add_dialog(i + 100, 9998, "dialog_order_squads_actor_answer_reject")
+
+    i = i + 1
+  end
+
+  add_dialog(1, 9999, "dialog_order_squads_actor_answer_reject")
+end

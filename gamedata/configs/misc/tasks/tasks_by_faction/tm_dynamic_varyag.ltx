@@ -1,0 +1,101 @@
+;--------------------------------------------------------------------------------------------------
+; ”бийство ¬ар€ги
+
+[simulation_task_19]
+icon = ui_inGame2_Odin_vistrel
+prior = 50
+sim_communities = varyag
+storyline = false
+title = simulation_task_19_name
+descr = simulation_task_19_text
+job_descr = simulation_task_19_about
+task_complete_descr = simulation_task_19_finish
+precondition = true
+repeat_timeout = 86400
+status_functor = bounty_task
+target_functor = general_bounty_task
+stage_complete = 1
+on_init = %=on_init_bounty_hunt(simulation_task_19:stalker:army:dolg:ryskuspecnaz:posleduden)%
+on_complete = %=reward_random_money(5000:15000) =reward_stash(true) =inc_task_stage(simulation_task_19)%
+condlist_0 = {!task_giver_alive(simulation_task_19)} fail
+
+[simulation_task_20]
+icon = ui_inGame2_Odin_vistrel
+prior = 50
+sim_communities = varyag
+storyline = false
+title = simulation_task_20_name
+descr = simulation_task_20_text
+job_descr = simulation_task_20_about
+task_complete_descr = simulation_task_20_finish
+precondition = true
+repeat_timeout = 86400
+status_functor = bounty_task
+target_functor = general_bounty_task
+stage_complete = 1
+on_init = %=on_init_bounty_hunt(simulation_task_20:monster)%
+on_complete = %=reward_random_money(5000:15000) =reward_stash(true) =inc_task_stage(simulation_task_20)%
+condlist_0 = {!task_giver_alive(simulation_task_20)} fail
+
+[simulation_task_21]
+icon = ui_inGame2_Nochnaya_ohota
+prior = 75
+sim_communities = varyag
+storyline = false
+title = simulation_task_21_name
+title_functor = general_fetch_task
+descr = simulation_task_21_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_21_about
+fetch_descr = simulation_task_21_fetch_about
+fetch_func = %=setup_generic_fetch_task(simulation_task_21_fetch:3:bread:conserva:kolbasa)%
+stage_complete = 1
+repeat_timeout = 86400
+status_functor = actor_has_fetch_item
+target_functor = general_fetch_task
+task_complete_descr = simulation_task_21_fetch_finish
+precondition = true
+on_complete = %=reward_item_cost_mult_and_remove(simulation_task_21_fetch:3:3) =reward_stash(true) =inc_task_stage(simulation_task_21)%
+reward_item = ammo_9x39_ap:ammo_9x39_ap:ammo_9x39_ap:ammo_5.56x45_ap:ammo_5.56x45_ap
+condlist_0 = {!task_giver_alive(simulation_task_21)} fail
+
+[simulation_task_22]
+icon = ui_inGame2_Nochnaya_ohota
+prior = 75
+sim_communities = varyag
+storyline = false
+title = simulation_task_22_name
+title_functor = general_fetch_task
+descr = simulation_task_22_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_22_about
+fetch_descr = simulation_task_22_fetch_about
+fetch_func = %=setup_generic_fetch_task(simulation_task_22_fetch:6:mutant_part_boar_chop:mutant_part_dog_meat:mutant_part_flesh_meat:mutant_part_psevdodog_meat:mutant_part_tushkano_meat)%
+stage_complete = 1
+repeat_timeout = 86400
+status_functor = actor_has_fetch_item
+target_functor = general_fetch_task
+task_complete_descr = simulation_task_22_fetch_finish
+precondition = true
+on_complete = %=reward_item_cost_mult_and_remove(simulation_task_22_fetch:6:6) =reward_stash(true) =inc_task_stage(simulation_task_22)%
+reward_item = ammo_9x39_ap:ammo_9x39_ap:ammo_9x39_ap:ammo_5.56x45_ap:ammo_5.56x45_ap
+condlist_0 = {!task_giver_alive(simulation_task_22)} fail
+
+; кв на ликвидацию отр€да
+[simulation_task_23]
+icon = ui_inGame2_Odin_vistrel
+prior = 50
+sim_communities = varyag
+storyline = false
+title = simulation_task_23_name
+descr = simulation_task_23_text
+job_descr = simulation_task_23_about
+task_complete_descr = simulation_task_23_finish
+precondition = true
+repeat_timeout = 86400
+status_functor = bounty_task
+target_functor = general_bounty_task
+stage_complete = 1
+on_init = %=on_init_bounty_hunt(simulation_task_23:army:csky:dolg:ecolog:freedom:monolith:stalker:isg:slizni:veter:alfa:hunter:voenstal:mirotvorec:posleduden:greh)%
+on_complete = %=reward_random_money(3000:7000) =reward_stash(true) =inc_task_stage(simulation_task_23)%
+condlist_0 = {!task_giver_alive(simulation_task_23)} fail

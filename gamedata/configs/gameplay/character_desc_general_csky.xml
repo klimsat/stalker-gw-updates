@@ -1,0 +1,2446 @@
+<specific_character id="sim_default_csky_leader_holod" team_default = "1">
+    <name>Лебедев</name>
+    <icon>ui_inGame2_csky_holod_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Лидер Чистого Неба.</bio>
+    <class>sim_default_csky_leader_holod</class>
+    <community>csky</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>19350</rank>
+    <reputation>500</reputation>
+    <visual>actors\stalker_csky\csky_leader</visual>
+    <money min="22000" max="91750" infinitive="0"/>
+    <supplies>
+    [spawn] \n
+    wpn_m249_nimble = 1, silencer = 1 \n
+    ammo_6.8x43_fmj = 2 \n
+    wpn_beretta \n
+    ammo_9x19_fmj = 2 \n
+    grenade_f1 = 6 \n
+    medkit = 5 \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs_leaders.xml"
+    <actor_dialog>dialog_leader_csky</actor_dialog>
+</specific_character>
+
+<!--  “ник нпс  -->
+<specific_character id="csky_gas_1_0_default_rpg_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_rpg_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_mask_0_0</visual>
+    <supplies>
+        [spawn] \n
+		wpn_rpg7 \n
+        ammo_og-7b = 1 \n
+        wpn_pm \n
+        ammo_9x18_fmj = 1 \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_gas_1_0_default_rpg_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_rpg_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_gas_1_0</visual>
+    <supplies>
+        [spawn] \n
+		wpn_rpg7 \n
+        ammo_og-7b = 1 \n
+        wpn_fort \n
+        ammo_9x18_fmj = 1 \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_gas_1_0_default_rpg_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_rpg_2</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>5000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_gas_2_0</visual>
+    <supplies>
+        [spawn] \n
+		wpn_rpg7 \n
+        ammo_og-7b = 1 \n
+        wpn_hpsa \n
+        ammo_9x19_fmj = 1 \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_gas_1_0_default_rpg_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_rpg_3</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>7000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_gas_3_0</visual>
+    <supplies>
+        [spawn] \n
+		wpn_rpg7 \n
+        ammo_og-7b = 1 \n
+        wpn_beretta \n
+        ammo_9x19_fmj = 1 \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_gas_1_0_default_rpg_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_rpg_4</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>9000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_gas_4_0</visual>
+    <supplies>
+        [spawn] \n
+		wpn_rpg7 \n
+        ammo_og-7b = 1 \n
+        wpn_colt1911 \n
+        ammo_11.43x23_fmj = 1 \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_gas_1_0_default_rpg_5" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_rpg_5</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_exo_5_0</visual>
+    <supplies>
+        [spawn] \n
+		wpn_rpg7 \n
+        ammo_og-7b = 1 \n
+        wpn_usp \n
+        ammo_11.43x23_fmj = 1 \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<!--  ‡еленые  -->
+<specific_character id="csky_face_0_0_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_face_0_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_zelen_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>500</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_face_0_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_face_0_1_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_face_0_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_zelen_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>500</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_face_0_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_face_0_2_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_face_0_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_zelen_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>500</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_face_0_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_mask_0_0_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_mask_0_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_zelen_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>500</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_mask_0_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_mask_0_1_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_mask_0_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_zelen_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>500</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_mask_0_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_mask_0_2_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_mask_0_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_zelen_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>500</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_mask_0_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_mask_0_3_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_mask_0_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_zelen_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>500</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_mask_0_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_mask_0_4_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_mask_0_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_zelen_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>500</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_mask_0_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_mask_0_5_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_mask_0_5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_zelen_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>500</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_mask_0_5</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_mask_0_6_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_mask_0_6</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_zelen_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>500</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_mask_0_6</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_mask_0_7_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_mask_0_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_zelen_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>500</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_mask_0_7</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_face_0_0_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_face_0_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_face_0_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_face_0_1_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_face_0_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_face_0_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_face_0_2_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_face_0_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_face_0_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_gas_0_0_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_0_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_gas_0_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_gas_0_1_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_0_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_gas_0_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_gas_0_2_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_0_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_gas_0_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_mask_0_0_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_mask_0_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_mask_0_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_mask_0_1_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_mask_0_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_mask_0_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_mask_0_2_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_mask_0_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_mask_0_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_mask_0_3_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_mask_0_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_mask_0_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_mask_0_4_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_mask_0_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_mask_0_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_mask_0_5_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_mask_0_5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_mask_0_5</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_mask_0_6_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_mask_0_6</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_mask_0_6</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_mask_0_7_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_mask_0_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_0</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_csky\csky_mask_0_7</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<!--  Clear Sky Experienced  -->
+<specific_character id="csky_gas_1_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>3000</rank>
+    <reputation>-1231</reputation>
+    <visual>actors\stalker_csky\csky_gas_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_gas_1_1_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_1_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>3000</rank>
+    <reputation>272</reputation>
+    <visual>actors\stalker_csky\csky_gas_1_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_gas_1_2_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_1_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>3000</rank>
+    <reputation>-1690</reputation>
+    <visual>actors\stalker_csky\csky_gas_1_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_gas_1_3_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_1_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>3000</rank>
+    <reputation>-1673</reputation>
+    <visual>actors\stalker_csky\csky_gas_1_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_gas_1_4_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_1_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>546</reputation>
+    <visual>actors\stalker_csky\csky_gas_1_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_gas_1_5_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_1_5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>-1718</reputation>
+    <visual>actors\stalker_csky\csky_gas_1_5</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_gas_1_6_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_1_6</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>587</reputation>
+    <visual>actors\stalker_csky\csky_gas_1_6</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_gas_1_7_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_1_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>-1702</reputation>
+    <visual>actors\stalker_csky\csky_gas_1_7</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_gas_1_8_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_1_8</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>-1482</reputation>
+    <visual>actors\stalker_csky\csky_gas_1_8</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_mask_1_1_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_mask_1_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>-667</reputation>
+    <visual>actors\stalker_csky\csky_mask_1_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_mask_1_2_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_mask_1_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_mask_1_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_mask_medic_1_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_mask_medic_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_mask_medic_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_off_gas_face_1_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_off_gas_face_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_off_gas_face_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_off_gas_face_1_1_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_off_gas_face_1_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_off_gas_face_1_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_off_gas_face_1_2_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_off_gas_face_1_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_off_gas_face_1_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_off_gas_face_1_3_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_off_gas_face_1_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_off_gas_face_1_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_off_gas_mask_1_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_off_gas_mask_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_off_gas_mask_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_off_gas_mask_1_1_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_off_gas_mask_1_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_off_gas_mask_1_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_off_gas_mask_1_2_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_off_gas_mask_1_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_off_gas_mask_1_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_off_gas_mask_1_3_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_off_gas_mask_1_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_off_gas_mask_1_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_off_gas_mask_1_4_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_off_gas_mask_1_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_off_gas_mask_1_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_off_gas_mask_1_5_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_off_gas_mask_1_5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_off_gas_mask_1_5</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_off_gas_mask_1_6_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_off_gas_mask_1_6</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_off_gas_mask_1_6</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_off_gas_mask_1_7_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_off_gas_mask_1_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_off_gas_mask_1_7</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_off_gas_mask_1_8_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_off_gas_mask_1_8</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_off_gas_mask_1_8</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_off_gas_mask_1_9_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_off_gas_mask_1_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_off_gas_mask_1_9</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_rukzak_face_1_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_face_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_face_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_rukzak_face_1_1_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_face_1_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_face_1_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_rukzak_face_1_2_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_face_1_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_face_1_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_rukzak_face_1_3_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_face_1_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_face_1_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_rukzak_face_1_4_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_face_1_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_face_1_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_rukzak_gas_1_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_gas_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_gas_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_rukzak_gas_1_1_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_gas_1_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_gas_1_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_rukzak_gas_1_2_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_gas_1_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_gas_1_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_rukzak_gas_1_3_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_gas_1_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_gas_1_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_rukzak_gas_1_4_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_gas_1_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_gas_1_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_rukzak_gas_1_5_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_gas_1_5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_gas_1_5</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_rukzak_gas_1_6_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_gas_1_6</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_gas_1_6</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_rukzak_gas_1_7_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_gas_1_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_gas_1_7</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_rukzak_mask_1_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_mask_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_mask_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_rukzak_mask_1_1_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_mask_1_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_mask_1_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_rukzak_mask_1_2_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_mask_1_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_mask_1_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_rukzak_mask_1_3_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_mask_1_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_mask_1_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_rukzak_mask_1_4_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_mask_1_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_mask_1_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_rukzak_mask_1_5_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_mask_1_5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_mask_1_5</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_rukzak_mask_1_6_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_mask_1_6</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_mask_1_6</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_rukzak_mask_1_7_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_mask_1_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_mask_1_7</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_rukzak_shlem_face_1_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_shlem_face_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_1</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>3000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>381</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_shlem_face_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<!--  Clear Sky Experienced 2  -->
+<specific_character id="csky_gas_2_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_2</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>5000</rank>
+    <reputation>-1641</reputation>
+    <visual>actors\stalker_csky\csky_gas_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_gas_2_1_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_2_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_2</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>5000</rank>
+    <reputation>-153</reputation>
+    <visual>actors\stalker_csky\csky_gas_2_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_gas_2_2_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_2_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_2</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>5000</rank>
+    <reputation>-173</reputation>
+    <visual>actors\stalker_csky\csky_gas_2_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_gas_2_3_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_2_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_2</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>5000</rank>
+    <reputation>461</reputation>
+    <visual>actors\stalker_csky\csky_gas_2_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_gas_2_4_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_2_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_2</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>5000</rank>
+    <reputation>-1601</reputation>
+    <visual>actors\stalker_csky\csky_gas_2_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_mask_2_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_mask_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_2</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>5000</rank>
+    <reputation>-667</reputation>
+    <visual>actors\stalker_csky\csky_mask_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_novikov_2_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_novikov_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_2</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>5000</rank>
+    <reputation>-147</reputation>
+    <visual>actors\stalker_csky\csky_novikov_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_off_gas_mask_2_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_off_gas_mask_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_2</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>5000</rank>
+    <reputation>1093</reputation>
+    <visual>actors\stalker_csky\csky_off_gas_mask_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_off_gas_shlem_face_2_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_off_gas_shlem_face_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_2</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>908</reputation>
+    <visual>actors\stalker_csky\csky_off_gas_shlem_face_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_off_gas_shlem_face_2_1_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_off_gas_shlem_face_2_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_2</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>705</reputation>
+    <visual>actors\stalker_csky\csky_off_gas_shlem_face_2_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_rukzak_gas_2_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_gas_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_2</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>-1746</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_gas_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_rukzak_gas_2_1_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_gas_2_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_2</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>-979</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_gas_2_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_rukzak_mask_2_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_mask_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_2</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>-1546</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_mask_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_rukzak_mask_2_1_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_mask_2_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_2</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>2351</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_mask_2_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_rukzak_shlem_face_2_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_shlem_face_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_2</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>-1636</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_shlem_face_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_rukzak_shlem_face_2_1_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_shlem_face_2_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_2</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>-1313</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_shlem_face_2_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_shlem_face_2_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_shlem_face_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_2</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>5000</rank>
+    <reputation>-108</reputation>
+    <visual>actors\stalker_csky\csky_shlem_face_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_shlem_face_2_1_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_shlem_face_2_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_2</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>5000</rank>
+    <reputation>-108</reputation>
+    <visual>actors\stalker_csky\csky_shlem_face_2_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_csky_2_default_35" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_stalker_nebo_fc3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_2</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>5000</rank>
+    <reputation>1735</reputation>
+    <visual>actors\stalker_csky\stalker_nebo_fc3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_degterev_2_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_degterev_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_2</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>5000</rank>
+    <reputation>1735</reputation>
+    <visual>actors\stalker_csky\csky_degterev_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<!--  Clear Sky Veteran  -->
+<specific_character id="csky_gas_3_0_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_3_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_3</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>7000</rank>
+    <reputation>-291</reputation>
+    <visual>actors\stalker_csky\csky_gas_3_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_gas_3_1_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_3_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_3</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>7000</rank>
+    <reputation>-1991</reputation>
+    <visual>actors\stalker_csky\csky_gas_3_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_gas_3_2_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_3_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_3</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>7000</rank>
+    <reputation>1018</reputation>
+    <visual>actors\stalker_csky\csky_gas_3_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_gas_3_3_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_3_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_3</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>7000</rank>
+    <reputation>383</reputation>
+    <visual>actors\stalker_csky\csky_gas_3_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_mask_3_0_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_mask_3_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_3</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>7000</rank>
+    <reputation>-2173</reputation>
+    <visual>actors\stalker_csky\csky_mask_3_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_off_gas_mask_3_0_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_off_gas_mask_3_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_3</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>7000</rank>
+    <reputation>720</reputation>
+    <visual>actors\stalker_csky\csky_off_gas_mask_3_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_off_gas_shlem_face_3_0_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_off_gas_shlem_face_3_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_3</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>7000</rank>
+    <reputation>2040</reputation>
+    <visual>actors\stalker_csky\csky_off_gas_shlem_face_3_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_off_gas_shlem_face_3_1_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_off_gas_shlem_face_3_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_3</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>7000</rank>
+    <reputation>712</reputation>
+    <visual>actors\stalker_csky\csky_off_gas_shlem_face_3_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_rukzak_mask_3_0_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_rukzak_mask_3_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_3</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>7000</rank>
+    <reputation>837</reputation>
+    <visual>actors\stalker_csky\csky_rukzak_mask_3_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_seva_3_0_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_seva_3_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_3</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>7000</rank>
+    <reputation>837</reputation>
+    <visual>actors\stalker_csky\csky_seva_3_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_seva_3_1_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_seva_3_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_3</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>7000</rank>
+    <reputation>837</reputation>
+    <visual>actors\stalker_csky\csky_seva_3_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_shlem_face_3_0_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_shlem_face_3_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_3</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>7000</rank>
+    <reputation>837</reputation>
+    <visual>actors\stalker_csky\csky_shlem_face_3_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_shlem_face_3_1_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_shlem_face_3_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_3</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>7000</rank>
+    <reputation>837</reputation>
+    <visual>actors\stalker_csky\csky_shlem_face_3_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<!--  Clear Sky Master  -->
+<specific_character id="csky_gas_4_0_default_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_gas_4_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_4</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>9000</rank>
+    <reputation>942</reputation>
+    <visual>actors\stalker_csky\csky_gas_4_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_mask_4_1_default_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_mask_4_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_4</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\csky\</snd_config>
+    <rank>9000</rank>
+    <reputation>1028</reputation>
+    <visual>actors\stalker_csky\csky_mask_4_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_skat_face_4_0_default_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_skat_face_4_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_4</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>9000</rank>
+    <reputation>-1642</reputation>
+    <visual>actors\stalker_csky\csky_skat_face_4_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_skat_gas_4_0_default_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_skat_gas_4_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_4</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>9000</rank>
+    <reputation>-1183</reputation>
+    <visual>actors\stalker_csky\csky_skat_gas_4_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="stalker_nebo_skat_default_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_stalker_nebo_skat</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_4</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>9000</rank>
+    <reputation>-1481</reputation>
+    <visual>actors\stalker_csky\stalker_nebo_skat</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_5_0_default_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_5_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_4</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>9000</rank>
+    <reputation>-1481</reputation>
+    <visual>actors\stalker_csky\csky_5_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<!--  Clear Sky Legend  -->
+<specific_character id="csky_exo_5_0_default_5_0_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_exo_5_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_5</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>15000</rank>
+    <reputation>942</reputation>
+    <visual>actors\stalker_csky\csky_exo_5_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_exo_5_1_default_5_0_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_exo_5_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_5</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>15000</rank>
+    <reputation>1028</reputation>
+    <visual>actors\stalker_csky\csky_exo_5_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="csky_exo_5_1_default_5_1_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_exo_5_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_5</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>15000</rank>
+    <reputation>-1481</reputation>
+    <visual>actors\stalker_csky\csky_exo_5_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_exo_5_1_default_5_1_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_exo_5_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_5</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>15000</rank>
+    <reputation>1028</reputation>
+    <visual>actors\stalker_csky\csky_exo_5_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="csky_exoseva_5_0_default_5_0_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_csky_exoseva_5_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_csky_5</class>
+    <community>csky</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\csky\</snd_config>
+    <rank>15000</rank>
+    <reputation>1028</reputation>
+    <visual>actors\stalker_csky\csky_exoseva_5_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>

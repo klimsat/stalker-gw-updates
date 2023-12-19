@@ -1,0 +1,22 @@
+[logic]
+active = sr_idle@start
+
+[sr_idle@start]
+on_actor_inside = {-esc_army_ds_gopstop_free -esc_army_ds_gopstop_warn} sr_idle@wait_for_act %+esc_army_ds_gopstop_from_ds%
+on_actor_dist_ge_nvis = 200 | sr_idle@start %-esc_army_ds_gopstop_free -esc_army_ds_gopstop_warn -esc_army_ds_gopstop_fight%
+
+[sr_idle@wait_for_act]
+on_info = {+esc_army_ds_gopstop_free} sr_idle@peace
+on_actor_outside = {-esc_army_ds_gopstop_free} sr_idle@start %+esc_army_ds_gopstop_fight -esc_army_ds_gopstop_free -esc_army_ds_gopstop_from_ds%
+on_actor_dist_ge_nvis = 200 | sr_idle@start %-esc_army_ds_gopstop_free -esc_army_ds_gopstop_warn -esc_army_ds_gopstop_fight%
+on_info2 = {=is_level_changing} %-esc_army_ds_gopstop_free -esc_army_ds_gopstop_warn -esc_army_ds_gopstop_fight%
+
+[sr_idle@peace]
+on_game_timer = 180 | sr_idle@start %-esc_army_ds_gopstop_free%
+on_actor_outside = {+esc_army_ds_gopstop_from_ds} %-esc_army_ds_gopstop_from_ds%
+on_actor_dist_ge_nvis = 200 | sr_idle@start %-esc_army_ds_gopstop_free -esc_army_ds_gopstop_warn -esc_army_ds_gopstop_fight%
+
+;актер пришел со стороны Кордона - стреляем
+;
+;актер пришел со стороны ТЛ - ждем диалог
+; атакуем если ГГ не получил esc_army_ds_gopstop_free

@@ -1,0 +1,253 @@
+local armament_table = {}
+local ignore_table = {}
+
+local function spawn_wpn(section, npc, item, faction)
+  local ini = system_ini()
+
+  if section then
+    utils.spawn_item(section, npc)
+  else
+    section = "wpn_abakan"
+    utils.spawn_item(section, npc)
+    utils.error(
+      "ERROR: Can not detect weapon for spawn. faction: %s, section: %s, rank: %s - %s",
+      faction,
+      item.section,
+      item.rank[1],
+      item.rank[2]
+    )
+  end
+
+  local ammo_class = alun_utils.parse_list(ini, section, "ammo_class")
+  if item.use_ap_ammo == 1 then
+    local ap_ammo = utils.find_ap_ammo(ammo_class)
+
+    if ap_ammo then
+      utils.spawn_item(ap_ammo, npc)
+    else
+      utils.spawn_item(ammo_class[1], npc)
+    end
+  else
+    utils.spawn_item(ammo_class[1], npc)
+  end
+
+  if item.silencer == 1 then
+    local silencer_name = alun_utils.parse_list(ini, section, "silencer_name")
+    local silencer_status = alun_utils.parse_list(ini, section, "silencer_status")
+    if tonumber(silencer_status[1]) == 2 and silencer_name[1] then
+      utils.spawn_item(silencer_name[1], npc)
+    end
+  end
+end
+
+local function armament(faction, rank, npc)
+  local old_faction = faction
+
+  if armament_table[faction] == nil then
+    utils.warn("Ошибка при авто вооружении ГП: %s. Таблицы не существует %s", faction, armament_table[faction])
+
+    faction = old_faction
+  end
+
+  for _, item in pairs(armament_table[faction]) do
+    if tonumber(rank) >= tonumber(item.rank[1]) and tonumber(rank) <= tonumber(item.rank[2]) then
+      for _, random_items in pairs(item.one) do
+        local current_wpn = random_items[math.random(#random_items)]
+
+        spawn_wpn(current_wpn, npc, item, faction)
+      end
+      for _, random_items in pairs(item.random) do
+        local coff = math.random(100)
+        local current_value = 0
+        local current_wpn = nil
+
+        for _, wpn_chance in pairs(random_items) do
+          current_value = current_value + wpn_chance.value
+
+          if not (current_wpn) and coff <= current_value then
+            current_wpn = wpn_chance.key
+          end
+        end
+
+        spawn_wpn(current_wpn, npc, item, faction)
+
+        -- if item.scope then
+        -- 	local scope_name = alun_utils.parse_list(system_ini(), current_wpn, "scope_name")
+        -- 	utils.debug("spawn scope_name: %s, %s", npc:name(), scope_name[1])
+        -- 	if scope_name[1] then
+        -- 		alife():create(scope_name[1], npc:position(), npc:level_vertex_id(), npc:game_vertex_id(), npc:id())
+        -- 	end
+        -- end
+        -- if item.grenade_launcher then
+        -- 	local grenade_launcher_name = alun_utils.parse_list(system_ini(), current_wpn, "grenade_launcher_name")
+        -- 	utils.debug("spawn grenade_launcher_name: %s, %s", npc:name(), grenade_launcher_name[1])
+        -- 	if grenade_launcher_name[1] then
+        -- 		alife():create(grenade_launcher_name[1], npc:position(), npc:level_vertex_id(), npc:game_vertex_id(), npc:id())
+        -- 	end
+        -- end
+      end
+
+      for _, item_props in pairs(item.items) do
+        local prob = math.random(100)
+        local item_prob = item_props.prob * 100
+        if prob <= item_prob then
+          for i = 1, item_props.count do
+            utils.spawn_item(item_props.section, npc)
+          end
+        end
+      end
+    end
+  end
+end
+
+local function npc_on_net_spawn(npc, se_obj)
+  if not npc then
+    return
+  end
+
+  for _, ignored_section in pairs(ignore_table.ignore_npc_names) do
+    if string.match(npc:name(), ignored_section) then
+      return
+    end
+  end
+
+  local is_armament = utils.se_obj_load_var(npc:id(), npc:name(), "is_armament")
+
+  if is_armament then
+    return
+  end
+
+  local rank = npc:character_rank()
+  local npc_squad = get_object_squad(npc)
+  local faction = npc:character_community()
+
+  if faction == "trader" then
+    return
+  end
+
+  if IsSquad(npc_squad) then
+    for _, ignored_section in pairs(ignore_table.ignore_squad_names) do
+      if string.match(npc_squad:name(), ignored_section) then
+        return
+      end
+    end
+  end
+
+  armament(faction, rank, npc)
+
+  utils.se_obj_save_var(npc:id(), npc:name(), "is_armament", true)
+end
+
+function armament_actor()
+  local actorRank = db.actor:character_rank()
+  local actor_faction = sim_brain.actor_faction
+
+  armament(actor_faction, actorRank, db.actor)
+end
+
+local function squad_on_npc_death(squad, se_npc)
+  utils.se_obj_save_var(se_npc.id, se_npc:name(), "is_armament", nil)
+end
+local function initializeSpawnPropsFile(faction)
+  local file_name = strformat("misc\\armament\\%s.ltx", faction)
+  local is_file_exist = config_file_exists(file_name)
+
+  if not is_file_exist then
+    return
+  end
+
+  local props = ini_file(file_name)
+
+  if not props then
+    utils.error("ERROR in wargreat_armament.initializeSpawnPropsFile. Cannot find file '%s'", file_name)
+    return
+  end
+
+  armament_table[faction] = {}
+
+  local function iterator(section)
+    local count = props:section_exist(section) and props:line_count(section) or 0
+    local item = {
+      faction,
+      section,
+      silencer = 0,
+      scope = 0,
+      grenade_launcher = 0,
+      use_ap_ammo = 0,
+      rank = {},
+      random = {},
+      one = {},
+      items = {}
+    }
+
+    for i = 0, count - 1 do
+      local _, id, value = props:r_line(section, i, "", "")
+
+      if id == "rank" then
+        item.rank = alun_utils.split(value, ", ")
+      elseif id == "silencer" or id == "scope" or id == "grenade_launcher" or id == "use_ap_ammo" then
+        item[id] = tonumber(value) or 0
+      elseif string.find(id, "random") then
+        table.insert(item.random, alun_utils.parse_list_str(value))
+      elseif string.find(id, "one_of") then
+        table.insert(item.one, alun_utils.split(value, ", "))
+      else
+        local item_props = alun_utils.split(value, ", ")
+        if item_props[2] == nil then
+          utils.error(
+            "Ошибка. Не указана вероятность спавна предмета '%s' кол-во: '%s', в секции: '%s' в файле: '%s'",
+            id,
+            item_props[2],
+            section,
+            file_name
+          )
+        end
+        local item_props_table = {
+          ["section"] = id,
+          ["count"] = item_props[1],
+          ["prob"] = item_props[2]
+        }
+        table.insert(item.items, item_props_table)
+      end
+    end
+
+    table.insert(armament_table[faction], item)
+  end
+
+  props:section_for_each(iterator)
+end
+function initializeSpawnProps()
+  for _, faction in pairs(sim_tables.factions) do
+    if faction ~= "monster" then
+      initializeSpawnPropsFile(faction)
+    end
+  end
+
+  local ignore_ini = ini_file("misc\\armament\\ignore.ltx")
+
+  if not ignore_ini then
+    return
+  end
+
+  local function iterator(section)
+    local count = ignore_ini:section_exist(section) and ignore_ini:line_count(section) or 0
+    local item = {}
+
+    for i = 0, count - 1 do
+      local _, id, _ = ignore_ini:r_line(section, i, "", "")
+
+      table.insert(item, id)
+    end
+
+    ignore_table[section] = item
+  end
+
+  ignore_ini:section_for_each(iterator)
+end
+
+function on_game_start()
+  RegisterScriptCallback("npc_on_net_spawn", npc_on_net_spawn)
+  RegisterScriptCallback("squad_on_npc_death", squad_on_npc_death)
+
+  initializeSpawnProps()
+end

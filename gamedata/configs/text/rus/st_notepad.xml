@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+
+<string id="pda_btn_factions">
+	<text>Группировки</text>
+</string>
+<string id="pda_btn_factions_hint">
+	<text>Статистика группировок.</text>
+</string>
+
+<string id="Next">
+	<text>Вперед</text>
+</string>
+<string id="Back">
+	<text>Назад</text>
+</string>
+
+
+
+<string id="pda_mesto">
+	<text>Местонахождение:</text>
+</string>
+<string id="pda_points">
+	<text>Сила группировки:</text>
+</string>
+<string id="pda_base">
+	<text>Количество баз:</text>
+</string>
+<string id="pda_res">
+	<text>Точек ресурсов:</text>
+</string>
+<string id="pda_last">
+	<text>Членов клана:</text>
+</string>
+<string id="pda_friend">
+	<text>Отношение:</text>
+</string>
+<string id="pda_friend_1">
+	<text>Друзья</text>
+</string>
+<string id="pda_friend_2">
+	<text>Враги</text>
+</string>
+<string id="pda_friend_3">
+	<text>Нейтрально</text>
+</string>
+
+
+</string_table>

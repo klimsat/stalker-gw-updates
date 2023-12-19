@@ -1,0 +1,63 @@
+local cost = 50000
+
+function is_non_unique_smart(actor, npc)
+  local npc = dialogs.who_is_npc(actor, npc)
+
+  local squad = get_object_squad(npc)
+  if not (squad) then
+    return false
+  end
+
+  if not squad.smart_id then
+    return false
+  end
+
+  local smart = alife_object(squad.smart_id)
+
+  if not sim_smart.uniqueSmarts[smart:name()] then
+    return true
+  end
+
+  return false
+end
+
+function is_squad_camping(actor, npc)
+  local npc = dialogs.who_is_npc(actor, npc)
+
+  local squad = get_object_squad(npc)
+  if not (squad) then
+    return false
+  end
+
+  if squad.current_action == 1 and not squad.rush_to_target then
+    return true
+  end
+
+  return false
+end
+
+function has_money(actor, npc)
+  return actor_has_money(cost)
+end
+
+function allow_spawn_tarder_for_smart(actor, npc)
+  local npc = dialogs.who_is_npc(actor, npc)
+
+  local squad = get_object_squad(npc)
+  if not (squad) then
+    return
+  end
+
+  if not squad.smart_id then
+    return
+  end
+
+  local smart = alife_object(squad.smart_id)
+
+  if not sim_smart.uniqueSmarts[smart:name()] then
+    sim_smart.spawnTraderOnSmart(smart)
+  end
+
+  db.actor:give_money(-cost)
+  news_manager.relocate_money(db.actor, "out", -cost)
+end

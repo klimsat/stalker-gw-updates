@@ -1,0 +1,19 @@
+<w>
+    <background width="1024" height="768">
+        <auto_static x="0" y="0" width="1024" height="768" stretch="1">
+            <texture x="0" y="0" width="1920" height="1080">ui\ui_background_new</texture>
+        </auto_static>
+    </background>
+
+    <lbl_greatwar_options x="411" y="17" width="216" height="32">
+        <text x="8" font="letterica18" vert_align="c" align="c">Debug interface</text>
+    </lbl_greatwar_options>
+
+    <listbox_sms x="28" y="25" width="230" height="698" can_select="0" always_show_scroll="1" stretch="1"/>
+    <listbox_pda x="268" y="25" width="130" height="698" can_select="0" always_show_scroll="1" stretch="1"/>
+
+    <btn_cancel x="921" y="17" width="86" height="24" stretch="1">
+        <text align="c" font="letterica18">Cancel</text>
+        <texture>ui_inGame2_button</texture>
+    </btn_cancel>
+</w>

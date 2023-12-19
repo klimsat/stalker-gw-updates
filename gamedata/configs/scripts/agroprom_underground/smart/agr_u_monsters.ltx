@@ -1,0 +1,13 @@
+[smart_terrain]
+squad_id = 4
+max_population = 2
+respawn_params = respawn@agr_u_monsters
+respawn_idle = 60000
+respawn_radius = 300
+
+[respawn@agr_u_monsters]
+spawn_controller
+
+[spawn_controller]
+spawn_squads = simulation_controller
+spawn_num = {+agru_controller_death} 1, 0

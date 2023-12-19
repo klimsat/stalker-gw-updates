@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="st_mirotvorec_trader_orders_main">
+		<text>Can you get me something to order?</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_main_answer">
+		<text>No problem. The main language is less scribble, if asked from where the gun.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_weapons">
+		<text>Weapons required.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_weapons_answer">
+		<text>There are basically no problems with this.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_gen_descr_pistols">
+		<text>Pistol required.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_gen_descr_rifle">
+		<text>Assault rifles.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_gen_descr_auto_pistols">
+		<text>Submachine gun.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_gen_descr_sniper_rifle">
+		<text>Sniper rifles.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_gen_descr_havy_rifle">
+		<text>Heavy machine gun.</text>
+	</string>	
+	<string id="st_mirotvorec_trader_orders_gen_descr_auto_shotguns">
+		<text>Shotgun.</text>
+	</string>
+	<!-- Если расскоментить этот кусок, то он заменит текст-описание оружий для каждой категории который генерируется в скриптах -->
+	<!-- <string id="st_mirotvorec_trader_orders_gen_descr_pistols_answer">
+		<text>Дезерт Игл, ХПСА - 13, УДП Компакт, Кольт.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_gen_descr_rifle_answer">
+		<text>Абакан, Гроза - Оц14, Ас Вал, Л85, Гроза - 1, Гроза 5*45, ГП36, Вихрь.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_gen_descr_sniper_rifle_answer">
+		<text>Гаусс - Пушка.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_gen_descr_havy_rifle_answer">
+		<text>РПГ, ПКМ, М60, М134.</text>
+	</string> -->
+	<!-- <string id="st_mirotvorec_trader_orders_explosion_wpn">
+		<text>explosion_wpn.</text>
+	</string> -->
+	<string id="st_mirotvorec_trader_orders_gen_descr_outfit">
+		<text>Body armor.</text>
+	</string>
+	<!-- <string id="st_mirotvorec_trader_orders_outfit_answer">
+		<text>Комбинезон "Инквизитора", Научный Комбинезон "Инквизитор", Тяжелый бронежилет Инквизитора, Экзоскелет Инквизитора.</text>
+	</string> -->
+	<string id="st_mirotvorec_trader_orders_gen_descr_other">
+		<text>I want to see additional equipment.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_gen_descr_other_answer">
+		<text>One second... choose.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_item_grenade_f1_count_1">
+		<text>Give one.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_item_grenade_f1_count_5">
+		<text>Come on 5 pieces.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_item_grenade_f1_count_10">
+		<text>Come on 10 pieces.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_item_grenade_f1_count_50">
+		<text>Come on 50 pieces.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_item_grenade_f1_count_100">
+		<text>Come on 100 pieces.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_item_grenade_rgd5_count_1">
+		<text>Give one.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_item_grenade_rgd5_count_5">
+		<text>Come on 5 pieces.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_item_grenade_rgd5_count_10">
+		<text>Come on 10 pieces.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_item_grenade_rgd5_count_50">
+		<text>Come on 50 pieces.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_item_grenade_rgd5_count_100">
+		<text>Come on 100 pieces.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_item_medkit_count_1">
+		<text>Give one.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_item_medkit_count_5">
+		<text>Come on 5 pieces.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_item_medkit_count_10">
+		<text>Come on 10 pieces.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_item_medkit_count_50">
+		<text>Come on 50 pieces.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_item_medkit_count_100">
+		<text>Come on 100 pieces.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_item_bandage_count_1">
+		<text>Give one.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_item_bandage_count_5">
+		<text>Come on 5 pieces.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_item_bandage_count_10">
+		<text>Come on 10 pieces.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_item_bandage_count_50">
+		<text>Come on 50 pieces.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_item_bandage_count_100">
+		<text>Come on 100 pieces.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_ammo">
+		<text>Ammo needed.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_ammo_answer">
+		<text>What do you need? Pistol? Intermediate? Rifle? Or special ones?</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_middle_ammo">
+		<text>Intermediate.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_pistol_ammo">
+		<text>Pistol.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_rifle_ammo">
+		<text>Rifle.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_spec_ammo">
+		<text>Special.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_middle_ammo_answer">
+		<text>Here is the whole list, choose.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_pistol_ammo_answer">
+		<text>Here is the whole list, choose.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_rifle_ammo_answer">
+		<text>Here is the whole list, choose.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_spec_ammo_answer">
+		<text>Here is the whole list, choose.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_kit">
+		<text>You need to buy a set of equipment.</text>
+	</string>
+	<!-- Если расскоментить этот кусок, то он заменит текст-описание наборов который генерируется в скриптах -->
+	<!-- <string id="st_mirotvorec_trader_orders_kit_answer">
+		<text>Новичок. Описание. Комбинезон Инквизитора, Абакан, 5.45x39 х3, Хлеб, Аптечка.\nОпытный. Описание. Комбинезон Инквизитора, Г36, 5.56x45 х3, Хлеб, Колбаса, Аптечка, Бинт.\nПрофи. Описание. Вихрь, Комбинезон Инквизитора, Аптечка, Бинт х3, Колбаса, Хлеб, 9.39 х3.\nВетеран. Описание. Гроза 5.45, Тяжелый бронежилет Монолит, Армейская Аптечка, Бинт х5, Тушенка, Колбаса, Хлеб, 5.45x39 х5.\nМастер. Описание. ПКМ, Экзоскелет Инквизитора, Армейская Аптечка х3, Бинт х7, Тушенка х3, Колбаса х3, Хлеб х3, Патроны пулемета х3.</text>
+	</string> -->
+	<string id="st_mirotvorec_trader_orders_zelen_kit">
+		<text>Зеленый.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_novice_kit">
+		<text>Newbie.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_experience_kit">
+		<text>Experienced.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_professional_kit">
+		<text>Profi.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_veteran_kit">
+		<text>Veteran.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_master_kit">
+		<text>Master.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_legend_kit">
+		<text>Legend.</text>
+	</string>
+	
+	<!-- общие для всех или некоторых веток диалога тексты -->
+	<string id="st_mirotvorec_trader_orders_categoty_list_answer">
+		<text>Available now:</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_cost_item_answer">
+		<text>From you %s rubles.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_all_items_answer">
+		<text>How many?</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_accept">
+		<text>I take.</text>
+	</string>
+	<string id="st_mirotvorec_trader_orders_cancel">
+		<text>It doesn’t suit me.</text>
+	</string>
+</string_table>

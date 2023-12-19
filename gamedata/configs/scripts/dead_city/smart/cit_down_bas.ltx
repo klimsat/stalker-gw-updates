@@ -1,0 +1,18 @@
+[smart_terrain]
+squad_id = 20
+max_population = 2
+respawn_params = respawn@cit_down_bas
+respawn_idle = 30000
+
+
+[respawn@cit_down_bas]
+spawn_pigs
+
+[spawn_pigs]
+spawn_squads = simulation_flesh, simulation_mix_boar_flesh, simulation_boar
+spawn_num = 2
+
+[exclusive]
+cit_down_bas_camp_work_1 = dead_city\cit_down_bas_smart_logic.ltx
+cit_down_bas_camp_work_2 = dead_city\cit_down_bas_smart_logic.ltx
+cit_down_bas_camp_work_3 = dead_city\cit_down_bas_smart_logic.ltx

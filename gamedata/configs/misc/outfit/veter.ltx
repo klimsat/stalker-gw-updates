@@ -1,0 +1,338 @@
+;---------------------------------------------------------------------------------------------
+;       Куртка Ветра
+;---------------------------------------------------------------------------------------------
+[veter_novice_outfit]:outfit_novice_base
+$spawn                                   = "outfit\veter_novice_outfit"
+visual                                   = dynamics\outfit\veter_novice
+actor_visual                             = actors\stalker_veter\veter_novice_0_0.ogf
+npc_visual                               = actors\stalker_veter\veter_novice_0_0.ogf
+player_hud_section                       = actor_hud_monolith_novice
+
+
+inv_name                                 = veter_novice_outfit_name
+inv_name_short                           = veter_novice_outfit_name
+description                              = veter_novice_outfit_description
+
+inv_grid_height    = 3
+inv_grid_x         = 52
+inv_grid_y         = 24
+
+upgr_icon_x                              = 935
+upgr_icon_y                              = 340
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+
+cost                                     = 3000
+
+character_portrait						 = ui_inGame2_veter_novice_0_0
+
+upgrades                                 = up_gr_firstab_rookie_outfit, up_gr_seconab_rookie_outfit, up_gr_thirdab_rookie_outfit
+
+;---------------------------------------------------------------------------------------------
+;		Комбенизон Ветра
+;---------------------------------------------------------------------------------------------
+[veter_outfit]:outfit_base
+$spawn                                   = "outfit\veter_outfit"
+visual                                   = dynamics\outfit\veter_outfit
+actor_visual                             = actors\stalker_veter\veter_gas_rukzak_2_0.ogf
+npc_visual                               = actors\stalker_veter\veter_gas_rukzak_2_0.ogf
+player_hud_section                       = act_hand_veter_suit
+
+ef_equipment_type                        = 3
+
+inv_name                                 = veter_outfit_name
+inv_name_short                           = veter_outfit_name
+description                              = veter_outfit_description
+
+inv_weight                               = 8.0
+
+inv_grid_x                               = 48
+inv_grid_y                               = 24
+upgr_icon_x                              = 317
+upgr_icon_y                              = 0
+upgr_icon_width                          = 302
+upgr_icon_height                         = 130
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 17500
+full_scale_icon                          = 14,11	                                       ;иконка сталкера в костюме в полный рост
+
+artefact_count                           = 1
+
+immunities_sect                          = sect_veter_outfit_immunities
+
+
+; LOW RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1925
+explosion_protection                     = 0.1925
+wound_protection                         = 0.1925
+
+hit_fraction_actor                       = 0.75
+bones_koeff_protection                   = actor_armor_suit
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.75
+
+upgrades                                 = up_gr_firstab_stalker_outfit, up_gr_seconab_stalker_outfit, up_gr_thirdab_stalker_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_stalker_outfit
+character_portrait						 = ui_inGame2_veter_gas_rukzak_2_0
+
+[sect_veter_outfit_immunities]
+burn_immunity                            = 0.03	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.03
+wound_immunity                           = 0.03
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.03
+explosion_immunity                       = 0.03
+fire_wound_immunity                      = 0.015
+
+[sect_veter_outfit_immunities_add]
+burn_immunity                            = -0.015	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.015
+wound_immunity                           = -0.015
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.015
+explosion_immunity                       = -0.015
+fire_wound_immunity                      = -0.005
+
+;---------------------------------------------------------------------------------------------
+;		Научный Комбинезон Ветра
+;---------------------------------------------------------------------------------------------
+[veter_scientific_outfit]:outfit_scientific_base
+$spawn                                   = "outfit\veter_scientific_outfit"
+visual                                   = dynamics\outfit\osoznanie_scientific
+actor_visual                             = actors\stalker_veter\veter_seva_2_0.ogf
+npc_visual                               = actors\stalker_veter\veter_seva_2_0.ogf
+player_hud_section                       = act_hand_veter_seva
+
+inv_name                                 = veter_scientific_outfit_name
+inv_name_short                           = veter_scientific_outfit_name
+description                              = veter_scientific_outfit_description
+
+inv_weight                               = 12.0
+
+inv_grid_x                               = 50
+inv_grid_y                               = 24
+
+upgr_icon_x                              = 1225
+upgr_icon_y                              = 171
+upgr_icon_width                          = 285
+upgr_icon_height                         = 159
+
+cost                                     = 50000
+full_scale_icon                          = 12,11	                                       ;иконка сталкера в костюме в полный рост
+
+immunities_sect                          = sect_osoznanie_scientific_outfit_immunities
+
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.1033
+shock_protection                         = 0.4133
+radiation_protection                     = 0.0200
+chemical_burn_protection                 = 0.1033
+telepatic_protection                     = 0.0388
+strike_protection                        = 0.1925
+explosion_protection                     = 0.1925
+wound_protection                         = 0.1925
+
+hit_fraction_actor                       = 0.65
+bones_koeff_protection                   = actor_armor_seva
+
+artefact_count                           = 3
+
+nightvision_sect                         = effector_nightvision_2
+
+control_inertion_factor                  = 1.5
+power_loss                               = 0.8
+character_portrait						 = ui_inGame2_veter_seva_2_0
+
+;---------------------------------------------------------------------------------------------
+;		Экзоскелет Ветер
+;---------------------------------------------------------------------------------------------
+[veter_exo_outfit]:outfit_exo_base
+$spawn                                   = "outfit\veter_exo_outfit"
+visual                                   = dynamics\outfit\veter_exo
+actor_visual                             = actors\stalker_veter\veter_exo_4_0.ogf
+npc_visual                               = actors\stalker_veter\veter_exo_4_0.ogf
+player_hud_section                       = act_hand_veter_exo
+
+inv_name                                 = veter_exo_outfit_name
+inv_name_short                           = veter_exo_outfit_name
+description                              = veter_exo_outfit_description
+
+inv_weight                               = 23.0
+
+inv_grid_x                               = 44
+inv_grid_y                               = 24
+
+upgr_icon_x							     = 3760
+upgr_icon_y							     = 1152
+upgr_icon_width						     = 329
+upgr_icon_height					     = 192
+
+cost                                     = 120000
+
+power_loss                               = 1.1
+additional_inventory_weight              = 30
+additional_inventory_weight2             = 30
+artefact_count                           = 1
+helmet_avaliable					= false
+
+character_portrait						 = ui_inGame2_veter_exo_4_0
+
+;---------------------------------------------------------------------------------------------
+;		Полуэкзоскелет Ветра
+;---------------------------------------------------------------------------------------------
+[veter_radiation_outfit]:exo_outfit
+$spawn								= "outfit\veter_radiation_outfit"
+visual								= dynamics\outfit\veter_poluexo
+actor_visual						= actors\stalker_veter\veter_4_0.ogf
+player_hud_section					= act_hand_veter_poluexo
+
+inv_name							= veter_radiation_outfit_name
+inv_name_short						= veter_radiation_outfit_name
+description							= veter_radiation_outfit_description
+
+inv_weight							= 16.0
+
+inv_grid_x							= 46
+inv_grid_y							= 24
+
+upgr_icon_x							= 935
+upgr_icon_y							= 509
+upgr_icon_width						= 298
+upgr_icon_height					= 156
+
+cost								= 85000
+
+helmet_avaliable					= false
+power_loss							= 0.9
+control_inertion_factor				= 2.5
+sprint_allowed						= true
+additional_inventory_weight			= 0
+additional_inventory_weight2		= 0
+
+upgrades                                 = up_gr_firstab_rad_outfit, up_gr_seconab_rad_outfit, up_gr_thirdab_rad_outfit, up_gr_fourtab_rad_outfit, up_gr_fifthab_rad_outfit
+
+character_portrait						 = ui_inGame2_veter_4_0
+;---------------------------------------------------------------------------------------------
+;		Leader Veter Outfit
+;---------------------------------------------------------------------------------------------
+[leader_veter_outfit]:outfit_base
+$spawn                                   = "outfit\leader_veter_outfit"
+visual                                   = dynamics\outfit\veter_exo
+actor_visual                             = actors\stalker_veter\veter_leader.ogf
+npc_visual                               = actors\stalker_veter\veter_leader.ogf
+player_hud_section                       = act_hand_veter_exo
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_veter_outfit_name
+inv_name_short                           = leader_veter_outfit_name
+description                              = leader_veter_outfit_description
+
+inv_weight                               = 13
+
+inv_grid_x                               = 44
+inv_grid_y                               = 24
+
+upgr_icon_x							     = 3780
+upgr_icon_y							     = 1168
+upgr_icon_width						     = 294
+upgr_icon_height					     = 160
+
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 250790 
+
+full_scale_icon                          = 14,11
+
+immunities_sect                          = sect_leader_veter_outfit_immunities	
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0832
+shock_protection                         = 0.3963
+radiation_protection                     = 0.0139
+chemical_burn_protection                 = 0.0927
+telepatic_protection                     = 0.1123
+strike_protection                        = 0.5502
+explosion_protection                     = 0.5249
+wound_protection                         = 0.5249
+
+fire_wound_protection                    = 0.2530
+
+hit_fraction_actor                       = 0.15
+control_inertion_factor                  = 2.5
+bones_koeff_protection                   = veter_leader
+
+nightvision_sect 			             = effector_nightvision_2
+
+power_restore_speed                      = 0.005
+power_loss                               = 0.9
+
+additional_inventory_weight              = 60
+additional_inventory_weight2             = 60
+
+artefact_count                           = 5
+
+helmet_avaliable						 = false
+
+character_portrait						 = ui_inGame2_veter_exo_4_0
+
+[sect_leader_veter_outfit_immunities]
+burn_immunity                            = 0.0001
+strike_immunity                          = 0.0001
+shock_immunity                           = 0.0140
+wound_immunity                           = 0.0001
+radiation_immunity                       = 0.0000
+telepatic_immunity                       = 0.0000
+chemical_burn_immunity                   = 0.0001
+explosion_immunity                       = 0.0001
+fire_wound_immunity                      = 0.0001
+;---------------------------------------------------------------------------------------------
+;OUTFIT IN AZAZEL MODE: Leader Veter Outfit
+;---------------------------------------------------------------------------------------------
+[leader_azazel_veter_outfit]:outfit_leader_exo_base
+$spawn                                   = "outfit\leader_azazel_veter_outfit"
+visual                                   = dynamics\outfit\veter_exo
+actor_visual                             = actors\stalker_veter\veter_leader.ogf
+npc_visual                               = actors\stalker_veter\veter_leader.ogf
+player_hud_section                       = act_hand_veter_exo
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_veter_outfit_name
+inv_name_short                           = leader_veter_outfit_name
+description                              = leader_veter_outfit_description
+
+inv_weight                               = 13
+
+inv_grid_x                               = 44
+inv_grid_y                               = 24
+
+upgr_icon_x							     = 3780
+upgr_icon_y							     = 1168
+upgr_icon_width						     = 294
+upgr_icon_height					     = 160
+
+cost                                     = 250790 
+
+artefact_count                           = 1
+
+helmet_avaliable						 = false
+
+sprint_allowed							 = true
+
+power_loss                               = 0.75
+
+character_portrait						 = ui_inGame2_veter_exo_4_0

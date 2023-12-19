@@ -1,0 +1,73 @@
+<radio_moon_phase x="26" y="0" width="580" height="260" radio="1">
+    <options_item entry="opt_moon_phase" group="mm_opt_atmosfear" />
+    <button x="0" y="30" width="47" height="28" id="8days" stretch="1">
+        <text font="letterica16" vert_align="c" x="40" y="3" width="150" height="20" align="l">st_cap_moon_cycle_length_8</text>
+        <text_color>
+            <e r="170" g="170" b="170" />
+            <d r="70" g="70" b="70" />
+        </text_color>
+    </button>
+    <button x="0" y="60" width="47" height="28" id="28days" stretch="1">
+        <text font="letterica16" vert_align="c" x="40" y="3" width="150" height="20" align="l">st_cap_moon_cycle_length_28</text>
+        <text_color>
+            <e r="170" g="170" b="170" />
+            <d r="70" g="70" b="70" />
+        </text_color>
+    </button>
+    <button x="400" y="0" width="47" height="28" id="moon0" stretch="1">
+        <text font="letterica16" vert_align="c" x="40" y="3" width="150" height="20" align="l">st_cap_moon_phase_0</text>
+        <text_color>
+            <e r="170" g="170" b="170" />
+            <d r="70" g="70" b="70" />
+        </text_color>
+    </button>
+    <button x="400" y="30" width="47" height="28" id="moon1" stretch="1">
+        <text font="letterica16" vert_align="c" x="40" y="3" width="150" height="20" align="l">st_cap_moon_phase_1</text>
+        <text_color>
+            <e r="170" g="170" b="170" />
+            <d r="70" g="70" b="70" />
+        </text_color>
+    </button>
+    <button x="400" y="60" width="47" height="28" id="moon2" stretch="1">
+        <text font="letterica16" vert_align="c" x="40" y="3" width="150" height="20" align="l">st_cap_moon_phase_2</text>
+        <text_color>
+            <e r="170" g="170" b="170" />
+            <d r="70" g="70" b="70" />
+        </text_color>
+    </button>
+    <button x="400" y="90" width="47" height="28" id="moon3" stretch="1">
+        <text font="letterica16" vert_align="c" x="40" y="3" width="150" height="20" align="l">st_cap_moon_phase_3</text>
+        <text_color>
+            <e r="170" g="170" b="170" />
+            <d r="70" g="70" b="70" />
+        </text_color>
+    </button>
+    <button x="400" y="120" width="47" height="28" id="moon4" stretch="1">
+        <text font="letterica16" vert_align="c" x="40" y="3" width="150" height="20" align="l">st_cap_moon_phase_4</text>
+        <text_color>
+            <e r="170" g="170" b="170" />
+            <d r="70" g="70" b="70" />
+        </text_color>
+    </button>
+    <button x="400" y="150" width="47" height="28" id="moon5" stretch="1">
+        <text font="letterica16" vert_align="c" x="40" y="3" width="150" height="20" align="l">st_cap_moon_phase_5</text>
+        <text_color>
+            <e r="170" g="170" b="170" />
+            <d r="70" g="70" b="70" />
+        </text_color>
+    </button>
+    <button x="400" y="180" width="47" height="28" id="moon6" stretch="1">
+        <text font="letterica16" vert_align="c" x="40" y="3" width="150" height="20" align="l">st_cap_moon_phase_6</text>
+        <text_color>
+            <e r="170" g="170" b="170" />
+            <d r="70" g="70" b="70" />
+        </text_color>
+    </button>
+    <button x="400" y="210" width="47" height="28" id="moon7" stretch="1">
+        <text font="letterica16" vert_align="c" x="40" y="3" width="150" height="20" align="l">st_cap_moon_phase_7</text>
+        <text_color>
+            <e r="170" g="170" b="170" />
+            <d r="70" g="70" b="70" />
+        </text_color>
+    </button>
+</radio_moon_phase>

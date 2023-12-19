@@ -1,0 +1,25 @@
+[smart_terrain]
+squad_id = 22
+max_population = 20
+respawn_params = respawn@gar_smart_terrain_blokpost_darkvalley
+respawn_idle = 60000
+
+
+
+[respawn@gar_smart_terrain_blokpost_darkvalley]
+spawn_stalker@advanced
+spawn_stalker@master
+
+[spawn_stalker@advanced]
+spawn_squads = stalker_sim_squad_novice, stalker_sim_squad_advanced
+spawn_num = 3
+
+[spawn_stalker@master]
+spawn_squads = stalker_sim_squad_advanced, stalker_sim_squad_advanced, stalker_sim_squad_veteran
+spawn_num = 3
+
+[exclusive]
+gar_smart_terrain_blokpost_darkvalley_camp_work_1 = garbage\gar_smart_terrain_blokpost_darkvalley_smart_logic.ltx
+gar_smart_terrain_blokpost_darkvalley_camp_work_2 = garbage\gar_smart_terrain_blokpost_darkvalley_smart_logic.ltx
+gar_smart_terrain_blokpost_darkvalley_camp_work_3 = garbage\gar_smart_terrain_blokpost_darkvalley_smart_logic.ltx
+gar_smart_terrain_blokpost_darkvalley_camp_work_4 = garbage\gar_smart_terrain_blokpost_darkvalley_smart_logic.ltx

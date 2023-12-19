@@ -1,0 +1,1906 @@
+<specific_character id="sim_default_greh_leader_voron" team_default = "1">
+    <name>Ворон Чернобог</name>
+    <icon>ui_inGame2_greh_1_11</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Лидер Греха.</bio>
+    <class>sim_default_greh_leader_voron</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>20650</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_greh\greh_leader</visual>
+    <money min="32000" max="91750" infinitive="0"/>
+    <supplies>
+    [spawn] \n
+    wpn_galil = 1 \n
+    ammo_7.62x51_fmj = 2 \n
+    wpn_desert_eagle_357 \n
+    ammo_357_fmj = 2 \n
+    grenade_f1 = 4 \n
+    medkit = 6 \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs_leaders.xml"
+    <actor_dialog>dialog_leader_greh</actor_dialog>
+</specific_character>
+
+<specific_character id="sim_default_greh_voron" team_default = "1">
+    <name>Ворон</name>
+    <icon>ui_inGame2_greh_protoexo_face_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_voron</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>17000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_protoexo_face_1_0</visual>
+    <supplies>
+        [spawn] \n
+        wpn_sr3m = 1 \n
+        ammo_9x39_ap = 1 \n
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs_2.xml"
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_greh_smertnik" team_default = "1">
+    <name>Смертник</name>
+    <icon>ui_inGame2_greh_protoexo_face_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_smertnik</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>13000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_protoexo_face_1_0</visual>
+    <supplies>
+        [spawn] \n
+        wpn_gauss = 1 \n
+        ammo_gauss = 1 \n
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs_2.xml"
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_greh_demon" team_default = "1">
+    <name>Демон</name>
+    <icon>ui_inGame2_greh_assault</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_demon</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>13000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\stalker_greh_assault</visual>
+    <supplies>
+        [spawn] \n
+        wpn_sr3m = 1 \n
+        ammo_9x39_ap = 1 \n
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs_2.xml"
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<!--  duty zelen  -->
+<specific_character id="greh_1_0_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_zelen_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>1500</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="greh_1_1_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_zelen_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_2_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_zelen_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_3_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_zelen_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_4_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_zelen_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_5_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_zelen_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_5</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_6_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_6</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_zelen_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_6</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_7_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_zelen_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_7</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_8_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_8</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_zelen_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_8</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_9_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_zelen_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_9</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_10_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_10</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_zelen_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_10</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_11_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_11</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_zelen_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_11</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_12_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_12</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_zelen_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_12</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_13_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_13</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_zelen_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_13</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_14_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_14</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_zelen_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_14</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_15_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_15</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_zelen_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_15</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+	<specific_character id="greh_1_16_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_16</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_zelen_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_16</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+	<specific_character id="greh_1_17_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_17</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_zelen_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_17</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+	<specific_character id="greh_1_18_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_18</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_zelen_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_18</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+	<specific_character id="greh_1_19_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_19</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_zelen_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_19</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<!--  duty novice  -->
+<specific_character id="greh_1_0_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_1_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_2_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_3_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_4_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_5_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_5</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_6_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_6</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_6</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_7_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_7</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_8_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_8</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_8</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_9_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_9</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_10_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_10</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_10</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_11_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_11</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_11</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_12_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_12</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_12</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_13_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_13</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_13</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_14_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_14</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_14</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_15_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_15</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_15</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+	<specific_character id="greh_1_16_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_16</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_16</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+	<specific_character id="greh_1_17_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_17</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_17</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+	<specific_character id="greh_1_18_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_18</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_18</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+	<specific_character id="greh_1_19_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_19</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_0</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_19</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_1</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_1_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_1</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_2_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_1</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_3_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_1</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_4_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_1</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_5_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_1</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_5</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_6_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_6</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_1</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_6</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_7_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_1</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_7</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_8_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_8</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_1</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_8</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_9_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_1</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_9</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_10_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_10</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_1</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_10</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_11_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_11</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_1</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_11</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_12_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_12</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_1</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_12</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_13_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_13</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_1</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_13</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_14_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_14</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_1</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_14</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_15_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_15</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_1</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_15</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+	<specific_character id="greh_1_16_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_16</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_1</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_16</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+	<specific_character id="greh_1_17_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_17</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_1</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_17</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+	<specific_character id="greh_1_18_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_18</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_1</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_18</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+	<specific_character id="greh_1_19_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_19</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_1</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_19</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_greh_2_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_assault</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_2</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\greh\</snd_config>
+    <rank>7000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\stalker_greh_assault</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_protoexo_face_1_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_protoexo_face_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_2</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>7000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_protoexo_face_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_15_default_2" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_15</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_2</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>7000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_15</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_16_default_2" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_16</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_2</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>7000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_16</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_greh_2_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_4_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_2</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>7000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\stalker_sinner_1_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_greh_2_default_2" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_4_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_2</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>7000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\stalker_sinner_1_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_greh_2_default_3" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_4_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_2</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>7000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\stalker_sinner_1_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_greh_3_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_assault</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_3</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\greh\</snd_config>
+    <rank>9000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\stalker_greh_assault</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_greh_3_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_4_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_3</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\greh\</snd_config>
+    <rank>9000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\stalker_sinner_2_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_greh_3_default_2" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_4_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_3</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\greh\</snd_config>
+    <rank>9000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\stalker_sinner_2_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_greh_3_default_3" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_4_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_3</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\greh\</snd_config>
+    <rank>9000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\stalker_sinner_2_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_9_default_3" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_3</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>9000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_9</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_18_default_3" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_18</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_3</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>9000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_18</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_1_17_default_3" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_17</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_3</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>9000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_1_17</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="greh_1_17_default_4" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_17</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_3</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>9000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\stalker_sinner_3_1_no_exo</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="greh_1_17_default_5" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_17</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_3</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>9000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\stalker_sinner_3_2_no_exo</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="greh_1_17_default_6" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_17</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_3</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>9000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\stalker_sinner_3_3_no_exo</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="greh_1_17_default_7" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_1_17</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_3</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>9000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\stalker_sinner_3_3_3_no_exo</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_protoexo_face_1_0_default_4" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_protoexo_face_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_4</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>11000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_protoexo_face_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_protoexo_face_1_0_default_4_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_protoexo_face_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_4</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>11000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_protoexo_face_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_greh_4_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_4_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_4</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>11000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\stalker_sinner_4_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_greh_4_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_4_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_4</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>11000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\stalker_sinner_4_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_greh_4_default_2" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_4_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_4</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>11000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\stalker_sinner_4_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="greh_protoexo_face_1_0_default_5" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_protoexo_face_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_5</class>
+    <hit_probability_factor>100</hit_probability_factor>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>15000</rank>
+    <reputation>-0</reputation>
+    <money min="500" max="17500" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_protoexo_face_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_greh_5_default_0" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_4_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_5</class>
+    <hit_probability_factor>100</hit_probability_factor>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>15000</rank>
+    <reputation>-0</reputation>
+    <money min="500" max="17500" infinitive="0"/>
+    <visual>actors\stalker_greh\stalker_sinner_3_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_greh_5_default_1" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_4_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_5</class>
+    <hit_probability_factor>100</hit_probability_factor>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>15000</rank>
+    <reputation>-0</reputation>
+    <money min="500" max="17500" infinitive="0"/>
+    <visual>actors\stalker_greh\stalker_sinner_3_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_greh_5_default_2" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_inGame2_greh_4_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_5</class>
+    <hit_probability_factor>100</hit_probability_factor>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>15000</rank>
+    <reputation>-0</reputation>
+    <money min="500" max="17500" infinitive="0"/>
+    <visual>actors\stalker_greh\stalker_sinner_3_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+
+
+<specific_character id="sim_default_greh_nps_0" team_default = "1">
+    <name>Ворон</name>
+    <icon>ui_inGame2_greh_protoexo_face_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_nps</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_protoexo_face_1_0</visual>
+    <supplies>
+        [spawn] \n
+        wpn_sr3m = 1 \n
+        ammo_9x39_ap = 1 \n
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs_2.xml"
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_greh_nps_1" team_default = "1">
+    <name>Смертник</name>
+    <icon>ui_inGame2_greh_protoexo_face_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_nps</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>13000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\greh_protoexo_face_1_0</visual>
+    <supplies>
+        [spawn] \n
+        wpn_gauss = 1 \n
+        ammo_gauss = 1 \n
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs_2.xml"
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_greh_nps_2" team_default = "1">
+    <name>Демон</name>
+    <icon>ui_inGame2_greh_assault</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_greh_nps</class>
+    <community>greh</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\greh\</snd_config>
+    <rank>13000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="1750" infinitive="0"/>
+    <visual>actors\stalker_greh\stalker_greh_assault</visual>
+    <supplies>
+        [spawn] \n
+        wpn_sr3m = 1 \n
+        ammo_9x39_ap = 1 \n
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs_2.xml"
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>

@@ -1,0 +1,82 @@
+local reward = 0
+local reward_for_rank = {
+  zelen = math.random(200, 300),
+  zelnov = math.random(300, 400),
+  novice = math.random(400, 450),
+  novnachun = math.random(420, 450),
+  nachunaushu = math.random(450, 500),
+  novadvan = math.random(460, 550),
+  rybech = math.random(480, 550),
+  advanced = math.random(490, 580),
+  advanvet = math.random(500, 600),
+  veteran = math.random(550, 700),
+  sniper = math.random(650, 720),
+  vetmas = math.random(600, 730),
+  master = math.random(700, 850),
+  masleg = math.random(900, 1200),
+  legend = math.random(2000, 4000)
+}
+
+function give_reward(first_speaker, second_speaker)
+  dialogs.relocate_money_to_actor(first_speaker, second_speaker, reward)
+  reward = 0
+end
+
+function has_reward(first_speaker, second_speaker)
+  return reward > 0
+end
+function has_no_reward(first_speaker, second_speaker)
+  return not has_reward(first_speaker, second_speaker)
+end
+
+local function squad_on_npc_death(squad, npc, killer)
+  if not (npc and killer) then
+    return
+  end
+  if killer.id ~= db.actor:id() then
+    return
+  end
+
+  if not IsSquad(squad) then
+    reward = reward + math.random(500, 700)
+    return
+  end
+
+  local squad_name = squad:name()
+
+  for rank, amount in pairs(reward_for_rank) do
+    if string.find(squad_name, rank) then
+      reward = reward + amount
+      return
+    end
+  end
+end
+
+local function save_state(m_data)
+  if (not m_data.reward) then
+    m_data.reward = {}
+  end
+
+  m_data.reward = reward
+end
+
+local function load_state(m_data)
+  if (not m_data.reward) then
+    return
+  end
+
+  reward = m_data.reward or 0
+
+  m_data.reward = nil
+end
+
+local function actor_on_before_death(whoID, flags)
+  reward = 0
+end
+
+function on_game_start()
+  RegisterScriptCallback("squad_on_npc_death", squad_on_npc_death)
+  RegisterScriptCallback("actor_on_before_death", actor_on_before_death)
+  RegisterScriptCallback("save_state", save_state)
+  RegisterScriptCallback("load_state", load_state)
+end

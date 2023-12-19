@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+	<!-- ESCORT ECOGS TASK -->
+	<string id="yan_ecolog_semenov_task_1_name">
+		<text>Помочь профессору Семёнову</text>
+	</string>
+	<string id="yan_ecolog_semenov_task_1_text">
+		<text>Нужно проводить профессора Семёнова по окрестностям, отыскать и убить несколько мутантов, чтобы учёный мог взять свежие образцы ткани и просканировать тела.</text>
+	</string>
+	<string id="yan_ecolog_semenov_task_1_about">
+		<text>Вы не могли бы помочь мне отыскать пару мутантов для исследований? Скажем... пять разных особей. Ну и, естественно, обеспечить мне безопасность во время проведения замеров. Я заплачу Вам за Вашу работу.</text>
+	</string>
+	<string id="yan_ecolog_semenov_task_1_finish">
+		<text>Спасибо за помощь, сталкер. Я собрал все данные, которые мне нужны. Вот Ваша награда... Заходите еще в нашу лабораторию.</text>
+	</string>
+
+
+	<!-- FIND MUTANT PARTS FOR ECOGS TASK -->
+	<string id="yan_stalker_sakharov_task_1_name">
+		<text>Принести часть тела монстра: %s</text>
+	</string>
+	<string id="yan_stalker_sakharov_task_1_text">
+		<text>Профессор Сахаров попросил достать для него образцы тканей определённого мутанта.</text>
+	</string>
+	<string id="yan_stalker_sakharov_task_1_fetch_about">
+		<text>Мне требуются некоторые образцы для исследований, а именно... %s. Не важно, где Вы их достанете; главное, чтобы они были как можно свежее. Возвращайтесь в лабораторию как можно быстрее, после того как соберете всё, что мне нужно. Вы согласны?</text>
+	</string>
+	<string id="yan_stalker_sakharov_task_1_fetch_finish">
+		<text>Благодарю Вас, молодой человек. Я немедленно приступаю к исследованиям.</text>
+	</string>
+
+	<string id="yan_stalker_sakharov_task_2_name">
+		<text>Принести артефакт: %s</text>
+	</string>
+	<string id="yan_stalker_sakharov_task_2_text">
+		<text>Профессор Сахаров попросил достать для него аномальный образец определенного типа.</text>
+	</string>
+	<string id="yan_stalker_sakharov_task_2_fetch_about">
+		<text>Мне требуются некоторые образцы для исследований, а именно... %s. Не важно, где Вы их достанете; главное, чтобы они были как можно свежее. Возвращайтесь в лабораторию как можно быстрее, после того как соберете всё, что мне нужно. Вы согласны?</text>
+	</string>
+	<string id="yan_stalker_sakharov_task_2_fetch_finish">
+		<text>Благодарю Вас, молодой человек. Я немедленно приступаю к исследованиям.</text>
+	</string>
+
+	<string id="yan_stalker_sakharov_task_3_name">
+		<text>Захватить: %s</text>
+	</string>
+	<string id="yan_stalker_sakharov_task_3_text">
+		<text>Профессор Сахаров попросил захватить сектор.</text>
+	</string>
+	<string id="yan_stalker_sakharov_task_3_fetch_about">
+		<text>Нашим коллегам трудно исследовать некоторые аномальные места из-за неприятелей в секторе %s, не могли бы вы разобраться с этим?</text>
+	</string>
+	<string id="yan_stalker_sakharov_task_3_fetch_finish">
+		<text>Благодарю Вас, молодой человек.</text>
+	</string>
+
+	<string id="yan_stalker_sakharov_task_4_name">
+		<text>Снаряжение для Ученых</text>
+	</string>
+	<string id="yan_stalker_sakharov_task_4_text">
+		<text>Профессор Сахаров попросил отнести посылку одному из отрядов на позиции %s во главе с %s.</text>
+	</string>
+	<string id="yan_stalker_sakharov_task_4_fetch_about">
+		<text>Одному из наших отрядов требуется снаряжение для охраны %s. Не могли бы Вы нам помочь разобраться с этим?</text>
+	</string>
+	<string id="yan_stalker_sakharov_task_4_fetch_finish">
+		<text>Спасибо. Вот ваша награда.</text>
+	</string>
+
+
+	<!-- WAIT FOR PSI HELMET CALIBRATION TASK -->
+	<string id="yan_stalker_sakharov_psi_helmet_upgrade_name">
+		<text>Забрать пси-шлем</text>
+	</string>
+	<string id="yan_stalker_sakharov_psi_helmet_upgrade_text">
+		<text>Профессор Сахаров согласился настроить пси-шлем. Он попросил вернуться за ним через несколько дней.</text>
+	</string>
+
+	<!-- wait for transmutation task -->
+	<string id="yan_stalker_sakharov_take_transmutation_result_wait_name">
+		<text>Дождаться результатов трансмутации.</text>
+	</string>
+	<string id="yan_stalker_sakharov_take_transmutation_result_name">
+		<text>Забрать результаты трансмутации.</text>
+	</string>
+	<string id="yan_stalker_sakharov_take_transmutation_result_description">
+		<text>Профессор Сахаров сделал трансмутацию артефактов. Он попросил вернуться за результатом через несколько дней.</text>
+	</string>
+
+	<!-- TURN OFF MIRACLE MACHINE TASK -->
+	<string id="brain_machine_deactivate_name">
+		<text>Отключить пси-установку на Янтаре</text>
+	</string>
+	<string id="brain_machine_deactivate_text">
+		<text>Мощная пси-установка на Янтаре перекрывает сталкерам пути через Янтарь и Мёртвый город. Чтобы её отключить, понадобится хорошая пси-защита.</text>
+	</string>
+
+	<!-- first quest on find to artefacts -->
+	<string id="yan_stalker_sakharov_find_transmutation_artefacts_name_0">
+		<text>Найти артефакты для Профессора Сахарова.</text>
+	</string>
+	<string id="yan_stalker_sakharov_find_transmutation_artefacts_name_1">
+		<text>Вернуться к Профессору Сахарову.</text>
+	</string>
+	<string id="yan_stalker_sakharov_find_transmutation_artefacts_description_0">
+		<text>Профессор Сахаров дал задание на поиск артефактов:\nКаменный цветок 2шт,\nБатарейка 1шт,\nМедуза 1шт,\nЛомоть мяса 2шт,\nБенгальский огонь 1шт,\nПузырь 1шт,\nГрави 1шт,\nЛунный свет 1шт,\nГлаз 1шт.</text>
+	</string>
+	<string id="yan_stalker_sakharov_find_transmutation_artefacts_description_1">
+		<text>Все артефакты собраны. Нужно возвращаться в профессору.</text>
+	</string>
+
+	<string id="yan_stalker_sakharov_find_transmutation_artefacts_2_1_name">
+		<text>Вернуться к Профессору Сахарову.</text>
+	</string>
+	<string id="yan_stalker_sakharov_find_transmutation_artefacts_2_1_description">
+		<text>Еще одно задание - еще одна возможность подзаработать. Возможно, будет еще что-то полезное...</text>
+	</string>
+
+	<string id="yan_stalker_sakharov_find_transmutation_artefacts_2_2_name_1">
+		<text>Вернуться к Профессору Сахарову.</text>
+	</string>
+	<string id="yan_stalker_sakharov_find_transmutation_artefacts_2_2_name_0">
+		<text>Найти артефакты для Профессора Сахарова.</text>
+	</string>
+	<string id="yan_stalker_sakharov_find_transmutation_artefacts_2_2_description_1">
+		<text>Все артефакты собраны. Нужно возвращаться в профессору.</text>
+	</string>
+	<string id="yan_stalker_sakharov_find_transmutation_artefacts_2_2_description_0">
+		<text>Профессор Сахаров опять дал задание на поиск артефактов: Изменённый штурвал 2шт, Изменённый изолятор 2шт, Сердце Оазиса 1шт и Компас 1шт.</text>
+	</string>
+</string_table>

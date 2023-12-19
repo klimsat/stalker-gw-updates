@@ -1,0 +1,13 @@
+[logic]
+active = sr_idle@start
+	
+[sr_idle@start]
+on_info = %=change_actor_community(actor_stalker) =give_money_to_actor(49)% sr_idle@loot
+on_info2 = {+new_game_started} sr_idle@nil
+
+[sr_idle@loot]
+on_info = {-new_game_started} sr_idle@nil %+new_game_started =give_items_to_actor(device_torch:stalker_outfit) =spawn_corpse(esc_agent_corpse_1:esc_smart_terrain_8_10_corpse_1_walk) =spawn_corpse(esc_agent_corpse_2:esc_smart_terrain_8_10_corpse_2_walk) =spawn_corpse(esc_agent_corpse_3:esc_smart_terrain_8_10_corpse_3_walk) =scenario_autosave(st_first_autosave)% 
+on_info2 = {+new_game_started} sr_idle@nil
+
+[sr_idle@nil]
+on_info = %=destroy_object%

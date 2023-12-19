@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<!--- Call of Chernobyl -->
+
+	<!-- Jup A6 Yar -->
+	<string id="jup_b19_freedom_yar_task_1_name">
+		<text>Спецдоставка</text>
+	</string>
+	<string id="jup_b19_freedom_yar_task_1_text">
+		<text>Вам нужно доставить определённое сообщение. И как только вы в это ввязались?</text>
+	</string>
+	<string id="jup_b19_freedom_yar_task_1_about">
+		<text>Ладно, есть для тебя одно очень простое дело. Нужно, чтоб ты передал кое-что одному моему приятелю, Ашоту. У него вроде бы КПК на днях барахлил, так скажи ему, чтоб занёс его мне, поглядим чего там стряслось.</text>
+	</string>
+	<string id="jup_b19_freedom_yar_task_1_finish">
+		<text>Ха-ха-ха, извини, сталкер, мы просто прикалывались над тобой. Не могу поверить, что ты так долго со всем этим маялся.</text>
+	</string>
+	
+	<string id="jup_b19_freedom_yar_task_1_dm_query">
+		<text>Меня попросили кое-что тебе передать.</text>
+	</string>
+
+	<string id="jup_b6_scientist_tech_task_1_name">
+		<text>Провести учёных</text>
+	</string>
+	<string id="jup_b6_scientist_tech_task_1_text">
+		<text>Необходимо провести учёных к определенному месту и обеспечить их безопасность, пока те проводят исследования, а затем привести обратно в лабораторию.</text>
+	</string>
+	<string id="jup_b6_scientist_tech_task_1_about">
+		<text>Нам нужен опытный сталкер, который согласится провести наших коллег до места исследований и обеспечить их безопасность во время оных. Не поможешь?</text>
+	</string>
+	<string id="jup_b6_scientist_tech_task_1_fetch_finish">
+		<text>Спасибо, сталкер. Вот, возьми это в качестве вознаграждения:</text>
+	</string>
+
+	<string id="jup_b6_scientist_tech_task_2_name">
+		<text>Найти артефакт: %s</text>
+	</string>
+	<string id="jup_b6_scientist_tech_task_2_text">
+		<text>Гарин поручил принести %s, чтобы учёные смогли провести над артефактом исследования.</text>
+	</string>
+	<string id="jup_b6_scientist_tech_task_2_fetch_about">
+		<text>Учёным нужны некоторые виды артефактов для исследований. %s, к примеру. Слышал о таком? Если принесешь - получишь вознаграждение.</text>
+	</string>
+	<string id="jup_b6_scientist_tech_task_2_fetch_finish">
+		<text>Отличный образец, именно то, что нужно. Вот обещанная награда:</text>
+	</string>
+
+	<string id="jup_b220_trapper_task_1_name">
+		<text>Зачистить логово мутантов</text>
+	</string>
+	<string id="jup_b220_trapper_task_1_text">
+		<text>Вблизи этого места было замечено скопление мутантов, что создает угрозу местным сталкерам. Зверобой поручил зачистить логово тварей.</text>
+	</string>
+	<string id="jup_b220_trapper_task_1_about">
+		<text>Хмм... Ты выглядишь достаточно опытным. Я ищу охотника, чтобы обезопасить территорию вокруг Янова от мутантов. Не поможешь?</text>
+	</string>
+	<string id="jup_b220_trapper_task_1_finish">
+		<text>Спасибо, сталкер. Благодаря тебе здесь теперь будет намного безопаснее. Вот твоя награда:</text>
+	</string>
+	
+	<string id="jup_b220_trapper_task_2_name">
+		<text>Устранить угрозу</text>
+	</string>
+	<string id="jup_b220_trapper_task_2_text">
+		<text>Зверобой попросил убрать одного опасного сталкера.</text>
+	</string>
+	<string id="jup_b220_trapper_task_2_about">
+		<text>Неподалёку объявилась серьёзная угроза, которая должна быть устранена. Нет, в этот раз не мутант, хуже - человек. Убить его будет не так просто, но я обещаю компенсировать все твои затраты. Возьмешься?</text>
+	</string>
+	<string id="jup_b220_trapper_task_2_finish">
+		<text>Отличная работа, сталкер. Вот твоя награда:</text>
+	</string>
+	
+	<string id="jup_b220_trapper_task_3_name">
+		<text>Достать оружие: %s</text>
+	</string>
+	<string id="jup_b220_trapper_task_3_text">
+		<text>Нужно принести Зверобою определённое оружие в хорошем состоянии.</text>
+	</string>
+	<string id="jup_b220_trapper_task_3_fetch_about">
+		<text>Один из моих клиентов хочет приобрести некое оружие, %s если быть точным, но у меня его сейчас нет. Сможешь достать? Клиенту скоро предстоит опасная охота, так что оружие должно быть в отличном состоянии. Я неплохо заплачу, если ты всё же найдешь нужный ствол.</text>
+	</string>
+	<string id="jup_b220_trapper_task_3_fetch_finish">
+		<text>О, великолепно. Самое то! Вот обещанная плата:</text>
+	</string>
+
+	<string id="jup_b220_trapper_task_4_name">
+		<text>Собрать трофеи: %s</text>
+	</string>
+	<string id="jup_b220_trapper_task_4_text">
+		<text>Зверобой попросил достать для него часть тела определённого мутанта. Ему требуется %s. Охотник обещал щедро заплатить за трофей.</text>
+	</string>
+	<string id="jup_b220_trapper_task_4_fetch_about">
+		<text>У меня есть заказы трофеи с определённых мутантов. Работа довольно простая: ты убиваешь определённого мутанта и приносишь мне часть его тела. Мне потребуется %s. Если сможешь добыть, получишь неплохие деньги.</text>
+	</string>
+	<string id="jup_b220_trapper_task_4_fetch_finish">
+		<text>Еще одной угрозой меньше и одним трофеем больше. Отлично сработал, сталкер.</text>
+	</string>
+
+	<string id="jup_b217_stalker_tech_task_1_name">
+		<text>Найти: %s</text>
+	</string>
+	<string id="jup_b217_stalker_tech_task_1_text">
+		<text>Необходимо принести Азоту %s. Механик заплатит за инструмент и, кроме того, сможет обеспечить более сложную модернизацию оружия или бронежилета.</text>
+	</string>
+	<string id="jup_b217_stalker_tech_task_1_fetch_about">
+		<text>Мне нужны новые инструменты. В Зоне их сейчас днём с огнём не сыщешь, а снаряжение чинить чем-то надо. Поможешь? Я наградой не обижу.</text>
+	</string>
+	<string id="jup_b217_stalker_tech_task_1_fetch_finish">
+		<text>Отлично! То что мне нужно! Нужно будет улучшить снарягу - заходи, сделаем.</text>
+	</string>
+
+	<string id="jup_b217_stalker_tech_task_2_name">
+		<text>Найти %s</text>
+	</string>
+	<string id="jup_b217_stalker_tech_task_2_text">
+		<text>Необходимо принести Азоту %s. Механик заплатит за инструмент и, кроме того, сможет обеспечить более сложную модернизацию оружия или бронежилета.</text>
+	</string>
+	<string id="jup_b217_stalker_tech_task_2_fetch_about">
+		<text>Ты принес мне отличный ремнабор, но в нем оказалось не всё, что мне нужно. В нем нет инструментов для тонкой работы, нужных для более глобальных апгрейдов. Сможешь достать подходящий набор?</text>
+	</string>
+	<string id="jup_b217_stalker_tech_task_2_fetch_finish">
+		<text>Ого! Ты принес отличный набор, дружище. Вот, держи, ты это заслужил.</text>
+	</string>
+
+	<string id="jup_b217_stalker_tech_task_3_name">
+		<text>Найти %s</text>
+	</string>
+	<string id="jup_b217_stalker_tech_task_3_text">
+		<text>Необходимо принести Азоту %s. Механик заплатит за инструмент и, кроме того, сможет обеспечить более сложную модернизацию оружия или бронежилета.</text>
+	</string>
+	<string id="jup_b217_stalker_tech_task_3_fetch_about">
+		<text>Мне нужны инструменты для калибровки. Найдешь подходящий набор - приноси, наградой не обделю.</text>
+	</string>
+	<string id="jup_b217_stalker_tech_task_3_fetch_finish">
+		<text>Спасибо, я знал, что ты не подведёшь. Вот твоя награда:</text>
+	</string>
+	
+</string_table>

@@ -1,0 +1,42 @@
+local gs = GetString
+
+local function actor_on_use_patch(obj)
+  local section = obj:section()
+
+  if not string.find(section, "_patch") then
+    return
+  end
+
+  local actor_faction = sim_brain.actor_faction
+
+  if not actor_faction then
+    utils.news_params("Внимание:", gs("st_use_patch_not_init"), "ui_inGame2_radioviska", 0, 15000)
+
+    return
+  end
+
+  local faction = string.gsub(section, "_patch", "")
+
+  if faction == actor_faction then
+    utils.news_params("Внимание:", gs("st_use_patch_same_faction"), "ui_inGame2_radioviska", 0, 15000)
+
+    return
+  end
+
+  db.actor:set_character_community(strformat("actor_%s", faction), 0, 0)
+
+  local se_item = alife():object(obj:id())
+  alife_release(se_item, true)
+
+  utils.news_params(
+    "Внимание:",
+    strformat(gs("st_actor_used_patch"), sim_script_to_text.faction_names_standart[faction]),
+    "ui_inGame2_radioviska",
+    0,
+    15000
+  )
+end
+
+function on_game_start()
+  RegisterScriptCallback("actor_on_item_use", actor_on_use_patch)
+end

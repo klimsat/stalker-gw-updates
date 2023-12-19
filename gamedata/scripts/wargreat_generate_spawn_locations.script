@@ -1,0 +1,51 @@
+locations = {}
+
+function generate()
+  local sim, gg = alife(), game_graph()
+  local ini = ini_file_ex("plugins\\new_game_start_locations\\default.ltx", true)
+
+  utils.warn("Start generate start spawn locations")
+
+  for name, smart in pairs(SIMBOARD.smarts_by_names) do
+    if sim_smart.isBase(smart) then
+      ini:w_value(name, "enabled", "false")
+    end
+
+    if
+      sim_smart.isBase(smart) and smart.owning_faction ~= "monster" and smart.owning_faction ~= "none" and
+        smart.owning_faction ~= nil
+     then
+      ini:w_value(smart.owning_faction, name, "")
+
+      local level_id = gg:vertex(smart.m_game_vertex_id):level_id()
+      local level_name = sim:level_name(level_id)
+      local cvertex = smart and gg:vertex(smart.m_game_vertex_id)
+
+      ini:w_value(name, "enabled", "true")
+      ini:w_value(name, "level_name", level_name)
+      ini:w_value(name, "lvid", cvertex:level_vertex_id())
+      ini:w_value(name, "gvid", smart.m_game_vertex_id)
+      ini:w_value(name, "x", smart.position.x)
+      ini:w_value(name, "y", smart.position.y)
+      ini:w_value(name, "z", smart.position.z)
+    end
+  end
+
+  ini:save()
+
+  utils.warn("Finish generate start spawn locations")
+end
+
+local function init()
+  for i = 1, #sim_tables.factions do
+    local faction = sim_tables.factions[i]
+
+    if faction ~= "monster" then
+      locations[faction] = {}
+    end
+  end
+end
+
+function on_game_start()
+  init()
+end

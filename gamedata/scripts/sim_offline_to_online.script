@@ -1,0 +1,273 @@
+local news_update
+local last_update
+
+function getSenderPhrase(number, faction)
+  local sender
+
+  if number == 1 then
+    sender = sim_script_to_text.sender_phrase
+  elseif number == 2 then
+    sender = sim_script_to_text.sender_phrase2
+  end
+
+  if sender[faction] ~= nil then
+    return sender[faction][math.random(#sender[faction])]
+  end
+
+  return sender["stalker"][1]
+end
+
+function mutant_spawn_news(mutant, smart)
+  if not (db.actor or mutant or smart) then
+    return
+  end
+
+  if sim_brain.actor_faction == "zombied" then
+    return
+  end
+
+  local night = (level.get_time_hours() < 6 or level.get_time_hours() > 20)
+
+  if (night) then
+    return
+  end
+
+  if (sim_offline_control.squads_by_level[smart.level_id]) then
+    for s, _ in pairs(sim_offline_control.squads_by_level[smart.level_id]) do
+      local squad = alife_object(s)
+      if squad then
+        local faction = sim_brain.actor_faction
+        if (squad:clsid() == clsid.online_offline_group_s) then
+          faction = squad:get_squad_community()
+        end
+        if (squad) and (faction) and (faction == sim_brain.actor_faction) then
+          if string.find(squad:name(), "sim_squad") then
+            local commanderID = squad:commander_id()
+            local commander = commanderID and alife_object(commanderID)
+            local commanderName = commander and commander.character_name and commander:character_name() or ""
+            local com_name = sim_script_to_text.faction_names_standart[sim_brain.actor_faction]
+            local sender = (commanderName .. ", канал группировки " .. com_name)
+            local sender_icon = getSenderSmsIcon(sim_brain.actor_faction)
+            local position_descr = dynamic_news_helper.GetPointDescription(mutant)
+            local see_u =
+              sim_script_to_text.about_mutants_phrase_1[math.random(#sim_script_to_text.about_mutants_phrase_1)]
+            local see_u2 =
+              sim_script_to_text.about_mutants_phrase_2[math.random(#sim_script_to_text.about_mutants_phrase_2)]
+            local news_text
+            local mutant_section
+
+            if string.find(mutant:name(), "snork") then
+              mutant_section =
+                sim_script_to_text.about_mutants_phrase_snork[
+                math.random(#sim_script_to_text.about_mutants_phrase_snork)
+              ]
+            elseif string.find(mutant:name(), "gigant") then
+              mutant_section =
+                sim_script_to_text.about_mutants_phrase_gigant[
+                math.random(#sim_script_to_text.about_mutants_phrase_gigant)
+              ]
+            elseif string.find(mutant:name(), "chimera") then
+              mutant_section =
+                sim_script_to_text.about_mutants_phrase_chimera[
+                math.random(#sim_script_to_text.about_mutants_phrase_chimera)
+              ]
+            elseif string.find(mutant:name(), "bloodsucker") then
+              mutant_section =
+                sim_script_to_text.about_mutants_phrase_blood[
+                math.random(#sim_script_to_text.about_mutants_phrase_blood)
+              ]
+            elseif string.find(mutant:name(), "burer") then
+              mutant_section =
+                sim_script_to_text.about_mutants_phrase_burer[
+                math.random(#sim_script_to_text.about_mutants_phrase_burer)
+              ]
+            elseif string.find(mutant:name(), "controller") then
+              mutant_section =
+                sim_script_to_text.about_mutants_phrase_controller[
+                math.random(#sim_script_to_text.about_mutants_phrase_controller)
+              ]
+            elseif string.find(mutant:name(), "poltergeist") then
+              mutant_section =
+                sim_script_to_text.about_mutants_phrase_poltergeist[
+                math.random(#sim_script_to_text.about_mutants_phrase_poltergeist)
+              ]
+            end
+
+            if mutant_section then
+              news_text = see_u .. " " .. mutant_section .. " " .. position_descr .. "" .. see_u2
+            end
+
+            if news_text then
+              send_news(sender, news_text, sender_icon)
+              break
+            end
+          end
+        end
+      end
+    end
+  end
+end
+
+function target_news(squad, smart, target)
+  if not (db.actor or squad or smart or target) then
+    return
+  end
+
+  if sim_brain.actor_faction == "zombied" then
+    return
+  end
+
+  local faction_squad = squad:get_squad_community()
+  local faction_smart_target = target.owning_faction
+  if
+    (sim_brain.actor_faction == faction_squad and faction_squad ~= "zombied") and
+      (faction_smart_target ~= "none" and faction_smart_target ~= nil)
+   then
+    local target_faction_name = sim_script_to_text.faction_names[faction_smart_target]
+    local target_level_name = GetString(alife():level_name(game_graph():vertex(target.m_game_vertex_id):level_id()))
+    local smart_level_name = alife():level_name(game_graph():vertex(smart.m_game_vertex_id):level_id())
+    local script_to_text_smart_start = sim_script_to_text.smart_names_ot[smart:name()] or smart:name()
+    local script_to_text_level_start = sim_script_to_text.level_names_s[smart_level_name] or smart_level_name
+    local target_phrase_1 = sim_script_to_text.target_phrase_1[math.random(#sim_script_to_text.target_phrase_1)]
+    local commanderID = squad:commander_id()
+    local commander = commanderID and alife_object(commanderID)
+    local commanderName = commander and commander.character_name and commander:character_name() or ""
+    local com_name = sim_script_to_text.faction_names_standart[faction_squad]
+    local sender = (commanderName .. ", канал группировки " .. com_name)
+    local sender_icon = getSenderSmsIcon(sim_brain.actor_faction)
+    local news_text = ""
+
+    if
+      (level == "labx8") or (level == "jupiter_underground") or (level == "l03u_agr_underground") or
+        (level == "l04u_labx18") or
+        (level == "l08u_brainlab") or
+        (level == "l10u_bunker") or
+        (level == "l12u_sarcofag") or
+        (level == "l12u_control_monolith") or
+        (level == "l13u_warlab")
+     then
+      news_text =
+        "Cобираем рейд в " ..
+        target_level_name .. " пойдем через несколько минут от точки " .. script_to_text_smart_start
+    else
+      news_text =
+        getSenderPhrase(1, sim_brain.actor_faction) ..
+        " " ..
+          getSenderPhrase(2, sim_brain.actor_faction) ..
+            " " ..
+              target_faction_name ..
+                " " ..
+                  dynamic_news_helper.GetPointDescription(target) ..
+                    ", " ..
+                      target_phrase_1 .. " " .. script_to_text_level_start .. ", от " .. script_to_text_smart_start
+    end
+
+    send_news(sender, news_text, sender_icon)
+  end
+end
+
+function under_attack_news(squad1, squad2)
+  if not (db.actor or squad1 or squad2) then
+    return
+  end
+
+  if sim_brain.actor_faction == "zombied" then
+    return
+  end
+
+  local squad_com1 = squad1:get_squad_community()
+  local squad_com2 = squad2:get_squad_community()
+
+  if
+    (sim_brain.actor_faction == squad_com2 and squad_com1 ~= "monster") and
+      (squad_com2 ~= "monster" and squad_com2 ~= "zombied")
+   then
+    local commanderID = squad2:commander_id()
+    local commander = commanderID and alife_object(commanderID)
+    local commanderName = commander and commander.character_name and commander:character_name() or ""
+    local com_name = sim_script_to_text.faction_names_standart[squad_com2]
+    local sender = (commanderName .. ", канал группировки " .. com_name)
+    local sender_icon = getSenderSmsIcon(sim_brain.actor_faction)
+    local help_message = sim_script_to_text.Community[squad_com2][math.random(3, 6)]
+    local help_message2 = sim_script_to_text.EnemyWord[math.random(#sim_script_to_text.EnemyWord)]
+    local attacker_com = sim_script_to_text.Community[squad_com1][math.random(1, 2)]
+    local position_descr = dynamic_news_helper.GetPointDescription(squad2)
+    local news_text = ""
+
+    news_text = help_message .. " " .. help_message2 .. " " .. attacker_com .. " " .. position_descr .. "!"
+    send_news(sender, news_text, sender_icon)
+  end
+end
+
+function switch_control_news(smart)
+  if not (db.actor or smart) then
+    return
+  end
+
+  if sim_brain.actor_faction == "zombied" then
+    return
+  end
+
+  local smart_name = smart:name()
+  local new_owner = smart.owning_faction
+  local last_owner = smart.last_owner
+
+  local captured_name = sim_script_to_text.smart_names[smart_name] or smart_name
+  local level = GetString(alife():level_name(game_graph():vertex(smart.m_game_vertex_id):level_id()))
+  local com_name = sim_script_to_text.faction_names_standart[sim_brain.actor_faction]
+  local territory_type = ""
+
+  if not com_name then
+    return
+  end
+
+  if sim_smart.isBase(smart) then
+    territory_type = "базу"
+  elseif sim_smart.isTerritory(smart) then
+    territory_type = "территорию"
+  elseif sim_smart.isResource(smart) then
+    territory_type = "точку ресурсов"
+  elseif sim_smart.isPoint(smart) then
+    territory_type = "ключевую точку"
+  elseif sim_smart.isCamp(smart) then
+    territory_type = "лагерь"
+  else
+    territory_type = "логово"
+  end
+
+  local sender = ("Изменения на карте, канал группировки " .. com_name)
+  local sender_icon = getSenderSmsIcon(sim_brain.actor_faction)
+  local news_text
+
+  if last_owner == sim_brain.actor_faction then
+    news_text =
+      "Ваша группировка больше не контролирует " .. territory_type .. " " .. captured_name .. " на локации " .. level
+  elseif new_owner == sim_brain.actor_faction then
+    news_text = "Ваша группировка заняла " .. territory_type .. " " .. captured_name .. " на локации " .. level
+    sim_smart.priorityReset(smart.id)
+  end
+
+  local new_game_relations = axr_main.config:r_value("character_creation", "new_game_relations", "default")
+
+  if news_text and new_game_relations ~= "all_vs_actor" then
+    send_news(sender, news_text, sender_icon)
+  end
+end
+
+function send_news(sender, news_text, sender_icon)
+  local tg = time_global()
+
+  if not (send) then
+    send = tg + 20000
+    return
+  end
+
+  if tg < send then
+    return
+  end
+
+  send = tg + 20000
+
+  utils.news_params(sender, news_text, sender_icon, 0, 15000)
+  xr_sound.set_sound_play(db.actor:id(), "pda_tips")
+end

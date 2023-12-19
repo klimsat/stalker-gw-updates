@@ -1,0 +1,27 @@
+[smart_terrain]
+squad_id = 6
+max_population = 5
+respawn_params = respawn@kur_sost
+respawn_idle = 30000
+
+[respawn@kur_sost]
+spawn_army@novice
+spawn_army@advanced
+
+[spawn_army@novice]
+spawn_squads = army_sim_squad_novice
+spawn_num = 3
+
+[spawn_army@advanced]
+spawn_squads = army_sim_squad_novice, army_sim_squad_advanced
+spawn_num = 3
+
+[exclusive]
+kur_sost_camp_work_1 = kurchatov\kur_sost_smart_logic.ltx
+kur_sost_camp_work_2 = kurchatov\kur_sost_smart_logic.ltx
+kur_sost_camp_work_3 = kurchatov\kur_sost_smart_logic.ltx
+kur_sost_camp_work_4 = kurchatov\kur_sost_smart_logic.ltx
+kur_sost_camp_work_5 = kurchatov\kur_sost_smart_logic.ltx
+kur_sost_camp_work_6 = kurchatov\kur_sost_smart_logic.ltx
+kur_sost_camp_work_7 = kurchatov\kur_sost_smart_logic.ltx
+kur_sost_camp_work_8 = kurchatov\kur_sost_smart_logic.ltx

@@ -1,0 +1,574 @@
+local saved_dialogs = {}
+local dialog_structure = {}
+
+function add_dialog(p_id, id, phrase_id, cond, act, faction)
+  if not (saved_dialogs[faction]) then
+    return
+  end
+
+  local phrase = saved_dialogs[faction]:AddPhrase(phrase_id, tostring(id), tostring(p_id), -10000)
+  if not (phrase) then
+    return
+  end
+
+  --printf("phrase_id = %s",phrase_id)
+
+  local phrase_script = phrase:GetPhraseScript()
+  if (cond) then
+    if (type(cond) == "table") then
+      for key, value in pairs(cond) do
+        if (alun_utils.findfunction(value, _G)) then
+          --table.insert(cond_list,value)
+          phrase_script:AddPrecondition(value)
+        else
+          printf("dialog_manager:Error: No such function exists '%s'", value)
+        end
+      end
+    else
+      if (alun_utils.findfunction(cond, _G)) then
+        --table.insert(cond_list,value)
+        phrase_script:AddPrecondition(cond)
+      else
+        printf("dialog_manager:Error: No such function exists '%s'", cond)
+      end
+    end
+  end
+
+  if (act) then
+    if (type(act) == "table") then
+      for key, value in pairs(act) do
+        if (alun_utils.findfunction(value, _G)) then
+          phrase_script:AddAction(value)
+        else
+          printf("dialog_manager:Error: No such function exists '%s'", value)
+        end
+      end
+    else
+      if (alun_utils.findfunction(act, _G)) then
+        phrase_script:AddAction(act)
+      else
+        printf("dialog_manager:Error: No such function exists '%s'", act)
+      end
+    end
+  end
+  return phrase_script
+end
+
+local id = 0
+local id_nest_step = 300
+local pid = ""
+local id_table = {}
+function parse_dialogs(structure, faction)
+  for _, item in pairs(structure) do
+    local local_id = id + (id_table[id] or 0)
+    local local_pid = pid
+
+    -- utils.debug("parse_dialogs, id: %s, %s", id, id_table[id])
+
+    if pid ~= "" and pid % id_nest_step == 0 and id_table[pid] then
+      local_pid = pid + id_table[pid]
+    end
+    if item.in_same_category then
+      local_id = local_id - 200
+    end
+    -- utils.debug(
+    --   "parse_dialogs: add_dialog(%s, %s, %s, %s, %s, %s) (%s, %s)",
+    --   local_pid,
+    --   local_id,
+    --   item.text,
+    --   item.condition,
+    --   item.action,
+    --   faction,
+    --   #structure,
+    --   type(item.next) == "table" and #item.next or nil
+    -- )
+    add_dialog(local_pid, local_id, item.text, item.condition, item.action, faction)
+
+    if type(item.next) == "table" and #item.next then
+      pid = local_id
+      id = id + id_nest_step
+      parse_dialogs(item.next, faction)
+      id = id - id_nest_step
+      pid = id - id_nest_step
+    end
+
+    id_table[id] = (id_table[id] or 0) + 1
+  end
+end
+
+local function generate_text_kit_answer(ini, faction)
+  local main_section = "kit"
+  local line_count = ini:line_count(main_section)
+  local description = ""
+
+  for i = 0, line_count - 1 do
+    local _, kit_section, _ = ini:r_line(main_section, i, "", "")
+    local exists = ini:section_exist(kit_section)
+
+    if not exists then
+      utils.error("Ошибка при парсинге заказов для гп '%s'. Отсутствует секция '%s'.", faction, kit_section)
+      return
+    end
+
+    local kit_section_line_count = ini:line_count(kit_section)
+    local kit_text = GetString(strformat("st_%s_trader_orders_%s", faction, kit_section))
+    description = strformat("%s%c[255,0,255,0]%s:\\n%c[default]", description, kit_text:gsub("[.]", ""))
+
+    for i = 0, kit_section_line_count - 3 do
+      local item_line_name = strformat("item_%s", i)
+      local item_line_exists = ini:line_exist(kit_section, item_line_name)
+
+      if not item_line_exists then
+        utils.error(
+          "Ошибка при парсинге заказов для гп '%s'. Не удается найти свойство '%s' в секции '%s'",
+          faction,
+          item_line_name,
+          kit_section
+        )
+        return
+      end
+
+      local item_props = alun_utils.split(ini:r_string_ex(kit_section, item_line_name), ", ")
+      local inv_name = system_ini():r_string_ex(item_props[1], "inv_name")
+      description = strformat("%s\\n - %s - %s шт.", description, GetString(inv_name), item_props[2])
+    end
+
+    description = strformat("%s\\n \\n", description)
+  end
+
+  return description
+end
+local function generate_text_list_answer(ini, section, faction)
+  local line_count = ini:line_count(section)
+  local description = GetString(strformat("st_%s_trader_orders_categoty_list_answer", faction))
+
+  for i = 0, line_count - 1 do
+    local _, weapon_section, _ = ini:r_line(section, i, "", "")
+    local weapon_section_exists = ini:section_exist(weapon_section)
+
+    if not weapon_section_exists then
+      utils.error("Ошибка при парсинге заказов для гп '%s'. Не удается найти секцию '%s'", faction, weapon_section)
+      return
+    end
+
+    local item_section = ini:r_string_ex(weapon_section, "section")
+    local wpn_name = system_ini():r_string_ex(item_section, "inv_name")
+
+    description = strformat("%s\\n - %s", description, GetString(wpn_name))
+  end
+
+  return description
+end
+
+local function parse_section(ini, parent, faction, section)
+  local exists = ini:section_exist(section)
+
+  if not exists then
+    utils.error(
+      "Ошибка при парсинге заказов для гп '%s'. Отсутствует секция '%s'. parent.text: %s",
+      faction,
+      section,
+      parent.text
+    )
+    return
+  end
+
+  local line_count = ini:line_count(section)
+
+  if line_count == 0 then
+    return
+  end
+
+  local dialog_item = {
+    text = strformat("st_%s_trader_orders_%s", faction, section),
+    condition = nil,
+    action = nil,
+    next = {}
+  }
+  local dialog_item_answer = {
+    text = strformat("st_%s_trader_orders_%s_answer", faction, section),
+    condition = nil,
+    action = nil,
+    next = nil
+  }
+
+  if section == "kit" then
+    local answer_text = GetString(dialog_item_answer.text)
+
+    if answer_text == dialog_item_answer.text then
+      dialog_item_answer.text = generate_text_kit_answer(ini, faction)
+    end
+  end
+  if string.find(section, "gen_descr_") then
+    local answer_text = GetString(dialog_item_answer.text)
+
+    if answer_text == dialog_item_answer.text then
+      dialog_item_answer.text = generate_text_list_answer(ini, section, faction)
+    end
+  end
+
+  table.insert(dialog_item.next, dialog_item_answer)
+  if section == "main" then
+    table.insert(parent, dialog_item)
+  else
+    table.insert(parent.next, dialog_item)
+  end
+
+  local is_target = ini:line_exist(section, "section")
+
+  if is_target then
+    local is_multiple = ini:line_exist(section, "item_0")
+    local item_section = ini:r_string_ex(section, "section")
+
+    if item_section == "kit" then
+      local kit_has_cost = ini:line_exist(section, "cost")
+
+      if not kit_has_cost then
+        utils.error("Ошибка при парсинге заказов для гп '%s'. Не указана цена набора '%s'", faction, section)
+      end
+
+      local kit_cost = ini:r_string_ex(section, "cost")
+      local line_count = ini:line_count(section) - 3
+      local items = {}
+
+      for i = 0, line_count do
+        local item_line_name = strformat("item_%s", i)
+        local item_line_exists = ini:line_exist(section, item_line_name)
+
+        if not item_line_exists then
+          utils.error(
+            "Ошибка при парсинге заказов для гп '%s'. Не удается найти свойство '%s' в секции '%s'",
+            faction,
+            item_line_name,
+            section
+          )
+          return
+        end
+
+        local item_props = alun_utils.split(ini:r_string_ex(section, item_line_name), ", ")
+
+        if not item_props[1] then
+          utils.error(
+            "Ошибка при парсинге заказов для гп '%s'. Отсутствует указание секции предмета в свойстве '%s' в секции '%s'",
+            faction,
+            item_line_name,
+            section
+          )
+        end
+        if not item_props[2] then
+          utils.error(
+            "Ошибка при парсинге заказов для гп '%s'. Отсутствует указание кол-ва предмета в свойстве '%s' в секции '%s'",
+            faction,
+            item_line_name,
+            section
+          )
+        end
+
+        items[item_props[1]] = tonumber(item_props[2])
+      end
+
+      local func_action_name = strformat("greatwar_orders_actor_%s_relocate_%s_cost_%s", faction, section, kit_cost)
+      local func_condition_name = strformat("greatwar_orders_actor_has_money_%s", kit_cost)
+
+      if type(_G[func_condition_name]) ~= "function" then
+        _G[func_condition_name] = function(first_speaker, second_speaker)
+          return first_speaker:money() >= tonumber(kit_cost)
+        end
+      end
+      _G[func_action_name] = function(first_speaker, second_speaker)
+        dialogs.relocate_money_from_actor(first_speaker, second_speaker, tonumber(kit_cost))
+        for item_section, item_count in pairs(items) do
+          dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, item_section, item_count)
+        end
+      end
+
+      local answer_text = GetString(dialog_item_answer.text)
+
+      if dialog_item_answer.text == answer_text then
+        answer_text = GetString(strformat("st_%s_trader_orders_cost_item_answer", faction))
+        dialog_item_answer.text = strformat(answer_text, kit_cost)
+      end
+
+      local dialog_item_accept = {
+        text = strformat("st_%s_trader_orders_accept", faction),
+        condition = func_condition_name,
+        action = func_action_name
+      }
+      local dialog_item_cancel = {
+        text = strformat("st_%s_trader_orders_cancel", faction)
+      }
+
+      if not dialog_item_answer.next then
+        dialog_item_answer.next = {}
+      end
+
+      table.insert(dialog_item_answer.next, dialog_item_accept)
+      table.insert(dialog_item_answer.next, dialog_item_cancel)
+
+      return
+    end
+
+    local section_exists = system_ini():section_exist(item_section)
+
+    if not section_exists then
+      utils.error("Ошибка при парсинге заказов для гп '%s'. Не найдена секция '%s' в system_ini", faction, item_section)
+      return
+    end
+
+    if is_multiple then
+      local line_count = ini:line_count(section) - 2
+      local section_exists = system_ini():section_exist(item_section)
+
+      if not section_exists then
+        utils.error(
+          "Ошибка при парсинге заказов для гп '%s'. Не найдена секция '%s' в system_ini",
+          faction,
+          item_section
+        )
+      end
+
+      for i = 0, line_count do
+        local item_line_name = strformat("item_%s", i)
+        local item_line_exists = ini:line_exist(section, item_line_name)
+
+        if not item_line_exists then
+          utils.error(
+            "Ошибка при парсинге заказов для гп '%s'. Не удается найти свойство '%s' в секции '%s'",
+            faction,
+            item_line_name,
+            section
+          )
+          return
+        end
+
+        local item_props = alun_utils.split(ini:r_string_ex(section, item_line_name), ", ")
+
+        if not item_props[1] then
+          utils.error(
+            "Ошибка при парсинге заказов для гп '%s'. Отсутствует указание кол-во предмета в свойстве '%s' в секции '%s'",
+            faction,
+            item_line_name,
+            section
+          )
+        end
+        if not item_props[2] then
+          utils.error(
+            "Ошибка при парсинге заказов для гп '%s'. Отсутствует указание стоимости предмета в свойстве '%s' в секции '%s'",
+            faction,
+            item_line_name,
+            section
+          )
+        end
+
+        local func_action_name =
+          strformat(
+          "greatwar_orders_actor_%s_relocate_%s_cost_%s_count_%s",
+          faction,
+          section,
+          item_props[2],
+          item_props[1]
+        )
+        local func_condition_name = strformat("greatwar_orders_actor_has_money_%s", item_props[2])
+
+        if type(_G[func_condition_name]) ~= "function" then
+          _G[func_condition_name] = function(first_speaker, second_speaker)
+            return first_speaker:money() >= tonumber(item_props[2])
+          end
+        end
+        _G[func_action_name] = function(first_speaker, second_speaker)
+          dialogs.relocate_money_from_actor(first_speaker, second_speaker, tonumber(item_props[2]))
+          dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, item_section, tonumber(item_props[1]))
+        end
+
+        local item_text_count_st_id = strformat("st_%s_trader_orders_item_%s_count_%s", faction, section, item_props[1])
+        local item_text_st_id = strformat("st_%s_trader_orders_%s", faction, section)
+        local item_text_st_id_answer =
+          strformat("st_%s_trader_orders_item_%s_count_%s_answer", faction, section, item_props[1])
+        local item_text = GetString(item_text_st_id)
+        local item_text_count = GetString(item_text_count_st_id)
+        local item_text_answer = strformat(GetString(item_text_st_id_answer), item_props[2])
+        if item_text_st_id == item_text then
+          local inv_name = system_ini():r_string_ex(item_section, "inv_name")
+          dialog_item.text = GetString(inv_name)
+        end
+        if item_text_count_st_id == item_text_count then
+          local inv_name = system_ini():r_string_ex(item_section, "inv_name")
+          item_text_count = strformat("%s (%s шт.)", GetString(inv_name), item_props[1])
+          dialog_item.text = GetString(inv_name)
+        end
+        dialog_item_answer.text = GetString(strformat("st_%s_trader_orders_all_items_answer", faction))
+        if item_text_st_id_answer == item_text_answer then
+          local inv_name = system_ini():r_string_ex(item_section, "inv_name")
+          local new_text_st_id = strformat("st_%s_trader_orders_cost_item_answer", faction)
+          local new_text_st = GetString(new_text_st_id)
+          item_text_answer = strformat("%s (%s шт.) - %s руб.", GetString(inv_name), item_props[1], item_props[2])
+
+          if new_text_st ~= new_text_st_id then
+            item_text_answer = strformat(new_text_st, item_props[2])
+          end
+        end
+        local dialog_item_num = {
+          text = item_text_count,
+          next = {}
+        }
+        local dialog_item_num_answer = {
+          text = item_text_answer,
+          next = {}
+        }
+        local dialog_item_accept = {
+          text = strformat("st_%s_trader_orders_accept", faction),
+          condition = func_condition_name,
+          action = func_action_name
+        }
+        local dialog_item_cancel = {
+          text = strformat("st_%s_trader_orders_cancel", faction)
+        }
+
+        if not dialog_item_answer.next then
+          dialog_item_answer.next = {}
+        end
+
+        table.insert(dialog_item_num_answer.next, dialog_item_accept)
+        table.insert(dialog_item_num_answer.next, dialog_item_cancel)
+        table.insert(dialog_item_num.next, dialog_item_num_answer)
+        table.insert(dialog_item_answer.next, dialog_item_num)
+      end
+      return
+    end
+
+    local item_cost = ini:r_string_ex(section, "cost")
+    local item_count = ini:r_string_ex(section, "count")
+
+    local text = GetString(dialog_item.text)
+
+    if text == dialog_item.text then
+      local wpn_name = system_ini():r_string_ex(item_section, "inv_name")
+
+      dialog_item.text = GetString(wpn_name)
+    end
+
+    if not dialog_item.text then
+      dialog_item.text = text
+    end
+
+    local func_action_name =
+      strformat("greatwar_orders_actor_%s_relocate_%s_cost_%s_count_%s", faction, section, item_cost, item_count)
+    local func_condition_name = strformat("greatwar_orders_actor_has_money_%s", item_cost)
+
+    if type(_G[func_condition_name]) ~= "function" then
+      _G[func_condition_name] = function(first_speaker, second_speaker)
+        return first_speaker:money() >= tonumber(item_cost)
+      end
+    end
+    _G[func_action_name] = function(first_speaker, second_speaker)
+      dialogs.relocate_money_from_actor(first_speaker, second_speaker, tonumber(item_cost))
+      dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, item_section, tonumber(item_count))
+    end
+
+    if not dialog_item_answer.next then
+      dialog_item_answer.next = {}
+    end
+
+    -- local item_descr_st_id =
+    --   strformat("st_%s_trader_orders_item_%s_count_%s_descr_answer", faction, item_section, item_count)
+    -- local item_descr = GetString(item_descr_st_id)
+
+    -- if item_descr_st_id == item_descr then
+    --   local wpn_description = system_ini():r_string_ex(item_section, "description")
+    --   item_descr = GetString(wpn_description)
+    -- end
+
+    -- local dialog_item_descr = {
+    --   text = strformat("st_%s_trader_orders_descr", faction),
+    --   next = {
+    --     {
+    --       text = item_descr,
+    --       in_same_category = true
+    --     }
+    --   }
+    -- }
+
+    local answer_text = GetString(dialog_item_answer.text)
+
+    if dialog_item_answer.text == answer_text then
+      answer_text = GetString(strformat("st_%s_trader_orders_cost_item_answer", faction))
+      dialog_item_answer.text = strformat(answer_text, tonumber(item_cost))
+    end
+
+    local dialog_item_accept = {
+      text = strformat("st_%s_trader_orders_accept", faction),
+      condition = func_condition_name,
+      action = func_action_name
+    }
+    local dialog_item_cancel = {
+      text = strformat("st_%s_trader_orders_cancel", faction)
+    }
+
+    -- table.insert(dialog_item_answer.next, dialog_item_descr)
+    table.insert(dialog_item_answer.next, dialog_item_accept)
+    table.insert(dialog_item_answer.next, dialog_item_cancel)
+
+    return
+  end
+
+  for i = 0, line_count - 1 do
+    local _, id, _ = ini:r_line(section, i, "", "")
+    if not dialog_item_answer.next then
+      dialog_item_answer.next = {}
+    end
+    if not string.match(id, "^[0-9a-zA-Z_]+$") then
+      utils.error(
+        "Ошибка при парсинге заказов для гп '%s'. Название секции '%s' содержит недопустимые символы. Дайте ей другое название.",
+        faction,
+        id
+      )
+    end
+    parse_section(ini, dialog_item_answer, faction, id)
+  end
+end
+local function initialize_props_file(faction)
+  local file_name = strformat("misc\\orders\\%s.ltx", faction)
+  local is_file_exist = config_file_exists(file_name)
+  if not is_file_exist then
+    utils.warn("Ошибка при парсинге заказов для гп '%s'. Отсутствует файл: '%s'", faction, file_name)
+    return
+  end
+
+  local ini = ini_file(file_name)
+
+  dialog_structure[faction] = {}
+
+  parse_section(ini, dialog_structure[faction], faction, "main")
+end
+
+local function initialize_function(faction)
+  local file_name = strformat("misc\\orders\\%s.ltx", faction)
+  local is_file_exist = config_file_exists(file_name)
+
+  if not is_file_exist then
+    return
+  end
+
+  local func_name = strformat("greatwar_init_orders_%s", faction)
+
+  if type(_G[func_name]) ~= "function" then
+    _G[func_name] = function(dialog)
+      saved_dialogs[faction] = dialog
+
+      wargreat_orders.parse_dialogs(dialog_structure[faction], faction)
+    end
+  end
+end
+
+local function initialize_props()
+  for _, faction in pairs(sim_tables.factions) do
+    if faction ~= "monster" then
+      initialize_props_file(faction)
+      initialize_function(faction)
+    end
+  end
+end
+
+function on_game_start()
+  initialize_props()
+end

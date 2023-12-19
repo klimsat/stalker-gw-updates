@@ -1,0 +1,43 @@
+[logic@esc_contractor_1]
+active = walker@walk1
+suitable = {=check_npc_name(esc_contractor_1)} true
+prior = 200
+
+[walker@walk1]
+path_walk = walker_1_walk
+on_hit = hit
+; invulnerable = true
+
+[hit]
+on_info = {!hit_by_actor()} %=restore_health%
+; invulnerable = true
+
+[logic@esc_contractor_2]
+active = walker@walk2
+suitable = {=check_npc_name(esc_contractor_2)} true
+prior = 200
+
+[walker@walk2]
+path_walk = walker_2_walk
+on_hit = hit
+; invulnerable = true
+
+[logic@esc_contractor_3]
+active = walker@walk3
+suitable = {=check_npc_name(esc_contractor_3)} true
+prior = 200
+
+[walker@walk3]
+path_walk = walker_3_walk
+on_hit = hit
+; invulnerable = true
+
+[logic@esc_contractor_4]
+active = walker@walk4
+suitable = {=check_npc_name(esc_contractor_4)} true
+prior = 200
+
+[walker@walk4]
+path_walk = walker_4_walk
+on_hit = hit
+; invulnerable = true

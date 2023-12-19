@@ -1,0 +1,27 @@
+[smart_terrain]
+squad_id = 10
+max_population = 5
+respawn_params = respawn@aes_smart_terrain_monsters3
+respawn_idle = 60000
+
+
+
+[respawn@aes_smart_terrain_monsters3]
+spawn_chimera
+spawn_dog
+
+[spawn_chimera]
+spawn_squads = simulation_chimera
+spawn_num = 1
+
+[spawn_dog]
+spawn_squads = simulation_psy_dog
+spawn_num = 2
+
+[exclusive]
+aes_smart_terrain_monsters3_camp_work_1 = stancia_1\logic_for_smart\aes_smart_terrain_monsters3_smart_logic.ltx
+aes_smart_terrain_monsters3_camp_work_2 = stancia_1\logic_for_smart\aes_smart_terrain_monsters3_smart_logic.ltx
+aes_smart_terrain_monsters3_camp_work_3 = stancia_1\logic_for_smart\aes_smart_terrain_monsters3_smart_logic.ltx
+aes_smart_terrain_monsters3_camp_work_4 = stancia_1\logic_for_smart\aes_smart_terrain_monsters3_smart_logic.ltx
+aes_smart_terrain_monsters3_camp_work_5 = stancia_1\logic_for_smart\aes_smart_terrain_monsters3_smart_logic.ltx
+aes_smart_terrain_monsters3_camp_work_6 = stancia_1\logic_for_smart\aes_smart_terrain_monsters3_smart_logic.ltx

@@ -1,0 +1,165 @@
+;minigunner z1
+[logic@kat_hosp_z1_minigunner_excl]
+active = beh@kat_hosp_z1_minigunner_excl
+;suitable = {!surge_started} true
+prior = 60
+
+[logic@medik]
+suitable = {=check_npc_name(sim_default_army_medik)} true, {=check_npc_name(sim_default_freedom_medik)} true, {=check_npc_name(sim_default_bandit_medik)} true, {=check_npc_name(sim_default_dolg_medik)} true, {=check_npc_name(sim_default_monolith_medik)} true, {=check_npc_name(sim_default_stalker_medik)} true, {=check_npc_name(sim_default_ecolog_medik)} true, {=check_npc_name(sim_default_csky_medik)} true, {=check_npc_name(sim_default_killer_medik)} true, {=check_npc_name(sim_default_isg_medik)} true, {=check_npc_name(sim_default_darkstalker_medik)} true, {=check_npc_name(sim_default_renegate_medik)} true, {=check_npc_name(sim_default_varyag_medik)} true, {=check_npc_name(sim_default_slizni_medik)} true, {=check_npc_name(sim_default_velhan_medik)} true, {=check_npc_name(sim_default_fantom_medik)} true, {=check_npc_name(sim_default_veter_medik)} true, {=check_npc_name(sim_default_osoznanie_medik)} true, {=check_npc_name(sim_default_alfa_medik)} true, {=check_npc_name(sim_default_apocalypse_medik)} true, {=check_npc_name(sim_default_adinkvizicia_medik)} true, {=check_npc_name(sim_default_hunter_medik)} true, {=check_npc_name(sim_default_voenstal_medik)} true, {=check_npc_name(sim_default_mirotvorec_medik)} true, {=check_npc_name(sim_default_ryskuspecnaz_medik)} true, {=check_npc_name(sim_default_sby_medik)} true, {=check_npc_name(sim_default_angel_medik)} true, {=check_npc_name(sim_default_posleduden_medik)} true, {=check_npc_name(sim_default_greh_medik)} true
+prior = 200
+active = animpoint@medic
+level_spot = medic
+dont_keep_items = true
+
+[animpoint@medic]
+meet = meet
+cover_name = katacomb_smart_terrain_medic
+combat_ignore_cond = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[logic@mechanic]
+suitable = {=check_npc_name(sim_default_army_mechanic)} true, {=check_npc_name(sim_default_freedom_mechanic)} true, {=check_npc_name(sim_default_bandit_mechanic)} true, {=check_npc_name(sim_default_dolg_mechanic)} true, {=check_npc_name(sim_default_monolith_mechanic)} true, {=check_npc_name(sim_default_stalker_mechanic)} true, {=check_npc_name(sim_default_ecolog_mechanic)} true, {=check_npc_name(sim_default_csky_mechanic)} true, {=check_npc_name(sim_default_killer_mechanic)} true, {=check_npc_name(sim_default_isg_mechanic)} true, {=check_npc_name(sim_default_darkstalker_mechanic)} true, {=check_npc_name(sim_default_renegate_mechanic)} true, {=check_npc_name(sim_default_varyag_mechanic)} true, {=check_npc_name(sim_default_slizni_mechanic)} true, {=check_npc_name(sim_default_velhan_mechanic)} true, {=check_npc_name(sim_default_fantom_mechanic)} true, {=check_npc_name(sim_default_veter_mechanic)} true, {=check_npc_name(sim_default_osoznanie_mechanic)} true, {=check_npc_name(sim_default_alfa_mechanic)} true, {=check_npc_name(sim_default_apocalypse_mechanic)} true, {=check_npc_name(sim_default_adinkvizicia_mechanic)} true, {=check_npc_name(sim_default_hunter_mechanic)} true, {=check_npc_name(sim_default_voenstal_mechanic)} true, {=check_npc_name(sim_default_mirotvorec_mechanic)} true, {=check_npc_name(sim_default_ryskuspecnaz_mechanic)} true, {=check_npc_name(sim_default_sby_mechanic)} true, {=check_npc_name(sim_default_angel_mechanic)} true, {=check_npc_name(sim_default_posleduden_mechanic)} true, {=check_npc_name(sim_default_greh_mechanic)} true
+prior = 200
+active = animpoint@mechanic
+level_spot = mechanic
+dont_keep_items = true
+
+[animpoint@mechanic]
+meet = meet
+cover_name = katacomb_smart_terrain_mechanic
+combat_ignore_cond = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[meet@general]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+
+[logic@trader]
+suitable = {=check_npc_name(sim_default_army_trader)} true, {=check_npc_name(sim_default_freedom_trader)} true, {=check_npc_name(sim_default_bandit_trader)} true, {=check_npc_name(sim_default_dolg_trader)} true, {=check_npc_name(sim_default_monolith_trader)} true, {=check_npc_name(sim_default_stalker_trader)} true, {=check_npc_name(sim_default_ecolog_trader)} true, {=check_npc_name(sim_default_csky_trader)} true, {=check_npc_name(sim_default_killer_trader)} true, {=check_npc_name(sim_default_isg_trader)} true, {=check_npc_name(sim_default_darkstalker_trader)} true, {=check_npc_name(sim_default_renegate_trader)} true, {=check_npc_name(sim_default_varyag_trader)} true, {=check_npc_name(sim_default_slizni_trader)} true, {=check_npc_name(sim_default_velhan_trader)} true, {=check_npc_name(sim_default_fantom_trader)} true, {=check_npc_name(sim_default_veter_trader)} true, {=check_npc_name(sim_default_osoznanie_trader)} true, {=check_npc_name(sim_default_alfa_trader)} true, {=check_npc_name(sim_default_apocalypse_trader)} true, {=check_npc_name(sim_default_adinkvizicia_trader)} true, {=check_npc_name(sim_default_hunter_trader)} true, {=check_npc_name(sim_default_voenstal_trader)} true, {=check_npc_name(sim_default_mirotvorec_trader)} true, {=check_npc_name(sim_default_ryskuspecnaz_trader)} true, {=check_npc_name(sim_default_sby_trader)} true, {=check_npc_name(sim_default_angel_trader)} true, {=check_npc_name(sim_default_posleduden_trader)} true, {=check_npc_name(sim_default_greh_trader)} true
+prior = 100
+active = animpoint@trade
+level_spot = trader
+trade = misc\trade\trade_haos.ltx
+can_select_weapon = true
+dont_keep_items = true
+
+[animpoint@trade]
+cover_name = katacomb_smart_terrain_trader
+reach_distance = 10
+gather_items_enabled = true
+help_wounded_enabled = true
+corpse_detection_enabled = true
+meet = meet
+
+[logic@barmen]
+suitable = {=check_npc_name(sim_default_army_barmen)} true, {=check_npc_name(sim_default_freedom_barmen)} true, {=check_npc_name(sim_default_bandit_barmen)} true, {=check_npc_name(sim_default_dolg_barmen)} true, {=check_npc_name(sim_default_monolith_barmen)} true, {=check_npc_name(sim_default_stalker_barmen)} true, {=check_npc_name(sim_default_ecolog_barmen)} true, {=check_npc_name(sim_default_csky_barmen)} true, {=check_npc_name(sim_default_killer_barmen)} true, {=check_npc_name(sim_default_isg_barmen)} true, {=check_npc_name(sim_default_darkstalker_barmen)} true, {=check_npc_name(sim_default_renegate_barmen)} true, {=check_npc_name(sim_default_varyag_barmen)} true, {=check_npc_name(sim_default_slizni_barmen)} true, {=check_npc_name(sim_default_velhan_barmen)} true, {=check_npc_name(sim_default_fantom_barmen)} true, {=check_npc_name(sim_default_veter_barmen)} true, {=check_npc_name(sim_default_osoznanie_barmen)} true, {=check_npc_name(sim_default_alfa_barmen)} true, {=check_npc_name(sim_default_apocalypse_barmen)} true, {=check_npc_name(sim_default_adinkvizicia_barmen)} true, {=check_npc_name(sim_default_hunter_barmen)} true, {=check_npc_name(sim_default_voenstal_barmen)} true, {=check_npc_name(sim_default_mirotvorec_barmen)} true, {=check_npc_name(sim_default_ryskuspecnaz_barmen)} true, {=check_npc_name(sim_default_sby_barmen)} true, {=check_npc_name(sim_default_angel_barmen)} true, {=check_npc_name(sim_default_posleduden_barmen)} true, {=check_npc_name(sim_default_greh_barmen)} true
+prior = 1000
+active = animpoint@barmen
+level_spot = trader
+
+[animpoint@barmen]
+cover_name = katacomb_smart_terrain_barmen
+avail_animations = choose
+use_camp = false
+meet = meet
+combat_ignore_cond = true
+reach_distance = 10
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[beh@general]
+behavior_state = beh_move
+target = waypoint
+walk_dist = 100
+jog_dist = 220
+wait_anim = rush
+walk_anim = rush
+jog_anim = rush
+run_anim = rush
+delay_anim = guard
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+meet = meet@general
+
+[beh@idle]:beh@general
+on_info = {!has_enemy} beh@kat_hosp_z1_minigunner_excl
+
+[beh@kat_hosp_z1_minigunner_excl]:beh@general
+pt1 = 1,guard | pos:-85.12,25.42,681.26 look:-84.76,24.75,707.27
+path_end = beh@kat_hosp_z1_minigunner_excl_ready
+
+[beh@kat_hosp_z1_minigunner_excl_ready]:beh@general
+no_combat_job = true
+pt1 = 20000,ward | pos:-85.12,25.42,681.26 look:-84.76,24.75,707.27
+path_end = loop
+on_info = {=pure_enemy_dist_le(20)} beh@idle
+
+;minigunner z3
+[logic@kat_hosp_z3_minigunner_excl]
+active = beh@kat_hosp_z3_minigunner_excl
+;suitable = {!surge_started} true
+prior = 60
+
+[meet@general2]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+use = {=actor_enemy} false, {=dist_to_actor_le(3)} true, false
+snd_on_use = {!dist_to_actor_le(3)} nil
+meet_on_talking = false
+
+[beh@general2]
+behavior_state = beh_move
+target = waypoint
+walk_dist = 100
+jog_dist = 220
+wait_anim = rush
+walk_anim = rush
+jog_anim = rush
+run_anim = rush
+delay_anim = guard
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+meet = meet@general2
+
+[beh@idle2]:beh@general2
+on_info = {!has_enemy} beh@kat_hosp_z3_minigunner_excl
+
+[beh@kat_hosp_z3_minigunner_excl]:beh@general2
+pt1 = 1,guard | pos:-85.30,21.82,568.71 look:-86.52,25.29,592.11
+path_end = beh@kat_hosp_z3_minigunner_excl_ready
+
+[beh@kat_hosp_z3_minigunner_excl_ready]:beh@general2
+no_combat_job = true
+pt1 = 20000,ward | pos:-85.30,21.82,568.71 look:-86.52,25.29,592.11
+path_end = loop
+on_info = {=pure_enemy_dist_le(20)} beh@idle2
+
+
+
+[meet]
+close_snd_hello = nil
+close_snd_bye   = nil
+close_anim 	= nil
+close_victim 	= nil
+far_anim 	= nil
+far_victim 	= nil
+close_distance  = 0
+far_distance 	= 0

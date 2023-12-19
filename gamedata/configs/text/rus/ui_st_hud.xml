@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="ui_hud_smart_capture">
+		<text>%s</text>
+	</string>
+	<string id="ui_hud_smart_capture_info">
+		<text>%s, НПС: %s, Отряды: %s</text>
+	</string>
+	<string id="ui_hud_smart_capture_distance">
+		<text>Дистанция: %s</text>
+	</string>
+	<string id="ui_hud_smart_capture_owner_none">
+		<text>Отсутствует, НПС: %s, Отряды: %s</text>
+	</string>
+</string_table>

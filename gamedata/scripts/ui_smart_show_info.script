@@ -1,0 +1,116 @@
+local has_smart_capture_info = axr_main.config:r_value("mm_options", "enable_smart_capture_info", 1, true)
+
+local function show_ui(smart)
+  local hud = get_hud()
+  if not (hud) then
+    return
+  end
+
+  local npc_in_smart = sim_smart.npc_count(smart)
+  local squad_in_smart = sim_smart.squad_count(smart)
+
+  local latest_index = nil
+  for index, value in pairs(ui_smart_capture_info.progress_table) do
+    if value.smartId and smart.id == value.smartId then
+      latest_index = index
+    end
+  end
+
+  if not latest_index then
+    for index, value in pairs(ui_smart_capture_info.progress_table) do
+      if not value.smartId and not latest_index then
+        latest_index = index
+      end
+    end
+  end
+
+  if not latest_index then
+    return
+  end
+
+  local ui_name = strformat("cs_smart_capture_%s", latest_index)
+  local cs = hud:GetCustomStatic(ui_name)
+
+  if (cs == nil) then
+    hud:AddCustomStatic(ui_name, true)
+    local xml = CScriptXmlInit()
+    xml:ParseFile("ui_smart_capture_info.xml")
+    cs = hud:GetCustomStatic(ui_name)
+    local w = cs:wnd()
+
+    ui_smart_capture_info.progress_table[latest_index].progress = xml:InitProgressBar("smart_capture", w)
+    ui_smart_capture_info.progress_table[latest_index].status_text = xml:InitStatic("status_text", w)
+    ui_smart_capture_info.progress_table[latest_index].status_text_2 = xml:InitStatic("status_text_2", w)
+    ui_smart_capture_info.progress_table[latest_index].status_text_3 = xml:InitStatic("status_text_3", w)
+  end
+
+  local actor_faction = sim_brain.actor_faction
+  local smart_faction = smart.owning_faction
+  local smart_faction_text_id = smart.owning_faction
+  local text = sim_script_to_text.smart_names[smart:name()] or smart:name()
+  local dist = string.format("%.1f", smart.position:distance_to_sqr(alife():actor().position))
+
+  ui_smart_capture_info.progress_table[latest_index].status_text:TextControl():SetText(
+    strformat(GetString("ui_hud_smart_capture"), text)
+  )
+  if smart_faction == "none" then
+    ui_smart_capture_info.progress_table[latest_index].status_text_2:TextControl():SetText(
+      strformat(GetString("ui_hud_smart_capture_owner_none"), npc_in_smart, squad_in_smart)
+    )
+  else
+    ui_smart_capture_info.progress_table[latest_index].status_text_2:TextControl():SetText(
+      strformat(GetString("ui_hud_smart_capture_info"), GetString(smart_faction_text_id), npc_in_smart, squad_in_smart)
+    )
+  end
+  ui_smart_capture_info.progress_table[latest_index].status_text_3:TextControl():SetText(
+    strformat(GetString("ui_hud_smart_capture_distance"), dist)
+  )
+
+  local progess = 0
+
+  if actor_faction == smart_faction then
+    progess = 100
+  end
+
+  ui_smart_capture_info.progress_table[latest_index].smartId = smart.id
+  ui_smart_capture_info.progress_table[latest_index].progress:SetProgressPos(progess)
+
+  cs:wnd():TextControl():SetText(strformat("%s %", progess))
+end
+
+local function smart_terrain_on_update(smart)
+  if not sim_brain.initialized then
+    return
+  end
+
+  if not smart.props or not smart.online then
+    return
+  end
+
+  if not has_smart_capture_info then
+    return
+  end
+
+  if smart.owning_faction == "none" and not sim_smart.already_captured_smarts[smart.id] then
+    return
+  end
+
+  local dist = alife():actor().position:distance_to_sqr(smart.position)
+
+  if dist < sim_smart_capture.capture_dist then
+    show_ui(smart)
+  end
+
+  if dist > sim_smart_capture.capture_dist then
+    ui_smart_capture_info.hide_ui(smart)
+  end
+end
+
+local function opt_menu_on_accepted()
+  has_smart_capture_info = axr_main.config:r_value("mm_options", "enable_smart_capture_info", 1, true)
+end
+
+function on_game_start()
+  RegisterScriptCallback("smart_terrain_on_update", smart_terrain_on_update)
+  RegisterScriptCallback("opt_menu_on_accepted", opt_menu_on_accepted)
+end

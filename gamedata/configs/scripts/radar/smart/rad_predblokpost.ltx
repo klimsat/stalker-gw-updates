@@ -1,0 +1,18 @@
+[smart_terrain]
+squad_id = 22
+max_population = 2
+respawn_params = respawn@rad_predblokpost
+respawn_idle = 60000
+
+
+[respawn@rad_predblokpost]
+spawn_chimera
+
+[spawn_chimera]
+spawn_squads = simulation_chimera
+spawn_num = 1
+
+[exclusive]
+rad_predblokpost_camp_work_1 = radar\rad_predblokpost_smart_logic.ltx
+rad_predblokpost_camp_work_2 = radar\rad_predblokpost_smart_logic.ltx
+rad_predblokpost_camp_work_3 = radar\rad_predblokpost_smart_logic.ltx

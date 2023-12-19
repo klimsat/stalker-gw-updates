@@ -1,0 +1,197 @@
+factions_behaviors = {
+  "novice",
+  "experienced",
+  "proffi",
+  "veteran",
+  "master",
+  "legend",
+  "default",
+  "aggressive",
+  "passive",
+  "defense",
+  "economy"
+}
+
+class "opt_factions"(CUIWindow)
+
+function opt_factions:__init()
+  super()
+end
+
+function opt_factions:__finalize()
+end
+
+function opt_factions:InitControls(x, y, xml, handler)
+  self:SetWndPos(vector2():set(x, y))
+  self:SetWndSize(vector2():set(738, 416))
+  self:SetAutoDelete(true)
+
+  local g_inputs = {
+    ws_self = {x = 105},
+    self = {x = 105},
+    ws_label = {x = 0, width = 95},
+    label = {x = 0, width = 95}
+  }
+  local g_lists = {
+    ws_self = {offset_x = -175},
+    self = {offset_x = -175}
+  }
+  local g_checks = {
+    {
+      ws_self = {offset_x = 55},
+      self = {offset_x = 55},
+      ws_label = {offset_x = 65},
+      label = {offset_x = 65}
+    },
+    {
+      ws_self = {offset_x = 75},
+      self = {offset_x = 75},
+      ws_label = {offset_x = 85},
+      label = {offset_x = 85}
+    },
+    {
+      ws_self = {x = 455},
+      self = {x = 455}
+    }
+  }
+
+  local set_check = function(handler, ctrl)
+    local is_checked = ctrl:GetCheck()
+
+    for i = 1, #sim_tables.factions do
+      local faction = sim_tables.factions[i]
+      if faction ~= "monster" then
+        local check_id = strformat("respawn_%s", faction)
+        handler[check_id]:Enable(is_checked)
+      end
+    end
+  end
+
+  self.scroll_v = xml:InitScrollView("tab_factions:scroll_v", self)
+  handler.factions_scroll_v = self.scroll_v
+
+  handler.options.factions = {
+    {
+      geometry = {ws_self = {height = 10}, self = {height = 10}},
+      typ = "empty"
+    },
+    {
+      id = "label_factions",
+      geometry = {
+        ws_label = {width = 60, offset_x = -40},
+        label = {width = 60, offset_x = -40}
+      },
+      typ = "label"
+    },
+    {
+      {
+        id = "respawn_factions",
+        default = true,
+        save = true,
+        debug_only = false,
+        geometry = g_checks[1],
+        on_set_values = function(handler, optMgr, t)
+          set_check(handler, t.ctrl)
+        end,
+        on_check = function(handler, ctrl, t)
+          set_check(handler, ctrl)
+        end,
+        typ = "check"
+      },
+      {
+        id = "change_beh_factions",
+        default = true,
+        debug_only = false,
+        geometry = g_checks[2],
+        typ = "check"
+      }
+    },
+    {
+      show_label = false,
+      typ = "line"
+    },
+    {
+      {
+        id = "label_faction_boost",
+        geometry = {ws_label = {offset_x = 55}, label = {offset_x = 55}},
+        typ = "label"
+      },
+      {
+        id = "label_faction_behavior",
+        geometry = {ws_label = {offset_x = 30}, label = {offset_x = 30}},
+        typ = "label"
+      },
+      {
+        id = "label_faction_respawn",
+        geometry = {ws_label = {x = 415}, label = {x = 415}},
+        typ = "label"
+      }
+    }
+  }
+
+  for i = 1, #sim_tables.factions do
+    local faction = sim_tables.factions[i]
+    local power = sim_tables.factions_default_power[faction]
+
+    if faction ~= "monster" then
+      local item = {
+        {
+          id = strformat("boost_%s", faction),
+          hint_id = "boots_input",
+          disable_hint = true,
+          label_text = sim_script_to_text.faction_names_standart[faction],
+          geometry = g_inputs,
+          default = power,
+          debug_only = false,
+          typ = "input"
+        },
+        {
+          id = strformat("behavior_%s", faction),
+          hint_id = "behavior_input",
+          disable_hint = true,
+          default = "proffi",
+          geometry = g_lists,
+          show_label = false,
+          debug_only = false,
+          list_pref = "behavior",
+          list = factions_behaviors,
+          typ = "list"
+        },
+        {
+          id = strformat("respawn_%s", faction),
+          hint_id = "respawn_input",
+          disable_hint = true,
+          save = true,
+          default = true,
+          debug_only = false,
+          show_label = false,
+          geometry = g_checks[3],
+          typ = "check"
+        }
+      }
+      table.insert(handler.options.factions, item)
+    end
+  end
+
+  table.insert(
+    handler.options.factions,
+    {
+      id = "boost_monster",
+      hint_id = "boots_input",
+      disable_hint = true,
+      label_text = sim_script_to_text.faction_names_standart.monster,
+      geometry = g_inputs,
+      default = sim_tables.factions_default_power.monster,
+      debug_only = false,
+      typ = "input"
+    }
+  )
+
+  table.insert(
+    handler.options.factions,
+    {
+      geometry = {ws_self = {height = 10}, self = {height = 10}},
+      typ = "empty"
+    }
+  )
+end

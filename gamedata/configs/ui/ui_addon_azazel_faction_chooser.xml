@@ -1,0 +1,191 @@
+<addonAzazelFactionChooser>
+	<background x="0" y="0" width="1024" height="768">
+        <auto_static x="0" y="0" width="1024" height="768" stretch="1">
+            <texture x="0" y="0" width="1920" height="1080">ui\ui_background_new</texture>
+        </auto_static>
+    </background>
+
+	<faction_freedom x="70" y="310" width="110" height="70">
+		<icon_freedom x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_freedom>
+
+	<faction_dolg x="70" y="370" width="110" height="70">
+		<icon_dolg x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_dolg>
+
+	<faction_killer x="70" y="432" width="110" height="70">
+		<icon_killer x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_killer>
+
+	<faction_stalker x="70" y="490" width="110" height="70">
+		<icon_stalker x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_stalker>
+
+	<faction_bandit x="70" y="550" width="110" height="70">
+		<icon_bandit x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_bandit>
+
+	<faction_csky x="200" y="310" width="110" height="70">
+		<icon_csky x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_csky>
+
+	<faction_monolith x="200" y="370" width="110" height="70">
+		<icon_monolith x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_monolith>
+
+	<faction_army x="200" y="432" width="110" height="70">
+		<icon_army x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_army>
+
+	<faction_ecolog x="200" y="490" width="110" height="70">
+		<icon_ecolog x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_ecolog>
+
+	<faction_darkstalker x="200" y="550" width="110" height="70">
+		<icon_darkstalker x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_darkstalker>
+
+	<faction_isg x="330" y="310" width="110" height="70">
+		<icon_isg x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_isg>
+
+	<faction_renegate x="330" y="370" width="110" height="70">
+		<icon_renegate x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_renegate>
+
+	<faction_varyag x="330" y="432" width="110" height="70">
+		<icon_varyag x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_varyag>
+
+	<faction_fantom x="330" y="490" width="110" height="70">
+		<icon_fantom x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_fantom>
+
+	<faction_velhan x="330" y="550" width="110" height="70">
+		<icon_velhan x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_velhan>
+
+	<faction_osoznanie x="460" y="310" width="110" height="70">
+		<icon_osoznanie x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_osoznanie>
+
+	<faction_alfa x="460" y="370" width="110" height="70">
+		<icon_alfa x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_alfa>
+
+	<faction_mirotvorec x="460" y="432" width="110" height="70">
+		<icon_mirotvorec x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_mirotvorec>
+
+	<faction_slizni x="460" y="490" width="110" height="70">
+		<icon_slizni x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_slizni>
+
+	<faction_ryskuspecnaz x="460" y="550" width="110" height="70">
+		<icon_ryskuspecnaz x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_ryskuspecnaz>
+
+	<faction_voenstal x="590" y="310" width="110" height="70">
+		<icon_voenstal x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_voenstal>
+
+	<faction_posleduden x="590" y="370" width="110" height="70">
+		<icon_posleduden x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_posleduden>
+
+	<faction_angel x="590" y="432" width="110" height="70">
+		<icon_angel x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_angel>
+
+	<faction_sby x="590" y="490" width="110" height="70">
+		<icon_sby x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_sby>
+
+	<faction_veter x="590" y="550" width="110" height="70">
+		<icon_veter x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_veter>
+
+	<faction_apocalypse x="720" y="310" width="110" height="70">
+		<icon_apocalypse x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_apocalypse>
+
+	<faction_hunter x="720" y="370" width="110" height="70">
+		<icon_hunter x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_hunter>
+
+	<faction_adinkvizicia x="720" y="432" width="110" height="70">
+		<icon_adinkvizicia x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_adinkvizicia>
+
+	<faction_greh x="720" y="490" width="110" height="70">
+		<icon_greh x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_greh>
+
+	<faction_zombied x="720" y="550" width="110" height="70">
+		<icon_zombied x="0" y="0" width="110" height="70" stretch="1" />
+	</faction_zombied>
+
+	<btn_ok x="420" y="700" width="150" height="30" stretch="1">
+		<auto_static x="0" y="0" width="150" height="30" stretch="1">
+			<texture>ui_inGame2_inventory_button_e</texture>
+			<text font="letterica25" x="0" y="0" align="c" vert_align="c" r="190" g="190" b="190">btn_reborn_azazel</text>
+		</auto_static>
+	</btn_ok>
+
+	<label_static_dead x="500" y="10">
+		<text r="255" g="0" b="0" font="letterica25" align="c" vert_align="c">st_addon_azazel_faction_chooser_label_dead</text>
+	</label_static_dead>
+
+	<label_static_chooseFaction x="500" y="50">
+		<text r="190" g="190" b="190" font="letterica25" align="c" vert_align="c">st_addon_azazel_faction_chooser_label_chooseFaction</text>
+	</label_static_chooseFaction>
+
+	<label_static_doNotPlayAnimation x="110" y="25">
+    <text r="190" g="190" b="190" font="letterica18" align="l" vert_align="c">st_addon_azazel_faction_chooser_label_doNotPlayAnimation</text>
+	</label_static_doNotPlayAnimation>
+
+	<label_static_findNearest x="110" y="55">
+    <text r="190" g="190" b="190" font="letterica18" align="l" vert_align="c">st_addon_azazel_faction_chooser_label_findNearest</text>
+	</label_static_findNearest>
+	
+	<label_static_rebornInLeaders x="800" y="55">
+    <text r="190" g="190" b="190" font="letterica18" align="l" vert_align="c">st_addon_azazel_faction_chooser_label_rebornInLeaders</text>
+	</label_static_rebornInLeaders>
+	
+	<checkbox_rebornInLeaders_checked x="770" y="48" width="32" height="32">
+    <auto_static width="20" height="20" stretch="1">
+        <texture x="32" y="0" width="32" height="32">ui\ui_addon_azazel_faction_chooser_icons</texture>
+    </auto_static>
+	</checkbox_rebornInLeaders_checked>
+
+	<checkbox_rebornInLeaders_unchecked x="770" y="48" width="32" height="32">
+    <auto_static width="20" height="20" stretch="1">
+        <texture x="0" y="0" width="32" height="32">ui\ui_addon_azazel_faction_chooser_icons</texture>
+    </auto_static>
+	</checkbox_rebornInLeaders_unchecked>
+
+	<checkbox_doNotPlayAnimation_checked x="80" y="18" width="32" height="32">
+    <auto_static width="20" height="20" stretch="1">
+        <texture x="32" y="0" width="32" height="32">ui\ui_addon_azazel_faction_chooser_icons</texture>
+    </auto_static>
+	</checkbox_doNotPlayAnimation_checked>
+
+	<checkbox_doNotPlayAnimation_unchecked x="80" y="18" width="32" height="32">
+    <auto_static width="20" height="20" stretch="1">
+        <texture x="0" y="0" width="32" height="32">ui\ui_addon_azazel_faction_chooser_icons</texture>
+    </auto_static>
+	</checkbox_doNotPlayAnimation_unchecked>
+
+	<checkbox_findNearest_checked x="80" y="48" width="32" height="32">
+    <auto_static width="20" height="20" stretch="1">
+        <texture x="32" y="0" width="32" height="32">ui\ui_addon_azazel_faction_chooser_icons</texture>
+    </auto_static>
+	</checkbox_findNearest_checked>
+
+	<checkbox_findNearest_unchecked x="80" y="48" width="32" height="32">
+    <auto_static width="20" height="20" stretch="1">
+        <texture x="0" y="0" width="32" height="32">ui\ui_addon_azazel_faction_chooser_icons</texture>
+    </auto_static>
+	</checkbox_findNearest_unchecked>
+
+</addonAzazelFactionChooser>

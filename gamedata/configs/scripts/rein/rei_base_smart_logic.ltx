@@ -1,0 +1,190 @@
+;camping
+[logic@rei_base_camp_work_1]
+active = animpoint@rei_base_camp_work_1
+prior = 45
+
+[logic@rei_base_camp_work_2]
+active = animpoint@rei_base_camp_work_2
+prior = 45
+
+[logic@rei_base_camp_work_3]
+active = animpoint@rei_base_camp_work_3
+prior = 45
+
+[animpoint@rei_base_camp_work_1]
+cover_name = rei_base_animpoint_kamp1
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@rei_base_camp_work_2]
+cover_name = rei_base_animpoint_kamp2
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@rei_base_camp_work_3]
+cover_name = rei_base_animpoint_kamp3
+use_camp = true
+turn_on_campfire = true
+
+[logic@rei_base_bar_work_1]
+active = animpoint@rei_base_bar_work_1
+prior = 45
+
+[logic@rei_base_bar_work_2]
+active = animpoint@rei_base_bar_work_2
+prior = 45
+
+[logic@rei_base_bar_work_3]
+active = animpoint@rei_base_bar_work_3
+prior = 45
+
+[logic@rei_base_bar_work_4]
+active = animpoint@rei_base_bar_work_4
+prior = 45
+
+[logic@rei_base_bar_work_5]
+active = animpoint@rei_base_bar_work_5
+prior = 45
+
+[logic@rei_base_bar_work_6]
+active = animpoint@rei_base_bar_work_6
+prior = 45
+
+[logic@rei_base_bar_work_7]
+active = animpoint@rei_base_bar_work_7
+prior = 45
+
+[logic@rei_base_bar_work_8]
+active = animpoint@rei_base_bar_work_8
+prior = 45
+
+[logic@rei_base_bar_work_9]
+active = animpoint@rei_base_bar_work_9
+prior = 45
+
+[animpoint@rei_base_bar_work_1]
+cover_name = rei_base_animpoint_bar1
+use_camp = true
+turn_on_campfire = false
+
+[animpoint@rei_base_bar_work_2]
+cover_name = rei_base_animpoint_bar2
+use_camp = true
+turn_on_campfire = false
+
+[animpoint@rei_base_bar_work_3]
+cover_name = rei_base_animpoint_bar3
+use_camp = true
+turn_on_campfire = false
+
+[animpoint@rei_base_bar_work_4]
+cover_name = rei_base_animpoint_bar4
+use_camp = true
+turn_on_campfire = false
+
+[animpoint@rei_base_bar_work_5]
+cover_name = rei_base_animpoint_bar5
+use_camp = true
+turn_on_campfire = false
+
+[animpoint@rei_base_bar_work_6]
+cover_name = rei_base_animpoint_bar6
+use_camp = true
+turn_on_campfire = false
+
+[animpoint@rei_base_bar_work_7]
+cover_name = rei_base_animpoint_bar7
+use_camp = true
+turn_on_campfire = false
+
+[animpoint@rei_base_bar_work_8]
+cover_name = rei_base_animpoint_bar8
+use_camp = true
+turn_on_campfire = false
+
+[animpoint@rei_base_bar_work_9]
+cover_name = rei_base_animpoint_bar9
+use_camp = true
+turn_on_campfire = false
+
+
+[logic@trader]
+suitable = {=check_npc_name(sim_default_army_trader)} true, {=check_npc_name(sim_default_freedom_trader)} true, {=check_npc_name(sim_default_bandit_trader)} true, {=check_npc_name(sim_default_dolg_trader)} true, {=check_npc_name(sim_default_monolith_trader)} true, {=check_npc_name(sim_default_stalker_trader)} true, {=check_npc_name(sim_default_ecolog_trader)} true, {=check_npc_name(sim_default_csky_trader)} true, {=check_npc_name(sim_default_killer_trader)} true, {=check_npc_name(sim_default_isg_trader)} true, {=check_npc_name(sim_default_darkstalker_trader)} true, {=check_npc_name(sim_default_renegate_trader)} true, {=check_npc_name(sim_default_varyag_trader)} true, {=check_npc_name(sim_default_slizni_trader)} true, {=check_npc_name(sim_default_velhan_trader)} true, {=check_npc_name(sim_default_fantom_trader)} true, {=check_npc_name(sim_default_veter_trader)} true, {=check_npc_name(sim_default_osoznanie_trader)} true, {=check_npc_name(sim_default_alfa_trader)} true, {=check_npc_name(sim_default_ansf_trader)} true, {=check_npc_name(sim_default_adinkvizicia_trader)} true, {=check_npc_name(sim_default_hunter_trader)} true, {=check_npc_name(sim_default_voenstal_trader)} true, {=check_npc_name(sim_default_mirotvorec_trader)} true, {=check_npc_name(sim_default_ryskuspecnaz_trader)} true, {=check_npc_name(sim_default_sby_trader)} true, {=check_npc_name(sim_default_angel_trader)} true, {=check_npc_name(sim_default_posleduden_trader)} true, {=check_npc_name(sim_default_greh_trader)} true
+prior = 200
+trade = misc\trade\magazin_knigi.ltx
+active = animpoint@trade
+level_spot = trader
+dont_keep_items = true
+
+[animpoint@trade]
+meet = meet
+cover_name = rei_base_trader
+active = defence@trade
+combat_ignore_cond = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[logic@barmen]
+suitable = {=check_npc_name(sim_default_army_barmen)} true, {=check_npc_name(sim_default_freedom_barmen)} true, {=check_npc_name(sim_default_bandit_barmen)} true, {=check_npc_name(sim_default_dolg_barmen)} true, {=check_npc_name(sim_default_monolith_barmen)} true, {=check_npc_name(sim_default_stalker_barmen)} true, {=check_npc_name(sim_default_ecolog_barmen)} true, {=check_npc_name(sim_default_csky_barmen)} true, {=check_npc_name(sim_default_killer_barmen)} true, {=check_npc_name(sim_default_isg_barmen)} true, {=check_npc_name(sim_default_darkstalker_barmen)} true, {=check_npc_name(sim_default_renegate_barmen)} true, {=check_npc_name(sim_default_varyag_barmen)} true, {=check_npc_name(sim_default_slizni_barmen)} true, {=check_npc_name(sim_default_velhan_barmen)} true, {=check_npc_name(sim_default_fantom_barmen)} true, {=check_npc_name(sim_default_veter_barmen)} true, {=check_npc_name(sim_default_osoznanie_barmen)} true, {=check_npc_name(sim_default_alfa_barmen)} true, {=check_npc_name(sim_default_apocalypse_barmen)} true, {=check_npc_name(sim_default_adinkvizicia_barmen)} true, {=check_npc_name(sim_default_hunter_barmen)} true, {=check_npc_name(sim_default_voenstal_barmen)} true, {=check_npc_name(sim_default_mirotvorec_barmen)} true, {=check_npc_name(sim_default_ryskuspecnaz_barmen)} true, {=check_npc_name(sim_default_sby_barmen)} true, {=check_npc_name(sim_default_angel_barmen)} true, {=check_npc_name(sim_default_posleduden_barmen)} true, {=check_npc_name(sim_default_greh_barmen)} true
+prior = 1000
+active = animpoint@barmen
+level_spot = trader
+trade = misc\trade\trade_csky_barman.ltx
+can_select_weapon = true
+dont_keep_items = true
+
+[animpoint@barmen]
+cover_name = rei_base_barmen
+avail_animations = choose
+active = defence@barmen
+reach_distance = 10
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+meet = meet
+
+[logic@leader]
+suitable = {=check_npc_name(sim_default_velhan_leader_palach)} true
+level_spot = {!same_faction} leader, {+actor_bought_leader} nil, leader
+prior = 200
+active = animpoint@leader
+dont_keep_items = true
+
+[animpoint@leader]
+meet = meet
+cover_name = rei_base_leader
+avail_animations = guard_chasovoy
+active = alarm@leader
+combat_ignore_cond = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+can_select_weapon = true
+dont_keep_items = false
+
+[logic@marmok]
+suitable = {=check_npc_name(sim_default_velhan_marmok)} true
+prior = 200
+active = animpoint@marmok
+dont_keep_items = true
+
+[animpoint@marmok]
+meet = meet
+cover_name = rei_base_marmok
+avail_animations = salut
+combat_ignore_cond = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[meet]
+close_snd_hello = nil
+close_snd_bye   = nil
+close_anim 	= nil
+close_victim 	= nil
+far_anim 	= nil
+far_victim 	= nil
+close_distance  = 0
+far_distance 	= 0
+use = true

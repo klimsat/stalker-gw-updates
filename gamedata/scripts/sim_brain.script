@@ -1,0 +1,420 @@
+_G.DEACTIVATE_SIM_ON_NON_LINKED_LEVELS = false
+_G.ProcessEventQueueState = function()
+  return
+end
+
+squad_community_by_behaviour["trader"] = "trader"
+actor_faction = nil
+actor_name = nil
+base_count = 0
+resource_count = 0
+
+initialized = false
+
+function save_state(m_data)
+  if (not m_data.simulation) then
+    m_data.simulation = {}
+    m_data.simulation.squads = {}
+    m_data.simulation.smart_owners = {}
+  end
+
+  utils.debug("sim_brain, save_state before, m_data")
+
+  m_data.simulation.defense_timers = sim_smart.defense_timers
+  m_data.simulation.defense_next_update = sim_smart.defense_next_update
+  m_data.simulation.attack_timers = sim_smart.attack_timers
+  m_data.simulation.attack_next_update = sim_smart.attack_next_update
+  m_data.simulation.mutant_timers = sim_smart.mutant_timers
+  m_data.simulation.mutant_next_update = sim_smart.mutant_next_update
+  m_data.simulation.respawn_timers = sim_smart.respawn_timers
+  m_data.simulation.respawn_next_update = sim_smart.respawn_next_update
+  m_data.simulation.actor_faction = db.actor:character_community():sub(7)
+  m_data.simulation.actor_name = actor_name
+
+  for faction, tbl in pairs(sim_tables.registered_squads) do
+    if not m_data.simulation.squads[faction] then
+      m_data.simulation.squads[faction] = {}
+    end
+
+    for ID, squadInfo in pairs(tbl) do
+      m_data.simulation.squads[faction][ID] = squadInfo
+    end
+  end
+
+  for smart, faction in pairs(sim_smart.smart_owners) do
+    m_data.simulation.smart_owners[smart] = faction
+  end
+
+  utils.debug("sim_brain, save_state after, m_data")
+end
+
+function load_state(m_data)
+  if (not m_data.simulation) then
+    return
+  end
+
+  sim_smart.defense_timers = m_data.simulation.defense_timers or {}
+  sim_smart.defense_next_update = m_data.simulation.defense_next_update or {}
+  sim_smart.attack_timers = m_data.simulation.attack_timers or {}
+  sim_smart.attack_next_update = m_data.simulation.attack_next_update or {}
+  sim_smart.mutant_timers = m_data.simulation.mutant_timers or {}
+  sim_smart.mutant_next_update = m_data.simulation.mutant_next_update or {}
+  sim_smart.respawn_timers = m_data.simulation.respawn_timers or {}
+  sim_smart.respawn_next_update = m_data.simulation.respawn_next_update or {}
+  actor_faction = m_data.simulation.actor_faction
+  actor_name = m_data.simulation.actor_name
+
+  for faction, tbl in pairs(m_data.simulation.squads) do
+    for ID, squadInfo in pairs(tbl) do
+      sim_tables.registered_squads[faction][ID] = squadInfo
+    end
+  end
+
+  if (m_data.simulation.smart_owners) then
+    for smart, faction in pairs(m_data.simulation.smart_owners) do
+      sim_smart.smart_owners[smart] = faction
+    end
+  end
+
+  m_data.simulation = nil
+end
+
+function squad_on_npc_creation(squad, se_obj, spawn_smart)
+  if not IsSquad(squad) then
+    return
+  end
+
+  if not (ignore[squad:section_name()]) then
+    if (not squad.registered_in_simultaion) then
+      local faction = squad:get_squad_community()
+
+      if (sim_tables.registered_squads[faction]) then
+        sim_tables.registered_squads[faction][squad.id] = {
+          ["target"] = spawn_smart.id
+        }
+        squad.assigned_target_id = spawn_smart.id
+        squad.registered_in_simultaion = true
+        spawn_smart:on_reach_target(squad)
+      end
+    end
+  end
+end
+
+local last_update
+
+function actor_on_update()
+  local tg = time_global()
+
+  if not actor_faction then
+    actor_faction = alife():actor():community():sub(7)
+  end
+
+  if (not last_update) then
+    last_update = tg + 20000
+  end
+
+  if (tg < last_update) then
+    return
+  end
+
+  actor_faction = alife():actor():community():sub(7)
+
+  last_update = tg + 10000
+
+  if not initialized then
+    initialize()
+    sim_levels.update()
+    sim_factions.update()
+
+    SendScriptCallback("sim_initialized")
+
+    return
+  end
+
+  sim_levels.update()
+  sim_factions.update()
+end
+
+function initialize()
+  for name, smart in pairs(SIMBOARD.smarts_by_names) do
+    if (not smart.level_id) then
+      smart.level_id = game_graph():vertex(smart.m_game_vertex_id):level_id()
+    end
+
+    if (not sim_levels.level_information[smart.level_id]) then
+      sim_levels.level_information[smart.level_id] = {}
+      sim_levels.level_information[smart.level_id].smarts = {}
+      sim_levels.level_information[smart.level_id].lair_smarts = {}
+      sim_levels.level_information[smart.level_id].base_smarts = {}
+      sim_levels.level_information[smart.level_id].camp_smarts = {}
+      sim_levels.level_information[smart.level_id].faction_priority = {}
+      sim_levels.level_information[smart.level_id].base_count = 0
+      sim_levels.level_information[smart.level_id].resource_count = 0
+      sim_levels.level_information[smart.level_id].territory_count = 0
+      sim_levels.level_information[smart.level_id].lair_count = 0
+      sim_levels.level_information[smart.level_id].first_update = true
+    end
+
+    if (smart.props) then
+      table.insert(sim_levels.level_information[smart.level_id].smarts, smart.id)
+
+      if smart.props then
+        if sim_smart.isBase(smart) then
+          sim_levels.level_information[smart.level_id].base_count =
+            sim_levels.level_information[smart.level_id].base_count + 1
+          base_count = base_count + 1
+          table.insert(sim_levels.level_information[smart.level_id].base_smarts, smart.id)
+        elseif sim_smart.isTerritory(smart) then
+          sim_levels.level_information[smart.level_id].territory_count =
+            sim_levels.level_information[smart.level_id].territory_count + 1
+        end
+
+        if sim_smart.isResource(smart) then
+          sim_levels.level_information[smart.level_id].resource_count =
+            sim_levels.level_information[smart.level_id].resource_count + 1
+          resource_count = resource_count + smart.props.resource
+        end
+        if sim_smart.isCamp(smart) then
+          table.insert(sim_levels.level_information[smart.level_id].camp_smarts, smart.id)
+        end
+
+        if sim_smart.isLair(smart) then
+          table.insert(sim_levels.level_information[smart.level_id].lair_smarts, smart.id)
+
+          sim_levels.level_information[smart.level_id].lair_count =
+            sim_levels.level_information[smart.level_id].lair_count + 1
+        end
+
+        for i, f in pairs(sim_tables.factions) do
+          if smart.props[f] and smart.props[f] > 0 then
+            if not sim_levels.level_information[smart.level_id].faction_priority[f] then
+              sim_levels.level_information[smart.level_id].faction_priority[f] = 0
+            end
+
+            sim_levels.level_information[smart.level_id].faction_priority[f] =
+              sim_levels.level_information[smart.level_id]["faction_priority"][f] + smart.props[f]
+          end
+        end
+      end
+    end
+  end
+
+  initialized = true
+end
+
+function fill_start_position()
+  if (SIMBOARD.start_position_filled) then
+    return
+  end
+
+  SIMBOARD.start_position_filled = true
+
+  local setting_ini
+  local sector = axr_main.config:r_value("character_creation", "new_game_sector", "default")
+  local leader = axr_main.config:r_value("character_creation", "new_game_leader", "default")
+  local enabled_factions =
+    axr_main.config:r_value(
+    "character_creation",
+    "new_game_enabled_factions",
+    table.insert(sim_tables.factions, faction)
+  )
+
+  setting_ini = ini_file(string.format("misc\\simulations\\%s.ltx", sector))
+
+  local squad_section, count, li, lc, faction
+  setting_ini:section_for_each(
+    function(section)
+      lc = setting_ini:line_count(section)
+      for li = 0, lc - 1 do
+        local smart = SIMBOARD.smarts_by_names[section]
+        if (smart) then
+          _, squad_section, str_count = setting_ini:r_line(section, li, "", "")
+
+          if str_count ~= "" then
+            tbl_count = alun_utils.split(str_count, ", ")
+            count = tbl_count[1]
+            faction = tbl_count[2]
+          else
+            faction = "trader"
+          end
+
+          count = tonumber(count) or 1
+
+          local spawn_leader = true
+
+          if leader == "disabled" and string.find(squad_section, "_leader_") then
+            spawn_leader = false
+          end
+
+          if string.find(enabled_factions, faction) and spawn_leader then
+            utils.debug("sim_brain spawn_leader: [%s][%s]", spawn_leader, squad_section)
+            for _ = 1, count do
+              local squad = SIMBOARD:create_squad(smart, squad_section)
+              local squadFaction = squad:get_squad_community()
+
+              if
+                smart and squad and sim_tables.registered_squads[squadFaction] and
+                  not sim_tables.ignore[squad:section_name()] and
+                  not IsLeaderSquad(squad)
+               then
+                sim_squad.set_target(squad, smart.id)
+              end
+            end
+          end
+        end
+      end
+    end
+  )
+
+  local spawn_mutants_enable = axr_main.config:r_value("mm_options", "enable_spawn_mutants", 1, true)
+
+  if not spawn_mutants_enable then
+    return
+  end
+
+  local enable_global_mutants_settings =
+    axr_main.config:r_value("mm_options", "enable_global_mutants_settings", 1, true)
+  local mutants_squad_count = axr_main.config:r_value("mm_options", "mutants_squad_count", 2, 1)
+
+  for level_id, props in pairs(sim_levels.level_information) do
+    local level = alife():level_name(level_id)
+
+    if not enable_global_mutants_settings then
+      mutants_squad_count = axr_main.config:r_value("mm_options", "mutants_squad_count_on_" .. level, 2, 1)
+    end
+
+    local enable_spawn_mutants_level =
+      axr_main.config:r_value("mm_options", "enable_spawn_mutants_on_" .. level, 1, true)
+
+    if
+      level ~= "l12u_control_monolith" and level ~= "l12u_sarcofag" and level ~= "l11_hospital" and
+        enable_spawn_mutants_level
+     then
+      local opt_key = strformat("mutants_level_%s_list", level)
+      local mutants_level = axr_main.config:r_value("mm_options", opt_key, 3, {})
+
+      for i = 1, mutants_squad_count do
+        local smart_id = props.lair_smarts[math.random(#props.lair_smarts)]
+        if smart_id then
+          local smart = alife_object(smart_id)
+          local section = mutants_level[math.random(#mutants_level)]
+
+          if section then
+            local squad = sim_squad.create_squad(smart, nil, nil, section, nil, 1)
+            sim_smart.mutants_by_level[level] = (sim_smart.mutants_by_level[level] or 0) + 1
+            if squad and sim_offline_control.squads_by_level and sim_offline_control.squads_by_level[smart.level_id] then
+              sim_offline_control.squads_by_level[smart.level_id][squad.id] = true
+            end
+          end
+        end
+      end
+    end
+
+    sim_smart.mutants_by_level[level] = mutants_squad_count
+  end
+end
+
+function check_individual_smart_pop(smart)
+  local name = smart:name()
+  local pop = 15
+
+  if
+    name == "mar_smart_terrain_base" or name == "pri_a16" or name == "gar_smart_terrain_3_5" or
+      name == "agr_smart_terrain_1_6_near_2"
+   then
+    pop = 33
+  end
+
+  if
+    name == "mar_smart_terrain_4_5" or name == "agr_smart_terrain_4_4" or name == "agr_smart_terrain_zavod" or
+      name == "agr_smart_terrain_4_4_near_1" or
+      name == "val_smart_terrain_7_5" or
+      name == "val_smart_terrain_7_3" or
+      name == "red_smart_terrain_4_2" or
+      name == "jup_b41" or
+      name == "mar_smart_terrain_10_5"
+   then
+    pop = 27
+  end
+
+  if
+    name == "esc_smart_terrain_3_16" or name == "pri_monolith" or name == "jup_a6" or name == "katacomb_smart_terrain" or
+      name == "agr_smart_terrain_1_6" or
+      name == "bar_visitors" or
+      name == "bar_dolg_general"
+   then
+    pop = 37
+  end
+
+  if
+    name == "jup_b204" or name == "gar_smart_terrain_2_4" or name == "jup_sim_18" or name == "ds2_lager_st" or
+      name == "aes_smart_terran_soldier"
+   then
+    pop = 9
+  end
+
+  return pop
+end
+
+function monolith_level(smart)
+  local level = alife():level_name(game_graph():vertex(smart.m_game_vertex_id):level_id())
+
+  if
+    level == "l13u_warlab" or level == "l12u_control_monolith" or level == "l10u_bunker" or level == "l12_stancia_2" or
+      level == "l12_stancia" or
+      level == "l11_pripyat" or
+      level == "l11_hospital" or
+      level == "l12u_sarcofag" or
+      level == "l13_generators" or
+      level == "pripyat" or
+      level == "l10_radar"
+   then
+    return true
+  end
+
+  return false
+end
+
+function allowed_respawn(level, faction)
+  local ini = ini_file("settings\\allowed_respawn.ltx")
+  local P = ini:r_string_ex(faction, "level")
+
+  if not P then
+    return false
+  end
+
+  if string.find(P, level) then
+    return true
+  else
+    return false
+  end
+end
+
+function hash_table_to_array(tbl)
+  local r = {}
+
+  for k, v in pairs(tbl) do
+    r[#r + 1] = {key = k, value = v}
+  end
+
+  return r
+end
+
+function sort_priority_table(tbl)
+  function priority_sort(a, b)
+    return a[1] < b[1]
+  end
+
+  table.sort(tbl, priority_sort)
+
+  return tbl
+end
+
+function on_game_start()
+  RegisterScriptCallback("fill_start_position", fill_start_position)
+  RegisterScriptCallback("smart_terrain_on_update", sim_smart.smart_terrain_on_update)
+  RegisterScriptCallback("save_state", save_state)
+  RegisterScriptCallback("load_state", load_state)
+  RegisterScriptCallback("actor_on_update", actor_on_update)
+  RegisterScriptCallback("squad_on_update", sim_squad.squad_on_update)
+end

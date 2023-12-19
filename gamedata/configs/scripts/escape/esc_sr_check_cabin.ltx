@@ -1,0 +1,12 @@
+[logic]
+active = sr_idle@read
+
+[sr_idle@read]
+on_info = {+esc_strelok_firstmeet_1 =actor_in_zone(esc_sr_check_cabin)} sr_idle@stop %=run_tutorial(esc_sr_check_cabin_call)%
+
+[sr_idle@stop]
+; on_info = {!actor_in_zone(esc_sr_check_cabin)} sr_idle@read %=stop_tutorial%
+on_info = {!actor_in_zone(esc_sr_check_cabin)} sr_idle@nil %=stop_tutorial%
+
+[sr_idle@nil]
+on_info = %=destroy_object%

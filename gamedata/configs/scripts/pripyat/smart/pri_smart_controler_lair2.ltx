@@ -1,0 +1,19 @@
+[smart_terrain]
+squad_id = 5
+max_population = 1
+respawn_params = respawn@pri_smart_controler_lair2
+respawn_idle = 60000
+
+
+[respawn@pri_smart_controler_lair2]
+spawn_controller
+
+[spawn_controller]
+spawn_squads = simulation_controller
+spawn_num = 1
+
+[exclusive]
+pri_smart_controler_lair2_camp_work_1 = pripyat\pri_smart_controler_lair2_smart_logic.ltx
+pri_smart_controler_lair2_camp_work_2 = pripyat\pri_smart_controler_lair2_smart_logic.ltx
+pri_smart_controler_lair2_camp_work_3 = pripyat\pri_smart_controler_lair2_smart_logic.ltx
+pri_smart_controler_lair2_camp_work_4 = pripyat\pri_smart_controler_lair2_smart_logic.ltx

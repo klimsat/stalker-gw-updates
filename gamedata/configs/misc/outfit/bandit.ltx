@@ -1,0 +1,533 @@
+;---------------------------------------------------------------------------------------------
+;		Bandit Novice Outfit
+;---------------------------------------------------------------------------------------------
+[bandit_novice_outfit]:outfit_novice_base
+$spawn                                   = "outfit\novice_outfit"
+visual                                   = dynamics\outfit\bandit_outfit
+actor_visual                             = actors\stalker_bandit\stalker_bandit_1.ogf
+npc_visual                               = actors\stalker_bandit\stalker_bandit_1.ogf
+player_hud_section                       = actor_hud_bandit_novice
+
+
+inv_name                                 = bandit_novice_outfit_name
+inv_name_short                           = bandit_novice_outfit_name
+description                              = bandit_novice_outfit_description
+
+inv_grid_x         = 10
+inv_grid_y         = 11
+
+upgr_icon_x                              = 1239
+upgr_icon_y                              = 340
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+
+character_portrait						 = ui_inGame2_no_data
+
+upgrades                                 = up_gr_firstab_bandit_outfit, up_gr_seconab_bandit_outfit, up_gr_thirdab_bandit_outfit
+
+;---------------------------------------------------------------------------------------------
+;		Плащ
+;---------------------------------------------------------------------------------------------
+[trenchcoat_outfit]:outfit_novice_base
+$spawn                                   = "outfit\trenchcoat_outfit"
+visual                                   = dynamics\outfit\novice_outfit
+actor_visual                             = actors\stalker_bandit\stalker_bandit_3_mask.ogf
+npc_visual                               = actors\stalker_bandit\stalker_bandit_3_mask.ogf
+player_hud_section                       = actor_hud_bandit_trench
+
+
+inv_name                                 = trenchcoat_outfit_name
+inv_name_short                           = trenchcoat_outfit_name
+description                              = trenchcoat_outfit_description
+inv_weight                               = 1.5
+
+inv_grid_height    = 3
+inv_grid_x         = 16
+inv_grid_y         = 31
+
+upgr_icon_x                              = 636
+upgr_icon_y                              = 0
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+
+cost                                     = 1500
+
+immunities_sect                          = sect_trenchcoat_outfit_immunities
+
+; NO RESISTANCE
+burn_protection                          = 0.0233
+shock_protection                         = 0.0933
+radiation_protection                     = 0.0035
+chemical_burn_protection                 = 0.0233
+telepatic_protection                     = 0.0
+strike_protection                        = 0.0350
+explosion_protection                     = 0.0350
+wound_protection                         = 0.0350
+
+bones_koeff_protection                   = actor_armor_trench
+
+character_portrait							 = ui_inGame2_no_data
+
+[sect_trenchcoat_outfit_immunities]
+burn_immunity                            = 0.05	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.05
+wound_immunity                           = 0.05
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.05
+explosion_immunity                       = 0.05
+fire_wound_immunity                      = 0.02
+
+[sect_trenchcoat_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.005
+
+;---------------------------------------------------------------------------------------------
+;		Бандитский комбенизон в плаще
+;---------------------------------------------------------------------------------------------
+[trenchcoat_brown_outfit]:outfit_base
+$spawn                                   = "outfit\trenchcoat_outfit"
+visual                                   = dynamics\outfit\bandit_commander_outfit
+actor_visual                             = actors\stalker_bandit\stalker_bandit6a.ogf
+npc_visual                               = actors\stalker_bandit\stalker_bandit6a.ogf
+player_hud_section                       = actor_hud_brown_trench
+
+ef_equipment_type                        = 3
+
+inv_name                                 = trenchcoat_brown_outfit_name
+inv_name_short                           = trenchcoat_brown_outfit_name
+description                              = trenchcoat_brown_outfit_description
+
+inv_weight                               = 6.0
+
+inv_grid_x      			 = 46
+inv_grid_y				 = 37
+
+upgr_icon_x                              = 942
+upgr_icon_y                              = 0
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+full_icon_name                           = npc_icon_dolg_outfit
+
+cost                                     = 16000
+full_scale_icon                          = 8,11	                                       ;иконка сталкера в костюме в полный рост
+
+immunities_sect                          = sect_trenchcoat_brown_outfit_immunities
+
+; LOW RESISTANCE
+burn_protection                          = 0.0333
+shock_protection                         = 0.1333
+radiation_protection                     = 0.0050
+chemical_burn_protection                 = 0.0333
+telepatic_protection                     = 0.0
+strike_protection                        = 0.2100
+explosion_protection                     = 0.2100
+wound_protection                         = 0.2100
+
+hit_fraction_actor                       = 0.6
+bones_koeff_protection                   = actor_armor_duty_suit
+
+artefact_count                           = 1
+control_inertion_factor                  = 1.2
+power_loss                               = 0.6
+
+upgrades                                 = up_gr_firstab_dolg_outfit, up_gr_seconab_dolg_outfit, up_gr_thirdab_dolg_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_dolg_outfit
+character_portrait						 = ui_inGame2_no_data
+
+[sect_trenchcoat_brown_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_trenchcoat_brown_outfit_immunities_add]
+burn_immunity                            = -0.015	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.015
+wound_immunity                           = -0.015
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.015
+explosion_immunity                       = -0.015
+fire_wound_immunity                      = -0.003
+
+;---------------------------------------------------------------------------------------------
+;		BANDITMERC SUIT
+;---------------------------------------------------------------------------------------------
+[banditmerc_outfit]:outfit_base
+$spawn                                   = "outfit\banditmerc_outfit"
+visual                                   = dynamics\outfit\banditmerc_outfit
+actor_visual                             = actors\stalker_bandit\stalker_band_2_mask.ogf
+npc_visual                               = actors\stalker_bandit\stalker_band_2_mask.ogf
+player_hud_section                       = actor_hud_bandit_merc
+
+ef_equipment_type                        = 3
+
+inv_name                                 = banditmerc_outfit_name
+inv_name_short                           = banditmerc_outfit_name
+description                              = banditmerc_outfit_description
+
+inv_weight                               = 7.5
+
+inv_grid_x                               = 16
+inv_grid_y                               = 14
+
+upgr_icon_x                              = 1248
+upgr_icon_y                              = 35
+upgr_icon_width                          = 300
+upgr_icon_height                         = 130
+full_icon_name                           = npc_icon_exo_outfit
+
+cost                                     = 15500
+full_scale_icon                          = 2,11	                                       ;иконка сталкера в костюме в полный рост
+artefact_count                           = 1
+immunities_sect                          = sect_banditmerc_outfit_immunities
+
+; LOW-MEDIUM RESISTANCE
+burn_protection                          = 0.0333
+shock_protection                         = 0.1333
+radiation_protection                     = 0.0050
+chemical_burn_protection                 = 0.0333
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1750
+explosion_protection                     = 0.1750
+wound_protection                         = 0.1750
+
+hit_fraction_actor                       = 0.425
+bones_koeff_protection                   = actor_armor_bandit
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.75
+
+upgrades                                 = up_gr_firstab_banditmerc_outfit, up_gr_seconab_banditmerc_outfit, up_gr_thirdab_banditmerc_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_svoboda_heavy_outfit
+character_portrait						 = ui_inGame2_no_data
+
+[sect_banditmerc_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_banditmerc_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		Bandit Berill
+;---------------------------------------------------------------------------------------------
+[bandit_specops_outfit]:outfit_base
+$spawn                                   = "outfit\bandit_specops_outfit"
+visual                                   = dynamics\outfit\bandit_specops_outfit
+actor_visual                             = actors\stalker_bandit\stalker_bandit_5_gasmask.ogf
+npc_visual                               = actors\stalker_bandit\stalker_bandit_5_gasmask.ogf
+player_hud_section                       = actor_hud_duty_psz9d
+
+ef_equipment_type                        = 3
+
+inv_name                                 = bandit_specops_outfit_name
+inv_name_short                           = bandit_specops_outfit_name
+description                              = bandit_specops_outfit_description
+
+inv_weight                               = 11.0
+
+inv_grid_x                               = 66
+inv_grid_y                               = 27
+
+upgr_icon_x                              = 2512
+upgr_icon_y                              = 222
+upgr_icon_width                          = 302
+upgr_icon_height                         = 125
+full_icon_name                           = npc_icon_bandit_specops_outfit
+
+cost                                     = 25000
+full_scale_icon                          = 4,6	                                       ;иконка сталкера в костюме в полный рост
+power_loss                               = 0.8
+immunities_sect                          = sect_bandit_specops_outfit_immunities
+
+; LOW RESISTANCE
+burn_protection                          = 0.0333
+shock_protection                         = 0.1333
+radiation_protection                     = 0.0050
+chemical_burn_protection                 = 0.0333
+telepatic_protection                     = 0.0
+strike_protection                        = 0.2275
+explosion_protection                     = 0.2275
+wound_protection                         = 0.2275
+
+hit_fraction_actor                       = 0.5
+bones_koeff_protection                   = actor_armor_berill
+
+artefact_count                           = 0
+control_inertion_factor                  = 1.5
+
+upgrades                                 = up_gr_firstab_specops_outfit, up_gr_seconab_specops_outfit, up_gr_thirdab_specops_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_specops
+character_portrait						 = ui_inGame2_no_data
+
+[sect_bandit_specops_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_bandit_specops_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		Полуэкзоскелет Бандитов
+;---------------------------------------------------------------------------------------------
+[bandit_radiation_outfit]:outfit_exo_base
+$spawn							= "outfit\bandit_radiation_outfit"
+visual							= dynamics\outfit\velhan_poluexo
+actor_visual						= actors\stalker_velhan\velhan_4_0
+player_hud_section					= actor_hud_merc_radiation
+
+inv_name						= bandit_radiation_outfit_name
+inv_name_short					= bandit_radiation_outfit_name
+description						= bandit_radiation_outfit_description
+
+inv_weight							= 17.0
+
+inv_grid_x							= 54
+inv_grid_y							= 27
+
+upgr_icon_x							= 1857
+upgr_icon_y							= 507
+upgr_icon_width						= 293
+upgr_icon_height					= 157
+
+cost								= 60000
+
+helmet_avaliable					= false
+power_loss							= 0.9
+control_inertion_factor				= 2.5
+sprint_allowed						= true
+additional_inventory_weight			= 30
+additional_inventory_weight2		= 30
+
+upgrades                                 = up_gr_firstab_merc_rad_outfit, up_gr_seconab_merc_rad_outfit, up_gr_thirdab_merc_rad_outfit, up_gr_fourtab_merc_rad_outfit, up_gr_fifthab_merc_rad_outfit
+
+[sect_bandit_radiation_outfit_immunities]
+burn_immunity                            = 0.005	                                       ;eiyooeoeaiou eiioieoaoa naiiai eino?ia
+strike_immunity                          = 0.0
+shock_immunity                           = 0.005
+wound_immunity                           = 0.005
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.005
+explosion_immunity                       = 0.005
+fire_wound_immunity                      = 0.005
+
+[sect_bandit_radiation_outfit_immunities_add]
+burn_immunity                            = -0.0005	                                       ;eiyooeoeaiou eiioieoaoa naiiai eino?ia
+strike_immunity                          = 0.0
+shock_immunity                           = -0.0005
+wound_immunity                           = -0.0005
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.0005
+explosion_immunity                       = -0.0005
+fire_wound_immunity                      = -0.0005
+
+character_portrait						 = ui_inGame2_velhan_10
+
+;---------------------------------------------------------------------------------------------
+;		BANDIT EXOSKELETON
+;---------------------------------------------------------------------------------------------
+[bandit_exo_outfit]:outfit_exo_base
+$spawn                                   = "outfit\bandit_exo_outfit"
+visual                                   = dynamics\outfit\bandit_exo_outfit
+actor_visual                             = actors\stalker_bandit\bandit_exo_4_0.ogf
+npc_visual                               = actors\stalker_bandit\bandit_exo_4_0.ogf
+player_hud_section                       = actor_hud_bandit_exo
+
+inv_name                                 = bandit_exo_outfit_name
+inv_name_short                           = bandit_exo_outfit_name
+description                              = bandit_exo_outfit_description
+
+inv_weight                               = 22.5
+
+inv_grid_width     = 2
+inv_grid_height    = 3
+inv_grid_x         = 68
+inv_grid_y         = 21
+
+upgr_icon_x                              = 2500
+upgr_icon_y                              = 0
+upgr_icon_width                          = 350
+upgr_icon_height                         = 200
+
+cost                                     = 85000
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+strike_protection                        = 0.2975
+explosion_protection                     = 0.2975
+wound_protection                         = 0.2975
+
+bones_koeff_protection                   = actor_armor_bandit_exo
+
+power_loss                               = 1.05
+additional_inventory_weight              = 30
+additional_inventory_weight2             = 30
+artefact_count                           = 1
+helmet_avaliable					= false
+
+character_portrait						           = ui_inGame2_no_data
+;---------------------------------------------------------------------------------------------
+;		Leader Bandit Outfit
+;---------------------------------------------------------------------------------------------
+[leader_bandit_outfit]:outfit_base
+$spawn                                   = "outfit\leader_bandit_outfit"
+visual                                   = dynamics\outfit\leader_bandit_outfit
+actor_visual                             = actors\stalker_bandit\bandit_leader.ogf
+npc_visual                               = actors\stalker_bandit\bandit_leader.ogf
+player_hud_section                       = actor_hud_brown_trench
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_bandit_outfit_name
+inv_name_short                           = leader_bandit_outfit_name
+description                              = leader_bandit_outfit_description
+
+inv_weight                               = 12.5
+
+inv_grid_x      					     = 80
+inv_grid_y				 				 = 43
+
+upgr_icon_x                              = 3773
+upgr_icon_y                              = 0
+upgr_icon_width                          = 294
+upgr_icon_height                         = 156
+
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 237135
+
+full_scale_icon                          = 14,11
+
+immunities_sect                          = sect_leader_bandit_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0698
+shock_protection                         = 0.3416
+radiation_protection                     = 0.0119
+chemical_burn_protection                 = 0.0791
+telepatic_protection                     = 0.1110
+strike_protection                        = 0.4969
+explosion_protection                     = 0.4969
+wound_protection                         = 0.4969
+fire_wound_protection                    = 0.2500
+
+hit_fraction_actor                       = 0.15
+control_inertion_factor                  = 2.5
+bones_koeff_protection                   = bandit_leader
+
+nightvision_sect 			             = effector_nightvision_2
+
+power_restore_speed                      = 0.005
+power_loss                               = 0.85
+
+additional_inventory_weight              = 70
+additional_inventory_weight2             = 70
+
+artefact_count                           = 5
+
+helmet_avaliable					     = false
+
+character_portrait						 = ui_inGame2_bandit_9sultan
+
+[sect_leader_bandit_outfit_immunities]
+burn_immunity            				 = 0.0050
+strike_immunity                          = 0.0050
+shock_immunity                           = 0.0200
+wound_immunity                           = 0.0050
+radiation_immunity                       = 0.0000
+telepatic_immunity                       = 0.0000
+chemical_burn_immunity                   = 0.0050
+explosion_immunity                       = 0.0050
+fire_wound_immunity                      = 0.0100
+;---------------------------------------------------------------------------------------------
+;OUTFIT IN AZAZEL MODE: Leader Bandit Outfit
+;---------------------------------------------------------------------------------------------
+[leader_azazel_bandit_outfit]:outfit_leader_exo_base
+$spawn                                   = "outfit\leader_azazel_bandit_outfit"
+visual                                   = dynamics\outfit\leader_bandit_outfit
+actor_visual                             = actors\stalker_bandit\bandit_leader.ogf
+npc_visual                               = actors\stalker_bandit\bandit_leader.ogf
+player_hud_section                       = actor_hud_brown_trench
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_bandit_outfit_name
+inv_name_short                           = leader_bandit_outfit_name
+description                              = leader_bandit_outfit_description
+
+inv_weight                               = 12.5
+
+inv_grid_x      					     = 80
+inv_grid_y				 				 = 43
+
+upgr_icon_x                              = 3773
+upgr_icon_y                              = 0
+upgr_icon_width                          = 294
+upgr_icon_height                         = 156
+
+cost                                     = 237135
+
+artefact_count                           = 1
+
+helmet_avaliable						= false
+
+sprint_allowed							 = true
+
+power_loss                               = 0.75
+
+character_portrait						 = ui_inGame2_bandit_9sultan
+

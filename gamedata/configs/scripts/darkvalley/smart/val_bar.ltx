@@ -1,0 +1,27 @@
+[smart_terrain]
+squad_id = 1
+max_population = 5
+respawn_params = respawn@val_bar
+respawn_idle = 30000
+
+
+
+[respawn@val_bar]
+spawn_bandit@advanced
+spawn_bandit@master
+
+[spawn_bandit@advanced]
+spawn_squads = bandit_sim_squad_novice, bandit_sim_squad_advanced
+spawn_num = 2
+
+[spawn_bandit@master]
+spawn_squads = bandit_sim_squad_advanced, bandit_sim_squad_advanced, bandit_sim_squad_veteran
+spawn_num = 1
+
+[exclusive]
+val_bar_camp_work_1 = darkvalley\val_bar_smart_logic.ltx
+val_bar_camp_work_2 = darkvalley\val_bar_smart_logic.ltx
+val_bar_camp_work_3 = darkvalley\val_bar_smart_logic.ltx
+val_bar_camp_work_4 = darkvalley\val_bar_smart_logic.ltx
+val_bar_camp_work_5 = darkvalley\val_bar_smart_logic.ltx
+barmen = darkvalley\val_bar_smart_logic.ltx

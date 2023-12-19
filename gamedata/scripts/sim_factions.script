@@ -1,0 +1,235 @@
+faction_timers = {}
+active_levels = {
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35,
+  36,
+  37,
+  39,
+  40,
+  41,
+  42,
+  43,
+  44
+}
+labs = {20, 21, 22, 23, 24, 25, 26, 29, 31, 32, 38}
+
+faction_information = {}
+level_information = {}
+dominating_factions = {}
+
+function update()
+  for _, faction in pairs(sim_tables.factions) do
+    update_faction(faction)
+    update_total_power(faction)
+  end
+
+  SendScriptCallback("on_after_factions_update")
+end
+
+function update_total_power(faction)
+  if not (faction_information[faction]) then
+    init_faction(faction)
+
+    printf("faction init %s", faction)
+    return
+  end
+
+  if faction_information[faction].total_power == nil then
+    faction_information[faction].total_power = 0
+  end
+
+  local delta =
+    (faction_information[faction].passive_npc + faction_information[faction].active_npc * 1.25 +
+    (faction_information[faction].base_count * 4.5) +
+    (faction_information[faction].resource_count * 2.25) +
+    (faction_information[faction].respawn_attack * 1.25))
+  if delta < 0 then
+    delta = 0
+  end
+  faction_information[faction].total_power = faction_information[faction].total_power + delta
+  faction_information[faction].total_power = math.floor(faction_information[faction].total_power)
+end
+
+function init_faction(faction)
+  faction_information[faction] = {}
+  faction_information[faction].base_count = 0
+  faction_information[faction].resource_count = 0
+  faction_information[faction].territory_count = 0
+  faction_information[faction].lair_count = 0
+  faction_information[faction].camp_count = 0
+  faction_information[faction].point_count = 0
+  faction_information[faction].all_smart_count = 0
+  faction_information[faction].total_power = 0
+  faction_information[faction].passive_npc = 0
+  faction_information[faction].active_npc = 0
+  faction_information[faction].faction_passive_npc_limit = 0
+  faction_information[faction].faction_active_npc_limit = 0
+  faction_information[faction].respawn_defend = 0
+  faction_information[faction].respawn_attack = 0
+  faction_information[faction].respawn_unique = 0
+  faction_information[faction].respawn_patrol = 0
+  faction_information[faction].respawn_hunters = 0
+  faction_information[faction].level = 0
+  faction_information[faction].squad_count = 0
+
+  level_information[faction] = {}
+  level_information[faction][1] = true
+  level_information[faction][2] = true
+  level_information[faction][3] = true
+  level_information[faction][4] = true
+  level_information[faction][5] = true
+  level_information[faction][6] = true
+  level_information[faction][7] = true
+  level_information[faction][9] = true
+  level_information[faction][10] = true
+  level_information[faction][11] = true
+  level_information[faction][12] = true
+  level_information[faction][13] = true
+  level_information[faction][14] = true
+  level_information[faction][15] = true
+  level_information[faction][16] = true
+  level_information[faction][17] = true
+  level_information[faction][18] = true
+  level_information[faction][19] = true
+  level_information[faction][27] = true
+  level_information[faction][28] = true
+  level_information[faction][30] = true
+  level_information[faction][31] = true
+  level_information[faction][32] = true
+  level_information[faction][33] = true
+  level_information[faction][34] = true
+  level_information[faction][35] = true
+  level_information[faction][36] = true
+  level_information[faction][37] = true
+  level_information[faction][38] = true
+  level_information[faction][39] = true
+  level_information[faction][40] = true
+  level_information[faction][41] = true
+  level_information[faction][42] = true
+  level_information[faction][43] = true
+  level_information[faction][44] = true
+end
+
+function update_faction(faction)
+  if not faction_information[faction] then
+    init_faction(faction)
+    utils.debug("update faction init %s", faction)
+  end
+
+  faction_information[faction].base_count = 0
+  faction_information[faction].resource_count = 0
+  faction_information[faction].territory_count = 0
+  faction_information[faction].lair_count = 0
+  faction_information[faction].camp_count = 0
+  faction_information[faction].point_count = 0
+  faction_information[faction].all_smart_count = 0
+  faction_information[faction].passive_npc = 0
+  faction_information[faction].active_npc = 0
+  faction_information[faction].faction_passive_npc_limit = 0
+  faction_information[faction].faction_active_npc_limit = 0
+  faction_information[faction].squad_count = 0
+
+  for _, lvl in pairs(sim_tables.active_levels) do
+    local info = sim_levels.level_information[lvl].faction_stats
+
+    if (info and info[faction]) then
+      local squad_count, num_active, num_inactive = sim_offline_control.calc_npc_on_level(lvl, faction)
+
+      faction_information[faction].squad_count = squad_count
+      faction_information[faction].base_count = faction_information[faction].base_count + info[faction].base_count
+      faction_information[faction].resource_count =
+        faction_information[faction].resource_count + info[faction].resource_count
+      faction_information[faction].territory_count =
+        faction_information[faction].territory_count + info[faction].territory_count
+      faction_information[faction].lair_count = faction_information[faction].lair_count + info[faction].lair_count
+      faction_information[faction].camp_count = faction_information[faction].camp_count + info[faction].camp_count
+      faction_information[faction].point_count = faction_information[faction].point_count + info[faction].point_count
+      faction_information[faction].active_npc = faction_information[faction].active_npc + num_active
+      faction_information[faction].passive_npc = faction_information[faction].passive_npc + num_inactive
+
+      faction_information[faction].all_smart_count =
+        faction_information[faction].base_count + faction_information[faction].resource_count +
+        faction_information[faction].territory_count +
+        faction_information[faction].lair_count +
+        faction_information[faction].camp_count +
+        faction_information[faction].point_count
+    end
+  end
+
+  local speed_spawn = axr_main.config:r_value("mm_options", "speed_spawn", 2, 100)
+
+  faction_information[faction].faction_passive_npc_limit = utils.round(faction_information[faction].base_count * 11)
+  faction_information[faction].faction_active_npc_limit =
+    utils.round(25 + (faction_information[faction].base_count + faction_information[faction].resource_count))
+  faction_information[faction].respawn_defend =
+    utils.round(math.random(150, 200) - (faction_information[faction].resource_count * 3))
+  faction_information[faction].respawn_attack =
+    utils.round((math.random(100, 150) - (faction_information[faction].resource_count * 3)) * (speed_spawn / 100))
+  faction_information[faction].respawn_patrol =
+    utils.round(math.random(70, 120) - (faction_information[faction].resource_count * 3))
+  faction_information[faction].respawn_unique = 10
+
+  local actor_hunters = axr_main.config:r_value("mm_options", "enable_actor_hunters", 1, false)
+
+  if wargreat_actor_hunter.hasFactionLevel(faction) and actor_hunters then
+    -- local level = wargreat_actor_hunter.wantedTable[faction].level
+    -- local time = 60 - (60 * (level / 10 - 0.3))
+    faction_information[faction].respawn_hunters = 60
+
+    wargreat_actor_hunter.spawn_squads(faction)
+  end
+
+  if faction_information[faction].respawn_attack < 30 then
+    faction_information[faction].respawn_attack = 30
+  end
+
+  if faction_information[faction].respawn_defend < 30 then
+    faction_information[faction].respawn_defend = 30
+  end
+
+  if faction_information[faction].base_count <= 3 then
+    faction_information[faction].respawn_attack =
+      (faction_information[faction].respawn_attack * 0.5) * (speed_spawn / 100)
+  end
+
+  if faction_information[faction].base_count >= 10 then
+    faction_information[faction].respawn_attack =
+      (faction_information[faction].respawn_attack * 1.5) * (speed_spawn / 100)
+  end
+
+  if faction == sim_brain.actor_faction and faction_information[faction].base_count > 0 then
+    sim_smart.has_base = false
+  end
+end

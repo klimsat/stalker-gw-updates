@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="ui_st_flagger_select_squad">
+		<text>Выбрать отряд</text>
+	</string>
+	<string id="ui_st_flagger_select_smart">
+		<text>Выбрать точку</text>
+	</string>
+	<string id="ui_st_flagger_select_all_squads">
+		<text>Выбрать все отряды</text>
+	</string>
+	<string id="ui_st_flagger_select_all_smarts">
+		<text>Выбрать все точки</text>
+	</string>
+	<string id="ui_st_flagger_select_all_base">
+		<text>Выбрать все базы</text>
+	</string>
+	<string id="ui_st_flagger_select_all_territory">
+		<text>Выбрать все территории</text>
+	</string>
+	<string id="ui_st_flagger_select_all_resources">
+		<text>Выбрать все ресурсные точки</text>
+	</string>
+	<string id="ui_st_flagger_select_all_lairs">
+		<text>Выбрать все логова</text>
+	</string>
+	<string id="ui_st_flagger_add_to_select">
+		<text>Добавить в выборку</text>
+	</string>
+	<string id="ui_st_flagger_unselect">
+		<text>Отменить выделенное</text>
+	</string>
+	<string id="ui_st_flagger_unselect_all">
+		<text>Отменить все</text>
+	</string>
+
+	<string id="ui_st_flagger_join_squads">
+		<text>Объединить отряды в один</text>
+	</string>
+
+	<string id="ui_st_flagger_attack">
+		<text>Атаковать</text>
+	</string>
+	<string id="ui_st_flagger_follow">
+		<text>Следовать</text>
+	</string>
+	<string id="ui_st_flagger_attack_one">
+		<text>Атаковать (1 отряд)</text>
+	</string>
+	<string id="ui_st_flagger_attack_last">
+		<text>Атаковать (последний отряд)</text>
+	</string>
+	<string id="ui_st_flagger_attack_one_smart">
+		<text>Атака с «%s» (1 отряд)</text>
+	</string>
+	<string id="ui_st_flagger_attack_all_smart">
+		<text>Атака с «%s» (все отряды)</text>
+	</string>
+	<string id="ui_st_flagger_attack_last_smart">
+		<text>Атака с «%s» (последний отряд)</text>
+	</string>
+	<string id="ui_st_flagger_attack_all">
+		<text>Атаковать (все)</text>
+	</string>
+	<string id="ui_st_flagger_capture">
+		<text>Захватить</text>
+	</string>
+	<string id="ui_st_flagger_capture_one">
+		<text>Захватить (1 отряд)</text>
+	</string>
+	<string id="ui_st_flagger_capture_last">
+		<text>Захватить (последний отряд)</text>
+	</string>
+	<string id="ui_st_flagger_capture_one_smart">
+		<text>Захват с «%s» (1 отряд)</text>
+	</string>
+	<string id="ui_st_flagger_capture_all_smart">
+		<text>Захват с «%s» (все отряды)</text>
+	</string>
+	<string id="ui_st_flagger_capture_last_smart">
+		<text>Захват с «%s» (последний отряд)</text>
+	</string>
+	<string id="ui_st_flagger_capture_all">
+		<text>Захватить (все)</text>
+	</string>
+	<string id="ui_st_flagger_defence">
+		<text>Отправить на защиту</text>
+	</string>
+	<string id="ui_st_flagger_defence_one">
+		<text>Отправить на защиту (1 отряд)</text>
+	</string>
+	<string id="ui_st_flagger_defence_last">
+		<text>Отправить на защиту (последний отряд)</text>
+	</string>
+	<string id="ui_st_flagger_defence_one_smart">
+		<text>Защита с «%s» (1 отряд)</text>
+	</string>
+	<string id="ui_st_flagger_defence_all_smart">
+		<text>Защита с «%s» (все отряды)</text>
+	</string>
+	<string id="ui_st_flagger_defence_last_smart">
+		<text>Защита с «%s» (последний отряд)</text>
+	</string>
+	<string id="ui_st_flagger_defence_all">
+		<text>Отправить на защиту (все)</text>
+	</string>
+
+	<string id="ui_st_flagger_selected">
+		<text>Выбранный объект</text>
+	</string>
+
+	<string id="ui_st_flagger_set_target_attack">
+		<text>Атакующий отряд</text>
+	</string>
+	<string id="ui_st_flagger_set_target_defence">
+		<text>Защитный отряд</text>
+	</string>
+	<string id="ui_st_flagger_set_target_capture">
+		<text>Отряд захвата</text>
+	</string>
+
+	<string id="ui_st_flagger_priority_up">
+		<text>Повысить приоритет (%s)</text>
+	</string>
+	<string id="ui_st_flagger_priority_down">
+		<text>Понизить приоритет (%s)</text>
+	</string>
+	<string id="ui_st_flagger_priority_reset">
+		<text>Сбросить приоритет цели</text>
+	</string>
+	<string id="ui_st_flagger_priority_reset_all">
+		<text>Сбросить все приоритеты</text>
+	</string>
+
+	<string id="ui_st_debug_flagger_spawn_squad">
+		<text>Спавн</text>
+	</string>
+	<string id="ui_st_debug_flagger_remove_squad">
+		<text>Удалить сквад</text>
+	</string>
+	<string id="ui_st_debug_flagger_remove_squads">
+		<text>Удалить сквады</text>
+	</string>
+</string_table>

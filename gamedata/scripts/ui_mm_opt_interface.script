@@ -1,0 +1,226 @@
+class "opt_interface"(CUIWindow)
+
+function opt_interface:__init()
+  super()
+end
+
+function opt_interface:__finalize()
+end
+
+function opt_interface:InitControls(x, y, xml, handler)
+  self:SetWndPos(vector2():set(x, y))
+  self:SetWndSize(vector2():set(738, 416))
+  self:SetAutoDelete(true)
+
+  self.scroll_v = xml:InitScrollView("tab_interface:scroll_v", self)
+  handler.interface_scroll_v = self.scroll_v
+
+  local g_check_1 = {
+    ws_self = {x = 235},
+    self = {x = 235},
+    ws_label = {x = 75},
+    label = {x = 75}
+  }
+  local g_check_2 = {
+    ws_self = {x = 475},
+    self = {x = 475},
+    ws_label = {x = 315},
+    label = {x = 315}
+  }
+  local g_list_1 = {
+    ws_self = {x = 195},
+    self = {x = 195},
+    ws_label = {x = 15},
+    label = {x = 15}
+  }
+  local g_list_2 = {
+    ws_self = {x = 485},
+    self = {x = 485},
+    ws_label = {x = 305},
+    label = {x = 305}
+  }
+
+  handler.options.interface = {
+    {
+      geometry = {ws_self = {height = 10}, self = {height = 10}},
+      typ = "empty"
+    },
+    {
+      id = "label_pda_icons",
+      geometry = {ws_label = {x = 0, width = 662}, label = {x = 0, width = 662}},
+      typ = "label"
+    },
+    {
+      {
+        id = "pda_smart_icons_size",
+        default = 24,
+        debug_only = false,
+        tag = "list_3_axr",
+        typ = "list",
+        list = {20, 24, 28, 32, 36, 40}
+      },
+      {
+        id = "pda_smart_icons_color",
+        default = GetString("ui_mm_list_pda_smart_icons_color_item_default"),
+        debug_only = false,
+        typ = "list",
+        list = {"default", "colorized", "class_1", "class_2"}
+      }
+    },
+    {
+      show_label = false,
+      typ = "line"
+    },
+    {
+      id = "label_hud_settings",
+      geometry = {ws_label = {x = 0, width = 662}, label = {x = 0, width = 662}},
+      typ = "label"
+    },
+    {
+      {
+        id = "smart_capture_progress",
+        default = true,
+        debug_only = false,
+        geometry = g_check_1,
+        typ = "check"
+      },
+      {
+        id = "smart_capture_info",
+        default = true,
+        debug_only = false,
+        geometry = g_check_2,
+        typ = "check"
+      }
+    },
+    {
+      {
+        id = "hud_draw",
+        typ = "check",
+        geometry = g_check_1,
+        tag = "check_hud_draw"
+      },
+      {
+        id = "show_enemy_health",
+        default = false,
+        debug_only = true,
+        geometry = g_check_2,
+        typ = "check"
+      },
+      {
+        id = "mask_hud",
+        default = false,
+        debug_only = false,
+        geometry = g_check_2,
+        typ = "check",
+        precondition = function()
+          -- disabled
+          return false
+        end,
+        on_accept = function(handler, optMgr, item)
+          if (level.present() and mask_hud) then
+            if (item.ctrl:GetCheck()) then
+              mask_hud.activate_hud()
+            else
+              mask_hud.deactivate_hud()
+            end
+          end
+        end
+      }
+    },
+    {
+      id = "slot_hud",
+      default = false,
+      debug_only = false,
+      geometry = g_check_1,
+      typ = "check",
+      precondition = function()
+        return slot_hud
+      end,
+      on_accept = function(handler, optMgr, item)
+        if (level.present() and slot_hud) then
+          if (item.ctrl:GetCheck()) then
+            slot_hud.activate_hud()
+          else
+            slot_hud.deactivate_hud()
+          end
+        end
+      end
+    },
+    {
+      show_label = false,
+      typ = "line"
+    },
+    {
+      id = "label_hitmark_settings",
+      geometry = {ws_label = {x = 0, width = 662}, label = {x = 0, width = 662}},
+      typ = "label"
+    },
+    {
+      id = "hitmark",
+      default = true,
+      debug_only = true,
+      geometry = g_check_2,
+      typ = "check"
+    },
+    {
+      {
+        id = "hitmark_speed",
+        default = 1.5,
+        geometry = g_list_1,
+        tag = "input_2_axr",
+        typ = "input"
+      },
+      {
+        id = "hitmark_shift",
+        default = 6.0,
+        geometry = g_list_2,
+        tag = "input_2_axr",
+        typ = "input"
+      }
+    },
+    {
+      {
+        id = "hitmark_show_time",
+        default = 250,
+        geometry = g_list_1,
+        tag = "input_2_axr",
+        typ = "input"
+      },
+      {
+        id = "hitmark_show_head_time",
+        default = 100,
+        geometry = g_list_2,
+        tag = "input_2_axr",
+        typ = "input"
+      }
+    },
+    {
+      show_label = false,
+      typ = "line"
+    },
+    {
+      {
+        id = "debug_hud",
+        default = false,
+        debug_only = true,
+        geometry = g_check_1,
+        typ = "check",
+        on_accept = function(handler, optMgr, item)
+          if (level.present() and xrs_debug_tools) then
+            if (item.ctrl:GetCheck()) then
+              xrs_debug_tools.activate_feature()
+            else
+              xrs_debug_tools.deactivate_feature()
+            end
+          end
+        end
+      },
+      {
+        id = "show_options_hints",
+        default = true,
+        geometry = g_check_2,
+        typ = "check"
+      }
+    }
+  }
+end

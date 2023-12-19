@@ -1,0 +1,273 @@
+[logic@esc_stalker_takenoshi]
+suitable = {=check_npc_name(esc_stalker_takenoshi_1)} true
+prior = 140
+active = walker@esc_stalker_takenoshi_first
+level_spot = quest_npc
+; on_combat = combat@esc_stalker_takenoshi
+
+; [combat@esc_stalker_takenoshi]
+; combat_type = zombied
+
+[logic@esc_stalker_takenoshi_attack]
+suitable = {=check_npc_name(esc_stalker_takenoshi_1)} true
+prior = 140
+active = walker@esc_stalker_takenoshi_attack
+level_spot = quest_npc
+
+[logic@esc_stalker_takenoshi_2_attack]
+suitable = {=check_npc_name(esc_stalker_takenoshi_2)} true
+prior = 140
+active = walker@esc_stalker_takenoshi_2_attack
+
+[logic@esc_stalker_takenoshi_3_attack]
+suitable = {=check_npc_name(esc_stalker_takenoshi_3)} true
+prior = 140
+active = walker@esc_stalker_takenoshi_3_attack
+
+[walker@esc_stalker_takenoshi_first]
+path_walk = takenoshi_3_walk
+path_look  = takenoshi_3_look
+on_info = {=surge_started} walker@surge
+; on_info2 = {=is_night} sleeper@sleeper_1
+; on_info3 = {=is_rain} walker@rain
+combat_ignore_cond = {=check_enemy_name(actor)} true, false
+; combat_ignore_keep_when_attacked = true
+reach_distance = 10
+gather_items_enabled = false
+; help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = true
+meet = meet@takenoshi_meet
+on_info = {+esc_stalker_takenoshi_firstmeet_2 -esc_takenoshi_q1_boars_dead} walker@esc_stalker_takenoshi_second
+on_info2 = {+esc_takenoshi_q1_boars_dead} walker@esc_stalker_takenoshi
+
+[walker@esc_stalker_takenoshi_second]
+path_walk = takenoshi_squad_1_walk
+; path_look  = takenoshi_squad_1_walk
+on_info = {=surge_started} walker@surge
+; on_info2 = {=is_night} sleeper@sleeper_1
+; on_info3 = {=is_rain} walker@rain
+combat_ignore_cond = {=check_enemy_name(actor)} true, false
+; combat_ignore_keep_when_attacked = true
+reach_distance = 10
+gather_items_enabled = false
+; help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = true
+meet = no_meet
+on_timer = 12000 | %=create_squad(takenosh_4_9_boars:esc_smart_terrain_4_9) +esc_stalker_takenoshi_ready_attack =make_actor_visible_to_squad(takenosh_4_9_boars)% walker@esc_stalker_takenoshi_attack
+
+[walker@esc_stalker_takenoshi_attack]
+path_walk = takenoshi_attack_1
+def_state_moving = assault
+; path_look  = takenoshi_squad_1_walk
+on_info = {=surge_started} walker@surge
+; on_info2 = {=is_night} sleeper@sleeper_1
+; on_info3 = {=is_rain} walker@rain
+combat_ignore_cond = {=check_enemy_name(actor)} true, false
+; combat_ignore_keep_when_attacked = true
+reach_distance = 10
+gather_items_enabled = false
+; help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = true
+meet = {+esc_stalker_takenoshi_ready_attack -esc_takenoshi_q1_boars_dead} no_meet, {+esc_takenoshi_q1_boars_dead -esc_stalker_takenoshi_about} meet@takenoshi_meet, no_meet
+on_info = {+esc_stalker_takenoshi_about} walker@esc_stalker_takenoshi
+
+;для двух других
+[walker@esc_stalker_takenoshi_2_attack]
+path_walk = takenoshi_attack_2
+def_state_moving = assault
+; path_look  = takenoshi_squad_1_walk
+on_info = {=surge_started} walker@surge_1
+; on_info2 = {=is_night} sleeper@sleeper_1
+; on_info3 = {=is_rain} walker@rain
+combat_ignore_cond = {=check_enemy_name(actor)} true, false
+; combat_ignore_keep_when_attacked = true
+reach_distance = 10
+gather_items_enabled = false
+; help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = true
+; как убрать из-под логики???
+on_info = {+esc_stalker_takenoshi_about} nil
+on_signal = takenoshi_on_point | walker@takenoshi_squad_arrived_1
+on_info2 = {+esc_takenoshi_q1_boars_dead} walker@takenoshi_squad_arrived_1
+meet = no_meet
+
+[walker@takenoshi_squad_arrived_1]
+path_walk = takenoshi_2_walk
+def_state_moving = assault
+; path_look  = takenoshi_squad_1_walk
+on_info = {=surge_started} walker@surge_1
+; on_info2 = {=is_night} sleeper@sleeper_1
+; on_info3 = {=is_rain} walker@rain
+combat_ignore_cond = {=check_enemy_name(actor)} true, false
+; combat_ignore_keep_when_attacked = true
+reach_distance = 10
+gather_items_enabled = false
+; help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = true
+; как убрать из-под логики???
+on_info = {+esc_stalker_takenoshi_about} nil
+meet = no_meet
+
+[walker@esc_stalker_takenoshi_3_attack]
+path_walk = takenoshi_attack_3
+def_state_moving = assault
+; path_look  = takenoshi_squad_1_walk
+on_info = {=surge_started} walker@surge_2
+; on_info2 = {=is_night} sleeper@sleeper_1
+; on_info3 = {=is_rain} walker@rain
+combat_ignore_cond = {=check_enemy_name(actor)} true, false
+; combat_ignore_keep_when_attacked = true
+reach_distance = 10
+gather_items_enabled = false
+; help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = true
+; как убрать из-под логики???
+on_info = {+esc_stalker_takenoshi_about} nil
+on_signal = takenoshi_on_point | walker@takenoshi_squad_arrived_2
+on_info2 = {+esc_takenoshi_q1_boars_dead} walker@takenoshi_squad_arrived_2
+meet = no_meet
+
+[walker@takenoshi_squad_arrived_2]
+path_walk = takenoshi_3_walk
+def_state_moving = assault
+; path_look  = takenoshi_squad_1_walk
+on_info = {=surge_started} walker@surge_2
+; on_info2 = {=is_night} sleeper@sleeper_1
+; on_info3 = {=is_rain} walker@rain
+combat_ignore_cond = {=check_enemy_name(actor)} true, false
+; combat_ignore_keep_when_attacked = true
+reach_distance = 10
+gather_items_enabled = false
+; help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = true
+; как убрать из-под логики???
+on_info = {+esc_stalker_takenoshi_about} nil
+meet = no_meet
+
+[walker@esc_stalker_takenoshi]
+path_walk = takenoshi_1_walk
+path_look  = takenoshi_1_look
+on_info = {=surge_started} walker@surge
+; on_info2 = {=is_night} sleeper@sleeper_1
+on_info3 = {=is_rain} walker@rain
+combat_ignore_cond = {=check_enemy_name(actor)} true, false
+; combat_ignore_keep_when_attacked = true
+reach_distance = 10
+gather_items_enabled = false
+; help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = true
+meet = meet@takenoshi_meet
+
+[walker@rain]
+path_walk = takenoshi_2_walk
+path_look = takenoshi_2_look
+on_info = {!is_rain} walker@esc_stalker_takenoshi
+gather_items_enabled = false
+; help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = true
+
+[walker@surge]
+path_walk = takenoshi_2_walk
+path_look = takenoshi_2_look
+on_info = {!surge_started} walker@esc_stalker_takenoshi_first
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = true
+
+; [sleeper@sleeper_1]
+combat_ignore_cond = {=check_enemy_name(actor)} true, false
+; combat_ignore_keep_when_attacked = true
+; gather_items_enabled = false
+; help_wounded_enabled = false
+; corpse_detection_enabled = false
+; invulnerable = true
+; path_main = nimble_sleeper
+; meet = no_meet
+; on_info = {!is_night} walker@esc_stalker_takenoshi
+
+[meet@takenoshi_meet]
+; close_snd_hello = esc_wolf_meet
+; close_snd_bye = esc_wolf_bye
+close_anim 		= guard
+close_victim 	= actor
+; far_anim 		= guard_na
+; far_victim 		= nil
+close_distance  = 5
+; ; far_distance 	= 0
+; close_snd_distance = 3
+use = {=actor_enemy} false, true
+; use_wpn = false
+meet_on_talking = false
+allow_break = false
+meet_dialog = {-esc_stalker_takenoshi_firstmeet_1 +esc_stalker_fanat_firstmeet_1} esc_stalker_takenoshi_firstmeet_1, {+esc_stalker_takenoshi_firstmeet_1 -esc_stalker_takenoshi_firstmeet_2} esc_stalker_takenoshi_firstmeet_2, nil
+
+
+[logic@esc_stalker_takenoshi_2]
+suitable = {=check_npc_name(esc_stalker_takenoshi_2) +esc_stalker_takenoshi_firstmeet_2 -esc_stalker_takenoshi_about} true
+prior = 140
+active = walker@esc_stalker_takenoshi_2
+
+[walker@esc_stalker_takenoshi_2]
+path_walk = takenoshi_1_walk
+path_look  = takenoshi_1_look
+on_info = {=surge_started} walker@surge_1
+; on_info2 = {=is_night} sleeper@sleeper_1
+; on_info3 = {=is_rain} walker@rain
+combat_ignore_cond = {=check_enemy_name(actor)} true, false
+; combat_ignore_keep_when_attacked = true
+reach_distance = 10
+gather_items_enabled = false
+; help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = true
+meet = no_meet
+
+[walker@surge_1]
+path_walk = surge_6_walk
+path_look = surge_6_look
+on_info = {!surge_started} walker@esc_stalker_takenoshi_2
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = true
+meet = no_meet
+
+[logic@esc_stalker_takenoshi_3]
+suitable = {=check_npc_name(esc_stalker_takenoshi_3) +esc_stalker_takenoshi_firstmeet_2 -esc_stalker_takenoshi_about} true
+prior = 140
+active = walker@esc_stalker_takenoshi_3
+
+[walker@esc_stalker_takenoshi_3]
+path_walk = takenoshi_1_walk
+path_look  = takenoshi_1_look
+on_info = {=surge_started} walker@surge_2
+; on_info2 = {=is_night} sleeper@sleeper_1
+; on_info3 = {=is_rain} walker@rain
+combat_ignore_cond = {=check_enemy_name(actor)} true, false
+; combat_ignore_keep_when_attacked = true
+reach_distance = 10
+gather_items_enabled = false
+; help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = true
+meet = no_meet
+
+[walker@surge_2]
+path_walk = surge_5_walk
+path_look = surge_5_look
+on_info = {!surge_started} walker@esc_stalker_takenoshi_3
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = true
+meet = no_meet

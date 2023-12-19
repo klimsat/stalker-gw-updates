@@ -1,0 +1,49 @@
+;--------------------------------------------------------------------------------------------------
+; HOSTAGE RESCUE FOR FREEDOM TASK-
+
+[simulation_task_9]
+icon = ui_inGame2_PD_Opitniy_stalker
+prior = 50
+sim_communities = freedom
+storyline = false
+title = simulation_task_9_name
+descr = simulation_task_9_text
+job_descr = simulation_task_9_about
+task_complete_descr = simulation_task_9_finish
+stage_complete = 1
+status_functor = hostage_task
+status_functor_params = hostage_companion_task_1
+target_functor = simulation_task_target
+on_init = %=find_smart_under_faction_control(simulation_task_9_id:army:monolith) =setup_companion_task(hostage_companion_task_1_freedom:nil:simulation_task_9_id:true:true) +hostage_companion_task_1_started%
+precondition = {=random_chance =is_faction_enemy_to_actor(monolith) =is_faction_enemy_to_actor(army) -hostage_companion_task_1_started -hostage_companion_task_1_hostage_rescued =all_avail_smart_stayed_squad_count_ge_by_faction(1:nil:false:army:monolith) !squad_exist(hostage_companion_task_1)} true, false
+repeat_timeout = 86400
+on_complete = %=reward_random_money(1500:3000) =unlock_smart(simulation_task_9_id) =reward_stash(true) =complete_task_inc_goodwill(50:freedom) =remove_special_task_squad(hostage_companion_task_1) =pstor_reset(simulation_task_9_id) =pstor_reset(simulation_task_9_target_id) -hostage_companion_task_1_hostage_rescued -hostage_companion_task_1_started =inc_task_stage(simulation_task_9)%
+on_fail = %=unlock_smart(simulation_task_9_id) =fail_task_dec_goodwill(25:freedom) =pstor_reset(simulation_task_9_id) =remove_special_task_squad(hostage_companion_task_1) =pstor_reset(simulation_task_9_target_id) -hostage_companion_task_1_hostage_rescued -hostage_companion_task_1_started%
+on_cancel = %=unlock_smart(simulation_task_9_id) =pstor_reset(simulation_task_9_id) =remove_special_task_squad(hostage_companion_task_1) =pstor_reset(simulation_task_9_target_id) -hostage_companion_task_1_hostage_rescued -hostage_companion_task_1_started%
+condlist_0 = {!squad_exist(hostage_companion_task_1)} fail
+
+
+;--------------------------------------------------------------------------------------------------
+; HOSTAGE RESCUE FOR ECOG TASK-
+
+[simulation_task_10]
+icon = ui_inGame2_PD_Opitniy_stalker
+prior = 50
+sim_communities = ecolog
+storyline = false
+title = simulation_task_10_name
+descr = simulation_task_10_text
+job_descr = simulation_task_10_about
+task_complete_descr = simulation_task_10_finish
+stage_complete = 1
+status_functor = hostage_task
+status_functor_params = hostage_companion_task_1
+target_functor = simulation_task_target
+on_init = %=find_smart_under_faction_control_ex(simulation_task_10_id:bandit) =setup_companion_task(hostage_companion_task_1_ecolog:nil:simulation_task_10_id:true:true) +hostage_companion_task_1_started%
+precondition = {=random_chance =is_faction_enemy_to_actor(bandit) -hostage_companion_task_1_started -hostage_companion_task_1_hostage_rescued =all_avail_smart_stayed_squad_count_ge_by_faction_ex(1:nil:false:bandit) !squad_exist(hostage_companion_task_1)} true, false
+repeat_timeout = 86400
+on_complete = %=complete_task_inc_goodwill(50:ecolog) =reward_stash(true) =remove_special_task_squad(hostage_companion_task_1) =pstor_reset(simulation_task_10_id) =pstor_reset(simulation_task_10_target_id) -hostage_companion_task_1_hostage_rescued -hostage_companion_task_1_started =inc_task_stage(simulation_task_10) =unlock_smart(simulation_task_10_id)%
+on_fail = %=unlock_smart(simulation_task_10_id) =fail_task_dec_goodwill(25:ecolog) =remove_special_task_squad(hostage_companion_task_1) =pstor_reset(simulation_task_10_id) =pstor_reset(simulation_task_10_target_id) -hostage_companion_task_1_hostage_rescued -hostage_companion_task_1_started%
+on_cancel = %=unlock_smart(simulation_task_10_id) =remove_special_task_squad(hostage_companion_task_1) =pstor_reset(simulation_task_10_id) =pstor_reset(simulation_task_10_target_id) -hostage_companion_task_1_hostage_rescued -hostage_companion_task_1_started%
+condlist_0 = {!squad_exist(hostage_companion_task_1)} fail
+reward_item = af_soul

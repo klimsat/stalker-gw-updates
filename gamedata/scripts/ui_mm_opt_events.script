@@ -1,0 +1,164 @@
+class "opt_events"(CUIWindow)
+
+function opt_events:__init()
+  super()
+end
+
+function opt_events:__finalize()
+end
+
+function opt_events:InitControls(x, y, xml, handler)
+  self:SetWndPos(vector2():set(x, y))
+  self:SetWndSize(vector2():set(738, 416))
+  self:SetAutoDelete(true)
+
+  self.scroll_v = xml:InitScrollView("tab_events:scroll_v", self)
+  handler.events_scroll_v = self.scroll_v
+
+  handler.options.events = {
+    {
+      geometry = {ws_self = {height = 10}, self = {height = 10}},
+      typ = "empty"
+    },
+    {
+      id = "label_blowout",
+      geometry = {ws_label = {x = 0, width = 662}, label = {x = 0, width = 662}},
+      typ = "label"
+    },
+    {
+      id = "weather_event_blowout_npc",
+      default = "turntozombie",
+      geometry = {
+        ws_self = {offset_x = 153},
+        self = {offset_x = 153},
+        ws_label = {offset_x = 153},
+        label = {offset_x = 153}
+      },
+      typ = "list",
+      list_pref = "event_blowout_npc",
+      list = {"killatend", "killatwave", "turntozombie", "explode"}
+    },
+    {
+      {
+        id = "weather_blowout",
+        default = true,
+        geometry = {
+          ws_self = {offset_x = -75},
+          self = {offset_x = -55},
+          ws_label = {offset_x = -45},
+          label = {offset_x = -25}
+        },
+        typ = "check"
+      },
+      {
+        id = "weather_event_blowout_warn",
+        default = "radio_siren",
+        geometry = {
+          ws_label = {offset_x = 15},
+          label = {offset_x = 15}
+        },
+        typ = "list",
+        list_pref = "blowout_warn",
+        list = {"radio_siren", "radio", "siren", "none"}
+      }
+    },
+    {
+      {
+        id = "weather_event_blowout_freq",
+        default = "12",
+        typ = "list",
+        geometry = {
+          ws_self = {offset_x = -65},
+          self = {offset_x = -65},
+          ws_label = {offset_x = -45},
+          label = {offset_x = -45}
+        },
+        list_pref = "event_blowout_freq",
+        list = {"12", "24", "48", "96"}
+      },
+      {
+        id = "weather_event_blowout_quest",
+        default = "give",
+        geometry = {
+          ws_label = {offset_x = 15},
+          label = {offset_x = 15}
+        },
+        typ = "list",
+        list_pref = "event_blowout_quest",
+        list = {"give", "none"}
+      }
+    },
+    {
+      geometry = {ws_self = {height = 10}, self = {height = 10}},
+      typ = "empty"
+    },
+    {
+      id = "label_psi_storm",
+      geometry = {ws_label = {x = 0, width = 662}, label = {x = 0, width = 662}},
+      typ = "label"
+    },
+    {
+      id = "weather_event_psi_storm_npc",
+      default = "turntozombie",
+      geometry = {
+        ws_self = {offset_x = 153},
+        self = {offset_x = 153},
+        ws_label = {offset_x = 153},
+        label = {offset_x = 153}
+      },
+      typ = "list",
+      list_pref = "event_blowout_npc",
+      list = {"kill", "none", "turntozombie"}
+    },
+    {
+      {
+        id = "weather_psi_storm",
+        default = true,
+        geometry = {
+          ws_self = {offset_x = -75},
+          self = {offset_x = -55},
+          ws_label = {offset_x = -45},
+          label = {offset_x = -25}
+        },
+        typ = "check"
+      },
+      {
+        id = "weather_event_psi_storm_warn",
+        default = "siren",
+        geometry = {
+          ws_label = {offset_x = 15},
+          label = {offset_x = 15}
+        },
+        typ = "list",
+        list_pref = "blowout_warn",
+        list = {"siren", "none"}
+      }
+    },
+    {
+      {
+        id = "weather_event_psi_storm_freq",
+        default = "12",
+        typ = "list",
+        geometry = {
+          ws_self = {offset_x = -65},
+          self = {offset_x = -65},
+          ws_label = {offset_x = -45},
+          label = {offset_x = -45}
+        },
+        list_pref = "event_blowout_freq",
+        list = {"12", "24", "48", "96"}
+      },
+      {
+        id = "weather_event_psi_storm_quest",
+        default = "give",
+        geometry = {
+          ws_label = {offset_x = 15},
+          label = {offset_x = 15}
+        },
+        typ = "list",
+        list_pref = "event_blowout_quest",
+        list = {"give", "none"}
+      }
+    }
+  }
+end

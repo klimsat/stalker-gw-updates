@@ -1,0 +1,72 @@
+<radio_period_length x="0" y="0" width="192" height="26" radio="1">
+    <button x="-4" y="0" width="20" height="12" id="3" stretch="1">
+        <text font="arial_14" vert_align="c" x="0" y="10" align="c" width="20" height="20">st_period_length_3h</text>
+        <text_color>
+            <e r="170" g="170" b="170" />
+            <d r="70" g="70" b="70" />
+        </text_color>
+    </button>
+    <button x="16" y="0" width="20" height="12" id="4" stretch="1">
+        <text font="arial_14" vert_align="c" x="0" y="10" align="c" width="20" height="20">st_period_length_4h</text>
+        <text_color>
+            <e r="170" g="170" b="170" />
+            <d r="70" g="70" b="70" />
+        </text_color>
+    </button>
+    <button x="36" y="0" width="20" height="12" id="5" stretch="1">
+        <text font="arial_14" vert_align="c" x="0" y="10" align="c" width="20" height="20">st_period_length_5h</text>
+        <text_color>
+            <e r="170" g="170" b="170" />
+            <d r="70" g="70" b="70" />
+        </text_color>
+    </button>
+    <button x="56" y="0" width="20" height="12" id="6" stretch="1">
+        <text font="arial_14" vert_align="c" x="0" y="10" align="c" width="20" height="20">st_period_length_6h</text>
+        <text_color>
+            <e r="170" g="170" b="170" />
+            <d r="70" g="70" b="70" />
+        </text_color>
+    </button>
+    <button x="76" y="0" width="20" height="12" id="7" stretch="1">
+        <text font="arial_14" vert_align="c" x="0" y="10" align="c" width="20" height="20">st_period_length_7h</text>
+        <text_color>
+            <e r="170" g="170" b="170" />
+            <d r="70" g="70" b="70" />
+        </text_color>
+    </button>
+    <button x="96" y="0" width="20" height="12" id="8" stretch="1">
+        <text font="arial_14" vert_align="c" x="0" y="10" align="c" width="20" height="20">st_period_length_8h</text>
+        <text_color>
+            <e r="170" g="170" b="170" />
+            <d r="70" g="70" b="70" />
+        </text_color>
+    </button>
+    <button x="116" y="0" width="20" height="12" id="9" stretch="1">
+        <text font="arial_14" vert_align="c" x="0" y="10" align="c" width="20" height="20">st_period_length_9h</text>
+        <text_color>
+            <e r="170" g="170" b="170" />
+            <d r="70" g="70" b="70" />
+        </text_color>
+    </button>
+    <button x="136" y="0" width="20" height="12" id="10" stretch="1">
+        <text font="arial_14" vert_align="c" x="0" y="10" align="c" width="20" height="20">st_period_length_10h</text>
+        <text_color>
+            <e r="170" g="170" b="170" />
+            <d r="70" g="70" b="70" />
+        </text_color>
+    </button>
+    <button x="156" y="0" width="20" height="12" id="11" stretch="1">
+        <text font="arial_14" vert_align="c" x="0" y="10" align="c" width="20" height="20">st_period_length_11h</text>
+        <text_color>
+            <e r="170" g="170" b="170" />
+            <d r="70" g="70" b="70" />
+        </text_color>
+    </button>
+    <button x="176" y="0" width="20" height="12" id="12" stretch="1">
+        <text font="arial_14" vert_align="c" x="0" y="10" align="c" width="20" height="20">st_period_length_12h</text>
+        <text_color>
+            <e r="170" g="170" b="170" />
+            <d r="70" g="70" b="70" />
+        </text_color>
+    </button>
+</radio_period_length>

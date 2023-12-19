@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="hunter_dialog_start_0">
+		<text>У меня проблемы. Меня хотят убить. Есть ли решения, как прекратить охоту на меня?</text>
+	</string>
+	<string id="hunter_dialog_start_1">
+		<text>Есть два варианта. Первый: просто умри, а второй заплати. Глянем кто на твою жизнь точит зуб?</text>
+	</string>
+	<string id="hunter_dialog_start_20">
+		<text>Конечно.</text>
+	</string>
+	<string id="hunter_dialog_start_21">
+		<text>Не нужно.</text>
+	</string>
+	<string id="hunter_dialog_start_3">
+		<text>Вот список кто охотится на тебя: %s</text>
+	</string>
+	<string id="hunter_dialog_start_4">
+		<text>Давай снизим уровень опасности с группировкой %s</text>
+	</string>
+	<string id="hunter_dialog_start_5">
+		<text>Хорошо, но это обойдется тебе в размере %s руб.</text>
+	</string>
+	<string id="hunter_dialog_start_agree">
+		<text>Держи.</text>
+	</string>
+	<string id="hunter_dialog_start_cancel">
+		<text>Я с ними и сам неплохо справляюсь. Пожалуй, откажусь.</text>
+	</string>
+	<string id="hunter_dialog_start_agree_answer">
+		<text>Отлично, сейчас свяжусь с ними.</text>
+	</string>
+	<string id="hunter_dialog_start_cancel_answer">
+		<text>Плохая идея, но жизнь твоя. Тебе решать.</text>
+	</string>
+</string_table>

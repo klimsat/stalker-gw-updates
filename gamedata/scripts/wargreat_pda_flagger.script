@@ -1,0 +1,894 @@
+local gs = GetString
+
+selectedTargets = {}
+local monsters_squads = {}
+local items_table = {}
+local popup = nil
+
+local function set_target(squad, targetId)
+  sim_squad.set_target(squad, targetId)
+  sim_squad.squad_on_update(squad)
+  sim_squad.set_target(squad, targetId)
+end
+
+local function add_item(str_id, func)
+  table.insert(
+    items_table,
+    {
+      str_id = str_id,
+      func = func
+    }
+  )
+end
+
+local function unselectAll()
+  for _, id in pairs(selectedTargets) do
+    level.map_remove_object_spot(id, "selected_target_second")
+  end
+
+  selectedTargets = {}
+end
+
+local function selectOne(id)
+  if not utils.table_has_item(selectedTargets, id) then
+    table.insert(selectedTargets, id)
+    level.map_add_object_spot(id, "selected_target_second", "ui_st_flagger_selected")
+  end
+end
+
+local function unselectOne(id)
+  utils.table_remove_item_by_value(selectedTargets, id)
+  level.map_remove_object_spot(id, "selected_target_second")
+end
+
+local function follow_to_target(se_obj)
+  if IsSquad(se_obj) then
+    for _, object_id in pairs(selectedTargets) do
+      local object = alife_object(object_id)
+
+      if object and IsSquad(object) then
+        set_target(object, se_obj.id)
+      end
+    end
+
+    unselectAll()
+
+    return
+  end
+end
+
+local function remove_squads(se_obj)
+  if SIMBOARD.smarts[se_obj.id] and SIMBOARD.smarts[se_obj.id].squads then
+    for _, squad in pairs(SIMBOARD.smarts[se_obj.id].squads) do
+      if squad then
+        sim_squad.remove_squad(squad, true)
+      end
+    end
+  end
+  return
+end
+local function remove_squad(se_obj)
+  sim_squad.remove_squad(se_obj)
+end
+local function spawn_squad(se_obj)
+  local list = {}
+  popup.hide_after_click = false
+  for _, faction in pairs(sim_tables.factions) do
+    list[faction] = function()
+      sim_squad.create_squad(se_obj, faction, nil, nil, nil, 1)
+      popup.hide_after_click = true
+    end
+  end
+
+  if popup then
+    popup:FillList(list)
+  end
+end
+
+local function select_smart(se_obj)
+  unselectAll()
+
+  selectOne(se_obj.id)
+end
+local function add_to_select(se_obj)
+  selectOne(se_obj.id)
+end
+local function select_all_smarts(se_obj)
+  local selectedSmart = alife_object(se_obj.id)
+  selectSmarts(selectedSmart, "All")
+end
+local function select_all_bases(se_obj)
+  local selectedSmart = alife_object(se_obj.id)
+  selectSmarts(selectedSmart, "base")
+end
+local function select_all_territories(se_obj)
+  local selectedSmart = alife_object(se_obj.id)
+  selectSmarts(selectedSmart, "territory")
+end
+local function select_all_resources(se_obj)
+  local selectedSmart = alife_object(se_obj.id)
+  selectSmarts(selectedSmart, "resource")
+end
+local function select_all_lairs(se_obj)
+  local selectedSmart = alife_object(se_obj.id)
+  selectSmarts(selectedSmart, "lair")
+end
+
+local function select_all_squads(se_obj)
+  local sim = alife()
+  local selected_level = sim:level_name(game_graph():vertex(se_obj.m_game_vertex_id):level_id()) or nil
+
+  for squadId, squadProps in pairs(sim_tables.registered_squads[se_obj:get_squad_community()]) do
+    local squad = alife_object(squadId)
+    local squad_level = squad and sim:level_name(game_graph():vertex(squad.m_game_vertex_id):level_id()) or nil
+
+    if IsSquad(squad) and squad_level == selected_level and not IsLeaderSquad(squad) then
+      selectOne(squadId)
+    end
+  end
+end
+
+local function unselect(se_obj)
+  unselectOne(se_obj.id)
+end
+local function unselect_all(se_obj)
+  unselectAll()
+end
+
+local function defence(se_obj)
+  if isSmarts() then
+    setTargetForSmartSquads(se_obj.id, "defence")
+  else
+    setTargetForSquad(se_obj.id, "defence")
+  end
+
+  unselectAll()
+end
+
+local function attack_all(se_obj)
+  if isSmarts() then
+    setTargetForSmartSquads(se_obj.id, "attack")
+  else
+    setTargetForSquad(se_obj.id, "attack")
+  end
+
+  unselectAll()
+end
+local function attack_one(se_obj)
+  local firstObjectId = nil
+
+  if isSmarts() then
+    firstObjectId = setTargetForSmartSquads(se_obj.id, "attack", "One")
+  else
+    firstObjectId = setTargetForSquad(se_obj.id, "attack", "One")
+  end
+
+  if firstObjectId then
+    unselectOne(firstObjectId)
+  end
+end
+
+local function defence_one(se_obj)
+  local firstObjectId = nil
+
+  if isSmarts() then
+    firstObjectId = setTargetForSmartSquads(se_obj.id, "defence", "One")
+  else
+    firstObjectId = setTargetForSquad(se_obj.id, "defence", "One")
+  end
+
+  if firstObjectId then
+    unselectOne(firstObjectId)
+  end
+end
+local function capture(se_obj)
+  if isSmarts() then
+    setTargetForSmartSquads(se_obj.id, "capture")
+  else
+    setTargetForSquad(se_obj.id, "capture")
+  end
+
+  unselectAll()
+end
+local function capture_one(se_obj)
+  local firstObjectId = nil
+
+  if isSmarts() then
+    firstObjectId = setTargetForSmartSquads(se_obj.id, "capture", "One")
+  else
+    firstObjectId = setTargetForSquad(se_obj.id, "capture", "One")
+  end
+
+  if firstObjectId then
+    unselectOne(firstObjectId)
+  end
+end
+
+local function capture_on_smart(se_obj, smart)
+  local firstObjectId = nil
+
+  firstObjectId = setTargetForSmartSquads(se_obj.id, "capture", "One", smart:name())
+
+  if firstObjectId then
+    unselectOne(firstObjectId)
+  end
+end
+local function capture_on_last_smart(se_obj, smart)
+  local firstObjectId = nil
+
+  firstObjectId = setTargetForSmartSquads(se_obj.id, "capture", nil, smart:name())
+
+  if firstObjectId then
+    unselectOne(firstObjectId)
+  end
+end
+local function attack_on_smart(se_obj, smart)
+  local firstObjectId = nil
+
+  firstObjectId = setTargetForSmartSquads(se_obj.id, "attack", "One", smart:name())
+
+  if firstObjectId then
+    unselectOne(firstObjectId)
+  end
+end
+local function attack_on_last_smart(se_obj, smart)
+  local firstObjectId = nil
+
+  firstObjectId = setTargetForSmartSquads(se_obj.id, "attack", nil, smartIndexName)
+
+  if firstObjectId then
+    unselectOne(firstObjectId)
+  end
+end
+local function defence_on_smart(se_obj, smart)
+  local firstObjectId = nil
+
+  firstObjectId = setTargetForSmartSquads(se_obj.id, "defence", "One", smart:name())
+
+  if firstObjectId then
+    unselectOne(firstObjectId)
+  end
+end
+local function defence_on_last_smart(se_obj, smart)
+  local firstObjectId = nil
+
+  firstObjectId = setTargetForSmartSquads(se_obj.id, "defence", nil, smart:name())
+
+  if firstObjectId then
+    unselectOne(firstObjectId)
+  end
+end
+
+local event_table = {
+  ui_st_flagger_select_squad = function(se_obj)
+    unselectAll()
+
+    if IsSmart(se_obj) then
+      local selectedSquad = nil
+      for squadId, squad in pairs(SIMBOARD.smarts[se_obj.id].squads) do
+        if IsSquad(squad) then
+          local targetFaction = squad:get_squad_community()
+          local relation = game_relations.get_factions_community(sim_brain.actor_faction, targetFaction)
+
+          if
+            sim_smart.isNotUniqueSquad(squad:section_name()) and selectedSquad == nil and
+              (not sim_tables.ignore[squad:section_name()] or not IsLeaderSquad(squad)) and
+              (DEV_DEBUG or (sim_brain.actor_faction == targetFaction and relation and relation >= 4000))
+           then
+            selectOne(squadId)
+            selectedSquad = squadId
+          end
+        end
+      end
+    else
+      selectOne(se_obj.id)
+    end
+  end,
+  ui_st_flagger_attack = attack_all,
+  ui_st_flagger_follow = follow_to_target,
+  ui_st_flagger_defence = defence,
+  ui_st_flagger_attack_all = attack_all,
+  ui_st_flagger_attack_one = attack_one,
+  ui_st_debug_flagger_remove_squads = remove_squads,
+  ui_st_debug_flagger_remove_squad = remove_squad,
+  ui_st_debug_flagger_spawn_squad = spawn_squad,
+  ui_st_flagger_select_smart = select_smart,
+  ui_st_flagger_add_to_select = add_to_select,
+  ui_st_flagger_select_all_smarts = select_all_smarts,
+  ui_st_flagger_select_all_base = select_all_bases,
+  ui_st_flagger_select_all_territory = select_all_territories,
+  ui_st_flagger_select_all_resources = select_all_resources,
+  ui_st_flagger_select_all_lairs = select_all_lairs,
+  ui_st_flagger_select_all_squads = select_all_squads,
+  ui_st_flagger_unselect = unselect,
+  ui_st_flagger_unselect_all = unselect_all,
+  ui_st_flagger_defence_all = defence,
+  ui_st_flagger_defence_one = defence_one,
+  ui_st_flagger_capture = capture,
+  ui_st_flagger_capture_all = capture,
+  ui_st_flagger_capture_one = capture_one,
+  ui_st_flagger_capture_one_smart = capture_on_smart,
+  ui_st_flagger_capture_all_smart = capture_on_smart,
+  ui_st_flagger_capture_last_smart = capture_on_last_smart,
+  ui_st_flagger_attack_one_smart = attack_on_smart,
+  ui_st_flagger_attack_all_smart = attack_on_smart,
+  ui_st_flagger_attack_last_smart = attack_on_last_smart,
+  ui_st_flagger_defence_one_smart = defence_on_smart,
+  ui_st_flagger_defence_all_smart = defence_on_smart,
+  ui_st_flagger_defence_last_smart = defence_on_last_smart
+}
+
+function isSmarts()
+  local isSmarts = false
+  for _, id in pairs(selectedTargets) do
+    local obj = alife_object(id)
+
+    if (obj) and IsSmart(obj) then
+      isSmarts = true
+    else
+      isSmarts = false
+    end
+  end
+
+  return isSmarts
+end
+
+local function makePropertiesForSmart(ui, id, se_obj)
+  if not isSmarts() then
+    add_item(
+      "ui_st_flagger_select_squad",
+      function()
+        event_table.ui_st_flagger_select_squad(se_obj)
+      end
+    )
+  end
+
+  if not utils.table_has_item(selectedTargets, id) and (isSmarts() or utils.get_table_length(selectedTargets) == 0) then
+    add_item(
+      "ui_st_flagger_select_smart",
+      function()
+        event_table.ui_st_flagger_select_smart(se_obj)
+      end
+    )
+    if utils.get_table_length(selectedTargets) > 0 then
+      add_item(
+        "ui_st_flagger_add_to_select",
+        function()
+          event_table.ui_st_flagger_add_to_select(se_obj)
+        end
+      )
+    end
+    add_item(
+      "ui_st_flagger_select_all_smarts",
+      function()
+        event_table.ui_st_flagger_select_all_smarts(se_obj)
+      end
+    )
+    add_item(
+      "ui_st_flagger_select_all_base",
+      function()
+        event_table.ui_st_flagger_select_all_base(se_obj)
+      end
+    )
+    add_item(
+      "ui_st_flagger_select_all_territory",
+      function()
+        event_table.ui_st_flagger_select_all_territory(se_obj)
+      end
+    )
+    add_item(
+      "ui_st_flagger_select_all_resources",
+      function()
+        event_table.ui_st_flagger_select_all_resources(se_obj)
+      end
+    )
+    add_item(
+      "ui_st_flagger_select_all_lairs",
+      function()
+        event_table.ui_st_flagger_select_all_lairs(se_obj)
+      end
+    )
+  end
+end
+
+function setTargetForSquad(targetId, action, countStr)
+  local target = alife_object(targetId)
+  local randId = nil
+  local squadCount = 0
+  local squad = nil
+
+  if countStr == "One" then
+    randId = selectedTargets[math.random(#selectedTargets)] or utils.get_first_item_table(selectedTargets)
+    squad = alife_object(randId)
+
+    if IsSquad(squad) then
+      set_target(squad, targetId)
+      squadCount = squadCount + 1
+      if squad:get_squad_community() == "monster" then
+        addSquad(squad, targetId)
+      end
+    end
+  else
+    for _, id in pairs(selectedTargets) do
+      squad = alife_object(id)
+
+      if IsSquad(squad) then
+        set_target(squad, targetId)
+        squadCount = squadCount + 1
+        if squad:get_squad_community() == "monster" then
+          addSquad(squad, targetId)
+        end
+      end
+    end
+  end
+
+  if not squad then
+    return randId
+  end
+
+  local commanderID = squad:commander_id()
+  local commander = commanderID and alife_object(commanderID)
+  local commanderName = commander and commander.character_name and commander:character_name()
+  local targetName = strformat("«%s»", sim_script_to_text.smart_names[target:name()] or target:name())
+  local actionType = "атаковать объект"
+  local firstPhrase = strformat("Отряд с командиром «%s» идет", commanderName)
+
+  if squad:get_squad_community() == "monster" then
+    firstPhrase = "Отряд мутантов идет"
+  end
+
+  if action == "defence" then
+    actionType = "на защиту объекта"
+  elseif action == "capture" then
+    actionType = "на захват объекта"
+  end
+
+  if squadCount > 1 then
+    firstPhrase = "Отряды идут"
+
+    if squad:get_squad_community() == "monster" then
+      firstPhrase = "Отряды мутантов идут"
+    end
+  end
+
+  utils.news(
+    strformat("ui_st_flagger_set_target_%s", action),
+    strformat("%s %s %s", firstPhrase, actionType, targetName)
+  )
+
+  return randId
+end
+
+function selectSmarts(selectedSmart, smartType)
+  local sim = alife()
+  local selectedSmartLvl = sim:level_name(game_graph():vertex(selectedSmart.m_game_vertex_id):level_id()) or nil
+
+  for smartId, _ in pairs(SIMBOARD.smarts) do
+    local smart = alife_object(smartId)
+
+    if smart.owning_faction == sim_brain.actor_faction then
+      local smart_level = sim:level_name(game_graph():vertex(smart.m_game_vertex_id):level_id()) or nil
+
+      if smart_level == selectedSmartLvl and (smartType == "All" or smart.props[smartType] == 1) then
+        selectOne(smartId)
+      end
+    end
+  end
+end
+
+function isSquadsSelected()
+  for _, object_id in pairs(selectedTargets) do
+    local object = alife_object(object_id)
+
+    if object and IsSquad(object) then
+      return true
+    end
+  end
+
+  return false
+end
+
+function setTargetForSmartSquads(targetId, action, countStr, fromSmartName)
+  local selectedSmartsNames = {}
+  local countSmarts = 0
+  local randId = nil
+
+  if countStr == "One" then
+    if fromSmartName ~= nil then
+      for _, smartId in pairs(selectedTargets) do
+        local s = alife_object(smartId)
+
+        if (s) and s:name() == fromSmartName then
+          randId = smartId
+        end
+      end
+
+      if randId == nil then
+        for smartId, _ in pairs(SIMBOARD.smarts) do
+          utils.debug("setTargetForSmartSquads, randId: %s, smartId: %s", randId, smartId)
+          local s = alife_object(smartId)
+
+          if (s) and s:name() == fromSmartName then
+            randId = smartId
+          end
+        end
+      end
+    else
+      randId = selectedTargets[math.random(#selectedTargets)] or utils.get_first_item_table(selectedTargets)
+    end
+
+    if randId == nil then
+      randId = selectedTargets[math.random(#selectedTargets)] or utils.get_first_item_table(selectedTargets)
+    end
+
+    local smart = alife_object(randId)
+
+    if IsSmart(smart) then
+      local hasTakeSquad = nil
+      for _, squad in pairs(SIMBOARD.smarts[smart.id].squads) do
+        if IsSquad(squad) and sim_smart.isNotUniqueSquad(squad:section_name()) and hasTakeSquad == nil then
+          set_target(squad, targetId)
+          hasTakeSquad = true
+          randId = nil
+        end
+      end
+
+      countSmarts = countSmarts + 1
+      table.insert(selectedSmartsNames, strformat("«%s»", sim_script_to_text.smart_names[smart:name()] or smart:name()))
+    end
+  else
+    for _, id in pairs(selectedTargets) do
+      local smart = alife_object(id)
+
+      if IsSmart(smart) then
+        if fromSmartName ~= nil and fromSmartName == smart:name() then
+          for _, squad in pairs(SIMBOARD.smarts[smart.id].squads) do
+            if IsSquad(squad) then
+              set_target(squad, targetId)
+            end
+          end
+          if utils.get_table_length(SIMBOARD.smarts[smart.id].squads) == 0 then
+            randId = id
+          end
+        elseif fromSmartName == nil then
+          for _, squad in pairs(SIMBOARD.smarts[smart.id].squads) do
+            if IsSquad(squad) then
+              set_target(squad, targetId)
+            end
+          end
+        end
+
+        countSmarts = countSmarts + 1
+        table.insert(
+          selectedSmartsNames,
+          strformat("«%s»", sim_script_to_text.smart_names[smart:name()] or smart:name())
+        )
+      end
+    end
+  end
+
+  local targetSmart = alife_object(targetId)
+  local targetName = strformat("«%s»", targetSmart:name())
+  local currentNames = strformat("позиции %s", utils.get_first_item_table(selectedSmartsNames))
+
+  if IsSmart(targetSmart) then
+    targetName = strformat("«%s»", sim_script_to_text.smart_names[targetSmart:name()] or targetSmart:name())
+  end
+
+  local actionType = "атаковать объект"
+
+  if action == "defence" then
+    actionType = "на защиту объекта"
+  elseif action == "capture" then
+    actionType = "на захват объекта"
+  end
+
+  if countSmarts > 1 then
+    currentNames = strformat("позиций %s", table.concat(selectedSmartsNames, ", "))
+  end
+
+  utils.news(
+    (strformat("ui_st_flagger_set_target_%s", action)),
+    (strformat("Отряды с %s идут %s %s", currentNames, actionType, targetName))
+  )
+
+  return randId
+end
+
+local function map_spot_menu_add_property(ui, id, level_name)
+  if not sim_brain.initialized then
+    return
+  end
+  popup = nil
+  items_table = {}
+
+  local se_obj = alife_object(id)
+
+  if not se_obj then
+    return
+  end
+
+  if not IsSquad(se_obj) and not IsSmart(se_obj) then
+    return
+  end
+
+  if IsSquad(se_obj) and (sim_tables.ignore[se_obj:section_name()] or IsLeaderSquad(se_obj)) then
+    return
+  end
+
+  if IsSmart(se_obj) and (sim_brain.actor_faction == se_obj.owning_faction or DEV_DEBUG) then
+    makePropertiesForSmart(ui, id, se_obj)
+  end
+
+  if
+    id and IsSquad(se_obj) and
+      (utils.isSameFactionSquad(se_obj) or utils.canControlMonsters(se_obj) or
+        (DEV_DEBUG and not utils.isSameFactionSquad(se_obj)))
+   then
+    local squadProps = sim_tables.registered_squads[se_obj:get_squad_community()][id]
+
+    if squadProps ~= nil then
+      if not utils.table_has_item(selectedTargets, id) and not isSmarts() then
+        add_item(
+          "ui_st_flagger_select_squad",
+          function()
+            event_table.ui_st_flagger_select_squad(se_obj)
+          end
+        )
+        if utils.get_table_length(selectedTargets) > 0 then
+          add_item(
+            "ui_st_flagger_add_to_select",
+            function()
+              event_table.ui_st_flagger_add_to_select(se_obj)
+            end
+          )
+        end
+        add_item(
+          "ui_st_flagger_select_all_squads",
+          function()
+            event_table.ui_st_flagger_select_all_squads(se_obj)
+          end
+        )
+      end
+    elseif not utils.table_has_item(selectedTargets, id) and not isSmarts() then
+      add_item(
+        "ui_st_flagger_select_squad",
+        function()
+          event_table.ui_st_flagger_select_squad(se_obj)
+        end
+      )
+      if utils.get_table_length(selectedTargets) > 0 then
+        add_item(
+          "ui_st_flagger_add_to_select",
+          function()
+            event_table.ui_st_flagger_add_to_select(se_obj)
+          end
+        )
+      end
+      add_item(
+        "ui_st_flagger_select_all_squads",
+        function()
+          event_table.ui_st_flagger_select_all_squads(se_obj)
+        end
+      )
+    end
+  end
+
+  if isSquadsSelected() and IsSquad(se_obj) then
+    local squad_facation = se_obj:get_squad_community()
+    local relation = game_relations.get_factions_community(sim_brain.actor_faction, squad_facation)
+
+    if relation == nil or relation < 0 then
+      add_item(
+        "ui_st_flagger_attack",
+        function()
+          event_table.ui_st_flagger_attack(se_obj)
+        end
+      )
+    elseif relation >= 0 then
+      add_item(
+        "ui_st_flagger_follow",
+        function()
+          event_table.ui_st_flagger_follow(se_obj)
+        end
+      )
+    end
+  end
+
+  if IsSmart(se_obj) and sim_brain.actor_faction ~= se_obj.owning_faction then
+    local relation = game_relations.get_factions_community(sim_brain.actor_faction, se_obj.owning_faction)
+    if relation == nil or relation < 0 then
+      local smartPriority = sim_smart.prioritySmartsTable[se_obj.id] or 0
+      add_item(
+        strformat(gs("ui_st_flagger_priority_up"), smartPriority),
+        function()
+          sim_smart.priorityUp(se_obj.id)
+        end
+      )
+      add_item(
+        strformat(gs("ui_st_flagger_priority_down"), smartPriority),
+        function()
+          sim_smart.priorityDown(se_obj.id)
+        end
+      )
+      add_item(
+        "ui_st_flagger_priority_reset",
+        function()
+          sim_smart.priorityReset(se_obj.id)
+        end
+      )
+
+      if sim_smart.hasAnyPriority() then
+        add_item(
+          "ui_st_flagger_priority_reset_all",
+          function()
+            sim_smart.priorityResetAll()
+          end
+        )
+      end
+    end
+  end
+
+  if utils.get_table_length(selectedTargets) ~= 0 and IsSmart(se_obj) then
+    local action = "capture"
+
+    if se_obj.owning_faction ~= "none" then
+      local newSelectedTargetFaction = IsSquad(se_obj) and se_obj:get_squad_community() or se_obj.owning_faction
+      local relation = game_relations.get_factions_community(sim_brain.actor_faction, newSelectedTargetFaction)
+
+      if relation < 0 then
+        action = "attack"
+      elseif relation >= 0 then
+        action = "defence"
+      end
+    end
+
+    add_item(
+      strformat("ui_st_flagger_%s", action),
+      function()
+        event_table[strformat("ui_st_flagger_%s", action)](se_obj)
+      end
+    )
+
+    if utils.get_table_length(selectedTargets) == 1 then
+      local smartId = utils.get_first_item_table(selectedTargets)
+      local smart = alife_object(smartId)
+
+      if IsSmart(smart) then
+        local squadCount = sim_smart.get_squad_count(smart)
+
+        if squadCount > 1 then
+          add_item(
+            strformat("ui_st_flagger_%s_one", action),
+            function()
+              event_table[strformat("ui_st_flagger_%s_one", action)](se_obj)
+            end
+          )
+        else
+          add_item(
+            strformat("ui_st_flagger_%s_last", action),
+            function()
+              event_table[strformat("ui_st_flagger_%s_all", action)](se_obj)
+            end
+          )
+        end
+      end
+    else
+      for _, smartId in pairs(selectedTargets) do
+        local smart = alife_object(smartId)
+
+        if IsSmart(smart) then
+          local squadCount = sim_smart.get_squad_count(smart)
+          local targetName = sim_script_to_text.smart_names[smart:name()] or smart:name()
+
+          if squadCount > 1 then
+            add_item(
+              strformat(gs(strformat("ui_st_flagger_%s_one_smart", action)), targetName),
+              function()
+                event_table[strformat(strformat("ui_st_flagger_%s_one_smart", action), targetName)](se_obj, smart)
+              end
+            )
+            add_item(
+              strformat(gs(strformat("ui_st_flagger_%s_all_smart", action)), targetName),
+              function()
+                event_table[strformat(strformat("ui_st_flagger_%s_all_smart", action), targetName)](se_obj, smart)
+              end
+            )
+          else
+            add_item(
+              strformat(gs(strformat("ui_st_flagger_%s_last_smart", action)), targetName),
+              function()
+                event_table[strformat(strformat("ui_st_flagger_%s_last_smart", action), targetName)](se_obj, smart)
+              end
+            )
+          end
+        end
+      end
+    end
+
+    if utils.get_table_length(selectedTargets) > 1 then
+      add_item(
+        strformat("ui_st_flagger_%s_one", action),
+        function()
+          event_table[strformat("ui_st_flagger_%s_one", action)](se_obj)
+        end
+      )
+    end
+  end
+
+  if utils.table_has_item(selectedTargets, id) then
+    add_item(
+      "ui_st_flagger_unselect",
+      function()
+        event_table.ui_st_flagger_unselect(se_obj)
+      end
+    )
+
+    if utils.get_table_length(selectedTargets) > 1 then
+      add_item(
+        "ui_st_flagger_unselect_all",
+        function()
+          event_table.ui_st_flagger_unselect_all(se_obj)
+        end
+      )
+    end
+  end
+
+  if DEV_DEBUG then
+    if IsSmart(se_obj) then
+      add_item(
+        "ui_st_debug_flagger_spawn_squad",
+        function()
+          event_table.ui_st_debug_flagger_spawn_squad(se_obj)
+        end
+      )
+      add_item(
+        "ui_st_debug_flagger_remove_squads",
+        function()
+          event_table.ui_st_debug_flagger_remove_squads(se_obj)
+        end
+      )
+    else
+      add_item(
+        "ui_st_debug_flagger_remove_squad",
+        function()
+          event_table.ui_st_debug_flagger_remove_squad(se_obj)
+        end
+      )
+    end
+  end
+
+  if #items_table > 0 then
+    popup = ui_dyn_msg_box.context_menu(ui, GetCursorPosition(), items_table, "context_list")
+  end
+end
+
+function addSquad(squad, targetId)
+  monsters_squads[squad.id] = targetId
+  set_target(squad, targetId)
+end
+
+local function squad_on_update(squad)
+  local targetId = monsters_squads[squad.id]
+  if not targetId then
+    return
+  end
+
+  set_target(squad, targetId)
+end
+
+local function squad_on_npc_death(squad, npc)
+  if (squad:npc_count() == 0) then
+    monsters_squads[squad.id] = nil
+
+    if utils.table_has_item(selectedTargets, squad.id) then
+      unselectOne(squad.id)
+    end
+  end
+end
+
+function on_game_start()
+  RegisterScriptCallback("map_spot_menu_add_property", map_spot_menu_add_property)
+  RegisterScriptCallback("squad_on_npc_death", squad_on_npc_death)
+  RegisterScriptCallback("squad_on_update", squad_on_update)
+end

@@ -1,0 +1,14 @@
+[smart_terrain]
+squad_id = 10
+max_population = 5
+respawn_params = respawn@pre_sim_9
+respawn_idle = 60000
+
+
+[respawn@pre_sim_9]
+spawn_monolith
+
+[spawn_monolith]
+spawn_squads = monolith_sim_squad_advanced, monolith_sim_squad_veteran, monolith_sim_squad_sniper, monolith_sim_squad_sniper
+spawn_num = 2
+

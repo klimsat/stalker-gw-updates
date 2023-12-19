@@ -1,0 +1,33 @@
+[smart_terrain]
+squad_id = 13
+max_population = 10
+respawn_params = respawn@bar_visitors
+respawn_idle = 60000
+
+
+
+[respawn@bar_visitors]
+spawn_stalker@novice
+spawn_stalker@advanced
+
+[spawn_stalker@novice]
+spawn_squads = stalker_sim_squad_novice, stalker_sim_squad_advanced, stalker_sim_squad_novice
+spawn_num = 2
+
+[spawn_stalker@advanced]
+spawn_squads = stalker_sim_squad_veteran, stalker_sim_squad_advanced, stalker_sim_squad_advanced
+spawn_num = 2
+
+[exclusive]
+bar_barman = rostok\bar_barman.ltx
+
+bar_visitors_camp_work_1 = rostok\bar_visitors_smart_logic.ltx
+bar_visitors_camp_work_2 = rostok\bar_visitors_smart_logic.ltx
+bar_visitors_camp_work_3 = rostok\bar_visitors_smart_logic.ltx
+bar_visitors_camp_work_4 = rostok\bar_visitors_smart_logic.ltx
+bar_visitors_camp_work_5 = rostok\bar_visitors_smart_logic.ltx
+bar_visitors_camp_work_6 = rostok\bar_visitors_smart_logic.ltx
+bar_visitors_camp_work_7 = rostok\bar_visitors_smart_logic.ltx
+bar_visitors_camp_work_8 = rostok\bar_visitors_smart_logic.ltx
+bar_visitors_camp_work_9 = rostok\bar_visitors_smart_logic.ltx
+

@@ -1,0 +1,542 @@
+;---------------------------------------------------------------------------------------------
+;		Duty Novice Outfit
+;---------------------------------------------------------------------------------------------
+[dolg_novice_outfit]:outfit_novice_base
+$spawn                                   = "outfit\novice_outfit_duty"
+visual                                   = dynamics\outfit\duty_rookie_outfit
+actor_visual                             = actors\stalker_dolg\dolg_novice_0_0.ogf
+npc_visual                               = actors\stalker_dolg\dolg_novice_0_0.ogf
+player_hud_section                       = actor_hud_duty_novice
+
+
+inv_name                                 = dolg_novice_outfit_name
+inv_name_short                           = dolg_novice_outfit_name
+description                              = dolg_novice_outfit_description
+
+inv_grid_x								 = 12
+inv_grid_y								 = 32
+
+upgr_icon_x                              = 2185
+upgr_icon_y                              = 506
+upgr_icon_width                          = 295
+upgr_icon_height                         = 140
+
+cost                                     = 1700
+
+character_portrait						 = ui_inGame2_dolg_novice_0_0
+
+upgrades                                 = up_gr_firstab_bandit_outfit, up_gr_seconab_bandit_outfit, up_gr_thirdab_bandit_outfit
+
+;---------------------------------------------------------------------------------------------
+;		PS5-M Universal Duty Suit
+;---------------------------------------------------------------------------------------------
+[dolg_outfit]:outfit_base
+$spawn                                   = "outfit\dolg_outfit"
+visual                                   = dynamics\outfit\dolg_outfit
+actor_visual                             = actors\stalker_dolg\dolg_face_1_0.ogf
+npc_visual                               = actors\stalker_dolg\dolg_face_1_0.ogf
+player_hud_section                       = actor_hud_duty_ps5m
+
+ef_equipment_type                        = 3
+
+inv_name                                 = dolg_outfit_name
+inv_name_short                           = dolg_outfit_name
+description                              = dolg_outfit_description
+
+inv_weight                               = 9.5
+
+inv_grid_x                               = 6
+inv_grid_y                               = 15
+
+upgr_icon_x                              = 0
+upgr_icon_y                              = 161
+upgr_icon_width                          = 302
+upgr_icon_height                         = 130
+full_icon_name                           = npc_icon_dolg_outfit
+
+cost                                     = 16500
+full_scale_icon                          = 8,11	                                       ;иконка сталкера в костюме в полный рост
+
+immunities_sect                          = sect_dolg_outfit_immunities
+
+; LOW RESISTANCE
+burn_protection                          = 0.0333
+shock_protection                         = 0.1333
+radiation_protection                     = 0.0050
+chemical_burn_protection                 = 0.0333
+telepatic_protection                     = 0.0
+strike_protection                        = 0.2100
+explosion_protection                     = 0.2100
+wound_protection                         = 0.2100
+
+hit_fraction_actor                       = 0.6
+bones_koeff_protection                   = actor_armor_duty_suit
+
+artefact_count                           = 0
+control_inertion_factor                  = 1.2
+power_loss                               = 0.8
+
+upgrades                                 = up_gr_firstab_dolg_outfit, up_gr_seconab_dolg_outfit, up_gr_thirdab_dolg_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_dolg_outfit
+character_portrait						 = ui_inGame2_dolg_face_1_0
+
+[sect_dolg_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_dolg_outfit_immunities_add]
+burn_immunity                            = -0.015	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.015
+wound_immunity                           = -0.015
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.015
+explosion_immunity                       = -0.015
+fire_wound_immunity                      = -0.003
+
+;---------------------------------------------------------------------------------------------
+;		PSZ-9d Duty Armor
+;---------------------------------------------------------------------------------------------
+[dolg_heavy_outfit]:outfit_base
+$spawn                                   = "outfit\dolg_heavy_outfit"
+visual                                   = dynamics\outfit\dolg_heavy_outfit
+actor_visual                             = actors\stalker_dolg\dolg_skat_off_gas_face_3_0.ogf
+npc_visual                               = actors\stalker_dolg\dolg_skat_off_gas_face_3_0.ogf
+player_hud_section                       = actor_hud_duty_psz9d
+
+ef_equipment_type                        = 4
+
+inv_name                                 = dolg_heavy_outfit_name
+inv_name_short                           = dolg_heavy_outfit_name
+description                              = dolg_heavy_outfit_description
+
+inv_weight                               = 13.0
+
+inv_grid_x                               = 4
+inv_grid_y                               = 15
+upgr_icon_x                              = 0
+upgr_icon_y                              = 0
+upgr_icon_width                          = 301
+upgr_icon_height                         = 157
+full_icon_name                           = npc_icon_dolg_heavy_outfit
+
+cost                                     = 17500
+full_scale_icon                          = 8,6	                                       ;иконка сталкера в костюме в полный рост
+
+immunities_sect                          = sect_dolg_heavy_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0233
+shock_protection                         = 0.0933
+radiation_protection                     = 0.0035
+chemical_burn_protection                 = 0.0233
+telepatic_protection                     = 0.0
+strike_protection                        = 0.2450
+explosion_protection                     = 0.2450
+wound_protection                         = 0.2450
+
+hit_fraction_actor                       = 0.35
+bones_koeff_protection                   = actor_armor_psz
+
+artefact_count                           = 0
+control_inertion_factor                  = 1.8
+power_loss                               = 0.9
+
+upgrades                                 = up_gr_firstab_dolg_heavy_outfit, up_gr_seconab_dolg_heavy_outfit, up_gr_thirdab_dolg_heavy_outfit, up_gr_fourtab_dolg_heavy_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_dolg_heavy_outfit
+character_portrait						 = ui_inGame2_dolg_skat_off_gas_face_3_0
+
+[sect_dolg_heavy_outfit_immunities]
+burn_immunity                            = 0.03	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.03
+wound_immunity                           = 0.03
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.03
+explosion_immunity                       = 0.03
+fire_wound_immunity                      = 0.01
+
+[sect_dolg_heavy_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.002
+
+;---------------------------------------------------------------------------------------------
+;		Duty SEVA Suit
+;---------------------------------------------------------------------------------------------
+[dolg_scientific_outfit]:outfit_scientific_base
+$spawn                                   = "outfit\dolg_scientific_outfit"
+visual                                   = dynamics\outfit\dolg_scientific_outfit
+actor_visual                             = actors\stalker_dolg\dolg_seva_face_2_0.ogf
+npc_visual                               = actors\stalker_dolg\dolg_seva_face_2_0.ogf
+player_hud_section                       = actor_hud_duty_seva
+
+inv_name                                 = dolg_scientific_outfit_name
+inv_name_short                           = dolg_scientific_outfit_name
+description                              = dolg_scientific_outfit_description
+
+inv_weight                               = 12.5
+
+inv_grid_x                               = 4
+inv_grid_y                               = 33
+
+
+upgr_icon_x                              = 930
+upgr_icon_y                              = 172
+upgr_icon_width                          = 285
+upgr_icon_height                         = 159
+
+cost                                     = 40500
+full_scale_icon                          = 12,11	                                       ;иконка сталкера в костюме в полный рост
+
+upgrades                                 = up_gr_firstab_dolg_scientific_outfit, up_gr_seconab_dolg_scientific_outfit, up_gr_thirdab_dolg_scientific_outfit, up_gr_fourtab_dolg_scientific_outfit, up_gr_fifthab_dolg_scientific_outfit
+
+immunities_sect                          = sect_dolg_scientific_outfit_immunities
+
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0933
+shock_protection                         = 0.3733
+radiation_protection                     = 0.0140
+chemical_burn_protection                 = 0.0933
+telepatic_protection                     = 0.0588
+strike_protection                        = 0.2100
+explosion_protection                     = 0.2100
+wound_protection                         = 0.2100
+
+hit_fraction_actor                       = 0.65
+bones_koeff_protection                   = actor_armor_duty_seva
+
+artefact_count                           = 0
+
+nightvision_sect                         = effector_nightvision_2
+
+control_inertion_factor                  = 1.5
+power_loss                               = 0.85
+character_portrait						 = ui_inGame2_dolg_seva_face_2_0
+
+[sect_dolg_scientific_outfit_immunities]
+burn_immunity                            = 0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = 0.03
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.0
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.02
+
+[sect_dolg_scientific_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.0
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		DUTY EXOSKELETON
+;---------------------------------------------------------------------------------------------
+[dolg_exo_outfit]:outfit_exo_base
+$spawn                                   = "outfit\duty_exo_outfit"
+visual                                   = dynamics\outfit\dolg_exo_outfit
+actor_visual                             = actors\stalker_dolg\dolg_exo_4.ogf
+npc_visual                               = actors\stalker_dolg\dolg_exo_4.ogf
+player_hud_section                       = actor_hud_dolg_exo
+
+inv_name                                 = dolg_exo_outfit_name
+inv_name_short                           = dolg_exo_outfit_name
+description                              = dolg_exo_outfit_description
+
+inv_weight                               = 27.5
+
+inv_grid_x                               = 2
+inv_grid_y                               = 15
+
+upgr_icon_x                              = 1242
+upgr_icon_y                              = 670
+upgr_icon_width                          = 304
+upgr_icon_height                         = 159
+
+cost                                     = 130000
+
+upgrades                                 = up_gr_firstab_dolg_exo_outfit, up_gr_seconab_dolg_exo_outfit, up_gr_thirdab_dolg_exo_outfit, up_gr_fourtab_dolg_exo_outfit, up_gr_fifthab_dolg_exo_outfit
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+strike_protection                        = 0.3325
+explosion_protection                     = 0.3325
+wound_protection                         = 0.3325
+
+bones_koeff_protection                   = actor_armor_duty_exo
+
+power_loss                               = 1.15
+additional_inventory_weight              = 30
+additional_inventory_weight2             = 30
+artefact_count                           = 0
+helmet_avaliable					= false
+
+character_portrait						 = ui_inGame2_ui_inGame2_dolg_exo_4
+
+;---------------------------------------------------------------------------------------------
+;		Экзоскат ПС3-9Д «Броня Долга»
+;---------------------------------------------------------------------------------------------
+[dolg_protoexo_skat_outfit]:outfit_exo_base
+$spawn                                   = "outfit\duty_exo_outfit"
+visual                                   = dynamics\outfit\dolg_exo_outfit
+actor_visual                             = actors\stalker_dolg\dolg_protoexo_skat_3_3.ogf
+npc_visual                               = actors\stalker_dolg\dolg_protoexo_skat_3_3.ogf
+player_hud_section                       = actor_hud_dolg_exo
+
+inv_name                                 = dolg_protoexo_skat_outfit_name
+inv_name_short                           = dolg_protoexo_skat_outfit_name
+description                              = dolg_protoexo_skat_outfit_description
+
+inv_weight                               = 17.0
+
+inv_grid_x                               = 2
+inv_grid_y                               = 15
+
+upgr_icon_x                              = 1242
+upgr_icon_y                              = 670
+upgr_icon_width                          = 304
+upgr_icon_height                         = 159
+
+cost                                     = 70000
+
+upgrades                                 = up_gr_firstab_dolg_exo_outfit, up_gr_seconab_dolg_exo_outfit, up_gr_thirdab_dolg_exo_outfit, up_gr_fourtab_dolg_exo_outfit, up_gr_fifthab_dolg_exo_outfit
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+strike_protection                        = 0.3325
+explosion_protection                     = 0.3325
+wound_protection                         = 0.3325
+
+bones_koeff_protection                   = actor_armor_duty_exo
+
+power_loss                               = 1.15
+additional_inventory_weight              = 30
+additional_inventory_weight2             = 30
+artefact_count                           = 0
+helmet_avaliable					= false
+
+character_portrait						 = ui_inGame2_dolg_protoexo_skat_3_3
+
+;---------------------------------------------------------------------------------------------
+;		Duty Radiation Suit
+;---------------------------------------------------------------------------------------------
+[dolg_radiation_outfit]:dolg_exo_outfit
+$spawn								= "outfit\dolg_radiation_outfit"
+visual								= dynamics\outfit\duty_rad_outfit
+actor_visual						= actors\stalker_dolg\dolg_4_0.ogf
+player_hud_section					= actor_hud_duty_radiation
+
+inv_name							= dolg_radiation_outfit_name
+inv_name_short						= dolg_radiation_outfit_name
+description							= dolg_radiation_outfit_description
+
+inv_weight							= 18.5
+
+inv_grid_x							= 10
+inv_grid_y							= 37
+
+upgr_icon_x							= 1858
+upgr_icon_y							= 676
+upgr_icon_width						= 290
+upgr_icon_height					= 153
+
+cost								= 75500
+
+helmet_avaliable					= false
+power_loss							= 0.9
+control_inertion_factor				= 2.5
+sprint_allowed						= true
+additional_inventory_weight			= 0
+additional_inventory_weight2		= 0
+
+upgrades                                 = up_gr_firstab_dolg_rad_outfit, up_gr_seconab_dolg_rad_outfit, up_gr_thirdab_dolg_rad_outfit, up_gr_fourtab_dolg_rad_outfit, up_gr_fifthab_dolg_rad_outfit
+
+character_portrait						 = ui_inGame2_dolg_4_0
+
+;---------------------------------------------------------------------------------------------
+;		Донатный Экзоскелет "Мул"
+;---------------------------------------------------------------------------------------------
+[dolg_donat_1_protoexo_skat_outfit]:outfit_exo_base
+$spawn                                   = "outfit\dolg_donat_1_protoexo_skat_outfit"
+visual                                   = dynamics\outfit\dolg_exo_outfit
+actor_visual                             = actors\stalker_dolg\dolg_protoexo_skat_3_3.ogf
+npc_visual                               = actors\stalker_dolg\dolg_protoexo_skat_3_3.ogf
+player_hud_section                       = wpn_hand_dolg_mul_exo
+
+inv_name                                 = dolg_donat_1_protoexo_skat_outfit_name
+inv_name_short                           = dolg_donat_1_protoexo_skat_outfit_name
+description                              = dolg_donat_1_protoexo_skat_outfit_description
+
+inv_weight                               = 25.0
+
+inv_grid_x                               = 2
+inv_grid_y                               = 15
+
+upgr_icon_x                              = 1242
+upgr_icon_y                              = 670
+upgr_icon_width                          = 304
+upgr_icon_height                         = 159
+
+cost                                     = 94500
+
+upgrades                                 = up_gr_firstab_dolg_exo_outfit, up_gr_seconab_dolg_exo_outfit, up_gr_thirdab_dolg_exo_outfit, up_gr_fourtab_dolg_exo_outfit, up_gr_fifthab_dolg_exo_outfit
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+strike_protection                        = 0.3325
+explosion_protection                     = 0.3325
+wound_protection                         = 0.3325
+
+bones_koeff_protection                   = actor_armor_novice
+
+power_loss                               = 1.15
+additional_inventory_weight              = 90
+additional_inventory_weight2             = 90
+artefact_count                           = 0
+helmet_avaliable					= false
+
+character_portrait						           = ui_inGame2_dolg_protoexo_skat_3_3
+;---------------------------------------------------------------------------------------------
+;		Leader Dolg Outfit
+;---------------------------------------------------------------------------------------------
+[leader_dolg_outfit]:outfit_base
+$spawn                                   = "outfit\leader_dolg_outfit"
+visual                                   = dynamics\outfit\dolg_outfit
+actor_visual                             = actors\stalker_dolg\dolg_leader.ogf
+npc_visual                               = actors\stalker_dolg\dolg_leader.ogf
+player_hud_section                       = actor_hud_duty_ps5m
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_dolg_outfit_name
+inv_name_short                           = leader_dolg_outfit_name
+description                              = leader_dolg_outfit_description
+
+inv_weight                               = 15
+
+inv_grid_x                               = 6
+inv_grid_y                               = 15
+
+upgr_icon_x                              = 0
+upgr_icon_y                              = 161
+upgr_icon_width                          = 302
+upgr_icon_height                         = 130
+
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 263750
+
+full_scale_icon                          = 14,11
+
+immunities_sect                          = sect_leader_duty_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0603
+shock_protection                         = 0.2166
+radiation_protection                     = 0.0118
+chemical_burn_protection                 = 0.0541
+telepatic_protection                     = 0.1110
+strike_protection                        = 0.4781
+explosion_protection                     = 0.4906
+wound_protection                         = 0.4906
+fire_wound_protection                    = 0.2500
+
+hit_fraction_actor                       = 0.19
+control_inertion_factor                  = 1.2
+bones_koeff_protection                   = dolg_leader
+
+nightvision_sect 			             = effector_nightvision_2
+
+power_restore_speed                      = 0.005
+power_loss                               = 1.0
+
+additional_inventory_weight              = 100
+additional_inventory_weight2             = 100
+
+artefact_count                           = 5
+
+helmet_avaliable					     = false
+
+character_portrait						 = ui_inGame2_dolg_face_1_0
+
+[sect_leader_duty_outfit_immunities]
+burn_immunity                            = 0.0100
+strike_immunity                          = 0.0100
+shock_immunity                           = 0.0500
+wound_immunity                           = 0.0100
+radiation_immunity                       = 0.0000
+telepatic_immunity                       = 0.0000
+chemical_burn_immunity                   = 0.0100
+explosion_immunity                       = 0.0100
+fire_wound_immunity                      = 0.0175
+;---------------------------------------------------------------------------------------------
+;OUTFIT IN AZAZEL MODE: Leader Dolg Outfit
+;---------------------------------------------------------------------------------------------
+[leader_azazel_dolg_outfit]:outfit_leader_exo_base
+$spawn                                   = "outfit\leader_azazel_dolg_outfit"
+visual                                   = dynamics\outfit\dolg_outfit
+actor_visual                             = actors\stalker_dolg\dolg_leader.ogf
+npc_visual                               = actors\stalker_dolg\dolg_leader.ogf
+player_hud_section                       = actor_hud_duty_ps5m
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_dolg_outfit_name
+inv_name_short                           = leader_dolg_outfit_name
+description                              = leader_dolg_outfit_description
+
+inv_weight                               = 15
+
+inv_grid_x                               = 6
+inv_grid_y                               = 15
+
+upgr_icon_x                              = 0
+upgr_icon_y                              = 161
+upgr_icon_width                          = 302
+upgr_icon_height                         = 130
+
+cost                                     = 263750
+
+artefact_count                           = 1
+
+helmet_avaliable						 = false
+
+sprint_allowed							 = true
+
+power_loss                               = 0.75
+
+character_portrait						 = ui_inGame2_dolg_rukzak_voronin_2_0

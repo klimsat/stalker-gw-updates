@@ -1,0 +1,103 @@
+local storage = {}
+
+local damage_by_level = {
+  cev_plastin_1 = 0.025,
+  cev_plastin_2 = 0.017,
+  cev_plastin_3 = 0.01,
+  cev_plastin_4 = 0.008,
+  cev_plastin_5 = 0.006
+}
+
+function init(obj)
+  db.storage[obj:id()] = db.storage[obj:id()] and empty_table(db.storage[obj:id()]) or {}
+  local new_binder = plastin_binder(obj)
+  obj:bind_object(new_binder)
+end
+
+class "plastin_binder"(object_binder)
+function plastin_binder:__init(obj)
+  super(obj)
+  self.loaded = false
+end
+
+function plastin_binder:reload(section)
+  object_binder.reload(self, section)
+end
+
+function plastin_binder:reinit()
+  object_binder.reinit(self)
+  db.plastin[self.object:name()] = self
+end
+
+function plastin_binder:update(delta)
+  object_binder.update(self, delta)
+  if storage[self.object:id()] then
+    self.object:set_condition(storage[self.object:id()])
+
+    storage[self.object:id()] = nil
+  end
+end
+
+function plastin_binder:net_spawn(data)
+  if not object_binder.net_spawn(self, data) then
+    return false
+  end
+  return true
+end
+
+function plastin_binder:net_destroy()
+  db.plastin[self.object:name()] = nil
+  object_binder.net_destroy(self)
+end
+
+function plastin_binder:save(packet)
+  set_save_marker(packet, "save", false, "plastin_binder")
+  object_binder.save(self, packet)
+
+  packet:w_float(self.object:condition()) -- write item condition
+
+  set_save_marker(packet, "save", true, "plastin_binder")
+end
+
+function plastin_binder:load(reader)
+  set_save_marker(reader, "load", false, "plastin_binder")
+  object_binder.load(self, reader)
+
+  storage[self.object:id()] = reader:r_float()
+  self.loaded = true
+
+  set_save_marker(reader, "load", true, "plastin_binder")
+end
+-- end methods for the plastin_binder class
+
+local function actor_on_before_hit(obj, amount, local_direction, who, bone_index)
+  if obj.type ~= hit.fire_wound then
+    return
+  end
+
+  local plastins = {}
+  local iterator = function(item)
+    if db.actor:is_on_belt(item) then
+      local section = item:section()
+
+      if string.find(section, "cev_plastin_") then
+        table.insert(plastins, item)
+      end
+    end
+  end
+  db.actor:inventory_for_each(iterator)
+
+  if #plastins == 0 then
+    utils.debug("Actor has no cev plastins on the belt")
+    return
+  end
+
+  local item = plastins[math.random(1, #plastins)]
+  local section = item:section()
+
+  item:set_condition(item:condition() - damage_by_level[section])
+end
+
+function on_game_start()
+  RegisterScriptCallback("actor_on_before_hit", actor_on_before_hit)
+end

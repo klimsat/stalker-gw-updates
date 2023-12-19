@@ -1,0 +1,25 @@
+[settings]
+enable = true
+
+actor_cause_surrender 			= true			;Игрок может вызывать у заключенных анимацию раненых жертв. Можно добавить condlist, например has_info (возможно, если вы хотите, чтобы актер делал это только в том случае, если он присоединился к бандитам)
+actor_cause_surrender_chance 	= 0.65			; 0,0 до 1,0 значение с плавающей запятой для процентов
+actor_cause_surrender_max_dist 	= 5
+
+state_run_min_distance = 6		;Расстояние больше, чем использовать рабочее состояние
+
+min_timer = 700				;Количество времени (в миллисекундах) до нажатия на курок после достижения целевой позиции.
+max_timer = 900
+surrender_min_timer = 1100		;Количество времени (в миллисекундах) до нажатия на курок, если жертва воспроизводит анимацию заключенного.
+surrender_max_timer = 1500
+
+min_distance = 3				;Расстояние, на котором нужно искать доступную вершину ближайшей жертвы
+max_distance = 5
+
+min_vector_rotate_y = 1			; Мин вращение, чтобы случайно обвести жертву
+max_vector_rotate_y = 140		; Макс вращение, чтобы случайно обвести жертву
+
+chance_to_play_sound = 0.7		;Вероятность того, что сталкер скажет «убить раненого»
+chance_to_play_surrender = 0.50 ;Возможность для раненой жертвы сыграть анимацию заключенного
+
+;Сообщества, которые могут вызвать анимацию заключенного
+cause_surrender_communities = bandit, csky, dolg, ecolog, freedom, killer, army, stalker, isg, darkstalker, renegate, varyag, slizni, velhan, veter, alfa, voenstal, mirotvorec, ryskuspecnaz, sby, angel, posleduden, greh

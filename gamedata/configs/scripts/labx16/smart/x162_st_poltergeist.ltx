@@ -1,0 +1,21 @@
+[smart_terrain]
+squad_id = 4
+max_population = 5
+respawn_params = respawn@x162_st_poltergeist
+respawn_idle = 60000
+respawn_radius = 300
+
+[respawn@x162_st_poltergeist]
+spawn_ghosts
+
+[spawn_ghosts]
+spawn_squads = simulation_poltergeist_tele
+spawn_num = {+yan_kill_brain_done} 3, 0
+
+[exclusive]
+leader = labx16\x162_st_poltergeist_smart_logic.ltx
+trader = labx16\x162_st_poltergeist_smart_logic.ltx
+mechanic = labx16\x162_st_poltergeist_smart_logic.ltx
+medik = labx16\x162_st_poltergeist_smart_logic.ltx
+barmen = labx16\x162_st_poltergeist_smart_logic.ltx
+zver = labx16\x162_st_poltergeist_smart_logic.ltx

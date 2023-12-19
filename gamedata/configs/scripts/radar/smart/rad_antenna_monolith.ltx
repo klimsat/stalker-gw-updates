@@ -1,0 +1,25 @@
+[smart_terrain]
+squad_id = 3
+max_population = 5
+respawn_params = respawn@rad_antenna_monolith
+respawn_idle = 60000
+
+
+
+[respawn@rad_antenna_monolith]
+spawn_monolith
+
+[spawn_monolith]
+spawn_squads = monolith_sim_squad_advanced
+spawn_num = 2
+
+[exclusive]
+trader = radar\rad_antenna_monolith_smart_logic.ltx
+mechanic = radar\rad_antenna_monolith_smart_logic.ltx
+medik = radar\rad_antenna_monolith_smart_logic.ltx
+barmen = radar\rad_antenna_monolith_smart_logic.ltx
+leader = radar\rad_antenna_monolith_smart_logic.ltx
+rad_antenna_monolith_camp_work_1 = radar\rad_antenna_monolith_smart_logic.ltx
+rad_antenna_monolith_camp_work_2 = radar\rad_antenna_monolith_smart_logic.ltx
+rad_antenna_monolith_camp_work_3 = radar\rad_antenna_monolith_smart_logic.ltx
+rad_antenna_monolith_camp_work_4 = radar\rad_antenna_monolith_smart_logic.ltx

@@ -1,0 +1,308 @@
+﻿<circle_stalker_24>
+    <level_map spot="circle_stalker_spot_24" pointer="quest_pointer"/>
+</circle_stalker_24>
+<circle_stalker_spot_24 x="35" y="105" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_stalker</texture>
+</circle_stalker_spot_24>
+<circle_bandit_24>
+    <level_map spot="circle_bandit_spot_24" pointer="quest_pointer"/>
+</circle_bandit_24>
+<circle_bandit_spot_24 x="83" y="105" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_bandit</texture>
+</circle_bandit_spot_24>
+<circle_csky_24>
+    <level_map spot="circle_csky_spot_24" pointer="quest_pointer"/>
+</circle_csky_24>
+<circle_csky_spot_24 x="131" y="105" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_csky</texture>
+</circle_csky_spot_24>
+<circle_army_24>
+    <level_map spot="circle_army_spot_24" pointer="quest_pointer"/>
+</circle_army_24>
+<circle_army_spot_24 x="35" y="201" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_army</texture>
+</circle_army_spot_24>
+<circle_freedom_24>
+    <level_map spot="circle_freedom_spot_24" pointer="quest_pointer"/>
+</circle_freedom_24>
+<circle_freedom_spot_24 x="83" y="153" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_freedom</texture>
+</circle_freedom_spot_24>
+<circle_dolg_24>
+    <level_map spot="circle_dolg_spot_24" pointer="quest_pointer"/>
+</circle_dolg_24>
+<circle_dolg_spot_24 x="35" y="153" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_dolg</texture>
+</circle_dolg_spot_24>
+<circle_ecolog_24>
+    <level_map spot="circle_ecolog_spot_24" pointer="quest_pointer"/>
+</circle_ecolog_24>
+<circle_ecolog_spot_24 x="83" y="201" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_ecolog</texture>
+</circle_ecolog_spot_24>
+<circle_killer_24>
+    <level_map spot="circle_killer_spot_24" pointer="quest_pointer"/>
+</circle_killer_24>
+<circle_killer_spot_24 x="131" y="153" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_killer</texture>
+</circle_killer_spot_24>
+<circle_monolith_24>
+    <level_map spot="circle_monolith_spot_24" pointer="quest_pointer"/>
+</circle_monolith_24>
+<circle_monolith_spot_24 x="131" y="201" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_monolith</texture>
+</circle_monolith_spot_24>
+<circle_target_24>
+    <level_map spot="circle_target_spot_24" pointer="quest_pointer"/>
+</circle_target_24>
+<circle_target_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture a="255" r="255" g="0" b="0" x="633" y="789" width="31" height="31">ui\ui_common</texture>
+</circle_target_spot_24>
+<circle_zombied_24>
+    <level_map spot="circle_zombied_spot_24" pointer="quest_pointer"/>
+</circle_zombied_24>
+<circle_zombied_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_zombied</texture>
+</circle_zombied_spot_24>
+<circle_mutant_24>
+    <level_map spot="circle_mutant_spot_24" pointer="quest_pointer"/>
+</circle_mutant_24>
+<circle_mutant_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_monster</texture>
+</circle_mutant_spot_24>
+<circle_isg_24>
+    <level_map spot="circle_isg_spot_24" pointer="quest_pointer"/>
+</circle_isg_24>
+<circle_isg_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_isg</texture>
+</circle_isg_spot_24>
+<circle_darkstalker_24>
+    <level_map spot="circle_darkstalker_spot_24" pointer="quest_pointer"/>
+</circle_darkstalker_24>
+<circle_darkstalker_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_darkstalker</texture>
+</circle_darkstalker_spot_24>
+<circle_renegate_24>
+    <level_map spot="circle_renegate_spot_24" pointer="quest_pointer"/>
+</circle_renegate_24>
+<circle_renegate_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_renegate</texture>
+</circle_renegate_spot_24>
+<circle_varyag_24>
+    <level_map spot="circle_varyag_spot_24" pointer="quest_pointer"/>
+</circle_varyag_24>
+<circle_varyag_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_varyag</texture>
+</circle_varyag_spot_24>
+<circle_slizni_24>
+    <level_map spot="circle_slizni_spot_24" pointer="quest_pointer"/>
+</circle_slizni_24>
+<circle_slizni_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_slizni</texture>
+</circle_slizni_spot_24>
+<circle_velhan_24>
+    <level_map spot="circle_velhan_spot_24" pointer="quest_pointer"/>
+</circle_velhan_24>
+<circle_velhan_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_velhan</texture>
+</circle_velhan_spot_24>
+<circle_fantom_24>
+    <level_map spot="circle_fantom_spot_24" pointer="quest_pointer"/>
+</circle_fantom_24>
+<circle_fantom_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_fantom</texture>
+</circle_fantom_spot_24>
+<circle_veter_24>
+    <level_map spot="circle_veter_spot_24" pointer="quest_pointer"/>
+</circle_veter_24>
+<circle_veter_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_veter</texture>
+</circle_veter_spot_24>
+<circle_osoznanie_24>
+    <level_map spot="circle_osoznanie_spot_24" pointer="quest_pointer"/>
+</circle_osoznanie_24>
+<circle_osoznanie_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_osoznanie</texture>
+</circle_osoznanie_spot_24>
+<circle_alfa_24>
+    <level_map spot="circle_alfa_spot_24" pointer="quest_pointer"/>
+</circle_alfa_24>
+<circle_alfa_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_alfa</texture>
+</circle_alfa_spot_24>
+<circle_apocalypse_24>
+    <level_map spot="circle_apocalypse_spot_24" pointer="quest_pointer"/>
+</circle_apocalypse_24>
+<circle_apocalypse_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_apocalypse</texture>
+</circle_apocalypse_spot_24>
+<circle_adinkvizicia_24>
+    <level_map spot="circle_adinkvizicia_spot_24" pointer="quest_pointer"/>
+</circle_adinkvizicia_24>
+<circle_adinkvizicia_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_adinkvizicia</texture>
+</circle_adinkvizicia_spot_24>
+<circle_hunter_24>
+    <level_map spot="circle_hunter_spot_24" pointer="quest_pointer"/>
+</circle_hunter_24>
+<circle_hunter_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_hunter</texture>
+</circle_hunter_spot_24>
+<circle_voenstal_24>
+    <level_map spot="circle_voenstal_spot_24" pointer="quest_pointer"/>
+</circle_voenstal_24>
+<circle_voenstal_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_voenstal</texture>
+</circle_voenstal_spot_24>
+<circle_mirotvorec_24>
+    <level_map spot="circle_mirotvorec_spot_24" pointer="quest_pointer"/>
+</circle_mirotvorec_24>
+<circle_mirotvorec_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_mirotvorec</texture>
+</circle_mirotvorec_spot_24>
+<circle_ryskuspecnaz_24>
+    <level_map spot="circle_ryskuspecnaz_spot_24" pointer="quest_pointer"/>
+</circle_ryskuspecnaz_24>
+<circle_ryskuspecnaz_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_ryskuspecnaz</texture>
+</circle_ryskuspecnaz_spot_24>
+<circle_sby_24>
+    <level_map spot="circle_sby_spot_24" pointer="quest_pointer"/>
+</circle_sby_24>
+<circle_sby_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_sby</texture>
+</circle_sby_spot_24>
+<circle_angel_24>
+    <level_map spot="circle_angel_spot_24" pointer="quest_pointer"/>
+</circle_angel_24>
+<circle_angel_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_angel</texture>
+</circle_angel_spot_24>
+<circle_posleduden_24>
+    <level_map spot="circle_posleduden_spot_24" pointer="quest_pointer"/>
+</circle_posleduden_24>
+<circle_posleduden_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_posleduden</texture>
+</circle_posleduden_spot_24>
+<circle_greh_24>
+    <level_map spot="circle_greh_spot_24" pointer="quest_pointer"/>
+</circle_greh_24>
+<circle_greh_spot_24 x="83" y="105" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture>ui_icon_pda_greh</texture>
+</circle_greh_spot_24>
+<circle_none_24>
+    <level_map spot="circle_none_spot_24" pointer="quest_pointer"/>
+</circle_none_24>
+<circle_none_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+    <texture a="255" r="255" g="255" b="255" x="633" y="789" width="31" height="31">ui\ui_common</texture>
+</circle_none_spot_24>
+
+<circle_none_red_24>
+  <level_map spot="circle_none_red_spot_24" pointer="quest_pointer" />
+</circle_none_red_24>
+<circle_none_red_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch="1">
+  <texture a="255" r="128" g="0" b="0">ui_pda_icon_faction_none</texture>
+</circle_none_red_spot_24>
+<circle_none_green_24>
+  <level_map spot="circle_none_green_spot_24" pointer="quest_pointer" />
+</circle_none_green_24>
+<circle_none_green_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch="1">
+  <texture a="255" r="0" g="128" b="0">ui_pda_icon_faction_none</texture>
+</circle_none_green_spot_24>
+<circle_none_yellow_24>
+  <level_map spot="circle_none_yellow_spot_24" pointer="quest_pointer" />
+</circle_none_yellow_24>
+<circle_none_yellow_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch="1">
+  <texture a="255" r="230" g="230" b="0">ui_pda_icon_faction_none</texture>
+</circle_none_yellow_spot_24>
+<circle_none_blue_24>
+  <level_map spot="circle_none_blue_spot_24" pointer="quest_pointer" />
+</circle_none_blue_24>
+<circle_none_blue_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch="1">
+  <texture a="255" r="0" g="0" b="204">ui_pda_icon_faction_none</texture>
+</circle_none_blue_spot_24>
+<circle_none_purple_24>
+  <level_map spot="circle_none_purple_spot_24" pointer="quest_pointer" />
+</circle_none_purple_24>
+<circle_none_purple_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch="1">
+  <texture a="255" r="102" g="0" b="51">ui_pda_icon_faction_none</texture>
+</circle_none_purple_spot_24>
+<circle_none_orange_24>
+  <level_map spot="circle_none_orange_spot_24" pointer="quest_pointer" />
+</circle_none_orange_24>
+<circle_none_orange_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch="1">
+  <texture a="255" r="255" g="105" b="0">ui_pda_icon_faction_none</texture>
+</circle_none_orange_spot_24>
+
+<circle_none_base_24>
+    <level_map spot="circle_none_base_spot_24" pointer="quest_pointer" />
+  </circle_none_base_24>
+  <circle_none_base_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch="1">
+    <texture>ui_icon_pda_none_base</texture>
+  </circle_none_base_spot_24>
+  <circle_none_resource_24>
+    <level_map spot="circle_none_resource_spot_24" pointer="quest_pointer" />
+  </circle_none_resource_24>
+  <circle_none_resource_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch="1">
+    <texture>ui_icon_pda_none_resource</texture>
+  </circle_none_resource_spot_24>
+  <circle_none_territory_24>
+    <level_map spot="circle_none_territory_spot_24" pointer="quest_pointer" />
+  </circle_none_territory_24>
+  <circle_none_territory_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch="1">
+    <texture>ui_icon_pda_none_territory</texture>
+  </circle_none_territory_spot_24>
+  <circle_none_lair_24>
+    <level_map spot="circle_none_lair_spot_24" pointer="quest_pointer" />
+  </circle_none_lair_24>
+  <circle_none_lair_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch="1">
+    <texture>ui_icon_pda_none_lair</texture>
+  </circle_none_lair_spot_24>
+  <circle_none_camp_24>
+    <level_map spot="circle_none_camp_spot_24" pointer="quest_pointer" />
+  </circle_none_camp_24>
+  <circle_none_camp_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch="1">
+    <texture>ui_icon_pda_none_camp</texture>
+  </circle_none_camp_spot_24>
+  <circle_none_point_24>
+    <level_map spot="circle_none_point_spot_24" pointer="quest_pointer" />
+  </circle_none_point_24>
+  <circle_none_point_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch="1">
+    <texture>ui_icon_pda_none_point</texture>
+  </circle_none_point_spot_24>
+  <circle_none_base2_24>
+    <level_map spot="circle_none_base2_spot_24" pointer="quest_pointer" />
+  </circle_none_base2_24>
+  <circle_none_base2_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch="1">
+    <texture>ui_icon_pda_none_base2</texture>
+  </circle_none_base2_spot_24>
+  <circle_none_resource2_24>
+    <level_map spot="circle_none_resource2_spot_24" pointer="quest_pointer" />
+  </circle_none_resource2_24>
+  <circle_none_resource2_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch="1">
+    <texture>ui_icon_pda_none_resource2</texture>
+  </circle_none_resource2_spot_24>
+  <circle_none_territory2_24>
+    <level_map spot="circle_none_territory2_spot_24" pointer="quest_pointer" />
+  </circle_none_territory2_24>
+  <circle_none_territory2_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch="1">
+    <texture>ui_icon_pda_none_territory2</texture>
+  </circle_none_territory2_spot_24>
+  <circle_none_lair2_24>
+    <level_map spot="circle_none_lair2_spot_24" pointer="quest_pointer" />
+  </circle_none_lair2_24>
+  <circle_none_lair2_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch="1">
+    <texture>ui_icon_pda_none_lair2</texture>
+  </circle_none_lair2_spot_24>
+  <circle_none_camp2_24>
+    <level_map spot="circle_none_camp2_spot_24" pointer="quest_pointer" />
+  </circle_none_camp2_24>
+  <circle_none_camp2_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch="1">
+    <texture>ui_icon_pda_none_camp2</texture>
+  </circle_none_camp2_spot_24>
+  <circle_none_point2_24>
+    <level_map spot="circle_none_point2_spot_24" pointer="quest_pointer" />
+  </circle_none_point2_24>
+  <circle_none_point2_spot_24 x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch="1">
+    <texture>ui_icon_pda_none_point2</texture>
+  </circle_none_point2_spot_24>

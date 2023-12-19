@@ -15,5 +15,5 @@ gamedata/levels/
 gamedata/levels/
 
 *.exe
-..dat
+*.dat
 *.xr

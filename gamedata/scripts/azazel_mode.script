@@ -1,0 +1,586 @@
+-- =======================================================================================
+-- Modified by MaYaKOVSKIY (Discord - _mayakovskiy_)
+-- Last modification: 2023/09/24
+-- Adapted the script for modification Call of Chernobyl "Global War" Alpha 0.4
+-- =======================================================================================
+local azazel_death = false
+
+local function on_game_load()
+  local azazel = axr_main.config:r_value("character_creation", "new_game_azazel_mode", 1, false)
+
+  if not azazel or not has_alife_info("story_mode_disabled") then
+    return
+  end
+
+  if azazel_death then
+    SetHudMsg(strformat(GetString("st_death_count"), xr_statistic.actor_statistic.deaths), 8)
+
+    -- Heal
+    addon_healActor()
+
+    level.show_indicators()
+
+    -- Transition
+    level.remove_cam_effector(210409)
+    addon_playAnimation()
+    level.add_pp_effector("deimos1.ppe", 210410, false)
+  end
+end
+
+local addonMainMenuReference
+
+local function main_menu_on_init(in_MainMenuReference)
+  addonMainMenuReference = in_MainMenuReference
+end
+
+function addon_healActor()
+  bind_stalker_ext.invulnerable_time = time_global() + 30000
+  db.actor:set_health_ex(1)
+  db.actor.health = 1
+  db.actor.power = 100000
+  db.actor.radiation = -100000
+  db.actor.bleeding = 100000
+  db.actor.satiety = 100000
+end
+
+function addon_playAnimation()
+  if not (ui_addon_azazel_faction_chooser.addon_azazel_menu["doNotPlayAnimation"]) then
+    level.disable_input()
+    level.add_cam_effector("camera_effects\\prison_1.anm", 210409, false, "azazel_mode.cam_effector_end")
+    bind_stalker_ext.invulnerable_time = time_global() + 30000
+  end
+end
+
+local addonAllPossibleStalkers = {}
+
+local function actor_on_before_death(whoID, flags)
+  local azazel = axr_main.config:r_value("character_creation", "new_game_azazel_mode", 1, false)
+
+  if not azazel or not has_alife_info("story_mode_disabled") then
+    return
+  end
+
+  if not (ui_addon_azazel_faction_chooser.addon_azazel_menu) then
+    ui_addon_azazel_faction_chooser.addon_azazel_menu = {}
+  end
+
+  xr_statistic.actor_statistic.deaths = xr_statistic.actor_statistic.deaths + 1
+  SetHudMsg(strformat(GetString("st_death_count"), xr_statistic.actor_statistic.deaths), 8)
+
+  xr_statistic.resetKillsStatisticsFromFactions()
+  wargreat_actor_hunter.resetWantedLevels()
+
+  -- find victims
+  local sim = alife()
+  local gg = game_graph()
+  local avail_entities = {}
+  local squad_mates = {}
+  --local faction_mates = {}
+  for i = 1, 65534 do
+    local se_obj = sim:object(i)
+    if
+      (se_obj and IsStalker(nil, se_obj:clsid()) and se_obj:alive() and se_obj:community() ~= "trader" and
+        se_obj.group_id ~= 65535)
+     then
+      if (IsSurvivalMode() or get_object_story_id(se_obj.group_id) == nil) then
+        if (axr_companions.companion_squads[se_obj.group_id]) then
+          --elseif (se_obj:community() == character_community(db.actor):sub(7)) then
+          --table.insert(faction_mates,se_obj.id)
+          squad_mates[#squad_mates + 1] = se_obj.id
+        else
+          avail_entities[#avail_entities + 1] = se_obj.id
+        end
+      end
+    end
+  end
+
+  --addon
+  addon_healActor()
+
+  if (#squad_mates > 0) then
+    addonAllPossibleStalkers = squad_mates
+    addonStep2(true)
+  else
+    addonAllPossibleStalkers = avail_entities
+    get_console():execute("main_menu on")
+    ui_addon_azazel_faction_chooser.addonAzazelFactionChooser(addonMainMenuReference):ShowDialog(true)
+  end
+
+  addon_healActor()
+
+  flags.ret_value = false
+end
+
+function addonStep2(actorStillHasCompanions)
+  local sim = alife()
+  local se_obj
+  local factionsPool = ui_addon_azazel_faction_chooser.addon_azazel_menu.factionsPool
+
+  if (actorStillHasCompanions) then
+    se_obj = alife_object(addonAllPossibleStalkers[math.random(#addonAllPossibleStalkers)])
+  else
+    local stalkersOfSelectedFactions = {}
+    for i = 1, #addonAllPossibleStalkers do
+      local stalkerFaction = alife_object(addonAllPossibleStalkers[i]):community()
+      if (factionsPool[stalkerFaction]) then
+        table.insert(stalkersOfSelectedFactions, addonAllPossibleStalkers[i])
+      end
+    end
+    --It usually happens with Ecolog faction at game start
+    if (#stalkersOfSelectedFactions == 0) then
+      return false
+    end
+
+    if (ui_addon_azazel_faction_chooser.addon_azazel_menu["rebornInLeaders"]) then
+      for _, stalkerID in pairs(stalkersOfSelectedFactions) do
+        local currentStalker = alife_object(stalkerID)
+        if currentStalker:section_name():find("_leader_") then
+          se_obj = currentStalker
+          break
+        end
+      end
+    elseif (ui_addon_azazel_faction_chooser.addon_azazel_menu["findNearest"]) then
+      local nearestStalker = nil
+      local nearestDistance = 999999999
+      for _, stalkerID in pairs(stalkersOfSelectedFactions) do
+        local distanceToActor =
+          utils.graph_distance(alife():actor().m_game_vertex_id, alife_object(stalkerID).m_game_vertex_id)
+        if (distanceToActor < nearestDistance) then
+          nearestStalker = stalkerID
+          nearestDistance = distanceToActor
+        end
+      end
+      se_obj = alife_object(nearestStalker)
+    else
+      se_obj = alife_object(stalkersOfSelectedFactions[math.random(#stalkersOfSelectedFactions)])
+    end
+  end
+
+  if not se_obj then
+    return false
+  end
+
+  addon_healActor()
+
+  local ignore_list = {
+    ["bolt"] = true,
+    ["device_torch"] = true,
+    ["device_pda"] = true,
+    ["wpn_binoc"] = true,
+    ["medkit_script"] = true,
+    ["guitar_a"] = true,
+    ["harmonica_a"] = true,
+    ["anim_binoc"] = true,
+    ["anim_knife"] = true,
+    ["hand_radio"] = true,
+    ["hand_radio_r"] = true,
+    ["stick_bred"] = true,
+    ["stick_kolbasa"] = true,
+    ["stick_kolbasa_bred"] = true,
+    ["wpn_knife"] = true
+    --,
+    -- ["good_psy_helmet"] = true,
+    -- ["bad_psy_helmet"] = true,
+    -- ["main_story_1_quest_case"] = true,
+    -- ["main_story_2_lab_x18_documents"] = true,
+    -- ["main_story_3_lab_x16_documents"] = true,
+    -- ["main_story_4_lab_x10_documents"] = true,
+    -- ["main_story_5_lab_x8_documents"] = true,
+    -- ["main_story_6_jup_ug_documents"] = true,
+    -- ["main_story_7_mon_con_documents"] = true
+  }
+
+  axr_companions.remove_all_from_actor_squad()
+
+  -- make squad actor companions
+  local squad = sim:object(se_obj.group_id)
+  if (squad) then
+    SIMBOARD:assign_squad_to_smart(squad, nil)
+    axr_companions.companion_squads[squad.id] = squad
+    for k in squad:squad_members() do
+      if (k.id ~= se_obj.id) then
+        axr_companions.non_task_companions[k.id] = true
+        utils.se_obj_save_var(k.id, k.object:name(), "companion", true)
+        local member = db.storage[k.id] and db.storage[k.id].object
+        if (member) then
+          axr_companions.setup_companion_logic(member, db.storage[k.id], false)
+        end
+      end
+    end
+  end
+
+  local se_actor = sim:actor()
+
+  local player_icon = db.actor:character_icon()
+
+  local victim_icon_name = se_obj:character_icon()
+
+  local se_mimic =
+    sim:create("stalker_azazel", se_actor.position, se_actor.m_level_vertex_id, se_actor.m_game_vertex_id)
+
+  if (se_mimic) then
+    se_mimic:set_character_name(se_actor:character_name())
+    se_mimic:set_profile_name(se_actor:profile_name())
+    se_mimic:kill()
+
+    local m_data = alife_storage_manager.get_se_obj_state(se_mimic, true)
+    if (m_data) then
+      m_data.icon_name = player_icon
+
+      m_data.visual = db.actor:get_visual_name()
+    end
+
+    local function release_actor_item(temp, item)
+      if not (ignore_list[item:section()]) then
+        local se_item = sim:object(item:id())
+        if (se_item) then
+          local sec = se_item:section_name()
+          sim:release(se_item, true)
+          sim:create(sec, se_mimic.position, se_mimic.m_level_vertex_id, se_mimic.m_game_vertex_id, se_mimic.id)
+        end
+      end
+    end
+    db.actor:iterate_inventory(release_actor_item, nil)
+  end
+
+  db.actor_binder.character_icon = victim_icon_name
+  db.actor:set_character_icon(victim_icon_name)
+
+  local npc_name = se_obj:character_name()
+  se_actor:set_character_name(npc_name)
+  sim_brain.actor_name = npc_name
+
+  local faction = se_obj:community()
+  --se_actor:set_rank(se_obj:rank())
+  db.actor:set_character_rank(se_obj:rank())
+  db.actor:set_character_community("actor_" .. faction)
+  db.actor:set_character_reputation(se_obj:reputation())
+
+  local money = db.actor:money()
+  if db.actor:money() ~= nil then
+    db.actor:give_money(-money)
+    db.actor:give_money(10 * math.random(1, 250) + 500)
+  end
+
+  game_relations.set_community_goodwill_for_faction("actor_" .. faction)
+
+  -- Force update of xr_statistic records.
+  xr_statistic.check_actor_rank_change(true)
+  xr_statistic.check_actor_reputation_change(true)
+
+  local has_weapon = false
+
+  -- copy all items except ignored
+  for i = 1, 65534 do
+    local se_item = sim:object(i)
+    if (se_item and se_item.parent_id == se_obj.id) then
+      local sec = se_item:section_name()
+      if not (ignore_list[sec]) then
+        give_object_to_actor(sec)
+
+        if string.find(sec, "wpn_") then
+          has_weapon = true
+        end
+      end
+    end
+  end
+
+  if not has_weapon then
+    wargreat_armament.armament_actor()
+  end
+
+  -- create outfit based on stalker visual type
+  local section = se_obj:section_name()
+
+  if (string.find(section, "_leader")) then
+    give_object_to_actor("leader_azazel_" .. faction .. "_outfit")
+  elseif (string.find(section, "_5")) then
+    local f = {
+      ["stalker"] = "exo_outfit",
+      ["bandit"] = "bandit_exo_outfit",
+      ["csky"] = "cs_exo_outfit",
+      ["killer"] = "merc_exo_outfit",
+      ["army"] = "army_radiation_outfit",
+      ["dolg"] = "dolg_exo_outfit",
+      ["freedom"] = "svoboda_exo_outfit",
+      ["ecolog"] = "ecolog_guard_outfit",
+      ["monolith"] = "monolith_exo_outfit",
+      ["zombied"] = "zombied_dolg_exo_outfit",
+      ["isg"] = "isg_scientific_outfit",
+      ["darkstalker"] = "darkstalker_outfit",
+      ["renegate"] = "renegate_exo_outfit",
+      ["varyag"] = "varyag_exoplash_outfit",
+      ["slizni"] = "slizni_outfit",
+      ["velhan"] = "velhan_exo_outfit",
+      ["fantom"] = "fantom_exo_outfit",
+      ["veter"] = "veter_exo_outfit",
+      ["osoznanie"] = "osoznanie_exo_outfit",
+      ["apocalypse"] = "apocalypse_exo_outfit",
+      ["alfa"] = "alfa_exo_outfit",
+      ["adinkvizicia"] = "adinkvizicia_exo_outfit",
+      ["hunter"] = "hunter_exoplash_outfit",
+      ["voenstal"] = "voenstal_military_exo_outfit",
+      ["ryskuspecnaz"] = "ryskuspecnaz_military_exo_outfit",
+      ["sby"] = "sby_military_outfit",
+      ["angel"] = "angel_exo_outfit",
+      ["posleduden"] = "posleduden_exo_outfit",
+      ["greh"] = "greh_trenchcoat_exo_outfit",
+      ["mirotvorec"] = "mirotvorec_radiation_outfit"
+    }
+    give_object_to_actor(f[faction] or "novice_outfit")
+  elseif (string.find(section, "_4")) then
+    local f = {
+      ["stalker"] = "exo_outfit",
+      ["bandit"] = "bandit_exo_outfit",
+      ["csky"] = "cs_exo_outfit",
+      ["killer"] = "merc_exo_outfit",
+      ["army"] = "military_outfit",
+      ["dolg"] = "dolg_exo_outfit",
+      ["freedom"] = "svoboda_exo_outfit",
+      ["ecolog"] = "ecolog_guard_outfit",
+      ["monolith"] = "monolith_exo_outfit",
+      ["zombied"] = "zombied_dolg_exo_outfit",
+      ["isg"] = "isg_scientific_outfit",
+      ["darkstalker"] = "darkstalker_outfit",
+      ["renegate"] = "renegate_radiation_outfit",
+      ["varyag"] = "varyag_outfit",
+      ["slizni"] = "slizni_outfit",
+      ["velhan"] = "velhan_exo_outfit",
+      ["fantom"] = "fantom_exo_outfit",
+      ["veter"] = "veter_exo_outfit",
+      ["osoznanie"] = "osoznanie_exo_outfit",
+      ["apocalypse"] = "apocalypse_heavy_outfit",
+      ["alfa"] = "alfa_exo_outfit",
+      ["adinkvizicia"] = "adinkvizicia_exo_outfit",
+      ["hunter"] = "hunter_outfit",
+      ["voenstal"] = "voenstal_military_exo_outfit",
+      ["ryskuspecnaz"] = "ryskuspecnaz_military_exo_outfit",
+      ["sby"] = "sby_military_outfit",
+      ["angel"] = "angel_tb_outfit",
+      ["posleduden"] = "posleduden_exo_outfit",
+      ["greh"] = "greh_trenchcoat_exo_outfit",
+      ["mirotvorec"] = "mirotvorec_military_outfit"
+    }
+    give_object_to_actor(f[faction] or "novice_outfit")
+  elseif (string.find(section, "_3")) then
+    local f = {
+      ["stalker"] = "scientific_outfit",
+      ["bandit"] = "banditmerc_outfit",
+      ["csky"] = "cs_heavy_outfit",
+      ["killer"] = "merc_scientific_outfit",
+      ["army"] = "specops_outfit",
+      ["dolg"] = "dolg_scientific_outfit",
+      ["freedom"] = "svoboda_heavy_outfit_2",
+      ["ecolog"] = "ecolog_outfit_green",
+      ["monolith"] = "monolith_scientific_outfit",
+      ["zombied"] = "zombied_specops_outfit",
+      ["isg"] = "isg_scientific_outfit",
+      ["darkstalker"] = "darkstalker_outfit",
+      ["renegate"] = "renegate_scientific_outfit",
+      ["varyag"] = "varyag_outfit",
+      ["slizni"] = "slizni_trenchcoat_brown_outfit",
+      ["velhan"] = "velhan_radiation_outfit",
+      ["fantom"] = "fantom_radiation_outfit",
+      ["veter"] = "veter_radiation_outfit",
+      ["osoznanie"] = "osoznanie_radiation_outfit",
+      ["apocalypse"] = "apocalypse_radiation_outfit",
+      ["alfa"] = "alfa_skat_outfit",
+      ["adinkvizicia"] = "adinkvizicia_radiation_outfit",
+      ["hunter"] = "hunter_outfit",
+      ["voenstal"] = "voenstal_military_outfit",
+      ["ryskuspecnaz"] = "ryskuspecnaz_military_outfit",
+      ["sby"] = "sby_military_outfit",
+      ["angel"] = "angel_skat_outfit",
+      ["posleduden"] = "posleduden_medium_outfit",
+      ["greh"] = "greh_trenchcoat_outfit",
+      ["mirotvorec"] = "mirotvorec_military_outfit"
+    }
+    give_object_to_actor(f[faction] or "novice_outfit")
+  elseif (string.find(section, "_2")) then
+    local f = {
+      ["stalker"] = "nbc_outfit",
+      ["bandit"] = "trenchcoat_brown_outfit",
+      ["csky"] = "cs_nbc_outfit",
+      ["killer"] = "merc_outfit",
+      ["army"] = "specops_outfit",
+      ["dolg"] = "dolg_outfit",
+      ["freedom"] = "svoboda_heavy_outfit",
+      ["ecolog"] = "ecolog_outfit_green",
+      ["monolith"] = "monolith_outfit",
+      ["zombied"] = "zombied_merc_outfit",
+      ["isg"] = "isg_scientific_outfit",
+      ["darkstalker"] = "darkstalker_trenchcoat_brown_outfit",
+      ["renegate"] = "renegate_outfit",
+      ["varyag"] = "varyag_outfit",
+      ["slizni"] = "slizni_trenchcoat_outfit",
+      ["velhan"] = "velhan_specops_outfit",
+      ["fantom"] = "fantom_scientific_outfit",
+      ["veter"] = "veter_outfit",
+      ["osoznanie"] = "osoznanie_scientific_outfit",
+      ["apocalypse"] = "apocalypse_scientific2_outfit",
+      ["alfa"] = "alfa_outfit",
+      ["adinkvizicia"] = "adinkvizicia_outfit",
+      ["hunter"] = "hunter_outfit",
+      ["voenstal"] = "voenstal_scientific_outfit",
+      ["ryskuspecnaz"] = "ryskuspecnaz_scientific_outfit",
+      ["sby"] = "sby_military_outfit",
+      ["angel"] = "angel_spec_outfit",
+      ["posleduden"] = "posleduden_light_outfit",
+      ["greh"] = "greh_trenchcoat_outfit",
+      ["mirotvorec"] = "mirotvorec_specops_outfit"
+    }
+    give_object_to_actor(f[faction] or "novice_outfit")
+  elseif (string.find(section, "_1")) then
+    local f = {
+      ["stalker"] = "stalker_outfit",
+      ["bandit"] = "trenchcoat_outfit",
+      ["csky"] = "cs_light_outfit",
+      ["killer"] = "merc_outfit",
+      ["army"] = "specops_outfit",
+      ["dolg"] = "dolg_outfit",
+      ["freedom"] = "svoboda_light_outfit",
+      ["ecolog"] = "ecolog_outfit_white",
+      ["monolith"] = "monolith_nbc_outfit",
+      ["zombied"] = "zombied_stalker_outfit",
+      ["isg"] = "isg_outfit",
+      ["darkstalker"] = "darkstalker_trenchcoat_outfit",
+      ["renegate"] = "renegate_trenchcoat_outfit",
+      ["varyag"] = "varyag_trenchcoat_outfit",
+      ["slizni"] = "slizni_novice_outfit",
+      ["velhan"] = "velhan_outfit",
+      ["fantom"] = "fantom_outfit",
+      ["veter"] = "veter_outfit",
+      ["osoznanie"] = "osoznanie_outfit",
+      ["apocalypse"] = "apocalypse_novice_outfit",
+      ["alfa"] = "alfa_outfit",
+      ["adinkvizicia"] = "adinkvizicia_outfit",
+      ["hunter"] = "hunter_trenchcoat_outfit",
+      ["voenstal"] = "voenstal_specops_outfit",
+      ["ryskuspecnaz"] = "ryskuspecnaz_specops_outfit",
+      ["sby"] = "sby_profi_military_outfit",
+      ["angel"] = "angel_outfit",
+      ["posleduden"] = "posleduden_novice_outfit",
+      ["greh"] = "greh_trenchcoat_outfit",
+      ["mirotvorec"] = "mirotvorec_specops_outfit"
+    }
+    give_object_to_actor(f[faction] or "novice_outfit")
+  else
+    local f = {
+      ["stalker"] = "novice_outfit",
+      ["bandit"] = "bandit_novice_outfit",
+      ["csky"] = "cs_novice_outfit",
+      ["killer"] = "merc_outfit",
+      ["army"] = "army_outfit",
+      ["dolg"] = "dolg_novice_outfit",
+      ["freedom"] = "svoboda_novice_outfit",
+      ["ecolog"] = "ecolog_outfit_orange",
+      ["monolith"] = "monolith_outfit",
+      ["zombied"] = "zombied_novice_outfit",
+      ["isg"] = "isg_novice_outfit",
+      ["darkstalker"] = "darkstalker_trenchcoat_outfit",
+      ["renegate"] = "renegate_novice_outfit",
+      ["varyag"] = "varyag_trenchcoat_outfit",
+      ["slizni"] = "slizni_novice_outfit",
+      ["velhan"] = "velhan_trenchcoat_brown_outfit",
+      ["fantom"] = "fantom_outfit",
+      ["veter"] = "veter_novice_outfit",
+      ["osoznanie"] = "osoznanie_outfit",
+      ["apocalypse"] = "apocalypse_night_outfit",
+      ["alfa"] = "alfa_outfit",
+      ["adinkvizicia"] = "adinkvizicia_outfit",
+      ["hunter"] = "hunter_trenchcoat_outfit",
+      ["voenstal"] = "voenstal_stalker_outfit",
+      ["ryskuspecnaz"] = "ryskuspecnaz_outfit",
+      ["sby"] = "sby_novice_specops_outfit",
+      ["angel"] = "angel_light_outfit",
+      ["posleduden"] = "posleduden_novice_outfit",
+      ["greh"] = "greh_trenchcoat_outfit",
+      ["mirotvorec"] = "mirotvorec_stalker_outfit"
+    }
+    give_object_to_actor(f[faction] or "novice_outfit")
+  end
+
+  -- cancel all tasks
+  local task_info = task_manager.get_task_manager().task_info
+  local task_ini = task_manager.task_ini
+  for task_id, tbl in pairs(task_info) do
+    --if not (tbl.storyline) then
+    tbl.forced_status = "fail"
+    tbl.cancelled_by_actor = true
+    --end
+  end
+
+  -- initiate transitition and removal of victim
+  local level_name = sim:level_name(game_graph():vertex(se_obj.m_game_vertex_id):level_id())
+  if (level_name == level.name()) then
+    local hud = get_hud()
+    hud:HidePdaMenu()
+    hud:HideActorMenu()
+    db.actor:set_actor_position(se_obj.position)
+    level.remove_cam_effector(210409)
+    addon_playAnimation()
+
+    level.add_pp_effector("deimos1.ppe", 210410, false)
+    if se_obj then
+      -- Remove victim from game
+      alife():release(se_obj, true)
+    end
+  else
+    local pos = se_obj.position
+    local lvid = se_obj.m_level_vertex_id
+    local gvid = se_obj.m_game_vertex_id
+    level.add_pp_effector("deimos1.ppe", 210410, false)
+    level.hide_indicators_safe()
+
+    if se_obj then
+      -- Remove victim from game
+      alife():release(se_obj, true)
+    end
+
+    azazel_death = true
+    local function tele_me_now(id)
+      ChangeLevel(pos, lvid, gvid, vector():set(0, 0, 0))
+      return true
+    end
+
+    CreateTimeEvent(0, "tele", 0, tele_me_now, se_obj.id)
+  end
+
+  return true
+end
+
+function cam_effector_end()
+  level.enable_input()
+  db.actor:set_health_ex(1)
+  db.actor.power = 100000
+  db.actor.radiation = -100000
+  db.actor.bleeding = 100000
+  db.actor.satiety = 100000
+  bind_stalker_ext.invulnerable_time = nil
+end
+
+local function save_state(m_data)
+  if not m_data.azazel_state then
+    m_data.azazel_state = {}
+  end
+
+  m_data.azazel_state.azazel_death = azazel_death
+end
+
+local function load_state(m_data)
+  if not m_data.azazel_state then
+    return
+  end
+
+  azazel_death = m_data.azazel_state.azazel_death or false
+end
+
+function on_game_start()
+  RegisterScriptCallback("actor_on_before_death", actor_on_before_death)
+  RegisterScriptCallback("on_game_load", on_game_load)
+  --addon
+  RegisterScriptCallback("main_menu_on_init", main_menu_on_init)
+
+  RegisterScriptCallback("save_state", save_state)
+  RegisterScriptCallback("load_state", load_state)
+end

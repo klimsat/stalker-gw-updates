@@ -1,0 +1,204 @@
+<w>
+	<main_wnd x="0" y="50" width="1024" height="1080" />
+
+	<frame1 x="28" y="41" width="764" height="90" stretch="1">
+		<texture>ui_inGame2_pda_buttons_background</texture>
+	</frame1>
+
+	<button_back x="50" y="92" width="80" height="28">
+		<text font="letterica16" x="0" y="0" align="c" vert_align="c" r="255" g="255" b="255">Back</text>
+		<texture>ui_inGame2_pda_button</texture>
+	</button_back>
+	<button_next x="120" y="92" width="80" height="28">
+		<text font="letterica16" x="0" y="0" align="c" vert_align="c" r="255" g="255" b="255">Next</text>
+		<texture>ui_inGame2_pda_button</texture>
+	</button_next>
+
+	<relation_bar x="200" y="80" width="600" height="90">
+		<button_declare_war x="0" y="12" width="90" height="28">
+			<text font="letterica16" x="0" y="0" align="c" vert_align="c" r="255" g="255" b="255">st_pda_button_declare_war</text>
+			<texture>ui_inGame2_pda_button</texture>
+		</button_declare_war>
+
+		<relation_text x="180" y="18" width="25" height="25" stretch="">
+			<text align="l" x="0" y="0" font="letterica16" r="255" g="255" b="255">ui_mm_pda_factions_tab_relation_label</text>
+		</relation_text>
+
+		<list_relations x="280" y="16" width="60" height="27">
+			<list_font r="190" g="190" b="190" font="letterica16" />
+			<text_color>
+				<e r="170" g="170" b="170" />
+				<d r="70" g="70" b="70" />
+			</text_color>
+		</list_relations>
+
+		<relation_cost x="350" y="18" width="25" height="25" stretch="">
+			<text align="l" x="0" y="0" font="letterica16" r="255" g="255" b="255">ui_mm_pda_factions_tab_relation_cost</text>
+		</relation_cost>
+		<button_change_relation x="490" y="12" width="80" height="28">
+			<text font="letterica16" x="0" y="0" align="c" vert_align="c" r="255" g="255" b="255">st_pda_button_change_relation</text>
+			<texture>ui_inGame2_pda_button</texture>
+		</button_change_relation>
+	</relation_bar>
+
+	<frame2 x="28" y="135" width="764" height="571" stretch="1">
+		<texture>ui_inGame2_pda_buttons_background</texture>
+	</frame2>
+
+	<vkladka_general_1 x="40" y="135" width="260" height="80" stretch="1">
+		<selection_1 x="0" y="10" width="276" height="83" stretch="1">
+			<texture>ui_inGame2_armor_highlighter</texture>
+		</selection_1>
+		<Static_name_1 x="5" y="16" width="25" height="25" stretch="">
+			<text align="2" x="0" y="0" font="letterica18" r="255" g="255" b="255" />
+		</Static_name_1>
+
+		<Static_icon_1 x="150" y="16" width="110" height="70" stretch="1" />
+
+		<Static_info_11 x="8" y="46" width="25" height="25" stretch="1">
+			<text align="l" x="0" y="0" font="letterica16" r="255" g="255" b="255" />
+		</Static_info_11>
+		<Static_info_12 x="8" y="66" width="50" height="50" stretch="1">
+			<text align="l" x="0" y="0" font="letterica16" r="255" g="255" b="255" />
+		</Static_info_12>
+	</vkladka_general_1>
+
+	<vkladka_general_2 x="40" y="225" width="260" height="80" stretch="1">
+		<selection_2 x="0" y="10" width="276" height="83" stretch="1">
+			<texture>ui_inGame2_armor_highlighter</texture>
+		</selection_2>
+		<Static_name_2 x="5" y="16" width="50" height="50" stretch="">
+			<text align="2" x="0" y="0" font="letterica18" r="255" g="255" b="255" />
+		</Static_name_2>
+
+		<Static_icon_2 x="150" y="16" width="110" height="70" stretch="1" />
+
+		<Static_info_21 x="8" y="46" width="25" height="25" stretch="1">
+			<text align="l" x="0" y="0" font="letterica16" r="255" g="255" b="255" />
+		</Static_info_21>
+		<Static_info_22 x="8" y="66" width="50" height="50" stretch="1">
+			<text align="l" x="0" y="0" font="letterica16" r="255" g="255" b="255" />
+		</Static_info_22>
+	</vkladka_general_2>
+
+	<vkladka_general_3 x="40" y="315" width="260" height="80" stretch="1">
+		<selection_3 x="0" y="10" width="276" height="83" stretch="1">
+			<texture>ui_inGame2_armor_highlighter</texture>
+		</selection_3>
+		<Static_name_3 x="5" y="16" width="50" height="50" stretch="">
+			<text align="2" x="0" y="0" font="letterica18" r="255" g="255" b="255" />
+		</Static_name_3>
+
+		<Static_icon_3 x="150" y="16" width="110" height="70" stretch="1" />
+
+		<Static_info_31 x="8" y="46" width="25" height="25" stretch="1">
+			<text align="l" x="0" y="0" font="letterica16" r="255" g="255" b="255" />
+		</Static_info_31>
+		<Static_info_32 x="8" y="66" width="50" height="50" stretch="1">
+			<text align="l" x="0" y="0" font="letterica16" r="255" g="255" b="255" />
+		</Static_info_32>
+	</vkladka_general_3>
+
+	<vkladka_general_4 x="40" y="405" width="260" height="80" stretch="1">
+		<selection_4 x="0" y="10" width="276" height="83" stretch="1">
+			<texture>ui_inGame2_armor_highlighter</texture>
+		</selection_4>
+		<Static_name_4 x="5" y="16" width="50" height="50" stretch="">
+			<text align="2" x="0" y="0" font="letterica18" r="255" g="255" b="255" />
+		</Static_name_4>
+
+		<Static_icon_4 x="150" y="16" width="110" height="70" stretch="1" />
+
+		<Static_info_41 x="8" y="46" width="25" height="25" stretch="1">
+			<text align="l" x="0" y="0" font="letterica16" r="255" g="255" b="255" />
+		</Static_info_41>
+		<Static_info_42 x="8" y="66" width="50" height="50" stretch="1">
+			<text align="l" x="0" y="0" font="letterica16" r="255" g="255" b="255" />
+		</Static_info_42>
+	</vkladka_general_4>
+
+	<vkladka_general_5 x="40" y="495" width="260" height="80" stretch="1">
+		<selection_5 x="0" y="10" width="276" height="83" stretch="1">
+			<texture>ui_inGame2_armor_highlighter</texture>
+		</selection_5>
+		<Static_name_5 x="5" y="16" width="50" height="50" stretch="">
+			<text align="2" x="0" y="0" font="letterica18" r="255" g="255" b="255" />
+		</Static_name_5>
+
+		<Static_icon_5 x="150" y="16" width="110" height="70" stretch="1" />
+
+		<Static_info_51 x="8" y="46" width="25" height="25" stretch="1">
+			<text align="l" x="0" y="0" font="letterica16" r="255" g="255" b="255" />
+		</Static_info_51>
+		<Static_info_52 x="8" y="66" width="50" height="50" stretch="1">
+			<text align="l" x="0" y="0" font="letterica16" r="255" g="255" b="255" />
+		</Static_info_52>
+	</vkladka_general_5>
+
+	<vkladka_general_6 x="40" y="585" width="260" height="80" stretch="1">
+		<selection_6 x="0" y="10" width="276" height="83" stretch="1">
+			<texture>ui_inGame2_armor_highlighter</texture>
+		</selection_6>
+		<Static_name_6 x="5" y="16" width="50" height="50" stretch="">
+			<text align="2" x="0" y="0" font="letterica18" r="255" g="255" b="255" />
+		</Static_name_6>
+
+		<Static_icon_6 x="150" y="16" width="110" height="70" stretch="1" />
+
+		<Static_info_61 x="8" y="46" width="25" height="25" stretch="1">
+			<text align="l" x="0" y="0" font="letterica16" r="255" g="255" b="255" />
+		</Static_info_61>
+		<Static_info_62 x="8" y="66" width="50" height="50" stretch="1">
+			<text align="l" x="0" y="0" font="letterica16" r="255" g="255" b="255" />
+		</Static_info_62>
+	</vkladka_general_6>
+
+	<hr_1 x="308" y="145" width="1" height="552" stretch="1">
+		<auto_frameline x="0" y="0" width="1" height="552" vertical="1">
+			<texture>ui_inGame2_pda_line_vertical</texture>
+		</auto_frameline>
+	</hr_1>
+
+	<visible_area x="310" y="145" width="450" height="552">
+		<faction_name x="140" y="2" width="120" height="20" stretch="1">
+			<text align="l" x="0" y="0" font="letterica18" r="255" g="255" b="255" />
+		</faction_name>
+
+		<faction_leader x="10" y="30" width="120" height="20" stretch="1">
+			<text align="l" x="0" y="0" font="letterica16" r="255" g="255" b="255">ui_mm_pda_factions_tab_leader</text>
+		</faction_leader>
+		<faction_text x="10" y="50" width="120" height="20" stretch="1">
+			<text align="l" x="0" y="0" font="letterica16" r="255" g="255" b="255">ui_mm_pda_factions_tab_zones</text>
+		</faction_text>
+
+		<bases_list x="10" y="80" width="195" height="474" item_height="25" can_select="0" always_show_scroll="0" />
+
+		<hr_2 x="210" y="30" width="1" height="522" stretch="1">
+			<auto_frameline x="0" y="0" width="1" height="522" vertical="1">
+				<texture>ui_inGame2_pda_line_vertical</texture>
+			</auto_frameline>
+		</hr_2>
+
+		<scroll_view x="220" y="10" width="260" height="540" always_show_scroll="0" vert_interval="8">
+			<faction_statistics x="225" y="30" width="120" height="20" stretch="1">
+				<text align="l" x="0" y="0" font="letterica16" r="255" g="255" b="255">ui_mm_pda_factions_tab_statistics</text>
+			</faction_statistics>
+			<faction_members x="240" y="60" width="120" height="20" stretch="1">
+				<text align="l" x="0" y="0" font="letterica16" r="255" g="255" b="255">ui_mm_pda_factions_tab_members</text>
+			</faction_members>
+			<faction_squads x="240" y="80" width="120" height="20" stretch="1">
+				<text align="l" x="0" y="0" font="letterica16" r="255" g="255" b="255">ui_mm_pda_factions_tab_squads</text>
+			</faction_squads>
+			<faction_power x="240" y="100" width="120" height="20" stretch="1">
+				<text align="l" x="0" y="0" font="letterica16" r="255" g="255" b="255">ui_mm_pda_factions_tab_power</text>
+			</faction_power>
+			<faction_relation x="240" y="120" width="120" height="20" stretch="1">
+				<text align="l" x="0" y="0" font="letterica16" r="255" g="255" b="255">ui_mm_pda_factions_tab_relation</text>
+			</faction_relation>
+			<faction_money x="240" y="140" width="120" height="20" stretch="1">
+				<text align="l" x="0" y="0" font="letterica16" r="255" g="255" b="255">ui_mm_pda_factions_tab_money</text>
+			</faction_money>
+		</scroll_view>
+
+	</visible_area>
+</w>

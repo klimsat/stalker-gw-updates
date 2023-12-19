@@ -1,0 +1,9 @@
+[logic]
+active = sr_territory@threat
+ 
+[sr_territory@threat]
+on_combat =  %+rei_base_territory_alarm%
+on_timer = 1400000 | sr_territory@otboi
+
+[sr_territory@otboi]
+on_info = %-rei_base_territory_alarm%

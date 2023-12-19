@@ -1,0 +1,283 @@
+-- Pankzey
+
+function on_game_start()
+  RegisterScriptCallback("actor_on_update", actor_on_update)
+end
+
+function actor_on_update(b, d)
+  local change_faction_by_outfit = axr_main.config:r_value("mm_options", "enable_change_faction_by_outfit", 1, true)
+
+  if not change_faction_by_outfit then
+    return
+  end
+
+  outfit_npc()
+end
+
+local idOutfit = nil
+
+function outfit_npc()
+  local oActor = db.actor
+  local oOutfit = oActor and oActor:get_current_outfit()
+  local sCommunity = "actor"
+  if not oOutfit then
+    return
+  end
+  if oOutfit then
+    if oOutfit:id() == idOutfit then
+      return
+    else
+      idOutfit = oOutfit:id()
+      --/ таблица соответствий группировок костюмам (секциям)
+      local tCommunityByOutfit = {
+        ["cs_novice_outfit"] = "actor_csky",
+        ["cs_light_novice_outfit"] = "actor_csky",
+        ["cs_light_outfit"] = "actor_csky",
+        ["cs_medium_outfit"] = "actor_csky",
+        ["cs_heavy_outfit"] = "actor_csky",
+        ["cs_nbc_outfit"] = "actor_csky", --/ #+#
+        ["cs_scientific_outfit"] = "actor_csky", --/ #+#
+        ["cs_exo_outfit"] = "actor_csky", --/ #+#
+        ["novice_outfit"] = "actor_stalker",
+        ["novice_2_outfit"] = "actor_stalker",
+        ["stalker_outfit"] = "actor_stalker",
+        ["barmerc_outfit"] = "actor_killer", --/ #+#
+        ["nbc_outfit"] = "actor_stalker", --/ #+#
+        ["radiation_outfit"] = "actor_stalker", --/ #+#
+        ["scientific_outfit"] = "actor_stalker",
+        ["scientific_heavy_outfit"] = "actor_stalker",
+        ["exo_outfit"] = "actor_stalker",
+        ["exo_proto_outfit"] = "actor_stalker",
+        ["svoboda_novice_outfit"] = "actor_freedom",
+        ["svoboda_light_outfit"] = "actor_freedom",
+        ["svoboda_heavy_outfit"] = "actor_freedom",
+        ["svoboda_heavy_outfit_2"] = "actor_freedom",
+        ["svoboda_radiation_outfit"] = "actor_freedom", --/ #+#
+        ["svoboda_scientific_outfit"] = "actor_freedom",
+        ["svoboda_exo_outfit"] = "actor_freedom",
+        ["dolg_novice_outfit"] = "actor_dolg",
+        ["dolg_outfit"] = "actor_dolg",
+        ["dolg_heavy_outfit"] = "actor_dolg",
+        ["dolg_radiation_outfit"] = "actor_dolg", --/ #+#
+        ["dolg_scientific_outfit"] = "actor_dolg",
+        ["dolg_exo_outfit"] = "actor_dolg",
+        ["dolg_protoexo_skat_outfit"] = "actor_dolg",
+        ["bandit_novice_outfit"] = "actor_bandit",
+        ["banditmerc_outfit"] = "actor_bandit",
+        ["trenchcoat_brown_outfit"] = "actor_bandit", --/ #+#
+        ["trenchcoat_outfit"] = "actor_bandit", --/ #+#
+        ["bandit_specops_outfit"] = "actor_bandit", --/ #+#
+        ["bandit_scientific_outfit"] = "actor_bandit", --/ #+#
+        ["bandit_radiation_outfit"] = "actor_bandit", --/ #+#
+        ["bandit_exo_outfit"] = "actor_bandit",
+        ["ecolog_guard_outfit"] = "actor_ecolog",
+        ["ecolog_outfit_orange"] = "actor_ecolog",
+        ["ecolog_outfit_green"] = "actor_ecolog",
+        ["ecolog_outfit_white"] = "actor_ecolog",
+        ["ecolog_outfit_blue"] = "actor_ecolog",
+        ["ecolog_halat_outfit"] = "actor_ecolog",
+        ["ecolog_radiation_outfit"] = "actor_ecolog",
+        ["ecolog_exo_outfit"] = "actor_ecolog",
+        ["ecolog_ssp11a_outfit"] = "actor_ecolog",
+        ["merc_novice_outfit"] = "actor_killer",
+        ["merc_outfit"] = "actor_killer",
+        ["merc_radiation_outfit"] = "actor_killer", --/ #+#
+        ["merc_scientific_outfit"] = "actor_killer",
+        ["merc_exo_outfit"] = "actor_killer",
+        ["army_outfit"] = "actor_army", --/ #+#
+        ["specops_outfit"] = "actor_army",
+        ["military_outfit"] = "actor_army",
+        ["army_radiation_outfit"] = "actor_army",
+        ["army_exo_outfit"] = "actor_army",
+        ["isg_novice_outfit"] = "actor_isg", --/ #+#
+        ["isg_outfit"] = "actor_isg", --/ #+#
+        ["isg_scientific_outfit"] = "actor_isg", --/ #+#
+        ["isg_radiation_outfit"] = "actor_isg", --/ #+#
+        ["isg_exo_outfit"] = "actor_isg", --/ #+#
+        ["renegate_novice_outfit"] = "actor_renegate",
+        ["renegate_trenchcoat_outfit"] = "actor_renegate",
+        ["renegate_scientific_outfit"] = "actor_renegate",
+        ["renegate_outfit"] = "actor_renegate",
+        ["renegate_radiation_outfit"] = "actor_renegate",
+        ["renegate_exo_outfit"] = "actor_renegate",
+        ["varyag_trenchcoat_outfit"] = "actor_varyag",
+        ["varyag_outfit"] = "actor_varyag",
+        ["varyag_exoplash_outfit"] = "actor_varyag",
+        ["varyag_1_outfit"] = "actor_varyag",
+        ["varyag_2_outfit"] = "actor_varyag",
+        ["varyag_3_outfit"] = "actor_varyag",
+        ["varyag_4_outfit"] = "actor_varyag",
+        ["varyag_bronislav_exo_outfit"] = "actor_varyag",
+        ["slizni_novice_outfit"] = "actor_slizni",
+        ["slizni_trenchcoat_outfit"] = "actor_slizni",
+        ["slizni_trenchcoat_brown_outfit"] = "actor_slizni",
+        ["slizni_outfit"] = "actor_slizni",
+        ["velhan_outfit"] = "actor_velhan",
+        ["velhan_trenchcoat_brown_outfit"] = "actor_velhan",
+        ["velhan_specops_outfit"] = "actor_velhan",
+        ["velhan_radiation_outfit"] = "actor_velhan",
+        ["velhan_exo_outfit"] = "actor_velhan",
+        ["fantom_outfit"] = "actor_fantom",
+        ["fantom_scientific_outfit"] = "actor_fantom",
+        ["fantom_radiation_outfit"] = "actor_fantom",
+        ["fantom_exo_outfit"] = "actor_fantom",
+        ["veter_novice_outfit"] = "actor_veter",
+        ["veter_outfit"] = "actor_veter",
+        ["veter_scientific_outfit"] = "actor_veter",
+        ["veter_radiation_outfit"] = "actor_veter",
+        ["veter_exo_outfit"] = "actor_veter",
+        ["osoznanie_outfit"] = "actor_osoznanie",
+        ["osoznanie_scientific_outfit"] = "actor_osoznanie",
+        ["osoznanie_radiation_outfit"] = "actor_osoznanie",
+        ["osoznanie_exo_outfit"] = "actor_osoznanie",
+        ["alfa_outfit"] = "actor_alfa",
+        ["alfa_skat_outfit"] = "actor_alfa",
+        ["alfa_exo_outfit"] = "actor_alfa",
+        ["apocalypse_novice_outfit"] = "actor_apocalypse",
+        ["apocalypse_night_outfit"] = "actor_apocalypse",
+        ["apocalypse_scientific_outfit"] = "actor_apocalypse",
+        ["apocalypse_scientific2_outfit"] = "actor_apocalypse",
+        ["apocalypse_radiation_outfit"] = "actor_apocalypse",
+        ["apocalypse_heavy_outfit"] = "actor_apocalypse",
+        ["apocalypse_exo_outfit"] = "actor_apocalypse",
+        ["adinkvizicia_outfit"] = "actor_adinkvizicia",
+        ["adinkvizicia_scientific_outfit"] = "actor_adinkvizicia",
+        ["adinkvizicia_radiation_outfit"] = "actor_adinkvizicia",
+        ["adinkvizicia_exo_outfit"] = "actor_adinkvizicia",
+        ["hunter_trenchcoat_outfit"] = "actor_hunter",
+        ["hunter_outfit"] = "actor_hunter",
+        ["hunter_exoplash_outfit"] = "actor_hunter",
+        ["hunter_scientific_outfit"] = "actor_hunter",
+        ["voenstal_stalker_outfit"] = "actor_voenstal",
+        ["voenstal_specops_outfit"] = "actor_voenstal",
+        ["voenstal_scientific_outfit"] = "actor_voenstal",
+        ["voenstal_military_outfit"] = "actor_voenstal",
+        ["voenstal_military_exo_outfit"] = "actor_voenstal",
+        ["mirotvorec_ismaa_outfit"] = "actor_mirotvorec",
+        ["mirotvorec_stalker_outfit"] = "actor_mirotvorec",
+        ["mirotvorec_specops_outfit"] = "actor_mirotvorec",
+        ["mirotvorec_scientific_outfit"] = "actor_mirotvorec",
+        ["mirotvorec_military_outfit"] = "actor_mirotvorec",
+        ["mirotvorec_radiation_outfit"] = "actor_mirotvorec",
+        ["mirotvorec_military_exo_outfit"] = "actor_mirotvorec",
+        ["ryskuspecnaz_outfit"] = "actor_ryskuspecnaz", --/ #+#
+        ["ryskuspecnaz_specops_outfit"] = "actor_ryskuspecnaz",
+        ["ryskuspecnaz_scientific_outfit"] = "actor_ryskuspecnaz",
+        ["ryskuspecnaz_military_outfit"] = "actor_ryskuspecnaz",
+        ["ryskuspecnaz_military_exo_outfit"] = "actor_ryskuspecnaz",
+        ["ryskuspecnaz_military_juggernaut_outfit"] = "actor_ryskuspecnaz",
+        ["sby_military_outfit"] = "actor_sby",
+        ["sby_novice_specops_outfit"] = "actor_sby",
+        ["sby_profi_military_outfit"] = "actor_sby",
+        ["angel_light_outfit"] = "actor_angel",
+		["angel_outfit"] = "actor_angel",
+        ["angel_seva_outfit"] = "actor_angel",
+        ["angel_tb_outfit"] = "actor_angel",
+        ["angel_exo_outfit"] = "actor_angel",
+        ["angel_skat_outfit"] = "actor_angel",
+		["angel_spec_outfit"] = "actor_angel",
+        ["posleduden_novice_outfit"] = "actor_posleduden",
+        ["posleduden_light_novice_outfit"] = "actor_posleduden",
+        ["posleduden_light_outfit"] = "actor_posleduden",
+        ["posleduden_medium_outfit"] = "actor_posleduden",
+        ["posleduden_scientific_outfit"] = "actor_posleduden",
+        ["posleduden_exo_outfit"] = "actor_posleduden",
+        ["zombied_novice_outfit"] = "actor_zombied", --/ #+#
+        ["zombied_stalker_outfit"] = "actor_zombied",
+        ["zombied_merc_outfit"] = "actor_zombied",
+        ["zombied_specops_outfit"] = "actor_zombied",
+        ["zombied_dolg_exo_outfit"] = "actor_zombied",
+        ["darkstalker_trenchcoat_outfit"] = "actor_darkstalker",
+        ["darkstalker_trenchcoat_brown_outfit"] = "actor_darkstalker",
+        ["darkstalker_outfit"] = "actor_darkstalker",
+        ["greh_trenchcoat_outfit"] = "actor_greh",
+        ["greh_trenchcoat_exo_outfit"] = "actor_greh",
+        ["greh_light_outfit"] = "actor_greh",
+        ["greh_light_1_outfit"] = "actor_greh",
+        ["greh_light_2_outfit"] = "actor_greh",
+        ["greh_heavy_1_outfit"] = "actor_greh",
+        ["greh_heavy_2_outfit"] = "actor_greh",
+        ["monolith_novice_outfit"] = "actor_monolith",
+        ["monolith_outfit"] = "actor_monolith",
+        ["monolith_nbc_outfit"] = "actor_monolith", --/ #+#
+        ["monolith_radiation_outfit"] = "actor_monolith", --/ #+#
+        ["monolith_scientific_outfit"] = "actor_monolith",
+        ["monolith_exo_outfit"] = "actor_monolith",
+        ["exo_pnb_outfit"] = "actor_stalker",
+        --Донат
+        ["dolg_donat_1_protoexo_skat_outfit"] = "actor_dolg",
+		--Лидеры для Azazel
+		["leader_azazel_stalker_outfit"] = "actor_stalker",
+		["leader_azazel_bandit_outfit"] = "actor_bandit",
+		["leader_azazel_csky_outfit"] = "actor_csky",
+		["leader_azazel_killer_outfit"] = "actor_killer",
+		["leader_azazel_army_outfit"] = "actor_army",
+		["leader_azazel_dolg_outfit"] = "actor_dolg",
+		["leader_azazel_freedom_outfit"] = "actor_freedom",
+		["leader_azazel_ecolog_outfit"] = "actor_ecolog",
+		["leader_azazel_monolith_outfit"] = "actor_monolith",
+		["leader_azazel_zombied_outfit"] = "actor_zombied",
+		["leader_azazel_isg_outfit"] = "actor_isg",
+		["leader_azazel_darkstalker_outfit"] = "actor_darkstalker",
+		["leader_azazel_renegate_outfit"] = "actor_renegate",
+		["leader_azazel_varyag_outfit"] = "actor_varyag",
+		["leader_azazel_slizni_outfit"] = "actor_slizni",
+		["leader_azazel_velhan_outfit"] = "actor_velhan",
+		["leader_azazel_fantom_outfit"] = "actor_fantom",
+		["leader_azazel_veter_outfit"] = "actor_veter",
+		["leader_azazel_osoznanie_outfit"] = "actor_osoznanie",
+		["leader_azazel_apocalypse_outfit"] = "actor_apocalypse",
+		["leader_azazel_alfa_outfit"] = "actor_alfa",
+		["leader_azazel_adinkvizicia_outfit"] = "actor_adinkvizicia",
+		["leader_azazel_hunter_outfit"] = "actor_hunter",
+		["leader_azazel_voenstal_outfit"] = "actor_voenstal",
+		["leader_azazel_ryskuspecnaz_outfit"] = "actor_ryskuspecnaz",
+		["leader_azazel_sby_outfit"] = "actor_sby",
+		["leader_azazel_angel_outfit"] = "actor_angel",
+		["leader_azazel_posleduden_outfit"] = "actor_posleduden",
+		["leader_azazel_greh_outfit"] = "actor_greh",
+		["leader_azazel_mirotvorec_outfit"] = "actor_mirotvorec",
+		--Лидеры для обычной игры
+		["leader_stalker_outfit"] = "actor_stalker",
+		["leader_bandit_outfit"] = "actor_bandit",
+		["leader_csky_outfit"] = "actor_csky",
+		["leader_killer_outfit"] = "actor_killer",
+		["leader_army_outfit"] = "actor_army",
+		["leader_dolg_outfit"] = "actor_dolg",
+		["leader_freedom_outfit"] = "actor_freedom",
+		["leader_ecolog_outfit"] = "actor_ecolog",
+		["leader_monolith_outfit"] = "actor_monolith",
+		["leader_zombied_outfit"] = "actor_zombied",
+		["leader_isg_outfit"] = "actor_isg",
+		["leader_darkstalker_outfit"] = "actor_darkstalker",
+		["leader_renegate_outfit"] = "actor_renegate",
+		["leader_varyag_outfit"] = "actor_varyag",
+		["leader_slizni_outfit"] = "actor_slizni",
+		["leader_velhan_outfit"] = "actor_velhan",
+		["leader_fantom_outfit"] = "actor_fantom",
+		["leader_veter_outfit"] = "actor_veter",
+		["leader_osoznanie_outfit"] = "actor_osoznanie",
+		["leader_apocalypse_outfit"] = "actor_apocalypse",
+		["leader_alfa_outfit"] = "actor_alfa",
+		["leader_adinkvizicia_outfit"] = "actor_adinkvizicia",
+		["leader_hunter_outfit"] = "actor_hunter",
+		["leader_voenstal_outfit"] = "actor_voenstal",
+		["leader_ryskuspecnaz_outfit"] = "actor_ryskuspecnaz",
+		["leader_sby_outfit"] = "actor_sby",
+		["leader_angel_outfit"] = "actor_angel",
+		["leader_posleduden_outfit"] = "actor_posleduden",
+		["leader_greh_outfit"] = "actor_greh",
+		["leader_mirotvorec_outfit"] = "actor_mirotvorec",
+		["leader_ryskuspecnaz_outfit"] = "actor_ryskuspecnaz"
+      }
+      sCommunity = tCommunityByOutfit[oOutfit:section()] or sCommunity
+    end
+  elseif idOutfit then
+    idOutfit = nil
+  else
+    return
+  end
+  if sCommunity ~= oActor:character_community() then
+    oActor:set_character_community(sCommunity, 0, 0)
+  end
+end

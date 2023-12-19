@@ -1,0 +1,181 @@
+local has_smart_capture_progress = axr_main.config:r_value("mm_options", "enable_smart_capture_progress", 1, true)
+
+progress_table = {
+  {
+    ["smartId"] = nil,
+    ["progress"] = nil,
+    ["status_text"] = nil,
+    ["status_text_2"] = nil,
+    ["status_text_3"] = nil
+  },
+  {
+    ["smartId"] = nil,
+    ["progress"] = nil,
+    ["status_text"] = nil,
+    ["status_text_2"] = nil,
+    ["status_text_3"] = nil
+  },
+  {
+    ["smartId"] = nil,
+    ["progress"] = nil,
+    ["status_text"] = nil,
+    ["status_text_2"] = nil,
+    ["status_text_3"] = nil
+  }
+}
+
+function hide_ui(smart)
+  local latest_index = nil
+  for index, value in pairs(progress_table) do
+    if value.smartId and value.smartId == smart.id then
+      latest_index = index
+    end
+  end
+
+  if not latest_index then
+    return
+  end
+
+  progress_table[latest_index].smartId = nil
+  progress_table[latest_index].progress = nil
+  progress_table[latest_index].status_text = nil
+  progress_table[latest_index].status_text_2 = nil
+  progress_table[latest_index].status_text_3 = nil
+
+  local hud = get_hud()
+  local ui_name = strformat("cs_smart_capture_%s", latest_index)
+  local cs = hud and hud:GetCustomStatic(ui_name)
+
+  if (cs) then
+    hud:RemoveCustomStatic(ui_name)
+  end
+
+  return
+end
+
+local function show_ui(smart)
+  local hud = get_hud()
+  if not (hud) then
+    return
+  end
+
+  if not has_smart_capture_progress then
+    return
+  end
+
+  local latest_index = nil
+  for index, value in pairs(progress_table) do
+    if value.smartId and smart.id == value.smartId then
+      return
+    end
+    if not value.smartId and not latest_index then
+      latest_index = index
+    end
+  end
+
+  if not latest_index then
+    return
+  end
+
+  local npc_in_smart = sim_smart.npc_count(smart)
+  local squad_in_smart = sim_smart.squad_count(smart)
+
+  local ui_name = strformat("cs_smart_capture_%s", latest_index)
+  local cs = hud:GetCustomStatic(ui_name)
+
+  if (cs == nil) then
+    hud:AddCustomStatic(ui_name, true)
+    local xml = CScriptXmlInit()
+    xml:ParseFile("ui_smart_capture_info.xml")
+    cs = hud:GetCustomStatic(ui_name)
+    local w = cs:wnd()
+
+    progress_table[latest_index].progress = xml:InitProgressBar("smart_capture", w)
+    progress_table[latest_index].status_text = xml:InitStatic("status_text", w)
+    progress_table[latest_index].status_text_2 = xml:InitStatic("status_text_2", w)
+    progress_table[latest_index].status_text_3 = xml:InitStatic("status_text_3", w)
+  end
+
+  local text = sim_script_to_text.smart_names[smart:name()] or smart:name()
+  local dist = string.format("%.1f", smart.position:distance_to_sqr(alife():actor().position))
+
+  progress_table[latest_index].status_text:TextControl():SetText(strformat(GetString("ui_hud_smart_capture"), text))
+  progress_table[latest_index].status_text_2:TextControl():SetText(
+    strformat(GetString("ui_hud_smart_capture_owner_none"), npc_in_smart, squad_in_smart)
+  )
+  progress_table[latest_index].status_text_3:TextControl():SetText(
+    strformat(GetString("ui_hud_smart_capture_distance"), dist)
+  )
+  progress_table[latest_index].smartId = smart.id
+  progress_table[latest_index].progress:SetProgressPos(1)
+  progress_table[latest_index].progress:Show(true)
+
+  cs:wnd():TextControl():SetText("1 %")
+end
+
+local function update_progress_ui(smart)
+  local hud = get_hud()
+  if not (hud) then
+    return
+  end
+
+  local latest_index = nil
+  for index, value in pairs(progress_table) do
+    if value.smartId and value.smartId == smart.id then
+      latest_index = index
+    end
+  end
+
+  if not latest_index then
+    return
+  end
+
+  local ui_name = strformat("cs_smart_capture_%s", latest_index)
+  local cs = hud:GetCustomStatic(ui_name)
+  if cs == nil then
+    return
+  end
+
+  local time_global = time_global()
+  local text = sim_script_to_text.smart_names[smart:name()] or smart:name()
+  local dist = string.format("%.1f", smart.position:distance_to_sqr(alife():actor().position))
+  local npc_in_smart = sim_smart.npc_count(smart)
+  local squad_in_smart = sim_smart.squad_count(smart)
+  progress_table[latest_index].status_text:TextControl():SetText(strformat(GetString("ui_hud_smart_capture"), text))
+  progress_table[latest_index].status_text_2:TextControl():SetText(
+    strformat(GetString("ui_hud_smart_capture_owner_none"), npc_in_smart, squad_in_smart)
+  )
+  progress_table[latest_index].status_text_3:TextControl():SetText(
+    strformat(GetString("ui_hud_smart_capture_distance"), dist)
+  )
+
+  progress_table[latest_index].progress:Show(true)
+  progress_table[latest_index].status_text_2:Show(true)
+
+  local diff = sim_smart_capture.capture_time - (smart.manual_capture - time_global)
+
+  if diff < 0 then
+    progress_table[latest_index].progress:SetProgressPos(100)
+    cs:wnd():TextControl():SetText("100 %")
+
+    return
+  end
+
+  local percent = string.format("%.1f", diff * 100 / sim_smart_capture.capture_time)
+  progress_table[latest_index].progress:SetProgressPos(tonumber(percent))
+  cs:wnd():TextControl():SetText(strformat("%s %", percent))
+
+  return
+end
+
+local function opt_menu_on_accepted()
+  has_smart_capture_progress = axr_main.config:r_value("mm_options", "enable_smart_capture_progress", 1, true)
+end
+
+function on_game_start()
+  RegisterScriptCallback("smart_terrain_on_capture_start", show_ui)
+  RegisterScriptCallback("smart_terrain_on_capture_progress", update_progress_ui)
+  RegisterScriptCallback("smart_terrain_on_capture_finished", hide_ui)
+  RegisterScriptCallback("smart_terrain_on_capture_aborted", hide_ui)
+  RegisterScriptCallback("opt_menu_on_accepted", opt_menu_on_accepted)
+end

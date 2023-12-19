@@ -1,0 +1,31 @@
+[smart_terrain];for_stroika
+squad_id = 6
+max_population = 14
+respawn_params = respawn@for_stroika
+respawn_idle = 60000
+
+
+[respawn@for_stroika]
+spawn_military@novice
+spawn_military@advanced
+spawn_military@sniper
+
+[spawn_military@novice]
+spawn_squads = army_sim_squad_novice
+spawn_num = 3
+
+[spawn_military@advanced]
+spawn_squads = army_sim_squad_novice, army_sim_squad_advanced
+spawn_num = 3
+
+[spawn_military@sniper]
+spawn_squads = army_sim_squad_sniper, army_sim_squad_advanced
+spawn_num = 3
+
+[exclusive]
+for_stroika_camp_work_1 = forgotten\for_stroika_smart_logic.ltx
+for_stroika_camp_work_2 = forgotten\for_stroika_smart_logic.ltx
+for_stroika_camp_work_3 = forgotten\for_stroika_smart_logic.ltx
+for_stroika_camp_work_4 = forgotten\for_stroika_smart_logic.ltx
+for_stroika_camp_work_5 = forgotten\for_stroika_smart_logic.ltx
+for_stroika_camp_work_6 = forgotten\for_stroika_smart_logic.ltx

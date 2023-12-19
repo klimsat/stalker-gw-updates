@@ -1,0 +1,20 @@
+[smart_terrain]
+def_restr = jup_b41_sr_noweap
+safe_restr = jup_b41_sr_light
+smart_control = smart_control
+squad_id = 58
+max_population = 3
+;arrive_dist = 65
+
+[smart_control]
+noweap_zone = jup_b41_sr_noweap
+ignore_zone = jup_b41_sr_light
+alarm_start_sound = jup_b41_base_alarm
+alarm_stop_sound = jup_b41_base_relax
+
+[exclusive]
+leader = jupiter\jup_b41_smart_logic.ltx
+trader = jupiter\jup_b41_smart_logic.ltx
+mechanic = jupiter\jup_b41_smart_logic.ltx
+medik = jupiter\jup_b41_smart_logic.ltx
+barmen = jupiter\jup_b41_smart_logic.ltx

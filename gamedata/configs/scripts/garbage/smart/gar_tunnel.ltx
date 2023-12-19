@@ -1,0 +1,25 @@
+[smart_terrain]
+squad_id = 27
+max_population = 18
+respawn_params = respawn@gar_tunnel
+respawn_idle = 60000
+
+
+
+[respawn@gar_tunnel]
+spawn_stalker@advanced
+spawn_stalker@master
+
+[spawn_stalker@advanced]
+spawn_squads = stalker_sim_squad_novice, stalker_sim_squad_advanced
+spawn_num = 3
+
+[spawn_stalker@master]
+spawn_squads = stalker_sim_squad_advanced, stalker_sim_squad_advanced, stalker_sim_squad_veteran
+spawn_num = 3
+
+[exclusive]
+gar_tunnel_cover_work_1 = garbage\gar_tunnel_smart_logic.ltx
+gar_tunnel_cover_work_2 = garbage\gar_tunnel_smart_logic.ltx
+gar_tunnel_cover_work_3 = garbage\gar_tunnel_smart_logic.ltx
+gar_tunnel_cover_work_4 = garbage\gar_tunnel_smart_logic.ltx

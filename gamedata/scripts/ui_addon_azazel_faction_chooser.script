@@ -1,0 +1,405 @@
+-- File:        UI_ADDON_AZAZEL_FACTION_CHOOSER.SCRIPT
+-- Description: The script for choosing a faction after rebirth in the "Azazel" mode
+-- Created:     25.07.2017
+-- Last edit:	07.07.2017
+-- Author:      Debrovskiy
+-- LastVersion: 1.3
+-- =======================================================================================
+-- Modified by MaYaKOVSKIY (Discord - _mayakovskiy_)
+-- Last modification: 2023/09/24
+-- Adapted the script for modification Call of Chernobyl "Global War" Alpha 0.4
+-- =======================================================================================
+local inAlive = alife()
+addon_azazel_menu = {}
+
+class "addonAzazelFactionChooser"(CUIScriptWnd)
+
+function addonAzazelFactionChooser:__init(mainmenuReference)
+  super()
+  self.mainmenuReference = mainmenuReference
+
+  if not addon_azazel_menu.factionsPool then
+    addon_azazel_menu.factionsPool = {
+      ["stalker"] = false,
+      ["bandit"] = false,
+      ["csky"] = false,
+      ["dolg"] = false,
+      ["freedom"] = false,
+      ["killer"] = false,
+      ["army"] = false,
+      ["ecolog"] = false,
+      ["monolith"] = false,
+      ["isg"] = false,
+      ["darkstalker"] = false,
+      ["renegate"] = false,
+      ["varyag"] = false,
+      ["slizni"] = false,
+      ["velhan"] = false,
+      ["fantom"] = false,
+      ["osoznanie"] = false,
+      ["apocalypse"] = false,
+      ["alfa"] = false,
+      ["veter"] = false,
+      ["adinkvizicia"] = false,
+      ["hunter"] = false,
+      ["voenstal"] = false,
+      ["ryskuspecnaz"] = false,
+      ["sby"] = false,
+      ["angel"] = false,
+      ["posleduden"] = false,
+      ["greh"] = false,
+      ["mirotvorec"] = false,
+      ["zombied"] = false
+    }
+  end
+  self.factionsPool = addon_azazel_menu.factionsPool
+
+  self.factionsList = {
+    "stalker",
+    "bandit",
+    "csky",
+    "dolg",
+    "freedom",
+    "killer",
+    "army",
+    "ecolog",
+    "monolith",
+    "osoznanie",
+    "isg",
+    "darkstalker",
+    "renegate",
+    "varyag",
+    "slizni",
+    "velhan",
+    "fantom",
+    "apocalypse",
+    "alfa",
+    "veter",
+    "adinkvizicia",
+    "hunter",
+    "voenstal",
+    "ryskuspecnaz",
+    "sby",
+    "angel",
+    "posleduden",
+    "greh",
+    "mirotvorec",
+    "zombied"
+  }
+
+  self.checkBoxesList = {
+    "doNotPlayAnimation",
+    "findNearest",
+    "rebornInLeaders"
+  }
+
+  self:InitControls()
+  if inAlive and self.mainmenuReference then
+    self.mainmenuReference:Show(false)
+  end
+  self:InitCallBacks()
+end
+
+function addonAzazelFactionChooser:__finalize()
+end
+
+function addonAzazelFactionChooser:InitControls()
+  self:SetWndRect(Frect():set(0, 0, 1024, 768))
+
+  local xml = CScriptXmlInit()
+  xml:ParseFile("ui_addon_azazel_faction_chooser.xml")
+
+  --static лейблы
+  self.background_azazel = xml:InitStatic("background", self)
+  self.label_dead = xml:InitStatic("label_static_dead", self)
+  self.label_chooseFaction = xml:InitStatic("label_static_chooseFaction", self)
+  self.label_doNotPlayAnimation = xml:InitStatic("label_static_doNotPlayAnimation", self)
+  self.label_findNearest = xml:InitStatic("label_static_findNearest", self)
+  self.label_rebornInLeaders = xml:InitStatic("label_static_rebornInLeaders", self)
+
+  --Кнопки
+  self.btn_ok = xml:Init3tButton("btn_ok", self)
+  self:Register(self.btn_ok, "btn_ok")
+
+  --Таблицы фракций
+  local columnLimit = 5
+  local posX = 1
+  local posY = 150
+  for i = 1, #self.factionsList do
+    self["btn_" .. self.factionsList[i]] = xml:Init3tButton("faction_" .. self.factionsList[i], self)
+    self["btn_" .. self.factionsList[i]]:SetWndSize(vector2():set(110, 70))
+    self["btn_" .. self.factionsList[i]]:SetWndPos(vector2():set((120 * posX) + 80, posY))
+    self:Register(self["btn_" .. self.factionsList[i]], "btn_" .. self.factionsList[i])
+
+    self["icon_" .. self.factionsList[i]] =
+      xml:InitStatic(strformat("faction_%s:icon_%s", self.factionsList[i], self.factionsList[i]), self)
+    self["icon_" .. self.factionsList[i]]:InitTexture(getSenderSmsIcon(self.factionsList[i]))
+    self["icon_" .. self.factionsList[i]]:SetStretchTexture(true)
+    self["icon_" .. self.factionsList[i]]:SetWndSize(vector2():set(110, 70))
+    self["icon_" .. self.factionsList[i]]:SetWndPos(vector2():set((120 * posX) + 80, posY))
+    self["icon_" .. self.factionsList[i]]:SetTextureColor(GetARGB(255, 70, 70, 70))
+
+    posX = posX + 1
+    if (i % columnLimit) == 0 then
+      posY = posY + 80
+      posX = 1
+    end
+  end
+
+  self.btn_ok:Show(false)
+
+  -- Добавляем чекбоксы и инициализируем их состояние
+  for i = 1, #self.checkBoxesList do
+    self["checkbox_" .. self.checkBoxesList[i] .. "_checked"] =
+      xml:Init3tButton("checkbox_" .. self.checkBoxesList[i] .. "_checked", self)
+    self["checkbox_" .. self.checkBoxesList[i] .. "_unchecked"] =
+      xml:Init3tButton("checkbox_" .. self.checkBoxesList[i] .. "_unchecked", self)
+    self:Register(
+      self["checkbox_" .. self.checkBoxesList[i] .. "_unchecked"],
+      "checkbox_" .. self.checkBoxesList[i] .. "unchecked_select"
+    )
+    self:Register(
+      self["checkbox_" .. self.checkBoxesList[i] .. "_checked"],
+      "checkbox_" .. self.checkBoxesList[i] .. "checked_select"
+    )
+    self["checkbox_" .. self.checkBoxesList[i] .. "_unchecked"]:Show(not addon_azazel_menu[self.checkBoxesList[i]])
+    self["checkbox_" .. self.checkBoxesList[i] .. "_checked"]:Show(addon_azazel_menu[self.checkBoxesList[i]])
+  end
+end
+
+function addonAzazelFactionChooser:InitCallBacks()
+  self:AddCallback("btn_ok", ui_events.BUTTON_CLICKED, self["Ok"], self)
+  for i = 1, #self.factionsList do
+    self:AddCallback(
+      "btn_" .. self.factionsList[i],
+      ui_events.BUTTON_CLICKED,
+      self["OnFaction_" .. self.factionsList[i]],
+      self
+    )
+  end
+
+  -- Добавляем обработчики для чекбоксов
+  for i = 1, #self.checkBoxesList do
+    self:AddCallback(
+      "checkbox_" .. self.checkBoxesList[i] .. "checked_select",
+      ui_events.BUTTON_CLICKED,
+      self["OnCheckBox_" .. self.checkBoxesList[i]],
+      self
+    )
+    self:AddCallback(
+      "checkbox_" .. self.checkBoxesList[i] .. "unchecked_select",
+      ui_events.BUTTON_CLICKED,
+      self["OnCheckBox_" .. self.checkBoxesList[i]],
+      self
+    )
+  end
+end
+
+-- Методы обработки чекбоксов
+
+function addonAzazelFactionChooser:OnCheckBox_doNotPlayAnimation()
+  self:SwitchCheckbox("doNotPlayAnimation")
+end
+
+function addonAzazelFactionChooser:OnCheckBox_findNearest()
+  self:SwitchCheckbox("findNearest")
+  if addon_azazel_menu.findNearest then
+    self["checkbox_rebornInLeaders_unchecked"]:Show(false)
+    self["checkbox_rebornInLeaders_checked"]:Show(false)
+  else
+    self["checkbox_rebornInLeaders_unchecked"]:Show(not addon_azazel_menu.rebornInLeaders)
+    self["checkbox_rebornInLeaders_checked"]:Show(addon_azazel_menu.rebornInLeaders)
+    addon_azazel_menu.rebornInLeaders = false
+  end
+end
+
+function addonAzazelFactionChooser:OnCheckBox_rebornInLeaders()
+  self:SwitchCheckbox("rebornInLeaders")
+  if addon_azazel_menu.rebornInLeaders then
+    self["checkbox_findNearest_unchecked"]:Show(false)
+    self["checkbox_findNearest_checked"]:Show(false)
+  else
+    self["checkbox_findNearest_unchecked"]:Show(not addon_azazel_menu.findNearest)
+    self["checkbox_findNearest_checked"]:Show(addon_azazel_menu.findNearest)
+  end
+end
+
+-- Методы выбора фракции
+
+function addonAzazelFactionChooser:OnFaction_stalker()
+  self:OnFactionSelect("stalker")
+end
+
+function addonAzazelFactionChooser:OnFaction_bandit()
+  self:OnFactionSelect("bandit")
+end
+
+function addonAzazelFactionChooser:OnFaction_csky()
+  self:OnFactionSelect("csky")
+end
+
+function addonAzazelFactionChooser:OnFaction_dolg()
+  self:OnFactionSelect("dolg")
+end
+
+function addonAzazelFactionChooser:OnFaction_freedom()
+  self:OnFactionSelect("freedom")
+end
+
+function addonAzazelFactionChooser:OnFaction_killer()
+  self:OnFactionSelect("killer")
+end
+
+function addonAzazelFactionChooser:OnFaction_army()
+  self:OnFactionSelect("army")
+end
+
+function addonAzazelFactionChooser:OnFaction_ecolog()
+  self:OnFactionSelect("ecolog")
+end
+
+function addonAzazelFactionChooser:OnFaction_monolith()
+  self:OnFactionSelect("monolith")
+end
+
+function addonAzazelFactionChooser:OnFaction_osoznanie()
+  self:OnFactionSelect("osoznanie")
+end
+
+function addonAzazelFactionChooser:OnFaction_isg()
+  self:OnFactionSelect("isg")
+end
+
+function addonAzazelFactionChooser:OnFaction_darkstalker()
+  self:OnFactionSelect("darkstalker")
+end
+
+function addonAzazelFactionChooser:OnFaction_renegate()
+  self:OnFactionSelect("renegate")
+end
+
+function addonAzazelFactionChooser:OnFaction_varyag()
+  self:OnFactionSelect("varyag")
+end
+
+function addonAzazelFactionChooser:OnFaction_slizni()
+  self:OnFactionSelect("slizni")
+end
+
+function addonAzazelFactionChooser:OnFaction_velhan()
+  self:OnFactionSelect("velhan")
+end
+
+function addonAzazelFactionChooser:OnFaction_fantom()
+  self:OnFactionSelect("fantom")
+end
+
+function addonAzazelFactionChooser:OnFaction_veter()
+  self:OnFactionSelect("veter")
+end
+
+function addonAzazelFactionChooser:OnFaction_osoznanie()
+  self:OnFactionSelect("osoznanie")
+end
+
+function addonAzazelFactionChooser:OnFaction_apocalypse()
+  self:OnFactionSelect("apocalypse")
+end
+
+function addonAzazelFactionChooser:OnFaction_alfa()
+  self:OnFactionSelect("alfa")
+end
+
+function addonAzazelFactionChooser:OnFaction_adinkvizicia()
+  self:OnFactionSelect("adinkvizicia")
+end
+
+function addonAzazelFactionChooser:OnFaction_hunter()
+  self:OnFactionSelect("hunter")
+end
+
+function addonAzazelFactionChooser:OnFaction_voenstal()
+  self:OnFactionSelect("voenstal")
+end
+
+function addonAzazelFactionChooser:OnFaction_ryskuspecnaz()
+  self:OnFactionSelect("ryskuspecnaz")
+end
+
+function addonAzazelFactionChooser:OnFaction_sby()
+  self:OnFactionSelect("sby")
+end
+
+function addonAzazelFactionChooser:OnFaction_angel()
+  self:OnFactionSelect("angel")
+end
+
+function addonAzazelFactionChooser:OnFaction_posleduden()
+  self:OnFactionSelect("posleduden")
+end
+
+function addonAzazelFactionChooser:OnFaction_mirotvorec()
+  self:OnFactionSelect("mirotvorec")
+end
+
+function addonAzazelFactionChooser:OnFaction_zombied()
+  self:OnFactionSelect("zombied")
+end
+
+function addonAzazelFactionChooser:OnFaction_greh()
+  self:OnFactionSelect("greh")
+end
+
+function addonAzazelFactionChooser:OnFactionSelect(faction)
+  self.factionsPool[faction] = not self.factionsPool[faction]
+
+  if self.factionsPool[faction] then
+    self["icon_" .. faction]:SetTextureColor(GetARGB(255, 255, 255, 255))
+  else
+    self["icon_" .. faction]:SetTextureColor(GetARGB(255, 70, 70, 70))
+  end
+
+  self:UpdateOkVisibility()
+end
+
+function addonAzazelFactionChooser:SwitchCheckbox(checkboxName)
+  if (addon_azazel_menu[checkboxName]) then
+    self["checkbox_" .. checkboxName .. "_unchecked"]:Show(true)
+    self["checkbox_" .. checkboxName .. "_checked"]:Show(false)
+    addon_azazel_menu[checkboxName] = false
+  else
+    self["checkbox_" .. checkboxName .. "_unchecked"]:Show(false)
+    self["checkbox_" .. checkboxName .. "_checked"]:Show(true)
+    addon_azazel_menu[checkboxName] = true
+  end
+end
+
+function addonAzazelFactionChooser:UpdateOkVisibility()
+  for i = 1, #self.factionsList do
+    if self.factionsPool[self.factionsList[i]] then
+      self.btn_ok:Show(true)
+      return
+    end
+  end
+
+  self.btn_ok:Show(false)
+end
+
+function addonAzazelFactionChooser:Update()
+  CUIScriptWnd.Update(self)
+end
+
+function addonAzazelFactionChooser:Ok()
+  if not inAlive then
+    self:HideDialog()
+    self:Show(false)
+    return
+  end
+
+  if (azazel_mode.addonStep2(false)) then
+    self:HideDialog()
+    self:Show(false)
+    get_console():execute("main_menu off")
+  --device():pause(false)
+  end
+end

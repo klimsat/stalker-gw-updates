@@ -1,0 +1,12 @@
+[logic]
+active = ph_idle@init
+
+[ph_idle@init]
+on_info = {+rm_dolls_7_visited} nil, ph_idle@wait
+
+[ph_idle@wait]
+on_use = %+rm_dolls_7_visited% ph_idle@msg
+tips = rm_plakat_use
+
+[ph_idle@msg]
+on_info = %=give_news(st_tip:rm_dolls_7_msg:nil:0:30000) =rm_dolls_achv_news% nil

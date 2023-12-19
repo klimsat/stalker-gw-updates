@@ -1,0 +1,357 @@
+spawnTimer = nil
+spawnInterval = {}
+hunters_squads = {}
+
+levelCosts = {
+  "10000",
+  "20000",
+  "30000",
+  "40000",
+  "50000",
+  "60000",
+  "70000",
+  "80000",
+  "90000",
+  "100000",
+  "110000"
+}
+
+wantedTable = {
+  ["stalker"] = {},
+  ["bandit"] = {},
+  ["csky"] = {},
+  ["army"] = {},
+  ["freedom"] = {},
+  ["dolg"] = {},
+  ["ecolog"] = {},
+  ["killer"] = {},
+  ["monolith"] = {},
+  ["zombied"] = {},
+  ["isg"] = {},
+  ["darkstalker"] = {},
+  ["renegate"] = {},
+  ["varyag"] = {},
+  ["slizni"] = {},
+  ["velhan"] = {},
+  ["fantom"] = {},
+  ["veter"] = {},
+  ["osoznanie"] = {},
+  ["alfa"] = {},
+  ["apocalypse"] = {},
+  ["adinkvizicia"] = {},
+  ["hunter"] = {},
+  ["voenstal"] = {},
+  ["mirotvorec"] = {},
+  ["ryskuspecnaz"] = {},
+  ["sby"] = {},
+  ["angel"] = {},
+  ["posleduden"] = {},
+  ["greh"] = {}
+}
+
+squadsByLevel = {
+  {
+    section = {"novice"},
+    count = 1
+  },
+  {
+    section = {"novice", "novnachun"},
+    count = 2
+  },
+  {
+    section = {"nachunaushu"},
+    count = 1
+  },
+  {
+    section = {"nachunaushu", "novadvan"},
+    count = 2
+  },
+  {
+    section = {"advanced"},
+    count = 1
+  },
+  {
+    section = {"advanced", "advanvet"},
+    count = 2
+  },
+  {
+    section = {"veteran"},
+    count = 1
+  },
+  {
+    section = {"veteran", "vetmas"},
+    count = 2
+  },
+  {
+    section = {"master"},
+    count = 1
+  },
+  {
+    section = {"master"},
+    count = 2
+  },
+  {
+    section = {"legend"},
+    count = 3
+  }
+}
+
+function squad_on_switched_to_online(squad)
+  if not hunters_squads[squad.id] then
+    return
+  end
+
+  addSquadToActorHunters(squad)
+end
+
+local function save_state(m_data)
+  m_data.wargreat_actor_hunter = {
+    hunters_squads = {},
+    wantedTable = {},
+    spawnInterval = {}
+  }
+
+  for id, squad in pairs(hunters_squads) do
+    m_data.wargreat_actor_hunter.hunters_squads[id] = true
+  end
+
+  m_data.wargreat_actor_hunter.wantedTable = wantedTable
+  m_data.wargreat_actor_hunter.spawnInterval = spawnInterval
+end
+local function load_state(m_data)
+  if not (m_data.wargreat_actor_hunter) then
+    return
+  end
+
+  if m_data.wargreat_actor_hunter.hunters_squads ~= nil then
+    for squadIdAsKey, squadIdAsValue in pairs(m_data.wargreat_actor_hunter.hunters_squads) do
+      hunters_squads[squadIdAsKey] = squadIdAsValue
+    end
+  end
+
+  if m_data.wargreat_actor_hunter.wantedTable ~= nil then
+    wantedTable = m_data.wargreat_actor_hunter.wantedTable
+  end
+
+  if m_data.wargreat_actor_hunter.spawnInterval ~= nil then
+    spawnInterval = m_data.wargreat_actor_hunter.spawnInterval
+  end
+
+  m_data.wargreat_actor_hunter = nil
+end
+
+local function squad_on_update(squad)
+  if not hunters_squads[squad.id] then
+    return
+  end
+
+  squad.scripted_target = "actor"
+end
+
+local function squad_on_register(squad)
+  if (hunters_squads[squad.id] ~= nil) then
+    hunters_squads[squad.id] = squad.id
+    squad.scripted_target = "actor"
+  end
+
+  for k in squad:squad_members() do
+    if (k.id and k.object and utils.se_obj_load_var(k.id, k.object:name(), "hunter")) then
+      hunters_squads[squad.id] = squad.id
+      squad.scripted_target = "actor"
+      break
+    end
+  end
+end
+
+function unregisterFaction(faction)
+  for squadId, _ in pairs(sim_tables.registered_squads[faction]) do
+    local squad = alife_object(squadId)
+
+    if IsSquad(squad) and hunters_squads[squadId] then
+      squad.scripted_target = nil
+      hunters_squads[squadId] = nil
+
+      squad:setRandomTarget()
+    end
+  end
+end
+
+function spawn_squads(faction)
+  if not (wantedTable[faction].level) then
+    return
+  end
+
+  if spawnInterval[faction] and spawnInterval[faction] > game.time() then
+    return
+  end
+
+  spawnInterval[faction] = game.time() + sim_factions.faction_information[faction].respawn_hunters * 50000
+
+  local smartBaseFactionTable = {
+    -- Базы на той же локации где сейчас ГГ
+    onCurrentLocation = {},
+    -- Все базы
+    restSmarts = {}
+  }
+
+  local sim = alife()
+  local currentLevel = game_graph():vertex(sim:actor().m_game_vertex_id):level_id() or nil
+
+  for smartId, _ in pairs(SIMBOARD.smarts) do
+    local smart = alife_object(smartId)
+    local smart_level_name = game_graph():vertex(smart.m_game_vertex_id):level_id() or nil
+
+    if smart.owning_faction == faction and sim_smart.isBase(smart) then
+      table.insert(smartBaseFactionTable.restSmarts, smart)
+    end
+
+    if smart.owning_faction == faction and sim_smart.isBase(smart) and smart_level_name == currentLevel then
+      table.insert(smartBaseFactionTable.onCurrentLocation, smart)
+    end
+  end
+
+  local selectedSmart = smartBaseFactionTable.onCurrentLocation[math.random(#smartBaseFactionTable.onCurrentLocation)]
+
+  if selectedSmart == nil then
+    selectedSmart = smartBaseFactionTable.restSmarts[math.random(#smartBaseFactionTable.restSmarts)]
+  end
+
+  if not selectedSmart then
+    return
+  end
+
+  local props = squadsByLevel[wantedTable[faction].level]
+
+  for i = 1, props.count do
+    local full_section = strformat("%s_sim_squad_%s", faction, randSection)
+    local randSection = props.section[math.random(#props.section)]
+    local squad = alun_utils.create_squad(faction .. "_sim_squad_" .. randSection, selectedSmart:name())
+
+    hunters_squads[squad.id] = squad.id
+
+    SIMBOARD:assign_squad_to_smart(squad, nil)
+
+    squad.scripted_target = "actor"
+  end
+end
+
+local function on_change_hanter_level(faction, level)
+  utils.debug("on_change_hanter_level, faction: %s, level: %s", faction, level)
+  wantedTable[faction].level = level
+
+  utils.news(
+    "Охота на игрока",
+    "Вы получили уровень Опасности %s от группировки %s за частое убийство.",
+    level,
+    GetString(faction)
+  )
+end
+
+function addSquadToActorHunters(squad)
+  if not IsSquad(squad) or squad:get_squad_community() == "monster" then
+    return
+  end
+
+  for k in squad:squad_members() do
+    if (db.storage[k.id]) then
+      addToActorHunters(db.storage[k.id].object)
+    end
+  end
+end
+
+function addToActorHunters(npc)
+  if not IsStalker(npc) then
+    utils.error(
+      "ERROR in addToActorHunters function, first param must be a stalker, got clsid: %s",
+      type(npc.clsid) == "function" and npc:clsid() or npc.clsid
+    )
+    return
+  end
+
+  local id = type(npc.id) == "function" and npc:id() or npc.id
+  utils.se_obj_save_var(id, npc:name(), "hunter", true)
+  npc:inactualize_patrol_path()
+  setup_hunter_logic(npc, db.storage[id], false)
+end
+
+function resetWantedLevels()
+  for faction, _ in pairs(wantedTable) do
+    if wantedTable[faction].level then
+      wantedTable[faction].level = nil
+
+      for squadId, _ in pairs(sim_tables.registered_squads[faction]) do
+        local squad = alife_object(squadId)
+
+        if squad and hunters_squads[squadId] then
+          squad.scripted_target = nil
+          hunters_squads[squadId] = nil
+
+          sim_squad.remove_squad(squad)
+        end
+      end
+    end
+  end
+end
+
+function setup_hunter_logic(npc, st, loaded)
+  npc:give_info_portion("npcx_is_hunter")
+
+  local ltx_name = "scripts\\beh_hunter.ltx"
+  local ltx = ini_file(ltx_name)
+  if not (ltx) then
+    assert("ERROR: do not have access to scripts\\beh_hunter.ltx! Make sure you installed properly!")
+    return
+  end
+
+  local id = npc:id()
+  local se_npc = alife_object(id)
+  local unreg_id = se_npc and se_npc.m_smart_terrain_id
+  if (unreg_id and unreg_id ~= 65535) then
+    local unreg = alife_object(unreg_id)
+    if (unreg) then
+      unreg:unregister_npc(se_npc)
+    end
+  end
+
+  xr_logic.configure_schemes(
+    npc,
+    ltx,
+    ltx_name,
+    modules.stype_stalker,
+    loaded and st.loaded_section_logic or "logic",
+    ""
+  )
+
+  local section =
+    loaded and st.loaded_active_section or xr_logic.determine_section_to_activate(npc, ltx, "logic", db.actor)
+  xr_logic.activate_by_section(npc, ltx, section, "", loaded)
+
+  -- utils.debug("setup_hunter_logic end section: %s", section)
+end
+
+function isHuntersSquad(squad)
+  return hunters_squads[squad.id] and true or false
+end
+
+function hasFactionLevel(faction)
+  return wantedTable[faction] and wantedTable[faction].level ~= nil
+end
+
+function hasAnyFactionLevel()
+  for _, obj in pairs(wantedTable) do
+    if obj and obj.level ~= nil then
+      return true
+    end
+  end
+
+  return false
+end
+
+function on_game_start()
+  RegisterScriptCallback("squad_on_switched_to_online", squad_on_switched_to_online)
+  RegisterScriptCallback("on_change_hanter_level", on_change_hanter_level)
+  RegisterScriptCallback("squad_on_register", squad_on_register)
+  RegisterScriptCallback("squad_on_update", squad_on_update)
+  RegisterScriptCallback("save_state", save_state)
+  RegisterScriptCallback("load_state", load_state)
+end

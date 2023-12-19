@@ -1,0 +1,620 @@
+;---------------------------------------------------------------------------------------------
+;		Плащ Греховца
+;---------------------------------------------------------------------------------------------
+[greh_trenchcoat_outfit]:outfit_novice_base
+$spawn                                   = "outfit\greh_trenchcoat_outfit"
+visual                                   = dynamics\outfit\novice_outfit
+actor_visual                             = actors\stalker_greh\greh_1_0.ogf
+npc_visual                               = actors\stalker_greh\greh_1_0.ogf
+player_hud_section                       = actor_hud_bandit_trench
+
+
+inv_name                                 = greh_trenchcoat_outfit_name
+inv_name_short                           = greh_trenchcoat_outfit_name
+description                              = greh_trenchcoat_outfit_description
+inv_weight                               = 1.5
+
+inv_grid_height    = 3
+inv_grid_x         = 16
+inv_grid_y         = 31
+
+upgr_icon_x                              = 636
+upgr_icon_y                              = 0
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+
+cost                                     = 5000
+
+immunities_sect                          = sect_trenchcoat_outfit_immunities
+
+; NO RESISTANCE
+burn_protection                          = 0.02
+shock_protection                         = 0.07
+radiation_protection                     = 0.002
+chemical_burn_protection                 = 0.019
+telepatic_protection                     = 0.0
+strike_protection                        = 0.0150
+explosion_protection                     = 0.0150
+wound_protection                         = 0.0150
+
+bones_koeff_protection                   = actor_armor_novice
+
+character_portrait							 = ui_inGame2_greh2
+
+[sect_greh_trenchcoat_outfit_immunities]
+burn_immunity                            = 0.05	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.05
+wound_immunity                           = 0.05
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.05
+explosion_immunity                       = 0.05
+fire_wound_immunity                      = 0.02
+
+[sect_greh_trenchcoat_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.005
+
+;---------------------------------------------------------------------------------------------
+;		Экзоплащ Греха
+;---------------------------------------------------------------------------------------------
+[greh_trenchcoat_exo_outfit]:outfit_exo_base
+$spawn                                   = "outfit\greh_trenchcoat_exo_outfit"
+visual                                   = dynamics\outfit\bandit_exo_outfit
+actor_visual                             = actors\stalker_greh\greh_protoexo_face_1_0.ogf
+npc_visual                               = actors\stalker_greh\greh_protoexo_face_1_0.ogf
+player_hud_section                       = actor_hud_greh_exo
+
+inv_name                                 = greh_trenchcoat_exo_outfit_name
+inv_name_short                           = greh_trenchcoat_exo_outfit_name
+description                              = greh_trenchcoat_exo_outfit_description
+
+inv_weight                               = 5.0
+
+inv_grid_width     = 2
+inv_grid_height    = 3
+inv_grid_x         = 54
+inv_grid_y         = 21
+
+upgr_icon_x                              = 2500
+upgr_icon_y                              = 0
+upgr_icon_width                          = 350
+upgr_icon_height                         = 200
+
+cost                                     = 55000
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+strike_protection                        = 0.2975
+explosion_protection                     = 0.2975
+wound_protection                         = 0.2975
+
+bones_koeff_protection                   = actor_armor_bandit_exo
+
+power_loss                               = 1.05
+additional_inventory_weight              = 30
+additional_inventory_weight2             = 30
+artefact_count                           = 1
+helmet_avaliable					               = false
+
+character_portrait						           = ui_inGame2_stalker_greh_exo_proto
+
+
+;---------------------------------------------------------------------------------------------
+;		Комбенизон "Путь Греха"
+;---------------------------------------------------------------------------------------------
+[greh_light_outfit]:outfit_base
+$spawn                                   = "outfit\greh_light_outfit"
+visual                                   = dynamics\outfit\stalker_outfit
+actor_visual                             = actors\stalker_greh\stalker_sinner_1_1.ogf
+npc_visual                               = actors\stalker_greh\stalker_sinner_1_1.ogf
+player_hud_section                       = actor_hud_loner_sunrise
+
+ef_equipment_type                        = 3
+
+inv_name                                 = greh_light_outfit_name
+inv_name_short                           = greh_light_outfit_name
+description                              = greh_light_outfit_description
+
+inv_weight                               = 4.0
+
+inv_grid_x                               = 56
+inv_grid_y                               = 43
+
+upgr_icon_x                              = 3136
+upgr_icon_y                              = 0
+upgr_icon_width                          = 302
+upgr_icon_height                         = 118
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 12000
+full_scale_icon                          = 14,11	                                       ;иконка сталкера в костюме в полный рост
+
+artefact_count                           = 1
+
+immunities_sect                          = greh_light_outfit_immunities
+
+
+; LOW RESISTANCE
+burn_protection                          = 0.03
+shock_protection                         = 0.02
+radiation_protection                     = 0.006
+chemical_burn_protection                 = 0.0433
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1
+explosion_protection                     = 0.1
+wound_protection                         = 0.1
+
+hit_fraction_actor                       = 0.75
+bones_koeff_protection                   = actor_armor_trench
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.66
+
+upgrades                                 = up_gr_firstab_stalker_outfit, up_gr_seconab_stalker_outfit, up_gr_thirdab_stalker_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_stalker_outfit
+character_portrait						           = ui_inGame2_darkstalker_monolith_zombied
+
+[greh_light_outfit_immunities]
+burn_immunity                            = 0.03	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.03
+wound_immunity                           = 0.03
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.03
+explosion_immunity                       = 0.03
+fire_wound_immunity                      = 0.015
+
+[greh_light_outfit_immunities_add]
+burn_immunity                            = -0.015	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.015
+wound_immunity                           = -0.015
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.015
+explosion_immunity                       = -0.015
+fire_wound_immunity                      = -0.005
+
+
+;---------------------------------------------------------------------------------------------
+;		Бронежилет Пепел
+;---------------------------------------------------------------------------------------------
+[greh_light_1_outfit]:outfit_base
+$spawn                                   = "outfit\greh_light_1_outfit"
+visual                                   = dynamics\outfit\stalker_outfit
+actor_visual                             = actors\stalker_greh\stalker_greh_assault.ogf
+npc_visual                               = actors\stalker_greh\stalker_greh_assault.ogf
+player_hud_section                       = actor_hud_loner_sunrise
+
+ef_equipment_type                        = 3
+
+inv_name                                 = greh_light_1_outfit_name
+inv_name_short                           = greh_light_1_outfit_name
+description                              = greh_light_1_outfit_description
+
+inv_weight                               = 4.5
+
+inv_grid_x                               = 64
+inv_grid_y                               = 43
+
+upgr_icon_x                              = 3136
+upgr_icon_y                              = 484
+upgr_icon_width                          = 302
+upgr_icon_height                         = 118
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 13500
+full_scale_icon                          = 14,11	                                       ;иконка сталкера в костюме в полный рост
+
+artefact_count                           = 1
+
+immunities_sect                          = greh_light_1_outfit_immunities
+
+
+; LOW RESISTANCE
+burn_protection                          = 0.035
+shock_protection                         = 0.03
+radiation_protection                     = 0.003
+chemical_burn_protection                 = 0.025
+telepatic_protection                     = 0.0
+strike_protection                        = 0.15
+explosion_protection                     = 0.15
+wound_protection                         = 0.15
+
+hit_fraction_actor                       = 0.75
+bones_koeff_protection                   = actor_armor_cs2
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.65
+
+upgrades                                 = up_gr_firstab_stalker_outfit, up_gr_seconab_stalker_outfit, up_gr_thirdab_stalker_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_stalker_outfit
+character_portrait						           = ui_inGame2_darkstalker_monolith_zombied
+
+[greh_light_1_outfit_immunities]
+burn_immunity                            = 0.03	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.03
+wound_immunity                           = 0.03
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.03
+explosion_immunity                       = 0.03
+fire_wound_immunity                      = 0.015
+
+[greh_light_1_outfit_immunities_add]
+burn_immunity                            = -0.017	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.017
+wound_immunity                           = -0.017
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.017
+explosion_immunity                       = -0.017
+fire_wound_immunity                      = -0.005
+
+;---------------------------------------------------------------------------------------------
+;		Комбенизон "Первородный Грех"
+;---------------------------------------------------------------------------------------------
+[greh_light_2_outfit]:outfit_base
+$spawn                                   = "outfit\greh_light_2_outfit"
+visual                                   = dynamics\outfit\stalker_outfit
+actor_visual                             = actors\stalker_greh\stalker_sinner_3_1_no_exo.ogf
+npc_visual                               = actors\stalker_greh\stalker_sinner_3_1_no_exo.ogf
+player_hud_section                       = actor_hud_loner_sunrise
+
+ef_equipment_type                        = 3
+
+inv_name                                 = greh_light_2_outfit_name
+inv_name_short                           = greh_light_2_outfit_name
+description                              = greh_light_2_outfit_description
+
+inv_weight                               = 6.5
+
+inv_grid_x                               = 58
+inv_grid_y                               = 43
+
+upgr_icon_x                              = 3136
+upgr_icon_y                              = 128
+upgr_icon_width                          = 302
+upgr_icon_height                         = 118
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 30500
+full_scale_icon                          = 14,11	                                       ;иконка сталкера в костюме в полный рост
+
+artefact_count                           = 2
+
+immunities_sect                          = greh_light_2_outfit_immunities
+
+
+; LOW RESISTANCE
+burn_protection                          = 0.04
+shock_protection                         = 0.05
+radiation_protection                     = 0.008
+chemical_burn_protection                 = 0.0433
+telepatic_protection                     = 0.0
+strike_protection                        = 0.19
+explosion_protection                     = 0.15
+wound_protection                         = 0.15
+
+hit_fraction_actor                       = 0.75
+bones_koeff_protection                   = actor_armor_duty_seva
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.75
+
+upgrades                                 = up_gr_firstab_stalker_outfit, up_gr_seconab_stalker_outfit, up_gr_thirdab_stalker_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_stalker_outfit
+character_portrait						           = ui_inGame2_darkstalker_monolith_zombied
+
+[greh_light_2_outfit_immunities]
+burn_immunity                            = 0.03	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.03
+wound_immunity                           = 0.03
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.03
+explosion_immunity                       = 0.03
+fire_wound_immunity                      = 0.015
+
+[greh_light_2_outfit_immunities_add]
+burn_immunity                            = -0.015	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.015
+wound_immunity                           = -0.015
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.015
+explosion_immunity                       = -0.015
+fire_wound_immunity                      = -0.005
+
+
+;---------------------------------------------------------------------------------------------
+;		Комбенизон "Первородный Грех"
+;---------------------------------------------------------------------------------------------
+[greh_heavy_1_outfit]:outfit_exo_base
+$spawn                                   = "outfit\greh_heavy_1_outfit"
+visual                                   = dynamics\outfit\stalker_outfit
+actor_visual                             = actors\stalker_greh\stalker_sinner_2_1.ogf
+npc_visual                               = actors\stalker_greh\stalker_sinner_2_1.ogf
+player_hud_section                       = actor_hud_loner_sunrise
+
+ef_equipment_type                        = 3
+
+inv_name                                 = greh_heavy_1_outfit_name
+inv_name_short                           = greh_heavy_1_outfit_name
+description                              = greh_heavy_1_outfit_description
+
+inv_weight                               = 7.5
+
+inv_grid_x                               = 60
+inv_grid_y                               = 43
+
+upgr_icon_x                              = 3136
+upgr_icon_y                              = 252
+upgr_icon_width                          = 302
+upgr_icon_height                         = 118
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 40000
+full_scale_icon                          = 14,11	                                       ;иконка сталкера в костюме в полный рост
+
+artefact_count                           = 2
+
+immunities_sect                          = greh_heavy_1_outfit_immunities
+
+
+; LOW RESISTANCE
+burn_protection                          = 0.02
+shock_protection                         = 0.04
+radiation_protection                     = 0.01
+chemical_burn_protection                 = 0.02
+telepatic_protection                     = 0.0
+strike_protection                        = 0.22
+explosion_protection                     = 0.2
+wound_protection                         = 0.2
+
+hit_fraction_actor                       = 0.75
+bones_koeff_protection                   = actor_armor_psz
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.75
+sprint_allowed                           = true
+helmet_avaliable					               = true
+
+upgrades                                 = up_gr_firstab_stalker_outfit, up_gr_seconab_stalker_outfit, up_gr_thirdab_stalker_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_stalker_outfit
+character_portrait						           = ui_inGame2_darkstalker_monolith_zombied
+
+[greh_heavy_1_outfit_immunities]
+burn_immunity                            = 0.03	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.03
+wound_immunity                           = 0.03
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.03
+explosion_immunity                       = 0.03
+fire_wound_immunity                      = 0.015
+
+[greh_heavy_1_outfit_immunities_add]
+burn_immunity                            = -0.015	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.015
+wound_immunity                           = -0.015
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.015
+explosion_immunity                       = -0.015
+fire_wound_immunity                      = -0.005
+
+
+
+;---------------------------------------------------------------------------------------------
+;		Комбенизон "Первородный Грех"
+;---------------------------------------------------------------------------------------------
+[greh_heavy_2_outfit]:outfit_exo_base
+$spawn                                   = "outfit\greh_heavy_2_outfit"
+visual                                   = dynamics\outfit\stalker_outfit
+actor_visual                             = actors\stalker_greh\stalker_sinner_4_1.ogf
+npc_visual                               = actors\stalker_greh\stalker_sinner_4_1.ogf
+player_hud_section                       = actor_hud_bandit_trench
+
+ef_equipment_type                        = 3
+
+inv_name                                 = greh_heavy_2_outfit_name
+inv_name_short                           = greh_heavy_2_outfit_name
+description                              = greh_heavy_2_outfit_description
+
+inv_weight                               = 20.5
+
+inv_grid_x                               = 62
+inv_grid_y                               = 43
+
+upgr_icon_x                              = 3136
+upgr_icon_y                              = 370
+upgr_icon_width                          = 302
+upgr_icon_height                         = 118
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 63000
+full_scale_icon                          = 14,11	                                       ;иконка сталкера в костюме в полный рост
+
+artefact_count                           = 3
+
+immunities_sect                          = greh_heavy_2_outfit_immunities
+
+
+; LOW RESISTANCE
+burn_protection                          = 0.02
+shock_protection                         = 0.09
+radiation_protection                     = 0.01
+chemical_burn_protection                 = 0.02
+telepatic_protection                     = 0.0
+strike_protection                        = 0.3
+explosion_protection                     = 0.25
+wound_protection                         = 0.25
+
+hit_fraction_actor                       = 0.75
+bones_koeff_protection                   = actor_armor_military_exo
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.8
+sprint_allowed                           = true
+helmet_avaliable					               = true
+
+upgrades                                 = up_gr_firstab_stalker_outfit, up_gr_seconab_stalker_outfit, up_gr_thirdab_stalker_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_stalker_outfit
+character_portrait						 = ui_inGame2_darkstalker_monolith_zombied
+
+[greh_heavy_2_outfit_immunities]
+burn_immunity                            = 0.023	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.023
+wound_immunity                           = 0.023
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.023
+explosion_immunity                       = 0.023
+fire_wound_immunity                      = 0.015
+
+[greh_heavy_2_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.005
+;---------------------------------------------------------------------------------------------
+;		Leader Greh Outfit
+;---------------------------------------------------------------------------------------------
+[leader_greh_outfit]:outfit_base
+$spawn                                   = "outfit\leader_greh_outfit"
+visual                                   = dynamics\outfit\novice_outfit
+actor_visual                             = actors\stalker_greh\greh_leader.ogf
+npc_visual                               = actors\stalker_greh\greh_leader.ogf
+player_hud_section                       = actor_hud_bandit_trench
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_greh_outfit_name
+inv_name_short                           = leader_greh_outfit_name
+description                              = leader_greh_outfit_description
+
+inv_weight                               = 16.5
+
+inv_grid_x         						 = 16
+inv_grid_y         						 = 31
+
+upgr_icon_x                              = 636
+upgr_icon_y                              = 0
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 99285
+
+full_scale_icon                          = 14,11
+
+immunities_sect                          = sect_leader_greh_outfit_immunities
+
+; LOW RESISTANCE
+burn_protection                          = 0.0300
+shock_protection                         = 0.1900
+radiation_protection                     = 0.0110
+chemical_burn_protection                 = 0.0250
+telepatic_protection                     = 0.0
+strike_protection                        = 0.3500
+explosion_protection                     = 0.3000
+wound_protection                         = 0.3000
+
+fire_wound_protection                    = 0.1875
+
+hit_fraction_actor                       = 0.50
+control_inertion_factor                  = 1.2
+bones_koeff_protection                   = greh_leader
+
+health_restore_speed                     = 0.002
+power_loss                               = 0.95
+
+additional_inventory_weight              = 30
+additional_inventory_weight2             = 30
+
+artefact_count                           = 5
+
+character_portrait						 = ui_inGame2_greh2
+
+[sect_leader_greh_outfit_immunities]
+burn_immunity                            = 0.0050
+strike_immunity                          = 0.0150
+shock_immunity                           = 0.0300
+wound_immunity                           = 0.0050
+radiation_immunity                       = 0.0000
+telepatic_immunity                       = 0.0000
+chemical_burn_immunity                   = 0.0050
+explosion_immunity                       = 0.0050
+fire_wound_immunity                      = 0.0145
+;---------------------------------------------------------------------------------------------
+;OUTFIT ON AZAZEL MODE: Leader Greh Outfit
+;---------------------------------------------------------------------------------------------
+[leader_azazel_greh_outfit]:outfit_leader_exo_base
+$spawn                                   = "outfit\leader_azazel_greh_outfit"
+visual                                   = dynamics\outfit\novice_outfit
+actor_visual                             = actors\stalker_greh\greh_leader.ogf
+npc_visual                               = actors\stalker_greh\greh_leader.ogf
+player_hud_section                       = actor_hud_bandit_trench
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_greh_outfit_name
+inv_name_short                           = leader_greh_outfit_name
+description                              = leader_greh_outfit_description
+
+inv_weight                               = 16.5
+
+inv_grid_x         						 = 16
+inv_grid_y         						 = 31
+
+upgr_icon_x                              = 636
+upgr_icon_y                              = 0
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+
+cost                                     = 99285
+
+artefact_count                           = 1
+
+helmet_avaliable						 = false
+
+sprint_allowed							 = true
+
+power_loss                               = 0.75
+
+character_portrait						 = ui_inGame2_greh_1_11
+
+
+

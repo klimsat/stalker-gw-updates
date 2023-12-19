@@ -1,0 +1,14 @@
+[smart_terrain]
+squad_id = 6
+max_population = 5
+respawn_params = respawn@jup_b19
+respawn_idle = 60000
+
+
+[respawn@jup_b19]
+spawn_zombied
+
+[spawn_zombied]
+spawn_squads = zombied_sim_squad_novice, zombied_sim_squad_novice, zombied_sim_squad_advanced
+;spawn_num = {-jup_b19_agreed_to_go} 2, {+jup_b19_complete} 2, {+jup_b19_yar_enemy_or_dead} 2, 0
+spawn_num = 2

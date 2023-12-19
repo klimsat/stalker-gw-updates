@@ -1,0 +1,162 @@
+-- Pankzey
+
+-- SadBlackFox
+
+local tg_temp
+weapon_jammed = {}, {}
+local mask_list = {
+  --Список шлемов и костюмов без шлема
+  helm_respirator = true,
+  helm_protective = true,
+  helm_tactic = true,
+  helm_battle = true,
+  helm_m40 = true,
+  helm_respirator_2 = true,
+  helm_facemask = true,
+  helm_respirator_gp5 = true,
+  helm_respirator_half = true,
+  helm_tactic_2 = true,
+  scientific_outfit = true,
+  monolith_scientific_outfit = true,
+  dolg_scientific_outfit = true,
+  merc_scientific_outfit = true,
+  svoboda_scientific_outfit = true,
+  cs_scientific_outfit = true,
+  isg_scientific_outfit = true,
+  scientific_heavy_outfit = true,
+  nbc_outfit = true,
+  cs_nbc_outfit = true,
+  monolith_nbc_outfit = true,
+  radiation_outfit = true,
+  dolg_radiation_outfit = true,
+  svoboda_radiation_outfit = true,
+  merc_radiation_outfit = true,
+  monolith_radiation_outfit = true,
+  ecolog_outfit_orange = true,
+  ecolog_outfit_green = true,
+  ecolog_outfit_white = true,
+  ecolog_outfit_blue = true,
+  ecolog_ssp11a_outfit = true,
+  exo_outfit = true,
+  exo_proto_outfit = true,
+  svoboda_exo_outfit = true,
+  bandit_exo_outfit = true,
+  merc_exo_outfit = true,
+  monolith_exo_outfit = true,
+  dolg_exo_outfit = true,
+  cs_exo_outfit = true,
+  military_exo_outfit = true
+}
+
+function on_game_start()
+  RegisterScriptCallback("actor_on_weapon_jammed", actor_on_weapon_jammed)
+  caching("weapon_jammed")
+end
+
+function actor_on_weapon_jammed()
+  local enable_actor_sounds_jam = axr_main.config:r_value("mm_options", "enable_actor_sounds_jam", 1, true)
+
+  if not enable_actor_sounds_jam then
+    return
+  end
+
+  activate("weapon_jammed")
+end
+
+function activate(mode)
+  local tg = time_global()
+  if tg_temp and tg_temp > tg then
+    return
+  end
+  if math.random(100) < 10 then
+    return
+  end
+  tg_temp = tg + 500
+  local comm = character_community(db.actor)
+  local helmet = db.actor:item_in_slot(12) or db.actor:item_in_slot(7)
+  local is_mask = helmet and mask_list[helmet:section()] and "_mask" or ""
+  sound_object(string.format("%s\\%s\\%s%s", mode, comm, this[mode][comm][math.random(#this[mode][comm])], is_mask)):play(
+    db.actor,
+    0,
+    sound_object.s2d
+  )
+end
+
+function caching(mode)
+  local temp = {}
+  local function func2(node, file_name, fullpath, folder_name)
+    local name = trim_ext(file_name)
+    if name:sub(#name - 4, #name) == "_mask" then
+      name = name:sub(1, #name - 5)
+    end
+    if not temp[folder_name][name] then
+      temp[folder_name][name] = true
+    end
+  end
+  local function func1(node, folder_name)
+    temp[folder_name] = {}
+    file_for_each(node .. "\\" .. folder_name, {"ogg"}, func2, true, folder_name)
+  end
+  directory_for_each(getFS():update_path("$game_sounds$", "") .. "\\" .. mode, func1)
+  for folder_name, tbl in pairs(temp) do
+    this[mode][folder_name] = {}
+    for name, _ in pairs(tbl) do
+      this[mode][folder_name][#this[mode][folder_name] + 1] = name
+    end
+  end
+end
+
+-- Подгрузка lfs
+-- require("lua_extensions")
+local lfs = require("lfs")
+function trim_ext(str)
+  local a = string.find(str, "%.")
+  return a and trim(string.sub(str, 1, a - 1)) or str
+end
+function trim(s)
+  return s and (string.gsub(s, "^%s*(.-)%s*$", "%1"))
+end
+function get_ext(s)
+  return string.gsub(s, "(.*)%.", "")
+end
+lfs_ignore_exact_ext_match = false
+function file_for_each(node, ext, func, nonrecursive, ...)
+  local stack = {}
+  while true do
+    if (node) then
+      for file in lfs.dir(node) do
+        if (file ~= ".." and file ~= ".") then
+          local fullpath = node .. "\\" .. file
+          local mode = lfs.attributes(fullpath, "mode")
+          if (mode == "file") then
+            for i = 1, #ext do
+              if (lfs_ignore_exact_ext_match and string.find(get_ext(file), ext[i]) or get_ext(file) == ext[i]) then
+                func(node, file, fullpath, ...)
+              end
+            end
+          elseif (mode == "directory" and nonrecursive ~= true) then
+            table.insert(stack, fullpath)
+          end
+        end
+      end
+    end
+    if (#stack > 0) then
+      node = stack[#stack]
+      stack[#stack] = nil
+    else
+      break
+    end
+  end
+  if lfs_ignore_exact_ext_match then
+    lfs_ignore_exact_ext_match = false
+  end
+end
+function directory_for_each(node, func, ...)
+  for l in lfs.dir(node) do
+    if (l ~= ".." and l ~= ".") then
+      if lfs.attributes(node .. "\\" .. l, "mode") == "directory" then
+        func(node, l, ...)
+      end
+    end
+  end
+end

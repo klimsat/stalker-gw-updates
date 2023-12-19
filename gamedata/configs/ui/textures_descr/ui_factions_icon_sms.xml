@@ -1,0 +1,43 @@
+<w>
+
+	<file name="ui\icons\sms_factions">
+		<texture id="ui_icon_news_adinkvizicia" x="0" y="0" width="128" height="56" />
+		<texture id="ui_icon_news_alfa" x="0" y="56" width="128" height="56" />
+		<texture id="ui_icon_news_apocalypse" x="0" y="112" width="128" height="56" />
+		<texture id="ui_icon_news_army" x="0" y="168" width="128" height="56" />
+		<texture id="ui_icon_news_bandit" x="0" y="224" width="128" height="56" />
+		<texture id="ui_icon_news_csky" x="0" y="280" width="128" height="56" />
+		<texture id="ui_icon_news_darkstalker" x="0" y="336" width="128" height="56" />
+		<texture id="ui_icon_news_dolg" x="0" y="392" width="128" height="56" />
+		<texture id="ui_icon_news_ecolog" x="0" y="448" width="128" height="56" />
+		<texture id="ui_icon_news_fantom" x="0" y="504" width="128" height="56" />
+		<texture id="ui_icon_news_freedom" x="0" y="560" width="128" height="56" />
+		<texture id="ui_icon_news_greh" x="0" y="616" width="128" height="56" />
+		<texture id="ui_icon_news_isg" x="0" y="672" width="128" height="56" />
+		<texture id="ui_icon_news_killer" x="0" y="728" width="128" height="56" />
+		<texture id="ui_icon_news_mirotvorec" x="0" y="784" width="128" height="56" />
+		<texture id="ui_icon_news_monolith" x="0" y="840" width="128" height="56" />
+		<texture id="ui_icon_news_varyag" x="0" y="896" width="128" height="56" />
+		<texture id="ui_icon_news_osoznanie" x="0" y="952" width="128" height="56" />
+		<texture id="ui_icon_news_posleduden" x="128" y="0" width="128" height="56" />
+		<texture id="ui_icon_news_renegate" x="128" y="56" width="128" height="56" />
+		<texture id="ui_icon_news_ryskuspecnaz" x="128" y="112" width="128" height="56" />
+		<texture id="ui_icon_news_sby" x="128" y="168" width="128" height="56" />
+		<texture id="ui_icon_news_slizni" x="128" y="224" width="128" height="56" />
+		<texture id="ui_icon_news_stalker" x="128" y="280" width="128" height="56" />
+		<texture id="ui_icon_news_angel" x="128" y="336" width="128" height="56" />
+		<texture id="ui_icon_news_velhan" x="128" y="392" width="128" height="56" />
+		<texture id="ui_icon_news_veter" x="128" y="448" width="128" height="56" />
+		<texture id="ui_icon_news_voenstal" x="128" y="504" width="128" height="56" />
+		<texture id="ui_icon_news_hunter" x="128" y="560" width="128" height="56" />
+		<texture id="ui_icon_news_zombied" x="128" y="616" width="128" height="56" />
+		<texture id="ui_icon_news_" x="128" y="672" width="128" height="56" />
+		<texture id="ui_icon_news_" x="128" y="728" width="128" height="56" />
+		<texture id="ui_icon_news_" x="128" y="784" width="128" height="56" />
+		<texture id="ui_icon_news_" x="128" y="840" width="128" height="56" />
+		<texture id="ui_icon_news_" x="128" y="896" width="128" height="56" />
+		<texture id="ui_icon_news_" x="128" y="952" width="128" height="56" />
+
+		<texture id="ui_icon_news_network_connect" x="256" y="0" width="128" height="56" />
+	</file>
+</w>

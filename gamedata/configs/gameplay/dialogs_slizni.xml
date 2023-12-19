@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<game_dialogs>
+   <dialog id="dialog_hello_slizni">
+        <phrase_list>
+            <phrase id="0">
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <next>2</next>
+                <next>3</next>
+                <next>4</next>
+                <next>5</next>
+            </phrase>
+            <phrase id="2">
+                <text>Привет пацанчик.</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="3">
+                <text>Вечер в хату. АУЕ по блату.</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="4">
+                <text>Всегда рад видеть четких пацанчиков. Чего хотел?</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="5">
+                <text>Не будь петушком, а будь клевым пацаном. Слухаю.</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>Привет пацанчик.</text>
+            </phrase>
+		</phrase_list>
+    </dialog>
+   <dialog id="dialog_you_raskaz_slizni">
+        <phrase_list>
+            <phrase id="0">
+                <text>А ну поведай реальному пацану о Зоне чего - нибудь.</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>Незнаю</text>
+            </phrase>
+		</phrase_list>
+    </dialog>
+   <dialog id="dialog_istory_slizni">
+        <phrase_list>
+            <phrase id="0">
+                <text>Хочу историю послухать... Ну, что - бы прям... Ну красиво было.</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>Нет</text>
+            </phrase>
+		</phrase_list>
+    </dialog>
+   <dialog id="dialog_goodbye_slizni">
+        <phrase_list>
+            <phrase id="0">
+                <text>e</text>
+			    <action>dialogs.break_dialog</action>
+            </phrase>
+		</phrase_list>
+    </dialog>
+</game_dialogs>

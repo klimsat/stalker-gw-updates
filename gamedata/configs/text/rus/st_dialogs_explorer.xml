@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+    <string id="st_dialog_explorer_start">
+        <text>Можешь меня провести кое-куда?</text>
+    </string>
+    <string id="st_dialog_explorer_start_answer">
+        <text>Без проблем! Куда ты хочешь пойти?</text>
+    </string>
+    <string id="st_dialog_explorer_choose_level_answer">
+        <text>На какую базу провести?</text>
+    </string>
+    <string id="st_dialog_explorer_choose_level_answer_no_levels">
+        <text>Извиняй, но пока никуда не смогу провести. Захвати больше баз, а там посмотрим.</text>
+    </string>
+    <string id="st_dialog_explorer_choose_level_answer_no_smart">
+        <text>Сейчас туда не смогу провести. Нужно чтобы там была хотя бы одна база под контролем нашей или союзной группировки.</text>
+    </string>
+    <string id="st_dialog_explorer_choose_smart_answer">
+        <text>Хорошо, сейчас пришлю в смс сообщении сколько это будет стоить.</text>
+    </string>
+    <string id="st_dialog_explorer_choose_smart_cost_sms">
+        <text>Переход на точку "%s" будет стоить %s руб.</text>
+    </string>
+    <string id="st_dialog_explorer_choose_smart_accept">
+        <text>Выдвигаемся.</text>
+    </string>
+    <string id="st_dialog_explorer_choose_smart_discard">
+        <text>Я передумал.</text>
+    </string>
+
+    <string id="st_dialog_explorer_choose_level_back">
+        <text>Назад</text>
+    </string>
+</string_table>

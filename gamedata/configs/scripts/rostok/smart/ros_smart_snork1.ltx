@@ -1,0 +1,29 @@
+[smart_terrain]
+squad_id = 31
+max_population = 3
+respawn_params = respawn@ros_smart_snork1
+respawn_idle = 60000
+
+   
+
+[respawn@ros_smart_snork1]
+spawn_snork
+spawn_bloodsucker
+spawn_mutants
+
+[spawn_mutants]
+spawn_squads = simulation_fracture, simulation_fracture, simulation_cat
+spawn_num = 1
+
+[spawn_bloodsucker]
+spawn_squads = simulation_bloodsucker
+spawn_num = 1
+
+[spawn_snork]
+spawn_squads =  simulation_snork
+spawn_num = 1
+
+[exclusive]
+ros_smart_snork1_camp_work_1 = rostok\ros_smart_snork1_smart_logic.ltx
+ros_smart_snork1_camp_work_2 = rostok\ros_smart_snork1_smart_logic.ltx
+ros_smart_snork1_camp_work_3 = rostok\ros_smart_snork1_smart_logic.ltx

@@ -1,0 +1,26 @@
+[logic@pri_medic_stalker]
+suitable = {=check_npc_name(sim_default_dolg_medik)} true, {=check_npc_name(sim_default_monolith_medik)} true, {=check_npc_name(sim_default_freedom_medik)} true, {=check_npc_name(sim_default_bandit_medik)} true, {=check_npc_name(sim_default_stalker_medik)} true, {=check_npc_name(sim_default_army_medik)} true, {=check_npc_name(sim_default_killer_medik)} true, {=check_npc_name(sim_default_ecolog_medik)} true, {=check_npc_name(sim_default_csky_medik)} true, {=check_npc_name(sim_default_isg_medik)} true, {=check_npc_name(sim_default_darkstalker_medik)} true, {=check_npc_name(sim_default_renegate_medik)} true, {=check_npc_name(sim_default_varyag_medik)} true, {=check_npc_name(sim_default_slizni_medik)} true, {=check_npc_name(sim_default_velhan_medik)} true, {=check_npc_name(sim_default_fantom_medik)} true, {=check_npc_name(sim_default_veter_medik)} true, {=check_npc_name(sim_default_osoznanie_medik)} true, {=check_npc_name(sim_default_alfa_medik)} true, {=check_npc_name(sim_default_apocalypse_medik)} true, {=check_npc_name(sim_default_adinkvizicia_medik)} true, {=check_npc_name(sim_default_hunter_medik)} true, {=check_npc_name(sim_default_voenstal_medik)} true, {=check_npc_name(sim_default_mirotvorec_medik)} true, {=check_npc_name(sim_default_ryskuspecnaz_medik)} true, {=check_npc_name(sim_default_sby_medik)} true, {=check_npc_name(sim_default_angel_medik)} true, {=check_npc_name(sim_default_posleduden_medik)} true, {=check_npc_name(sim_default_greh_medik)} true
+active = animpoint@leader
+prior = 200
+trade = misc\trade\trade_medic.ltx
+level_spot = medic
+
+[animpoint@leader]
+cover_name = pri_a16_medic_yar
+avail_animations = animpoint_sit_normal
+combat_ignore_cond = {=actor_enemy =check_enemy_name(actor)} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+out_restr = pri_a16_sr_noweap
+meet = meet
+
+[meet]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+allow_break 	= false
+meet_on_talking = false

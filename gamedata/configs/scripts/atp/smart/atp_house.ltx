@@ -1,0 +1,25 @@
+[smart_terrain]
+squad_id = 5
+max_population = 5
+respawn_params = respawn@atp_house
+respawn_idle = 30000
+
+
+
+[respawn@atp_house]
+spawn_army@novice
+spawn_army@advanced
+
+[spawn_army@novice]
+spawn_squads = army_sim_squad_novice
+spawn_num = 3
+
+[spawn_army@advanced]
+spawn_squads = army_sim_squad_novice, army_sim_squad_advanced
+spawn_num = 3
+
+[exclusive]
+atp_house_camp_work_1 = atp\atp_house_smart_logic.ltx
+atp_house_camp_work_2 = atp\atp_house_smart_logic.ltx
+atp_house_camp_work_3 = atp\atp_house_smart_logic.ltx
+atp_house_camp_work_4 = atp\atp_house_smart_logic.ltx

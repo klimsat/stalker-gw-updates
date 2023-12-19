@@ -1,0 +1,25 @@
+[smart_terrain]
+squad_id = 18
+max_population = 5
+respawn_params = respawn@yan_ugol
+respawn_idle = 30000
+
+
+
+[respawn@yan_ugol]
+spawn_army@novice
+spawn_army@advanced
+
+[spawn_army@novice]
+spawn_squads = army_sim_squad_novice
+spawn_num = 3
+
+[spawn_army@advanced]
+spawn_squads = army_sim_squad_novice, army_sim_squad_advanced
+spawn_num = 3
+
+[exclusive]
+yan_ugol_camp_work_1 = yantar\yan_ugol_smart_logic.ltx
+yan_ugol_camp_work_2 = yantar\yan_ugol_smart_logic.ltx
+yan_ugol_camp_work_3 = yantar\yan_ugol_smart_logic.ltx
+yan_ugol_camp_work_4 = yantar\yan_ugol_smart_logic.ltx

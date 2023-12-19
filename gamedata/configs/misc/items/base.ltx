@@ -1,0 +1,29 @@
+;USE THIS IF YOU WANT TO SAVE USAGE
+[booster_script]:booster
+class									 = S_FOOD
+script_binding 							 = bind_item.bind
+
+[cev_base]:identity_immunities
+GroupControlSection		= spawn_group
+cform           		= skeleton
+hud				= artefact_hud
+animation_slot			= 11
+allow_inertion			= true
+attach_angle_offset		= 0,0,0
+attach_position_offset		= -0.1,-0.1,0
+attach_bone_name		= bip01_root
+inv_grid_width			= 1
+inv_grid_height			= 1
+belt				= true
+slot 				= -1
+af_actor_properties		= on
+actor_properties		= on
+det_show_particles		= anomaly2\plasma_generator_death
+det_hide_particles		= anomaly2\plasma_generator_death
+det_show_snd			= anomaly\bfuzz_blowout
+det_hide_snd			= anomaly\pux_blast
+af_rank				= 1
+can_be_controlled		= true
+script_binding                  = bind_artefact.bind
+particles_bone			= link
+additional_inventory_weight     = 0

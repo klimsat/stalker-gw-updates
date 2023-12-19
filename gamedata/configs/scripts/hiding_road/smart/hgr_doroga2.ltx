@@ -1,0 +1,29 @@
+[smart_terrain];hgr_doroga2
+squad_id = 9
+max_population = 14
+respawn_params = respawn@hgr_doroga2
+respawn_idle = 60000
+
+
+[respawn@hgr_doroga2]
+spawn_military@novice
+spawn_military@advanced
+spawn_military@sniper
+
+[spawn_military@novice]
+spawn_squads = army_sim_squad_novice
+spawn_num = 3
+
+[spawn_military@advanced]
+spawn_squads = army_sim_squad_novice, army_sim_squad_advanced
+spawn_num = 3
+
+[spawn_military@sniper]
+spawn_squads = army_sim_squad_sniper, army_sim_squad_advanced
+spawn_num = 3
+
+[exclusive]
+hgr_doroga2_camp_work_1 = hiding_road\hgr_doroga2_smart_logic.ltx
+hgr_doroga2_camp_work_2 = hiding_road\hgr_doroga2_smart_logic.ltx
+hgr_doroga2_camp_work_3 = hiding_road\hgr_doroga2_smart_logic.ltx
+hgr_doroga2_camp_work_4 = hiding_road\hgr_doroga2_smart_logic.ltx

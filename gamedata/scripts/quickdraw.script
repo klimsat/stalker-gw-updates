@@ -1,0 +1,103 @@
+function on_game_start()
+	RegisterScriptCallback("on_game_load",on_game_load)
+	RegisterScriptCallback("on_key_press",on_key_press)
+	RegisterScriptCallback("actor_on_update",actor_on_update)
+end
+
+function on_game_load()
+	--nix
+end
+
+local anm_state = 0
+local anm_slot = 13
+
+local hit_slot = {
+	[0] = true,
+	[2] = true,
+	[3] = true,
+	[4] = true,
+	[5] = true,
+	[6] = true,
+}
+
+function actor_on_update()
+
+	hit_animation()
+end
+
+function on_key_press(key)
+
+	local bind = dik_to_bind(key)
+	if (bind == key_bindings.kCUSTOM11) then
+		hit_key()
+	end
+end
+
+function hit_key()
+	
+	if (actor_menu.get_mode() ~= 0) then return end
+	
+	if not (hit_slot[db.actor:active_slot()]) then return end
+
+	if (anm_state ~= 0) then
+		--printf("hit_key "..anm_state)
+		return 
+	end
+
+	if (db.actor:active_detector()) then return end
+	
+	if not db.actor:item_in_slot(1) then return end
+	
+	local knife_name = "animation_hit_"..db.actor:item_in_slot(1):section()
+	
+	local anm = db.actor:item_in_slot(anm_slot)
+	if (anm) then 
+		alife():release(alife_object(anm:id()))
+		return
+	end
+	
+	anm_state = 1
+	last_slot = db.actor:active_slot() or 0
+	
+	local wpn = db.actor:item_in_slot(db.actor:active_slot())
+	if (wpn) then wpn:switch_state(3) end
+	
+    alife():create(knife_name,db.actor:position(),db.actor:level_vertex_id(),db.actor:game_vertex_id(),db.actor:id())
+	
+	
+	--db.actor:hide_weapon()
+end
+
+local anm_time = 400
+local anm_start = 0
+
+function hit_animation()
+	local wpn = db.actor:item_in_slot(last_slot)
+	
+	if (anm_state == 1) then
+		--db.actor:restore_weapon()
+		db.actor:activate_slot(anm_slot)
+		if (wpn) then wpn:switch_state(3) end
+		anm_start = time_global()
+		anm_state = 2
+	elseif (anm_state == 2) and (db.actor:active_slot() == anm_slot) and (time_global() > anm_start+150) then
+		anm_start = time_global()
+		anm_state = 3
+		local anm = db.actor:item_in_slot(anm_slot)
+		if (anm) then 
+			level.add_cam_effector('shoot\\s3_e1_1.anm', 8063, false,'')
+			anm:switch_state(5)
+		end
+	elseif (anm_state == 3) and (time_global() > anm_start+anm_time) then
+		local anm = db.actor:item_in_slot(anm_slot)
+		if (anm) then alife():release(alife_object(anm:id())) end
+		anm_state = 4
+	elseif (anm_state == 4) and (time_global() > anm_start+anm_time+20) then
+		db.actor:activate_slot(last_slot)
+		anm_state = 5
+	elseif (anm_state == 5) and (time_global() > anm_start+anm_time+700) then
+		anm_state = 0
+	elseif (anm_state ~= 0) and (db.actor:active_slot() ~= anm_slot) and (time_global() > anm_start+anm_time+700) then
+		anm_state = 0
+	end
+end

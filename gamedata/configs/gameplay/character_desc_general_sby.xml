@@ -1,0 +1,465 @@
+<specific_character id="sim_default_sby_leader_kuzma" team_default = "1">
+    <name>Полковник Дегтярёв</name>
+    <icon>ui_inGame2_soldier_degterev_green_4_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Лидер СБУ.</bio>
+    <class>sim_default_sby_leader_kuzma</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\sby\</snd_config>
+    <rank>22220</rank>
+    <reputation>2000</reputation>
+    <visual>actors\stalker_sbu\sby_leader</visual>
+    <money min="32000" max="81750" infinitive="0"/>
+    <supplies>
+    [spawn] \n
+    wpn_val = 1 \n
+    ammo_9x39_ap = 2 \n
+    wpn_desert_eagle_357 \n
+    ammo_357_fmj = 2 \n
+    grenade_f1 = 4 \n
+    medkit = 8 \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs_leaders.xml"
+    <actor_dialog>dialog_leader_sby</actor_dialog>
+</specific_character>
+
+<specific_character id="sby_beret_red_0_0_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_private</name>
+    <icon>ui_inGame2_sby_beret_red_0_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_zelen_0</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\military\</snd_config>
+    <rank>1500</rank>
+    <reputation>1500</reputation>
+    <visual>actors\stalker_sbu\sby_beret_red_0_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sby_beret_red_0_0_default_0" team_default = "1">
+    <name>GENERATE_NAME_private</name>
+    <icon>ui_inGame2_sby_beret_red_0_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_0</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\military\</snd_config>
+    <rank>3000</rank>
+    <reputation>3000</reputation>
+    <visual>actors\stalker_sbu\sby_beret_red_0_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_sby_0_default_1" team_default = "1">
+    <name>Агент</name>
+    <icon>ui_inGame2_sby_agent</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_0</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\military\</snd_config>
+    <rank>3000</rank>
+    <reputation>3000</reputation>
+    <visual>actors\black_soldier_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_sby_1_default_1" team_default = "1">
+    <name>Агент</name>
+    <icon>ui_inGame2_sby_agent</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_1</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\military\</snd_config>
+    <rank>5000</rank>
+    <reputation>3000</reputation>
+    <visual>actors\black_soldier_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_sby_1_default_2" team_default = "1">
+    <name>Агент</name>
+    <icon>ui_inGame2_sby_agent</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_1</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\SBY\</snd_config>
+    <rank>5000</rank>
+    <reputation>3000</reputation>
+    <visual>actors\black_soldier_gas_3_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_sby_2_default_0" team_default = "1">
+    <name>GENERATE_NAME_senior_sergeant</name>
+    <icon>ui_inGame2_sby_cor_antigaz_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_2</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\SBY\</snd_config>
+    <rank>7000</rank>
+    <reputation>3000</reputation>
+    <visual>actors\stalker_sbu\sby_cor_antigaz_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_sby_2_default_1" team_default = "1">
+    <name>GENERATE_NAME_senior_sergeant</name>
+    <icon>ui_inGame2_sby_black_antigaz_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_2</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\SBY\</snd_config>
+    <rank>7000</rank>
+    <reputation>3000</reputation>
+    <visual>actors\stalker_sbu\sby_black_antigaz_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_sby_2_default_2" team_default = "1">
+    <name>GENERATE_NAME_senior_sergeant</name>
+    <icon>ui_inGame2_sby_black_respirator_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_2</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\SBY\</snd_config>
+    <rank>7000</rank>
+    <reputation>3000</reputation>
+    <visual>actors\stalker_sbu\sby_black_respirator_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_sby_2_default_3" team_default = "1">
+    <name>GENERATE_NAME_senior_sergeant</name>
+    <icon>ui_inGame2_sby_cor_respirator_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_2</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\SBY\</snd_config>
+    <rank>7000</rank>
+    <reputation>3000</reputation>
+    <visual>actors\stalker_sbu\sby_cor_respirator_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_sby_3_default_0" team_default = "1">
+    <name>GENERATE_NAME_lieutenant</name>
+    <icon>ui_inGame2_sby_cor_antigaz_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_3</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\SBY\</snd_config>
+    <rank>9000</rank>
+    <reputation>3000</reputation>
+    <visual>actors\stalker_sbu\sby_cor_antigaz_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_sby_3_default_1" team_default = "1">
+    <name>GENERATE_NAME_lieutenant</name>
+    <icon>ui_inGame2_sby_black_antigaz_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_3</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\SBY\</snd_config>
+    <rank>9000</rank>
+    <reputation>3000</reputation>
+    <visual>actors\stalker_sbu\sby_black_antigaz_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_sby_3_default_2" team_default = "1">
+    <name>GENERATE_NAME_lieutenant</name>
+    <icon>ui_inGame2_sby_cor_respirator_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_3</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\SBY\</snd_config>
+    <rank>9000</rank>
+    <reputation>3000</reputation>
+    <visual>actors\stalker_sbu\sby_cor_respirator_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_sby_3_default_3" team_default = "1">
+    <name>GENERATE_NAME_lieutenant</name>
+    <icon>ui_inGame2_sby_black_respirator_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_3</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\SBY\</snd_config>
+    <rank>9000</rank>
+    <reputation>3000</reputation>
+    <visual>actors\stalker_sbu\sby_black_respirator_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_sby_4_default_0" team_default = "1">
+    <name>GENERATE_NAME_captain</name>
+    <icon>ui_inGame2_sby_black_antigaz_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_4</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\SBY\</snd_config>
+    <rank>11000</rank>
+    <reputation>3000</reputation>
+    <visual>actors\stalker_sbu\sby_black_antigaz_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_sby_4_default_1" team_default = "1">
+    <name>GENERATE_NAME_captain</name>
+    <icon>ui_inGame2_sby_cor_antigaz_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_4</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\SBY\</snd_config>
+    <rank>11000</rank>
+    <reputation>3000</reputation>
+    <visual>actors\stalker_sbu\sby_cor_antigaz_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_sby_4_default_2" team_default = "1">
+    <name>GENERATE_NAME_captain</name>
+    <icon>ui_inGame2_sby_black_respirator_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_4</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\SBY\</snd_config>
+    <rank>11000</rank>
+    <reputation>3000</reputation>
+    <visual>actors\stalker_sbu\sby_black_respirator_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_sby_4_default_3" team_default = "1">
+    <name>GENERATE_NAME_captain</name>
+    <icon>ui_inGame2_sby_cor_respirator_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_4</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\SBY\</snd_config>
+    <rank>11000</rank>
+    <reputation>3000</reputation>
+    <visual>actors\stalker_sbu\sby_cor_respirator_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_sby_4_default_4" team_default = "1">
+    <name>Подполковник Дегтярев</name>
+    <icon>ui_inGame2_sby_cor_degtarev_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_4</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\military\</snd_config>
+    <rank>15000</rank>
+    <reputation>3000</reputation>
+    <visual>actors\stalker_sbu\sby_cor_degtarev_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    <actor_dialog>ggggkkh</actor_dialog>
+</specific_character>
+
+<specific_character id="sim_default_sby_5_default_0" team_default = "1">
+    <name>GENERATE_NAME_captain</name>
+    <icon>ui_inGame2_sby_black_antigaz_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_5</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\SBY\</snd_config>
+    <rank>15000</rank>
+    <reputation>3000</reputation>
+    <visual>actors\stalker_sbu\sby_black_antigaz_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_sby_5_default_1" team_default = "1">
+    <name>GENERATE_NAME_captain</name>
+    <icon>ui_inGame2_sby_cor_antigaz_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_5</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\SBY\</snd_config>
+    <rank>15000</rank>
+    <reputation>3000</reputation>
+    <visual>actors\stalker_sbu\sby_cor_antigaz_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_sby_5_default_2" team_default = "1">
+    <name>GENERATE_NAME_captain</name>
+    <icon>ui_inGame2_sby_black_respirator_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_5</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\SBY\</snd_config>
+    <rank>15000</rank>
+    <reputation>3000</reputation>
+    <visual>actors\stalker_sbu\sby_black_respirator_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_sby_5_default_3" team_default = "1">
+    <name>GENERATE_NAME_captain</name>
+    <icon>ui_inGame2_sby_cor_respirator_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_5</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\SBY\</snd_config>
+    <rank>15000</rank>
+    <reputation>3000</reputation>
+    <visual>actors\stalker_sbu\sby_cor_respirator_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_sby_5_default_4" team_default = "1">
+    <name>Подполковник Дегтярев</name>
+    <icon>ui_inGame2_sby_cor_degtarev_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_sby_5</class>
+    <community>sby</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\military\</snd_config>
+    <rank>15000</rank>
+    <reputation>3000</reputation>
+    <visual>actors\stalker_sbu\sby_cor_degtarev_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    <actor_dialog>ggggkkh</actor_dialog>
+</specific_character>

@@ -1,0 +1,24 @@
+<specific_character id="sim_default_zakat_informator" team_default = "1">
+    <name>Информатор</name>
+    <icon>ui_inGame2_hunter_icon_2_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_zakat_informator</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>9000</rank>
+    <reputation>0</reputation>
+    <visual>actors\black_soldier_2_0</visual>
+    <supplies>
+        [spawn] \n
+        wpn_sig550 \n
+        ammo_5.56x45_ss190 = 1 \n
+        wpn_usp40 \n
+        ammo_10x22_fmj = 1 \n
+        grenade_rgd5 = 1 \n
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>

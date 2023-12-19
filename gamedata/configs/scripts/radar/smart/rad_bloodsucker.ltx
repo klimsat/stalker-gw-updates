@@ -1,0 +1,19 @@
+[smart_terrain]
+squad_id = 5
+max_population = 1
+respawn_params = respawn@rad_bloodsucker
+respawn_idle = 60000
+
+
+[respawn@rad_bloodsucker]
+spawn_bloodsucker
+
+[spawn_bloodsucker]
+spawn_squads = simulation_bloodsucker
+spawn_num = 1
+
+[exclusive]
+rad_bloodsucker_camp_work_1 = radar\rad_bloodsucker_smart_logic.ltx
+rad_bloodsucker_camp_work_2 = radar\rad_bloodsucker_smart_logic.ltx
+rad_bloodsucker_camp_work_3 = radar\rad_bloodsucker_smart_logic.ltx
+rad_bloodsucker_camp_work_4 = radar\rad_bloodsucker_smart_logic.ltx

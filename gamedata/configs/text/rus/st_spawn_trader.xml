@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="dialogs_spawn_trader_actor_ask">
+		<text>Сделаем тут лагерь, но для этого нам нужен торговец.</text>
+	</string>
+	<string id="dialogs_spawn_trader_npc_answer">
+		<text>Хорошо, мы можем нанять его за 50000 руб.</text>
+	</string>
+	<string id="dialogs_spawn_trader_accept">
+		<text>Не вопрос, держи.</text>
+	</string>
+	<string id="dialogs_spawn_trader_reject">
+		<text>В другой раз.</text>
+	</string>
+</string_table>

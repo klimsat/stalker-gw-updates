@@ -1,0 +1,46 @@
+--[[
+========================================================================
+============== /звук включения налобного фонарика/ =====================
+================== автор скрипта :==> /makdm/ :=========================
+== адаптация для MLR 8.3 + FIX [by stason174 v.6.03]:==> /D.E.M.A.N./:==
+================ Правка звуковых файлов - Grelka =======================
+========================================================================
+--]]
+function on_game_start()
+  RegisterScriptCallback("actor_on_update", flashlight_update)
+end
+
+local sound_flashlight_on = sound_object([[makdm\bandit_outfit_take]])
+local sound_flashlight_off = sound_object([[makdm\bad_box]])
+local flag_game_start = nil
+local flag_flashlight_on = nil
+local flag_flashlight_off = nil
+
+function flashlight_update()
+  local torch = db.actor:item_in_slot(10) --\db.actor:object( "device_torch" ):==> /D.E.M.A.N./:
+  if torch == nil then
+    flag_game_start = nil
+    return
+  end
+
+  if flag_game_start == nil then
+    flag_game_start = true
+    if torch:torch_enabled() then
+      flag_flashlight_on = true
+    else
+      flag_flashlight_off = true
+    end
+  end
+
+  if torch:torch_enabled() == false and flag_flashlight_on == true then
+    flag_flashlight_off = true
+    flag_flashlight_on = false
+    sound_flashlight_off:play_at_pos(db.actor, db.actor:position(), 0, sound_object.s3d)
+  end
+
+  if torch:torch_enabled() == true and flag_flashlight_off == true then
+    flag_flashlight_off = false
+    flag_flashlight_on = true
+    sound_flashlight_on:play_at_pos(db.actor, db.actor:position(), 0, sound_object.s3d)
+  end
+end

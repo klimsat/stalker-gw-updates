@@ -1,0 +1,24 @@
+local tbl = {}
+
+local function save_state(m_data)
+  if (not m_data.factionLeader) then
+    m_data.factionLeader = {}
+  end
+
+  m_data.factionLeader.tbl = tbl
+end
+local function load_state(m_data)
+  if not m_data.factionLeader then
+    return
+  end
+
+  tbl = m_data.factionLeader.tbl or {}
+
+  m_data.factionLeader.tbl = nil
+  m_data.factionLeader = nil
+end
+
+function on_game_start()
+  RegisterScriptCallback("save_state", save_state)
+  RegisterScriptCallback("load_state", load_state)
+end

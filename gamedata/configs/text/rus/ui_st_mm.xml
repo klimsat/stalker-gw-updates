@@ -1,0 +1,1830 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+	<string id="Clear">
+		<text>Ясная</text>
+	</string>
+	<string id="Cloudy">
+		<text>Облачная</text>
+	</string>
+	<string id="Default">
+		<text>Средние</text>
+	</string>
+	<string id="Extreme">
+		<text>Максимальные</text>
+	</string>
+	<string id="High">
+		<text>Высокие</text>
+	</string>
+	<string id="Low">
+		<text>Низкие</text>
+	</string>
+	<string id="Minimum">
+		<text>Минимальные</text>
+	</string>
+	<string id="Night">
+		<text>Ночь</text>
+	</string>
+	<string id="Rain">
+		<text>Дождь</text>
+	</string>
+	<string id="game type">
+		<text>ТИП ИГРЫ</text>
+	</string>
+	<string id="gd_master">
+		<text>Мастер</text>
+	</string>
+	<string id="gd_novice">
+		<text>Новичок</text>
+	</string>
+	<string id="gd_veteran">
+		<text>Ветеран</text>
+	</string>
+	<string id="icon">
+		<text>ЗНАЧКИ</text>
+	</string>
+	<string id="map">
+		<text>КАРТА</text>
+	</string>
+	<string id="renderer_r1">
+		<text>DirectX 8 (Базовый)</text>
+	</string>
+	<string id="renderer_r2">
+		<text>DirectX 9 (Базовый)</text>
+	</string>
+	<string id="renderer_r2.5">
+		<text>DirectX 9 (Нормальный)</text>
+	</string>
+	<string id="renderer_r2a">
+		<text>DirectX 9 (Улучшенный)</text>
+	</string>
+	<string id="renderer_r3">
+		<text>DirectX 10 (Улучшенный)</text>
+	</string>
+	<string id="renderer_r4">
+		<text>DirectX 11 (Улучшенный)</text>
+	</string>
+	<string id="st_opt_high">
+		<text>Высоко</text>
+	</string>
+	<string id="st_opt_low">
+		<text>Низко</text>
+	</string>
+	<string id="st_opt_medium">
+		<text>Средне</text>
+	</string>
+	<string id="st_opt_off">
+		<text>Отключено</text>
+	</string>
+	<string id="ui_mm_60_hz">
+		<text>Частота 60Гц</text>
+	</string>
+	<string id="ui_mm_action">
+		<text>Действие</text>
+	</string>
+	<string id="ui_mm_advanced">
+		<text>Расширенные</text>
+	</string>
+	<string id="ui_mm_alternative">
+		<text>Альтернатива</text>
+	</string>
+	<string id="ui_mm_anisotropic">
+		<text>Фильтрация текстур</text>
+	</string>
+	<string id="ui_mm_apply">
+		<text>Применить</text>
+	</string>
+	<string id="ui_mm_back">
+		<text>Назад</text>
+	</string>
+	<string id="ui_mm_blood">
+		<text>Кровь</text>
+	</string>
+	<string id="ui_mm_brightness">
+		<text>Яркость</text>
+	</string>
+	<string id="ui_mm_cancel">
+		<text>Отмена</text>
+	</string>
+	<string id="ui_mm_check_updates">
+		<text>Обновления</text>
+	</string>
+	<string id="ui_mm_contrast">
+		<text>Контраст</text>
+	</string>
+	<string id="ui_mm_controls">
+		<text>Управление</text>
+	</string>
+	<string id="ui_mm_interface">
+		<text>Интерфейс</text>
+	</string>
+	<string id="ui_mm_alife">
+		<text>A-life</text>
+	</string>
+	<string id="ui_mm_weather">
+		<text>Погода</text>
+	</string>
+	<string id="ui_mm_factions">
+		<text>Группировки</text>
+	</string>
+	<string id="ui_mm_capturing">
+		<text>Захват</text>
+	</string>
+	<string id="ui_mm_mutants">
+		<text>Мутанты</text>
+	</string>
+	<string id="ui_mm_events">
+		<text>События</text>
+	</string>
+	<string id="ui_mm_night">
+		<text>Ночь</text>
+	</string>
+
+	<string id="ui_mm_option_caption_sound">
+		<text>Настройки звука</text>
+	</string>
+	<string id="ui_mm_option_caption_video">
+		<text>Настройки видео</text>
+	</string>
+	<string id="ui_mm_option_caption_controls">
+		<text>Настройки управления</text>
+	</string>
+	<string id="ui_mm_option_caption_gameplay">
+		<text>Настройки геймплея</text>
+	</string>
+	<string id="ui_mm_option_caption_weather">
+		<text>Настройки погоды</text>
+	</string>
+	<string id="ui_mm_option_caption_alife">
+		<text>Настройки A-life</text>
+	</string>
+	<string id="ui_mm_option_caption_interface">
+		<text>Настройки интерфейса и HUD</text>
+	</string>
+	<string id="ui_mm_option_caption_factions">
+		<text>Настройки группировок</text>
+	</string>
+	<string id="ui_mm_option_caption_events">
+		<text>Настройки событий</text>
+	</string>
+	<string id="ui_mm_option_caption_night">
+		<text>Настройки луны и ночи</text>
+	</string>
+	<string id="ui_mm_option_caption_capturing">
+		<text>Настройки захвата</text>
+	</string>
+	<string id="ui_mm_option_caption_mutants">
+		<text>Настройки спавна мутантов</text>
+	</string>
+
+	<!-- sounds -->
+	<string id="ui_mm_actor_sounds">
+		<text>Вкл. звуки при получении урона</text>
+	</string>
+	<string id="ui_mm_actor_sounds_hint">
+		<text>
+			%c[200,0,200,0]Звуки при получении урона.\n%c[default]
+			\nВключает или отключает воспроизведение фраз при получении урона.
+		</text>
+	</string>
+	<string id="ui_mm_actor_sounds_jam">
+		<text>Вкл. звуки при заклинивании оружия</text>
+	</string>
+	<string id="ui_mm_actor_sounds_jam_hint">
+		<text>
+			%c[200,0,200,0]Звуки при заклинивании оружия.\n%c[default]
+			\nВключает или отключает воспроизведение фраз при заклинивании оружия.
+		</text>
+	</string>
+	<string id="ui_mm_actor_sounds_taunts">
+		<text>Вкл. звуки при убийстве НПС</text>
+	</string>
+	<string id="ui_mm_actor_sounds_taunts_hint">
+		<text>
+			%c[200,0,200,0]Звуки при убийстве НПС.\n%c[default]
+			\nВключает или отключает воспроизведение фраз при убийстве НПС.
+		</text>
+	</string>
+	<!-- end sounds -->
+
+	<!-- gameplay -->
+	<string id="ui_mm_speed_spawn">
+		<text>Скорость войны</text>
+	</string>
+	<string id="ui_mm_speed_spawn_hint">
+		<text>
+			%c[200,0,200,0]Скорость войны.\n%c[default]
+			\nИзменяет промежуток времени между спавном атакующих отрядов.
+		</text>
+	</string>
+	<string id="ui_mm_list_speed_spawn_item_50">
+		<text>Очень быстро</text>
+	</string>
+	<string id="ui_mm_list_speed_spawn_item_80">
+		<text>Быстро</text>
+	</string>
+	<string id="ui_mm_list_speed_spawn_item_100">
+		<text>Нормально</text>
+	</string>
+	<string id="ui_mm_list_speed_spawn_item_150">
+		<text>Медленно</text>
+	</string>
+	<string id="ui_mm_list_speed_spawn_item_200">
+		<text>Очень медленно</text>
+	</string>
+	<string id="ui_mm_mutants_squad_count">
+		<text>Кол-во стай-мутантов</text>
+	</string>
+	<string id="ui_mm_mutants_squad_count_hint">
+		<text>
+			%c[200,0,200,0]Кол-во отрядов-мутантов.\n%c[default]
+			\nВлияет "вместимость" логов. Т.е. сколько стай
+			может заспавнится на одном логове.
+		</text>
+	</string>
+	<string id="ui_mm_spawn_explorers">
+		<text>Спавн проводников</text>
+	</string>
+	<string id="ui_mm_spawn_explorers_hint">
+		<text>
+			%c[200,0,200,0]Спавн проводников.\n%c[default]
+			\nВключает или отключает спавн проводников на базах.
+		</text>
+	</string>
+	<string id="ui_mm_change_faction_by_outfit">
+		<text>"Встречают по одежке"</text>
+	</string>
+	<string id="ui_mm_change_faction_by_outfit_hint">
+		<text>
+			%c[200,0,200,0]Встречают по одежке.\n%c[default]
+			\nЕсли включить эту опцию, то при смене брони
+			будет менятся группировка к которой принадлежит игрок.
+		</text>
+	</string>
+	<string id="ui_mm_take_any_squad">
+		<text>Брать любой отряд в напарники</text>
+	</string>
+	<string id="ui_mm_take_any_squad_hint">
+		<text>
+			%c[200,0,200,0]Брать любой отряд в напарники.\n%c[default]
+			\nЕсли опция отключена, то не каждый отряд пойдет с игроком.
+			Если ранг игрока ниже ранга командира отряда,
+			то отряд не пойдет с вами. Даже если ранг игрока будет выше,
+			то отряд примкнет к игроку с шансом 50%
+		</text>
+	</string>
+	<string id="ui_mm_disable_spawn_attack">
+		<text>Отключить войну</text>
+	</string>
+	<string id="ui_mm_disable_spawn_attack_hint">
+		<text>
+			%c[200,0,200,0]Отключить войну.\n%c[default]
+			\nОтключает спавн атакующих отрядов
+		</text>
+	</string>
+	<string id="ui_mm_actor_hunters">
+		<text>Вкл/Выкл охоту за игроком</text>
+	</string>
+	<string id="ui_mm_actor_hunters_hint">
+		<text>
+			%c[200,0,200,0]Охота за игроком.\n%c[default]
+			\nДанная опция включает или отключает охоту на игрока
+			при частом убийстве членов той или иной группировки.
+			Данная фитча похожа на систему розыска из серии игр Grand Theft Auto.
+		</text>
+	</string>
+	<string id="ui_mm_capture_base">
+		<text>Вкл/Выкл Захват баз</text>
+	</string>
+	<string id="ui_mm_capture_base_hint">
+		<text>
+			%c[200,0,200,0]Захват баз.\n%c[default]
+			\nДанная опция разрешает или запрещает игроку захватывать базы
+		</text>
+	</string>
+	<string id="ui_mm_capture_point">
+		<text>Вкл/Выкл Захват ключевых точек</text>
+	</string>
+	<string id="ui_mm_capture_point_hint">
+		<text>
+			%c[200,0,200,0]Захват ключевых точек.\n%c[default]
+			\nДанная опция разрешает или запрещает игроку захватывать ключевые точки
+		</text>
+	</string>
+	<string id="ui_mm_capture_territory">
+		<text>Вкл/Выкл Захват территорий</text>
+	</string>
+	<string id="ui_mm_capture_territory_hint">
+		<text>
+			%c[200,0,200,0]Захват территорий.\n%c[default]
+			\nДанная опция разрешает или запрещает игроку захватывать территории
+		</text>
+	</string>
+	<string id="ui_mm_capture_resource">
+		<text>Вкл/Выкл Захват ресурсных точек</text>
+	</string>
+	<string id="ui_mm_capture_resource_hint">
+		<text>
+			%c[200,0,200,0]Захват ресурсных точек.\n%c[default]
+			\nДанная опция разрешает или запрещает игроку захватывать ресурсные точки
+		</text>
+	</string>
+	<string id="ui_mm_capture_lair">
+		<text>Вкл/Выкл Захват логов</text>
+	</string>
+	<string id="ui_mm_capture_lair_hint">
+		<text>
+			%c[200,0,200,0]Захват логов.\n%c[default]
+			\nДанная опция разрешает или запрещает игроку захватывать логова
+		</text>
+	</string>
+	<string id="ui_mm_capture_camp">
+		<text>Вкл/Выкл Захват лагерей</text>
+	</string>
+	<string id="ui_mm_capture_camp_hint">
+		<text>
+			%c[200,0,200,0]Захват лагерей.\n%c[default]
+			\nДанная опция разрешает или запрещает игроку захватывать лагеря
+		</text>
+	</string>
+	<string id="ui_mm_azazel">
+		<text>Режим Азазеля</text>
+	</string>
+	<string id="ui_mm_azazel_hint">
+		<text>
+			%c[200,0,200,0]После смерти игра не заканчивается.\n%c[default]
+			\nДемон Азазель перенесет вашу душу в другое тело, в любого случайного сталкера во всей Зоне.\n
+			Если у вас есть напарники, то в первую очередь вы станете одним из них. Отлично дополняет режим Выживания.\n
+			\n%c[200,200,50,50]• %c[0,150,150,150]Несовместим с режимом Истории.
+		</text>
+	</string>
+	<string id="ui_mm_priorities">
+		<text>Другая логика приоритетов</text>
+	</string>
+	<string id="ui_mm_priorities_hint">
+		<text>
+			%c[200,0,200,0]Переключение логики приоритетов.\n%c[default]
+			\nЕсли отключено, то логика следующая: При установке приоритета на точку, допустим до 5 - это означает, что,
+			будет отправлено только 5 отрядов на точку. И при спавне отряда число приоритета будет падать на единицу.
+			Если включено, то отряды будут атаковать цель до ее полного захвата, затем приоритет сбрасывается.
+			\nВ обеих случаях из таблицы приоритетов будет браться точка с наивысшим приоритетом.
+		</text>
+	</string>
+	<string id="ui_mm_spawn_mutants">
+		<text>Вкл/Выкл спавн мутантов</text>
+	</string>
+	<string id="ui_mm_spawn_mutants_hint">
+		<text>
+			%c[200,0,200,0]Спавн мутантов.\n%c[default]
+			\nВключет или отключает спавн мутантов на всех локациях.
+		</text>
+	</string>
+	<string id="ui_mm_global_mutants_settings">
+		<text>Вкл/Выкл глобальную настройку</text>
+	</string>
+	<string id="ui_mm_global_mutants_settings_hint">
+		<text>
+			%c[200,0,200,0]Глобальньый коэф. мутантов\n%c[default]
+			\nЕсли включено, то настройки коэф. мутантов и кол-во стай будут
+			браться из полей сверху для всех локаций.
+			\nЕсли отключено, то настройки будут применятся из опций для каждой локации. 
+		</text>
+	</string>
+	<string id="ui_mm_check_spawn_mutants_on_level_hint">
+		<text>
+			%c[200,0,200,0]Спавн мутантов.\n%c[default]
+			\nВключет или отключает спавн мутантов на данной локации.
+		</text>
+	</string>
+	<string id="ui_mm_manual_capture">
+		<text>Вкл/Выкл быстрый захват</text>
+	</string>
+	<string id="ui_mm_manual_capture_hint">
+		<text>
+			%c[200,0,200,0]Быстрый захват.\n%c[default]
+			\nЕсли включено, то при захвате точки отряд спавнится на данной точке. Вы тратите деньги на спавн.
+			Если отключено, то отряд будет идти до захваченой точки с ближайшей базы. Деньги за это вычитаться не будут.
+			Захват будет не таким быстрым.
+		</text>
+	</string>
+	<string id="ui_mm_fake_news">
+		<text>Вкл. фейковые новости</text>
+	</string>
+	<string id="ui_mm_fake_news_hint">
+		<text>
+			%c[200,0,200,0]Фейковые новости.\n%c[default]
+			\nЕсли включено, то группировки буду периодически писать в чат фейковые новости.
+		</text>
+	</string>
+	<string id="ui_mm_drop_helmets">
+		<text>Вкл. выпадание шлемов с трупов</text>
+	</string>
+	<string id="ui_mm_drop_helmets_hint">
+		<text>
+			%c[200,0,200,0]Выпадание шлемов с трупов.\n%c[default]
+			\nЕсли включено, то при обыске трупов есть шанс, что вы сможете найти шлем, 
+			если визуал НПС предусматривает наличие шлема.
+		</text>
+	</string>
+	<string id="ui_mm_drop_outfits">
+		<text>Вкл. выпадание брони с трупов</text>
+	</string>
+	<string id="ui_mm_drop_outfits_hint">
+		<text>
+			%c[200,0,200,0]Выпадание брони с трупов.\n%c[default]
+			\nЕсли включено, то при обыске трупов есть шанс, что Вы сможете найти броню.
+		</text>
+	</string>
+	<string id="ui_mm_arena_mode">
+		<text>Вкл. Режим арены</text>
+	</string>
+	<string id="ui_mm_arena_mode_hint">
+		<text>
+			%c[200,0,200,0]Режим арены.\n%c[default]
+			\nЕсли отлючено, то отряды будут переходить на другие локации.
+		</text>
+	</string>
+	<string id="ui_mm_smart_capture_sms">
+		<text>Выводить сообщения в чат при захвате</text>
+	</string>
+	<string id="ui_mm_smart_capture_sms_hint">
+		<text>
+			%c[200,0,200,0]Сообщения при захвате.\n%c[default]
+			\nЕсли включено, то при захвате точки в чат будут выводится сообщения.
+		</text>
+	</string>
+	<string id="ui_mm_enable_sms">
+		<text>Вкл. СМС чат</text>
+	</string>
+	<string id="ui_mm_enable_sms_hint">
+		<text>
+			%c[200,0,200,0]СМС чат.\n%c[default]
+			\nЕсли включено, в чат будут выводится все сообщения.
+			Если отключено, в чат не будут выводится сообщения.
+		</text>
+	</string>
+	<!-- end gameplay -->
+	
+	<!-- factions -->
+	<string id="ui_mm_respawn_factions">
+		<text>Могут возрождаться</text>
+	</string>
+	<string id="ui_mm_respawn_factions_hint">
+		<text>
+			%c[200,0,200,0]Могут ли возраждаться ГП.\n%c[default]
+			\nВключает или отключает возможность возрождаться
+			группировкам после полного поражения.
+		</text>
+	</string>
+	<string id="ui_mm_label_faction_boost">
+		<text>Сила отрядов в оффлайне</text>
+	</string>
+	<string id="ui_mm_label_faction_behavior">
+		<text>Тактика группировки по умолчанию</text>
+	</string>
+	<string id="ui_mm_label_faction_respawn">
+		<text>Может возродиться</text>
+	</string>
+	<string id="ui_mm_change_beh_factions">
+		<text>Сами меняют тактику</text>
+	</string>
+	<string id="ui_mm_change_beh_factions_hint">
+		<text>
+			%c[200,0,200,0]ГП сами выбирают тактику.\n%c[default]
+			\nЕсли включено то группировки могут сами выбирать
+			тактики в зависимости от различных условий.
+			Например: если у гп мало ресурсов, то скорее всего
+			такая группировка выберет тактику "Экономическая"
+		</text>
+	</string>
+	<string id="ui_mm_label_factions">
+		<text>Группировки:</text>
+	</string>
+	<string id="ui_mm_list_behavior_item_default">
+		<text>Стандартно</text>
+	</string>
+	<string id="ui_mm_list_behavior_item_novice">
+		<text>Новичок</text>
+	</string>
+	<string id="ui_mm_list_behavior_item_experienced">
+		<text>Опытная</text>
+	</string>
+	<string id="ui_mm_list_behavior_item_proffi">
+		<text>Профи</text>
+	</string>
+	<string id="ui_mm_list_behavior_item_veteran">
+		<text>Ветеран</text>
+	</string>
+	<string id="ui_mm_list_behavior_item_master">
+		<text>Мастер</text>
+	</string>
+	<string id="ui_mm_list_behavior_item_legend">
+		<text>Легенда</text>
+	</string>
+	<string id="ui_mm_list_behavior_item_aggressive">
+		<text>Агрессивная</text>
+	</string>
+	<string id="ui_mm_list_behavior_item_passive">
+		<text>Пассивная</text>
+	</string>
+	<string id="ui_mm_list_behavior_item_defense">
+		<text>Обороняющаяся</text>
+	</string>
+	<string id="ui_mm_list_behavior_item_economy">
+		<text>Экономическая</text>
+	</string>
+	<!-- end factions -->
+
+	<!-- interface -->
+	<string id="ui_mm_label_pda_icons">
+		<text>Иконки смартов в ПДА:</text>
+	</string>
+	<string id="ui_mm_label_hud_settings">
+		<text>Настройки HUD:</text>
+	</string>
+	<string id="ui_mm_label_hitmark_settings">
+		<text>Настройки хитмарков:</text>
+	</string>
+	<string id="ui_mm_hitmark">
+		<text>Включить хитмарки</text>
+	</string>
+	<string id="ui_mm_hitmark_hint">
+		<text>
+			%c[200,0,200,0]Хитмарки.\n%c[default]
+			\nВключает или отключает отображение хитмарка при попадании в НПС или мутанта
+		</text>
+	</string>
+	<string id="ui_mm_hitmark_speed">
+		<text>Скорость анимации</text>
+	</string>
+	<string id="ui_mm_hitmark_speed_hint">
+		<text>
+			%c[200,0,200,0]Скорость анимации.\n%c[default]
+			\nУстанавливает скорость воспроизведения анимации разъезжания элементов индкатора стороны.
+		</text>
+	</string>
+	<string id="ui_mm_hitmark_shift">
+		<text>Радиус анимации</text>
+	</string>
+	<string id="ui_mm_hitmark_shift_hint">
+		<text>
+			%c[200,0,200,0]Радиус анимации.\n%c[default]
+			\nУстанавливает максимальный радиус до которого будут разъезжаться элементы индкатора.
+		</text>
+	</string>
+	<string id="ui_mm_hitmark_show_time">
+		<text>Время показа индикатора</text>
+	</string>
+	<string id="ui_mm_hitmark_show_time_hint">
+		<text>
+			%c[200,0,200,0]Время показа индикатора.\n%c[default]
+			\nУстанавливает время отображения анимации разъезжания элементов индкатора стороны.
+		</text>
+	</string>
+	<string id="ui_mm_hitmark_show_head_time">
+		<text>Время показа head индикатора</text>
+	</string>
+	<string id="ui_mm_hitmark_show_head_time_hint">
+		<text>
+			%c[200,0,200,0]Время показа head индикатора.\n%c[default]
+			\nУстанавливает время отображения хитмарка при попадании в голову.
+		</text>
+	</string>
+	<string id="ui_mm_pda_smart_icons_size">
+		<text>Размер</text>
+	</string>
+	<string id="ui_mm_pda_smart_icons_size_hint">
+		<text>
+			%c[200,0,200,0]Размер иконок смартов.\n%c[default]
+			\nОпция устанавливает размер иконок смартов в ПДА.\n
+			\n%c[0,255,0,0]Внимание! При изменении данной опции, игра зависнет на какое-то время,
+			т.к. итерация всех смартов и смена на каждом из них иконки требует определенного времени.
+		</text>
+	</string>
+	<string id="ui_mm_pda_smart_icons_color">
+		<text>Цвет</text>
+	</string>
+	<string id="ui_mm_pda_smart_icons_color_hint">
+		<text>
+			%c[200,0,200,0]Цвет иконок смартов.\n%c[default]
+			\nОпция устанавливает цвет иконок смартов в ПДА.
+			Цвета устанавливаются только для свободных точек. Для каждого типа точки свой цвет.\n
+			\n%c[0,255,0,0]Внимание! При изменении данной опции, игра зависнет на какое-то время,
+			т.к. итерация всех смартов и смена на каждом из них иконки требует определенного времени.
+		</text>
+	</string>
+	<string id="ui_mm_list_pda_smart_icons_color_item_default">
+		<text>Стандартно</text>
+	</string>
+	<string id="ui_mm_list_pda_smart_icons_color_item_colorized">
+		<text>Цветные</text>
+	</string>
+	<string id="ui_mm_list_pda_smart_icons_color_item_class_1">
+		<text>Дополненные</text>
+	</string>
+	<string id="ui_mm_list_pda_smart_icons_color_item_class_2">
+		<text>Дополненные цветные</text>
+	</string>
+	<string id="ui_mm_smart_capture_progress">
+		<text>Показывать прогресс бар при захвате точки</text>
+	</string>
+	<string id="ui_mm_smart_capture_progress_hint">
+		<text>
+			%c[200,0,200,0]Прогресс бар при захвате точки.\n%c[default]
+			\nВключить или выключить отображение прогресс бара при захвате точек
+		</text>
+	</string>
+	<string id="ui_mm_smart_capture_info">
+		<text>Показывать информацию о точке</text>
+	</string>
+	<string id="ui_mm_smart_capture_info_hint">
+		<text>
+			%c[200,0,200,0]Информация о точке.\n%c[default]
+			\nВключить или выключить отображение информации о точке
+		</text>
+	</string>
+	<!-- end interface -->
+	
+	<!-- weather -->
+	<string id="ui_mm_weather_balance_presets">
+		<text>Предустановки:</text>
+	</string>
+	<string id="ui_mm_weather_balance_presets_hint">
+		<text>
+			%c[200,0,200,0]Пресет первого периода погоды.\n%c[default]
+			\nУстанавливает опции погоды для локаций в соответствии с выбранным пресетом.
+		</text>
+	</string>
+	<string id="ui_mm_weather_length_presets_hint">
+		<text>
+			%c[200,0,200,0]Пресет второго периода погоды.\n%c[default]
+			\nУстанавливает опции погоды для локаций в соответствии с выбранным пресетом.
+		</text>
+	</string>
+	<string id="ui_mm_weather_balance_hint">
+		<text>
+			%c[200,0,200,0]Первый период погоды.\n%c[default]
+			\nУстанавливает погоду для первого переода для локации.
+		</text>
+	</string>
+	<string id="ui_mm_weather_length_hint">
+		<text>
+			%c[200,0,200,0]Второй период погоды.\n%c[default]
+			\nУстанавливает погоду для второго переода для локации.
+		</text>
+	</string>
+	<string id="ui_mm_weather_balance_period_hint">
+		<text>
+			%c[200,0,200,0]Первый период погоды.\n%c[default]
+			\nУстанавливает продолжительность первого переода погоды для локации.
+		</text>
+	</string>
+	<string id="ui_mm_weather_length_period_hint">
+		<text>
+			%c[200,0,200,0]Второй период погоды.\n%c[default]
+			\nУстанавливает продолжительность второго переода погоды для локации.
+		</text>
+	</string>
+	<string id="ui_mm_list_weather_balance_presets_item_default">
+		<text>Балланс погоды</text>
+	</string>
+	<string id="ui_mm_list_weather_balance_presets_item_bad">
+		<text>Преимущественно плохая</text>
+	</string>
+	<string id="ui_mm_list_weather_balance_presets_item_good">
+		<text>Преимущественно хорошая</text>
+	</string>
+	<string id="ui_mm_list_weather_balance_presets_item_custom">
+		<text>Своё</text>
+	</string>
+	<string id="ui_mm_list_weather_length_presets_item_default">
+		<text>Длина периодов</text>
+	</string>
+	<string id="ui_mm_list_weather_length_presets_item_short">
+		<text>Короткие</text>
+	</string>
+	<string id="ui_mm_list_weather_length_presets_item_long">
+		<text>Долгие</text>
+	</string>
+	<string id="ui_mm_list_weather_length_presets_item_custom">
+		<text>Своё</text>
+	</string>
+	<string id="ui_mm_list_weather_periods_item_clear">
+		<text>Ясная</text>
+	</string>
+	<string id="ui_mm_list_weather_periods_item_clear_foggy">
+		<text>Ясная / Туманная</text>
+	</string>
+	<string id="ui_mm_list_weather_periods_item_foggy">
+		<text>Туманная</text>
+	</string>
+	<string id="ui_mm_list_weather_periods_item_foggy_rainy">
+		<text>Туманная / Дождливая</text>
+	</string>
+	<string id="ui_mm_list_weather_periods_item_rainy">
+		<text>Дождливая</text>
+	</string>
+	<string id="ui_mm_list_weather_periods_item_stormy">
+		<text>Штормовая</text>
+	</string>
+	<string id="ui_mm_list_weather_length_item_default">
+		<text>Длина периодов</text>
+	</string>
+	<string id="ui_mm_list_weather_length_item_short">
+		<text>Короткие</text>
+	</string>
+	<string id="ui_mm_list_weather_length_item_long">
+		<text>Долгие</text>
+	</string>
+	<string id="ui_mm_list_weather_length_item_custom">
+		<text>Своё</text>
+	</string>
+	<string id="ui_mm_weather_event_blowout_npc">
+		<text>Судьба НПС</text>
+	</string>
+	<string id="ui_mm_weather_event_blowout_npc_hint">
+		<text>
+			%c[200,0,200,0]Судьба НПС.\n%c[default]
+			\nЧто случится с НПС во время или после выброса
+		</text>
+	</string>
+	<string id="ui_mm_list_event_blowout_npc_item_killatend">
+		<text>Смерть в конце</text>
+	</string>
+	<string id="ui_mm_list_event_blowout_npc_item_killatwave">
+		<text>Смерть по достижении волны</text>
+	</string>
+	<string id="ui_mm_list_event_blowout_npc_item_turntozombie">
+		<text>Зомбирование</text>
+	</string>
+	<string id="ui_mm_list_event_blowout_npc_item_explode">
+		<text>Разрывать на части</text>
+	</string>
+	<string id="ui_mm_list_event_blowout_npc_item_poison">
+		<text>Рад./Хим. отравление</text>
+	</string>
+	<string id="ui_mm_list_event_blowout_npc_item_none">
+		<text>Без последствий</text>
+	</string>
+	<string id="ui_mm_list_event_blowout_npc_item_kill">
+		<text>Смерть на пике</text>
+	</string>
+	<string id="ui_mm_list_event_blowout_npc_item_killorturn">
+		<text>Смерть/Зомбирование</text>
+	</string>
+	<string id="ui_mm_weather_event_blowout_warn">
+		<text>Предупреждения</text>
+	</string>
+	<string id="ui_mm_weather_event_blowout_warn_hint">
+		<text>
+			%c[200,0,200,0]Предупреждения.\n%c[default]
+			\nКакие будут предупреждения перед началом выброса.
+		</text>
+	</string>
+	<string id="ui_mm_list_blowout_warn_item_radio_siren">
+		<text>Радио и сирена</text>
+	</string>
+	<string id="ui_mm_list_blowout_warn_item_radio">
+		<text>Радио</text>
+	</string>
+	<string id="ui_mm_list_blowout_warn_item_siren">
+		<text>Сирена</text>
+	</string>
+	<string id="ui_mm_list_blowout_warn_item_none">
+		<text>Без предупреждений</text>
+	</string>
+	<string id="ui_mm_weather_blowout">
+		<text>Вкл/Выкл Выбросы</text>
+	</string>
+	<string id="ui_mm_weather_blowout_hint">
+		<text>
+			%c[200,0,200,0]Выбросы.\n%c[default]
+			\nВключает или отключает выбросы
+		</text>
+	</string>
+	<string id="ui_mm_label_blowout">
+		<text>Выбросы:</text>
+	</string>
+	<string id="ui_mm_weather_event_blowout_freq">
+		<text>Частота</text>
+	</string>
+	<string id="ui_mm_weather_event_blowout_freq_hint">
+		<text>
+			%c[200,0,200,0]Частота.\n%c[default]
+			\nУстанавливает частоту появления выбросов.
+		</text>
+	</string>
+	<string id="ui_mm_list_event_blowout_freq_item_12">
+		<text>каждые 6 - 12 часов</text>
+	</string>
+	<string id="ui_mm_list_event_blowout_freq_item_24">
+		<text>каждые 12 - 24 часа</text>
+	</string>
+	<string id="ui_mm_list_event_blowout_freq_item_48">
+		<text>каждые 1 - 2 дня</text>
+	</string>
+	<string id="ui_mm_list_event_blowout_freq_item_96">
+		<text>каждые 2 - 4 дня</text>
+	</string>
+	<string id="ui_mm_weather_event_blowout_quest">
+		<text>Задание</text>
+	</string>
+	<string id="ui_mm_weather_event_blowout_quest_hint">
+		<text>
+			%c[200,0,200,0]Задание.\n%c[default]
+			\nВыдавать ли задание найти укрытие при выбросе
+		</text>
+	</string>
+	<string id="ui_mm_weather_event_psi_storm_quest">
+		<text>Задание</text>
+	</string>
+	<string id="ui_mm_weather_event_psi_storm_quest_hint">
+		<text>
+			%c[200,0,200,0]Задание.\n%c[default]
+			\nВыдавать ли задание найти укрытие при пси-шторме
+		</text>
+	</string>
+	<string id="ui_mm_list_event_blowout_quest_item_give">
+		<text>Давать задание</text>
+	</string>
+	<string id="ui_mm_list_event_blowout_quest_item_none">
+		<text>Не давать задание</text>
+	</string>
+	<string id="ui_mm_label_psi_storm">
+		<text>Пси-шторма:</text>
+	</string>
+	<string id="ui_mm_weather_event_psi_storm_npc">
+		<text>Судьба НПС</text>
+	</string>
+	<string id="ui_mm_weather_event_psi_storm_npc_hint">
+		<text>
+			%c[200,0,200,0]Судьба НПС.\n%c[default]
+			\nЧто случится с НПС во время или после пси-шторма
+		</text>
+	</string>
+	<string id="ui_mm_weather_psi_storm">
+		<text>Вкл/Выкл Пси-шторма</text>
+	</string>
+	<string id="ui_mm_weather_psi_storm_hint">
+		<text>
+			%c[200,0,200,0]Выбросы.\n%c[default]
+			\nВключает или отключает пси-шторма
+		</text>
+	</string>
+	<string id="ui_mm_weather_event_psi_storm_warn">
+		<text>Предупреждения</text>
+	</string>
+	<string id="ui_mm_weather_event_psi_storm_warn_hint">
+		<text>
+			%c[200,0,200,0]Предупреждения.\n%c[default]
+			\nКакие будут предупреждения перед началом пси-шторма.
+		</text>
+	</string>
+	<string id="ui_mm_weather_event_psi_storm_freq">
+		<text>Частота</text>
+	</string>
+	<string id="ui_mm_weather_event_psi_storm_freq_hint">
+		<text>
+			%c[200,0,200,0]Частота.\n%c[default]
+			\nУстанавливает частоту появления пси-штормов.
+		</text>
+	</string>
+	<string id="ui_mm_list_night_brightness">
+		<text>Яркость ночей</text>
+	</string>
+	<string id="ui_mm_list_night_brightness_item_dark">
+		<text>Тёмные ночи</text>
+	</string>
+	<string id="ui_mm_list_night_brightness_item_slight">
+		<text>Чуть светлые ночи</text>
+	</string>
+	<string id="ui_mm_list_night_brightness_item_medium">
+		<text>Светлые ночи</text>
+	</string>
+	<string id="ui_mm_list_night_brightness_item_bright">
+		<text>Очень светлые ночи</text>
+	</string>
+	<string id="ui_mm_list_night_brightness_hint">
+		<text>
+			%c[200,0,200,0]Яркость ночей.\n%c[default]
+			\nУстанавливает яркость ночей.
+		</text>
+	</string>
+	<string id="ui_mm_moon_cycle_length">
+		<text>Длина лунного цикла:</text>
+	</string>
+	<string id="ui_mm_moon_cycle_length_hint">
+		<text>
+			%c[200,0,200,0]Длина лунного цикла.\n%c[default]
+			\nУстанавливает длину лунного цикла.
+		</text>
+	</string>
+	<string id="ui_mm_s_label_moon_cycle_length">
+		<text>Установить постоянную фазу:</text>
+	</string>
+	<!-- end weather -->
+
+	<!-- alife -->
+	<string id="ui_mm_autosave_interval">
+		<text>Интервал между автосейвами</text>
+	</string>
+	<string id="ui_mm_autosave_interval_hint">
+		<text>
+			%c[200,0,200,0]Интервал между автосейвами.\n%c[default]
+			\nУстанавливает интервал между автосейвами в формате ЧАСЫ:МИНУТЫ:СЕКУНДЫ
+		</text>
+	</string>
+	<string id="ui_mm_delay_autosave_interval">
+		<text>Интервал задержки автосейвов</text>
+	</string>
+	<string id="ui_mm_delay_autosave_interval_hint">
+		<text>
+			%c[200,0,200,0]Интервал задержки автосейвов.\n%c[default]
+			\nУстанавливает интервал задержки автосейвов в формате ЧАСЫ:МИНУТЫ:СЕКУНДЫ
+		</text>
+	</string>
+	<string id="ui_mm_switch_distance">
+		<text>Дистанция переключения</text>
+	</string>
+	<string id="ui_mm_switch_distance_hint">
+		<text>
+			%c[200,0,200,0]Дистанция переключения.\n%c[default]
+			\nУстанавливает дистанцию переключения в
+			онлайн/оффлайн НПС и мутантов
+		</text>
+	</string>
+	<string id="ui_mm_switch_factor">
+		<text>Фактор переключения</text>
+	</string>
+	<string id="ui_mm_switch_factor_hint">
+		<text>
+			%c[200,0,200,0]Фактор переключения.\n%c[default]
+			\nУстанавливает фактор переключения
+		</text>
+	</string>
+	<string id="ui_mm_objects_per_update">
+		<text>Интервал обновления объектов</text>
+	</string>
+	<string id="ui_mm_objects_per_update_hint">
+		<text>
+			%c[200,0,200,0]Интервал обновления объектов.\n%c[default]
+			\nУстанавливает интервал обновления объектов.
+			Через какой промежуток времени будет обновляться
+			информация о каждом игровом объекте.
+		</text>
+	</string>
+	<string id="ui_mm_update_monster_factor">
+		<text>update monster factor</text>
+	</string>
+	<string id="ui_mm_update_monster_factor_hint">
+		<text>
+			%c[200,0,200,0]Вкл. трассеры.\n%c[default]
+			\nУстанавливает update monster factor
+		</text>
+	</string>
+	<string id="ui_mm_time_factor">
+		<text>Фактор длительности суток</text>
+	</string>
+	<string id="ui_mm_time_factor_hint">
+		<text>
+			%c[200,0,200,0]Фактор длительности суток.\n%c[default]
+			\nУстанавливает фактор длительности игровых суток
+		</text>
+	</string>
+	<!-- end alife -->
+
+	<!-- mutants -->
+	<string id="ui_mm_mutants_level_list">
+		<text>Мутанты на локации</text>
+	</string>
+	<string id="ui_mm_mutants_level_list_hint">
+		<text>
+			%c[200,0,200,0]Секции мутантов.\n%c[default]
+			\nСписок включет в себя секции стай,
+			которые будут спавнится на данной локации.
+		</text>
+	</string>
+	<string id="ui_mm_mutants_sections_list">
+		<text>Список всех секций стай-мутантов</text>
+	</string>
+	<string id="ui_mm_mutants_sections_list_hint">
+		<text>
+			%c[200,0,200,0]Секции мутантов.\n%c[default]
+			\nВсе секции стай мутантов описанные в файле
+			configs/misc/squad_descr/monsters_squads.ltx
+		</text>
+	</string>
+	<string id="ui_mm_mutants_add_btn">
+		<text>Добавить</text>
+	</string>
+	<string id="ui_mm_mutants_remove_btn">
+		<text>Удалить</text>
+	</string>
+	<string id="ui_mm_check_spawn_mutants_on_level">
+		<text>Спавнить мутантов на данной локации</text>
+	</string>
+	<string id="ui_mm_mutants_npcs_list">
+		<text>Мутанты в стае</text>
+	</string>
+	<string id="ui_mm_mutants_npcs_list_hint">
+		<text>
+			%c[200,0,200,0]Список мутантов.\n%c[default]
+			\nСписок возможных мутантов в выбранной секции
+			в списке слева
+		</text>
+	</string>
+	<string id="ui_mm_mutants_npc_in_squad">
+		<text>В стае от %s до %s мутантов</text>
+	</string>
+	<string id="ui_mm_mutants_npc_in_squad_1">
+		<text>В стае %s мутантов</text>
+	</string>
+	<!-- end mutants -->
+
+	<string id="ui_mm_credits">
+		<text>Титры</text>
+	</string>
+	<string id="ui_mm_crosshair_distance">
+		<text>Дистанция до цели</text>
+	</string>
+	<string id="ui_mm_crosshair_distance_hint">
+		<text>
+			%c[200,0,200,0]Дистанция до цели.\n%c[default]
+			\nВключить или отключить отображение дистанция до цели
+		</text>
+	</string>
+	<string id="ui_mm_default">
+		<text>По умолчанию</text>
+	</string>
+	<string id="ui_mm_delete">
+		<text>Удалить</text>
+	</string>
+	<string id="ui_mm_delete_existing_file_q">
+		<text>Вы действительно хотите удалить этот файл?</text>
+	</string>
+	<string id="ui_mm_detail_density">
+		<text>Плотность травы</text>
+	</string>
+	<string id="ui_mm_detail_radius">
+		<text>Дальность прорисовки травы</text>
+	</string>
+	<string id="ui_mm_difficulty">
+		<text>Сложность</text>
+	</string>
+	<string id="ui_mm_difficulty_hint">
+		<text>
+			%c[200,0,200,0]Сложность.\n%c[default]
+			\nУстанавливает сложность геймплея.
+		</text>
+	</string>
+	<string id="ui_mm_disconnect">
+		<text>Отсоединиться</text>
+	</string>
+	<string id="ui_mm_disconnect_message">
+		<text>Вы действительно желаете отсоединиться?</text>
+	</string>
+	<string id="ui_mm_dof">
+		<text>Глубина резкости</text>
+	</string>
+	<string id="ui_mm_dyn_crosshair">
+		<text>Динамический прицел</text>
+	</string>
+	<string id="ui_mm_dyn_crosshair_hint">
+		<text>
+			%c[200,0,200,0]Динамический прицел.\n%c[default]
+			\nВключить или отключить динамический прицел
+		</text>
+	</string>
+	<string id="ui_mm_dynamic_music">
+		<text>Динамическая музыка</text>
+	</string>
+	<string id="ui_mm_eax">
+		<text>EAX</text>
+	</string>
+	<string id="ui_mm_fullscreen">
+		<text>Полный экран</text>
+	</string>
+	<string id="ui_mm_gameplay">
+		<text>Игра</text>
+	</string>
+	<string id="ui_mm_gamma">
+		<text>Гамма</text>
+	</string>
+	<string id="ui_mm_geometry_lod">
+		<text>Детализация объектов</text>
+	</string>
+	<string id="ui_mm_invert_mouse">
+		<text>Инвертировать мышь</text>
+	</string>
+	<string id="ui_mm_key">
+		<text>Кнопка</text>
+	</string>
+	<string id="ui_mm_keyboard_setup">
+		<text>Настройка клавиатуры</text>
+	</string>
+	<string id="ui_mm_last_save">
+		<text>Посл. игра</text>
+	</string>
+	<string id="ui_mm_light_distance">
+		<text>Дальность освещения</text>
+	</string>
+	<string id="ui_mm_load">
+		<text>Продолжить</text>
+	</string>
+	<string id="ui_mm_load_game">
+		<text>Продолжить игру</text>
+	</string>
+	<string id="ui_mm_logout">
+		<text>Выйти из профиля</text>
+	</string>
+	<string id="ui_mm_master">
+		<text>Мастер</text>
+	</string>
+	<string id="ui_mm_master_volume">
+		<text>Громкость</text>
+	</string>
+	<string id="ui_mm_mouse_sense">
+		<text>Чувствительность мыши</text>
+	</string>
+	<string id="ui_mm_msaa_alphatest">
+		<text>Сглаживать А-тестовые объекты</text>
+	</string>
+	<string id="ui_mm_msaa_opt">
+		<text>Оптимизировать сглаживание</text>
+	</string>
+	<string id="ui_mm_multiplayer">
+		<text>СЕТЕВАЯ ИГРА</text>
+	</string>
+	<string id="ui_mm_multiplayer_n">
+		<text>Сетевая игра</text>
+	</string>
+	<string id="ui_mm_music_volume">
+		<text>Громкость музыки</text>
+	</string>
+	<string id="ui_mm_need_restart">
+		<text>Изменения вступят в силу только после выхода из зоны</text>
+	</string>
+	<string id="ui_mm_network_game">
+		<text>Сетевая игра</text>
+	</string>
+	<string id="ui_mm_newgame">
+		<text>Новая игра</text>
+	</string>
+	<string id="ui_mm_novice">
+		<text>Новичок</text>
+	</string>
+	<string id="ui_mm_npc_torch">
+		<text>Свет фонариков NPC</text>
+	</string>
+	<string id="ui_mm_options">
+		<text>ОПЦИИ</text>
+	</string>
+	<string id="ui_mm_options_n">
+		<text>Опции</text>
+	</string>
+	<string id="ui_mm_weather_options">
+		<text>Опции погоды</text>
+	</string>
+	<string id="ui_mm_particles_distance">
+		<text>Дальность частиц</text>
+	</string>
+	<string id="ui_mm_quality_presets">
+		<text>Установки качества</text>
+	</string>
+	<string id="ui_mm_quit2windows">
+		<text>Выйти из Зоны</text>
+	</string>
+	<string id="ui_mm_quit_game">
+		<text>Завершить игру</text>
+	</string>
+	<string id="ui_mm_quit_game_message">
+		<text>Вы действительно желаете покинуть игру?</text>
+	</string>
+	<string id="ui_mm_quit_windows_message">
+		<text>Вы действительно хотите выйти из Зоны?</text>
+	</string>
+	<string id="ui_mm_r2_detail_bump">
+		<text>Детальный рельеф</text>
+	</string>
+	<string id="ui_mm_r2_steep_parallax">
+		<text>Steep parallax</text>
+	</string>
+	<string id="ui_mm_r2_sun">
+		<text>Тень от солнца</text>
+	</string>
+	<string id="ui_mm_r2_sun_details">
+		<text>Тень травы</text>
+	</string>
+	<string id="ui_mm_r__actor_shadow">
+		<text>Тень от игрока</text>
+	</string>
+	<string id="ui_mm_r2_sun_quality">
+		<text>Качество солнца</text>
+	</string>
+	<string id="ui_mm_r3_DX10_1">
+		<text>Использовать DX10.1</text>
+	</string>
+	<string id="ui_mm_r3_MSAA">
+		<text>Полноэкранное сглаживание</text>
+	</string>
+	<string id="ui_mm_r3_dynamic_wet_surfaces">
+		<text>Намокание плоскостей</text>
+	</string>
+	<string id="ui_mm_r3_gbuffer_opt">
+		<text>Оптимизировать геометр. буфер</text>
+	</string>
+	<string id="ui_mm_r3_volumetric_smoke">
+		<text>Объёмный дым</text>
+	</string>
+	<string id="ui_mm_render_2">
+		<text>Рендер-2</text>
+	</string>
+	<string id="ui_mm_renderer">
+		<text>Тип рендера</text>
+	</string>
+	<string id="ui_mm_resolution">
+		<text>Разрешение</text>
+	</string>
+	<string id="ui_mm_return_game">
+		<text>Возврат к игре</text>
+	</string>
+	<string id="ui_mm_save">
+		<text>Сохранить</text>
+	</string>
+	<string id="ui_mm_save_game">
+		<text>Сохранить игру</text>
+	</string>
+	<string id="ui_mm_show_crosshair">
+		<text>Показывать прицел</text>
+	</string>
+	<string id="ui_mm_show_crosshair_hint">
+		<text>
+			%c[200,0,200,0]Показывать прицел.\n%c[default]
+			\nВключить или отключить показ прицела
+		</text>
+	</string>
+	<string id="ui_mm_show_weapon">
+		<text>Показывать оружие</text>
+	</string>
+	<string id="ui_mm_show_weapon_hint">
+		<text>
+			%c[200,0,200,0]Показывать оружие.\n%c[default]
+			\nВключить или отключить показ оружия
+		</text>
+	</string>
+	<string id="ui_mm_simply">
+		<text>Базовые</text>
+	</string>
+	<string id="ui_mm_snd_device">
+		<text>Звуковое устройство</text>
+	</string>
+	<string id="ui_mm_soft_particles">
+		<text>Мягкие частицы</text>
+	</string>
+	<string id="ui_mm_soft_water">
+		<text>Мягкая вода</text>
+	</string>
+	<string id="ui_mm_sound">
+		<text>Звук</text>
+	</string>
+	<string id="ui_mm_sound_quality">
+		<text>Качество звука</text>
+	</string>
+	<string id="ui_mm_stalker">
+		<text>Опытный</text>
+	</string>
+	<string id="ui_mm_sun_quality">
+		<text>Качество теней</text>
+	</string>
+	<string id="ui_mm_sun_shafts">
+		<text>Солнечные лучи</text>
+	</string>
+	<string id="ui_mm_supersample">
+		<text>Сглаживание</text>
+	</string>
+	<string id="ui_mm_switch_torch">
+		<text>Использование фонариков AI</text>
+	</string>
+	<string id="ui_mm_texture_quality">
+		<text>Качество текстур</text>
+	</string>
+	<string id="ui_mm_tips">
+		<text>Распознавание NPC</text>
+	</string>
+	<string id="ui_mm_tips_hint">
+		<text>
+			%c[200,0,200,0]Распознавание NPC.\n%c[default]
+			\nВключить или отключить распознавание NPC
+		</text>
+	</string>
+	<string id="ui_mm_veteran">
+		<text>Ветеран</text>
+	</string>
+	<string id="ui_mm_video">
+		<text>Видео</text>
+	</string>
+	<string id="ui_mm_vis_distance">
+		<text>Дальность видимости</text>
+	</string>
+	<string id="ui_mm_volumetric_light">
+		<text>Объёмный свет</text>
+	</string>
+	<string id="ui_mm_vsync">
+		<text>Верт. синхронизация</text>
+	</string>
+	<string id="ui_st_reset">
+		<text>Сбросить</text>
+	</string>
+	<string id="ui_st_sell_all">
+		<text>Продать всё</text>
+	</string>
+	<string id="version">
+		<text>Версия</text>
+	</string>
+	<string id="ui_mm_crouch_toggle">
+		<text>Режим сесть/встать</text>
+	</string>
+	<string id="ui_mm_crouch_toggle_hint">
+		<text>
+			%c[200,0,200,0]Режим сесть/встать.\n%c[default]
+			\nВключить или отключить режим сесть/встать
+		</text>
+	</string>
+	<string id="ui_mm_important_save">
+		<text>Автосохранение</text>
+	</string>
+	<string id="ui_mm_important_save_hint">
+		<text>
+			%c[200,0,200,0]Автосохранение.\n%c[default]
+			\nВключить или отключить автосохранения
+		</text>
+	</string>
+	<string id="ui_mm_r1_detail_textures">
+		<text>Детальные текстуры</text>
+	</string>
+	<string id="ui_mm_ssao_quality">
+		<text>Качество SSAO</text>
+	</string>
+	<string id="ui_mm_ssao_text">
+		<text>Режим SSAO</text>
+	</string>
+	<string id="ui_mm_ssao">
+		<text>По умолчанию</text>
+	</string>
+	<string id="ui_mm_hdao">
+		<text>HDAO</text>
+	</string>
+	<string id="ui_mm_hbao">
+		<text>HBAO</text>
+	</string>
+	<string id="ui_st_disable_hud">
+		<text>Показывать интерфейс</text>
+	</string>
+	<string id="ui_mm_hud_draw">
+		<text>Показывать интерфейс</text>
+	</string>
+	<string id="ui_mm_hud_draw_hint">
+		<text>
+			%c[200,0,200,0]Показывать интерфейс.\n%c[default]
+			\nВключить или выключить отображение всего худа.
+		</text>
+	</string>
+	<string id="gd_stalker">
+		<text>Опытный</text>
+	</string>
+	<string id="st_opt_extreme">
+		<text>Макс. высоко</text>
+	</string>
+
+	<string id="st_opt_ultra">
+		<text>Очень высоко</text>
+	</string>
+	<string id="ui_mm_r4_enable_tessellation">
+		<text>Тесселяция</text>
+	</string>
+	<string id="ui_mm_confirm_changes">
+		<text>Применить совершенные изменения? Все изменения будут отменены через</text>
+	</string>
+	<string id="st_cap_check_survival">
+		<text>Режим выживания</text>
+	</string>
+	<string id="st_cap_check_hardcore">
+		<text>Режим Ironman</text>
+	</string>
+	<string id="st_cap_check_azazel_mode">
+		<text>Режим Азазеля</text>
+	</string>
+	<string id="ui_mm_debug_hud">
+		<text>Debug-интерфейс</text>
+	</string>
+	<string id="ui_mm_debug_hud_hint">
+		<text>
+			%c[200,0,200,0]Debug-интерфейс.\n%c[default]
+			\nВключет или отключает отображение UI для отладки НПС.
+		</text>
+	</string>
+	<string id="ui_mm_show_options_hints">
+		<text>Подсказки в опциях</text>
+	</string>
+	<string id="ui_mm_show_options_hints_hint">
+		<text>
+			%c[200,0,200,0]Отображать подсказки.\n%c[default]
+			\nВключет или отключает отображение всплывающих
+			подсказок при наведении курсора на каждую опцию.
+		</text>
+	</string>
+	<string id="ui_mm_radio_mod">
+		<text>Музыка в радио</text>
+	</string>
+	<string id="ui_mm_radio_mod_hint">
+		<text>
+			%c[200,0,200,0]Музыка радио.\n%c[default]
+			\nВключает или отключает музыку в радио.
+		</text>
+	</string>
+	<string id="ui_mm_mechanic_feature">
+		<text>Длительный ремонт</text>
+	</string>
+	<string id="ui_mm_mechanic_feature_hint">
+		<text>
+			%c[200,0,200,0]Длительный ремонт.\n%c[default]
+			\nВключает или отключает фичу длительного ремонта.
+		</text>
+	</string>
+	<string id="ui_mm_heli_engine_sound">
+		<text>Звук вертолёта</text>
+	</string>
+	<string id="ui_mm_heli_engine_sound_hint">
+		<text>
+			%c[200,0,200,0]Звук вертолёта.\n%c[default]
+			\nВключает или отключает звук вертолёта.
+		</text>
+	</string>
+	<string id="ui_mm_heli_spawn">
+		<text>Вкл. спавн вертолёта</text>
+	</string>
+	<string id="ui_mm_heli_spawn_hint">
+		<text>
+			%c[200,0,200,0]Спавн вертолёта.\n%c[default]
+			\nВключает или отключает рандомный спавн вертолёта.
+		</text>
+	</string>
+	<string id="ui_mm_ai_die_in_anomaly">
+		<text>Смерть NPC в аномалиях</text>
+	</string>
+	<string id="ui_mm_art_degrade">
+		<text>Деградация артефактов</text>
+	</string>
+	<string id="ui_mm_art_degrade_hint">
+		<text>
+			%c[200,0,200,0]Деградация артефактов.\n%c[default]
+			\nВключает или отключает деградацию артефактов.
+			При ношении артефактов на поясе они начнут терять свои свойства со временем.
+		</text>
+	</string>
+	<string id="ui_mm_dynamic_news">
+		<text>Динамические новости</text>
+	</string>
+	<string id="ui_mm_dynamic_news_hint">
+		<text>
+			%c[200,0,200,0]Динамические новости.\n%c[default]
+			\nВключает или отключает динамические новости.
+		</text>
+	</string>
+	<string id="ui_mm_sleep_deprived">
+		<text>Потребность во сне</text>
+	</string>
+	<string id="ui_mm_sleep_deprived_hint">
+		<text>
+			%c[200,0,200,0]Потребность во сне.\n%c[default]
+			\nВключает или отключает потребность во сне.
+		</text>
+	</string>
+	<string id="ui_mm_excl_dist">
+		<text>Радиус исключения спавна</text>
+	</string>
+	<string id="ui_mm_excl_dist_hint">
+		<text>
+			%c[200,0,200,0]Радиус спавна.\n%c[default]
+			\nУстанавливает минимальный радиус от позиции игрока спавна НПС.
+		</text>
+	</string>
+	<string id="ui_mm_char_portrait">
+		<text>Портрет по-умолчанию</text>
+	</string>
+	<string id="ui_mm_char_portrait_hint">
+		<text>
+			%c[200,0,200,0]Портрет по-умолчанию.\n%c[default]
+			\nВыбрать портрет по-умолчанию.
+		</text>
+	</string>
+	<string id="ui_mm_outfit_portrait">
+		<text>Портрет зависит от костюма</text>
+	</string>
+	<string id="ui_mm_outfit_portrait_hint">
+		<text>
+			%c[200,0,200,0]Портрет зависит от костюма.\n%c[default]
+			\nВключает или отключает смену портрета при смене костюма.
+		</text>
+	</string>
+	<string id="ui_mm_show_enemy_health">
+		<text>Показывать здоровье врагов</text>
+	</string>
+	<string id="ui_mm_show_enemy_health_hint">
+		<text>
+			%c[200,0,200,0]Показывать здоровье врагов.\n%c[default]
+			\nВключет или отключает UI для отображения ХП НПС при попадании.
+		</text>
+	</string>
+	<string id="ui_mm_quicksave_cnt">
+		<text>Кол-во быстрых сохранений</text>
+	</string>
+	<string id="ui_mm_quicksave_cnt_hint">
+		<text>
+			%c[200,0,200,0]Кол-во быстрых сохранений.\n%c[default]
+			\nУстанавливает максимальное кол-во быстрых сохранений.
+		</text>
+	</string>
+	<string id="ui_mm_actor_hud">
+		<text>Интерфейс шлемов</text>
+	</string>
+	<string id="st_cap_check_story">
+		<text>Сюжетный режим</text>
+	</string>
+	<string id="ui_mm_hud_fov">
+		<text>FOV интерфейса</text>
+	</string>
+	<string id="ui_mm_fov">
+		<text>FOV</text>
+	</string>
+	<string id="ui_mm_slot_hud">
+		<text>Отобр. пояс в интерфейсе</text>
+	</string>
+	<string id="ui_mm_slot_hud_hint">
+		<text>
+			%c[200,0,200,0]Пояс в интерфейсе.\n%c[default]
+			\nВключет или отключает UI для отображения пояса артефактов в интерфейсе.
+		</text>
+	</string>
+	<string id="ui_mm_show_tracers">
+		<text>Вкл. трассеры</text>
+	</string>
+	<string id="ui_mm_show_tracers_hint">
+		<text>
+			%c[200,0,200,0]Вкл. трассеры.\n%c[default]
+			\nВключить или отключить Вкл. трассеры
+		</text>
+	</string>
+	<string id="ui_mm_release_dropped_items">
+		<text>Удалять выброшенные вещи</text>
+	</string>
+	<string id="ui_mm_release_dropped_items_hint">
+		<text>
+			%c[200,0,200,0]Удалять выброшенные вещи.\n%c[default]
+			\nСо временем все выброшенные на землю предметы будут удалены.
+		</text>
+	</string>
+	<string id="ui_mm_hardcore_ai_aim">
+		<text>Меткие НПС</text>
+	</string>
+	<string id="ui_mm_hardcore_ai_aim_hint">
+		<text>
+			%c[200,0,200,0]Меткие НПС.\n%c[default]
+			\nНПС становятся жесткими аимщиками
+		</text>
+	</string>
+	<string id="ui_mm_localization">
+		<text>Локализация</text>
+	</string>
+	<string id="ui_mm_localization_hint">
+		<text>
+			%c[200,0,200,0]Локализация.\n%c[default]
+			\nУстанавливает локализацию игры.\n
+			\n%c[0,255,0,0]Внимание! Английская локализация в моде не реализована.
+		</text>
+	</string>
+	<string id="ui_mm_list_localization_item_rus">
+		<text>Русская</text>
+	</string>
+	<string id="ui_mm_list_localization_item_eng">
+		<text>Английская</text>
+	</string>
+	<string id="ui_mm_mask_hud">
+		<text>Динамический худ</text>
+	</string>
+	<string id="ui_mm_mask_hud_hint">
+		<text>
+			%c[200,0,200,0]Динамический худ.\n%c[default]
+			\nВключет или отключает отображение худа одетого шлема/противогаза.
+		</text>
+	</string>
+	<string id="ui_mm_shot_effects">
+		<text>Эффект выстрела</text>
+	</string>
+	<string id="ui_mm_shot_effects_hint">
+		<text>
+			%c[200,0,200,0]Эффект выстрела.\n%c[default]
+			\nВключает или отключает покачивание камеры при выстреле.
+		</text>
+	</string>
+
+	<string id="ui_mm_sectors">
+		<text>Режим</text>
+	</string>
+
+	<string id="sector_default">
+		<text>По умолчанию</text>
+	</string>
+	<string id="sector_vs_angel">
+		<text>Ангельское Пение</text>
+	</string>
+	<string id="sector_vs_slizni">
+		<text>АУЕ</text>
+	</string>
+	<string id="sector_vs_renegate">
+		<text>Беспредел</text>
+	</string>
+	<string id="sector_vs_monolith">
+		<text>Великий Поход</text>
+	</string>
+	<string id="sector_vs_sby">
+		<text>Граница</text>
+	</string>
+	<string id="sector_vs_greh">
+		<text>Грех</text>
+	</string>
+	<string id="sector_vs_stalker">
+		<text>Дорога Домой</text>
+	</string>
+	<string id="sector_vs_varyag">
+		<text>Кровавое Пиршество</text>
+	</string>
+	<string id="sector_vs_apocalypse">
+		<text>Аннигиляция</text>
+	</string>
+	<string id="sector_vs_adinkvizicia">
+		<text>Новое будущее</text>
+	</string>
+	<string id="sector_vs_freedom">
+		<text>Новый Закон</text>
+	</string>
+	<string id="sector_vs_osoznanie">
+		<text>Ноосфера</text>
+	</string>
+	<string id="sector_vs_bandit">
+		<text>Пацанский Закон</text>
+	</string>
+	<string id="sector_vs_csky">
+		<text>Последнее Изучение</text>
+	</string>
+	<string id="sector_vs_isg">
+		<text>Последнее Исследование</text>
+	</string>
+	<string id="sector_vs_darkstalker">
+		<text>Последнее Сражение</text>
+	</string>
+	<string id="sector_vs_mirotvorec">
+		<text>Периметр</text>
+	</string>
+	<string id="sector_vs_alfa">
+		<text>Последний Контракт</text>
+	</string>
+	<string id="sector_vs_dolg">
+		<text>Последний Приказ</text>
+	</string>
+	<string id="sector_vs_fantom">
+		<text>Последний Проект</text>
+	</string>
+	<string id="sector_vs_zombied">
+		<text>Последний Рубеж</text>
+	</string>
+	<string id="sector_vs_ecolog">
+		<text>Последний Эксперемент</text>
+	</string>
+	<string id="sector_vs_voenstal">
+		<text>Приказ НИИЧАЗ</text>
+	</string>
+	<string id="sector_vs_velhan">
+		<text>Последняя Схватка</text>
+	</string>
+	<string id="sector_vs_killer">
+		<text>Последняя Цель</text>
+	</string>
+	<string id="sector_vs_veter">
+		<text>Пришло Время</text>
+	</string>
+	<string id="sector_vs_ryskuspecnaz">
+		<text>Русские идут</text>
+	</string>
+	<string id="sector_vs_hunter">
+		<text>Последняя Охота</text>
+	</string>
+	<string id="sector_vs_army">
+		<text>Фарватер</text>
+	</string>
+	<string id="sector_empty">
+		<text>Пустая Зона</text>
+	</string>
+
+	<string id="relations_default">
+		<text>Стандартно</text>
+	</string>
+	<string id="relations_battle_royale">
+		<text>Королевская битва</text>
+	</string>
+	<string id="relations_all_vs_all">
+		<text>Все против всех</text>
+	</string>
+	<string id="relations_all_vs_actor">
+		<text>Все против игрока</text>
+	</string>
+	<string id="relations_all_vs_stalker">
+		<text>Все против «Одиночек»</text>
+	</string>
+	<string id="relations_all_vs_bandit">
+		<text>Все против «Бандитов»</text>
+	</string>
+	<string id="relations_all_vs_csky">
+		<text>Все против «Чистое Небо»</text>
+	</string>
+	<string id="relations_all_vs_army">
+		<text>Все против «Военных»</text>
+	</string>
+	<string id="relations_all_vs_freedom">
+		<text>Все против «Свободу»</text>
+	</string>
+	<string id="relations_all_vs_dolg">
+		<text>Все против «Долга»</text>
+	</string>
+	<string id="relations_all_vs_ecolog">
+		<text>Все против «Ученых»</text>
+	</string>
+	<string id="relations_all_vs_killer">
+		<text>Все против «Наемников»</text>
+	</string>
+	<string id="relations_all_vs_monolith">
+		<text>Все против «Монолита»</text>
+	</string>
+	<string id="relations_all_vs_zombied">
+		<text>Все против «Зомбированных»</text>
+	</string>
+	<string id="relations_all_vs_isg">
+		<text>Все против «ИИГ»</text>
+	</string>
+	<string id="relations_all_vs_darkstalker">
+		<text>Все против «Темных Сталкеров»</text>
+	</string>
+	<string id="relations_all_vs_renegate">
+		<text>Все против «Ренегатов»</text>
+	</string>
+	<string id="relations_all_vs_varyag">
+		<text>Все против «Варягов»</text>
+	</string>
+	<string id="relations_all_vs_slizni">
+		<text>Все против «Черных Слизней»</text>
+	</string>
+	<string id="relations_all_vs_velhan">
+		<text>Все против «Великих Ханов»</text>
+	</string>
+	<string id="relations_all_vs_fantom">
+		<text>Все против «Фантомов»</text>
+	</string>
+	<string id="relations_all_vs_veter">
+		<text>Все против «Ветер»</text>
+	</string>
+	<string id="relations_all_vs_osoznanie">
+		<text>Все против «О-Сознание»</text>
+	</string>
+	<string id="relations_all_vs_alfa">
+		<text>Все против ЧВК «Альфа»</text>
+	</string>
+	<string id="relations_all_vs_apocalypse">
+		<text>Все против «Апокалипсиса»</text>
+	</string>
+	<string id="relations_all_vs_adinkvizicia">
+		<text>Все против «Адской Инквизиции»</text>
+	</string>
+	<string id="relations_all_vs_hunter">
+		<text>Все против «Охотников»</text>
+	</string>
+	<string id="relations_all_vs_voenstal">
+		<text>Все против «Перехвата»</text>
+	</string>
+	<string id="relations_all_vs_mirotvorec">
+		<text>Все против «Миротворцев»</text>
+	</string>
+	<string id="relations_all_vs_ryskuspecnaz">
+		<text>Все против «В.Г.Р.»</text>
+	</string>
+	<string id="relations_all_vs_sby">
+		<text>Все против «СБУ»</text>
+	</string>
+	<string id="relations_all_vs_angel">
+		<text>Все против «Падших Ангелов»</text>
+	</string>
+	<string id="relations_all_vs_posleduden">
+		<text>Все против «Последний День»</text>
+	</string>
+	<string id="relations_all_vs_greh">
+		<text>Все против «Греха»</text>
+	</string>
+</string_table>

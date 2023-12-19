@@ -1,0 +1,65 @@
+<w>
+    <file name="ui\ui_azazel_new">
+		<texture id="ui_azazel_freedom" x="682" y="17" 		width="124" height="56" />
+		<texture id="ui_azazel_dolg" x="682" y="75" 		width="124" height="56" />
+		<texture id="ui_azazel_killer" x="682" y="135" 		width="124" height="56" />
+		<texture id="ui_azazel_stalker" x="682" y="191" 		width="124" height="56" />
+		<texture id="ui_azazel_bandit" x="682" y="250" 		width="124" height="56" />
+		<texture id="ui_azazel_csky" x="682" y="308" 		width="124" height="56" />
+		<texture id="ui_azazel_monolith" x="682" y="366" 		width="124" height="56" />
+		<texture id="ui_azazel_army" x="682" y="424" 		width="124" height="56" />
+		<texture id="ui_azazel_ecolog" x="682" y="482" 		width="124" height="56" />
+		<texture id="ui_azazel_darkstalker" x="682" y="540" 		width="124" height="56" />
+		<texture id="ui_azazel_isg" x="682" y="599" 		width="124" height="56" />
+		<texture id="ui_azazel_renegate" x="682" y="657" 		width="124" height="56" />
+		<texture id="ui_azazel_varyag" x="682" y="714" 		width="124" height="56" />
+		<texture id="ui_azazel_fantom" x="682" y="775" 		width="124" height="56" />
+		<texture id="ui_azazel_velhan" x="682" y="837" 		width="124" height="56" />
+		<texture id="ui_azazel_osoznanie" x="682" y="895" 		width="124" height="56" />
+		<texture id="ui_azazel_alfa" x="682" y="951" 		width="124" height="56" />
+		
+		<texture id="ui_azazel_mirotvorec" x="810" y="17" 		width="124" height="56" />
+		<texture id="ui_azazel_slizni" x="810" y="75" 		width="124" height="56" />
+		<texture id="ui_azazel_ryskuspecnaz" x="810" y="139" 		width="124" height="56" />
+		<texture id="ui_azazel_voenstal" x="810" y="196" 		width="124" height="56" />
+		<texture id="ui_azazel_posleduden" x="810" y="252" 		width="124" height="56" />
+		<texture id="ui_azazel_angel" x="810" y="312" 		width="124" height="56" />
+		<texture id="ui_azazel_sby" x="810" y="370" 		width="124" height="56" />
+		<texture id="ui_azazel_veter" x="810" y="426" 		width="124" height="56" />
+		<texture id="ui_azazel_apocalypse" x="810" y="483" 		width="124" height="56" />
+		<texture id="ui_azazel_hunter" x="810" y="541" 		width="124" height="56" />
+		<texture id="ui_azazel_adinkvizicia" x="810" y="657" 		width="124" height="56" />
+		<texture id="ui_azazel_greh" x="815" y="714" 		width="124" height="56" />
+		
+		<texture id="ui_azazel_freedom_inactive" x="988" y="17" 		width="124" height="56" />
+		<texture id="ui_azazel_dolg_inactive" x="988" y="75" 		width="124" height="56" />
+		<texture id="ui_azazel_killer_inactive" x="988" y="135" 		width="124" height="56" />
+		<texture id="ui_azazel_stalker_inactive" x="988" y="191" 		width="124" height="56" />
+		<texture id="ui_azazel_bandit_inactive" x="988" y="250" 		width="124" height="56" />
+		<texture id="ui_azazel_csky_inactive" x="988" y="308" 		width="124" height="56" />
+		<texture id="ui_azazel_monolith_inactive" x="988" y="366" 		width="124" height="56" />
+		<texture id="ui_azazel_army_inactive" x="988" y="424" 		width="124" height="56" />
+		<texture id="ui_azazel_ecolog_inactive" x="988" y="482" 		width="124" height="56" />
+		<texture id="ui_azazel_darkstalker_inactive" x="988" y="540" 		width="124" height="56" />
+		<texture id="ui_azazel_isg_inactive" x="988" y="599" 		width="124" height="56" />
+		<texture id="ui_azazel_renegate_inactive" x="988" y="657" 		width="124" height="56" />
+		<texture id="ui_azazel_varyag_inactive" x="988" y="714" 		width="124" height="56" />
+		<texture id="ui_azazel_fantom_inactive" x="988" y="775" 		width="124" height="56" />
+		<texture id="ui_azazel_velhan_inactive" x="988" y="837" 		width="124" height="56" />
+		<texture id="ui_azazel_osoznanie_inactive" x="988" y="895" 		width="124" height="56" />
+		<texture id="ui_azazel_alfa_inactive" x="988" y="951" 		width="124" height="56" />
+		
+		<texture id="ui_azazel_mirotvorec_inactive" x="1116" y="17" 		width="124" height="56" />
+		<texture id="ui_azazel_slizni_inactive" x="1116" y="75" 		width="124" height="56" />
+		<texture id="ui_azazel_ryskuspecnaz_inactive" x="1116" y="139" 		width="124" height="56" />
+		<texture id="ui_azazel_voenstal_inactive" x="1116" y="196" 		width="124" height="56" />
+		<texture id="ui_azazel_posleduden_inactive" x="1116" y="252" 		width="124" height="56" />
+		<texture id="ui_azazel_angel_inactive" x="1116" y="312" 		width="124" height="56" />
+		<texture id="ui_azazel_sby_inactive" x="1116" y="370" 		width="124" height="56" />
+		<texture id="ui_azazel_veter_inactive" x="1116" y="426" 		width="124" height="56" />
+		<texture id="ui_azazel_apocalypse_inactive" x="1116" y="483" 		width="124" height="56" />
+		<texture id="ui_azazel_hunter_inactive" x="1116" y="541" 		width="124" height="56" />
+		<texture id="ui_azazel_adinkvizicia_inactive" x="1116" y="657" 		width="124" height="56" />
+		<texture id="ui_azazel_greh_inactive" x="1120" y="715" 		width="124" height="56" />
+    </file>
+</w>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<game_dialogs>
+    <dialog id="dialog_hello_darkstalker_zakaz">
+        <phrase_list>
+            <phrase id="0">
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <next>2</next>
+                <next>3</next>
+                <next>4</next>
+                <next>5</next>
+                <next>6</next>
+            </phrase>
+            <phrase id="2">
+                <text>Торговля мое все. Слушаю.</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="3">
+                <text>Я не боец, но могу предложить стоящий товар. Интересует?</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="4">
+                <text>Сталкер, подходи для таких, как ты, у меня всегда есть, что - то интересное.</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="5">
+                <text>Добро пожаловать в моем лагере. Что - то нужно?</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="6">
+                <text>Как жизнь сталкер? Желаешь купить - продать или что - то заказать?</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>Привет.</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="dialog_darkstalker_order">
+        <init_func>greatwar_init_orders_darkstalker</init_func>
+    </dialog>
+</game_dialogs>

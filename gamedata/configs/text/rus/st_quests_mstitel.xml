@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+    <!-- Еда Варяги -->
+	<string id="simulation_task_21_name">
+		<text>Еда</text>
+	</string>
+	<string id="simulation_task_21_text">
+		<text>Найди что пожрать Бойцам, пока они не сдохли от голода. Нужно принести %s.</text>
+	</string>
+	<string id="simulation_task_21_fetch_about">
+		<text>Проклятый торгаш, опять без еды бойцов оставил! Мы уже пару дней голодные ходим, скоро ползать будем. Найди еды %s.</text>
+	</string>
+	<string id="simulation_task_21_fetch_finish">
+		<text>Одобряю! Вот тебе лично от меня:</text>
+	</string>
+	
+	<!-- Мясо мутантов Варяги -->
+	<string id="simulation_task_22_name">
+		<text>Отвратительное мясо</text>
+	</string>
+	<string id="simulation_task_22_text">
+		<text>Нужно найти мясо %s.</text>
+	</string>
+	<string id="simulation_task_22_fetch_about">
+		<text>Говорят мясо мутантов не хуже конины. Оно вкуснее, но радиоактивное. Мы тут с бойцами хотим попробовать пожарить мясо на костре, как видишь мясо нету. Притащи %s.</text>
+	</string>
+	<string id="simulation_task_22_finish">
+		<text>Ха! Теперь пожарим. Тебе причитается:</text>
+	</string>
+
+    <!-- Убийство отряда Варяги -->
+	<string id="simulation_task_23_name">
+		<text>Ликвидация отряда</text>
+	</string>
+	<string id="simulation_task_23_text">
+		<text>Нужно развалить заказной отряд.</text>
+	</string>
+	<string id="simulation_task_23_about">
+		<text>Лидер наш задание выдал, убей вражеских отряд, деньгой не обижу.</text>
+	</string>
+	<string id="simulation_task_23_finish">
+		<text>Красиво исполнил! Вот тебе обещенное:</text>
+	</string>
+</string_table>

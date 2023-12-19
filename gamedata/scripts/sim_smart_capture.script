@@ -1,0 +1,216 @@
+capture_time = 25000
+capture_dist = 1500
+
+local showed_no_money = {}
+local last_msg_time_smart = {}
+local base_count = 0
+local price = {
+  base = 3000,
+  camp = 1500,
+  territory = -3000,
+  point = -3000,
+  resource = -1000,
+  lair = -5000
+}
+
+function smart_terrain_on_update(smart)
+  if not sim_brain.initialized then
+    return
+  end
+
+  if not smart.props or not smart.online then
+    return
+  end
+
+  local dist = db.actor:position():distance_to_sqr(smart.position)
+
+  if dist > capture_dist then
+    showed_no_money[smart:name()] = false
+  end
+
+  if dist > capture_dist and smart.manual_capture == nil then
+    return
+  end
+
+  if
+    dist < capture_dist and smart.manual_capture == nil and smart.owning_faction ~= "none" and
+      smart.owning_faction ~= nil
+   then
+    return
+  end
+
+  local smart_type_name = utils.get_smart_type_name(smart)
+  local can_be_captured = axr_main.config:r_value("mm_options", "enable_capture_" .. smart_type_name, 1, true)
+  local has_manual_capture = axr_main.config:r_value("mm_options", "enable_manual_capture", 1, true)
+
+  if can_be_captured then
+    local type = has_manual_capture and "manual" or "slow"
+
+    local precondition = sim_smart_capture[type .. "_capture_precondition"](smart)
+
+    if not precondition then
+      return
+    end
+
+    if dist < capture_dist and smart.manual_capture == nil then
+      sim_smart_capture[strformat("start_%s_capture", type)](smart)
+    elseif dist < capture_dist and smart.manual_capture ~= nil then
+      sim_smart_capture[strformat("process_%s_capture", type)](smart)
+      sim_smart_capture[strformat("finish_%s_capture", type)](smart)
+    elseif dist > capture_dist then
+      sim_smart_capture[strformat("abort_%s_capture", type)](smart)
+    end
+  end
+end
+
+function send_msg(smart, action, ...)
+  local smart_type_name = utils.get_smart_type_name(smart)
+  local str_id = strformat("st_smart_capture_%s_%s", action, smart_type_name)
+  local title = GetString("st_smart_capture_title")
+  local text = strformat(GetString(str_id), ...)
+
+  utils.smart_capture_news(title, text)
+end
+
+function manual_capture_precondition(smart)
+  local smart_type_name = utils.get_smart_type_name(smart)
+  local script_to_text_smart = sim_script_to_text.smart_names[smart:name()] or smart:name()
+  local cost = price[smart_type_name]
+  local need_money_to_captute = cost < 0
+
+  if not need_money_to_captute then
+    return true
+  end
+
+  if db.actor:money() >= math.abs(cost) then
+    return true
+  end
+
+  if not showed_no_money[smart:name()] then
+    send_msg(smart, "fast_no_money", script_to_text_smart, math.abs(cost))
+    showed_no_money[smart:name()] = true
+  end
+
+  return false
+end
+
+function slow_capture_precondition(smart)
+  local actor_faction = sim_brain.actor_faction
+  local script_to_text_smart = sim_script_to_text.smart_names[smart:name()] or smart:name()
+
+  if base_count == 0 then
+    base_count =
+      sim_factions.faction_information[actor_faction] and sim_factions.faction_information[actor_faction].base_count or
+      0
+  end
+
+  if base_count == 0 and not sim_smart.isBase(smart) then
+    if not last_msg_time_smart[smart.id] or game.get_game_time():diffSec(last_msg_time_smart[smart.id]) > 200 then
+      send_msg(smart, "slow_no_bases", script_to_text_smart)
+
+      last_msg_time_smart[smart.id] = game.get_game_time()
+    end
+
+    return false
+  end
+
+  if sim_smart.already_captured_smarts[smart.id] then
+    return false
+  end
+
+  return true
+end
+
+function start_manual_capture(smart)
+  local time_global = time_global()
+
+  local script_to_text_smart = sim_script_to_text.smart_names[smart:name()] or smart:name()
+
+  smart.manual_capture = time_global + capture_time
+  send_msg(smart, "start", script_to_text_smart)
+
+  SendScriptCallback("smart_terrain_on_capture_start", smart)
+end
+
+function start_slow_capture(smart)
+  start_manual_capture(smart)
+end
+
+function process_manual_capture(smart)
+  SendScriptCallback("smart_terrain_on_capture_progress", smart)
+end
+
+function process_slow_capture(smart)
+  process_manual_capture(smart)
+end
+
+function finish_manual_capture(smart)
+  local time_global = time_global()
+
+  if time_global < smart.manual_capture then
+    return
+  end
+
+  local actor_faction = sim_brain.actor_faction
+  local smart_type_name = utils.get_smart_type_name(smart)
+  local script_to_text_smart = sim_script_to_text.smart_names[smart:name()] or smart:name()
+  local cost = price[smart_type_name]
+
+  smart.manual_capture = nil
+
+  send_msg(smart, "fast_finish", script_to_text_smart, cost)
+  sim_squad.create_squad(smart, actor_faction, nil, nil, nil, 1)
+  db.actor:give_money(cost)
+
+  SendScriptCallback("smart_terrain_on_capture_finished", smart)
+end
+
+function finish_slow_capture(smart)
+  local time_global = time_global()
+
+  if time_global < smart.manual_capture then
+    return
+  end
+
+  local actor_faction = sim_brain.actor_faction
+  local script_to_text_smart = sim_script_to_text.smart_names[smart:name()] or smart:name()
+
+  smart.manual_capture = nil
+  sim_smart.already_captured_smarts[smart.id] = true
+
+  SendScriptCallback("smart_terrain_on_capture_finished", smart)
+
+  if base_count == 0 then
+    sim_squad.create_squad(smart, actor_faction, nil, nil, nil, 1)
+    send_msg(smart, "slow_finish_first", script_to_text_smart)
+
+    base_count = base_count + 1
+
+    return
+  end
+
+  local nearest_smart_id, nearest_smart_name = sim_smart.get_nearest_base(smart, actor_faction)
+  if nearest_smart_id then
+    local squad = sim_squad.create_squad(alife_object(nearest_smart_id), actor_faction, smart, nil, nil, 1)
+    if squad then
+      local commanderID = squad:commander_id()
+      local commander = commanderID and alife_object(commanderID)
+      local commanderName = commander and commander.character_name and commander:character_name()
+
+      send_msg(smart, "slow_finish", script_to_text_smart, commanderName, nearest_smart_name)
+    end
+  end
+end
+
+function abort_manual_capture(smart)
+  local script_to_text_smart = sim_script_to_text.smart_names[smart:name()] or smart:name()
+
+  smart.manual_capture = nil
+  send_msg(smart, "abort", script_to_text_smart)
+
+  SendScriptCallback("smart_terrain_on_capture_aborted", smart)
+end
+
+function abort_slow_capture(smart)
+  abort_manual_capture(smart)
+end

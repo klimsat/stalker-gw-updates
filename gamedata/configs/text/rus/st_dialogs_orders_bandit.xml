@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="st_bandit_trader_orders_main">
+		<text>Говорят заказы выполняешь. Правда?</text>
+	</string>
+	<string id="st_bandit_trader_orders_main_answer">
+		<text>Хех, конечно. Дополнительная прибыль всегда в пользу.</text>
+	</string>
+	<string id="st_bandit_trader_orders_weapons">
+		<text>Волыну хочу заказать.</text>
+	</string>
+	<string id="st_bandit_trader_orders_weapons_answer">
+		<text>Ассортимент чисто для пацанов.</text>
+	</string>
+	<string id="st_bandit_trader_orders_gen_descr_pistols">
+		<text>Пистол хочу.</text>
+	</string>
+	<string id="st_bandit_trader_orders_gen_descr_auto_pistols">
+		<text>Пистол - Скорострельный хочу. Все реальные пацаны с ними ходят.</text>
+	</string>
+	<string id="st_bandit_trader_orders_gen_descr_rifle">
+		<text>Волыну реальную хочу. Чтобы знали пахана в лицо.</text>
+	</string>
+	<string id="st_bandit_trader_orders_gen_descr_shotguns">
+		<text>Дробаш хочу. Пусть боятся не фраера, а зверюги.</text>
+	</string>
+	<!-- Если расскоментить этот кусок, то он заменит текст-описание оружий для каждой категории который генерируется в скриптах -->
+	<!-- <string id="st_bandit_trader_orders_gen_descr_pistols_answer">
+		<text>Дезерт Игл, ХПСА - 13, УДП Компакт, Кольт.</text>
+	</string>
+	<string id="st_bandit_trader_orders_gen_descr_rifle_answer">
+		<text>Абакан, Гроза - Оц14, Ас Вал, Л85, Гроза - 1, Гроза 5*45, ГП36, Вихрь.</text>
+	</string>
+	<string id="st_bandit_trader_orders_gen_descr_sniper_rifle_answer">
+		<text>Гаусс - Пушка.</text>
+	</string>
+	<string id="st_bandit_trader_orders_gen_descr_havy_rifle_answer">
+		<text>РПГ, ПКМ, М60, М134.</text>
+	</string> -->
+	<!-- <string id="st_bandit_trader_orders_explosion_wpn">
+		<text>explosion_wpn.</text>
+	</string> -->
+	<string id="st_bandit_trader_orders_gen_descr_outfit">
+		<text>Шмотки, норм хочу.</text>
+	</string>
+	<!-- <string id="st_bandit_trader_orders_outfit_answer">
+		<text>Комбинезон "Инквизитора", Научный Комбинезон "Инквизитор", Тяжелый бронежилет Инквизитора, Экзоскелет Инквизитора.</text>
+	</string> -->
+	<string id="st_bandit_trader_orders_gen_descr_other">
+		<text>Дополнительно шмотки нужны.</text>
+	</string>
+	<string id="st_bandit_trader_orders_gen_descr_other_answer">
+		<text>Какие?</text>
+	</string>
+	<string id="st_bandit_trader_orders_item_grenade_f1_count_1">
+		<text>Давай одну.</text>
+	</string>
+	<string id="st_bandit_trader_orders_item_grenade_f1_count_5">
+		<text>Давай 5 штук.</text>
+	</string>
+	<string id="st_bandit_trader_orders_item_grenade_f1_count_10">
+		<text>Давай 10 штук.</text>
+	</string>
+	<string id="st_bandit_trader_orders_item_grenade_f1_count_50">
+		<text>Давай 50 штук.</text>
+	</string>
+	<string id="st_bandit_trader_orders_item_grenade_f1_count_100">
+		<text>Давай 100 штук.</text>
+	</string>
+	<string id="st_bandit_trader_orders_item_grenade_rgd5_count_1">
+		<text>Давай одну.</text>
+	</string>
+	<string id="st_bandit_trader_orders_item_grenade_rgd5_count_5">
+		<text>Давай 5 штук.</text>
+	</string>
+	<string id="st_bandit_trader_orders_item_grenade_rgd5_count_10">
+		<text>Давай 10 штук.</text>
+	</string>
+	<string id="st_bandit_trader_orders_item_grenade_rgd5_count_50">
+		<text>Давай 50 штук.</text>
+	</string>
+	<string id="st_bandit_trader_orders_item_grenade_rgd5_count_100">
+		<text>Давай 100 штук.</text>
+	</string>
+	<string id="st_bandit_trader_orders_item_medkit_count_1">
+		<text>Давай одну.</text>
+	</string>
+	<string id="st_bandit_trader_orders_item_medkit_count_5">
+		<text>Давай 5 штук.</text>
+	</string>
+	<string id="st_bandit_trader_orders_item_medkit_count_10">
+		<text>Давай 10 штук.</text>
+	</string>
+	<string id="st_bandit_trader_orders_item_medkit_count_50">
+		<text>Давай 50 штук.</text>
+	</string>
+	<string id="st_bandit_trader_orders_item_medkit_count_100">
+		<text>Давай 100 штук.</text>
+	</string>
+	<string id="st_bandit_trader_orders_item_bandage_count_1">
+		<text>Давай один.</text>
+	</string>
+	<string id="st_bandit_trader_orders_item_bandage_count_5">
+		<text>Давай 5 штук.</text>
+	</string>
+	<string id="st_bandit_trader_orders_item_bandage_count_10">
+		<text>Давай 10 штук.</text>
+	</string>
+	<string id="st_bandit_trader_orders_item_bandage_count_50">
+		<text>Давай 50 штук.</text>
+	</string>
+	<string id="st_bandit_trader_orders_item_bandage_count_100">
+		<text>Давай 100 штук.</text>
+	</string>
+	<string id="st_bandit_trader_orders_ammo">
+		<text>Патроны хочу, а то на голяке уже.</text>
+	</string>
+	<string id="st_bandit_trader_orders_ammo_answer">
+		<text>Тебе какие? Пистолетные? Промежуточные? Или винтовочные?</text>
+	</string>
+	<string id="st_bandit_trader_orders_middle_ammo">
+		<text>Промежуточные.</text>
+	</string>
+	<string id="st_bandit_trader_orders_pistol_ammo">
+		<text>Пистолетные.</text>
+	</string>
+	<string id="st_bandit_trader_orders_rifle_ammo">
+		<text>Винтовочные.</text>
+	</string>
+	<string id="st_bandit_trader_orders_spec_ammo">
+		<text>Специальные.</text>
+	</string>
+	<string id="st_bandit_trader_orders_middle_ammo_answer">
+		<text>Вот весь список, выбирай.</text>
+	</string>
+	<string id="st_bandit_trader_orders_pistol_ammo_answer">
+		<text>Вот весь список, выбирай.</text>
+	</string>
+	<string id="st_bandit_trader_orders_rifle_ammo_answer">
+		<text>Вот весь список, выбирай.</text>
+	</string>
+	<string id="st_bandit_trader_orders_spec_ammo_answer">
+		<text>Вот весь список, выбирай.</text>
+	</string>
+	<string id="st_bandit_trader_orders_kit">
+		<text>Необходимо купить комплект снаряжения.</text>
+	</string>
+	<!-- Если расскоментить этот кусок, то он заменит текст-описание наборов который генерируется в скриптах -->
+	<!-- <string id="st_bandit_trader_orders_kit_answer">
+		<text>Новичок. Описание. Комбинезон Инквизитора, Абакан, 5.45x39 х3, Хлеб, Аптечка.\nОпытный. Описание. Комбинезон Инквизитора, Г36, 5.56x45 х3, Хлеб, Колбаса, Аптечка, Бинт.\nПрофи. Описание. Вихрь, Комбинезон Инквизитора, Аптечка, Бинт х3, Колбаса, Хлеб, 9.39 х3.\nВетеран. Описание. Гроза 5.45, Тяжелый бронежилет Монолит, Армейская Аптечка, Бинт х5, Тушенка, Колбаса, Хлеб, 5.45x39 х5.\nМастер. Описание. ПКМ, Экзоскелет Инквизитора, Армейская Аптечка х3, Бинт х7, Тушенка х3, Колбаса х3, Хлеб х3, Патроны пулемета х3.</text>
+	</string> -->
+	<string id="st_bandit_trader_orders_zelen_kit">
+		<text>Зеленый.</text>
+	</string>
+	<string id="st_bandit_trader_orders_novice_kit">
+		<text>Новичок.</text>
+	</string>
+	<string id="st_bandit_trader_orders_experience_kit">
+		<text>Опытный.</text>
+	</string>
+	<string id="st_bandit_trader_orders_professional_kit">
+		<text>Профи.</text>
+	</string>
+	<string id="st_bandit_trader_orders_veteran_kit">
+		<text>Ветеран.</text>
+	</string>
+	<string id="st_bandit_trader_orders_master_kit">
+		<text>Мастер.</text>
+	</string>
+	<string id="st_bandit_trader_orders_legend_kit">
+		<text>Легенда.</text>
+	</string>
+	<string id="st_bandit_trader_orders_rpg_kit">
+		<text>Ракетчик.</text>
+	</string>
+	<string id="st_bandit_trader_orders_sniper_kit">
+		<text>Снайпер.</text>
+	</string>
+	<!-- <string id="st_bandit_trader_orders_outfit_answer">
+		<text>Мастер.</text>
+	</string> -->
+	
+	<!-- общие для всех или некоторых веток диалога тексты -->
+	<string id="st_bandit_trader_orders_categoty_list_answer">
+		<text>Сейчас есть в наличии:</text>
+	</string>
+	<string id="st_bandit_trader_orders_cost_item_answer">
+		<text>С тебя %s руб.</text>
+	</string>
+	<string id="st_bandit_trader_orders_all_items_answer">
+		<text>В каком количестве нужно?</text>
+	</string>
+	<string id="st_bandit_trader_orders_accept">
+		<text>Беру.</text>
+	</string>
+	<string id="st_bandit_trader_orders_cancel">
+		<text>Не подходит.</text>
+	</string>
+</string_table>

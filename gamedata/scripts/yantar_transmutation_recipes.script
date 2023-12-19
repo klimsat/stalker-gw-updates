@@ -1,0 +1,269 @@
+function getRecipts(level)
+  if (level == nil) then
+    return "function getRecipts, Invalid 'level' param"
+  end
+  if (type(level) ~= "number") then
+    return "function getRecipts, Param 'level' must be number type"
+  end
+
+  local tableRecipes = {
+    {
+      id = "af_dummy_ext_battery",
+      name = "Улуч. Батарейка",
+      cost = 15000,
+      components = {
+        af_dummy_battery = 1,
+        af_medusa = 1
+      }
+    },
+    {
+      id = "af_electra_moonlight_2",
+      name = "Лунный свет 2ого уровня",
+      cost = 19500,
+      components = {
+        af_cristall_flower = 1,
+        af_electra_moonlight = 1
+      }
+    },
+    {
+      id = "af_cristall_rock",
+      name = "Кристальный камень",
+      cost = 22300,
+      components = {
+        af_blood = 1,
+        af_cristall = 1
+      }
+    }
+  }
+
+  if level >= 1 then
+    table.insert(
+      tableRecipes,
+      {
+        id = "af_sponge",
+        name = "Губка",
+        cost = 35000,
+        components = {
+          af_ice = 1,
+          af_dummy_dummy = 1,
+          af_dummy_battery = 1
+        }
+      }
+    )
+    table.insert(
+      tableRecipes,
+      {
+        id = "af_sponge_2",
+        name = "Губка 2ого уровня",
+        cost = 46500,
+        components = {
+          af_sponge = 1,
+          af_baloon = 1
+        }
+      }
+    )
+    table.insert(
+      tableRecipes,
+      {
+        id = "af_orb",
+        name = "Сфера",
+        cost = 31000,
+        components = {
+          af_cristall_rock = 1,
+          af_fireball = 1,
+          af_baloon = 1,
+          af_dummy_battery = 1
+        }
+      }
+    )
+    table.insert(
+      tableRecipes,
+      {
+        id = "af_gold_fish_2",
+        name = "Золотая Рыбка 2ого уровня",
+        cost = 37000,
+        components = {
+          af_gold_fish = 1,
+          af_baloon = 1,
+          af_gravi = 1
+        }
+      }
+    )
+    table.insert(
+      tableRecipes,
+      {
+        id = "af_gold_fish_3",
+        name = "Золотая Рыбка 3ого уровня",
+        cost = 52000,
+        components = {
+          af_gold_fish = 1,
+          af_gold_fish_2 = 1,
+          af_vyvert = 1
+        }
+      }
+    )
+    table.insert(
+      tableRecipes,
+      {
+        id = "af_moon",
+        name = "Луна",
+        cost = 67500,
+        components = {
+          af_dummy_glassbeads = 1,
+          af_fuzz_kolobok = 1,
+          af_ameba_slime = 1,
+          af_soul = 1
+        }
+      }
+    )
+    table.insert(
+      tableRecipes,
+      {
+        id = "af_electra_moonlight_3",
+        name = "Лунный свет 3ого уровня",
+        cost = 58000,
+        components = {
+          af_electra_moonlight_2 = 1,
+          af_electra_moonlight = 2,
+          af_baloon = 1
+        }
+      }
+    )
+    table.insert(
+      tableRecipes,
+      {
+        id = "af_baloon_2",
+        name = "Пузырь 2ого уровня",
+        cost = 110000,
+        components = {
+          af_medusa = 2,
+          af_baloon = 2,
+          af_vyvert = 2
+        }
+      }
+    )
+    table.insert(
+      tableRecipes,
+      {
+        id = "af_fireball_2",
+        name = "Огненный шар 2ого уровня",
+        cost = 29000,
+        components = {
+          af_fireball = 2
+        }
+      }
+    )
+  end
+
+  if level >= 2 then
+    table.insert(
+      tableRecipes,
+      {
+        id = "af_sponge_3",
+        name = "Губка 3ого уровня",
+        cost = 63700,
+        components = {
+          af_sponge_2 = 1,
+          af_vyvert = 2
+        }
+      }
+    )
+    table.insert(
+      tableRecipes,
+      {
+        id = "af_gold_fish_4",
+        name = "Золотая Рыбка 4ого уровня",
+        cost = 140000,
+        components = {
+          af_gold_fish_3 = 1,
+          af_gold_fish_2 = 1,
+          af_baloon = 1,
+          jup_b1_half_artifact = 1
+        }
+      }
+    )
+    table.insert(
+      tableRecipes,
+      {
+        id = "af_electra_moonlight_4",
+        name = "Лунный свет 4ого уровня",
+        cost = 85000,
+        components = {
+          af_electra_moonlight_3 = 1,
+          af_electra_moonlight = 3,
+          af_baloon = 1,
+          jup_b1_half_artifact = 1
+        }
+      }
+    )
+    table.insert(
+      tableRecipes,
+      {
+        id = "af_baloon_3",
+        name = "Пузырь 3ого уровня",
+        cost = 136000,
+        components = {
+          af_baloon_2 = 1,
+          af_medusa = 2,
+          af_vyvert = 2,
+          jup_b1_half_artifact = 1
+        }
+      }
+    )
+    table.insert(
+      tableRecipes,
+      {
+        id = "af_baloon_4",
+        name = "Пузырь 4ого уровня",
+        cost = 172000,
+        components = {
+          af_baloon_3 = 1,
+          af_baloon = 2,
+          af_vyvert = 4,
+          jup_b1_half_artifact = 1
+        }
+      }
+    )
+    table.insert(
+      tableRecipes,
+      {
+        id = "af_moon_2",
+        name = "Луна 2ого уровня",
+        cost = 167000,
+        components = {
+          af_moon = 1,
+          af_fuzz_kolobok = 2
+        }
+      }
+    )
+    table.insert(
+      tableRecipes,
+      {
+        id = "af_fireball_3",
+        name = "Огненный шар 3ого уровня",
+        cost = 82000,
+        components = {
+          af_fireball_2 = 1,
+          af_rusty_thorn = 1,
+          af_fire = 1
+        }
+      }
+    )
+    table.insert(
+      tableRecipes,
+      {
+        id = "af_fireball_4",
+        name = "Огненный шар 4ого уровня",
+        cost = 131000,
+        components = {
+          af_fireball_3 = 1,
+          af_fireball = 1,
+          af_fire = 1,
+          af_vyvert = 1
+        }
+      }
+    )
+  end
+
+  return tableRecipes
+end

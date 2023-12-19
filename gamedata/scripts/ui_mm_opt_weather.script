@@ -1,0 +1,162 @@
+class "opt_weather"(CUIWindow)
+
+function opt_weather:__init()
+  super()
+end
+
+function opt_weather:__finalize()
+end
+
+function opt_weather:InitControls(x, y, xml, handler)
+  self:SetWndPos(vector2():set(x, y))
+  self:SetWndSize(vector2():set(738, 416))
+  self:SetAutoDelete(true)
+
+  level_weathers.atmosfear_init()
+
+  handler.options.weather = {
+    {
+      geometry = {ws_self = {height = 10}, self = {height = 10}},
+      typ = "empty"
+    },
+    {
+      {
+        id = "weather_balance_presets",
+        default = "default",
+        geometry = {
+          ws_self = {offset_x = -60},
+          self = {offset_x = -60},
+          ws_label = {offset_x = -40},
+          label = {offset_x = -40}
+        },
+        tag = "list_2_axr",
+        typ = "list",
+        list = {"bad", "custom", "default", "good"},
+        on_list_item_select = function(handler, ctrl, t)
+          local gini = game_ini()
+          local levels = alun_utils.collect_section(gini, "level_maps_single")
+          local selected = axr_main_options.get_list_key(t, ctrl)
+          local parameter = strformat("atmosfear_preset_balance_%s", selected)
+
+          for i = 1, #levels do
+            local level_section = levels[i]
+            local weather = gini:r_string_ex(level_section, "weathers")
+            local parameter_value = gini:r_string_ex(level_section, parameter)
+
+            if weather == "atmosfear" and parameter_value then
+              local preset_values = alun_utils.split(parameter_value, ", ")
+              local text_1 = axr_main_options.set_list_text_str(t, preset_values[1], "weather_periods")
+              local text_2 = axr_main_options.set_list_text_str(t, preset_values[2], "weather_periods")
+              local ctrl_list_id_1 = strformat("weather_%s_balance", level_section)
+              local ctrl_list_id_2 = strformat("weather_%s_length", level_section)
+
+              handler[ctrl_list_id_1]:SetText(text_1)
+              handler[ctrl_list_id_2]:SetText(text_2)
+            end
+          end
+        end
+      },
+      {
+        id = "weather_length_presets",
+        default = "default",
+        geometry = {ws_self = {offset_x = -40}, self = {offset_x = -40}},
+        tag = "list_2_axr",
+        show_label = false,
+        typ = "list",
+        list = {"default", "short", "long", "custom"},
+        on_list_item_select = function(handler, ctrl, t)
+          local gini = game_ini()
+          local levels = alun_utils.collect_section(gini, "level_maps_single")
+          local selected = axr_main_options.get_list_key(t, ctrl)
+          local parameter = strformat("atmosfear_preset_length_%s", selected)
+
+          for i = 1, #levels do
+            local level_section = levels[i]
+            local weather = gini:r_string_ex(level_section, "weathers")
+            local parameter_value = gini:r_string_ex(level_section, parameter)
+
+            if weather == "atmosfear" and parameter_value then
+              local preset_values = alun_utils.split(parameter_value, ", ")
+              local ctrl_radio_id_1 = strformat("weather_%s_balance_period", level_section)
+              local ctrl_radio_id_2 = strformat("weather_%s_length_period", level_section)
+
+              handler[ctrl_radio_id_1]:SetActiveTab(preset_values[1])
+              handler[ctrl_radio_id_2]:SetActiveTab(preset_values[2])
+            end
+          end
+        end
+      }
+    }
+  }
+
+  for level_name, _ in pairs(level_weathers.valid_levels) do
+    local level_label = {
+      label_text = GetString(level_name),
+      geometry = {ws_label = {x = 0, width = 662}, label = {x = 0, width = 662}},
+      typ = "label"
+    }
+    local level_lists = {
+      {
+        id = strformat("weather_%s_balance", level_name),
+        default = "default",
+        hint_id = "weather_balance",
+        show_label = false,
+        save = true,
+        geometry = {ws_self = {offset_x = -60}, self = {offset_x = -60}},
+        tag = "list_2_axr",
+        typ = "list",
+        list_pref = "weather_periods",
+        list = {"clear", "clear_foggy", "foggy", "foggy_rainy", "rainy", "stormy"}
+      },
+      {
+        id = strformat("weather_%s_length", level_name),
+        default = "default",
+        hint_id = "weather_length",
+        show_label = false,
+        save = true,
+        geometry = {ws_self = {offset_x = -40}, self = {offset_x = -40}},
+        tag = "list_2_axr",
+        typ = "list",
+        list_pref = "weather_periods",
+        list = {"clear", "clear_foggy", "foggy", "foggy_rainy", "rainy", "stormy"}
+      }
+    }
+    local level_radio = {
+      {
+        id = strformat("weather_%s_balance_period", level_name),
+        hint_id = "weather_balance_period",
+        default = 3,
+        show_label = false,
+        save = true,
+        geometry = {ws_self = {offset_x = 135}, self = {offset_x = 135}},
+        tag = "radio_period_length",
+        typ = "radio"
+      },
+      {
+        id = strformat("weather_%s_length_period", level_name),
+        hint_id = "weather_length_period",
+        default = 3,
+        show_label = false,
+        save = true,
+        geometry = {ws_self = {offset_x = 365}, self = {offset_x = 365}},
+        tag = "radio_period_length",
+        typ = "radio"
+      }
+    }
+
+    table.insert(handler.options.weather, level_label)
+    table.insert(handler.options.weather, level_lists)
+    table.insert(handler.options.weather, level_radio)
+  end
+
+  table.insert(
+    handler.options.weather,
+    {
+      geometry = {ws_self = {height = 10}, self = {height = 10}},
+      typ = "empty"
+    }
+  )
+
+  self.scroll_v = xml:InitScrollView("tab_weather:scroll_v", self)
+  handler.weather_scroll_v = self.scroll_v
+end

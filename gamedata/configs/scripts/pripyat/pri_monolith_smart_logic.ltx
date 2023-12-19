@@ -1,0 +1,243 @@
+[logic@pri_monolith_camp_work_1]
+active = animpoint@pri_monolith_camp_work_1
+prior = 45
+
+[logic@pri_monolith_camp_work_2]
+active = animpoint@pri_monolith_camp_work_2
+prior = 45
+
+[logic@pri_monolith_camp_work_3]
+active = animpoint@pri_monolith_camp_work_3
+prior = 45
+
+[logic@pri_monolith_camp_work_4]
+active = animpoint@pri_monolith_camp_work_4
+prior = 45
+
+[logic@pri_monolith_camp_work_5]
+active = animpoint@pri_monolith_camp_work_5
+prior = 45
+
+[logic@pri_monolith_camp_work_6]
+active = animpoint@pri_monolith_camp_work_6
+prior = 45
+
+[logic@pri_monolith_camp_work_7]
+active = animpoint@pri_monolith_camp_work_7
+prior = 45
+
+[logic@pri_monolith_camp_work_8]
+active = animpoint@pri_monolith_camp_work_8
+prior = 45
+
+[logic@pri_monolith_camp_work_9]
+active = animpoint@pri_monolith_camp_work_9
+prior = 45
+
+[logic@pri_monolith_camp_work_10]
+active = animpoint@pri_monolith_camp_work_10
+prior = 45
+
+[logic@pri_monolith_camp_work_11]
+active = animpoint@pri_monolith_camp_work_11
+prior = 45
+
+[logic@pri_monolith_camp_work_12]
+active = animpoint@pri_monolith_camp_work_12
+prior = 45
+
+[animpoint@pri_monolith_camp_work_1]
+cover_name = pri_monolith_animpoint_kamp1
+meet = meet
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@pri_monolith_camp_work_2]
+cover_name = pri_monolith_animpoint_kamp2
+meet = meet
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@pri_monolith_camp_work_3]
+cover_name = pri_monolith_animpoint_kamp3
+meet = meet
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@pri_monolith_camp_work_4]
+cover_name = pri_monolith_animpoint_kamp4
+meet = meet
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@pri_monolith_camp_work_5]
+cover_name = pri_monolith_animpoint_kamp5
+meet = meet
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@pri_monolith_camp_work_6]
+cover_name = pri_monolith_animpoint_kamp6
+meet = meet
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@pri_monolith_camp_work_7]
+cover_name = pri_monolith_animpoint_kamp7
+meet = meet
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@pri_monolith_camp_work_8]
+cover_name = pri_monolith_animpoint_kamp8
+meet = meet
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@pri_monolith_camp_work_9]
+cover_name = pri_monolith_animpoint_kamp9
+meet = meet
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@pri_monolith_camp_work_10]
+cover_name = pri_monolith_animpoint_kamp10
+meet = meet
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@pri_monolith_camp_work_11]
+cover_name = pri_monolith_animpoint_kamp11
+meet = meet
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@pri_monolith_camp_work_12]
+cover_name = pri_monolith_animpoint_kamp12
+meet = meet
+use_camp = true
+turn_on_campfire = true
+
+;monolith trader
+[logic@trader]
+suitable = {=check_npc_name(sim_default_monolith_trader)} true , {=check_npc_name(sim_default_freedom_trader)} true, {=check_npc_name(sim_default_bandit_trader)} true, {=check_npc_name(sim_default_dolg_trader)} true, {=check_npc_name(sim_default_army_trader)} true, {=check_npc_name(sim_default_stalker_trader)} true, {=check_npc_name(sim_default_ecolog_trader)} true, {=check_npc_name(sim_default_csky_trader)} true, {=check_npc_name(sim_default_killer_trader)} true, {=check_npc_name(sim_default_isg_trader)} true, {=check_npc_name(sim_default_darkstalker_trader)} true, {=check_npc_name(sim_default_renegate_trader)} true, {=check_npc_name(sim_default_varyag_trader)} true, {=check_npc_name(sim_default_slizni_trader)} true, {=check_npc_name(sim_default_velhan_trader)} true, {=check_npc_name(sim_default_fantom_trader)} true, {=check_npc_name(sim_default_veter_trader)} true, {=check_npc_name(sim_default_osoznanie_trader)} true, {=check_npc_name(sim_default_alfa_trader)} true, {=check_npc_name(sim_default_apocalypse_trader)} true, {=check_npc_name(sim_default_adinkvizicia_trader)} true, {=check_npc_name(sim_default_hunter_trader)} true, {=check_npc_name(sim_default_voenstal_trader)} true, {=check_npc_name(sim_default_mirotvorec_trader)} true, {=check_npc_name(sim_default_ryskuspecnaz_trader)} true, {=check_npc_name(sim_default_sby_trader)} true, {=check_npc_name(sim_default_angel_trader)} true, {=check_npc_name(sim_default_posleduden_trader)} true, {=check_npc_name(sim_default_greh_trader)} true
+prior = 200
+active = animpoint@stand
+level_spot = trader
+trade = misc\trade\trade_monolith.ltx
+dont_keep_items = true
+
+[animpoint@stand]
+cover_name = pri_monolith_trader
+avail_animations = jup_b41_novikov_stand
+use_camp = false
+meet = meet@trader
+combat_ignore_cond = true
+reach_distance = 10
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[meet@trader]
+close_anim 	= nil
+close_victim 	= nil
+far_anim 	= nil
+far_victim 	= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use = {=actor_enemy} false, true
+
+;monolith mechanic
+[logic@mechanic]
+suitable = {=check_npc_name(sim_default_monolith_mechanic)} true , {=check_npc_name(sim_default_army_mechanic)} true, {=check_npc_name(sim_default_freedom_mechanic)} true, {=check_npc_name(sim_default_bandit_mechanic)} true, {=check_npc_name(sim_default_dolg_mechanic)} true, {=check_npc_name(sim_default_stalker_mechanic)} true, {=check_npc_name(sim_default_ecolog_mechanic)} true, {=check_npc_name(sim_default_csky_mechanic)} true, {=check_npc_name(sim_default_killer_mechanic)} true, {=check_npc_name(sim_default_isg_mechanic)} true, {=check_npc_name(sim_default_darkstalker_mechanic)} true, {=check_npc_name(sim_default_renegate_mechanic)} true, {=check_npc_name(sim_default_varyag_mechanic)} true, {=check_npc_name(sim_default_slizni_mechanic)} true, {=check_npc_name(sim_default_velhan_mechanic)} true, {=check_npc_name(sim_default_fantom_mechanic)} true, {=check_npc_name(sim_default_veter_mechanic)} true, {=check_npc_name(sim_default_osoznanie_mechanic)} true, {=check_npc_name(sim_default_alfa_mechanic)} true, {=check_npc_name(sim_default_apocalypse_mechanic)} true, {=check_npc_name(sim_default_adinkvizicia_mechanic)} true, {=check_npc_name(sim_default_hunter_mechanic)} true, {=check_npc_name(sim_default_voenstal_mechanic)} true, {=check_npc_name(sim_default_mirotvorec_mechanic)} true, {=check_npc_name(sim_default_ryskuspecnaz_mechanic)} true, {=check_npc_name(sim_default_sby_mechanic)} true, {=check_npc_name(sim_default_angel_mechanic)} true, {=check_npc_name(sim_default_posleduden_mechanic)} true, {=check_npc_name(sim_default_greh_mechanic)} true
+prior = 200
+active = animpoint@stand2
+level_spot = mechanic
+can_select_weapon = true
+
+[animpoint@stand2]
+cover_name = pri_monolith_mechanic
+avail_animations = jup_b41_novikov_stand
+use_camp = false
+meet = meet@mechanic
+combat_ignore_cond = true
+reach_distance = 10
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[meet@mechanic]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use = {=actor_enemy} false, true
+
+[logic@medik]
+suitable = {=check_npc_name(sim_default_army_medik)} true, {=check_npc_name(sim_default_freedom_medik)} true, {=check_npc_name(sim_default_bandit_medik)} true, {=check_npc_name(sim_default_dolg_medik)} true, {=check_npc_name(sim_default_monolith_medik)} true, {=check_npc_name(sim_default_stalker_medik)} true, {=check_npc_name(sim_default_ecolog_medik)} true, {=check_npc_name(sim_default_csky_medik)} true, {=check_npc_name(sim_default_killer_medik)} true, {=check_npc_name(sim_default_isg_medik)} true, {=check_npc_name(sim_default_darkstalker_medik)} true, {=check_npc_name(sim_default_renegate_medik)} true, {=check_npc_name(sim_default_varyag_medik)} true, {=check_npc_name(sim_default_slizni_medik)} true, {=check_npc_name(sim_default_velhan_medik)} true, {=check_npc_name(sim_default_fantom_medik)} true, {=check_npc_name(sim_default_veter_medik)} true, {=check_npc_name(sim_default_osoznanie_medik)} true, {=check_npc_name(sim_default_alfa_medik)} true, {=check_npc_name(sim_default_apocalypse_medik)} true, {=check_npc_name(sim_default_adinkvizicia_medik)} true, {=check_npc_name(sim_default_hunter_medik)} true, {=check_npc_name(sim_default_voenstal_medik)} true, {=check_npc_name(sim_default_mirotvorec_medik)} true, {=check_npc_name(sim_default_ryskuspecnaz_medik)} true, {=check_npc_name(sim_default_sby_medik)} true, {=check_npc_name(sim_default_angel_medik)} true, {=check_npc_name(sim_default_posleduden_medik)} true, {=check_npc_name(sim_default_greh_medik)} true
+prior = 1000
+active = animpoint@medik
+trade = misc\trade\trade_medic.ltx
+level_spot = medic
+
+[animpoint@medik]
+cover_name = pri_monolith_medic
+avail_animations = fold_arms
+use_camp = false
+meet = meet
+combat_ignore_cond = true
+reach_distance = 10
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[logic@barmen]
+suitable = {=check_npc_name(sim_default_army_barmen)} true, {=check_npc_name(sim_default_freedom_barmen)} true, {=check_npc_name(sim_default_bandit_barmen)} true, {=check_npc_name(sim_default_dolg_barmen)} true, {=check_npc_name(sim_default_monolith_barmen)} true, {=check_npc_name(sim_default_stalker_barmen)} true, {=check_npc_name(sim_default_ecolog_barmen)} true, {=check_npc_name(sim_default_csky_barmen)} true, {=check_npc_name(sim_default_killer_barmen)} true, {=check_npc_name(sim_default_isg_barmen)} true, {=check_npc_name(sim_default_darkstalker_barmen)} true, {=check_npc_name(sim_default_renegate_barmen)} true, {=check_npc_name(sim_default_varyag_barmen)} true, {=check_npc_name(sim_default_slizni_barmen)} true, {=check_npc_name(sim_default_velhan_barmen)} true, {=check_npc_name(sim_default_fantom_barmen)} true, {=check_npc_name(sim_default_veter_barmen)} true, {=check_npc_name(sim_default_osoznanie_barmen)} true, {=check_npc_name(sim_default_alfa_barmen)} true, {=check_npc_name(sim_default_apocalypse_barmen)} true, {=check_npc_name(sim_default_adinkvizicia_barmen)} true, {=check_npc_name(sim_default_hunter_barmen)} true, {=check_npc_name(sim_default_voenstal_barmen)} true, {=check_npc_name(sim_default_mirotvorec_barmen)} true, {=check_npc_name(sim_default_ryskuspecnaz_barmen)} true, {=check_npc_name(sim_default_sby_barmen)} true, {=check_npc_name(sim_default_angel_barmen)} true, {=check_npc_name(sim_default_posleduden_barmen)} true, {=check_npc_name(sim_default_greh_barmen)} true
+prior = 1000
+active = animpoint@barmen
+trade = misc\trade\trade_csky_barman.ltx
+level_spot = trader
+
+[animpoint@barmen]
+cover_name = pri_monolith_barmen
+avail_animations = choose
+use_camp = false
+meet = meet
+combat_ignore_cond = true
+reach_distance = 10
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[logic@leader]
+suitable = {=check_npc_name(sim_default_monolith_leader_haron)} true
+level_spot = {!same_faction} leader, {+actor_bought_leader} nil, leader
+prior = 200
+active = animpoint@leader
+
+[animpoint@leader]
+meet = meet
+cover_name = pri_monolith_leader
+avail_animations = choose
+combat_ignore_cond = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+can_select_weapon = true
+dont_keep_items = false
+
+[meet]
+close_snd_hello = nil
+close_snd_bye   = nil
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+use = true
+

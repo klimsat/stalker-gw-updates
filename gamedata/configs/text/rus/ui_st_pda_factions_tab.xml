@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="st_pda_button_declare_war">
+		<text>Объявить войну</text>
+	</string>
+	<string id="ui_mm_pda_factions_tab_relation_label">
+		<text>Изменить отношение</text>
+	</string>
+	<string id="ui_mm_pda_factions_tab_relation_cost">
+		<text>Стоимость: %s руб.</text>
+	</string>
+	<string id="st_pda_button_change_relation">
+		<text>Изменить</text>
+	</string>
+
+	<string id="ui_mm_pda_factions_tab_leader">
+		<text>Лидер группировки: %s</text>
+	</string>
+	<string id="ui_mm_pda_factions_tab_leader_dead">
+		<text>Лидер группировки: %s (мертв)</text>
+	</string>
+	<string id="ui_mm_pda_factions_tab_zones">
+		<text>Точки под контролем группировки:</text>
+	</string>
+
+	<string id="ui_mm_pda_factions_tab_statistics">
+		<text>Статистика:</text>
+	</string>
+	<string id="ui_mm_pda_factions_tab_members">
+		<text>Кол-во членов клана: %s</text>
+	</string>
+	<string id="ui_mm_pda_factions_tab_squads_all">
+		<text>Кол-во отрядов: %s</text>
+	</string>
+	<string id="ui_mm_pda_factions_tab_power">
+		<text>Сила группировки: %s</text>
+	</string>
+	<string id="ui_mm_pda_factions_tab_relation">
+		<text>Отношение: %s</text>
+	</string>
+	<string id="ui_mm_pda_factions_tab_money">
+		<text>Бюджет: %s</text>
+	</string>
+
+	<string id="ui_mm_declare_war_confirm">
+		<text>Вы действительно хотите объявить войну группировке %s</text>
+	</string>
+
+	<string id="ui_mm_disable_azazel_confirm">
+		<text>Включая данную опцию, вы выключите режим Азазеля и его потом нельзя будет включить в настройках. Выключить режим Азазеля и включить Сюжетный режим?</text>
+	</string>
+</string_table>

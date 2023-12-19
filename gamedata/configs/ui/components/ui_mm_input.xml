@@ -1,0 +1,8 @@
+<input_axr x="0" y="0" width="105" stretch="1" height="25">
+    <text x="5" font="medium" vert_align="c" align="l" />
+    <texture>ui_inGame2_edit_box_2</texture>
+</input_axr>
+<input_2_axr x="0" y="0" width="65" stretch="1" height="25">
+    <text x="5" font="medium" vert_align="c" align="l" />
+    <texture>ui_inGame2_edit_box_2</texture>
+</input_2_axr>

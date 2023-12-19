@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<game_dialogs>
+    <dialog id="dialog_hello_adinkvizicia_zakaz">
+        <phrase_list>
+            <phrase id="0">
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <next>2</next>
+                <next>3</next>
+                <next>4</next>
+                <next>5</next>
+                <next>6</next>
+            </phrase>
+            <phrase id="2">
+                <text>Приветствую тебя слуга Великого Монолита.</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="3">
+                <text>До прибудет с тобой сила Монолита. Что - то хотел?</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="4">
+                <text>Я слушаю слуга Великого Монолита. Что - то хотел?</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="5">
+                <text>Что требуется от слуги Великого Монолита?</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="6">
+                <text>Как жизнь, слуга Великого Монолита?</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>Привет слуга Великого Монолита.</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="dialog_adinkvizicia_order">
+        <init_func>greatwar_init_orders_adinkvizicia</init_func>
+    </dialog>
+</game_dialogs>

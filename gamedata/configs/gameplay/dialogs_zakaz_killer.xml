@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<game_dialogs>
+    <dialog id="dialog_hello_killer_zakaz">
+        <phrase_list>
+            <phrase id="0">
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <next>2</next>
+                <next>3</next>
+                <next>4</next>
+                <next>5</next>
+                <next>6</next>
+            </phrase>
+            <phrase id="2">
+                <text>Отдохни с дороги и закупись у меня.</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="3">
+                <text>Взглянешь на товар? Недавно завезли.</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="4">
+                <text>Подходи я не кусаюсь. Товар мой тоже не кусается.</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="5">
+                <text>Глаза смотрю от моего товара разбегаются? Ничего. Не спеши.</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="6">
+                <text>Любишь товар брать? Люби и деньги давать. Ха-ха.</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>Здоров!</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="dialog_killer_order">
+        <init_func>greatwar_init_orders_killer</init_func>
+    </dialog>
+</game_dialogs>

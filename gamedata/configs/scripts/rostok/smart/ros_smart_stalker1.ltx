@@ -1,0 +1,22 @@
+[smart_terrain]
+squad_id = 33
+max_population = 5
+respawn_params = respawn@ros_smart_stalker1
+respawn_idle = 60000
+
+
+
+[respawn@ros_smart_stalker1]
+stalker_sim_squad
+
+[stalker_sim_squad]
+spawn_squads = stalker_sim_squad_advanced, stalker_sim_squad_veteran
+spawn_num =  3
+
+[exclusive]
+ros_smart_stalker1_camp_work_1 = rostok\ros_smart_stalker1_smart_logic.ltx
+ros_smart_stalker1_camp_work_2 = rostok\ros_smart_stalker1_smart_logic.ltx
+ros_smart_stalker1_camp_work_3 = rostok\ros_smart_stalker1_smart_logic.ltx
+ros_smart_stalker1_camp_work_4 = rostok\ros_smart_stalker1_smart_logic.ltx
+ros_smart_stalker1_camp_work_5 = rostok\ros_smart_stalker1_smart_logic.ltx
+ros_smart_stalker1_camp_work_6 = rostok\ros_smart_stalker1_smart_logic.ltx

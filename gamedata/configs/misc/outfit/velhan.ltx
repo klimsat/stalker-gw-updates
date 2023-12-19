@@ -1,0 +1,487 @@
+;---------------------------------------------------------------------------------------------
+;		Плащ Пахан
+;---------------------------------------------------------------------------------------------
+[velhan_trenchcoat_brown_outfit]:outfit_base
+$spawn                                   = "outfit\velhan_trenchcoat_outfit"
+visual                                   = dynamics\outfit\bandit_commander_outfit
+actor_visual                             = actors\stalker_bandit\stalker_bandit5c.ogf
+npc_visual                               = actors\stalker_bandit\stalker_bandit6a.ogf
+player_hud_section                       = actor_hud_brown_trench
+
+ef_equipment_type                        = 3
+
+inv_name                                 = velhan_trenchcoat_brown_outfit_name
+inv_name_short                           = velhan_trenchcoat_brown_outfit_name
+description                              = velhan_trenchcoat_brown_outfit_description
+
+inv_weight                               = 6.0
+
+inv_grid_x      						 = 46
+inv_grid_y								 = 37
+
+upgr_icon_x                              = 942
+upgr_icon_y                              = 0
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+full_icon_name                           = npc_icon_dolg_outfit
+
+cost                                     = 8500
+full_scale_icon                          = 8,11	                                       ;иконка сталкера в костюме в полный рост
+
+immunities_sect                          = sect_velhan_trenchcoat_brown_outfit_immunities
+
+; LOW RESISTANCE
+burn_protection                          = 0.028
+shock_protection                         = 0.11
+radiation_protection                     = 0.0050
+chemical_burn_protection                 = 0.0333
+telepatic_protection                     = 0.0
+strike_protection                        = 0.15
+explosion_protection                     = 0.15
+wound_protection                         = 0.14
+
+hit_fraction_actor                       = 0.4
+bones_koeff_protection                   = actor_armor_bandit_exo
+
+artefact_count                           = 1
+control_inertion_factor                  = 1.2
+power_loss                               = 0.6
+
+upgrades                                 = up_gr_firstab_dolg_outfit, up_gr_seconab_dolg_outfit, up_gr_thirdab_dolg_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_dolg_outfit
+character_portrait						 = ui_inGame2_velhan_4
+
+[sect_velhan_trenchcoat_brown_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_velhan_trenchcoat_brown_outfit_immunities_add]
+burn_immunity                            = -0.015	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.015
+wound_immunity                           = -0.015
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.015
+explosion_immunity                       = -0.015
+fire_wound_immunity                      = -0.003
+
+;---------------------------------------------------------------------------------------------
+;		Комбинезон Великий Хан
+;---------------------------------------------------------------------------------------------
+[velhan_outfit]:outfit_base
+$spawn                                   = "outfit\velhan_outfit"
+visual                                   = dynamics\outfit\velhan_outfit
+actor_visual                             = actors\stalker_velhan\velhan_off_gas_mask_1_0.ogf
+npc_visual                               = actors\stalker_velhan\velhan_off_gas_mask_1_0.ogf
+player_hud_section                       = actor_hud_loner_sunrise
+
+ef_equipment_type                        = 3
+
+inv_name                                 = velhan_outfit_name
+inv_name_short                           = velhan_outfit_name
+description                              = velhan_outfit_description
+
+inv_weight                               = 8.0
+
+inv_grid_x                               = 76
+inv_grid_y                               = 34
+upgr_icon_x                              = 317
+upgr_icon_y                              = 0
+upgr_icon_width                          = 302
+upgr_icon_height                         = 130
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 15500
+full_scale_icon                          = 14,11	                                       ;иконка сталкера в костюме в полный рост
+
+artefact_count                           = 3
+
+immunities_sect                          = sect_velhan_outfit_immunities
+
+
+; LOW RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1925
+explosion_protection                     = 0.1925
+wound_protection                         = 0.1925
+
+hit_fraction_actor                       = 0.75
+bones_koeff_protection                   = actor_armor_suit
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.75
+
+upgrades                                 = up_gr_firstab_stalker_outfit, up_gr_seconab_stalker_outfit, up_gr_thirdab_stalker_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_stalker_outfit
+character_portrait						 = ui_inGame2_velhan_2
+
+[sect_velhan_outfit_immunities]
+burn_immunity                            = 0.03	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.03
+wound_immunity                           = 0.03
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.03
+explosion_immunity                       = 0.03
+fire_wound_immunity                      = 0.015
+
+[sect_velhan_outfit_immunities_add]
+burn_immunity                            = -0.015	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.015
+wound_immunity                           = -0.015
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.015
+explosion_immunity                       = -0.015
+fire_wound_immunity                      = -0.005
+
+;---------------------------------------------------------------------------------------------
+;		Берилл Пахан
+;---------------------------------------------------------------------------------------------
+[velhan_specops_outfit]:outfit_base
+$spawn                                   = "outfit\velhan_specops_outfit"
+visual                                   = dynamics\outfit\bandit_specops_outfit
+actor_visual                             = actors\stalker_velhan\velhan_berill_2_0.ogf
+npc_visual                               = actors\stalker_velhan\velhan_berill_2_0.ogf
+player_hud_section                       = actor_hud_duty_psz9d
+
+ef_equipment_type                        = 3
+
+inv_name                                 = velhan_specops_outfit_name
+inv_name_short                           = velhan_specops_outfit_name
+description                              = velhan_specops_outfit_description
+
+inv_weight                               = 11.0
+
+inv_grid_x                               = 16
+inv_grid_y                               = 34
+
+upgr_icon_x                              = 2512
+upgr_icon_y                              = 222
+upgr_icon_width                          = 302
+upgr_icon_height                         = 125
+full_icon_name                           = npc_icon_bandit_specops_outfit
+
+cost                                     = 36000
+full_scale_icon                          = 4,6	                                       ;иконка сталкера в костюме в полный рост
+power_loss                               = 0.8
+immunities_sect                          = sect_velhan_specops_outfit_immunities
+
+; LOW RESISTANCE
+burn_protection                          = 0.0333
+shock_protection                         = 0.1333
+radiation_protection                     = 0.0050
+chemical_burn_protection                 = 0.0333
+telepatic_protection                     = 0.0
+strike_protection                        = 0.2275
+explosion_protection                     = 0.2275
+wound_protection                         = 0.2275
+
+hit_fraction_actor                       = 0.5
+bones_koeff_protection                   = actor_armor_berill
+
+artefact_count                           = 0
+control_inertion_factor                  = 1.5
+
+upgrades                                 = up_gr_firstab_specops_outfit, up_gr_seconab_specops_outfit, up_gr_thirdab_specops_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_specops
+character_portrait						 = ui_inGame2_velhan_8
+
+[sect_velhan_specops_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_velhan_specops_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		Полуэкзоскелет Бандит Будущего
+;---------------------------------------------------------------------------------------------
+[velhan_radiation_outfit]:outfit_exo_base
+$spawn							= "outfit\velhan_radiation_outfit"
+visual							= dynamics\outfit\velhan_poluexo
+actor_visual						= actors\stalker_velhan\velhan_4_0
+player_hud_section					= actor_hud_merc_radiation
+
+inv_name						= velhan_radiation_outfit_name
+inv_name_short						= velhan_radiation_outfit_name
+description						= velhan_radiation_outfit_description
+
+inv_weight							= 15.0
+
+inv_grid_x							= 54
+inv_grid_y							= 27
+
+upgr_icon_x							= 1857
+upgr_icon_y							= 507
+upgr_icon_width						= 293
+upgr_icon_height					= 157
+
+cost								= 75000
+
+helmet_avaliable					= false
+power_loss							= 0.9
+control_inertion_factor				= 2.5
+sprint_allowed						= true
+additional_inventory_weight			= 30
+additional_inventory_weight2		= 30
+
+upgrades                                 = up_gr_firstab_merc_rad_outfit, up_gr_seconab_merc_rad_outfit, up_gr_thirdab_merc_rad_outfit, up_gr_fourtab_merc_rad_outfit, up_gr_fifthab_merc_rad_outfit
+
+[sect_velhan_radiation_outfit_immunities]
+burn_immunity                            = 0.005	                                       ;eiyooeoeaiou eiioieoaoa naiiai eino?ia
+strike_immunity                          = 0.0
+shock_immunity                           = 0.005
+wound_immunity                           = 0.005
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.005
+explosion_immunity                       = 0.005
+fire_wound_immunity                      = 0.005
+
+[sect_velhan_radiation_outfit_immunities_add]
+burn_immunity                            = -0.0005	                                       ;eiyooeoeaiou eiioieoaoa naiiai eino?ia
+strike_immunity                          = 0.0
+shock_immunity                           = -0.0005
+wound_immunity                           = -0.0005
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.0005
+explosion_immunity                       = -0.0005
+fire_wound_immunity                      = -0.0005
+
+character_portrait						 = ui_inGame2_velhan_10
+
+;---------------------------------------------------------------------------------------------
+;		Экзосева Бандит
+;---------------------------------------------------------------------------------------------
+[velhan_exoseva_outfit]:outfit_exo_base
+$spawn                                   = "outfit\velhan_exoseva_outfit"
+visual                                   = dynamics\outfit\bandit_exo_outfit
+actor_visual                             = actors\stalker_velhan\velhan_exo_4_0.ogf
+npc_visual                               = actors\stalker_velhan\velhan_exo_4_0.ogf
+player_hud_section                       = actor_hud_bandit_exo
+
+inv_name                                 = velhan_exoseva_outfit_name
+inv_name_short                           = velhan_exoseva_outfit_name
+description                              = velhan_exoseva_outfit_description
+
+inv_weight                               = 23.0
+
+inv_grid_x                               = 2
+inv_grid_y                               = 36
+
+upgr_icon_x                              = 2500
+upgr_icon_y                              = 0
+upgr_icon_width                          = 350
+upgr_icon_height                         = 200
+
+cost                                     = 130000
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+strike_protection                        = 0.2975
+explosion_protection                     = 0.2975
+wound_protection                         = 0.2975
+
+bones_koeff_protection                   = actor_armor_bandit_exo
+
+power_loss                               = 1.05
+additional_inventory_weight              = 80
+additional_inventory_weight2             = 80
+artefact_count                           = 1
+helmet_avaliable					= false
+
+character_portrait						 = ui_inGame2_no_data
+
+;---------------------------------------------------------------------------------------------
+;		Экзоскелет Великого Хана
+;---------------------------------------------------------------------------------------------
+[velhan_exo_outfit]:outfit_exo_base
+$spawn                                   = "outfit\velhan_exo_outfit"
+visual                                   = dynamics\outfit\bandit_exo_outfit
+actor_visual                             = actors\stalker_velhan\velhan_exo_4_0.ogf
+npc_visual                               = actors\stalker_velhan\velhan_exo_4_0.ogf
+player_hud_section                       = actor_hud_bandit_exo
+
+inv_name                                 = velhan_exo_outfit_name
+inv_name_short                           = velhan_exo_outfit_name
+description                              = velhan_exo_outfit_description
+
+inv_weight                               = 21.0
+
+inv_grid_x                               = 78
+inv_grid_y                               = 37
+
+upgr_icon_x                              = 2500
+upgr_icon_y                              = 0
+upgr_icon_width                          = 350
+upgr_icon_height                         = 200
+
+cost                                     = 135000
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+strike_protection                        = 0.2975
+explosion_protection                     = 0.2975
+wound_protection                         = 0.2975
+
+bones_koeff_protection                   = actor_armor_bandit_exo
+
+power_loss                               = 1.05
+additional_inventory_weight              = 80
+additional_inventory_weight2             = 80
+artefact_count                           = 1
+helmet_avaliable					= false
+
+character_portrait						 = ui_inGame2_no_data
+;---------------------------------------------------------------------------------------------
+;		Leader Velhan Outfit
+;---------------------------------------------------------------------------------------------
+[leader_velhan_outfit]:outfit_base
+$spawn                                   = "outfit\leader_velhan_outfit"
+visual                                   = dynamics\outfit\bandit_exo_outfit
+actor_visual                             = actors\stalker_velhan\velhan_leader.ogf
+npc_visual                               = actors\stalker_velhan\velhan_leader.ogf
+player_hud_section                       = actor_hud_bandit_exo
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_velhan_outfit_name
+inv_name_short                           = leader_velhan_outfit_name
+description                              = leader_velhan_outfit_description
+
+inv_weight                               = 11
+
+inv_grid_x                               = 78
+inv_grid_y                               = 37
+
+upgr_icon_x                              = 2500
+upgr_icon_y                              = 0
+upgr_icon_width                          = 350
+upgr_icon_height                         = 200
+
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 265790
+
+full_scale_icon                          = 14,11
+
+immunities_sect                          = sect_leader_velhan_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0922
+shock_protection                         = 0.4114
+radiation_protection                     = 0.0152
+chemical_burn_protection                 = 0.0952
+telepatic_protection                     = 0.0787
+strike_protection                        = 0.7010
+explosion_protection                     = 0.5613
+wound_protection                         = 0.6502
+
+fire_wound_protection                    = 0.2560
+
+hit_fraction_actor                       = 0.15
+control_inertion_factor                  = 2.5
+bones_koeff_protection                   = velhan_leader
+
+nightvision_sect 			             = effector_nightvision_2
+
+power_restore_speed                      = 0.005
+power_loss                               = 0.85
+
+additional_inventory_weight              = 110
+additional_inventory_weight2             = 110
+
+artefact_count                           = 5
+
+helmet_avaliable						 = false
+
+character_portrait						 = ui_inGame2_velhan_exo_4_0
+
+[sect_leader_velhan_outfit_immunities]
+burn_immunity            				 = 0.0050
+strike_immunity                          = 0.0050
+shock_immunity                           = 0.0200
+wound_immunity                           = 0.0050
+radiation_immunity                       = 0.0000
+telepatic_immunity                       = 0.0000
+chemical_burn_immunity                   = 0.0050
+explosion_immunity                       = 0.0050
+fire_wound_immunity                      = 0.0100
+;---------------------------------------------------------------------------------------------
+;OUTFIT IN AZAZEL MODE: Leader Velhan Outfit
+;---------------------------------------------------------------------------------------------
+[leader_azazel_velhan_outfit]:outfit_leader_exo_base
+$spawn                                   = "outfit\leader_azazel_velhan_outfit"
+visual                                   = dynamics\outfit\bandit_exo_outfit
+actor_visual                             = actors\stalker_velhan\velhan_leader.ogf
+npc_visual                               = actors\stalker_velhan\velhan_leader.ogf
+player_hud_section                       = actor_hud_bandit_exo
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_velhan_outfit_name
+inv_name_short                           = leader_velhan_outfit_name
+description                              = leader_velhan_outfit_description
+
+inv_weight                               = 11
+
+inv_grid_x                               = 78
+inv_grid_y                               = 37
+
+upgr_icon_x                              = 2500
+upgr_icon_y                              = 0
+upgr_icon_width                          = 350
+upgr_icon_height                         = 200
+
+cost                                     = 265790
+
+artefact_count                           = 1
+
+helmet_avaliable						 = false
+
+sprint_allowed							 = true
+
+power_loss                               = 0.75
+
+character_portrait						 = ui_inGame2_velhan_exo_4_0
+

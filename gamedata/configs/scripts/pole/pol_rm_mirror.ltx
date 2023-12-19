@@ -1,0 +1,12 @@
+[logic]
+active = ph_idle@init
+
+[ph_idle@init]
+on_info = {+rm_pol_mirror_used} nil, {+rm_sui_firstmeet_1} ph_idle@wait
+
+[ph_idle@wait]
+on_use = %+rm_pol_mirror_used% ph_idle@effect
+tips = rm_plakat_use
+
+[ph_idle@effect]
+on_info = %=run_pp_effector(black) =play_sound_on_actor(anomaly\teleport_idle) =change_level(pd_smart_terrain_1_1_actor_walk:pd_smart_terrain_1_1_actor_look)% nil

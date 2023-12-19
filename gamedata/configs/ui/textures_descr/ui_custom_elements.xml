@@ -1,0 +1,7 @@
+<w>
+	<file name="ui\ui_custom_elements">
+		<texture id="ui_custom_elements_progress_bar_bg" x="0" y="0" width="130" height="26" />
+		<texture id="ui_custom_elements_progress_bar_198_bg" x="0" y="26" width="198" height="26" />
+		<texture id="ui_pda_icon_faction_none" x="0" y="52" width="31" height="31" />
+	</file>
+</w>

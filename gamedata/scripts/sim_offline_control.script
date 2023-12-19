@@ -1,0 +1,271 @@
+local faction_boost_table = {
+  ["stalker"] = axr_main.config:r_value("mm_options", "boost_stalker", 2, 10),
+  ["bandit"] = axr_main.config:r_value("mm_options", "boost_bandit", 2, 9),
+  ["csky"] = axr_main.config:r_value("mm_options", "boost_csky", 2, 7),
+  ["army"] = axr_main.config:r_value("mm_options", "boost_army", 2, 10),
+  ["freedom"] = axr_main.config:r_value("mm_options", "boost_freedom", 2, 12),
+  ["dolg"] = axr_main.config:r_value("mm_options", "boost_dolg", 2, 13),
+  ["ecolog"] = axr_main.config:r_value("mm_options", "boost_ecolog", 2, 7),
+  ["killer"] = axr_main.config:r_value("mm_options", "boost_killer", 2, 11),
+  ["monolith"] = axr_main.config:r_value("mm_options", "boost_monolith", 2, 13),
+  ["zombied"] = axr_main.config:r_value("mm_options", "boost_zombied", 2, 8),
+  ["isg"] = axr_main.config:r_value("mm_options", "boost_isg", 2, 9),
+  ["darkstalker"] = axr_main.config:r_value("mm_options", "boost_darkstalker", 2, 10),
+  ["renegate"] = axr_main.config:r_value("mm_options", "boost_renegate", 2, 8),
+  ["varyag"] = axr_main.config:r_value("mm_options", "boost_varyag", 2, 14),
+  ["slizni"] = axr_main.config:r_value("mm_options", "boost_slizni", 2, 7),
+  ["velhan"] = axr_main.config:r_value("mm_options", "boost_velhan", 2, 12),
+  ["fantom"] = axr_main.config:r_value("mm_options", "boost_fantom", 2, 14),
+  ["veter"] = axr_main.config:r_value("mm_options", "boost_veter", 2, 12),
+  ["osoznanie"] = axr_main.config:r_value("mm_options", "boost_osoznanie", 2, 15),
+  ["alfa"] = axr_main.config:r_value("mm_options", "boost_alfa", 2, 13),
+  ["apocalypse"] = axr_main.config:r_value("mm_options", "boost_apocalypse", 2, 15),
+  ["adinkvizicia"] = axr_main.config:r_value("mm_options", "boost_adinkvizicia", 2, 14),
+  ["hunter"] = axr_main.config:r_value("mm_options", "boost_hunter", 2, 7),
+  ["voenstal"] = axr_main.config:r_value("mm_options", "boost_voenstal", 2, 11),
+  ["mirotvorec"] = axr_main.config:r_value("mm_options", "boost_mirotvorec", 2, 13),
+  ["ryskuspecnaz"] = axr_main.config:r_value("mm_options", "boost_ryskuspecnaz", 2, 15),
+  ["sby"] = axr_main.config:r_value("mm_options", "boost_sby", 2, 11),
+  ["angel"] = axr_main.config:r_value("mm_options", "boost_angel", 2, 14),
+  ["posleduden"] = axr_main.config:r_value("mm_options", "boost_posleduden", 2, 10),
+  ["greh"] = axr_main.config:r_value("mm_options", "boost_greh", 2, 10),
+  ["monster"] = axr_main.config:r_value("mm_options", "boost_monster", 2, 16)
+}
+
+specified_power_add = {}
+
+squads_by_level = {}
+ocs_power_table = {}
+
+function calculate_squad_power(squad)
+  local power = 15
+
+  if not IsSquad(squad) then
+    return power
+  end
+
+  if string.find(squad:name(), "_sim_squad_leader_") then
+    power = power + 50
+  end
+
+  local faction = squad:get_squad_community()
+  local squad_level_id = game_graph():vertex(squad.m_game_vertex_id):level_id()
+  local squad_level_name = alife():level_name(squad_level_id)
+  local faction_boost = 0
+
+  if sim_tables.squads_power_by_rank[faction] then
+    for rank_name, value in pairs(sim_tables.squads_power_by_rank[faction]) do
+      if string.find(squad:name(), rank_name) then
+        power = value
+      end
+    end
+  end
+
+  -- Учитываем кол-во НПС в скваде
+  for _ in squad:squad_members() do
+    power = power + 2
+  end
+
+  faction_boost = faction_boost_table[faction] or 0
+
+  power = power + faction_boost
+
+  if specified_power_add[squad.id] ~= nil then
+    power = power + specified_power_add[squad.id]
+  end
+
+  ocs_power_table[squad.id] = utils.round(power)
+end
+
+function squad_on_update(squad)
+  if squad.registered_in_simultaion ~= true then
+    return
+  end
+
+  calculate_squad_power(squad)
+
+  local gg = game_graph()
+
+  if not (squad.current_level_id) then
+    local lvl = gg:vertex(squad.m_game_vertex_id):level_id()
+    squad.current_level_id = lvl
+
+    if not squads_by_level[lvl] then
+      squads_by_level[lvl] = {}
+    end
+
+    squads_by_level[lvl][squad.id] = true
+  end
+
+  if squad.online then
+    return
+  end
+
+  if (squad.sim_combat_manager and not squad.sim_combat_manager.disbanded) then
+    squad.sim_combat_manager:simulate(squad)
+  end
+
+  local last = squad.current_level_id
+  local lvl = gg:vertex(squad.m_game_vertex_id):level_id()
+
+  squad.current_level_id = lvl
+
+  if (last ~= lvl) then
+    if squads_by_level[last] then
+      squads_by_level[last][squad.id] = nil
+    end
+
+    if (not squads_by_level[lvl]) then
+      squads_by_level[lvl] = {}
+    end
+
+    squads_by_level[lvl][squad.id] = true
+  end
+
+  local f0 = squad:get_squad_community()
+
+  for i, t in pairs(squads_by_level[lvl]) do
+    local squad2 = i and alife_object(i)
+
+    if squad2 and squad2.registered_in_simultaion and not squad2.online then
+      local f1 = squad2:get_squad_community()
+      local d = squad.position:distance_to_sqr(squad2.position)
+      local squadFaction = squad:get_squad_community()
+      local squad2Faction = squad2:get_squad_community()
+      local relation = game_relations.get_factions_community(squadFaction, squad2Faction)
+
+      if
+        isNotHunters(squad, squad2) and
+          ((not (f0 == "monster" and f1 == "monster") and (f0 == "monster" or f1 == "monster") and d < (30 * 30)) or
+            (relation and relation < 0 and d < (75 * 75)))
+       then
+        local power1 = ocs_power_table[squad.id]
+        local power2 = ocs_power_table[squad2.id]
+
+        if power1 and power1 > 0 and power2 and power2 > 0 then
+          sim_offline_control.set_sim_combat_manager(squad, squad2)
+        end
+      end
+    end
+  end
+end
+
+function isNotHunters(squad1, squad2)
+  return not wargreat_actor_hunter.isHuntersSquad(squad1) and not wargreat_actor_hunter.isHuntersSquad(squad2)
+end
+
+function set_sim_combat_manager(squad1, squad2)
+  if (squad1.sim_combat_manager and squad2.sim_combat_manager) then
+    return
+  end
+
+  if (squad1.online or squad2.online) then
+    return
+  end
+
+  if
+    not (SIMBOARD.squads[squad1.id]) or not (SIMBOARD.squads[squad2.id]) or (squad1:npc_count() == 0) or
+      (squad2:npc_count() == 0)
+   then
+    return
+  end
+
+  if (squad1.sim_combat_manager) then
+    squad1.sim_combat_manager:register(squad2, squad1.id)
+    return
+  elseif (squad2.sim_combat_manager) then
+    squad2.sim_combat_manager:register(squad1, squad2.id)
+    return
+  end
+
+  local random = math.random(100)
+  if random > 70 then
+    sim_offline_to_online.under_attack_news(squad1, squad2)
+  end
+
+  local group = sim_combat_manager.sim_combat_manager()
+  group:register(squad1, squad2.id)
+  group:register(squad2, squad1.id)
+end
+
+function get_num_squads_on_level(lvl, faction)
+  if (squads_by_level[lvl]) then
+    local count = 0
+
+    for s, _ in pairs(squads_by_level[lvl]) do
+      local squad = alife_object(s)
+
+      if IsSquad(squad) and squad:get_squad_community() == faction then
+        count = count + 1
+      end
+    end
+
+    return count
+  end
+
+  return 0
+end
+
+function calc_all_npc_on_level(lvl, faction)
+  if (squads_by_level[lvl]) then
+    local count = 0
+
+    for s, _ in pairs(squads_by_level[lvl]) do
+      local squad = alife_object(s)
+
+      if (squad) then
+        if (squad.get_squad_community and squad:get_squad_community() == faction) then
+          local npc_in_squad = squad:npc_count()
+          count = count + npc_in_squad
+        end
+      end
+    end
+
+    return count
+  end
+
+  return 0
+end
+-- return 3 values: squad_count, active_npc_count, passive_npc_count
+-- Example: 12, 14, 20
+function calc_npc_on_level(lvl, faction)
+  if not squads_by_level[lvl] then
+    return 0, 0, 0
+  end
+
+  local squad_count = 0
+  local active_npc_count = 0
+  local passive_npc_count = 0
+
+  for s, _ in pairs(squads_by_level[lvl]) do
+    local squad = alife_object(s)
+
+    if IsSquad(squad) then
+      if squad:get_squad_community() == faction then
+        local npc_in_squad = squad:npc_count()
+
+        if squad.current_action == 1 then
+          passive_npc_count = passive_npc_count + npc_in_squad
+        elseif squad.current_action == 0 then
+          active_npc_count = active_npc_count + npc_in_squad
+        end
+
+        squad_count = squad_count + 1
+      end
+    end
+  end
+
+  return squad_count, active_npc_count, passive_npc_count
+end
+
+local function squad_on_npc_death(squad, npc, killer)
+  if not IsSquad(squad) then
+    return
+  end
+
+  calculate_squad_power(squad.id)
+end
+
+function on_game_start()
+  RegisterScriptCallback("squad_on_npc_death", squad_on_npc_death)
+end

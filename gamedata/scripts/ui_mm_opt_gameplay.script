@@ -1,0 +1,554 @@
+class "opt_gameplay"(CUIWindow)
+
+function opt_gameplay:__init()
+  super()
+end
+
+function opt_gameplay:__finalize()
+end
+
+function opt_gameplay:InitControls(x, y, xml, handler)
+  self:SetWndPos(vector2():set(x, y))
+  self:SetWndSize(vector2():set(738, 416))
+  self:SetAutoDelete(true)
+
+  if db.actor_binder and db.actor_binder.character_icon then
+    handler.char_icon = xml:InitStatic("tab_gameplay:char_icon", self)
+    handler.char_icon:InitTexture(db.actor_binder.character_icon)
+  end
+
+  self.scroll_v = xml:InitScrollView("tab_gameplay:scroll_v", self)
+  handler.gameplay_scroll_v = self.scroll_v
+
+  local g_list_1 = {
+    ws_self = {offset_y = 20, x = 100},
+    self = {offset_y = 20, x = 100},
+    ws_label = {x = 100},
+    label = {x = 100},
+    ws_container = {height = 50},
+    container = {height = 50}
+  }
+  local g_list_2 = {
+    ws_self = {offset_y = 20, x = 340},
+    self = {offset_y = 20, x = 340},
+    ws_label = {x = 340},
+    label = {x = 340},
+    ws_container = {height = 50},
+    container = {height = 50}
+  }
+  local g_check_1 = {
+    ws_self = {offset_x = 55},
+    self = {offset_x = 55},
+    ws_label = {offset_x = 75},
+    label = {offset_x = 75}
+  }
+  local g_check_2 = {
+    ws_self = {offset_x = 85},
+    self = {offset_x = 85},
+    ws_label = {offset_x = 105},
+    label = {offset_x = 105}
+  }
+
+  handler.options.gameplay = {
+    {
+      geometry = {ws_self = {height = 10}, self = {height = 10}},
+      typ = "empty"
+    },
+    {
+      {
+        id = "difficulty",
+        typ = "list",
+        geometry = g_list_1,
+        label_tag = "cap_check_2_axr",
+        tag = "list_difficulty"
+      },
+      {
+        id = "localization",
+        default = GetString("ui_mm_list_localization_item_rus"),
+        debug_only = false,
+        geometry = g_list_2,
+        typ = "list",
+        list = {"rus", "eng"},
+        label_tag = "cap_check_2_axr",
+        on_accept = function(handler, optMgr, item)
+          local language = axr_main_options.get_list_key(item)
+          if (language and language ~= "") then
+            local loc_ini = ini_file_ex("localization.ltx", true)
+            if (loc_ini:r_value("string_table", "language") ~= language) then
+              loc_ini:w_value("string_table", "language", language)
+              loc_ini:save()
+              handler.b__require_restart = true
+            end
+          end
+        end
+      }
+    },
+    {
+      {
+        id = "excl_dist",
+        default = 25,
+        debug_only = false,
+        geometry = g_list_1,
+        label_tag = "cap_check_2_axr",
+        typ = "list",
+        list = {0, 25, 50, 100}
+      },
+      {
+        id = "quicksave_cnt",
+        default = 5,
+        debug_only = false,
+        geometry = g_list_2,
+        label_tag = "cap_check_2_axr",
+        typ = "list",
+        list = {1, 5, 10, 20, 25, 30, 35, 40, 45, 50}
+      }
+    },
+    {
+      {
+        id = "speed_spawn",
+        default = "100",
+        debug_only = false,
+        geometry = g_list_1,
+        label_tag = "cap_check_2_axr",
+        typ = "list",
+        list = {"50", "80", "100", "150", "200"}
+      },
+      {
+        id = "char_portrait",
+        state = {},
+        default = db.actor_binder and db.actor_binder.character_icon or "ui_inGame2_Strelok",
+        debug_only = false,
+        geometry = g_list_2,
+        label_tag = "cap_check_2_axr",
+        typ = "list",
+        list = nil,
+        list_names = true,
+        generate_list = function()
+          return axr_main_options.get_character_icon_list()
+        end,
+        precondition = function()
+          return db.actor
+        end,
+        on_accept = function(handler, optMgr, item)
+          if (item.state.selected) then
+            db.actor_binder.character_icon = item.ctrl:GetText()
+            if (axr_main.config:r_value("mm_options", "enable_outfit_portrait", 1, false)) then
+              local outfit = db.actor:item_in_slot(7)
+              if (outfit == nil) then
+                db.actor:set_character_icon(db.actor_binder.character_icon)
+              end
+            else
+              db.actor:set_character_icon(db.actor_binder.character_icon)
+            end
+          end
+        end,
+        on_list_item_select = function(handler, ctrl, item)
+          item.state.selected = ctrl:GetText()
+          if handler.char_icon then
+            handler.char_icon:InitTexture(item.state.selected)
+          else
+            handler.char_icon = xml:InitStatic("tab_gameplay:char_icon", self)
+            handler.char_icon:InitTexture(item.state.selected)
+          end
+        end
+      }
+    },
+    {
+      {
+        id = "show_crosshair",
+        typ = "check",
+        geometry = g_check_1,
+        tag = "check_crosshair"
+      },
+      {
+        id = "dyn_crosshair",
+        typ = "check",
+        geometry = g_check_2,
+        tag = "check_dyn_crosshair"
+      }
+    },
+    {
+      {
+        id = "show_weapon",
+        typ = "check",
+        geometry = g_check_1,
+        tag = "check_show_weapon"
+      },
+      {
+        id = "crosshair_distance",
+        typ = "check",
+        geometry = g_check_2,
+        tag = "check_dist"
+      }
+    },
+    {
+      {
+        id = "tips",
+        typ = "check",
+        geometry = g_check_1,
+        tag = "check_tips"
+      },
+      {
+        id = "important_save",
+        typ = "check",
+        geometry = g_check_2,
+        tag = "check_important_save"
+      }
+    },
+    {
+      {
+        id = "crouch_toggle",
+        typ = "check",
+        geometry = g_check_1,
+        tag = "check_crouch_toggle"
+      },
+      {
+        id = "show_tracers",
+        typ = "check",
+        geometry = g_check_2,
+        tag = "check_show_tracers"
+      }
+    },
+    {
+      {
+        id = "change_faction_by_outfit",
+        default = true,
+        debug_only = false,
+        geometry = g_check_1,
+        typ = "check"
+      },
+      {
+        id = "take_any_squad",
+        default = false,
+        debug_only = false,
+        geometry = g_check_2,
+        typ = "check"
+      }
+    },
+    {
+      {
+        id = "actor_hunters",
+        default = false,
+        debug_only = false,
+        geometry = g_check_1,
+        typ = "check"
+      },
+      {
+        id = "art_degrade",
+        default = true,
+        debug_only = false,
+        geometry = g_check_2,
+        typ = "check",
+        on_accept = function(handler, optMgr, item)
+          if (level.present() and artefact_degradation) then
+            if (item.ctrl:GetCheck()) then
+              artefact_degradation.activate_feature()
+            else
+              artefact_degradation.deactivate_feature()
+            end
+          end
+        end
+      }
+    },
+    {
+      {
+        id = "priorities",
+        default = false,
+        debug_only = false,
+        geometry = g_check_1,
+        typ = "check"
+      },
+      {
+        id = "fake_news",
+        default = true,
+        debug_only = false,
+        geometry = g_check_2,
+        typ = "check"
+      }
+    },
+    {
+      {
+        id = "drop_helmets",
+        default = true,
+        debug_only = false,
+        geometry = g_check_1,
+        typ = "check"
+      },
+      {
+        id = "drop_outfits",
+        default = true,
+        debug_only = false,
+        geometry = g_check_2,
+        typ = "check"
+      }
+    },
+    {
+      {
+        id = "smart_capture_sms",
+        default = true,
+        debug_only = false,
+        geometry = g_check_1,
+        typ = "check"
+      },
+      {
+        id = "enable_sms",
+        default = true,
+        debug_only = false,
+        geometry = g_check_2,
+        typ = "check"
+      }
+    },
+    {
+      {
+        id = "arena_mode",
+        default = false,
+        debug_only = false,
+        geometry = g_check_1,
+        typ = "check"
+      },
+      {
+        id = "hardcore_ai_aim",
+        default = false,
+        debug_only = false,
+        geometry = g_check_2,
+        typ = "check",
+        on_accept = function(handler, optMgr, item)
+          local con = get_console()
+          if (item.ctrl:GetCheck()) then
+            con:execute("ai_aim_max_angle 20.0")
+            con:execute("ai_aim_min_angle 17.0")
+            con:execute("ai_aim_min_speed 2.00")
+            con:execute("ai_aim_predict_time 0.28")
+          else
+            con:execute("ai_aim_max_angle 0.7854")
+            con:execute("ai_aim_min_angle 0.19635")
+            con:execute("ai_aim_min_speed 0.24")
+            con:execute("ai_aim_predict_time 0.40")
+          end
+        end
+      }
+    },
+    {
+      {
+        id = "release_dropped_items",
+        default = true,
+        debug_only = false,
+        geometry = g_check_1,
+        typ = "check"
+      },
+      {
+        id = "mechanic_feature",
+        default = false,
+        debug_only = false,
+        geometry = g_check_2,
+        typ = "check"
+      }
+    },
+    {
+      {
+        id = "heli_engine_sound",
+        default = true,
+        debug_only = false,
+        geometry = g_check_1,
+        typ = "check"
+      },
+      {
+        id = "heli_spawn",
+        default = true,
+        debug_only = false,
+        geometry = g_check_2,
+        typ = "check"
+      }
+    },
+    {
+      {
+        id = "radio_mod",
+        default = true,
+        debug_only = false,
+        geometry = g_check_1,
+        typ = "check"
+      },
+      {
+        id = "shot_effects",
+        default = false,
+        debug_only = false,
+        geometry = g_check_2,
+        typ = "check",
+        precondition = function()
+          return wpn_effects
+        end,
+        on_accept = function(handler, optMgr, item)
+          if (level.present() and wpn_effects) then
+            if (item.ctrl:GetCheck()) then
+              wpn_effects.activate()
+            else
+              wpn_effects.deactivate()
+            end
+          end
+        end
+      }
+    },
+    {
+      {
+        id = "dynamic_news",
+        default = true,
+        debug_only = false,
+        geometry = g_check_1,
+        typ = "check",
+        on_accept = function(handler, optMgr, item)
+          if (level.present() and dynamic_news_manager) then
+            if (item.ctrl:GetCheck()) then
+              dynamic_news_manager.get_dynamic_news()
+            else
+              dynamic_news_manager.destroy_dynamic_news()
+            end
+          end
+        end
+      },
+      {
+        id = "sleep_deprived",
+        default = false,
+        debug_only = false,
+        geometry = g_check_2,
+        typ = "check",
+        on_accept = function(handler, optMgr, item)
+          if (level.present() and sleep_dep) then
+            if (item.ctrl:GetCheck()) then
+              sleep_dep.activate_feature()
+            else
+              sleep_dep.deactivate_feature()
+            end
+          end
+        end
+      }
+    },
+    {
+      {
+        id = "disable_spawn_attack",
+        default = false,
+        debug_only = false,
+        geometry = g_check_1,
+        typ = "check"
+      },
+      {
+        id = "spawn_explorers",
+        default = true,
+        debug_only = false,
+        geometry = g_check_2,
+        typ = "check"
+      }
+    },
+    {
+      {
+        id = "weapon_mags",
+        default = false,
+        debug_only = false,
+        geometry = g_check_1,
+        typ = "check",
+        precondition = function()
+          return mag_sys
+        end,
+        on_accept = function(handler, optMgr, item)
+          if (level.present() and mag_sys) then
+            if (item.ctrl:GetCheck()) then
+              mag_sys.activate_feature()
+            else
+              mag_sys.deactivate_feature()
+            end
+          end
+        end
+      },
+      {
+        id = "outfit_portrait",
+        default = false,
+        debug_only = false,
+        geometry = g_check_2,
+        typ = "check",
+        precondition = function()
+          return db.actor
+        end,
+        on_accept = function(handler, optMgr, item)
+          if (item.ctrl:GetCheck()) then
+            local outfit = db.actor:item_in_slot(7)
+            if (outfit) then
+              local icon = system_ini():r_string_ex(outfit:section(), "character_portrait")
+              if (icon) then
+                db.actor:set_character_icon(icon)
+              end
+            end
+          else
+            db.actor:set_character_icon(db.actor_binder.character_icon or "ui_inGame2_Strelok")
+          end
+        end
+      }
+    },
+    {
+      {
+        id = "consumable_animation",
+        default = "none",
+        debug_only = false,
+        geometry = g_check_1,
+        typ = "list",
+        list = {"none", "simple", "full"},
+        precondition = function()
+          return item_animations and enhanced_animations
+        end,
+        on_accept = function(handler, optMgr, item)
+          local choice = axr_main.config:r_value("mm_options", "consumable_animation", 0, "none")
+          if choice == "full" then
+            if item_animations.feature_is_active then
+              item_animations.deactivate()
+            end
+            enhanced_animations.activate()
+          elseif choice == "simple" then
+            if enhanced_animations.feature_is_active then
+              enhanced_animations.deactivate()
+            end
+            item_animations.activate()
+          else
+            if enhanced_animations.feature_is_active then
+              enhanced_animations.deactivate()
+            end
+            if item_animations.feature_is_active then
+              item_animations.deactivate()
+            end
+          end
+        end
+      },
+      {
+        id = "weapon_heat",
+        default = false,
+        debug_only = false,
+        geometry = g_check_2,
+        typ = "check",
+        precondition = function()
+          return weapon_heat
+        end,
+        on_accept = function(handler, optMgr, item)
+          if (level.present() and weapon_heat) then
+            if (item.ctrl:GetCheck()) then
+              weapon_heat.get_heat()
+            else
+              weapon_heat.stop_heat()
+            end
+          end
+        end
+      }
+    },
+    {
+      id = "weapon_heat_ui",
+      default = true,
+      debug_only = false,
+      geometry = g_check_1,
+      typ = "check",
+      precondition = function()
+        return weapon_heat
+      end,
+      on_accept = function(handler, optMgr, item)
+        if (level.present() and weapon_heat) then
+          weapon_heat.UI_BAR = item.ctrl:GetCheck()
+        end
+      end
+    }
+  }
+end

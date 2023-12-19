@@ -1,0 +1,1249 @@
+<specific_character id="sim_default_ecolog_leader_bondar" team_default = "1">
+    <name>Бондарь</name>
+    <icon>ui_inGame2_ecolog_exo_5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Лидер Ученных.</bio>
+    <class>sim_default_ecolog_leader_bondar</class>
+    <community>ecolog</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\ecolog\</snd_config>
+    <rank>19050</rank>
+    <reputation>1000</reputation>
+    <visual>actors\stalker_ecolog\ecolog_leader</visual>
+    <money min="22000" max="61750" infinitive="0"/>
+    <supplies>
+    [spawn] \n
+    wpn_hk417 = 1, silencer = 1 \n
+    ammo_7.62x51_fmj = 2 \n
+    wpn_sig220 \n
+    ammo_11.43x23_fmj = 2 \n
+    grenade_f1 = 4 \n
+    medkit_scientic = 5 \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs_leaders.xml"
+    <actor_dialog>dialog_leader_ecolog</actor_dialog>
+</specific_character>
+
+<specific_character id="stalker_ecolog_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_halat_medic_0_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Member of mobile science camp. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_zelen_0</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>500</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_ecolog\ecolog_halat_medic_0_0</visual>
+    <snd_config>characters_voice\human_01\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="sim_default_ecolog_0_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_red_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Member of mobile science camp. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_0</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_ecolog\ecolog_red_1_0</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="sim_default_ecolog_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_blue_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Member of mobile science camp. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_0</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_ecolog\ecolog_blue_1_0</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="sim_default_ecolog_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_cor_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Member of mobile science camp. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_0</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_ecolog\ecolog_cor_1_0</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="ecolog_green_1_0_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_green_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Member of mobile science camp. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_0</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_ecolog\ecolog_green_1_0</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_green_1_1_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_green_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Member of mobile science camp. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_0</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_ecolog\ecolog_green_1_1</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_green_1_2_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_green_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Member of mobile science camp. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_0</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_ecolog\ecolog_green_1_2</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="sim_default_ecolog_0_default_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_bel_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Member of mobile science camp. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_0</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_ecolog\ecolog_bel_1_0</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="sim_default_ecolog_0_default_5" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_zhelt_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Member of mobile science camp. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_0</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_ecolog\ecolog_zhelt_1_0</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_ecolog_0_default_6" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_ultra_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Member of mobile science camp. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_0</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_ecolog\ecolog_ultra_1</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_ecolog_0_default_8" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_halat_novice_a</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Member of mobile science camp. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_0</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_ecolog\stalker_ecolog_novice_a</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <!--  Ecolog Guides 1  -->
+<specific_character id="ecolog_green_1_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_green_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Researcher. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_1</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>3000</rank>
+    <reputation>-1655</reputation>
+    <visual>actors\stalker_ecolog\ecolog_green_1_0</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_green_1_1_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_green_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Researcher. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_1</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>3000</rank>
+    <reputation>-1655</reputation>
+    <visual>actors\stalker_ecolog\ecolog_green_1_1</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_green_1_2_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_green_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Researcher. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_1</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>3000</rank>
+    <reputation>-1655</reputation>
+    <visual>actors\stalker_ecolog\ecolog_green_1_2</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_green_face_1_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_green_face_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Researcher. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_1</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>3000</rank>
+    <reputation>-1655</reputation>
+    <visual>actors\stalker_ecolog\ecolog_green_face_1_0</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_green_face_1_1_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_green_face_1_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Researcher. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_1</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>3000</rank>
+    <reputation>-1655</reputation>
+    <visual>actors\stalker_ecolog\ecolog_green_face_1_1</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_green_face_1_2_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_green_face_1_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Researcher. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_1</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>3000</rank>
+    <reputation>-1655</reputation>
+    <visual>actors\stalker_ecolog\ecolog_green_face_1_2</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_bel_1_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_bel_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Researcher. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_1</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>3000</rank>
+    <reputation>-1655</reputation>
+    <visual>actors\stalker_ecolog\ecolog_bel_1_0</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_blue_1_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_blue_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Researcher. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_1</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>3000</rank>
+    <reputation>-1655</reputation>
+    <visual>actors\stalker_ecolog\ecolog_blue_1_0</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_cor_1_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_cor_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Researcher. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_1</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>3000</rank>
+    <reputation>-1655</reputation>
+    <visual>actors\stalker_ecolog\ecolog_cor_1_0</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_red_1_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_red_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Researcher. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_1</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>3000</rank>
+    <reputation>-1655</reputation>
+    <visual>actors\stalker_ecolog\ecolog_red_1_0</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_zhelt_1_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_zhelt_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Researcher. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_1</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>3000</rank>
+    <reputation>-1655</reputation>
+    <visual>actors\stalker_ecolog\ecolog_zhelt_1_0</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="ecolog_seva_1_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_seva</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Researcher. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_1</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>3000</rank>
+    <reputation>-1655</reputation>
+    <visual>actors\stalker_ecologist\stalker_ecolog_seva_a</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_ecolog_1_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_halat_novice_a</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Member of mobile science camp. Detailed information is missing.</bio>
+    <class>sim_default_ecolog_1</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <rank>1000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_ecolog\stalker_ecolog_novice_a</visual>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <!--  Ecolog Guides 2  -->
+<specific_character id="ecolog_rukzak_gas_2_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_rukzak_gas_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>1485</reputation>
+    <visual>actors\stalker_ecolog\ecolog_rukzak_gas_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="ecolog_rukzak_gas_2_1_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_rukzak_gas_2_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="250" max="1750" infinitive="0"/>
+    <reputation>-795</reputation>
+    <visual>actors\stalker_ecolog\ecolog_rukzak_gas_2_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="ecolog_gas_2_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_gas_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>-2018</reputation>
+    <visual>actors\stalker_ecolog\ecolog_gas_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_gas_2_1_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_gas_2_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>-2018</reputation>
+    <visual>actors\stalker_ecolog\ecolog_gas_2_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_gas_2_2_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_gas_2_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>-2018</reputation>
+    <visual>actors\stalker_ecolog\ecolog_gas_2_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="ecolog_gas_rukzak_medic_2_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_gas_rukzak_medic_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>-542</reputation>
+    <visual>actors\stalker_ecolog\ecolog_gas_rukzak_medic_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="ecolog_off_gas_face_2_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_off_gas_face_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>-542</reputation>
+    <visual>actors\stalker_ecolog\ecolog_off_gas_face_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="ecolog_off_gas_face_2_1_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_off_gas_face_2_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>-542</reputation>
+    <visual>actors\stalker_ecolog\ecolog_off_gas_face_2_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_off_gas_face_2_2_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_off_gas_face_2_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>-542</reputation>
+    <visual>actors\stalker_ecolog\ecolog_off_gas_face_2_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="ecolog_gas_rukzak_2_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_gas_rukzak_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>-542</reputation>
+    <visual>actors\stalker_ecolog\ecolog_gas_rukzak_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="ecolog_off_gas_mask_2_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_off_gas_mask_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>-542</reputation>
+    <visual>actors\stalker_ecolog\ecolog_off_gas_mask_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="ecolog_off_gas_mask_2_1_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_off_gas_mask_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>-542</reputation>
+    <visual>actors\stalker_ecolog\ecolog_off_gas_mask_2_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_rukzak_mask_2_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_rukzak_mask_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>-542</reputation>
+    <visual>actors\stalker_ecolog\ecolog_rukzak_mask_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_green_face_1_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_green_face_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>-542</reputation>
+    <visual>actors\stalker_ecolog\ecolog_green_face_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_green_face_1_1_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_green_face_1_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>1960</reputation>
+    <visual>actors\stalker_ecolog\ecolog_green_face_1_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="ecolog_green_face_1_2_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_green_face_1_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>1960</reputation>
+    <visual>actors\stalker_ecolog\ecolog_green_face_1_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_green_1_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_green_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>1960</reputation>
+    <visual>actors\stalker_ecolog\ecolog_green_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_green_1_1_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_green_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>1960</reputation>
+    <visual>actors\stalker_ecolog\ecolog_green_1_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_green_1_2_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_green_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>1960</reputation>
+    <visual>actors\stalker_ecolog\ecolog_green_1_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_bel_1_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_bel_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>1960</reputation>
+    <visual>actors\stalker_ecolog\ecolog_bel_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_blue_1_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_blue_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>1960</reputation>
+    <visual>actors\stalker_ecolog\ecolog_blue_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_cor_1_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_cor_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>1960</reputation>
+    <visual>actors\stalker_ecolog\ecolog_cor_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_red_1_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_red_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>1960</reputation>
+    <visual>actors\stalker_ecolog\ecolog_red_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+	
+<specific_character id="ecolog_zhelt_1_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_zhelt_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>1960</reputation>
+    <visual>actors\stalker_ecolog\ecolog_zhelt_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="ecolog_seva_1_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_seva</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>1960</reputation>
+    <visual>actors\stalker_ecologist\stalker_ecolog_seva_b</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="ecolog_seva_1_1_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_seva</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>1960</reputation>
+    <visual>actors\stalker_ecologist\stalker_ecolog_seva_c</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="ecolog_guard_1_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_zhelt_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>1960</reputation>
+    <visual>actors\stalker_ecologist\ecolog_guard_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="ecolog_guard_1_1_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_zhelt_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_2</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>5000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>1960</reputation>
+    <visual>actors\stalker_ecologist\ecolog_guard_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+    <!--  Ecolog Guides 3  -->
+<specific_character id="sim_default_ecolog_3_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_4_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_3</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>7000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>1960</reputation>
+    <visual>actors\stalker_ecolog\ecolog_4_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_ecolog_3_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_4_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_3</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>7000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>1960</reputation>
+    <visual>actors\stalker_ecolog\ecolog_4_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_ecolog_3_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_4_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_3</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>7000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>1960</reputation>
+    <visual>actors\stalker_ecologist\ecolog_guard_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_ecolog_3_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_merc_a</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_3</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>7000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>1960</reputation>
+    <visual>actors\stalker_ecolog\stalker_ecolog_merc_a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_ecolog_3_default_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_merc_b</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_3</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>7000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>1960</reputation>
+    <visual>actors\stalker_ecolog\stalker_ecolog_merc_b</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_ecolog_4_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_exo_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_4</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>9000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>-542</reputation>
+    <visual>actors\stalker_ecolog\ecolog_exo_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_ecolog_4_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_exo_5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_4</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>9000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>190</reputation>
+    <visual>actors\stalker_ecolog\ecolog_exo_5</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_ecolog_4_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_berill</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_4</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>9000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>244</reputation>
+    <visual>actors\stalker_ecolog\stalker_ecolog_berill_b</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_ecolog_4_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_berill_gas</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_4</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>9000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>873</reputation>
+    <visual>actors\stalker_ecolog\stalker_ecolog_berill_b_gas</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+<specific_character id="sim_default_ecolog_5_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_exo_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_5</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>15000</rank>
+    <hit_probability_factor>100</hit_probability_factor>
+    <money min="1000" max="20000" infinitive="0"/>
+    <reputation>-542</reputation>
+    <visual>actors\stalker_ecolog\ecolog_exo_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_ecolog_5_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_4_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_5</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>7000</rank>
+    <money min="1000" max="20000" infinitive="0"/>
+    <reputation>15000</reputation>
+    <visual>actors\stalker_ecologist\ecolog_guard_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_ecolog_5_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_4_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_5</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>7000</rank>
+    <money min="10000" max="20000" infinitive="0"/>
+    <reputation>15000</reputation>
+    <visual>actors\stalker_ecologist\ecolog_guard_5</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_ecolog_5_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_berill</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_5</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>9000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>244</reputation>
+    <visual>actors\stalker_ecolog\stalker_ecolog_berill_b</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_ecolog_5_default_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_ecolog_berill_gas</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_ecolog_5</class>
+    <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\ecolog\</snd_config>
+    <rank>9000</rank>
+    <money min="1000" max="2000" infinitive="0"/>
+    <reputation>873</reputation>
+    <visual>actors\stalker_ecolog\stalker_ecolog_berill_b_gas</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>

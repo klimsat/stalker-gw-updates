@@ -1,0 +1,649 @@
+;---------------------------------------------------------------------------------------------
+; 
+;   —тарые броники
+; 
+;---------------------------------------------------------------------------------------------
+;		¬ар€г ”ѕ-1
+;---------------------------------------------------------------------------------------------
+[varyag_outfit]:outfit_base
+$spawn                                   = "outfit\varyag_outfit"
+visual                                   = dynamics\outfit\bandit_specops_outfit
+actor_visual                             = actors\stalker_bandit\stalker_bandit5a.ogf
+npc_visual                               = actors\stalker_bandit\stalker_bandit_5_gasmask.ogf
+player_hud_section                       = actor_hud_duty_psz9d
+
+ef_equipment_type                        = 3
+
+inv_name                                 = varyag_outfit_name
+inv_name_short                           = varyag_outfit_name
+description                              = varyag_outfit_description
+
+inv_weight                               = 11.0
+
+inv_grid_x      = 46
+inv_grid_y	= 37
+
+upgr_icon_x                              = 942
+upgr_icon_y                              = 0
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+full_icon_name                           = npc_icon_bandit_specops_outfit
+
+cost                                     = 16000
+full_scale_icon                          = 4,6	                                       ;иконка сталкера в костюме в полный рост
+power_loss                               = 0.8
+immunities_sect                          = sect_varyag_outfit_immunities
+
+; LOW RESISTANCE
+burn_protection                          = 0.0333
+shock_protection                         = 0.1333
+radiation_protection                     = 0.0050
+chemical_burn_protection                 = 0.0333
+telepatic_protection                     = 0.0
+strike_protection                        = 0.2275
+explosion_protection                     = 0.2275
+wound_protection                         = 0.2275
+
+hit_fraction_actor                       = 0.5
+bones_koeff_protection                   = actor_armor_berill
+
+artefact_count                           = 0
+control_inertion_factor                  = 1.5
+
+upgrades                                 = up_gr_firstab_specops_outfit, up_gr_seconab_specops_outfit, up_gr_thirdab_specops_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_specops
+character_portrait						 = ui_inGame2_varyag
+
+[sect_varyag_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_varyag_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		ѕлащ ¬ар€г€
+;---------------------------------------------------------------------------------------------
+[varyag_trenchcoat_outfit]:outfit_novice_base
+$spawn                                   = "outfit\varyag_trenchcoat_outfit"
+visual                                   = dynamics\outfit\novice_outfit
+actor_visual                             = actors\stalker_bandit\stalker_bandit4b.ogf
+npc_visual                               = actors\stalker_bandit\stalker_bandit4b.ogf
+player_hud_section                       = actor_hud_bandit_trench
+
+
+inv_name                                 = varyag_trenchcoat_outfit_name
+inv_name_short                           = varyag_trenchcoat_outfit_name
+description                              = varyag_trenchcoat_outfit_description
+inv_weight                               = 3.0
+
+inv_grid_height                          = 2
+inv_grid_x                               = 54
+inv_grid_y	                             = 32
+
+upgr_icon_x                              = 636
+upgr_icon_y                              = 0
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+
+cost                                     = 3000
+
+immunities_sect                          = sect_varyag_trenchcoat_outfit_immunities
+
+; NO RESISTANCE
+burn_protection                          = 0.0233
+shock_protection                         = 0.0933
+radiation_protection                     = 0.0035
+chemical_burn_protection                 = 0.0233
+telepatic_protection                     = 0.0
+strike_protection                        = 0.0350
+explosion_protection                     = 0.0350
+wound_protection                         = 0.0350
+
+bones_koeff_protection                   = actor_armor_trench
+
+character_portrait							 = ui_inGame2_varyag
+
+[sect_varyag_trenchcoat_outfit_immunities]
+burn_immunity                            = 0.05	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.05
+wound_immunity                           = 0.05
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.05
+explosion_immunity                       = 0.05
+fire_wound_immunity                      = 0.02
+
+[sect_varyag_trenchcoat_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.005
+
+;---------------------------------------------------------------------------------------------
+;		Ёкзоплащ ¬ар€г
+;---------------------------------------------------------------------------------------------
+[varyag_exoplash_outfit]:outfit_exo_base
+$spawn                                   = "outfit\varyag_exoplash_outfit"
+visual                                   = dynamics\outfit\merc_exo_outfit
+actor_visual                             = actors\stalker_varyag\mstitel_protoexo_3_0.ogf
+npc_visual                               = actors\stalker_varyag\mstitel_protoexo_3_0.ogf
+player_hud_section                       = actor_hud_mstitel_exo
+
+inv_name                                 = varyag_exoplash_outfit_name
+inv_name_short                           = varyag_exoplash_outfit_name
+description                              = varyag_exoplash_outfit_description
+
+inv_weight                               = 18.0
+
+inv_grid_width                           = 2
+inv_grid_height                          = 3
+inv_grid_x                               = 52
+inv_grid_y                               = 21
+
+upgr_icon_x                              = 1550
+upgr_icon_y                              = 670
+upgr_icon_width                          = 304
+upgr_icon_height                         = 159
+
+cost                                     = 50000
+
+bones_koeff_protection                   = actor_armor_berill
+
+upgrades                                 = up_gr_firstab_merc_exo_outfit, up_gr_seconab_merc_exo_outfit, up_gr_thirdab_merc_exo_outfit, up_gr_fourtab_merc_exo_outfit, up_gr_fifthab_merc_exo_outfit
+
+power_loss                               = 1.2
+additional_inventory_weight              = 70
+additional_inventory_weight2             = 70
+artefact_count                           = 3
+helmet_avaliable					= false
+
+character_portrait						           = ui_inGame2_varyag
+
+
+
+;---------------------------------------------------------------------------------------------
+; 
+;   Ќовые броники
+; 
+;---------------------------------------------------------------------------------------------
+;		Ѕронекостюм Varyag-1
+;---------------------------------------------------------------------------------------------
+[varyag_1_outfit]:outfit_base
+$spawn                                   = "outfit\varyag_1_outfit"
+visual                                   = dynamics\outfit\alfa_outfit
+actor_visual                             = actors\stalker_varyag\varyag_soldier_5.ogf
+npc_visual                               = actors\stalker_varyag\varyag_soldier_5.ogf
+player_hud_section                       = actor_hud_varyag_3
+
+ef_equipment_type                        = 3
+
+inv_name                                 = varyag_1_outfit_name
+inv_name_short                           = varyag_1_outfit_name
+description                              = varyag_1_outfit_description
+
+inv_weight                               = 7.5
+
+inv_grid_x                               = 44
+inv_grid_y                               = 43
+
+upgr_icon_x                              = 2834
+upgr_icon_y                              = 13
+upgr_icon_width                          = 300
+upgr_icon_height                         = 170
+full_icon_name                           = npc_icon_svoboda_light_outfit
+
+cost                                     = 19000
+full_scale_icon                          = 2,11	                                       ;иконка сталкера в костюме в полный рост
+artefact_count                           = 2
+immunities_sect                          = sect_varyag_1_outfit_immunities
+
+; LOW-MEDIUM RESISTANCE
+burn_protection                          = 0.03
+shock_protection                         = 0.08
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.01
+telepatic_protection                     = 0.0
+strike_protection                        = 0.2
+explosion_protection                     = 0.05
+wound_protection                         = 0.1925
+
+hit_fraction_actor                       = 0.2
+bones_koeff_protection                   = actor_armor_bandit
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.6
+
+upgrades                                 = up_gr_firstab_merc_outfit, up_gr_seconab_merc_outfit, up_gr_thirdab_merc_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_svoboda_heavy_outfit
+character_portrait						           = ui_inGame2_varyag_2_5
+
+[sect_varyag_1_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_varyag_1_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		Ѕронекостюм Varyag-2
+;---------------------------------------------------------------------------------------------
+[varyag_2_outfit]:outfit_base
+$spawn                                   = "outfit\varyag_2_outfit"
+visual                                   = dynamics\outfit\alfa_outfit
+actor_visual                             = actors\stalker_varyag\varyag_soldier_3.ogf
+npc_visual                               = actors\stalker_varyag\varyag_soldier_3.ogf
+player_hud_section                       = actor_hud_varyag_3
+
+ef_equipment_type                        = 3
+
+inv_name                                 = varyag_2_outfit_name
+inv_name_short                           = varyag_2_outfit_name
+description                              = varyag_2_outfit_description
+
+inv_weight                               = 8.0
+
+inv_grid_x                               = 46
+inv_grid_y                               = 43
+
+upgr_icon_x                              = 2834
+upgr_icon_y                              = 188
+upgr_icon_width                          = 300
+upgr_icon_height                         = 170
+full_icon_name                           = ui_inGame2_varyag_2_3
+
+cost                                     = 27000
+full_scale_icon                          = 2,11	                                       ;иконка сталкера в костюме в полный рост
+artefact_count                           = 2
+immunities_sect                          = sect_varyag_2_outfit_immunities
+
+; LOW-MEDIUM RESISTANCE
+burn_protection                          = 0.04
+shock_protection                         = 0.1
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.02
+telepatic_protection                     = 0.0
+strike_protection                        = 0.27
+explosion_protection                     = 0.1
+wound_protection                         = 0.22
+
+hit_fraction_actor                       = 0.45
+bones_koeff_protection                   = actor_armor_duty_suit
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.75
+
+upgrades                                 = up_gr_firstab_merc_outfit, up_gr_seconab_merc_outfit, up_gr_thirdab_merc_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_svoboda_heavy_outfit
+character_portrait						           = ui_inGame2_varyag_2_3
+
+[sect_varyag_2_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_varyag_2_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+;---------------------------------------------------------------------------------------------
+;		Ѕронекостюм Varyag-3
+;---------------------------------------------------------------------------------------------
+[varyag_3_outfit]:outfit_base
+$spawn                                   = "outfit\varyag_3_outfit"
+visual                                   = dynamics\outfit\alfa_outfit
+actor_visual                             = actors\stalker_varyag\varyag_soldier_6.ogf
+npc_visual                               = actors\stalker_varyag\varyag_soldier_6.ogf
+player_hud_section                       = actor_hud_varyag_4
+
+ef_equipment_type                        = 3
+
+inv_name                                 = varyag_3_outfit_name
+inv_name_short                           = varyag_3_outfit_name
+description                              = varyag_3_outfit_description
+
+inv_weight                               = 9.5
+
+inv_grid_x                               = 48
+inv_grid_y                               = 43
+
+upgr_icon_x                              = 2834
+upgr_icon_y                              = 369
+upgr_icon_width                          = 300
+upgr_icon_height                         = 170
+full_icon_name                           = ui_inGame2_varyag_2_6
+
+cost                                     = 55000
+full_scale_icon                          = 2,11	                                       ;иконка сталкера в костюме в полный рост
+artefact_count                           = 2
+immunities_sect                          = sect_varyag_3_outfit_immunities
+
+; LOW-MEDIUM RESISTANCE
+burn_protection                          = 0.0633
+shock_protection                         = 0.15
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.05
+telepatic_protection                     = 0.0
+strike_protection                        = 0.32
+explosion_protection                     = 0.25
+wound_protection                         = 0.27
+
+hit_fraction_actor                       = 0.6
+bones_koeff_protection                   = actor_armor_psz
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.75
+
+upgrades                                 = up_gr_firstab_merc_outfit, up_gr_seconab_merc_outfit, up_gr_thirdab_merc_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_svoboda_heavy_outfit
+character_portrait						           = ui_inGame2_varyag_2_6
+
+[sect_varyag_3_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_varyag_3_outfit_immunities_add]
+burn_immunity                            = -0.009	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.009
+wound_immunity                           = -0.009
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.009
+explosion_immunity                       = -0.009
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		Ѕронекостюм Varyag-4
+;---------------------------------------------------------------------------------------------
+[varyag_4_outfit]:outfit_base
+$spawn                                   = "outfit\varyag_4_outfit"
+visual                                   = dynamics\outfit\alfa_outfit
+actor_visual                             = actors\stalker_varyag\varyag_soldier_4.ogf
+npc_visual                               = actors\stalker_varyag\varyag_soldier_4.ogf
+player_hud_section                       = actor_hud_varyag_4
+
+ef_equipment_type                        = 3
+
+inv_name                                 = varyag_4_outfit_name
+inv_name_short                           = varyag_4_outfit_name
+description                              = varyag_4_outfit_description
+
+inv_weight                               = 9.0
+
+inv_grid_x                               = 50
+inv_grid_y                               = 43
+
+upgr_icon_x                              = 2834
+upgr_icon_y                              = 546
+upgr_icon_width                          = 300
+upgr_icon_height                         = 170
+full_icon_name                           = ui_inGame2_varyag_2_4
+
+cost                                     = 72000
+full_scale_icon                          = 2,11	                                       ;иконка сталкера в костюме в полный рост
+artefact_count                           = 2
+immunities_sect                          = sect_varyag_4_outfit_immunities
+
+; LOW-MEDIUM RESISTANCE
+burn_protection                          = 0.08
+shock_protection                         = 0.2
+radiation_protection                     = 0.0095
+chemical_burn_protection                 = 0.08
+telepatic_protection                     = 0.02
+strike_protection                        = 0.4
+explosion_protection                     = 0.3
+wound_protection                         = 0.35
+
+hit_fraction_actor                       = 0.5
+bones_koeff_protection                   = actor_armor_varyg_outfit_4
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.80
+
+upgrades                                 = up_gr_firstab_dolg_rad_outfit, up_gr_seconab_dolg_rad_outfit, up_gr_thirdab_dolg_rad_outfit, up_gr_fourtab_dolg_rad_outfit, up_gr_fifthab_dolg_rad_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_svoboda_heavy_outfit
+character_portrait						           = ui_inGame2_varyag_2_4
+
+[sect_varyag_4_outfit_immunities]
+burn_immunity                            = 0.06	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.06
+wound_immunity                           = 0.06
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.06
+explosion_immunity                       = 0.06
+fire_wound_immunity                      = 0.01
+
+[sect_varyag_4_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0015
+
+;---------------------------------------------------------------------------------------------
+;		Ёкзоскелет Bronislav
+;---------------------------------------------------------------------------------------------
+[varyag_bronislav_exo_outfit]:outfit_exo_base
+$spawn                                   = "outfit\varyag_bronislav_exo_outfit"
+visual                                   = dynamics\outfit\monolith_exo_outfit
+actor_visual                             = actors\stalker_varyag\varyag_bronislav_exo.ogf
+npc_visual                               = actors\stalker_varyag\varyag_bronislav_exo.ogf
+player_hud_section                       = actor_hud_monolith_exo
+
+inv_name                                 = varyag_bronislav_exo_outfit_name
+inv_name_short                           = varyag_bronislav_exo_outfit_name
+description                              = varyag_bronislav_exo_outfit_description
+
+inv_weight                               = 18.0
+
+inv_grid_width                           = 2
+inv_grid_height                          = 3
+inv_grid_x                               = 52
+inv_grid_y                               = 43
+
+upgr_icon_x                              = 2841
+upgr_icon_y                              = 722
+upgr_icon_width                          = 304
+upgr_icon_height                         = 159
+
+cost                                     = 200000
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0600
+shock_protection                         = 0.2240
+radiation_protection                     = 0.0090
+chemical_burn_protection                 = 0.0550
+telepatic_protection                     = 0.0620
+strike_protection                        = 0.4520
+explosion_protection                     = 0.3420
+wound_protection                         = 0.4120
+
+bones_koeff_protection                   = actor_armor_adin_exo
+
+upgrades                                 = up_gr_firstab_merc_exo_outfit, up_gr_seconab_merc_exo_outfit, up_gr_thirdab_merc_exo_outfit, up_gr_fourtab_merc_exo_outfit, up_gr_fifthab_merc_exo_outfit
+
+power_loss                               = 1.2
+additional_inventory_weight              = 80
+additional_inventory_weight2             = 80
+artefact_count                           = 1
+helmet_avaliable					     = false
+
+character_portrait						           = ui_inGame2_varyag_bronislav_exo
+;---------------------------------------------------------------------------------------------
+;		Leader Varyag Outfit
+;---------------------------------------------------------------------------------------------
+[leader_varyag_outfit]:outfit_base
+$spawn                                   = "outfit\leader_varyag_outfit"
+visual                                   = dynamics\outfit\leader_varyagi_outfit
+actor_visual                             = actors\stalker_varyag\varyag_leader.ogf
+npc_visual                               = actors\stalker_varyag\varyag_leader.ogf
+player_hud_section                       = actor_hud_varyag_exo
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_varyag_outfit_name
+inv_name_short                           = leader_varyag_outfit_name
+description                              = leader_varyag_outfit_description
+
+inv_weight                               = 8
+
+inv_grid_x         						 = 74
+inv_grid_y        						 = 46
+
+upgr_icon_x                              = 3780
+upgr_icon_y                              = 984
+upgr_icon_width                          = 297
+upgr_icon_height                         = 164
+
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 357340
+
+full_scale_icon                          = 14,11
+
+immunities_sect                          = sect_leader_varyag_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0922
+shock_protection                         = 0.4114
+radiation_protection                     = 0.0152
+chemical_burn_protection                 = 0.0952
+telepatic_protection                     = 0.0787
+strike_protection                        = 0.7010
+explosion_protection                     = 0.5613
+wound_protection                         = 0.6502
+
+fire_wound_protection                    = 0.2540
+
+hit_fraction_actor                       = 0.15
+control_inertion_factor                  = 2.5
+bones_koeff_protection                   = varyag_leader
+
+nightvision_sect 			             = effector_nightvision_2  
+
+power_restore_speed                      = 0.005
+power_loss                               = 1.0
+
+additional_inventory_weight              = 110
+additional_inventory_weight2             = 110
+
+artefact_count                           = 5
+
+helmet_avaliable						 = false
+
+character_portrait						 = ui_inGame2_varyag_bronislav_exo
+
+[sect_leader_varyag_outfit_immunities]
+burn_immunity            				 = 0.0050
+strike_immunity                          = 0.0050
+shock_immunity                           = 0.0200
+wound_immunity                           = 0.0050
+radiation_immunity                       = 0.0000
+telepatic_immunity                       = 0.0000
+chemical_burn_immunity                   = 0.0050
+explosion_immunity                       = 0.0050
+fire_wound_immunity                      = 0.0100
+;---------------------------------------------------------------------------------------------
+;OUTFIT IN AZAZEL MODE: Leader Varyag Outfit
+;---------------------------------------------------------------------------------------------
+[leader_azazel_varyag_outfit]:outfit_leader_exo_base
+$spawn                                   = "outfit\leader_azazel_varyag_outfit"
+visual                                   = dynamics\outfit\leader_varyagi_outfit
+actor_visual                             = actors\stalker_varyag\varyag_leader.ogf
+npc_visual                               = actors\stalker_varyag\varyag_leader.ogf
+player_hud_section                       = actor_hud_varyag_exo
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_varyag_outfit_name
+inv_name_short                           = leader_varyag_outfit_name
+description                              = leader_varyag_outfit_description
+
+inv_weight                               = 8
+
+inv_grid_x         						 = 74
+inv_grid_y        						 = 46
+
+upgr_icon_x                              = 3780
+upgr_icon_y                              = 984
+upgr_icon_width                          = 297
+upgr_icon_height                         = 164
+
+cost                                     = 357340
+
+artefact_count                           = 1
+
+helmet_avaliable						 = false
+
+sprint_allowed							 = true
+
+power_loss                               = 0.75
+
+character_portrait						 = ui_inGame2_varyag_bronislav_exo

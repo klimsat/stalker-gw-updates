@@ -1,0 +1,25 @@
+[smart_terrain]
+squad_id = 15
+max_population = 5
+respawn_params = respawn@lim_rls_kaz
+respawn_idle = 30000
+
+
+
+[respawn@lim_rls_kaz]
+spawn_army@novice
+spawn_army@advanced
+
+[spawn_army@novice]
+spawn_squads = army_sim_squad_novice
+spawn_num = 3
+
+[spawn_army@advanced]
+spawn_squads = army_sim_squad_novice, army_sim_squad_advanced
+spawn_num = 3
+
+[exclusive]
+lim_rls_kaz_camp_work_1 = limansk\lim_rls_kaz_smart_logic.ltx
+lim_rls_kaz_camp_work_2 = limansk\lim_rls_kaz_smart_logic.ltx
+lim_rls_kaz_camp_work_3 = limansk\lim_rls_kaz_smart_logic.ltx
+lim_rls_kaz_camp_work_4 = limansk\lim_rls_kaz_smart_logic.ltx

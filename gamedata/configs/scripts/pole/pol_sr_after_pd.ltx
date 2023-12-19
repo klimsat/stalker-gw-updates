@@ -1,0 +1,5 @@
+[logic]
+active = sr_idle@wait
+
+[sr_idle@wait]
+on_actor_inside = {!has_active_tutorial +rm_sou_about_spells_1} %+rm_pol_after_pd =give_news(rm_doll_souseiseki_name:st_rm_sou_after_pd_msg_1:rm_sou:0:15000) =give_news(st_actor_generic_name:st_rm_sou_after_pd_msg_2:actor:3000:15000) =create_squad(rm_monster_chimera:esc_smart_terrain_5_2) =create_squad(rm_mix_dogs:gar_smart_terrain_1_7) =create_squad(rm_mix_boar_flesh:gar_smart_terrain_5_2) =create_squad(rm_snork:ros_smart_monster4) =create_squad(rm_contr_6gzomb:ds_smart_terrain_2_1) =create_squad(rm_stalker_rim_squad:gar_smart_terrain_6_3)% nil

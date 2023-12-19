@@ -1,0 +1,82 @@
+local gs = GetString
+
+local function npc_on_death(npc, who)
+  local section = npc:section()
+  local faction = npc:character_community()
+
+  if not string.find(section, "_leader_") then
+    return
+  end
+  local npc_name = npc:character_name()
+  local name = ui_pda_factions_tab.leaders[faction].name
+
+  if npc_name ~= name then
+    return
+  end
+
+  local actorFaction = sim_brain.actor_faction
+  local IsActorKiller = who:id() == 0
+  local actorFullFaction = db.actor:character_community()
+
+  if IsActorKiller then
+    if actorFaction == faction then
+      utils.news(gs("st_leader_dead_caption"), gs("st_leader_dead_by_actor_msg"))
+      wargreat_relations.full_relation_table[faction][actorFullFaction] = -8000
+    else
+      wargreat_relations.full_relation_table[faction][actorFaction] = -8000
+      wargreat_relations.full_relation_table[faction][actorFullFaction] = -8000
+      game_relations.set_factions_community_num(actorFaction, faction, -8000)
+      game_relations.set_factions_community_num(faction, actorFaction, -8000)
+    end
+
+    game_relations.set_factions_community_num(actorFullFaction, faction, -8000)
+    game_relations.set_factions_community_num(faction, actorFullFaction, -8000)
+  end
+
+  utils.news(
+    gs("st_leader_dead_caption"),
+    gs("st_leader_dead_msg"),
+    sim_script_to_text.faction_names_standart[faction],
+    ui_pda_factions_tab.leaders[faction].name
+  )
+
+  if IsActorKiller then
+    xr_statistic.inc_killed_leaders()
+  end
+
+  ui_pda_factions_tab.leaders[faction].dead = true
+end
+
+local function RenameDisabledLaders()
+  local leader = axr_main.config:r_value("character_creation", "new_game_leader", "default")
+
+  if leader ~= "disabled" then
+    return
+  end
+
+  for faction, _ in pairs(ui_pda_factions_tab.leaders) do
+    ui_pda_factions_tab.leaders[faction].name = "-"
+  end
+end
+
+local function actor_on_before_death(whoID, flags)
+  if whoID == 0 then
+    return
+  end
+  local actor_name = db.actor:character_name()
+  local name = ui_pda_factions_tab.leaders[sim_brain.actor_faction].name
+
+  if actor_name ~= name then
+    return
+  end
+
+  local npc = alife_object(whoID)
+
+  npc_on_death(db.actor, npc)
+end
+
+function on_game_start()
+  RenameDisabledLaders()
+  RegisterScriptCallback("npc_on_death_callback", npc_on_death)
+  RegisterScriptCallback("actor_on_before_death", actor_on_before_death)
+end

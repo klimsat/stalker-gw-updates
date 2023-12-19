@@ -1,0 +1,233 @@
+function on_game_start()
+  RegisterScriptCallback("save_state", save_state)
+  RegisterScriptCallback("load_state", load_state)
+end
+
+local elapsedTime = nil
+local seconds = nil
+local actorOnUpdateState = 0
+
+function save_state(m_data)
+  if (not m_data.transmutationTasks) then
+    m_data.transmutationTasks = {}
+  end
+
+  m_data.transmutationTasks.elapsedTime = elapsedTime
+  m_data.transmutationTasks.seconds = seconds
+  m_data.transmutationTasks.actorOnUpdateState = actorOnUpdateState
+end
+
+function load_state(m_data)
+  if (not m_data.transmutationTasks) then
+    return
+  end
+
+  local defaultElapsedTime = game.get_game_time()
+
+  elapsedTime = m_data.transmutationTasks.elapsedTime or defaultElapsedTime
+  seconds = m_data.transmutationTasks.seconds
+  actorOnUpdateState = m_data.transmutationTasks.actorOnUpdateState
+
+  if actorOnUpdateState == 0 then
+    RegisterScriptCallback("actor_on_update", actor_on_update)
+  elseif actorOnUpdateState == 1 then
+    RegisterScriptCallback("actor_on_update", actor_on_update_2)
+  elseif actorOnUpdateState == 2 then
+    RegisterScriptCallback("actor_on_update", actor_on_update_3)
+  end
+
+  m_data.transmutationTasks = nil
+end
+
+function actor_on_update()
+  if (seconds and elapsedTime and game.get_game_time():diffSec(elapsedTime) >= seconds) then
+    db.actor:give_game_news(
+      ("Профессор Сахаров"),
+      ("Благодаря вашей помощи мне удалось открыть еще несколько полезных рецептов. Как будет время - заходите!"),
+      news_manager.tips_icons["saharov"],
+      0,
+      15000
+    )
+
+    seconds = 3600 * 24 * math.random(7, 15)
+    elapsedTime = game.get_game_time()
+
+    dialogs_yantar_transmutation.transmutationLevel = 1
+
+    UnregisterScriptCallback("actor_on_update", actor_on_update)
+    RegisterScriptCallback("actor_on_update", actor_on_update_2)
+
+    actorOnUpdateState = 1
+  else
+    return
+  end
+end
+
+function actor_on_update_2()
+  if (seconds and elapsedTime and game.get_game_time():diffSec(elapsedTime) >= seconds) then
+    db.actor:give_game_news(
+      ("Профессор Сахаров"),
+      ("Молодой человек, у меня есть еще задание для Вас. Приходите пожалуйста."),
+      news_manager.tips_icons["saharov"],
+      0,
+      15000
+    )
+
+    task_manager.get_task_manager():give_task("yan_stalker_sakharov_find_transmutation_artefacts_2_1")
+
+    UnregisterScriptCallback("actor_on_update", actor_on_update_2)
+  else
+    return
+  end
+end
+
+function actor_on_update_3()
+  if (seconds and elapsedTime and game.get_game_time():diffSec(elapsedTime) >= seconds) then
+    db.actor:give_game_news(
+      ("Профессор Сахаров"),
+      ("Благодаря вашей помощи мне удалось открыть еще несколько полезных рецептов. Как будет время - заходите!"),
+      news_manager.tips_icons["saharov"],
+      0,
+      15000
+    )
+
+    dialogs_yantar_transmutation.transmutationLevel = 2
+    actorOnUpdateState = nil
+    seconds = nil
+    elapsedTime = nil
+
+    UnregisterScriptCallback("actor_on_update", actor_on_update_3)
+  else
+    return
+  end
+end
+
+function give_actor_find_transmutation_artefacts_task_on_complete()
+  actor_remove_all_artefacts_for_find_transmutation_artefacts_task()
+
+  local tm = task_manager.get_task_manager()
+  local task_info = tm.task_info
+
+  if (task_info and task_info["yan_stalker_sakharov_find_transmutation_artefacts"]) then
+    tm:set_task_completed("yan_stalker_sakharov_find_transmutation_artefacts")
+  end
+
+  dialogs.relocate_money_to_actor(a, b, 60000)
+
+  seconds = 3600 * 24 * math.random(4, 6)
+  elapsedTime = game.get_game_time()
+
+  RegisterScriptCallback("actor_on_update", actor_on_update)
+end
+
+function give_actor_find_transmutation_artefacts_task_2_1_on_complete(a, b)
+  local tm = task_manager.get_task_manager()
+  local task_info = tm.task_info
+
+  if (task_info and task_info["yan_stalker_sakharov_find_transmutation_artefacts_2_1"]) then
+    tm:set_task_completed("yan_stalker_sakharov_find_transmutation_artefacts_2_1")
+  end
+end
+
+function actor_find_transmutation_artefacts_task_2_2_on_complete()
+  actor_remove_all_artefacts_for_find_transmutation_artefacts_task_2()
+
+  local tm = task_manager.get_task_manager()
+  local task_info = tm.task_info
+
+  if (task_info and task_info["yan_stalker_sakharov_find_transmutation_artefacts_2_2"]) then
+    tm:set_task_completed("yan_stalker_sakharov_find_transmutation_artefacts_2_2")
+  end
+
+  seconds = 3600 * 24 * math.random(4, 6)
+  elapsedTime = game.get_game_time()
+
+  RegisterScriptCallback("actor_on_update", actor_on_update_3)
+
+  actorOnUpdateState = 2
+
+  dialogs.relocate_money_to_actor(a, b, 80000)
+end
+
+function give_actor_find_transmutation_artefacts_task_2_1_on_complete(a, b)
+  local tm = task_manager.get_task_manager()
+  local task_info = tm.task_info
+
+  if (task_info and task_info["yan_stalker_sakharov_find_transmutation_artefacts_2_1"]) then
+    tm:set_task_completed("yan_stalker_sakharov_find_transmutation_artefacts_2_1")
+  end
+end
+
+function actor_remove_all_artefacts_for_find_transmutation_artefacts_task(actor, npc, p)
+  local items = {
+    ["af_cristall_flower"] = 2,
+    ["af_dummy_battery"] = 1,
+    ["af_medusa"] = 1,
+    ["af_mincer_meat"] = 2,
+    ["af_electra_sparkler"] = 1,
+    ["af_baloon"] = 1,
+    ["af_gravi"] = 1,
+    ["af_electra_moonlight"] = 1,
+    ["af_eye"] = 1
+  }
+
+  for componentName, componentCount in pairs(items) do
+    local item = db.actor:object(componentName)
+
+    xr_effects.remove_item(nil, nil, {componentName, componentCount})
+
+    local se_item = alife_object(item:id())
+
+    if (se_item) then
+      alife_release(se_item, true)
+    end
+  end
+end
+function actor_remove_all_artefacts_for_find_transmutation_artefacts_task_2(actor, npc, p)
+  local items = {
+    ["jup_b1_half_artifact"] = 2,
+    ["af_quest_b14_twisted"] = 2,
+    ["af_oasis_heart"] = 1,
+    ["af_compass"] = 1
+  }
+
+  for componentName, componentCount in pairs(items) do
+    local item = db.actor:object(componentName)
+
+    xr_effects.remove_item(nil, nil, {componentName, componentCount})
+
+    local se_item = alife_object(item:id())
+
+    if (se_item) then
+      alife_release(se_item, true)
+    end
+  end
+end
+
+function give_actor_find_transmutation_artefacts_task(a, b)
+  task_manager.get_task_manager():give_task("yan_stalker_sakharov_find_transmutation_artefacts")
+end
+function give_actor_find_transmutation_artefacts_task_2_2(a, b)
+  task_manager.get_task_manager():give_task("yan_stalker_sakharov_find_transmutation_artefacts_2_2")
+end
+
+function actor_has_not_find_transmutation_artefacts_task(a, b)
+  local tsk = task_manager.get_task_manager().task_info["yan_stalker_sakharov_find_transmutation_artefacts"]
+  return not tsk
+end
+function actor_has_find_transmutation_artefacts_task_completed(a, b)
+  local tsk = task_manager.get_task_manager().task_info["yan_stalker_sakharov_find_transmutation_artefacts"]
+
+  return tsk and tsk.stage == 0 and xr_conditions.actor_has_artefacts_for_find_transmutation_artefacts_task()
+end
+function actor_has_find_transmutation_artefacts_task_2_1_active(a, b)
+  local tsk = task_manager.get_task_manager().task_info["yan_stalker_sakharov_find_transmutation_artefacts_2_1"]
+  return tsk and tsk.stage == 0
+end
+function actor_find_transmutation_artefacts_task_2_2_is_complete(a, b)
+  local tsk = task_manager.get_task_manager().task_info["yan_stalker_sakharov_find_transmutation_artefacts_2_2"]
+  return tsk and tsk.stage == 0
+end
+function actor_dont_has_find_transmutation_artefacts_task_completed(a, b)
+  return not actor_has_find_transmutation_artefacts_task_completed(a, b)
+end

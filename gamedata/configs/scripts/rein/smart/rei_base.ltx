@@ -1,0 +1,41 @@
+[smart_terrain];rei_base
+squad_id = 10
+max_population = 14
+respawn_params = respawn@rei_base
+respawn_idle = 60000
+
+
+[respawn@rei_base]
+spawn_military@novice
+spawn_military@advanced
+spawn_military@sniper
+
+[spawn_military@novice]
+spawn_squads = army_sim_squad_novice
+spawn_num = 3
+
+[spawn_military@advanced]
+spawn_squads = army_sim_squad_novice, army_sim_squad_advanced
+spawn_num = 3
+
+[spawn_military@sniper]
+spawn_squads = army_sim_squad_sniper, army_sim_squad_advanced
+spawn_num = 3
+
+[exclusive]
+trader = rein\rei_base_smart_logic.ltx
+leader = rein\rei_base_smart_logic.ltx
+barmen = rein\rei_base_smart_logic.ltx
+marmok = rein\rei_base_smart_logic.ltx
+rei_base_camp_work_1 = rein\rei_base_smart_logic.ltx
+rei_base_camp_work_2 = rein\rei_base_smart_logic.ltx
+rei_base_camp_work_3 = rein\rei_base_smart_logic.ltx
+rei_base_bar_work_1 = rein\rei_base_smart_logic.ltx
+rei_base_bar_work_2 = rein\rei_base_smart_logic.ltx
+rei_base_bar_work_3 = rein\rei_base_smart_logic.ltx
+rei_base_bar_work_4 = rein\rei_base_smart_logic.ltx
+rei_base_bar_work_5 = rein\rei_base_smart_logic.ltx
+rei_base_bar_work_6 = rein\rei_base_smart_logic.ltx
+rei_base_bar_work_7 = rein\rei_base_smart_logic.ltx
+rei_base_bar_work_8 = rein\rei_base_smart_logic.ltx
+rei_base_bar_work_9 = rein\rei_base_smart_logic.ltx

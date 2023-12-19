@@ -1,0 +1,51 @@
+[logic@esc_2_12_stalker_medic]
+suitable = {=check_npc_name(esc_stalker_medic)} true
+prior = 200
+active = animpoint@sit
+level_spot = medic
+trade = misc\trade\trade_medic.ltx
+can_select_weapon = true
+dont_keep_items = true
+
+[animpoint@sit]
+cover_name = esc_smart_2_12_medic_cover
+avail_animations = animpoint_sit_normal
+; reach_movement = walk_noweap
+use_camp = false
+meet = meet
+combat_ignore_cond = {=actor_enemy =check_enemy_name(actor)} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+; reach_distance = 10
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+on_info = {+esc_medic_firstmeet_dialog_1 -esc_medic_firstmeet_dialog_2} walker@wait
+on_info2 = {!npc_in_zone(esc_smart_terrain_2_12_surge_hide_a2)} %=teleport_npc(esc_smart_terrain_2_12_surge_hide_2_look)%
+
+[walker@wait]
+path_walk = surge_hide_2_look
+path_look = surge_hide_2_walk
+on_info = {+esc_medic_firstmeet_dialog_2} animpoint@sit
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+combat_ignore_cond = {=actor_enemy =check_enemy_name(actor)} false, true
+combat_ignore_keep_when_attacked = false
+invulnerable = {!actor_enemy} true, false
+
+[meet]
+close_snd_hello = stalker_medic_greet
+close_snd_bye = stalker_medic_bye
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 7
+abuse           = false
+use = {-esc_medic_firstmeet_dialog_1 =dist_to_actor_le(4)} self, {+esc_medic_firstmeet_dialog_2 -esc_sidor_firstmeet_dialog_2} false, {=actor_enemy} false, true
+allow_break = false
+meet_on_talking = false
+meet_dialog = {-esc_medic_firstmeet_dialog_2} esc_medic_firstmeet_dialog_1, nil

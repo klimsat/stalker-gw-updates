@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="dialog_order_squads_actor_ask_1">
+		<text>Мне нужны бойцы в команду.</text>
+	</string>
+	<string id="dialog_order_squads_trader_answer_1">
+		<text>Можно организовать. С каким рангом тебе нужны бойцы?</text>
+	</string>
+	<string id="dialog_order_squads_actor_answer_zelen">
+		<text>Зеленые.</text>
+	</string>
+	<string id="dialog_order_squads_actor_answer_novice">
+		<text>Новички.</text>
+	</string>
+	<string id="dialog_order_squads_actor_answer_experienced">
+		<text>Опытные.</text>
+	</string>
+	<string id="dialog_order_squads_actor_answer_professional">
+		<text>Профи.</text>
+	</string>
+	<string id="dialog_order_squads_actor_answer_veteran">
+		<text>Ветераны.</text>
+	</string>
+	<string id="dialog_order_squads_actor_answer_master">
+		<text>Мастера.</text>
+	</string>
+	<string id="dialog_order_squads_actor_answer_legend">
+		<text>Легенды.</text>
+	</string>
+
+	<string id="dialog_order_squads_trader_ask_111">
+		<text>Сколько отрядов желаешь взять? В одном отряде будет 3 человека.</text>
+	</string>
+
+	<string id="dialog_order_squads_actor_answer_1111">
+		<text>Давай %s %s.</text>
+	</string>
+
+	<string id="dialog_order_squads_trader_ask_11111">
+		<text>С тебя %s рублей.</text>
+	</string>
+
+	<string id="dialog_order_squads_actor_answer_confirm">
+		<text>По рукам.</text>
+	</string>
+	<string id="dialog_order_squads_actor_answer_reject">
+		<text>В другой раз.</text>
+	</string>
+</string_table>

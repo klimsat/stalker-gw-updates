@@ -1,0 +1,235 @@
+[wpn_ksvk]:identity_immunities,weapon_probability,default_weapon_params
+GroupControlSection		= spawn_group
+$spawn                  = "weapons\ksvk"		; option for Level Editor
+$npc			 		= on				; option for Level Editor
+$prefetch 		 		= 8
+scheduled               = off              	; option for ALife Simulator
+cform                   = skeleton
+class                   = WP_SVD
+description				= "Винтовка КСВК разработана заводом имени Дегтярева (ЗИД) на основе более ранней винтовки СВН-98. Винтовка предназначена для поражения небронированной и легкобронированной техники и обороудования противника на дальностях до 1000 метров, а также живой силы противника на дальностях до 1500 метров. В Зоне в малых количествах, используетя в групперовке "Монолит"."
+
+ef_main_weapon_type		= 3
+ef_weapon_type			= 8
+
+default_to_ruck         = false
+sprint_allowed       	= true
+
+;-------------------------------------------------------------------------------
+cost					= 150000
+weapon_class			= sniper_rifle
+inv_weight				= 14.4
+
+upgrades                = up_gr_firstab_svd, up_gr_seconab_svd, up_gr_thirdab_svd, up_gr_fourtab_svd, up_gr_fourtcd_svd, up_gr_fourtef_svd
+installed_upgrades      =
+upgrade_scheme          = upgrade_scheme_svd
+
+;------TTX------------------------------------------------------------------------
+hit_power           	= 7.75, 7.75, 7.75, 7.75
+hit_impulse		 		= 750
+hit_type 				= fire_wound
+fire_distance           = 3000
+bullet_speed		 	= 830 ;830	;начальная скорость пули
+rpm                     = 40
+rpm_empty_click         = 215
+
+use_aim_bullet				= true		;Поддерживается ли первая суппер пуля
+time_to_aim					= 3.0
+
+hud                     = wpn_ksvk_hud
+
+misfire_probability        = 0.005 ;вероятность осечки при максимальном износе  !!!old - now not working
+;изношенность, при которой появляется шанс осечки
+misfire_start_condition		= 0.9
+;изношеность при которой шанс осечки становится константным
+misfire_end_condition		= 0.1
+;шанс осечки при изношености больше чем misfireStartCondition
+misfire_start_prob	     	= 0.00044
+;шанс осечки при изношености больше чем misfireEndCondition
+misfire_end_prob	     	= 0.02
+;увеличение изношености при одиночном выстреле
+condition_shot_dec      	= 0.00032
+;увеличение изношености при выстреле очередью
+condition_queue_shot_dec	= 0.00024
+
+ammo_elapsed			= 0
+
+ammo_mag_size			= 5
+fire_modes		  = 1;, -1
+ammo_class				= ammo_12.7x55
+hand_dependence         = 1
+single_handed           = 0
+
+;-------------------------------------------------------------------------------
+;базовая дисперсия
+fire_dispersion_base	= 0.005	;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+control_inertion_factor	= 2.2f
+crosshair_inertion      = 9
+
+;отдача
+cam_return				= 0
+cam_relax_speed         = 0	;скорость возврата в исходное положение
+cam_relax_speed_ai      = 360	;скорость возврата в исходное положение
+cam_dispersion          = 2.0	;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc		= 0.25	;увеличениe cam_dispersion с каждым выстрелом
+cam_dispersion_frac		= 1.0	;ствол будет подыматься на cam_dispersion*cam_dispersion_frac +- cam_dispersion*(1-cam_dispersion_frac)
+cam_max_angle			= 15.0	;максимальный угол отдачи
+cam_max_angle_horz		= 3.5	;(degree) maximum shot horizontal degree
+cam_step_angle_horz		= 2.25	;(degree) size of step camera moved in horizontal position while shooting
+
+PDM_disp_base 			= 1.0
+PDM_disp_vel_factor 	= 1.2
+PDM_disp_accel_factor 	= 1.4
+PDM_disp_crouch	 		= 1.2
+PDM_disp_crouch_no_acc 	= 0.8
+
+zoom_cam_relax_speed        = 0.75    ; scope & ironsight
+zoom_cam_relax_speed_ai     = 120.75
+zoom_cam_dispersion         = 2.0
+zoom_cam_dispersion_inc     = 0.1
+zoom_cam_dispersion_frac    = 1.0
+zoom_cam_max_angle          = 15.0
+zoom_cam_max_angle_horz     = 3.5
+zoom_cam_step_angle_horz    = 0.95
+
+fire_dispersion_condition_factor = 10	;увеличение дисперсии в процентах при максимальном износе
+
+;---DOF-------------------------------------------------------------------------
+;zoom_dof             = -1000, 1.0, 1000
+reload_dof				= 0.0, 0.5, 5, 2.2
+
+;-----------------------------------------------------------------------------
+holder_range_modifier	= 2.0               ; во сколько раз увеличивается eye_range
+holder_fov_modifier		= 0.07             ; во сколько раз увеличивается eye_fov
+
+min_radius              = 50
+max_radius              = 200
+
+;-------------------------------------------------------------------------------
+slot                    = 2                ; // secondary
+animation_slot          = 2                ; type of the animation that will be used
+
+inv_name				= "КСВК 12.7"
+inv_name_short			= "КСВК 12.7"
+
+inv_grid_width     = 6
+inv_grid_height    = 2
+inv_grid_x         = 45
+inv_grid_y         = 2
+
+upgr_icon_x			= 1698
+upgr_icon_y			= 935
+upgr_icon_width		= 305
+upgr_icon_height   	= 82
+
+kill_msg_x				= 0
+kill_msg_y				= 0
+kill_msg_width			= 98
+kill_msg_height			= 23
+
+;-------------------------------------------------------------------------------
+position                = -0.026, 0.0, -0.02
+orientation             = 0, 0, 0
+
+fire_point              = 0.0, 0.128, 0.522
+fire_point2             = 0.0, 0.128, 0.522
+
+flame_particles         = 
+smoke_particles			= weapons\generic_shoot_00
+grenade_flame_particles = weapons\generic_weapon01
+
+shell_point				= 0.0, 0.194, 0.04
+shell_dir					= 0.0, 0.0, 0.4
+shell_particles				= weapons\9x39
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+;под мишкой
+strap_position          = -0.26,-0.11,0.25         ; position (offset) and orientation of the weapon when it is strapped
+strap_orientation       = -15,-9,110            ; (3rd person view in degrees)
+strap_bone0					= bip01_spine2
+strap_bone1					= bip01_spine1
+
+startup_ammo            = 10
+visual                  = dynamics\weapons\wpn_ksvk\wpn_ksvk.ogf
+
+light_disabled				= false
+light_color		 			= 0.6,0.5,0.3
+light_range		 			= 4.0
+light_var_color		 	= 0.05
+light_var_range		 	= 0.5
+light_time 		 			= 0.2
+
+ph_mass			 			= 3
+
+;addons
+scope_status				= 1; 2 ;1
+silencer_status				= 0
+grenade_launcher_status		= 0
+
+zoom_enabled				= true
+zoom_rotate_time			= 0.25
+scope_zoom_factor			= 10		;ПСО-1 4X
+
+scope_texture				= wpn_crosshair
+scope_name 					= wpn_addon_scope_detector
+scope_x 						= 60
+scope_y 						= -2
+
+silencer_smoke_particles 	= weapons\generic_shoot_00
+snd_silncer_shot				= weapons\n_pb_shot
+silencer_light_color			= 0.6,0.5,0.3
+silencer_light_range			= 0.01
+silencer_light_var_color	= 0.05
+silencer_light_var_range	= 0.5
+silencer_light_time 			= 0.2
+
+;звуки
+snd_draw                = weapons\svu_draw
+snd_holster				= weapons\generic_holster
+snd_shoot               = weapons\sniper\ksvk_shot
+snd_empty				= weapons\gen_empty, 0.5
+snd_reload              = weapons\sniper\ksvk_reload
+snd_close				= weapons\generic_close
+
+[wpn_ksvk_hud]:hud_base
+zoom_hide_crosshair		= true
+attach_place_idx			= 0
+item_visual             = dynamics\weapons\wpn_ksvk\wpn_ksvk_hud
+
+
+hands_position				= -0.0415000,-0.190000,0.265000
+hands_orientation			= -0.580000,0.760001,0.599999
+hands_position_16x9			= -0.0415000,-0.190000,0.265000
+hands_orientation_16x9		= -0.580000,0.760001,0.599999
+
+item_position				= 0.0,0.0,0.0
+item_orientation			= 0.0,0.0,0.0
+
+shell_point					= 0.025,0.055,0.221
+shell_dir               	= 0.0, 1.0, 0.0
+shell_bone					= wpn_body
+
+fire_point              = 0.0,0.043,0.795
+fire_bone               = wpn_body
+
+aim_hud_offset_pos				= -0.12,0.085,0.12
+aim_hud_offset_rot				= 0.05,0.0395,0.015
+
+aim_hud_offset_pos_16x9				= -0.143500,0.024000,-0.120500
+aim_hud_offset_rot_16x9				= -0.005000,-0.005000,0.000000
+
+gl_hud_offset_pos		= 0,0,0
+gl_hud_offset_rot		= 0,0,0
+
+lean_hud_offset_pos		= 0,0,0
+lean_hud_offset_rot		= 0,0,0
+
+anm_show					= lancew_vssk_draw
+anm_hide             		= lancew_vssk_holster
+anm_shots					= lancew_m95_shoot, shoot
+anm_reload					= lancew_m95_reload, reload
+anm_bore					= lancew_m95_no_reload
+anm_idle             		= lancew_vssk_idle
+anm_idle_aim				= lancew_vssk_idle_aim
+anm_idle_moving 			= lancew_vssk_moving
+anm_idle_sprint				= lancew_vssk_sprint
+

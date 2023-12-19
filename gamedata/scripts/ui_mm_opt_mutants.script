@@ -1,0 +1,341 @@
+class "opt_mutants"(CUIWindow)
+
+function opt_mutants:__init()
+  super()
+end
+
+function opt_mutants:__finalize()
+end
+
+function opt_mutants:InitControls(x, y, xml, handler)
+  self:SetWndPos(vector2():set(x, y))
+  self:SetWndSize(vector2():set(738, 416))
+  self:SetAutoDelete(true)
+
+  self.scroll_v = xml:InitScrollView("tab_mutants:scroll_v", self)
+  handler.mutants_scroll_v = self.scroll_v
+
+  local gini = game_ini()
+  local levels = alun_utils.collect_section(gini, "level_maps_single")
+  local monsters_squads = ini_file_ex("ui_mm_opt_mutants.ltx")
+  local monster_sections = {}
+
+  local set_check = function(handler, ctrl)
+    local is_checked = ctrl:GetCheck()
+
+    for i = 1, #levels do
+      local level_name = levels[i]
+      local check_id = strformat("spawn_mutants_on_%s", level_name)
+      handler[check_id]:Enable(is_checked)
+    end
+  end
+
+  local function itr(section)
+    if string.match(section, "monster_sim_squad_") or string.match(section, "simulation_") then
+      table.insert(monster_sections, section)
+    end
+  end
+  monsters_squads.ini:section_for_each(itr)
+
+  table.sort(
+    monster_sections,
+    function(a, b)
+      return a > b
+    end
+  )
+
+  local g_list_1 = {
+    ws_self = {offset_y = 20, x = 100},
+    self = {offset_y = 20, x = 100},
+    ws_label = {x = 100},
+    label = {x = 100},
+    ws_container = {height = 50},
+    container = {height = 50}
+  }
+  local g_list_2 = {
+    ws_self = {offset_y = 20, x = 340},
+    self = {offset_y = 20, x = 340},
+    ws_label = {x = 340},
+    label = {x = 340},
+    ws_container = {height = 50},
+    container = {height = 50}
+  }
+  local g_listbox_1 = {
+    ws_self = {offset_y = 30, x = 20},
+    self = {offset_y = 30, x = 20},
+    ws_label = {x = 5},
+    label = {x = 5},
+    ws_container = {height = 180},
+    container = {height = 180}
+  }
+  local g_listbox_2 = {
+    ws_self = {offset_y = 30, x = 315},
+    self = {offset_y = 30, x = 315},
+    ws_label = {width = 180, x = 315},
+    label = {width = 180, x = 315}
+  }
+  local g_listbox_3 = {
+    ws_self = {offset_y = 30, x = 505},
+    self = {offset_y = 30, x = 505},
+    ws_label = {width = 180, x = 425},
+    label = {width = 180, x = 425}
+  }
+  local g_check_1 = {
+    ws_self = {x = 250},
+    self = {x = 250},
+    ws_label = {x = 75},
+    label = {x = 75}
+  }
+  local g_check_2 = {
+    ws_self = {x = 490},
+    self = {x = 490},
+    ws_label = {x = 320},
+    label = {x = 320}
+  }
+  local g_button_1 = {
+    ws_self = {y = 60, x = 205},
+    self = {y = 60, x = 205}
+  }
+  local g_button_2 = {
+    ws_self = {y = 120, x = 205},
+    self = {y = 120, x = 205}
+  }
+
+  handler.options.mutants = {
+    {
+      geometry = {ws_self = {height = 10}, self = {height = 10}},
+      typ = "empty"
+    },
+    {
+      id = "mutants_squad_count",
+      default = 3,
+      geometry = g_list_1,
+      label_tag = "cap_check_2_axr",
+      typ = "list",
+      list = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
+    },
+    {
+      {
+        id = "spawn_mutants",
+        default = true,
+        geometry = g_check_1,
+        typ = "check",
+        on_set_values = function(handler, optMgr, t)
+          set_check(handler, t.ctrl)
+        end,
+        on_check = function(handler, ctrl, t)
+          set_check(handler, ctrl)
+        end
+      },
+      {
+        id = "global_mutants_settings",
+        default = true,
+        geometry = g_check_2,
+        typ = "check"
+      }
+    }
+  }
+
+  for i = 1, #levels do
+    local level_name = levels[i]
+    local list = sim_tables.mutants_tier_by_lvl[level_name] or {}
+
+    local line = {
+      show_label = false,
+      typ = "line"
+    }
+    local level_label = {
+      label_text = GetString(level_name),
+      geometry = {ws_label = {x = 0, width = 662}, label = {x = 0, width = 662}},
+      typ = "label"
+    }
+    local npc_in_squad_label = {
+      id = strformat("mutants_npc_in_squad_%s", level_name),
+      label_text = "",
+      save = true,
+      geometry = {ws_label = {x = 505}, label = {x = 505}},
+      typ = "label"
+    }
+    local mutants_squad_count = {
+      id = strformat("mutants_squad_count_on_%s", level_name),
+      default = 3,
+      geometry = {
+        ws_self = {offset_y = 20, x = 180},
+        self = {offset_y = 20, x = 180},
+        ws_label = {x = 120},
+        label = {x = 120}
+      },
+      label_tag = "cap_check_2_axr",
+      label_id = "mutants_squad_count",
+      tag = "list_4_axr",
+      typ = "list",
+      list = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
+    }
+    local spawn_on_level = {
+      id = strformat("spawn_mutants_on_%s", level_name),
+      label_text = GetString("ui_mm_check_spawn_mutants_on_level"),
+      hint_id = "check_spawn_mutants_on_level",
+      save = true,
+      default = true,
+      geometry = {
+        ws_self = {y = 10, x = 470},
+        self = {y = 10, x = 470},
+        ws_label = {y = 12, x = 300},
+        label = {y = 12, x = 300},
+        ws_container = {height = 40},
+        container = {height = 40}
+      },
+      typ = "check"
+    }
+    local monster_level_list = {
+      id = strformat("mutants_level_%s_list", level_name),
+      label_text = GetString("ui_mm_mutants_level_list"),
+      hint_id = "mutants_level_list",
+      save = true,
+      list_names = true,
+      default = list,
+      geometry = g_listbox_1,
+      typ = "listbox",
+      list = list,
+      on_db_click = function(handler, ctrl, t)
+        local item = ctrl:GetSelectedItem()
+
+        if not item then
+          return
+        end
+
+        ctrl:RemoveItem(item)
+      end
+    }
+    local monster_sections_list = {
+      id = strformat("mutants_sections_%s_list", level_name),
+      label_text = GetString("ui_mm_mutants_sections_list"),
+      hint_id = "mutants_sections_list",
+      save = true,
+      not_option = true,
+      list_names = true,
+      default = monster_sections,
+      geometry = g_listbox_2,
+      typ = "listbox",
+      list = monster_sections,
+      on_click = function(handler, ctrl, t)
+        local item = ctrl:GetSelectedItem()
+
+        if not item then
+          return
+        end
+
+        local section = item:GetTextItem():GetText()
+        local listbox_id = strformat("mutants_npcs_%s_list", level_name)
+        local label_id = strformat("mutants_npc_in_squad_%s", level_name)
+
+        local exists = monsters_squads.ini:section_exist(section)
+
+        if exists then
+          handler[listbox_id]:RemoveAll()
+
+          local npc_random_exists = monsters_squads.ini:line_exist(section, "npc_random")
+          if npc_random_exists then
+            local npc_random_list = monsters_squads.ini:r_string_ex(section, "npc_random")
+            local npc_random = alun_utils.split(npc_random_list, ", ")
+
+            for i = 1, #npc_random do
+              handler[listbox_id]:AddTextItem(npc_random[i])
+            end
+          end
+
+          local npc_in_squad_exists = monsters_squads.ini:line_exist(section, "npc_in_squad")
+          if npc_in_squad_exists then
+            local npc_in_squad_list = monsters_squads.ini:r_string_ex(section, "npc_in_squad")
+            local npc_in_squad = alun_utils.split(npc_in_squad_list, ", ")
+
+            if npc_in_squad[2] == nil or (npc_in_squad[1] == npc_in_squad[2]) then
+              local text = GetString("ui_mm_mutants_npc_in_squad_1")
+              handler[label_id]:TextControl():SetText(strformat(text, npc_in_squad[1]))
+            else
+              local text = GetString("ui_mm_mutants_npc_in_squad")
+              handler[label_id]:TextControl():SetText(strformat(text, npc_in_squad[1], npc_in_squad[2]))
+            end
+          end
+        end
+      end,
+      on_db_click = function(handler, ctrl, t)
+        local text = ctrl:GetSelectedItem():GetTextItem():GetText()
+
+        local listbox_id = strformat("mutants_level_%s_list", level_name)
+
+        handler[listbox_id]:AddTextItem(text)
+      end
+    }
+    local monster_npcs_list = {
+      id = strformat("mutants_npcs_%s_list", level_name),
+      label_text = GetString("ui_mm_mutants_npcs_list"),
+      hint_id = "mutants_npcs_list",
+      save = true,
+      not_option = true,
+      list_names = true,
+      default = {},
+      geometry = g_listbox_3,
+      tag = "listbox_axr_2",
+      typ = "listbox",
+      list = {}
+    }
+    local btn_add = {
+      id = strformat("mutants_add_btn_%s", level_name),
+      tag = "mutants_add_btn",
+      hint_id = "mutants_add_btn",
+      disable_hint = true,
+      not_option = true,
+      geometry = g_button_1,
+      typ = "button",
+      on_click = function(handler, ctrl, t)
+        local listbox_1_id = strformat("mutants_level_%s_list", level_name)
+        local listbox_2_id = strformat("mutants_sections_%s_list", level_name)
+        local item = handler[listbox_2_id]:GetSelectedItem()
+
+        if not item then
+          return
+        end
+
+        local text = item:GetTextItem():GetText()
+
+        handler[listbox_1_id]:AddTextItem(text)
+      end
+    }
+    local btn_remove = {
+      id = strformat("mutants_remove_btn_%s", level_name),
+      tag = "mutants_remove_btn",
+      hint_id = "mutants_remove_btn",
+      disable_hint = true,
+      not_option = true,
+      geometry = g_button_2,
+      typ = "button",
+      on_click = function(handler, ctrl, t)
+        local listbox_id = strformat("mutants_level_%s_list", level_name)
+        local item = handler[listbox_id]:GetSelectedItem()
+
+        if not item then
+          return
+        end
+
+        handler[listbox_id]:RemoveItem(item)
+      end
+    }
+
+    table.insert(handler.options.mutants, line)
+    table.insert(handler.options.mutants, level_label)
+    table.insert(
+      handler.options.mutants,
+      {monster_level_list, btn_add, btn_remove, monster_sections_list, monster_npcs_list}
+    )
+    table.insert(handler.options.mutants, {mutants_squad_count, spawn_on_level, npc_in_squad_label})
+  end
+
+  table.insert(
+    handler.options.mutants,
+    {
+      geometry = {ws_self = {height = 10}, self = {height = 10}},
+      typ = "empty"
+    }
+  )
+end

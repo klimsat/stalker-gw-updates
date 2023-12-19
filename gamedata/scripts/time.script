@@ -1,0 +1,35 @@
+local id = 0
+local timeout_table = {}
+
+function setTimeout(func, timeout)
+  local tg = time_global()
+  local interval = tg + timeout
+
+  table.insert(
+    timeout_table,
+    {
+      id = id,
+      func = func,
+      interval = interval
+    }
+  )
+
+  id = id + 1
+end
+
+local function actor_on_update()
+  local tg = time_global()
+
+  for i = 1, #timeout_table do
+    local item = timeout_table[i]
+
+    if tg >= item.interval then
+      item.func()
+      table.remove(timeout_table, i)
+    end
+  end
+end
+
+function on_game_start()
+  RegisterScriptCallback("actor_on_update", actor_on_update)
+end

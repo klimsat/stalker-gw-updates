@@ -1,0 +1,1649 @@
+<specific_character id="sim_default_angel_leader_cerber" team_default = "1">
+    <name>st_a_leader_name</name>
+    <icon>ui_inGame2_angel_exoseva</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>‹идер Џадших Ђнгелов</bio>
+    <class>sim_default_angel_leader_cerber</class>
+    <community>angel</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>28000</rank>
+    <reputation>2000</reputation>
+    <visual>actors\stalker_angel\angel_leader</visual>
+    <money min="32000" max="101750" infinitive="0"/>
+    <supplies>
+    [spawn] \n
+    wpn_m249_nimble = 1, silencer = 1 \n
+    ammo_6.8x43_fmj = 2 \n
+    wpn_desert_eagle_357 \n
+    ammo_357_fmj = 2 \n
+    grenade_f1 = 20 \n
+    medkit = 8 \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs_leaders.xml"
+    <actor_dialog>dialog_leader_angel</actor_dialog>
+</specific_character>
+	
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+
+<specific_character id="angel_default_zelen_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_novice</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_zelen_0</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>1500</rank>
+    <reputation>100</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+<specific_character id="angel_default_zelen_0_0_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_novice</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_zelen_0</class>
+    <community>angel</community> 
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>1500</rank>
+    <reputation>100</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_1a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_zelen_0_0_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_novice_gas</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_zelen_0</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>1500</rank>
+    <reputation>100</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_1a_gas</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_zelen_0_0_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_merc</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_zelen_0</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>1500</rank>
+    <reputation>100</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_light</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_zelen_0_0_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_merc</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_zelen_0</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>1500</rank>
+    <reputation>100</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_light_a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_zelen_0_0_5" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_csky</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_zelen_0</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>1500</rank>
+    <reputation>100</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_csky</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+	
+	
+	
+
+<specific_character id="angel_default_0_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_0</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>3000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_0_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_1_mask</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_0</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>3000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+<specific_character id="angel_default_0_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_0</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>3000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+	<specific_character id="angel_default_0_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_2_mask</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_0</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>3000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2a_mask</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+	
+<specific_character id="angel_default_0_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_merc</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_0</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>3000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_light_a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+	
+<specific_character id="angel_default_0_5" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_csky</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_0</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>3000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_csky</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+	
+	
+
+<specific_character id="angel_default_1_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_csky</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_1</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>5000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_csky</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+<specific_character id="angel_default_1_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_1</class>
+    <community>angel</community> 
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>5000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2b</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+<specific_character id="angel_default_1_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_1</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>5000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2c</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+	
+<specific_character id="angel_default_1_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_seva_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_1</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>5000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_seva_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+	
+<specific_character id="angel_default_1_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_soldier_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_1</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>3000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_soldier</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+	
+<specific_character id="angel_default_1_5" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_proto</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_1</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>5000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_proto_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_1_6" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_mercgas</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_1</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2_gas</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_1_7" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_hood</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_1</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2_hood</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_1_8" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_gp5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_1</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2_gp5_light</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_1_9" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_helm_battle</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_1</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2_helm_battle_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+
+
+
+
+
+<specific_character id="angel_default_2_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_2</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>7000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2d</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+<specific_character id="angel_default_2_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_2</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>7000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2e</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+<specific_character id="angel_default_2_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_soldier_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_2</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>7000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_soldier</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_2_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_seva_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_2</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>7000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_seva_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_2_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_seva_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_2</class>
+    <community>angel</community> 
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>7000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_seva_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_2_5" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_proto</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_2</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_proto_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+	
+<specific_character id="angel_default_2_6" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_hood</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_2</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2_hood</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_2_7" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_helm_battle</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_2</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2_helm_battle</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_2_8" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_gp5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_2</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2_gp5</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+<specific_character id="angel_default_2_9" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_hood</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_2</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2_hood_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_2_10" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_gp5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_2</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2_gp5_light</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_2_11" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_gp5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_2</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2_gp5_light_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_2_12" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_mercgas</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_2</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2_gas</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_2_13" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_mercgas</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_2</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2_gas_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_2_14" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_skat_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_2</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_skat_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_2_15" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_hood</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_2</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2_hood_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+	
+	
+	
+	
+	
+	
+
+<specific_character id="angel_default_3_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_seva_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_3</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_seva_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+<specific_character id="angel_default_3_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_seva_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_3</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_seva_5</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+	<specific_character id="angel_default_3_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_soldier_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_3</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_soldier</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+<specific_character id="angel_default_3_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_skat_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_3</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_skat_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_3_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_skat_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_3</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_skat_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+<specific_character id="angel_default_3_5" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_proto</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_3</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_proto_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_3_6" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_proto</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_3</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_proto_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+<specific_character id="angel_default_3_7" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_skattb</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_3</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_skat_tb</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_3_8" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_sevatb</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_3</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_seva_tb</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_3_9" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_tb</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_3</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_3_10" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_helm_battle</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_3</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2_helm_battle</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_3_11" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_gp5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_3</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2_gp5</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_3_12" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_combat_seva</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_3</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_seva_combat</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_3_13" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_helm_battle</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_3</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2_helm_battle_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_3_14" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_gp5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_3</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2_gp5_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_3_15" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_mercgas</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_3</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2_gas_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+	
+<specific_character id="angel_default_3_16" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_tb</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_3</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_3_m50</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_3_17" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_helm_battle</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_3</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_2_helm_battle_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+	
+	
+
+
+
+
+
+<specific_character id="angel_default_4_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_tb</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_4</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>11000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+<specific_character id="angel_default_4_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_tb</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_4</class>
+    <community>angel</community> 
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>11000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_3a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_4_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_skat_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_4</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_skat_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+	
+<specific_character id="angel_default_4_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_seva_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_4</class>
+    <community>angel</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_seva_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_4_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_exo</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_4</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>15000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_4_5" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_proto_skat</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_4</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>15000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_proto_skat</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_4_6" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_sevatb</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_4</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_seva_tb</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_4_7" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_combat_seva</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_4</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_seva_combat</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_4_8" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_skattb</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_4</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_skat_tb</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+	
+<specific_character id="angel_default_4_9" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_exo_merc</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_4</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>9000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_3_m50</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_4_10" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_exo</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_4</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>15000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_4a_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+
+
+
+
+
+<specific_character id="angel_default_5_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_exo</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_5</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>15000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+<specific_character id="angel_default_5_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_exo</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_5</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>15000</rank>
+    <reputation>-3000</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_4a</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+	<specific_character id="angel_default_5_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_exoseva</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_5</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>15000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_exoseva</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+	
+<specific_character id="angel_default_5_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_sevatb</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_5</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>15000</rank>
+    <reputation>-3000</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_seva_tb</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_5_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_proto_skat</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_5</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>15000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_proto_skat</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_5_5" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_exo_merc</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_5</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>15000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_4_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_5_6" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_exo_merc</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_5</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>15000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_4a_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_5_7" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_exo</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_5</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>15000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_4_alt_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_5_8" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_exo</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_5</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>15000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_4_alt_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_5_9" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_combat_seva</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_5</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>15000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_seva_skat</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_5_10" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_exo_merc</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_5</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>15000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_4_dy_mask_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	
+<specific_character id="angel_default_5_11" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_angel_exo_merc</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_angel_5</class>
+    <community>angel</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\angel\</snd_config> 
+    <rank>15000</rank>
+    <reputation>500</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_angel\stalker_angel_4_dy_mask_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+	

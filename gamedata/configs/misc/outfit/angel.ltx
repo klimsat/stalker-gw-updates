@@ -1,0 +1,682 @@
+;---------------------------------------------------------------------------------------------
+;		Лёгкий бронекостюм ПА
+;---------------------------------------------------------------------------------------------
+[angel_light_outfit]:outfit_base
+$spawn                                   = "outfit\angel_light_outfit"
+visual          						 = dynamics\outfit\angel_light_outfit
+actor_visual                             = actors\stalker_angel\stalker_angel_light.ogf
+npc_visual                               = actors\stalker_angel\stalker_angel_light.ogf
+player_hud_section                       = actor_hud_angel_light_outfit
+
+ef_equipment_type                        = 3
+
+
+inv_name                                 = angel_light_outfit_name
+inv_name_short                           = angel_light_outfit_name
+description                              = angel_light_outfit_description
+inv_weight                               = 5
+
+inv_grid_width     = 2
+inv_grid_height    = 3
+inv_grid_x         = 44
+inv_grid_y         = 52
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.75
+
+upgr_icon_x                              = 2185
+upgr_icon_y                              = 1707
+upgr_icon_width                          = 314
+upgr_icon_height                         = 139
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 10000
+
+hit_fraction_actor                       = 0.8
+
+additional_inventory_weight   = 2
+additional_inventory_weight2  = 2
+
+artefact_count                = 1
+
+immunities_sect                          = sect_angel_light_outfit_immunities
+
+; LOW-MEDIUM RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1925
+explosion_protection                     = 0.1925
+wound_protection                         = 0.1925
+
+bones_koeff_protection                   = actor_armor_suit
+
+upgrades                                 = up_gr_firstab_merc_outfit, up_gr_seconab_merc_outfit, up_gr_thirdab_merc_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_svoboda_heavy_outfit
+
+character_portrait							 = ui_inGame2_angel_merc
+
+[sect_angel_light_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_angel_light_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.005
+
+
+;---------------------------------------------------------------------------------------------
+;		Комбинезон "Гром"
+;---------------------------------------------------------------------------------------------
+[angel_outfit]:outfit_base
+$spawn                                   = "outfit\angel_outfit"
+visual          						 = dynamics\outfit\angel_outfit
+actor_visual                             = actors\stalker_angel\stalker_angel_2.ogf
+npc_visual                               = actors\stalker_angel\stalker_angel_2.ogf
+player_hud_section                       = actor_hud_angel_outfit
+
+ef_equipment_type                        = 3
+
+
+inv_name                                 = angel_outfit_name
+inv_name_short                           = angel_outfit_name
+description                              = angel_outfit_description
+inv_weight                               = 7.5
+
+inv_grid_width     = 2
+inv_grid_height    = 3
+inv_grid_x         = 46
+inv_grid_y         = 52
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.75
+
+upgr_icon_x                              = 1243
+upgr_icon_y                              = 1865
+upgr_icon_width                          = 309
+upgr_icon_height                         = 130
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 15000
+
+hit_fraction_actor                       = 0.8
+
+additional_inventory_weight   = 5
+additional_inventory_weight2  = 5
+
+artefact_count                = 1
+
+immunities_sect                          = sect_angel_outfit_immunities
+
+; LOW RESISTANCE
+burn_protection                          = 0.045
+shock_protection                         = 0.2
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.045
+telepatic_protection                     = 0.0
+strike_protection                        = 0.2
+explosion_protection                     = 0.2
+wound_protection                         = 0.2
+
+bones_koeff_protection                   = actor_armor_suit
+
+upgrades                                 = up_gr_firstab_stalker_outfit, up_gr_seconab_stalker_outfit, up_gr_thirdab_stalker_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_stalker_outfit
+character_portrait							 = ui_inGame2_angel_1
+
+[sect_angel_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_angel_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.005
+
+;---------------------------------------------------------------------------------------------
+;		Бронекостюм "Дух"
+;---------------------------------------------------------------------------------------------
+[angel_spec_outfit]:outfit_base
+$spawn                                   = "outfit\angel_spec_outfit"
+visual          						 = dynamics\outfit\angel_spec_outfit
+actor_visual                             = actors\stalker_angel\stalker_angel_soldier.ogf
+npc_visual                               = actors\stalker_angel\stalker_angel_soldier.ogf
+player_hud_section                       = actor_hud_angel_spec_outfit
+
+ef_equipment_type                        = 3
+
+
+inv_name                                 = angel_spec_outfit_name
+inv_name_short                           = angel_spec_outfit_name
+description                              = angel_spec_outfit_description
+inv_weight                               = 12
+
+inv_grid_width     = 2
+inv_grid_height    = 3
+inv_grid_x         = 56
+inv_grid_y         = 52
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.75
+
+upgr_icon_x                              = 2184
+upgr_icon_y                              = 1862
+upgr_icon_width                          = 318
+upgr_icon_height                         = 147
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 15000
+
+hit_fraction_actor                       = 0.8
+
+additional_inventory_weight   = 5
+additional_inventory_weight2  = 5
+
+artefact_count                = 1
+
+immunities_sect                          = sect_angel_spec_outfit_immunities
+
+; LOW RESISTANCE
+burn_protection                          = 0.04
+shock_protection                         = 0.14
+radiation_protection                     = 0.0055
+chemical_burn_protection                 = 0.04
+telepatic_protection                     = 0.0
+strike_protection                        = 0.24
+explosion_protection                     = 0.24
+wound_protection                         = 0.24
+
+bones_koeff_protection                   = actor_armor_berill
+
+character_portrait							 = ui_inGame2_angel_soldier_1
+
+[sect_angel_spec_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_angel_spec_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.005
+
+;---------------------------------------------------------------------------------------------
+;		Бронекостюм с ЗСД "Хранитель"
+;---------------------------------------------------------------------------------------------
+[angel_seva_outfit]:outfit_base
+$spawn                                   = "outfit\angel_seva_outfit"
+visual                                   = dynamics\outfit\angel_seva_outfit
+actor_visual                             = actors\stalker_angel\stalker_angel_seva_2.ogf
+npc_visual                               = actors\stalker_angel\stalker_angel_seva_2.ogf
+player_hud_section                       = actor_hud_angel_seva_outfit
+
+ef_equipment_type                        = 3
+
+
+inv_name                                 = angel_seva_outfit_name
+inv_name_short                           = angel_seva_outfit_name
+description                              = angel_seva_outfit_description
+inv_weight                               = 10.0
+
+inv_grid_width     = 2
+inv_grid_height    = 3
+inv_grid_x         = 48
+inv_grid_y         = 52
+
+
+control_inertion_factor                  = 1.5
+power_loss                               = 0.8
+
+upgr_icon_x                              = 1871
+upgr_icon_y                              = 1840
+upgr_icon_width                          = 303
+upgr_icon_height                         = 170
+
+artefact_count                = 2
+
+hit_fraction_actor                       = 0.75
+
+additional_inventory_weight   = 10
+additional_inventory_weight2  = 10
+
+cost                                     = 50000
+
+helmet_avaliable		                 = false
+
+nightvision_sect                         = effector_nightvision_2
+
+immunities_sect                          = sect_angel_seva_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.1
+shock_protection                         = 0.4
+radiation_protection                     = 0.02
+chemical_burn_protection                 = 0.15
+telepatic_protection                     = 0.034
+strike_protection                        = 0.1925
+explosion_protection                     = 0.1925
+wound_protection                         = 0.1925
+
+bones_koeff_protection                   = actor_armor_seva
+
+upgrades                                 = up_gr_firstab_scientific_outfit, up_gr_seconab_scientific_outfit, up_gr_thirdab_scientific_outfit, up_gr_fourtab_scientific_outfit, up_gr_fifthab_scientific_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_scientific_outfit
+character_portrait							 = ui_inGame2_angel_seva_1
+
+[sect_angel_seva_outfit_immunities]
+burn_immunity                            = 0.037	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.037
+wound_immunity                           = 0.035
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.03
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_angel_seva_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.005
+
+;---------------------------------------------------------------------------------------------
+;		Тяжёлый бронекостюм "Архангел"
+;---------------------------------------------------------------------------------------------
+[angel_tb_outfit]:outfit_base
+$spawn                                   = "outfit\angel_tb_outfit"
+visual                                   = dynamics\outfit\angel_tb_outfit
+actor_visual                             = actors\stalker_angel\stalker_angel_3.ogf
+npc_visual                               = actors\stalker_angel\stalker_angel_3.ogf
+player_hud_section                       = actor_hud_angel_tb_outfit
+
+ef_equipment_type                        = 3
+
+
+inv_name                                 = angel_tb_outfit_name
+inv_name_short                           = angel_tb_outfit_name
+description                              = angel_tb_outfit_description
+inv_weight                               = 17.5
+
+inv_grid_width     = 2
+inv_grid_height    = 3
+inv_grid_x         = 50
+inv_grid_y         = 52
+
+upgr_icon_x							= 1560
+upgr_icon_y							= 1831
+upgr_icon_width						= 302
+upgr_icon_height					= 171
+
+cost                                     = 75000
+
+helmet_avaliable		                 = false
+
+control_inertion_factor                  = 1.5
+power_loss                               = 0.8
+
+artefact_count                = 1
+
+hit_fraction_actor                       = 0.75
+
+immunities_sect                          = sect_angel_tb_outfit_immunities
+
+nightvision_sect                         = effector_nightvision_2
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.075
+shock_protection                         = 0.35
+radiation_protection                     = 0.008
+chemical_burn_protection                 = 0.065
+telepatic_protection                     = 0.035
+strike_protection                        = 0.35
+explosion_protection                     = 0.30
+wound_protection                         = 0.35
+
+bones_koeff_protection                   = actor_armor_exo
+
+upgrades                                 = up_gr_firstab_rad_outfit, up_gr_seconab_rad_outfit, up_gr_thirdab_rad_outfit, up_gr_fourtab_rad_outfit, up_gr_fifthab_rad_outfit
+character_portrait							 = ui_inGame2_angel_tb
+
+[sect_angel_tb_outfit_immunities]
+burn_immunity				= 0.04
+strike_immunity				= 0.0
+shock_immunity				= 0.04
+wound_immunity				= 0.04
+radiation_immunity			= 0.0
+telepatic_immunity			= 0.0
+chemical_burn_immunity		= 0.04
+explosion_immunity			= 0.04
+fire_wound_immunity			= 0.03
+
+[sect_angel_tb_outfit_immunities_add]
+burn_immunity                            = -0.015	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.015
+wound_immunity                           = -0.015
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.015
+explosion_immunity                       = -0.015
+fire_wound_immunity                      = -0.005
+
+;--------------------------------------------------------------------------------------------
+;		Скат-9М "MPAK"
+;---------------------------------------------------------------------------------------------
+[angel_skat_outfit]:outfit_base
+$spawn                                   = "outfit\angel_skat_outfit"
+visual                                   = dynamics\outfit\angel_skat_outfit
+actor_visual                             = actors\stalker_angel\stalker_angel_skat_1.ogf
+npc_visual                               = actors\stalker_angel\stalker_angel_skat_1.ogf
+player_hud_section                       = actor_hud_angel_skat_outfit
+
+ef_equipment_type                        = 3
+
+
+inv_name                                 = angel_skat_outfit_name
+inv_name_short                           = angel_skat_outfit_name
+description                              = angel_skat_outfit_description
+inv_weight                               = 13
+
+inv_grid_width     = 2
+inv_grid_height    = 3
+inv_grid_x         = 52
+inv_grid_y         = 52
+
+upgr_icon_x                              = 1872
+upgr_icon_y                              = 1714
+upgr_icon_width                          = 296
+upgr_icon_height                         = 122
+
+additional_inventory_weight   = 10
+additional_inventory_weight2  = 10
+
+cost                                     = 15000
+
+control_inertion_factor                  = 1.5
+power_loss                               = 0.8
+
+artefact_count                = 1
+
+immunities_sect                          = sect_angel_skat_outfit_immunities
+
+hit_fraction_actor                       = 0.75
+
+nightvision_sect                         = effector_nightvision_3
+
+; Medium RESISTANCE
+burn_protection                          = 0.065
+shock_protection                         = 0.3
+radiation_protection                     = 0.007
+chemical_burn_protection                 = 0.055
+telepatic_protection                     = 0.0
+strike_protection                        = 0.3
+explosion_protection                     = 0.3
+wound_protection                         = 0.3
+
+bones_koeff_protection                   = actor_armor_exo
+
+upgrades                                 = up_gr_firstab_military_outfit, up_gr_seconab_military_outfit, up_gr_thirdab_military_outfit, up_gr_fourtab_military_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_military_outfit
+character_portrait							 = ui_inGame2_angel_skat_1
+
+[sect_angel_skat_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_angel_skat_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.005
+
+
+;---------------------------------------------------------------------------------------------
+;		Экзоскелет "Дьявол"
+;---------------------------------------------------------------------------------------------
+[angel_exo_outfit]:outfit_base
+$spawn                                   = "outfit\angel_exo_outfit"
+visual                                   = dynamics\outfit\angel_exo_outfit
+actor_visual                             = actors\stalker_angel\stalker_angel_4.ogf
+npc_visual                               = actors\stalker_angel\stalker_angel_4.ogf
+player_hud_section                       = actor_hud_angel_exo_outfit
+
+ef_equipment_type                        = 3
+
+
+inv_name                                 = angel_exo_outfit_name
+inv_name_short                           = angel_exo_outfit_name
+description                              = angel_exo_outfit_description
+inv_weight                               = 23.0
+inv_grid_width     = 2
+inv_grid_height    = 3
+inv_grid_x         = 54
+inv_grid_y         = 52
+
+upgr_icon_x                              = 1243
+upgr_icon_y                              = 1671
+upgr_icon_width                          = 309
+upgr_icon_height                         = 165
+
+upgrades                                 = up_gr_firstab_merc_exo_outfit, up_gr_seconab_merc_exo_outfit, up_gr_thirdab_merc_exo_outfit, up_gr_fourtab_merc_exo_outfit, up_gr_fifthab_merc_exo_outfit
+
+cost                                     = 200000
+
+helmet_avaliable		                 = false
+
+sprint_allowed                           = false
+
+control_inertion_factor                  = 1.1
+
+immunities_sect                          = sect_angel_exo_outfit_immunities
+
+hit_fraction_actor                       = 0.75
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.07
+shock_protection                         = 0.4
+radiation_protection                     = 0.01
+chemical_burn_protection                 = 0.08
+telepatic_protection                     = 0.025
+strike_protection                        = 0.4500
+explosion_protection                     = 0.4500
+wound_protection                         = 0.4500
+
+additional_inventory_weight   = 67
+additional_inventory_weight2  = 67
+
+bones_koeff_protection                   = actor_armor_duty_exo
+
+upgrades                                 = up_gr_firstab_exo_outfit, up_gr_seconab_exo_outfit, up_gr_thirdab_exo_outfit, up_gr_fourtab_exo_outfit, up_gr_fifthab_exo_outfit
+upgrade_scheme                           = upgrade_scheme_exo_outfit
+character_portrait					     = ui_inGame2_angel_exo
+
+[sect_angel_exo_outfit_immunities]
+burn_immunity                            = 0.03	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.03
+wound_immunity                           = 0.03
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.03
+explosion_immunity                       = 0.03
+fire_wound_immunity                      = 0.008
+
+[sect_angel_exo_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.005
+;---------------------------------------------------------------------------------------------
+;		Leader Fallen Angels Outfit
+;---------------------------------------------------------------------------------------------
+[leader_angel_outfit]:outfit_base
+$spawn                                   = "outfit\leader_angel_outfit"
+visual                                   = dynamics\outfit\leader_angel_outfit
+actor_visual                             = actors\stalker_angel\angel_leader.ogf
+npc_visual                               = actors\stalker_angel\angel_leader.ogf
+player_hud_section                       = actor_hud_angel_exo_outfit
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_angel_outfit_name
+inv_name_short                           = leader_angel_outfit_name
+description                              = leader_angel_outfit_description
+
+inv_weight                               = 18
+
+inv_grid_x                               = 78
+inv_grid_y                               = 43
+
+upgr_icon_x                              = 3441
+upgr_icon_y                              = 343
+upgr_icon_width                          = 310
+upgr_icon_height                         = 147
+
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 352135
+
+full_scale_icon                          = 14,11
+
+immunities_sect                          = sect_leader_angel_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.1031
+shock_protection                         = 0.6250
+radiation_protection                     = 0.0163
+chemical_burn_protection                 = 0.1250
+telepatic_protection                     = 0.0688
+strike_protection                        = 0.6875
+explosion_protection                     = 0.6875
+wound_protection                         = 0.6875
+fire_wound_protection                    = 0.2500
+
+hit_fraction_actor                       = 0.15
+control_inertion_factor                  = 2.5
+bones_koeff_protection                   = angel_leader
+
+nightvision_sect 			             = effector_nightvision_2
+
+helmet_avaliable						 = false
+
+power_restore_speed                      = 0.005
+power_loss                               = 0.9
+
+additional_inventory_weight   			 = 97
+additional_inventory_weight2  			 = 97
+
+artefact_count                           = 5
+
+character_portrait						 = ui_inGame2_angel_exoseva
+
+[sect_leader_angel_outfit_immunities]
+burn_immunity                            = 0.0050
+strike_immunity                          = 0.0150
+shock_immunity                           = 0.0200
+wound_immunity                           = 0.0050
+radiation_immunity                       = 0.0000
+telepatic_immunity                       = 0.0000
+chemical_burn_immunity                   = 0.0050
+explosion_immunity                       = 0.0050
+fire_wound_immunity                      = 0.0150
+;---------------------------------------------------------------------------------------------
+;OUTFIT IN AZAZEl MODE: Leader Fallen Angels Outfit
+;---------------------------------------------------------------------------------------------
+[leader_azazel_angel_outfit]:outfit_leader_exo_base
+$spawn                                   = "outfit\leader_azazel_angel_outfit"
+visual                                   = dynamics\outfit\leader_angel_outfit
+actor_visual                             = actors\stalker_angel\angel_leader.ogf
+npc_visual                               = actors\stalker_angel\angel_leader.ogf
+player_hud_section                       = actor_hud_angel_exo_outfit
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_angel_outfit_name
+inv_name_short                           = leader_angel_outfit_name
+description                              = leader_angel_outfit_description
+
+inv_weight                               = 18
+
+inv_grid_x                               = 78
+inv_grid_y                               = 43
+
+cost                                     = 352135
+
+artefact_count                           = 1
+
+helmet_avaliable						 = false
+
+sprint_allowed							 = true
+
+power_loss                               = 0.75
+
+character_portrait						 = ui_inGame2_angel_exoseva
+

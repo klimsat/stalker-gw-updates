@@ -1,0 +1,27 @@
+[smart_terrain]
+squad_id = 12
+max_population = 4
+;arrive_dist = 300
+respawn_params = respawn@bar_territory
+respawn_idle = 30000
+
+
+
+[respawn@bar_territory]
+spawn_duty@advanced
+spawn_duty@veteran
+
+[spawn_duty@advanced]
+spawn_squads = duty_sim_squad_advanced, duty_sim_squad_advanced, duty_sim_squad_novice
+spawn_num = {+bar_zastava_minigunner_dead +bar_zastava_duty_guard1_dead +bar_zastava_duty_guard2_dead +bar_zastava_duty_guard3_dead +bar_zastava_duty_guard4_dead +bar_zastava_duty_guard5_dead +bar_zastava_duty_guard6_dead +bar_zastava_duty_guard7_dead +bar_zastava_duty_guard8_dead +bar_zastava_duty_guard9_dead} 1, 0
+
+[spawn_duty@veteran]
+spawn_squads = duty_sim_squad_advanced, duty_sim_squad_advanced, duty_sim_squad_veteran
+spawn_num = {+bar_zastava_minigunner_dead +bar_zastava_duty_guard1_dead +bar_zastava_duty_guard2_dead +bar_zastava_duty_guard3_dead +bar_zastava_duty_guard4_dead +bar_zastava_duty_guard5_dead +bar_zastava_duty_guard6_dead +bar_zastava_duty_guard7_dead +bar_zastava_duty_guard8_dead +bar_zastava_duty_guard9_dead} 1, 0
+
+
+[exclusive]
+bar_territory_camp_work_1 = rostok\bar_territory_smart_logic.ltx
+bar_territory_camp_work_2 = rostok\bar_territory_smart_logic.ltx
+bar_territory_camp_work_3 = rostok\bar_territory_smart_logic.ltx
+bar_territory_camp_work_4 = rostok\bar_territory_smart_logic.ltx

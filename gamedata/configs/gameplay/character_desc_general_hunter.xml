@@ -1,0 +1,957 @@
+<specific_character id="sim_default_hunter_leader_den" team_default = "1">
+    <name>Дэн</name>
+    <icon>ui_inGame2_hunter_icon_leader</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Лидер Охотников.</bio>
+    <class>sim_default_hunter_leader_den</class>
+    <community>hunter</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+    <rank>19850</rank>
+    <reputation>1500</reputation>
+    <visual>actors\stalker_hunter\hunter_leader</visual>
+    <money min="32000" max="71750" infinitive="0"/>
+    <supplies>
+    [spawn] \n
+    wpn_protecta = 1 \n
+    ammo_12x70_buck = 2 \n
+    wpn_svd = 1 \n
+    ammo_7.62x54_7h1 = 2 \n
+    wpn_desert_eagle_357 \n
+    ammo_357_fmj = 2 \n
+    grenade_f1 = 4 \n
+    medkit = 8 \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs_leaders.xml"
+    <actor_dialog>dialog_leader_hunter</actor_dialog>
+</specific_character>
+
+<specific_character id="sim_default_hunter_trader" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+
+    <class>sim_default_hunter_trader</class>
+    <community>hunter</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+
+    <rank>9000</rank>
+    <reputation>1000</reputation>
+    <money min="10000000" max="11000000" infinitive="1"/>
+    <visual>actors\stalker_hunter\hunter_protohunter</visual>
+    <supplies>
+    [spawn] \n
+    wpn_ak74 \n
+    ammo_5.45x39_fmj \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+    <start_dialog>dialog_hello_stalker_zakaz</start_dialog>
+    <actor_dialog>dialog_hunter_order</actor_dialog>
+    <actor_dialog>dm_broker_dialog</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_dialog</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_completed_dialog</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_cancel_dialog</actor_dialog>
+    <actor_dialog>dialog_check_rewards</actor_dialog>
+    <actor_dialog>dialog_order_squads_start</actor_dialog>
+    <actor_dialog>dialog_actor_hanter_start</actor_dialog>
+    <actor_dialog>actor_break_dialog</actor_dialog>
+    <actor_dialog>ggggkkh</actor_dialog>
+</specific_character>
+<specific_character id="sim_default_hunter_mechanic" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_1_5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+
+    <class>sim_default_hunter_mechanic</class>
+    <community>hunter</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <mechanic_mode>1</mechanic_mode>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+
+    <rank>1000</rank>
+    <reputation>2000</reputation>
+    <money min="10000000" max="11000000" infinitive="1"/>
+    <visual>actors\stalker_hunter\commendant</visual>
+    <supplies>
+    [spawn] \n
+    wpn_ak74 \n
+    ammo_5.45x39_fmj \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+    <actor_dialog>dm_sim_ordered_task_completed_dialog</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_cancel_dialog</actor_dialog>
+    <actor_dialog>dm_tech_repair</actor_dialog>
+    <actor_dialog>actor_break_dialog</actor_dialog>
+</specific_character>
+<specific_character id="sim_default_hunter_barmen" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_1_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+
+    <class>sim_default_hunter_barmen</class>
+    <community>hunter</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+
+    <rank>2000</rank>
+    <reputation>500</reputation>
+    <money min="10000000" max="11000000" infinitive="1"/>
+    <visual>actors\stalker_hunter\hunter_3</visual>
+    <supplies>
+    [spawn] \n
+    wpn_ak74 \n
+    ammo_5.45x39_fmj \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+    <actor_dialog>dm_sim_ordered_task_dialog</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_completed_dialog</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_cancel_dialog</actor_dialog>
+    <actor_dialog>actor_break_dialog</actor_dialog>
+</specific_character>
+<specific_character id="sim_default_hunter_medik" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_2_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+
+    <class>sim_default_hunter_medik</class>
+    <community>hunter</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+
+    <rank>0</rank>
+    <reputation>0</reputation>
+    <money min="10000000" max="11000000" infinitive="1"/>
+    <visual>actors\stalker_hunter\hunter_seva_1</visual>
+    <supplies>
+    [spawn] \n
+    wpn_ak74 \n
+    ammo_5.45x39_fmj \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+    <start_dialog>mar_smart_terrain_base_doctor_start</start_dialog>
+    <actor_dialog>mar_smart_terrain_base_doctor_need_health_care</actor_dialog>
+    <actor_dialog>actor_break_dialog</actor_dialog>
+</specific_character>
+<specific_character id="sim_default_hunter_unik" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_2_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+
+    <class>sim_default_hunter_unik</class>
+    <community>hunter</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+
+    <rank>0</rank>
+    <reputation>0</reputation>
+    <money min="10000000" max="11000000" infinitive="1"/>
+    <visual>actors\stalker_hunter\hunter_exo_suit</visual>
+    <supplies>
+    [spawn] \n
+    wpn_ak74 \n
+    ammo_5.45x39_fmj \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+    <start_dialog>dialog_hello_stalker_zakaz</start_dialog>
+    <start_dialog>mar_smart_terrain_base_doctor_start</start_dialog>
+    <actor_dialog>mar_smart_terrain_base_doctor_need_health_care</actor_dialog>
+    <actor_dialog>dialog_hunter_order</actor_dialog>
+    <actor_dialog>dm_broker_dialog</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_dialog</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_completed_dialog</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_cancel_dialog</actor_dialog>
+    <actor_dialog>actor_break_dialog</actor_dialog>
+    <actor_dialog>ggggkkh</actor_dialog>
+</specific_character>
+<specific_character id="sim_default_hunter_explorer" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_1_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+
+    <class>sim_default_hunter_explorer</class>
+    <community>hunter</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\csky\</snd_config>
+
+    <rank>0</rank>
+    <reputation>0</reputation>
+    <money min="2000" max="19500" infinitive="0"/>
+    <visual>actors\stalker_hunter\hunter_2</visual>
+    <supplies>
+  [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+    <start_dialog>hello_dialog</start_dialog>
+    <actor_dialog>dialog_explorer_start</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_dialog</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_completed_dialog</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_cancel_dialog</actor_dialog>
+    <actor_dialog>actor_break_dialog</actor_dialog>
+</specific_character>
+
+
+
+<specific_character id="sim_default_hunter_1_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_1_6</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_1</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>100</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\stalker_hunter_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_hunter_1_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_1_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_1</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\hunter_newbie1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_hunter_1_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_1_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_1</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\hunter_newbie2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_hunter_1_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_1_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_1</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\hunter_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_hunter_1_default_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_1_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_1</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\hunter_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_hunter_1_default_5" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_1_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_1</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\hunter_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_hunter_1_default_6" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_1_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_1</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\hunter_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_hunter_1_default_7" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_1_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_1</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\hunter_5</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_hunter_1_default_8" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_1_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_1</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\hunter_6</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+<specific_character id="sim_default_hunter_2_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_2</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>3500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\hunter_resp_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+<specific_character id="sim_default_hunter_2_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_2</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>3500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\hunter_resp_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+<specific_character id="sim_default_hunter_2_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_2</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>3500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\hunter_resp_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_hunter_2_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_1_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_2</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>3500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\hunter_suit_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+<specific_character id="sim_default_hunter_2_default_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_1_6</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_2</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>3500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\hunter_suit_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+<specific_character id="sim_default_hunter_2_default_5" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_2_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_2</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>3500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\hunter_suit_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_hunter_3_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_1_5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_3</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>5500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\commendant</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_hunter_3_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_2_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_3</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>5500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\linza_slime</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_hunter_3_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_1_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_3</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>5500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\lisii</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+<specific_character id="sim_default_hunter_3_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_1_8</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_3</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>5500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\morgan</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+<specific_character id="sim_default_hunter_3_default_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_1_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_3</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>5500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\neumeha</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+<specific_character id="sim_default_hunter_3_default_5" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_3</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>5500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\hunter_upir</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_hunter_3_default_6" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_1_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_3</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>5500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\stalker_hunter_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_hunter_3_default_7" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_5_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_3</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>5800</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>200</reputation>
+    <visual>actors\stalker_hunter\hunter_0_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_hunter_3_default_8" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_5_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_3</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>5800</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>200</reputation>
+    <visual>actors\stalker_hunter\hunter_0_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_hunter_3_default_9" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_5_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_3</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>5800</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>200</reputation>
+    <visual>actors\stalker_hunter\hunter_0_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_hunter_3_default_10" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_5_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_3</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>5800</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>200</reputation>
+    <visual>actors\stalker_hunter\hunter_0_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_hunter_3_default_11" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_5_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_3</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>5800</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>200</reputation>
+    <visual>actors\stalker_hunter\hunter_0_5</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+<specific_character id="sim_default_hunter_4_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_2_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_4</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>7500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\hunter_exo_suit</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_hunter_4_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_4</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>7500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\hunter_protohunter</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_hunter_4_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_4</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>7500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\hunter_exo_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_hunter_4_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_2_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_4</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>7500</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\hunter_seva_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_hunter_4_default_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_5_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_4</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>7800</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>200</reputation>
+    <visual>actors\stalker_hunter\hunter_0_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_hunter_4_default_5" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_5_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_4</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>7800</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>200</reputation>
+    <visual>actors\stalker_hunter\hunter_0_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_hunter_4_default_6" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_5_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_4</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>7800</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>200</reputation>
+    <visual>actors\stalker_hunter\hunter_0_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_hunter_4_default_7" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_5_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_4</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>7800</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>200</reputation>
+    <visual>actors\stalker_hunter\hunter_0_4</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_hunter_4_default_8" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_5_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_4</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>7800</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>200</reputation>
+    <visual>actors\stalker_hunter\hunter_0_5</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+<specific_character id="sim_default_hunter_5_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_4_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_5</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>9800</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\hunter_exo_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_hunter_5_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_4_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_5</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>9800</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>-140</reputation>
+    <visual>actors\stalker_hunter\hunter_exo_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_hunter_5_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_hunter_icon_4_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_hunter_5</class>
+    <community>hunter</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\stalker\</snd_config>
+    <rank>9800</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>200</reputation>
+    <visual>actors\stalker_hunter\hunter_exo_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>

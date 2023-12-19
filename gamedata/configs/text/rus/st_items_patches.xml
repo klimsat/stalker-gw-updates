@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+
+	<string id="st_use_patch_not_init">
+		<text>%c[255,255,255,255]Попробуйте это сделать немного позже. Примерно через минуту.%c[255,255,255,255]</text>
+	</string>
+	<string id="st_use_patch_same_faction">
+		<text>%c[255,255,255,255]Нет смысла использовать нашивку своей же группировки.%c[255,255,255,255]</text>
+	</string>
+	<string id="st_actor_used_patch">
+		<text>%c[255,255,255,255]Вы пришили к своему костюму нашивку группировки "%s" и теперь бойцы этой группировки считают вас своим!%c[255,255,255,255]</text>
+	</string>
+
+
+	<string id="alfa_patch">
+		<text>Нашивка ЧВК «Альфа»</text>
+	</string>
+	<string id="alfa_patch_description">
+		<text>Нашивка, содранная с костюма бойца из группировки ЧВК «Альфа».</text>
+	</string>
+	
+	<string id="renegate_patch">
+		<text>Нашивка Ренегатовца</text>
+	</string>
+	<string id="renegate_patch_description">
+		<text>Нашивка, содранная с костюма бойца из группировки «Ренегаты».</text>
+	</string>
+	
+	<string id="darkstalker_patch">
+		<text>Нашивка Тёмного сталкера</text>
+	</string>
+	<string id="darkstalker_patch_description">
+		<text>Нашивка, содранная с костюма бойца из группировки «Тёмные сталкеры».</text>
+	</string>
+	
+	<string id="isg_patch">
+		<text>Нашивка ИИГ</text>
+	</string>
+	<string id="isg_patch_description">
+		<text>Нашивка, содранная с костюма бойца из группировки «ИИГ».</text>
+	</string>
+	
+	<string id="posleduden_patch">
+		<text>Нашивка Последнего Дня</text>
+	</string>
+	<string id="posleduden_patch_description">
+		<text>Нашивка, содранная с костюма бойца из группировки «Последний День».</text>
+	</string>
+	
+	<string id="voenstal_patch">
+		<text>Нашивка Перехвата</text>
+	</string>
+	<string id="voenstal_patch_description">
+		<text>Нашивка, содранная с костюма бойца из группировки «Перехват».</text>
+	</string>
+	
+	<string id="angel_patch">
+		<text>Нашивка Падших Ангелов</text>
+	</string>
+	<string id="angel_patch_description">
+		<text>Нашивка, содранная с костюма бойца из группировки «Падшие Ангелы».</text>
+	</string>
+	
+	<string id="veter_patch">
+		<text>Нашивка «Ветра»</text>
+	</string>
+	<string id="veter_patch_description">
+		<text>Нашивка, содранная с костюма бойца из группировки «Ветер».</text>
+	</string>
+	
+	<string id="ryskuspecnaz_patch">
+		<text>Нашивка В.Г.Р.</text>
+	</string>
+	<string id="ryskuspecnaz_patch_description">
+		<text>Нашивка, содранная с костюма бойца из группировки «В.Г.Р.».</text>
+	</string>
+	
+	<string id="slizni_patch">
+		<text>Нашивка Слизня</text>
+	</string>
+	<string id="slizni_patch_description">
+		<text>Нашивка, содранная с костюма бойца из группировки «Слизни».</text>
+	</string>
+	
+	<string id="varyag_patch">
+		<text>Нашивка Варяга</text>
+	</string>
+	<string id="varyag_patch_description">
+		<text>Нашивка, содранная с костюма бойца из группировки «Варяги».</text>
+	</string>
+	
+	<string id="greh_patch">
+		<text>Нашивка Греха</text>
+	</string>
+	<string id="greh_patch_description">
+		<text>Нашивка, содранная с костюма бойца из группировки «Грех».</text>
+	</string>
+	
+	<string id="mirotvorec_patch">
+		<text>Нашивка Миротворца</text>
+	</string>
+	<string id="mirotvorec_patch_description">
+		<text>Нашивка, содранная с костюма бойца из группировки «Миротворцы».</text>
+	</string>
+	
+	<string id="adinkvizicia_patch">
+		<text>Нашивка Адской Инквизиции</text>
+	</string>
+	<string id="adinkvizicia_patch_description">
+		<text>Нашивка, содранная с костюма бойца из группировки «Адская Инквизиция».</text>
+	</string>
+	
+	<string id="velhan_patch">
+		<text>Нашивка Великих Ханов</text>
+	</string>
+	<string id="velhan_patch_description">
+		<text>Нашивка, содранная с костюма бойца из группировки «Великие Ханы».</text>
+	</string>
+	
+	<string id="sby_patch">
+		<text>Нашивка СБУ</text>
+	</string>
+	<string id="sby_patch_description">
+		<text>Нашивка, содранная с костюма бойца из группировки «СБУ».</text>
+	</string>
+	
+	<string id="hunter_patch">
+		<text>Нашивка Охотников</text>
+	</string>
+	<string id="hunter_patch_description">
+		<text>Нашивка, содранная с костюма бойца из группировки «Охотники».</text>
+	</string>
+	
+	<string id="fantom_patch">
+		<text>Нашивка Фантомов</text>
+	</string>
+	<string id="fantom_patch_description">
+		<text>Нашивка, содранная с костюма бойца из группировки «Фантомы».</text>
+	</string>
+
+	<string id="csky_patch">
+		<text>Нашивка «Чистого Неба»</text>
+	</string>
+	<string id="csky_patch_description">
+		<text>Нашивка, содранная с костюма «Чистого Неба».</text>
+	</string>
+
+	<string id="freedom_patch">
+		<text>Нашивка «Свободы»</text>
+	</string>
+	<string id="freedom_patch_description">
+		<text>Нашивка, содранная с костюма свободовца.</text>
+	</string>
+
+	<string id="stalker_patch">
+		<text>Нашивка одиночки</text>
+	</string>
+	<string id="stalker_patch_description">
+		<text>Нашивка, содранная с костюма одиночки.</text>
+	</string>
+
+	<string id="ecolog_patch">
+		<text>Нашивка эколога</text>
+	</string>
+	<string id="ecolog_patch_description">
+		<text>Нашивка, содранная с костюма учёного.</text>
+	</string>
+
+	<string id="bandit_patch">
+		<text>Нашивка бандита</text>
+	</string>
+	<string id="bandit_patch_description">
+		<text>Нашивка, содранная с костюма бандита.</text>
+	</string>
+
+	<string id="dolg_patch">
+		<text>Нашивка «Долга»</text>
+	</string>
+	<string id="dolg_patch_description">
+		<text>Нашивка, содранная с костюма долговца.</text>
+	</string>
+
+	<string id="monolith_patch">
+		<text>Нашивка «Монолита»</text>
+	</string>
+	<string id="monolith_patch_description">
+		<text>Нашивка, содранная с костюма монолитовца.</text>
+	</string>
+
+	<string id="army_patch">
+		<text>Нашивка военного</text>
+	</string>
+	<string id="army_patch_description">
+		<text>Нашивка, содранная с униформы военного.</text>
+	</string>
+
+	<string id="killer_patch">
+		<text>Нашивка наёмника</text>
+	</string>
+	<string id="killer_patch_description">
+		<text>Нашивка, содранная с костюма наёмника.</text>
+	</string>
+	
+	<string id="apocalypse_patch">
+		<text>Нашивка Ф.А.</text>
+	</string>
+	<string id="apocalypse_patch_description">
+		<text>Нашивка, содранная с костюма Функционала Апокалипсиса.</text>
+	</string>
+
+	<string id="zombied_patch">
+		<text>Нашивка Зомбированного</text>
+	</string>
+	<string id="zombied_patch_description">
+		<text>Нашивка, содранная с костюма зомбированного сталкера.</text>
+	</string>
+
+	<string id="osoznanie_patch">
+		<text>Нашивка Б.Е.О.С.</text>
+	</string>
+	<string id="osoznanie_patch_description">
+		<text>Нашивка, содранная с костюма Боевой Единицы О-Сознания.</text>
+	</string>
+</string_table>

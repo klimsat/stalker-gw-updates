@@ -1,0 +1,157 @@
+local file_name = "misc\\relation_table.ltx"
+local new_game_relations = nil
+full_relation_table = {}
+local full_relation_table_default = nil
+
+function apply_default_relations()
+  full_relation_table = utils.copy_relation_table(full_relation_table_default)
+
+  apply_relations()
+end
+
+function apply_relations()
+  for factionFirst, faction_tbl in pairs(full_relation_table) do
+    if factionFirst ~= "monster" then
+      for factionSecond, value in pairs(faction_tbl) do
+        if factionSecond ~= "monster" then
+          game_relations.set_factions_community_num(factionFirst, factionSecond, value)
+          game_relations.set_factions_community_num(factionSecond, factionFirst, value)
+        end
+      end
+    end
+  end
+end
+
+function initialize()
+  if not full_relation_table_default then
+    init_default_relations()
+  end
+
+  if not new_game_relations then
+    new_game_relations = axr_main.config:r_value("character_creation", "new_game_relations", "default")
+  end
+
+  if new_game_relations ~= "default" then
+    if new_game_relations == "all_vs_all" then
+      utils.iterFactionMatx(
+        function(factionFirst, factionSecond)
+          full_relation_table[factionFirst][factionSecond] = -4000
+          full_relation_table[factionFirst][("actor_" .. factionSecond)] = -4000
+        end
+      )
+    elseif new_game_relations == "battle_royale" then
+      utils.iterFactionMatx(
+        function(factionFirst, factionSecond)
+          full_relation_table[factionFirst][factionSecond] = -4000
+          full_relation_table[factionFirst][("actor_" .. factionSecond)] = 4000
+        end
+      )
+    elseif new_game_relations == "all_vs_actor" then
+      utils.iterFactionMatx(
+        function(factionFirst, factionSecond)
+          full_relation_table[factionFirst][factionSecond] = 4000
+          full_relation_table[factionFirst][("actor_" .. factionSecond)] = -4000
+          full_relation_table[factionFirst][("actor_" .. factionFirst)] = -4000
+        end
+      )
+    elseif utils.isValidFactionName(new_game_relations:gsub("all_vs_", "")) then
+      local faction = new_game_relations:gsub("all_vs_", "")
+
+      utils.iterFactionMatx(
+        function(factionFirst, factionSecond)
+          local relation = 4000
+
+          if (faction == factionFirst or faction == factionSecond) and factionFirst ~= factionSecond then
+            relation = -4000
+          end
+
+          full_relation_table[factionFirst][factionSecond] = relation
+          full_relation_table[factionFirst][("actor_" .. factionSecond)] = relation
+        end
+      )
+    end
+  end
+
+  apply_relations()
+end
+
+function init_default_relations()
+  full_relation_table_default = {}
+  local relation_table_ini = ini_file_ex(file_name)
+
+  relation_table_ini.ini:section_for_each(
+    function(factionFirst)
+      local count = relation_table_ini.ini:line_count(factionFirst)
+      full_relation_table_default[factionFirst] = {}
+
+      for i = 0, count - 1 do
+        _, factionSecond, relation = relation_table_ini.ini:r_line(factionFirst, i, "", "")
+
+        full_relation_table_default[factionFirst][factionSecond] = tonumber(relation)
+      end
+    end
+  )
+
+  full_relation_table = utils.copy_relation_table(full_relation_table_default)
+end
+
+function update_file_default_relations()
+  local relation_table_ini = ini_file_ex(file_name, true)
+  local is_file_exist = config_file_exists(file_name)
+
+  if is_file_exist then
+    return
+  end
+
+  utils.debug("init_default_relations, relation_table_ini: [%s] [%s]", relation_table_ini, is_file_exist)
+
+  for _, factionFirst in pairs(sim_tables.factions) do
+    if factionFirst ~= "monster" then
+      for _, factionSecond in pairs(sim_tables.factions) do
+        if factionSecond ~= "monster" then
+          local relationFaction = game_relations.get_factions_community(factionFirst, factionSecond)
+          local relationActor = game_relations.get_factions_community(factionSecond, ("actor_" .. factionFirst))
+
+          relation_table_ini:w_value(factionFirst, factionSecond, tostring(relationFaction))
+          relation_table_ini:w_value(factionFirst, ("actor_" .. factionSecond), tostring(relationActor))
+        end
+      end
+    end
+  end
+
+  relation_table_ini:save()
+end
+
+local function on_game_load()
+  initialize()
+end
+
+local function save_state(m_data)
+  if (not m_data.new_game_relations) then
+    m_data.new_game_relations = {}
+  end
+
+  m_data.new_game_relations = new_game_relations
+  m_data.full_relation_table = full_relation_table
+  m_data.full_relation_table_default = full_relation_table_default
+end
+
+local function load_state(m_data)
+  if (not m_data.new_game_relations) then
+    return
+  end
+
+  new_game_relations = m_data.new_game_relations or "default"
+  full_relation_table = m_data.full_relation_table or {}
+  full_relation_table_default = m_data.full_relation_table_default or {}
+
+  m_data.full_relation_table_default = nil
+  m_data.full_relation_table = nil
+  m_data.new_game_relations = nil
+end
+
+function on_game_start()
+  RegisterScriptCallback("save_state", save_state)
+  RegisterScriptCallback("load_state", load_state)
+  RegisterScriptCallback("on_game_load", on_game_load)
+end

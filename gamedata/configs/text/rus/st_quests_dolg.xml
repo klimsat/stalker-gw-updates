@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<!-- HOSTAGE RESCUE FOR DUTY TASK -->
+	<string id="simulation_task_8_name">
+		<text>Спасти заложника</text>
+	</string>
+	<string id="simulation_task_8_text">
+		<text>Необходимо спасти долговца из бандитского плена.</text>
+	</string>
+	<string id="simulation_task_8_about">
+		<text>Одного из наших бойцов ранили и взяли в плен мародёры. Нужно вытащить его оттуда до того, как бандиты его убьют. Сможешь?</text>
+	</string>
+	<string id="simulation_task_8_finish">
+		<text>Спасибо, сталкер, ты хорошо сработал! Держи, заслужил:</text>
+	</string>
+</string_table>

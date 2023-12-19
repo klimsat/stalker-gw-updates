@@ -1,0 +1,19 @@
+[smart_terrain]
+squad_id = 6
+max_population = 5
+respawn_params = respawn@rad_entrance
+respawn_idle = 60000
+
+
+[respawn@rad_entrance]
+spawn_monolith
+
+[spawn_monolith]
+spawn_squads = monolith_sim_squad_advanced, monolith_sim_squad_novice
+spawn_num = 2
+
+[exclusive]
+rad_entrance_camp_work_1 = radar\rad_entrance_smart_logic.ltx
+rad_entrance_camp_work_2 = radar\rad_entrance_smart_logic.ltx
+rad_entrance_camp_work_3 = radar\rad_entrance_smart_logic.ltx
+rad_entrance_camp_work_4 = radar\rad_entrance_smart_logic.ltx

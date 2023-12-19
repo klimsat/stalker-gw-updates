@@ -1,0 +1,28 @@
+[smart_terrain]
+squad_id = 1
+max_population = 5
+respawn_params = respawn@atp_zavod
+respawn_idle = 30000
+
+
+
+[respawn@atp_zavod]
+spawn_army@novice
+spawn_army@advanced
+
+[spawn_army@novice]
+spawn_squads = army_sim_squad_novice
+spawn_num = 3
+
+[spawn_army@advanced]
+spawn_squads = army_sim_squad_novice, army_sim_squad_advanced
+spawn_num = 3
+
+[exclusive]
+atp_zavod_camp_work_1 = atp\atp_zavod_smart_logic.ltx
+atp_zavod_camp_work_2 = atp\atp_zavod_smart_logic.ltx
+atp_zavod_camp_work_3 = atp\atp_zavod_smart_logic.ltx
+trader = atp\atp_zavod_smart_logic.ltx
+mechanic = atp\atp_zavod_smart_logic.ltx
+medic = atp\atp_zavod_smart_logic.ltx
+barmen = atp\atp_zavod_smart_logic.ltx

@@ -1,0 +1,22 @@
+<btn_default x="590" y="587" width="86" height="24" stretch="1">
+    <text align="c" font="letterica16">ui_st_reset</text>
+    <texture>ui_inGame2_button</texture>
+    <text_color>
+        <e r="210" g="210" b="210" />
+    </text_color>
+</btn_default>
+
+<mutants_add_btn x="0" y="0" width="86" height="24" stretch="1">
+    <text align="c" font="letterica16">ui_mm_mutants_add_btn</text>
+    <texture>ui_inGame2_button</texture>
+    <text_color>
+        <e r="210" g="210" b="210" />
+    </text_color>
+</mutants_add_btn>
+<mutants_remove_btn x="0" y="0" width="86" height="24" stretch="1">
+    <text align="c" font="letterica16">ui_mm_mutants_remove_btn</text>
+    <texture>ui_inGame2_button</texture>
+    <text_color>
+        <e r="210" g="210" b="210" />
+    </text_color>
+</mutants_remove_btn>

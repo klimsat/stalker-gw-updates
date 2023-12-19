@@ -1,0 +1,38 @@
+[smart_terrain];rei_pol
+squad_id = 11
+max_population = 14
+respawn_params = respawn@rei_pol
+respawn_idle = 60000
+
+
+[respawn@rei_pol]
+spawn_military@novice
+spawn_military@advanced
+spawn_military@sniper
+
+[spawn_military@novice]
+spawn_squads = army_sim_squad_novice
+spawn_num = 3
+
+[spawn_military@advanced]
+spawn_squads = army_sim_squad_novice, army_sim_squad_advanced
+spawn_num = 3
+
+[spawn_military@sniper]
+spawn_squads = army_sim_squad_sniper, army_sim_squad_advanced
+spawn_num = 3
+
+[exclusive]
+rei_pol_camp_work_1 = rein\rei_pol_smart_logic.ltx
+rei_pol_camp_work_2 = rein\rei_pol_smart_logic.ltx
+rei_pol_camp_work_3 = rein\rei_pol_smart_logic.ltx
+rei_pol_camp_work_4 = rein\rei_pol_smart_logic.ltx
+rei_pol_camp_work_5 = rein\rei_pol_smart_logic.ltx
+rei_pol_camp_work_6 = rein\rei_pol_smart_logic.ltx
+rei_pol_camp_work_7 = rein\rei_pol_smart_logic.ltx
+rei_pol_camp_work_8 = rein\rei_pol_smart_logic.ltx
+rei_pol_camp_work_9 = rein\rei_pol_smart_logic.ltx
+rei_pol_camp_work_10 = rein\rei_pol_smart_logic.ltx
+trader = rein\rei_pol_smart_logic.ltx
+mechanic = rein\rei_pol_smart_logic.ltx
+medic = rein\rei_pol_smart_logic.ltx

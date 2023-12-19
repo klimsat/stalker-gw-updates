@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<window>
+	<smart_capture x="4" y="4" width="122" height="18" horz="1" min="0" max="100">
+		<progress stretch="1">
+			<texture r="8" g="8" b="194" a="200">ui_inGame2_inventory_progress_bar</texture>
+		</progress>
+	</smart_capture>
+	<status_text x="0" y="34" width="130" height="20"  stretch="1">
+		<text r="210" g="210" b="210" font="letterica18" align="c" vert_align="c">ui_hud_smart_capture</text>
+	</status_text>
+	<status_text_3 x="0" y="54" width="130" height="20"  stretch="1">
+		<text r="210" g="210" b="210" font="letterica18" align="c" vert_align="c">ui_hud_smart_capture</text>
+	</status_text_3>
+	<status_text_2 x="0" y="74" width="130" height="20" stretch="1">
+		<text r="210" g="210" b="210" font="letterica18" align="c" vert_align="c">ui_hud_smart_capture_info</text>
+	</status_text_2>
+</window>

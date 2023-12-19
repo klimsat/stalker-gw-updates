@@ -1,0 +1,23 @@
+;--------------------------------------------------------------------------------------------------
+; HOSTAGE RESCUE FOR DUTY TASK-
+
+[simulation_task_8]
+icon = ui_inGame2_PD_Opitniy_stalker
+prior = 50
+sim_communities = dolg
+storyline = false
+title = simulation_task_8_name
+descr = simulation_task_8_text
+job_descr = simulation_task_8_about
+task_complete_descr = simulation_task_8_finish
+stage_complete = 1
+status_functor = hostage_task
+status_functor_params = hostage_companion_task_1
+target_functor = simulation_task_target
+on_init = %=find_smart_under_faction_control(simulation_task_8_id:freedom:bandit) =setup_companion_task(hostage_companion_task_1_dolg:nil:simulation_task_8_id:true:true) +hostage_companion_task_1_started%
+precondition = {=random_chance =is_faction_enemy_to_actor(bandit) =is_faction_enemy_to_actor(freedom) -hostage_companion_task_1_started -hostage_companion_task_1_hostage_rescued =all_avail_smart_stayed_squad_count_ge_by_faction(1:nil:false:freedom:bandit) !squad_exist(hostage_companion_task_1)} true, false
+repeat_timeout = 86400
+on_complete = %=reward_random_money(1500:3000) =unlock_smart(simulation_task_8_id) =reward_stash(true) =complete_task_inc_goodwill(50:dolg) =remove_special_task_squad(hostage_companion_task_1) =pstor_reset(simulation_task_8_id) =pstor_reset(simulation_task_8_target_id) -hostage_companion_task_1_hostage_rescued -hostage_companion_task_1_started =inc_task_stage(simulation_task_8)%
+on_fail = %=unlock_smart(simulation_task_8_id) =fail_task_dec_goodwill(25:dolg) =pstor_reset(simulation_task_8_id) =remove_special_task_squad(hostage_companion_task_1) =pstor_reset(simulation_task_8_target_id) -hostage_companion_task_1_hostage_rescued -hostage_companion_task_1_started%
+on_cancel = %=unlock_smart(simulation_task_8_id) =pstor_reset(simulation_task_8_id) =remove_special_task_squad(hostage_companion_task_1) =pstor_reset(simulation_task_8_target_id) -hostage_companion_task_1_hostage_rescued -hostage_companion_task_1_started%
+condlist_0 = {!squad_exist(hostage_companion_task_1)} fail

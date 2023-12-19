@@ -1,0 +1,878 @@
+class "options_dialog"(CUIScriptWnd)
+
+function options_dialog:__init()
+  super()
+
+  self.atmosfear_default = ini_file_ex("atmosfear_default_settings.ltx", true)
+
+  self.m_preconditions = {}
+  self.options = {
+    sound = {},
+    video = {},
+    controls = {},
+    gameplay = {},
+    weather = {},
+    interface = {},
+    factions = {},
+    capturing = {},
+    events = {},
+    alife = {},
+    mutants = {},
+    night = {}
+  }
+
+  self.default_geometry = {
+    -- for single column
+    label = {
+      x = 75
+    },
+    list = {
+      x = 252
+    },
+    check = {
+      x = 242
+    },
+    input = {
+      x = 242
+    },
+    -- for double columns
+    first_label = {
+      x = 0
+    },
+    second_label = {
+      x = 215
+    },
+    first_list = {
+      x = 195
+    },
+    second_list = {
+      x = 405
+    },
+    first_check = {
+      x = 195
+    },
+    first_input = {
+      x = 195
+    },
+    second_check = {
+      x = 405
+    },
+    second_input = {
+      x = 405
+    }
+  }
+
+  self:InitControls()
+  self:InitCallBacks()
+  self.tab:SetActiveTab("video")
+
+  SendScriptCallback("opt_menu_on_init", self)
+
+  for name, _ in pairs(self.options) do
+    self:GenerateUI(name)
+  end
+
+  self.message_box = CUIMessageBoxEx()
+end
+
+function options_dialog:__finalize()
+end
+
+function options_dialog:set_geometry(t, ctrl, type, column_num)
+  if column_num ~= nil then
+    local column_name = column_num == 1 and "first" or "second"
+    local name = strformat("%s_%s", column_name, type == "label" and type or t.typ)
+
+    if self.default_geometry[name] ~= nil then
+      set_item_geometry(self.default_geometry[name], ctrl)
+    end
+  else
+    local typ = type == "label" and type or t.typ
+    if self.default_geometry[typ] ~= nil then
+      set_item_geometry(self.default_geometry[typ], ctrl)
+    end
+  end
+
+  if t.geometry == nil then
+    return
+  end
+
+  local pref = utils.is_widescreen() and "ws_" or ""
+  local target = strformat("%s%s", pref, type)
+
+  if t.geometry[target] == nil then
+    return
+  end
+
+  set_item_geometry(t.geometry[target], ctrl)
+end
+function set_item_geometry(geometry, ctrl)
+  local offset_x, offset_y = geometry.offset_x or 0, geometry.offset_y or 0
+  local width_add = geometry.width_add or 0
+  local height_add = geometry.height_add or 0
+  local width = (geometry.width or ctrl:GetWidth()) + width_add
+  local height = (geometry.height or ctrl:GetHeight()) + height_add
+  local pos
+
+  pos = ctrl:GetWndPos()
+
+  local x = geometry.x or pos.x
+  local y = geometry.y or pos.y
+
+  pos.x = x + offset_x
+  pos.y = y + offset_y
+
+  ctrl:SetWndPos(pos)
+  ctrl:SetWndSize(vector2():set(width, height))
+end
+function options_dialog:generate_item_ui(t, tab_name, elements, _st, column_num)
+  local is_columns = type(column_num) == "number"
+  local precondition = type(t.precondition) == "function" and t.precondition() or type(t.precondition) ~= "function"
+
+  if not t.disabled and precondition then
+    local tag = t.tag and strformat("%s:%s", tab_name, t.tag) or nil
+    local label_tag = t.label_tag and strformat("%s:%s", tab_name, t.label_tag) or nil
+    local ctrl
+    if (t.show_label == nil or t.show_label == true) and t.typ ~= "empty" and t.typ ~= "button" then
+      if t.typ == "label" then
+        ctrl = self.xml:InitStatic(strformat("%s:caption_1_c", tab_name), _st)
+      else
+        ctrl = self.xml:InitStatic(label_tag or strformat("%s:cap_check_axr", tab_name), _st)
+      end
+
+      self:set_geometry(t, ctrl, "label", column_num)
+
+      if t.label_text then
+        ctrl:TextControl():SetText(t.label_text)
+      elseif t.label_id then
+        ctrl:TextControl():SetText(GetString("ui_mm_" .. t.label_id))
+      else
+        ctrl:TextControl():SetText(GetString("ui_mm_" .. t.id))
+      end
+
+      if t.s_label == true then
+        ctrl = self.xml:InitStatic(strformat("%s:cap_check_axr", tab_name), _st)
+        ctrl:TextControl():SetText(GetString("ui_mm_s_label_" .. t.id))
+
+        if t.save_s_label == true then
+          self["s_label_" .. t.id] = ctrl
+        end
+
+        self:set_geometry(t, ctrl, "s_label", column_num)
+      end
+    end
+
+    if t.geometry and (t.geometry.container or t.geometry.ws_container) then
+      self:set_geometry(t, _st, "container", column_num)
+    end
+
+    -- control
+    if (t.typ == "check") then
+      -- sort by name and type
+      if not is_columns then
+        table.insert(elements, _st)
+      end
+
+      -- create control
+      ctrl = self.xml:InitCheck(tag or strformat("%s:check_axr", tab_name), _st)
+
+      if t.save == true then
+        self[t.id] = ctrl
+      end
+
+      self:set_geometry(t, ctrl, "self", column_num)
+
+      if t.default ~= nil then
+        self:Register(ctrl, "ck_" .. t.id)
+        if t.on_check then
+          local closure = function(handler)
+            t.on_check(handler, ctrl, t)
+          end
+          self:AddCallback("ck_" .. t.id, ui_events.BUTTON_CLICKED, closure, self)
+        end
+      end
+    elseif (t.typ == "empty") then
+      self:set_geometry(t, _st, "self", column_num)
+
+      if not is_columns then
+        table.insert(elements, _st)
+      end
+    elseif (t.typ == "label") then
+      _st:SetWndSize(vector2():set(676, 40))
+
+      if t.save == true then
+        self[t.id] = ctrl
+      end
+
+      if not is_columns then
+        table.insert(elements, _st)
+      end
+    elseif (t.typ == "button") then
+      ctrl = self.xml:Init3tButton(tag or strformat("%s:mutants_add_btn", tab_name), _st)
+
+      self:set_geometry(t, ctrl, "self", column_num)
+      self:Register(ctrl, "btn_" .. t.id)
+
+      if t.on_click then
+        local closure = function(handler)
+          t.on_click(handler, ctrl, t)
+        end
+        self:AddCallback("btn_" .. t.id, ui_events.BUTTON_CLICKED, closure, self)
+      end
+
+      if not is_columns then
+        table.insert(elements, _st)
+      end
+    elseif (t.typ == "line") then
+      ctrl = self.xml:InitStatic(tag or strformat("%s:line_axr", tab_name), _st)
+
+      if not is_columns then
+        table.insert(elements, _st)
+      end
+    elseif (t.typ == "radio") then
+      if not is_columns then
+        table.insert(elements, _st)
+      end
+
+      if type(t.height) == "number" then
+        _st:SetWndSize(vector2():set(676, t.height))
+      end
+
+      ctrl = self.xml:InitTab(tag or strformat("%s:radio_axr", tab_name), _st)
+
+      if t.save == true then
+        self[t.id] = ctrl
+      end
+
+      self:set_geometry(t, ctrl, "self", column_num)
+
+      if (t.default ~= nil) then
+        self:Register(ctrl, "rdi_" .. t.id)
+      end
+    elseif (t.typ == "input") then
+      if not is_columns then
+        table.insert(elements, _st)
+      end
+
+      ctrl = self.xml:InitEditBox(tag or strformat("%s:input_axr", tab_name), _st)
+
+      if t.save == true then
+        self[t.id] = ctrl
+      end
+
+      self:set_geometry(t, ctrl, "self", column_num)
+
+      if (t.default ~= nil) then
+        self:Register(ctrl, "ipt_" .. t.id)
+        if t.on_change then
+          local closure = function(handler)
+            t.on_change(handler, ctrl, t)
+          end
+          self:AddCallback("ipt_" .. t.id, ui_events.EDIT_TEXT_COMMIT, closure, self)
+        end
+      end
+    elseif (t.typ == "track") then
+      if not is_columns then
+        table.insert(elements, _st)
+      end
+
+      ctrl = self.xml:InitTrackBar(tag or strformat("%s:track_axr_1", tab_name), _st)
+
+      if type(t.max) == "number" and type(t.min) == "number" then
+        ctrl:SetOptIBounds(t.min, t.max)
+      end
+
+      if t.save == true then
+        self[t.id] = ctrl
+      end
+
+      self:set_geometry(t, ctrl, "self", column_num)
+
+      if (t.default ~= nil) then
+        self:Register(ctrl, "trk_" .. t.id)
+        if t.on_change then
+          local closure = function(handler)
+            t.on_change(handler, ctrl, t)
+          end
+          self:AddCallback("trk_" .. t.id, ui_events.BUTTON_CLICKED, closure, self)
+        end
+      end
+    elseif (t.typ == "listbox") then
+      if not is_columns then
+        table.insert(elements, _st)
+      end
+
+      ctrl = self.xml:InitListBox(tag or strformat("%s:listbox_axr_1", tab_name), _st)
+
+      if t.save == true then
+        self[t.id] = ctrl
+      end
+
+      if t.not_option == true then
+        for i = 1, #t.list do
+          ctrl:AddTextItem(t.list[i])
+        end
+      end
+
+      self:set_geometry(t, ctrl, "self", column_num)
+
+      if (t.default ~= nil) then
+        self:Register(ctrl, "lstbx_" .. t.id)
+        if t.on_click then
+          local closure = function(handler)
+            t.on_click(handler, ctrl, t)
+          end
+          self:AddCallback("lstbx_" .. t.id, ui_events.LIST_ITEM_CLICKED, closure, self)
+        end
+        if t.on_db_click then
+          local closure = function(handler)
+            t.on_db_click(handler, ctrl, t)
+          end
+          self:AddCallback("lstbx_" .. t.id, ui_events.WINDOW_LBUTTON_DB_CLICK, closure, self)
+        end
+        if t.on_select then
+          local closure = function(handler)
+            t.on_select(handler, ctrl, t)
+          end
+          self:AddCallback("lstbx_" .. t.id, ui_events.LIST_ITEM_SELECT, closure, self)
+        end
+      end
+    elseif (t.typ == "list") then
+      if not is_columns then
+        table.insert(elements, _st)
+      end
+
+      ctrl = self.xml:InitComboBox(tag or strformat("%s:list_axr", tab_name), _st)
+
+      self:set_geometry(t, ctrl, "self", column_num)
+
+      if t.save == true then
+        self[t.id] = ctrl
+      end
+
+      if type(t.generate_list) == "function" then
+        t.list = t.generate_list()
+      end
+
+      -- setup the list
+      if t.list then
+        if type(t.list.from) == "number" then
+          local i = 0
+          for v = t.list.from, t.list.to, t.list.step or 1 do
+            if t.list.from < 1 then
+              ctrl:AddItem(string.format("%.1f", v), i)
+            else
+              ctrl:AddItem(v, i)
+            end
+            i = i + 1
+          end
+        else
+          for i = 1, #t.list do
+            local v = t.list[i]
+            if type(v) == "string" and not t.list_names then
+              ctrl:AddItem(strformat("ui_mm_list_%s_item_%s", t.list_pref or t.id, v), i - 1)
+            else
+              ctrl:AddItem(v, i - 1)
+            end
+          end
+        end
+      end
+
+      -- register for callbacks
+      if (t.default ~= nil) then -- obviously dynamic axr option
+        self:Register(ctrl, "lst_" .. t.id)
+        if t.on_list_item_select then
+          local closure = function(handler) -- we need closure in order to pass ctrl to method
+            t.on_list_item_select(handler, ctrl, t)
+          end
+          self:AddCallback("lst_" .. t.id, ui_events.LIST_ITEM_SELECT, closure, self)
+        end
+      end
+    end
+
+    t.ctrl = ctrl
+  end
+end
+function options_dialog:GenerateUI(name)
+  local tab_name = strformat("tab_%s", name)
+  local elements = {}
+  local _st
+
+  self.scroll_v:Clear()
+
+  -- add UI elements to scroll view in specific order
+  for i = 1, #self.options[name] do
+    local t = self.options[name][i]
+
+    if #t > 0 then
+      _st = self.xml:InitStatic(strformat("%s:templ_item", tab_name), nil)
+
+      for i2 = 1, #t do
+        self:generate_item_ui(t[i2], tab_name, elements, _st, i2)
+      end
+
+      table.insert(elements, _st)
+    else
+      _st = self.xml:InitStatic(strformat("%s:templ_item", tab_name), nil)
+      self:generate_item_ui(t, tab_name, elements, _st)
+    end
+  end
+
+  local scroll_name = strformat("%s_scroll_v", name)
+
+  for i = 1, #elements do
+    local ctrl = elements[i]
+    self[scroll_name]:AddWindow(ctrl, true)
+    ctrl:SetAutoDelete(false)
+  end
+end
+
+function options_dialog:InitControls()
+  self:SetWndRect(Frect():set(0, 0, 1024, 768))
+  self:Enable(true)
+
+  self.xml = CScriptXmlInit()
+  local xml = self.xml
+  xml:ParseFile("ui_mm_opt.xml")
+
+  xml:InitStatic("background", self)
+  self.dialog = xml:InitStatic("main_dialog:dialog", self)
+  self.option_caption = xml:InitStatic("main_dialog:option_caption", self)
+
+  -- Hint Window
+  self.hint_wnd = xml:InitFrame("hint_wnd:background", self)
+  self.hint_wnd:SetAutoDelete(false)
+  self.hint_wnd_text = xml:InitTextWnd("hint_wnd:text", self.hint_wnd)
+  self.hint_wnd:Show(false)
+
+  self.dlg_video = ui_mm_opt_video.opt_video()
+  self.dlg_video:InitControls(0, 0, xml, self)
+  self.dlg_video:Show(false)
+  self.dialog:AttachChild(self.dlg_video)
+  xml:InitWindow("tab_size", 0, self.dlg_video)
+
+  self.dlg_sound = ui_mm_opt_sound.opt_sound()
+  self.dlg_sound:InitControls(0, 0, xml, self)
+  self.dlg_sound:Show(false)
+  self.dialog:AttachChild(self.dlg_sound)
+  xml:InitWindow("tab_size", 0, self.dlg_sound)
+
+  self.dlg_gameplay = ui_mm_opt_gameplay.opt_gameplay()
+  self.dlg_gameplay:InitControls(0, 0, xml, self)
+  self.dlg_gameplay:Show(false)
+  self.dialog:AttachChild(self.dlg_gameplay)
+  xml:InitWindow("tab_size", 0, self.dlg_gameplay)
+
+  self.dlg_interface = ui_mm_opt_interface.opt_interface()
+  self.dlg_interface:InitControls(0, 0, xml, self)
+  self.dlg_interface:Show(false)
+  self.dialog:AttachChild(self.dlg_interface)
+  xml:InitWindow("tab_size", 0, self.dlg_interface)
+
+  self.dlg_night = ui_mm_opt_night.opt_night()
+  self.dlg_night:InitControls(0, 0, xml, self)
+  self.dlg_night:Show(false)
+  self.dialog:AttachChild(self.dlg_night)
+  xml:InitWindow("tab_size", 0, self.dlg_night)
+
+  self.dlg_events = ui_mm_opt_events.opt_events()
+  self.dlg_events:InitControls(0, 0, xml, self)
+  self.dlg_events:Show(false)
+  self.dialog:AttachChild(self.dlg_events)
+  xml:InitWindow("tab_size", 0, self.dlg_events)
+
+  self.dlg_capturing = ui_mm_opt_capturing.opt_capturing()
+  self.dlg_capturing:InitControls(0, 0, xml, self)
+  self.dlg_capturing:Show(false)
+  self.dialog:AttachChild(self.dlg_capturing)
+  xml:InitWindow("tab_size", 0, self.dlg_capturing)
+
+  self.dlg_alife = ui_mm_opt_alife.opt_alife()
+  self.dlg_alife:InitControls(0, 0, xml, self)
+  self.dlg_alife:Show(false)
+  self.dialog:AttachChild(self.dlg_alife)
+  xml:InitWindow("tab_size", 0, self.dlg_alife)
+
+  self.dlg_factions = ui_mm_opt_factions.opt_factions()
+  self.dlg_factions:InitControls(0, 0, xml, self)
+  self.dlg_factions:Show(false)
+  self.dialog:AttachChild(self.dlg_factions)
+  xml:InitWindow("tab_size", 0, self.dlg_factions)
+
+  self.dlg_mutants = ui_mm_opt_mutants.opt_mutants()
+  self.dlg_mutants:InitControls(0, 0, xml, self)
+  self.dlg_mutants:Show(false)
+  self.dialog:AttachChild(self.dlg_mutants)
+  xml:InitWindow("tab_size", 0, self.dlg_mutants)
+
+  self.dlg_controls = ui_mm_opt_controls.opt_controls()
+  self.dlg_controls:InitControls(0, 0, xml, self)
+  self.dlg_controls:Show(false)
+  self.dialog:AttachChild(self.dlg_controls)
+  xml:InitWindow("tab_size", 0, self.dlg_controls)
+
+  self.dlg_weather = ui_mm_opt_weather.opt_weather()
+  self.dlg_weather:InitControls(0, 0, xml, self)
+  self.dlg_weather:Show(false)
+  self.dialog:AttachChild(self.dlg_weather)
+  xml:InitWindow("tab_size", 0, self.dlg_weather)
+
+  local btn
+  btn = xml:Init3tButton("main_dialog:btn_accept", self.dialog)
+  self:Register(btn, "btn_accept")
+  btn = xml:Init3tButton("main_dialog:btn_cancel", self.dialog)
+  self:Register(btn, "btn_cancel")
+
+  self.tab = xml:InitTab("main_dialog:tab", self.dialog)
+  self:Register(self.tab, "tab")
+
+  self.message_box = CUIMessageBoxEx()
+  self:Register(self.message_box, "mb")
+
+  self.b_restart_system_shown = false
+  self.timer = nil
+end
+
+function options_dialog:SetCurrentValues()
+  local opt = COptionsManager()
+
+  opt:SetCurrentValues("mm_opt_video_preset")
+  opt:SaveBackupValues("mm_opt_video_preset")
+
+  opt:SetCurrentValues("mm_opt_video")
+  opt:SaveBackupValues("mm_opt_video")
+
+  opt:SetCurrentValues("mm_opt_gameplay")
+  opt:SaveBackupValues("mm_opt_gameplay")
+
+  opt:SetCurrentValues("mm_opt_sound")
+  opt:SaveBackupValues("mm_opt_sound")
+
+  opt:SetCurrentValues("mm_opt_controls")
+  opt:SaveBackupValues("mm_opt_controls")
+
+  opt:SetCurrentValues("key_binding")
+  opt:SaveBackupValues("key_binding")
+
+  SendScriptCallback("opt_menu_on_set_values", self, opt)
+
+  self:UpdateDependControls()
+end
+
+function options_dialog:UpdateDependControls()
+  self.scroll_v:Clear()
+  local _current_id = self.combo_renderer:CurrentID()
+
+  for i, j in pairs(self.m_preconditions) do
+    if (j.func(_current_id)) then
+      self.scroll_v:AddWindow(j.control, true)
+      j.control:SetAutoDelete(false)
+    end
+  end
+
+  local max_texture_lod = 4
+  local min_texture_lod = 0
+
+  if _current_id ~= 0 then
+    if not is_enough_address_space_available() then
+      min_texture_lod = 1
+    end
+  end
+
+  self.texture_lod_track:SetOptIBounds(min_texture_lod, max_texture_lod)
+  self:OnAOOptionChange()
+end
+
+function options_dialog:InitCallBacks()
+  self:AddCallback("tab", ui_events.TAB_CHANGED, self.OnTabChange, self)
+  self:AddCallback("btn_accept", ui_events.BUTTON_CLICKED, self.OnBtnAccept, self)
+  self:AddCallback("btn_cancel", ui_events.BUTTON_CLICKED, self.OnBtnCancel, self)
+  self:AddCallback("btn_default_graphic", ui_events.BUTTON_CLICKED, self.OnBtnDefGraph, self)
+  self:AddCallback("btn_default_sound", ui_events.BUTTON_CLICKED, self.OnBtnDefSound, self)
+  self:AddCallback("combo_preset", ui_events.LIST_ITEM_SELECT, self.OnPresetChanged, self)
+  self:AddCallback("btn_keyb_default", ui_events.BUTTON_CLICKED, self.OnBtnKeybDefault, self)
+  self:AddCallback("btn_reset_to_default", ui_events.BUTTON_CLICKED, self.OnBtnResetToDefault, self)
+  self:AddCallback("combo_renderer", ui_events.LIST_ITEM_SELECT, self.UpdateDependControls, self)
+  self:AddCallback("tab_ao_opt", ui_events.TAB_CHANGED, self.OnAOOptionChange, self)
+
+  self:AddCallback("mb", ui_events.MESSAGE_BOX_YES_CLICKED, self.OnApplyChanges, self)
+  self:AddCallback("mb", ui_events.MESSAGE_BOX_NO_CLICKED, self.OnDiscardChanges, self)
+end
+
+function options_dialog:OnBtnCheckUpdates()
+  local console = get_console()
+  console:execute("check_for_updates 1")
+end
+
+function options_dialog:OnBtnKeybDefault()
+  local console = get_console()
+  console:execute("default_controls")
+
+  local opt = COptionsManager()
+  opt:SetCurrentValues("mm_opt_controls")
+  opt:SetCurrentValues("key_binding")
+end
+
+function options_dialog:OnBtnResetToDefault()
+  local id = self.tab:GetActiveId()
+
+  local config = axr_main_options.get_config(self, id)
+
+  for _, v in pairs(self.options[id]) do
+    if #v > 0 then
+      for i2 = 1, #v do
+        local line = v[i2]
+        axr_main_options.set_values(self, nil, line, config, true)
+      end
+    else
+      axr_main_options.set_values(self, nil, v, config, true)
+    end
+  end
+end
+
+function options_dialog:OnPresetChanged()
+  local opt = COptionsManager()
+  -- opt:SetCurrentValues("mm_opt_video_adv")
+end
+
+function options_dialog:OnBtnDefGraph()
+  local opt = COptionsManager()
+  opt:SendMessage2Group("mm_opt_video", "set_default_value")
+end
+
+function options_dialog:OnBtnDefSound()
+  local opt = COptionsManager()
+  opt:SendMessage2Group("mm_opt_sound", "set_default_value")
+end
+
+function options_dialog:OnBtnAccept()
+  local opt = COptionsManager()
+  local console = get_console()
+
+  console:execute("cfg_save tmp")
+
+  opt:SaveValues("mm_opt_video_preset")
+  opt:SaveValues("key_binding")
+  opt:SaveValues("mm_opt_video")
+  opt:SaveValues("mm_opt_gameplay")
+  opt:SaveValues("mm_opt_sound")
+  opt:SaveValues("mm_opt_controls")
+
+  SendScriptCallback("opt_menu_on_accept", self, opt, console)
+
+  if opt:NeedVidRestart() then
+    _G.b_discard_settings_shown = true
+    self.message_box:InitMessageBox("message_box_yes_no")
+    self.message_box:SetText(string.format("%s %d% s", GetString("ui_mm_confirm_changes"), 15, GetString("mp_si_sec")))
+    self.message_box:ShowDialog(true)
+  else
+    self:OnApplyChanges()
+  end
+
+  opt:OptionsPostAccept()
+
+  console:execute("cfg_save")
+end
+
+function options_dialog:OnBtnCancel()
+  local opt = COptionsManager()
+  opt:UndoGroup("mm_opt_video_preset")
+  opt:UndoGroup("mm_opt_video")
+  opt:UndoGroup("mm_opt_sound")
+  opt:OptionsPostAccept()
+
+  self.owner:ShowDialog(true)
+  self:HideDialog()
+  self.owner:Show(true)
+end
+
+function options_dialog:OnTabChange()
+  for id, _ in pairs(self.options) do
+    local dlg_name = strformat("dlg_%s", id)
+
+    self[dlg_name]:Show(false)
+  end
+
+  local id = self.tab:GetActiveId()
+  local dlg_name = strformat("dlg_%s", id)
+
+  self[dlg_name]:Show(true)
+  self.option_caption:TextControl():SetText(GetString(strformat("ui_mm_option_caption_%s", id)))
+end
+
+function options_dialog:OnAOOptionChange()
+  local ao_opt_id = self.tab_ao_opt:GetActiveId()
+  local render_id = self.combo_renderer:CurrentID()
+  if (render_id >= 4) and (ao_opt_id == "hdao") then
+    self.combo_ssao:enable_id(4)
+  else
+    self.combo_ssao:disable_id(4)
+  end
+  self.combo_ssao:SetCurrentOptValue()
+end
+
+function options_dialog:OnKeyboard(dik, keyboard_action)
+  local res = CUIScriptWnd.OnKeyboard(self, dik, keyboard_action)
+
+  if res == false then
+    if keyboard_action == ui_events.WINDOW_KEY_PRESSED then
+      if dik == DIK_keys.DIK_ESCAPE then
+        self.owner:ShowDialog(true)
+        self:HideDialog()
+        self.owner:Show(true)
+      end
+    end
+  end
+
+  return res
+end
+
+function options_dialog:Update()
+  CUIScriptWnd.Update(self)
+
+  local mm = main_menu.get_main_menu()
+
+  if (_G.b_discard_settings_shown) then
+    local tg = math.floor(time_global_async() / 1000)
+    if (self.timer == nil) then
+      self.timer = tg
+    end
+    self.message_box:SetText(
+      string.format("%s %d %s", GetString("ui_mm_confirm_changes"), 15 - (tg - self.timer), GetString("mp_si_sec"))
+    )
+    if (tg - self.timer >= 15) then
+      if (self.message_box:IsShown()) then
+        self.message_box:HideDialog()
+      end
+      self:OnDiscardChanges()
+    end
+  end
+
+  if (self.dlg_video) then
+    if (self.dlg_video.fov_track) then
+      self.dlg_video.fov_value:TextControl():SetText(tostring(self.dlg_video.fov_track:GetFValue()))
+    end
+    if (self.dlg_video.hud_fov_track) then
+      self.dlg_video.hud_fov_value:TextControl():SetText(
+        string.format("%.2f", self.dlg_video.hud_fov_track:GetFValue())
+      )
+    end
+  end
+
+  local show_options_hints = axr_main.config:r_value("mm_options", "enable_show_options_hints", 1, true)
+
+  if not show_options_hints then
+    return
+  end
+
+  for _, t in pairs(self.options) do
+    for i = 1, #t do
+      local item = t[i]
+
+      if #item > 0 then
+        for j = 1, #item do
+          local option = item[j]
+          local is_hover = self:CheckOptionHoverHint(option)
+
+          if is_hover then
+            return
+          end
+        end
+      else
+        local is_hover = self:CheckOptionHoverHint(item)
+
+        if is_hover then
+          return
+        end
+      end
+    end
+  end
+  self.hint_wnd:Show(false)
+end
+
+function options_dialog:CheckOptionHoverHint(option)
+  if
+    (option.ctrl and option.typ ~= "label" and option.typ ~= "empty" and option.typ ~= "line" and
+      not option.disable_hint and
+      (option.hint_id or option.id) and
+      option.ctrl:IsCursorOverWindow())
+   then
+    local str = strformat("ui_mm_%s_hint", option.hint_id or option.id)
+
+    local text = GetString(str)
+
+    if text == str then
+      text = strformat("%s\\n.", GetString(str))
+    end
+
+    self:SetHint(text)
+
+    return true
+  end
+
+  return false
+end
+
+function options_dialog:SetHint(text, pos)
+  if (text == "") then
+    return
+  end
+
+  self.hint_wnd:Show(true)
+  self.hint_wnd_text:SetText(text)
+  self.hint_wnd_text:AdjustHeightToText()
+  self.hint_wnd:SetWndSize(vector2():set(self.hint_wnd:GetWidth(), self.hint_wnd_text:GetHeight() + 44))
+
+  pos = pos or GetCursorPosition()
+  pos.y = pos.y - self.hint_wnd:GetHeight()
+  pos.x = pos.x - self.hint_wnd:GetWidth()
+  self.hint_wnd:SetWndPos(pos)
+
+  FitInRect(self.hint_wnd, Frect():set(0, 0, 1024, 768), 0, 100)
+end
+
+function options_dialog:OnApplyChanges()
+  self.timer = nil
+  _G.b_discard_settings_shown = false
+
+  self.owner:ShowDialog(true)
+  if (self:IsShown()) then
+    self:HideDialog()
+  end
+  self.owner:Show(true)
+  get_console():execute("vid_restart")
+
+  if not (self.b_restart_system_shown and self.message_box:IsShown()) then
+    local opt = COptionsManager()
+    if opt:NeedSystemRestart() then
+      self.b_restart_system_shown = true
+      self.message_box:InitMessageBox("message_box_restart_game")
+      self.message_box:ShowDialog(true)
+    elseif (self.b__require_restart == true) then
+      self.b__require_restart = false
+      self.message_box:InitMessageBox("message_box_restart_game")
+      self.message_box:ShowDialog(true)
+    end
+  end
+end
+
+function options_dialog:OnDiscardChanges()
+  self.timer = nil
+  _G.b_discard_settings_shown = false
+
+  local c = get_console()
+  c:execute("cfg_load tmp")
+
+  self:SetCurrentValues()
+
+  c:execute("vid_restart")
+  c:execute("cfg_save")
+end
+
+function options_dialog:OnMenuReloaded()
+  if (_G.b_discard_settings_shown) then
+    self.message_box:InitMessageBox("message_box_yes_no")
+    self.message_box:SetText(string.format("%s %d% s", GetString("ui_mm_confirm_changes"), 15, GetString("mp_si_sec")))
+    self.message_box:ShowDialog(true)
+  end
+end

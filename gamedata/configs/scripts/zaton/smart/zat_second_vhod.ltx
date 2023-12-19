@@ -1,0 +1,25 @@
+[smart_terrain]
+squad_id = 60
+max_population = 5
+respawn_params = respawn@zat_second_vhod
+respawn_idle = 30000
+
+
+
+[respawn@zat_second_vhod]
+spawn_army@novice
+spawn_army@advanced
+
+[spawn_army@novice]
+spawn_squads = army_sim_squad_novice
+spawn_num = 3
+
+[spawn_army@advanced]
+spawn_squads = army_sim_squad_novice, army_sim_squad_advanced
+spawn_num = 3
+
+[exclusive]
+zat_second_vhod_camp_work_1 = zaton\zat_second_vhod_smart_logic.ltx
+zat_second_vhod_camp_work_2 = zaton\zat_second_vhod_smart_logic.ltx
+zat_second_vhod_camp_work_3 = zaton\zat_second_vhod_smart_logic.ltx
+zat_second_vhod_camp_work_4 = zaton\zat_second_vhod_smart_logic.ltx

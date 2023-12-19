@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<!-- HOSTAGE RESCUE FOR FREEDOM TASK -->
+	<string id="simulation_task_9_name">
+		<text>Спасти заложника</text>
+	</string>
+	<string id="simulation_task_9_text">
+		<text>Необходимо спасти свободовца из бандитского плена.</text>
+	</string>
+	<string id="simulation_task_9_about">
+		<text>Одного из наших ранили и взяли в плен местные гопари. Не думаю, что он долго протянет, так что надо бы вытащить его оттуда. Поможешь, чувак? Я в долгу не останусь.</text>
+	</string>
+	<string id="simulation_task_9_finish">
+		<text>Нифига себе, ты справился?! Спасибо, мэн! Я уж и не думал его в живых увидеть. Держи награду, заслужил:</text>
+	</string>
+</string_table>

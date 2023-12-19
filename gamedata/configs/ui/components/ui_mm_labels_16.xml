@@ -1,0 +1,16 @@
+<caption_1_r x="0" y="0" width="138" height="30">
+    <text r="200" g="200" b="200" font="letterica18" align="r" vert_align="b"></text>
+</caption_1_r>
+<caption_1_c x="0" y="0" width="138" height="30">
+    <text r="200" g="200" b="200" font="letterica18" align="c" vert_align="b"></text>
+</caption_1_c>
+<caption_1_l x="0" y="0" width="138" height="30">
+    <text r="200" g="200" b="200" font="letterica18" align="l" vert_align="b"></text>
+</caption_1_l>
+
+<cap_check_axr x="0" y="0" width="158" height="24">
+    <text r="170" g="170" b="170" font="letterica16" align="r" vert_align="c"></text>
+</cap_check_axr>
+<cap_check_2_axr x="0" y="0" width="175" height="24">
+    <text r="170" g="170" b="170" font="letterica16" align="c" vert_align="c"></text>
+</cap_check_2_axr>

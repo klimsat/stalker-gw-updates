@@ -1,0 +1,29 @@
+[smart_terrain];rei_ostanovka
+squad_id = 12
+max_population = 14
+respawn_params = respawn@rei_ostanovka
+respawn_idle = 60000
+
+
+[respawn@rei_ostanovka]
+spawn_military@novice
+spawn_military@advanced
+spawn_military@sniper
+
+[spawn_military@novice]
+spawn_squads = army_sim_squad_novice
+spawn_num = 3
+
+[spawn_military@advanced]
+spawn_squads = army_sim_squad_novice, army_sim_squad_advanced
+spawn_num = 3
+
+[spawn_military@sniper]
+spawn_squads = army_sim_squad_sniper, army_sim_squad_advanced
+spawn_num = 3
+
+[exclusive]
+rei_ostanovka_camp_work_1 = rein\rei_ostanovka_smart_logic.ltx
+rei_ostanovka_camp_work_2 = rein\rei_ostanovka_smart_logic.ltx
+rei_ostanovka_camp_work_3 = rein\rei_ostanovka_smart_logic.ltx
+rei_ostanovka_camp_work_4 = rein\rei_ostanovka_smart_logic.ltx

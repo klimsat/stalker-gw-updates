@@ -1,0 +1,603 @@
+<specific_character id="sim_default_mirotvorec_leader_prais" team_default = "1">
+    <name>Генерал Прайс</name>
+    <icon>ui_inGame2_mirotvorec_prais_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Лидер Миротворцев.</bio>
+    <class>sim_default_mirotvorec_leader_prais</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\mirotvorec\</snd_config>
+    <rank>19880</rank>
+    <reputation>1070</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_prais_1_0</visual>
+    <money min="12000" max="81750" infinitive="0"/>
+    <supplies>
+    [spawn] \n
+    wpn_scar-h, silencer = 1 \n
+    ammo_7.62x51_fmj = 2 \n
+    wpn_desert_eagle_357 \n
+    ammo_357_fmj = 2 \n
+    grenade_f1 = 6 \n
+    medkit_army = 5 \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs_leaders.xml"
+    <actor_dialog>dialog_leader_mirotvorec</actor_dialog>
+</specific_character>
+
+
+
+<specific_character id="mirotvorec_kombez_rukzak_gas_1_0_default_zelen_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_private_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_kombez_rukzak_gas_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_zelen_0</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\mirotvorec\</snd_config>
+    <rank>1500</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_kombez_rukzak_gas_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="mirotvorec_kombez_off_gas_mask_1_0_default_zelen_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_private_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_kombez_off_gas_mask_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_zelen_0</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\reih\</snd_config>
+    <rank>1500</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_kombez_off_gas_mask_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="mirotvorec_kombez_gas_1_0_default_zelen_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_private_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_kombez_gas_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_zelen_0</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\reih1\</snd_config>
+    <rank>1500</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_kombez_gas_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="mirotvorec_beret_black_face_0_0_default_zelen_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_private_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_beret_black_face_0_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_zelen_0</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\reih1\</snd_config>
+    <rank>1500</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_beret_black_face_0_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="mirotvorec_beret_black_face_0_1_default_zelen_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_private_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_beret_black_face_0_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_zelen_0</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\reih1\</snd_config>
+    <rank>1500</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_beret_black_face_0_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_mirotvorec_0_default_0" team_default = "1">
+    <name>GENERATE_NAME_private_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_kombez_rukzak_gas_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_0</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\mirotvorec\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_kombez_rukzak_gas_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+    
+    <specific_character id="sim_default_mirotvorec_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_private_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_kombez_off_gas_mask_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_0</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\reih\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_kombez_off_gas_mask_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_mirotvorec_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_private_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_kombez_gas_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_0</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\reih1\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_kombez_gas_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_mirotvorec_0_default_3" team_default = "1">
+    <name>GENERATE_NAME_private_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_beret_black_face_0_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_0</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\reih1\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_beret_black_face_0_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_mirotvorec_0_default_4" team_default = "1">
+    <name>GENERATE_NAME_private_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_beret_black_face_0_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_0</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\reih1\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_beret_black_face_0_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_mirotvorec_1_default_0" team_default = "1">
+    <name>GENERATE_NAME_sergeant_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_1</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\mirotvorec\</snd_config>
+    <rank>5000</rank>
+    <reputation>1070</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_mirotvorec_1_default_3" team_default = "1">
+    <name>GENERATE_NAME_sergeant_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_snaiper_1_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_1</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\mirotvorec\</snd_config>
+    <rank>5000</rank>
+    <reputation>1070</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_snaiper_1_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_mirotvorec_1_default_4" team_default = "1">
+    <name>GENERATE_NAME_sergeant_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_snaiper_1_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_1</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\mirotvorec\</snd_config>
+    <rank>5000</rank>
+    <reputation>1070</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_snaiper_1_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="mirotvorec_killer_cor_gas_2_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_sergeant_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_killer_cor_gas_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_1</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\mirotvorec\</snd_config>
+    <rank>5000</rank>
+    <reputation>1070</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_killer_cor_gas_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="mirotvorec_killer_usa_gas_2_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_sergeant_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_killer_usa_gas_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_1</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\mirotvorec\</snd_config>
+    <rank>5000</rank>
+    <reputation>1070</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_killer_usa_gas_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_mirotvorec_2_default_0" team_default = "1">
+    <name>GENERATE_NAME_lieutenant_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_2</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\mirotvorec\</snd_config>
+    <rank>7000</rank>
+    <reputation>1499</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_mirotvorec_2_default_1" team_default = "1">
+    <name>GENERATE_NAME_lieutenant_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_bel_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_2</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\mirotvorec\</snd_config>
+    <rank>7000</rank>
+    <reputation>1499</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_bel_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_mirotvorec_2_default_2" team_default = "1">
+    <name>GENERATE_NAME_lieutenant_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_bel_2_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_2</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\mirotvorec\</snd_config>
+    <rank>7000</rank>
+    <reputation>1499</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_bel_2_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_mirotvorec_2_default_3" team_default = "1">
+    <name>GENERATE_NAME_lieutenant_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_bel_2_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_2</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\mirotvorec\</snd_config>
+    <rank>7000</rank>
+    <reputation>1499</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_bel_2_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_mirotvorec_2_default_4" team_default = "1">
+    <name>GENERATE_NAME_lieutenant_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_negr_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_2</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\mirotvorec\</snd_config>
+    <rank>7000</rank>
+    <reputation>1499</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_negr_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_mirotvorec_2_default_5" team_default = "1">
+    <name>GENERATE_NAME_lieutenant_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_negr_2_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_2</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\mirotvorec\</snd_config>
+    <rank>7000</rank>
+    <reputation>1499</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_negr_2_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_mirotvorec_2_default_6" team_default = "1">
+    <name>GENERATE_NAME_lieutenant_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_negr_2_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_2</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\mirotvorec\</snd_config>
+    <rank>7000</rank>
+    <reputation>1499</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_negr_2_2</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_mirotvorec_2_default_7" team_default = "1">
+    <name>GENERATE_NAME_lieutenant_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_specnaz_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_2</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\mirotvorec\</snd_config>
+    <rank>7000</rank>
+    <reputation>1499</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_specnaz_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="mirotvorec_killer_cor_gas_2_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_lieutenant_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_killer_cor_gas_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_2</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\mirotvorec\</snd_config>
+    <rank>7000</rank>
+    <reputation>1499</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_killer_cor_gas_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="mirotvorec_killer_usa_gas_2_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_lieutenant_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_killer_usa_gas_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_2</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\mirotvorec\</snd_config>
+    <rank>7000</rank>
+    <reputation>1499</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_killer_usa_gas_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="mirotvorec_seva_2_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_lieutenant_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_seva_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_2</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\mirotvorec\</snd_config>
+    <rank>7000</rank>
+    <reputation>1499</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_seva_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_mirotvorec_3_default_0" team_default = "1">
+    <name>GENERATE_NAME_podpolkovnik_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ОЃEтный сталЃEЃE ДеталЃEЃE информацЃE ъCсутствуеЃE</bio>
+    <class>sim_default_mirotvorec_3</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\mirotvorec\</snd_config>
+    <rank>9000</rank>
+    <reputation>1920</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_3</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="mirotvorec_skat_gas_4_0_default_4" team_default = "1">
+    <name>GENERATE_NAME_polkovnik_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_skat_gas_4_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_4</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\mirotvorec\</snd_config>
+    <rank>11000</rank>
+    <reputation>2315</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_skat_gas_4_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="mirotvorec_skat_gas_4_1_default_4" team_default = "1">
+    <name>GENERATE_NAME_polkovnik_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_skat_gas_4_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_4</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\mirotvorec\</snd_config>
+    <rank>11000</rank>
+    <reputation>2315</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_skat_gas_4_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="mirotvorec_exoseva_5_0_default_5" team_default = "1">
+    <name>GENERATE_NAME_polkovnik_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_exoseva_5_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_5</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\mirotvorec\</snd_config>
+    <rank>15000</rank>
+    <reputation>2315</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_exoseva_5_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="mirotvorec_exo_5_0_default_5" team_default = "1">
+    <name>GENERATE_NAME_polkovnik_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_exo_5_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_5</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\mirotvorec\</snd_config>
+    <rank>15000</rank>
+    <reputation>2315</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_exo_5_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="mirotvorec_5_0_default_5" team_default = "1">
+    <name>GENERATE_NAME_polkovnik_mirotvorec</name>
+    <icon>ui_inGame2_mirotvorec_5_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_mirotvorec_5</class>
+    <community>mirotvorec</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\mirotvorec\</snd_config>
+    <rank>15000</rank>
+    <reputation>2315</reputation>
+    <visual>actors\stalker_mirotvorec\mirotvorec_5_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>

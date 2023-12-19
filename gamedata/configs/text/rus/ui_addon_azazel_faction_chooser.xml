@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="st_addon_azazel_faction_chooser_label_chooseFaction">
+		<text>Выберите фракцию</text>
+	</string>
+	<string id="st_addon_azazel_faction_chooser_label_dead">
+		<text>МЁРТВ</text>
+	</string>
+	<string id="st_addon_azazel_faction_chooser_label_doNotPlayAnimation">
+		<text>Не играть анимацию</text>
+	</string>
+	
+	<string id="st_addon_azazel_faction_chooser_label_findNearest">
+		<text> Найти ближайшего сталкера(экспериментальная)</text>
+	</string>
+	
+	<string id="st_addon_azazel_faction_chooser_label_rebornInLeaders">
+		<text>Переродиться в лидера группировки</text>
+	</string>
+	
+	<string id="btn_reborn_azazel">
+		<text>ПЕРЕРОДИТЬСЯ!</text>
+	</string>
+</string_table>

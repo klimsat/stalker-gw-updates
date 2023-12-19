@@ -1,0 +1,16 @@
+[smart_terrain]
+squad_id = 2
+max_population = 5
+respawn_params = respawn@labx27_lair1
+respawn_idle = 30000
+respawn_radius = 300
+
+[respawn@labx27_lair1]
+spawn_tushkanos
+
+[spawn_tushkanos]
+spawn_squads = simulation_tushkano
+spawn_num = {+dar_military_scout_squad_killed} 4, 0
+
+[exclusive]
+

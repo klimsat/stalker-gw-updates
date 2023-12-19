@@ -1,0 +1,48 @@
+; Выдача заданий: =give_task(тип_задания:ид_задания:группировка)
+
+#include "tasks\tasks_by_level\tm_zaton.ltx"
+#include "tasks\tasks_by_level\tm_jupiter.ltx"
+
+;Call of Chernobyl
+#include "tasks\tm_dynamic.ltx"
+#include "tasks\tasks_by_level\tm_escape.ltx"
+#include "tasks\tasks_by_level\tm_marsh.ltx"
+#include "tasks\tasks_by_level\tm_yantar.ltx"
+#include "tasks\tasks_by_level\tm_darkvalley.ltx"
+#include "tasks\tasks_by_level\tm_military.ltx"
+#include "tasks\tasks_by_level\tm_bar.ltx"
+#include "tasks\tasks_by_level\tm_pripyat2.ltx"
+#include "tasks\tasks_by_level\tm_deadcity.ltx"
+#include "tasks\tasks_by_level\tm_agroprom.ltx"
+#include "tasks\tasks_by_level\tm_radar.ltx"
+#include "tasks\tasks_by_level\tm_sarcofag.ltx"
+#include "tasks\tasks_by_level\tm_warlab.ltx"
+
+; Great War
+#include "tasks\tasks_by_faction\tm_dynamic_freedom.ltx"
+#include "tasks\tasks_by_faction\tm_dynamic_dolg.ltx"
+#include "tasks\tasks_by_faction\tm_dynamic_stalker.ltx"
+#include "tasks\tasks_by_faction\tm_dynamic_varyag.ltx"
+#include "tasks\tasks_by_faction\tm_dynamic_adinkvizicia.ltx"
+
+[hide_from_surge]
+icon = ui_inGame2_Vibros
+prior = 20
+title_functor = surge_task_title
+descr_functor = surge_task_descr
+target_functor = surge_task_target
+;dont_send_update_news = true
+condlist_0 = {=surge_complete()} complete
+condlist_1 = {!actor_alive()} fail
+
+;AtmosFear Psi Storm
+[hide_from_psi_storm]
+icon = ui_inGame2_psi_storm
+prior = 20
+title_functor = psi_storm_task_title
+descr_functor = psi_storm_task_descr
+target_functor = psi_storm_task_target
+;dont_send_update_news = true
+condlist_0 = {=psi_storm_complete()} complete
+condlist_1 = {!actor_alive()} fail
+

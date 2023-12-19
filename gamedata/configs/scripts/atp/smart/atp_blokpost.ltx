@@ -1,0 +1,25 @@
+[smart_terrain]
+squad_id = 6
+max_population = 5
+respawn_params = respawn@atp_blokpost
+respawn_idle = 30000
+
+
+
+[respawn@atp_blokpost]
+spawn_army@novice
+spawn_army@advanced
+
+[spawn_army@novice]
+spawn_squads = army_sim_squad_novice
+spawn_num = 3
+
+[spawn_army@advanced]
+spawn_squads = army_sim_squad_novice, army_sim_squad_advanced
+spawn_num = 3
+
+[exclusive]
+atp_blokpost_camp_work_1 = atp\atp_blokpost_smart_logic.ltx
+atp_blokpost_camp_work_2 = atp\atp_blokpost_smart_logic.ltx
+atp_blokpost_camp_work_3 = atp\atp_blokpost_smart_logic.ltx
+atp_blokpost_camp_work_4 = atp\atp_blokpost_smart_logic.ltx

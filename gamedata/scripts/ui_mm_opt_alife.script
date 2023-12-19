@@ -1,0 +1,121 @@
+class "opt_alife"(CUIWindow)
+
+function opt_alife:__init()
+  super()
+end
+
+function opt_alife:__finalize()
+end
+
+function opt_alife:InitControls(x, y, xml, handler)
+  self:SetWndPos(vector2():set(x, y))
+  self:SetWndSize(vector2():set(738, 416))
+  self:SetAutoDelete(true)
+
+  handler.alife_config = ini_file_ex("alife.ltx", true)
+  handler.alife_config_section = "alife"
+
+  self.scroll_v = xml:InitScrollView("tab_alife:scroll_v", self)
+  handler.alife_scroll_v = self.scroll_v
+
+  local btn = xml:Init3tButton("tab_alife:btn_default", self)
+  handler:Register(btn, "btn_reset_to_default")
+
+  local g_list_1 = {
+    ws_self = {x = 195},
+    self = {x = 195},
+    ws_label = {x = 15},
+    label = {x = 15}
+  }
+  local g_list_2 = {
+    ws_self = {x = 465},
+    self = {x = 465},
+    ws_label = {x = 285},
+    label = {x = 285}
+  }
+
+  handler.options.alife = {
+    {
+      geometry = {ws_self = {height = 10}, self = {height = 10}},
+      typ = "empty"
+    },
+    {
+      {
+        id = "autosave_interval",
+        default = "01:05:00",
+        geometry = g_list_1,
+        typ = "input"
+      },
+      {
+        id = "switch_distance",
+        default = 250,
+        geometry = g_list_2,
+        tag = "list_4_axr",
+        typ = "list",
+        list = {
+          from = 30,
+          to = 1000,
+          step = 10
+        }
+      }
+    },
+    {
+      {
+        id = "delay_autosave_interval",
+        default = "00:00:30",
+        geometry = g_list_1,
+        typ = "input"
+      },
+      {
+        id = "switch_factor",
+        default = 0.1,
+        geometry = g_list_2,
+        tag = "list_4_axr",
+        typ = "list",
+        list = {
+          from = 0.1,
+          to = 1,
+          step = 0.1
+        }
+      }
+    },
+    {
+      {
+        id = "objects_per_update",
+        default = 120,
+        geometry = g_list_1,
+        tag = "list_4_axr",
+        typ = "list",
+        list = {
+          from = 10,
+          to = 500,
+          step = 10
+        }
+      },
+      {
+        id = "update_monster_factor",
+        default = 0.1,
+        geometry = g_list_2,
+        tag = "list_4_axr",
+        typ = "list",
+        list = {
+          from = 0.1,
+          to = 1,
+          step = 0.1
+        }
+      }
+    },
+    {
+      id = "time_factor",
+      default = 10,
+      geometry = g_list_1,
+      tag = "list_4_axr",
+      typ = "list",
+      list = {
+        from = 1,
+        to = 20,
+        step = 1
+      }
+    }
+  }
+end

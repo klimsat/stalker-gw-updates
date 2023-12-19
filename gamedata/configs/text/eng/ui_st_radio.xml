@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+
+	<!-- PDA -->
+	<string id="pda_btn_radio">
+		<text>Radio</text>
+	</string>
+	<string id="pda_btn_radio_title">
+		<text>Radio</text>
+	</string>
+	<string id="pda_btn_plyr_title">
+		<text>Music Player</text>
+	</string>
+	<string id="pda_btn_radio_hint">
+		<text>Show the radio and music player</text>
+	</string>
+	<string id="ui_st_radio_playing">
+		<text>Playing</text>
+	</string>
+	<string id="ui_st_radio_playlist">
+		<text>Playlist</text>
+	</string>
+	<string id="ui_st_radio_loop_off">
+		<text>Loop Off</text>
+	</string>
+	<string id="ui_st_radio_loop_all">
+		<text>Loop All</text>
+	</string>
+	<string id="ui_st_radio_loop_one">
+		<text>Loop One</text>
+	</string>
+	<string id="ui_st_radio_shuffle_on">
+		<text>Shuffle On</text>
+	</string>
+	<string id="ui_st_radio_shuffle_off">
+		<text>Shuffle Off</text>
+	</string>
+	
+	
+	<!-- Options -->
+	<string id="ui_mm_radio_access">
+		<text>Button to access Radio options menu</text>
+	</string>
+	<string id="ui_mm_radio_access_call">
+		<text>Button to call up the Radio settings.txt menu</text>
+	</string>
+	<string id="ui_mm_radio_1_play">
+		<text>Play / Stop the Radio</text>
+	</string>
+	<string id="ui_mm_radio_2_play">
+		<text>Play / Stop the Music Player</text>
+	</string>
+	<string id="ui_mm_radio_vol_up">
+		<text>Volume-Up button</text>
+	</string>
+	<string id="ui_mm_radio_vol_down">
+		<text>Volume-Down button</text>
+	</string>
+	<string id="ui_mm_radio_next">
+		<text>Next Track</text>
+	</string>
+	<string id="ui_mm_radio_previous">
+		<text>Previous Track</text>
+	</string>
+	<string id="ui_mm_radio_playlist">
+		<text>Next Channel / Playlist</text>
+	</string>
+	<string id="ui_mm_radio_lost_emission">
+		<text>Lost signal on emissions</text>
+	</string>
+	<string id="ui_mm_radio_lost_lab">
+		<text>Lost signal in underground areas</text>
+	</string>
+	<string id="ui_mm_radio_display_names">
+		<text>Display name of music player tracks on the HUD</text>
+	</string>
+	
+	<string id="ui_mm_radio_spacing_1">
+		<text>-(Hotkeys)-</text>
+	</string>
+	<string id="ui_mm_radio_spacing_2">
+		<text>-(Immersion)-</text>
+	</string>
+	<string id="ui_mm_radio_spacing_3">
+		<text>-(Playlist name)-</text>
+	</string>
+	<string id="ui_mm_radio_playlist_name">
+		<text>Name of playlist</text>
+	</string>
+	
+</string_table>

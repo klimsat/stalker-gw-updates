@@ -1,0 +1,33 @@
+[smart_terrain];sci_vobash
+squad_id = 17
+max_population = 14
+respawn_params = respawn@sci_vobash
+respawn_idle = 60000
+
+
+[respawn@sci_vobash]
+spawn_military@novice
+spawn_military@advanced
+spawn_military@sniper
+
+[spawn_military@novice]
+spawn_squads = army_sim_squad_novice
+spawn_num = 3
+
+[spawn_military@advanced]
+spawn_squads = army_sim_squad_novice, army_sim_squad_advanced
+spawn_num = 3
+
+[spawn_military@sniper]
+spawn_squads = army_sim_squad_sniper, army_sim_squad_advanced
+spawn_num = 3
+
+[exclusive]
+sci_vobash_camp_work_1 = science\sci_vobash_smart_logic.ltx
+sci_vobash_camp_work_2 = science\sci_vobash_smart_logic.ltx
+sci_vobash_camp_work_3 = science\sci_vobash_smart_logic.ltx
+sci_vobash_camp_work_4 = science\sci_vobash_smart_logic.ltx
+sci_vobash_camp_work_5 = science\sci_vobash_smart_logic.ltx
+sci_vobash_camp_work_6 = science\sci_vobash_smart_logic.ltx
+sci_vobash_camp_work_7 = science\sci_vobash_smart_logic.ltx
+sci_vobash_camp_work_8 = science\sci_vobash_smart_logic.ltx

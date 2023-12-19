@@ -1,0 +1,23 @@
+[smart_terrain];hgr_mutants
+squad_id = 10
+max_population = 14
+respawn_params = respawn@hgr_mutants
+respawn_idle = 60000
+
+
+[respawn@hgr_mutants]
+spawn_military@novice
+spawn_military@advanced
+spawn_military@sniper
+
+[spawn_military@novice]
+spawn_squads = army_sim_squad_novice
+spawn_num = 3
+
+[spawn_military@advanced]
+spawn_squads = army_sim_squad_novice, army_sim_squad_advanced
+spawn_num = 3
+
+[spawn_military@sniper]
+spawn_squads = army_sim_squad_sniper, army_sim_squad_advanced
+spawn_num = 3

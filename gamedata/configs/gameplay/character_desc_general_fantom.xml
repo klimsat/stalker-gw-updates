@@ -1,0 +1,186 @@
+<specific_character id="sim_default_fantom_leader_echo" team_default = "1">
+    <name>Мираж</name>
+    <icon>ui_inGame2_fantom_4_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Лидер Фантомов.</bio>
+    <class>sim_default_fantom_leader_echo</class>
+    <community>fantom</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\fantom\</snd_config>
+    <rank>21750</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_fantom\fantom_leader</visual>
+    <money min="42000" max="121750" infinitive="0"/>
+    <supplies>
+    [spawn] \n
+    wpn_val = 1 \n
+    ammo_9x39_ap = 2 \n
+    wpn_sig220 \n
+    ammo_11.43x23_fmj = 2 \n
+    grenade_f1 = 8 \n
+    medkit = 10 \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs_leaders.xml"
+    <actor_dialog>dialog_leader_fantom</actor_dialog>
+</specific_character>
+
+<specific_character id="fantom_gas_2_0_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_fantom_gas_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_fantom_zelen_0</class>
+    <community>fantom</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\fantom\</snd_config>
+    <rank>1500</rank>
+    <reputation>0</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_fantom\fantom_gas_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="fantom_gas_2_0_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_fantom_gas_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_fantom_0</class>
+    <community>fantom</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\fantom\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_fantom\fantom_gas_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="fantom_gas_2_0_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_fantom_gas_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_fantom_1</class>
+    <community>fantom</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\fantom\</snd_config>
+    <rank>5000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_fantom\fantom_gas_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="fantom_seva_2_0_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_fantom_seva_2_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_fantom_2</class>
+    <community>fantom</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\fantom\</snd_config>
+    <rank>7000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_fantom\fantom_seva_2_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="fantom_seva_2_1_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_fantom_seva_2_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_fantom_2</class>
+    <community>fantom</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\fantom\</snd_config>
+    <rank>7000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_fantom\fantom_seva_2_1</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="fantom_4_0_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_fantom_4_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_fantom_3</class>
+    <community>fantom</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\fantom\</snd_config>
+    <rank>9000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_fantom\fantom_4_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="fantom_exo_4_0_default_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_fantom_exo_4_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_fantom_4</class>
+    <community>fantom</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\fantom\</snd_config>
+    <rank>11000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="30000" infinitive="0"/>
+    <visual>actors\stalker_fantom\fantom_exo_4_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="fantom_exo_4_0_default_5" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_fantom_exo_4_0</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>sim_default_fantom_5</class>
+    <community>fantom</community>
+	<terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\fantom\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <money min="500" max="50000" infinitive="0"/>
+    <visual>actors\stalker_fantom\fantom_exo_4_0</visual>
+    <supplies>
+        [spawn] \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>

@@ -1,0 +1,18 @@
+[smart_terrain]
+squad_id = 1
+max_population = 5
+respawn_params = respawn@fsk_camp
+respawn_idle = 60000
+
+
+[respawn@fsk_camp]
+spawn_monolith
+
+[spawn_monolith]
+spawn_squads = monolith_sim_squad_advanced, monolith_sim_squad_veteran, monolith_sim_squad_sniper, monolith_sim_squad_sniper
+spawn_num = 2
+
+[exclusive]
+fsk_camp_camp_work_1 = fake_start\fsk_camp_smart_logic.ltx
+fsk_camp_camp_work_2 = fake_start\fsk_camp_smart_logic.ltx
+fsk_camp_camp_work_3 = fake_start\fsk_camp_smart_logic.ltx

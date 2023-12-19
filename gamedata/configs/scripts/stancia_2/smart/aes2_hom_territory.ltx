@@ -1,0 +1,20 @@
+[smart_terrain]
+squad_id = 2
+max_population = 5
+respawn_params = respawn@aes2_hom_territory
+respawn_idle = 60000
+
+
+
+[respawn@aes2_hom_territory]
+spawn_monolith
+
+[spawn_monolith]
+spawn_squads = monolith_sim_squad_advanced, monolith_sim_squad_veteran, monolith_sim_squad_sniper, monolith_sim_squad_sniper
+spawn_num = 2
+
+[exclusive]
+aes2_hom_territory_camp_work_1 = stancia_2\logic_for_smart\aes2_hom_territory_smart_logic.ltx
+aes2_hom_territory_camp_work_2 = stancia_2\logic_for_smart\aes2_hom_territory_smart_logic.ltx
+aes2_hom_territory_camp_work_3 = stancia_2\logic_for_smart\aes2_hom_territory_smart_logic.ltx
+aes2_hom_territory_camp_work_4 = stancia_2\logic_for_smart\aes2_hom_territory_smart_logic.ltx

@@ -1,0 +1,461 @@
+;---------------------------------------------------------------------------------------------
+;		Плащ Ренегата
+;---------------------------------------------------------------------------------------------
+[renegate_trenchcoat_outfit]:outfit_novice_base
+$spawn                                   = "outfit\renegate_trenchcoat_outfit"
+visual                                   = dynamics\outfit\novice_outfit
+actor_visual                             = actors\stalker_renegate\stalker_renegade_5_2.ogf
+npc_visual                               = actors\stalker_renegate\stalker_renegade_5_2.ogf
+player_hud_section                       = actor_hud_bandit_trench
+
+
+inv_name                                 = renegate_trenchcoat_outfit_name
+inv_name_short                           = renegate_trenchcoat_outfit_name
+description                              = renegate_trenchcoat_outfit_description
+inv_weight                               = 1.5
+
+inv_grid_height    = 3
+inv_grid_x         = 16
+inv_grid_y         = 31
+
+upgr_icon_x                              = 636
+upgr_icon_y                              = 0
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+
+cost                                     = 1500
+
+immunities_sect                          = sect_trenchcoat_outfit_immunities
+
+; NO RESISTANCE
+burn_protection                          = 0.0233
+shock_protection                         = 0.0933
+radiation_protection                     = 0.0035
+chemical_burn_protection                 = 0.0233
+telepatic_protection                     = 0.0
+strike_protection                        = 0.0350
+explosion_protection                     = 0.0350
+wound_protection                         = 0.0350
+
+bones_koeff_protection                   = actor_armor_trench
+
+character_portrait							 = ui_inGame2_renegate_14
+
+[sect_renegate_trenchcoat_outfit_immunities]
+burn_immunity                            = 0.05	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.05
+wound_immunity                           = 0.05
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.05
+explosion_immunity                       = 0.05
+fire_wound_immunity                      = 0.02
+
+[sect_renegate_trenchcoat_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.005
+
+;---------------------------------------------------------------------------------------------
+;       Куртка Ренегата
+;---------------------------------------------------------------------------------------------
+[renegate_novice_outfit]:outfit_novice_base
+$spawn                                   = "outfit\renegate_novice_outfit"
+visual                                   = dynamics\outfit\cs_rookie_outfit
+actor_visual                             = actors\stalker_renegate\renegate_mask_0_0.ogf
+npc_visual                               = actors\stalker_renegate\renegate_mask_0_0.ogf
+player_hud_section                       = actor_hud_bandit_novice
+
+
+inv_name                                 = renegate_novice_outfit_name
+inv_name_short                           = renegate_novice_outfit_name
+description                              = renegate_novice_outfit_description
+
+inv_grid_x         = 52
+inv_grid_y         = 32
+
+upgr_icon_x                              = 1239
+upgr_icon_y                              = 340
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+
+cost                                     = 1900
+
+character_portrait						 = ui_inGame2_renegate_3
+
+upgrades                                 = up_gr_firstab_rookie_outfit, up_gr_seconab_rookie_outfit, up_gr_thirdab_rookie_outfit
+
+;---------------------------------------------------------------------------------------------
+;		Джентльмен Удачи
+;---------------------------------------------------------------------------------------------
+[renegate_outfit]:outfit_base
+$spawn                                   = "outfit\renegate_outfit"
+visual                                   = dynamics\outfit\banditmerc_outfit
+actor_visual                             = actors\stalker_renegate\renegate_mask_2_0.ogf
+npc_visual                               = actors\stalker_renegate\renegate_mask_2_0.ogf
+player_hud_section                       = actor_hud_bandit_merc
+
+ef_equipment_type                        = 3
+
+inv_name                                 = renegate_outfit_name
+inv_name_short                           = renegate_outfit_name
+description                              = renegate_outfit_description
+
+inv_weight                               = 11.0
+
+inv_grid_x                               = 16
+inv_grid_y                               = 14
+
+upgr_icon_x                              = 1248
+upgr_icon_y                              = 35
+upgr_icon_width                          = 300
+upgr_icon_height                         = 130
+full_icon_name                           = npc_icon_bandit_specops_outfit
+
+cost                                     = 16000
+full_scale_icon                          = 4,6	                                       ;иконка сталкера в костюме в полный рост
+power_loss                               = 0.8
+immunities_sect                          = sect_renegate_specops_outfit_immunities
+
+; LOW RESISTANCE
+burn_protection                          = 0.0333
+shock_protection                         = 0.1333
+radiation_protection                     = 0.0050
+chemical_burn_protection                 = 0.0333
+telepatic_protection                     = 0.0
+strike_protection                        = 0.2275
+explosion_protection                     = 0.2275
+wound_protection                         = 0.2275
+
+hit_fraction_actor                       = 0.5
+bones_koeff_protection                   = actor_armor_berill
+
+artefact_count                           = 0
+control_inertion_factor                  = 1.5
+
+upgrades                                 = up_gr_firstab_specops_outfit, up_gr_seconab_specops_outfit, up_gr_thirdab_specops_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_specops
+character_portrait						 = ui_inGame2_renegate_18
+
+[sect_renegate_specops_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_renegate_specops_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		Научный Комбенизон "Ренегат"
+;---------------------------------------------------------------------------------------------
+[renegate_scientific_outfit]:outfit_scientific_base
+$spawn                                   = "outfit\renegate_scientific_outfit"
+visual                                   = dynamics\outfit\scientific_outfit
+actor_visual                             = actors\stalker_neutral\stalker_neutral_seva_2.ogf
+npc_visual                               = actors\stalker_neutral\stalker_neutral_seva_2.ogf
+player_hud_section                       = actor_hud_loner_seva
+
+inv_name                                 = renegate_scientific_outfit_name
+inv_name_short                           = renegate_scientific_outfit_name
+description                              = renegate_scientific_outfit_description
+
+inv_weight                               = 11.0
+
+inv_grid_x                               = 6
+inv_grid_y                               = 18
+
+upgr_icon_x                              = 646
+upgr_icon_y                              = 172
+upgr_icon_width                          = 285
+upgr_icon_height                         = 159
+
+cost                                     = 30000
+full_scale_icon                          = 12,11	                                       ;иконка сталкера в костюме в полный рост
+
+upgrades                                 = up_gr_firstab_dolg_scientific_outfit, up_gr_seconab_dolg_scientific_outfit, up_gr_thirdab_dolg_scientific_outfit, up_gr_fourtab_dolg_scientific_outfit, up_gr_fifthab_dolg_scientific_outfit
+
+immunities_sect                          = sect_dolg_scientific_outfit_immunities
+
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0933
+shock_protection                         = 0.3733
+radiation_protection                     = 0.0140
+chemical_burn_protection                 = 0.0933
+telepatic_protection                     = 0.0588
+strike_protection                        = 0.2100
+explosion_protection                     = 0.2100
+wound_protection                         = 0.2100
+
+hit_fraction_actor                       = 0.65
+bones_koeff_protection                   = actor_armor_duty_seva
+
+artefact_count                           = 0
+
+nightvision_sect                         = effector_nightvision_2
+
+control_inertion_factor                  = 1.5
+power_loss                               = 0.85
+character_portrait						 = ui_inGame2_renegate_20
+
+[sect_renegate_scientific_outfit_immunities]
+burn_immunity                            = 0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = 0.03
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.0
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.02
+
+[sect_renegate_scientific_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.0
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		Экзоскелет Скорпион
+;---------------------------------------------------------------------------------------------
+[renegate_exo_outfit]:outfit_exo_base
+$spawn                                   = "outfit\renegate_exo_outfit"
+visual                                   = dynamics\outfit\bandit_exo_outfit
+actor_visual                             = actors\stalker_renegate\renegate_exo_4_0.ogf
+npc_visual                               = actors\stalker_renegate\renegate_exo_4_0.ogf
+player_hud_section                       = wpn_hand_exo_renegate
+
+inv_name                                 = renegate_exo_outfit_name
+inv_name_short                           = renegate_exo_outfit_name
+description                              = renegate_exo_outfit_description
+
+inv_weight                               = 22.0
+
+inv_grid_width     = 2
+inv_grid_height    = 3
+inv_grid_x         = 50
+inv_grid_y         = 18
+
+upgr_icon_x                              = 2500
+upgr_icon_y                              = 0
+upgr_icon_width                          = 350
+upgr_icon_height                         = 200
+
+cost                                     = 105000
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+strike_protection                        = 0.2975
+explosion_protection                     = 0.2975
+wound_protection                         = 0.2975
+
+bones_koeff_protection                   = actor_armor_bandit_exo
+
+power_loss                               = 1.05
+additional_inventory_weight              = 30
+additional_inventory_weight2             = 30
+artefact_count                           = 1
+helmet_avaliable					= false
+
+character_portrait						 = ui_inGame2_renegate_23
+
+;---------------------------------------------------------------------------------------------
+;		Полуэкзоскелет Скорпион
+;---------------------------------------------------------------------------------------------
+[renegate_radiation_outfit]:outfit_exo_base
+$spawn							= "outfit\renegate_radiation_outfit"
+visual							= dynamics\outfit\velhan_poluexo
+actor_visual						= actors\stalker_renegate\renegate_4_0
+player_hud_section					= act_hand_rad_renegate
+
+inv_name						= renegate_radiation_outfit_name
+inv_name_short					= renegate_radiation_outfit_name
+description						= renegate_radiation_outfit_description
+
+inv_weight							= 15.0
+
+inv_grid_width     = 2
+inv_grid_height    = 3
+inv_grid_x         = 52
+inv_grid_y         = 18
+
+upgr_icon_x							= 1857
+upgr_icon_y							= 507
+upgr_icon_width						= 293
+upgr_icon_height					= 157
+
+cost								= 55000
+
+helmet_avaliable					= false
+power_loss							= 0.9
+control_inertion_factor				= 2.5
+sprint_allowed						= true
+additional_inventory_weight			= 30
+additional_inventory_weight2		= 30
+
+upgrades                                 = up_gr_firstab_merc_rad_outfit, up_gr_seconab_merc_rad_outfit, up_gr_thirdab_merc_rad_outfit, up_gr_fourtab_merc_rad_outfit, up_gr_fifthab_merc_rad_outfit
+
+[sect_renegate_radiation_outfit_immunities]
+burn_immunity                            = 0.005	                                       ;eiyooeoeaiou eiioieoaoa naiiai eino?ia
+strike_immunity                          = 0.0
+shock_immunity                           = 0.005
+wound_immunity                           = 0.005
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.005
+explosion_immunity                       = 0.005
+fire_wound_immunity                      = 0.005
+
+[sect_renegate_radiation_outfit_immunities_add]
+burn_immunity                            = -0.0005	                                       ;eiyooeoeaiou eiioieoaoa naiiai eino?ia
+strike_immunity                          = 0.0
+shock_immunity                           = -0.0005
+wound_immunity                           = -0.0005
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.0005
+explosion_immunity                       = -0.0005
+fire_wound_immunity                      = -0.0005
+
+character_portrait						 = ui_inGame2_renegate_22
+;---------------------------------------------------------------------------------------------
+;		Leader Renegate Outfit
+;---------------------------------------------------------------------------------------------
+[leader_renegate_outfit]:outfit_base
+$spawn                                   = "outfit\leader_renegate_outfit"
+visual                                   = dynamics\outfit\bandit_exo_outfit
+actor_visual                             = actors\stalker_renegate\renegate_leader.ogf
+npc_visual                               = actors\stalker_renegate\renegate_leader.ogf
+player_hud_section                       = wpn_hand_exo_renegate
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_renegate_outfit_name
+inv_name_short                           = leader_renegate_outfit_name
+description                              = leader_renegate_outfit_description
+
+inv_weight                               = 12
+
+inv_grid_x         						 = 50
+inv_grid_y        						 = 18
+
+upgr_icon_x                              = 2500
+upgr_icon_y                              = 0
+upgr_icon_width                          = 350
+upgr_icon_height                         = 200
+
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 235790
+
+full_scale_icon                          = 14,11
+
+immunities_sect                          = sect_leader_renegate_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0697
+shock_protection                         = 0.3416
+radiation_protection                     = 0.0118
+chemical_burn_protection                 = 0.0791
+telepatic_protection                     = 0.1110
+strike_protection                        = 0.4968
+explosion_protection                     = 0.4968
+wound_protection                         = 0.4968
+
+fire_wound_protection                    = 0.2500
+
+hit_fraction_actor                       = 0.15
+control_inertion_factor                  = 2.5
+bones_koeff_protection                   = renegate_leader
+
+nightvision_sect 			             = effector_nightvision_2
+
+power_restore_speed                      = 0.005
+power_loss                               = 0.85
+
+additional_inventory_weight              = 60
+additional_inventory_weight2             = 60
+
+artefact_count                           = 5
+
+helmet_avaliable						 = false
+
+character_portrait						 = ui_inGame2_renegate_23
+
+[sect_leader_renegate_outfit_immunities]
+burn_immunity            				 = 0.0050
+strike_immunity                          = 0.0050
+shock_immunity                           = 0.0200
+wound_immunity                           = 0.0050
+radiation_immunity                       = 0.0000
+telepatic_immunity                       = 0.0000
+chemical_burn_immunity                   = 0.0050
+explosion_immunity                       = 0.0050
+fire_wound_immunity                      = 0.0100
+;---------------------------------------------------------------------------------------------
+;OUTFIT IN AZAZEL MODE: Leader Renegate Outfit
+;---------------------------------------------------------------------------------------------
+[leader_azazel_renegate_outfit]:outfit_leader_exo_base
+$spawn                                   = "outfit\leader_azazel_renegate_outfit"
+visual                                   = dynamics\outfit\bandit_exo_outfit
+actor_visual                             = actors\stalker_renegate\renegate_leader.ogf
+npc_visual                               = actors\stalker_renegate\renegate_leader.ogf
+player_hud_section                       = wpn_hand_exo_renegate
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_renegate_outfit_name
+inv_name_short                           = leader_renegate_outfit_name
+description                              = leader_renegate_outfit_description
+
+inv_weight                               = 12
+
+inv_grid_x         						 = 50
+inv_grid_y        						 = 18
+
+upgr_icon_x                              = 2500
+upgr_icon_y                              = 0
+upgr_icon_width                          = 350
+upgr_icon_height                         = 200
+
+cost                                     = 235790
+
+artefact_count                           = 1
+
+helmet_avaliable						 = false
+
+sprint_allowed							 = true
+
+power_loss                               = 0.75
+
+character_portrait						 = ui_inGame2_renegate_23

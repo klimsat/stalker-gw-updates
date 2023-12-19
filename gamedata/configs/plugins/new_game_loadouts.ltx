@@ -1,0 +1,332 @@
+
+;; ===========================< Loadout >=============================
+;; To add items in the item lists:
+;; -------------------------------
+;; add a new line: "item_section			= value_1,value_2,value3" under the correct section below
+;; "item_section": is the section name of the your item
+;; "value_1": (boolean  value, must be true or false) determines wether this item should be added to player's inventory list (false) or to the loadout pick list (true)
+;; "value_2": (number) the amount of the said item
+;; "value_3": (number) how many points it requires
+;; ========================================================
+;; put your custom items under "custom" section, they will always appear to pick from
+
+
+[points]
+total_points = 4000
+
+
+[custom]	
+
+
+[shared]:custom
+device_torch 			= false,1,0
+wpn_binoc 				= false,1,0
+wpn_knife 				= false,1,0
+medkit 					= true,5,500
+medkit_army				= true,3,1000
+medkit_scientic			= true,2,1500
+medkit_elite            = true,1,2000
+bandage					= true,10,250
+bio_bandage             = true,5,500
+antirad					= true,5,250
+energy_drink            = true,5,250
+drug_booster            = true,3,250
+drug_anabiotic          = true,5,250
+cev_plastin_1           = true,3,1000
+cev_plastin_2           = true,1,2000
+cev_plastin_3           = true,1,3000
+detector_advanced       = true,1,2000
+detector_elite          = true,1,3000
+af_medusa               = true,1,2500
+af_fireball		= true,1,2500
+af_night_star           = true,1,2500
+af_soul                 = true,1,2500
+af_dummy_battery        = true,1,2500
+itm_gunsmith_toolkit    = true,1,2000
+itm_outfit_toolkit      = true,1,1000
+itm_sleepbag            = true,1,100
+1p29                    = true,1,1000
+ac10632                 = true,1,1000
+ac11090                 = true,1,1000  
+acog                    = true,1,1000
+c-more                  = true,1,1000
+docter_sight            = true,1,1000
+ekp                     = true,1,1000
+eot                     = true,1,1000
+kobra                   = true,1,1000
+pso                     = true,1,1000
+pu                      = true,1,1000
+
+
+
+[stalker_loadout]:shared
+novice_outfit    		= false,1,0
+helm_facemask           = false,1,0
+wpn_toz34_so            = false,1,0
+wpn_pm     				= false,1,0
+
+[bandit_loadout]:shared
+bandit_novice_outfit 	= false,1,0
+helm_facemask           = false,1,0
+wpn_pp2000              = false,1,0
+wpn_pmm		        	= false,1,0
+ammo_9x18_fmj           = false,2,0
+
+[ecolog_loadout]:shared
+ecolog_guard_outfit 	= false,1,0
+helm_respirator_half    = false,1,0
+wpn_fort				= false,1,0
+ammo_9x18_fmj           = false,2,0
+
+[dolg_loadout]:shared
+dolg_novice_outfit 		= false,1,0
+helm_respirator_half    = false,1,0
+wpn_bizon               = false,1,0
+wpn_fort				= false,1,0
+ammo_9x18_fmj           = false,3,0
+
+[freedom_loadout]:shared
+svoboda_novice_outfit   = false,1,0
+helm_respirator_half    = false,1,0
+wpn_mp5	                = false,1,0
+wpn_fort				= false,1,0
+ammo_9x19_fmj           = false,2,0
+
+[killer_loadout]:shared
+merc_outfit             = false,1,0
+helm_m40                = false,1,0
+wpn_mp5			        = false,1,0
+wpn_beretta    			= false,1,0
+wpn_addon_silencer      = false,2,0
+ammo_9x19_fmj           = false,2,0
+
+[army_loadout]:shared
+army_outfit 	        = false,1,0
+helm_hardhat            = false,1,0
+wpn_ak74u               = false,1,0
+wpn_fort                = false,1,0
+ammo_5.45x39_fmj 		= false,4,0
+
+[monolith_loadout]:shared
+monolith_outfit         = false,1,0
+helm_respirator         = false,1,0
+wpn_ak74                = false,1,0
+wpn_glock17             = false,1,0
+ammo_5.45x39_fmj 		= false,4,0
+
+[csky_loadout]:shared
+cs_novice_outfit        = false,1,0
+helm_facemask           = false,1,0
+wpn_mp5                 = false,1,0
+wpn_pmm                 = false,1,0
+ammo_9x19_fmj           = false,2,0
+
+[zombied_loadout]:shared
+zombied_novice_outfit   = false,1,0
+wpn_bizon               = false,1,0
+wpn_pmm                 = false,1,0
+ammo_9x18_fmj           = false,3,0
+
+[renegate_loadout]:shared
+renegate_novice_outfit	= false,1,0
+helm_facemask           = false,1,0
+wpn_pm	                = false,1,0
+wpn_pp2000              = false,1,0
+ammo_9x18_fmj           = false,2,0
+
+[hunter_loadout]:shared
+hunter_outfit           = false,1,0
+helm_facemask           = false,1,0
+wpn_bm16                = false,1,0
+wpn_crossbow            = false,1,0
+ammo_crossbow_bolt      = false,10,0
+
+[fantom_loadout]:shared
+fantom_outfit           = false,1,0
+helm_m40_c-more         = false,1,0
+wpn_lr300               = false,1,0
+ammo_5.56x45_ss190      = false,5,0
+
+[isg_loadout]:shared
+isg_novice_outfit		= false,1,0
+helm_respirator_2       = false,1,0
+wpn_mp7		        	= false,1,0
+wpn_glock20             = false,1,0
+ammo_4.6x30_fmj         = false,5,0
+ammo_9x19_fmj           = false,1,0
+
+[darkstalker_loadout]:shared
+darkstalker_trenchcoat_outfit	= false,1,0
+helm_facemask           = false,1,0
+wpn_ak74	       		= false,1,0
+wpn_pb                  = false,1,0
+ammo_5.45x39_fmj 		= false,4,0
+
+[angel_loadout]:shared
+angel_light_outfit	 = false,1,0
+wpn_sig550 = false,1,0
+ammo_5.56x45_ss190 = false,4,0
+wpn_colt1911 = false,1,0
+ammo_11.43x23_hydro = false,1,0
+
+[varyag_loadout]:shared
+varyag_1_outfit         = false,1,0
+helm_respirator_2       = false,1,0
+wpn_abakan	        = false,1,0
+wpn_pmm                 = false,1,0
+ammo_5.45x39_fmj        = false,4,0
+
+[slizni_loadout]:shared
+slizni_novice_outfit	= false,1,0
+helm_facemask           = false,1,0
+wpn_pmm                 = false,1,0
+ammo_9x18_fmj           = false,4,0
+
+[velhan_loadout]:shared
+velhan_trenchcoat_brown_outfit	= false,1,0
+helm_facemask           = false,1,0
+wpn_l85	                = false,1,0
+wpn_beretta             = false,1,0
+ammo_5.56x45_ss190      = false,4,0
+
+[veter_loadout]:shared
+veter_novice_outfit		= false,1,0
+helm_respirator_gp5     = false,1,0
+wpn_mp5	                = false,1,0
+wpn_pb                  = false,1,0
+ammo_9x19_fmj           = false,2,0
+
+[osoznanie_loadout]:shared
+osoznanie_outfit        = false,1,0
+wpn_gauss        	= false,1,0
+wpn_fiveseven           = false,1,0
+ammo_gauss		= false,1,0
+ammo_5.7x28_ss190       = false,2,0
+
+[alfa_loadout]:shared
+alfa_outfit	        	= false,1,0
+helm_hardhat            = false,1,0
+wpn_bizon	        = false,1,0
+wpn_beretta             = false,1,0
+ammo_9x18_fmj           = false,3,0
+
+[apocalypse_loadout]:shared
+apocalypse_novice_outfit = false,1,0
+helm_m40            	= false,1,0
+wpn_colt_m4         	= false,1,0
+wpn_colt1911            = false,1,0
+ammo_5.56x45_ss190      = false,2,0
+
+[adinkvizicia_loadout]:shared
+adinkvizicia_outfit     = false,1,0
+wpn_lr300               = false,1,0
+wpn_beretta             = false,1,0
+ammo_5.56x45_ap         = false,4,0
+
+[voenstal_loadout]:shared
+voenstal_stalker_outfit	= false,1,0
+helm_hardhat            = false,1,0
+wpn_abakan              = false,1,0
+wpn_fort                = false,1,0
+ammo_5.45x39_ap         = false,4,0
+
+[mirotvorec_loadout]:shared
+mirotvorec_stalker_outfit = false,1,0
+helm_m40                = false,1,0
+wpn_colt_m4         	= false,1,0
+wpn_glock17             = false,1,0
+ammo_5.56x45_ap         = false,4,0
+
+[ryskuspecnaz_loadout]:shared
+ryskuspecnaz_outfit     = false,1,0
+helm_hardhat            = false,1,0
+wpn_akms                = false,1,0
+wpn_pm                  = false,1,0
+ammo_7.62x39_ap         = false,4,0
+
+[sby_loadout]:shared
+sby_novice_specops_outfit = false,1,0
+helm_hardhat            = false,1,0
+wpn_aks74	        = false,1,0
+wpn_fort                = false,1,0
+ammo_5.45x39_fmj        = false,4,0
+
+[posleduden_loadout]:shared
+posleduden_novice_outfit = false,1,0
+helm_respirator_gp5      = false,1,0
+wpn_pp2000               = false,1,0
+wpn_pmm 	         	 = false,1,0
+ammo_9x18_fmj            = false,2,0
+
+[greh_loadout]:shared
+greh_trenchcoat_outfit = false,1,0
+helm_facemask          = false,1,0
+wpn_ak74m 	       	   = false,1,0
+wpn_beretta            = false,1,0
+ammo_5.45x39_fmj       = false,4,0
+
+
+
+;; ===========================< Money >=============================
+[stalker_money]
+money = 0
+[bandit_money]
+money = 0
+[ecolog_money]
+money = 0
+[dolg_money]
+money = 0
+[freedom_money]
+money = 0
+[killer_money]
+money = 0
+[army_money]
+money = 0
+[monolith_money]
+money = 0
+[csky_money]
+money = 0
+[zombied_money]
+money = 0
+[isg_money]
+money = 0
+[darkstalker_money]
+money = 0
+[terrorust_money]
+money = 0
+[varyag_money]
+money = 0
+[slizni_money]
+money = 0
+[velhan_money]
+money = 0
+[veter_money]
+money = 0
+[osoznanie_money]
+money = 0
+[alfa_money]
+money = 0
+[apocalypse_money]
+money = 0
+[adinkvizicia_money]
+money = 0
+[hunter_money]
+money = 0
+[voenstal_money]
+money = 0
+[mirotvorec_money]
+money = 0
+[ruskuspecnaz_money]
+money = 0
+[sby_money]
+money = 0
+[posleduden_money]
+money = 0
+[greh_money]
+money = 0
+[renegate_money]
+money = 0
+[fantom_money]
+money = 0
+[ryskuspecnaz_money]
+money = 0

@@ -1,0 +1,471 @@
+;---------------------------------------------------------------------------------------------
+;       Куртка Последний День
+;---------------------------------------------------------------------------------------------
+[posleduden_novice_outfit]:outfit_novice_base
+$spawn                                   = "outfit\posleduden_novice_outfit"
+visual                                   = dynamics\outfit\cs_rookie_outfit
+actor_visual                             = actors\stalker_neutral\stalker_neutral1c.ogf
+npc_visual                               = actors\stalker_neutral\stalker_neutral1c.ogf
+player_hud_section                       = actor_hud_bandit_novice
+
+
+inv_name                                 = posleduden_novice_outfit_name
+inv_name_short                           = posleduden_novice_outfit_name
+description                              = posleduden_novice_outfit_description
+
+inv_grid_height    = 3
+inv_grid_x         = 66
+inv_grid_y         = 34
+
+upgr_icon_x                              = 1239
+upgr_icon_y                              = 340
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+
+character_portrait						 = ui_inGame2_no_data
+
+upgrades                                 = up_gr_firstab_rookie_outfit, up_gr_seconab_rookie_outfit, up_gr_thirdab_rookie_outfit
+
+;---------------------------------------------------------------------------------------------
+;		Бронежилет ПД-1
+;---------------------------------------------------------------------------------------------
+[posleduden_light_novice_outfit]:outfit_base
+$spawn                                   = "outfit\posleduden_light_novice_outfit"
+visual                                   = dynamics\outfit\cs_light_outfit
+actor_visual                             = actors\stalker_posleduden\posleduden_mask_1_0.ogf
+npc_visual                               = actors\stalker_posleduden\posleduden_mask_1_0.ogf
+player_hud_section                       = actor_hud_cs1
+
+ef_equipment_type                        = 3
+
+inv_name                                 = posleduden_light_novice_outfit_name
+inv_name_short                           = posleduden_light_novice_outfit_name
+description                              = posleduden_light_novice_outfit_description
+inv_weight                               = 4.5
+
+inv_grid_x                               = 52
+inv_grid_y                               = 34
+
+upgr_icon_x                              = 1830
+upgr_icon_y                              = 215
+upgr_icon_width                          = 305
+upgr_icon_height                         = 131
+full_icon_name                           = npc_icon_svoboda_light_outfit
+
+cost                                     = 9500
+full_scale_icon                          = 10,11	                                       ;иконка сталкера в костюме в полный рост
+
+immunities_sect                          = sect_light_novice_outfit_immunities
+power_loss                               = 0.55
+
+; LOW RESISTANCE
+burn_protection                          = 0.0333
+shock_protection                         = 0.1333
+radiation_protection                     = 0.0050
+chemical_burn_protection                 = 0.0333
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1050
+explosion_protection                     = 0.1050
+wound_protection                         = 0.1050
+
+
+bones_koeff_protection                   = actor_armor_cs1
+hit_fraction_actor                       = 0.3
+artefact_count                           = 1
+control_inertion_factor                  = 1.2
+
+upgrades                                 = up_gr_firstab_cs_light_outfit, up_gr_seconab_cs_light_outfit, up_gr_thirdab_cs_light_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_svoboda_light_outfit
+character_portrait						 = ui_inGame2_no_data
+
+[sect_posleduden_light_novice_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.02
+
+[sect_posleduden_light_novice_outfit_immunities_add]
+burn_immunity                            = 0.02	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = 0.02
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.02
+explosion_immunity                       = 0.02
+fire_wound_immunity                      = 0.015
+
+;---------------------------------------------------------------------------------------------
+;		Бронежилет ПД-2
+;---------------------------------------------------------------------------------------------
+[posleduden_light_outfit]:outfit_base
+$spawn                                   = "outfit\posleduden_light_outfit"
+visual                                   = dynamics\outfit\cs_light_outfit
+actor_visual                             = actors\stalker_posleduden\posleduden_gas_2_0.ogf
+npc_visual                               = actors\stalker_posleduden\posleduden_gas_2_0.ogf
+player_hud_section                       = actor_hud_cs2
+
+ef_equipment_type                        = 3
+
+inv_name                                 = posleduden_light_outfit_name
+inv_name_short                           = posleduden_light_outfit_name
+description                              = posleduden_light_outfit_description
+inv_weight                               = 6.0
+
+inv_grid_x                               = 56
+inv_grid_y                               = 34
+
+upgr_icon_x                              = 1860
+upgr_icon_y                              = 35
+upgr_icon_width                          = 305
+upgr_icon_height                         = 131
+full_icon_name                           = npc_icon_svoboda_light_outfit
+
+cost                                     = 17000
+full_scale_icon                          = 10,11	                                       ;иконка сталкера в костюме в полный рост
+
+immunities_sect                          = sect_posleduden_light_outfit_immunities
+power_loss                               = 0.6
+
+; LOW RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1400
+explosion_protection                     = 0.1400
+wound_protection                         = 0.1400
+
+bones_koeff_protection                   = actor_armor_cs2
+hit_fraction_actor                       = 0.3
+artefact_count                           = 2
+control_inertion_factor                  = 1.2
+
+upgrades                                 = up_gr_firstab_cs_light_outfit, up_gr_seconab_cs_light_outfit, up_gr_thirdab_cs_light_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_svoboda_light_outfit
+character_portrait						 = ui_inGame2_no_data 
+
+[sect_posleduden_light_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.02
+
+[sect_posleduden_light_outfit_immunities_add]
+burn_immunity                            = 0.02	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = 0.02
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.02
+explosion_immunity                       = 0.02
+fire_wound_immunity                      = 0.015
+
+;---------------------------------------------------------------------------------------------
+;		Бронежилет ПД-3
+;---------------------------------------------------------------------------------------------
+[posleduden_medium_outfit]:outfit_base
+$spawn                                   = "outfit\posleduden_medium_outfit"
+visual                                   = dynamics\outfit\cs_medium_outfit
+actor_visual                             = actors\stalker_posleduden\posleduden_gas_3_0.ogf
+npc_visual                               = actors\stalker_posleduden\posleduden_gas_3_0.ogf
+player_hud_section                       = actor_hud_cs3a
+
+ef_equipment_type                        = 3
+
+inv_name                                 = posleduden_medium_outfit_name
+inv_name_short                           = posleduden_medium_outfit_name
+description                              = posleduden_medium_outfit_description
+
+inv_weight                               = 7.5
+
+inv_grid_x                               = 54
+inv_grid_y                               = 34
+
+upgr_icon_x                              = 4
+upgr_icon_y                              = 304
+upgr_icon_width                          = 305
+upgr_icon_height                         = 131
+full_icon_name                           = npc_icon_svoboda_heavy_outfit
+
+cost                                     = 19000
+full_scale_icon                          = 2,6	                                       ;иконка сталкера в костюме в полный рост
+
+immunities_sect                          = sect_posleduden_medium_outfit_immunities
+power_loss                               = 0.75
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0533
+shock_protection                         = 0.2133
+radiation_protection                     = 0.0080
+chemical_burn_protection                 = 0.0533
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1750
+explosion_protection                     = 0.1750
+wound_protection                         = 0.1750
+
+hit_fraction_actor                       = 0.35
+bones_koeff_protection                   = actor_armor_cs3
+
+artefact_count                           = 2
+control_inertion_factor                  = 1.5
+
+upgrades                                 = up_gr_firstab_cs_heavy_outfit, up_gr_seconab_cs_heavy_outfit, up_gr_thirdab_cs_heavy_outfit, up_gr_fourtab_cs_heavy_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_cs_heavy_outfit
+character_portrait						 = ui_inGame2_no_data
+
+[sect_posleduden_medium_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_posleduden_medium_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = -0.01
+shock_immunity                           = 0.0
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		Научный Комбинезон Последнего Дня
+;---------------------------------------------------------------------------------------------
+[posleduden_scientific_outfit]:outfit_scientific_base
+$spawn                                   = "outfit\posleduden_scientific_outfit"
+visual                                   = dynamics\outfit\cs_scientific_outfit
+actor_visual                             = actors\stalker_posleduden\posleduden_seva_3_0.ogf
+npc_visual                               = actors\stalker_posleduden\posleduden_seva_3_0.ogf
+player_hud_section                       = actor_hud_merc_seva
+
+inv_name                                 = posleduden_scientific_outfit_name
+inv_name_short                           = posleduden_scientific_outfit_name
+description                              = posleduden_scientific_outfit_description
+
+inv_weight                               = 12.5
+
+inv_grid_x         = 6
+inv_grid_y         = 33
+
+
+upgr_icon_x                              = 2506
+upgr_icon_y                              = 550
+upgr_icon_width                          = 294
+upgr_icon_height                         = 159
+
+cost                                     = 39000
+full_scale_icon                          = 12,11	                                       ;иконка сталкера в костюме в полный рост
+
+immunities_sect                          = sect_posleduden_scientific_outfit_immunities
+
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0933
+shock_protection                         = 0.3733
+radiation_protection                     = 0.0140
+chemical_burn_protection                 = 0.0933
+telepatic_protection                     = 0.0588
+strike_protection                        = 0.2100
+explosion_protection                     = 0.2100
+wound_protection                         = 0.2100
+
+hit_fraction_actor                       = 0.65
+bones_koeff_protection                   = actor_armor_duty_seva
+
+artefact_count                           = 0
+
+nightvision_sect                         = effector_nightvision_2
+
+control_inertion_factor                  = 1.5
+power_loss                               = 0.85
+character_portrait						 = ui_inGame2_no_data
+
+[sect_posleduden_scientific_outfit_immunities]
+burn_immunity                            = 0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = 0.03
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.0
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.02
+
+[sect_posleduden_scientific_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.0
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		Экзоскелет Последнего Дня
+;---------------------------------------------------------------------------------------------
+[posleduden_exo_outfit]:outfit_exo_base
+$spawn                                   = "outfit\posleduden_exo_outfit"
+visual                                   = dynamics\outfit\military_exo_outfit
+actor_visual                             = actors\stalker_posleduden\posleduden_exo_5_0.ogf
+npc_visual                               = actors\stalker_posleduden\posleduden_exo_5_0.ogf
+player_hud_section                       = actor_hud_merc_exo
+
+inv_name                                 = posleduden_exo_outfit_name
+inv_name_short                           = posleduden_exo_outfit_name
+description                              = posleduden_exo_outfit_description
+
+inv_weight                               = 23.0
+
+inv_grid_x         = 60
+inv_grid_y         = 27
+
+upgr_icon_x                              = 938
+upgr_icon_y                              = 1000
+upgr_icon_width                          = 296
+upgr_icon_height                         = 154
+
+cost                                     = 115000
+
+power_loss                               = 1.1
+additional_inventory_weight              = 30
+additional_inventory_weight2             = 30
+artefact_count                           = 3
+helmet_avaliable					= false
+
+character_portrait						 = ui_inGame2_no_data
+;---------------------------------------------------------------------------------------------
+;		Leader Posleduden Outfit
+;---------------------------------------------------------------------------------------------
+[leader_posleduden_outfit]:outfit_base
+$spawn                                   = "outfit\leader_posleduden_outfit"
+visual                                   = dynamics\outfit\leader_posleduden_blend_outfit
+actor_visual                             = actors\stalker_posleduden\posleduden_leader.ogf
+npc_visual                               = actors\stalker_posleduden\posleduden_leader.ogf
+player_hud_section                       = actor_hud_cs3a
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_posleduden_outfit_name
+inv_name_short                           = leader_posleduden_outfit_name
+description                              = leader_posleduden_outfit_description
+
+inv_weight                               = 13
+
+inv_grid_x                               = 74
+inv_grid_y                               = 43
+
+upgr_icon_x                              = 3760
+upgr_icon_y                              = 819
+upgr_icon_width                          = 320
+upgr_icon_height                         = 156
+
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 245790
+
+full_scale_icon                          = 14,11
+
+immunities_sect                          = sect_leader_posleduden_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0835
+shock_protection                         = 0.3975
+radiation_protection                     = 0.0139
+chemical_burn_protection                 = 0.0930
+telepatic_protection                     = 0.1133
+strike_protection                        = 0.5524
+explosion_protection                     = 0.5270
+wound_protection                         = 0.5270
+
+fire_wound_protection                    = 0.2550
+
+hit_fraction_actor                       = 0.15
+control_inertion_factor                  = 2.5
+bones_koeff_protection                   = posleduden_leader
+
+nightvision_sect 			             = effector_nightvision_2
+
+power_restore_speed                      = 0.005
+power_loss                               = 0.9
+
+additional_inventory_weight              = 60
+additional_inventory_weight2             = 60
+
+artefact_count                           = 5
+
+helmet_avaliable						 = false
+
+character_portrait						 = ui_inGame2_posleduden_9
+
+[sect_leader_posleduden_outfit_immunities]
+burn_immunity            				 = 0.0050
+strike_immunity                          = 0.0050
+shock_immunity                           = 0.0200
+wound_immunity                           = 0.0050
+radiation_immunity                       = 0.0000
+telepatic_immunity                       = 0.0000
+chemical_burn_immunity                   = 0.0050
+explosion_immunity                       = 0.0050
+fire_wound_immunity                      = 0.0100
+;---------------------------------------------------------------------------------------------
+;OUTFIT IN AZAZEL MODE: Leader Posleduden Outfit
+;---------------------------------------------------------------------------------------------
+[leader_azazel_posleduden_outfit]:outfit_leader_exo_base
+$spawn                                   = "outfit\leader_azazel_posleduden_outfit"
+visual                                   = dynamics\outfit\leader_posleduden_blend_outfit
+actor_visual                             = actors\stalker_posleduden\posleduden_leader.ogf
+npc_visual                               = actors\stalker_posleduden\posleduden_leader.ogf
+player_hud_section                       = actor_hud_cs3a
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_posleduden_outfit_name
+inv_name_short                           = leader_posleduden_outfit_name
+description                              = leader_posleduden_outfit_description
+
+inv_weight                               = 13
+
+inv_grid_x                               = 74
+inv_grid_y                               = 43
+
+upgr_icon_x                              = 3760
+upgr_icon_y                              = 819
+upgr_icon_width                          = 320
+upgr_icon_height                         = 156
+
+cost                                     = 245790
+
+artefact_count                           = 1
+
+helmet_avaliable						 = false
+
+sprint_allowed							 = true
+
+power_loss                               = 0.75
+
+character_portrait						 = ui_inGame2_posleduden_9

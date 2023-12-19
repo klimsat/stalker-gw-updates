@@ -1,0 +1,14 @@
+-- function called by xr_logic from logic files
+-- Not used
+function get_leader_smart_cover_name(actor, npc)
+  local npc_smart = xr_gulag.get_npc_smart(npc)
+
+  return npc_smart:name() .. "_leader"
+end
+
+-- Not used
+function get_explorer_smart_cover_name(actor, npc)
+  local npc_smart = xr_gulag.get_npc_smart(npc)
+
+  return npc_smart:name() .. "_explorer"
+end

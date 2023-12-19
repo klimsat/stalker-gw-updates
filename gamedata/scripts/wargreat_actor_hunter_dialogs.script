@@ -1,0 +1,350 @@
+local selFaction = nil
+
+local saved_dialog
+function add_dialog(p_id, id, phrase_id, cond, act)
+  if not (saved_dialog) then
+    return
+  end
+
+  local phrase = saved_dialog:AddPhrase(phrase_id, tostring(id), tostring(p_id), -10000)
+  if not (phrase) then
+    return
+  end
+
+  local phrase_script = phrase:GetPhraseScript()
+  if (cond) then
+    if (type(cond) == "table") then
+      for key, value in pairs(cond) do
+        if (alun_utils.findfunction(value, _G)) then
+          --table.insert(cond_list,value)
+          phrase_script:AddPrecondition(value)
+        else
+          printf("dialog_manager:Error: No such function exists '%s'", value)
+        end
+      end
+    else
+      if (alun_utils.findfunction(cond, _G)) then
+        --table.insert(cond_list,value)
+        phrase_script:AddPrecondition(cond)
+      else
+        printf("dialog_manager:Error: No such function exists '%s'", cond)
+      end
+    end
+  end
+
+  if (act) then
+    if (type(act) == "table") then
+      for key, value in pairs(act) do
+        if (alun_utils.findfunction(value, _G)) then
+          phrase_script:AddAction(value)
+        else
+          printf("dialog_manager:Error: No such function exists '%s'", value)
+        end
+      end
+    else
+      if (alun_utils.findfunction(act, _G)) then
+        phrase_script:AddAction(act)
+      else
+        printf("dialog_manager:Error: No such function exists '%s'", act)
+      end
+    end
+  end
+  return phrase_script
+end
+
+function selectedFaction(first_speaker, second_speaker, faction)
+  selFaction = faction
+end
+
+function actorAgree(first_speaker, second_speaker)
+  local wantedInfo = wargreat_actor_hunter.wantedTable[selFaction]
+
+  if not wantedInfo or not wantedInfo.level then
+    return
+  end
+
+  local cost = wargreat_actor_hunter.levelCosts[wantedInfo.level]
+
+  db.actor:give_money(-cost)
+
+  wargreat_actor_hunter.wantedTable[selFaction] = {}
+  wargreat_actor_hunter.unregisterFaction(selFaction)
+  xr_statistic.resetKillsStatisticsForFaction(selFaction)
+
+  utils.news("Охота на игрока", "Группировка %s больше не преследует вас.", GetString(selFaction))
+end
+
+-- TODO: Блядские функции. Сократить после правок в движке
+function selectedFaction_stalker(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "stalker")
+end
+function selectedFaction_bandit(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "bandit")
+end
+function selectedFaction_csky(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "csky")
+end
+function selectedFaction_army(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "army")
+end
+function selectedFaction_freedom(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "freedom")
+end
+function selectedFaction_dolg(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "dolg")
+end
+function selectedFaction_ecolog(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "ecolog")
+end
+function selectedFaction_killer(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "killer")
+end
+function selectedFaction_monolith(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "monolith")
+end
+function selectedFaction_zombied(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "zombied")
+end
+function selectedFaction_isg(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "isg")
+end
+function selectedFaction_darkstalker(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "darkstalker")
+end
+function selectedFaction_renegate(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "renegate")
+end
+function selectedFaction_varyag(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "varyag")
+end
+function selectedFaction_slizni(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "slizni")
+end
+function selectedFaction_velhan(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "velhan")
+end
+function selectedFaction_fantom(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "fantom")
+end
+function selectedFaction_veter(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "veter")
+end
+function selectedFaction_osoznanie(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "osoznanie")
+end
+function selectedFaction_alfa(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "alfa")
+end
+function selectedFaction_apocalypse(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "apocalypse")
+end
+function selectedFaction_adinkvizicia(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "adinkvizicia")
+end
+function selectedFaction_hunter(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "hunter")
+end
+function selectedFaction_voenstal(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "voenstal")
+end
+function selectedFaction_mirotvorec(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "mirotvorec")
+end
+function selectedFaction_ryskuspecnaz(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "ryskuspecnaz")
+end
+function selectedFaction_sby(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "sby")
+end
+function selectedFaction_angel(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "angel")
+end
+function selectedFaction_posleduden(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "posleduden")
+end
+function selectedFaction_greh(first_speaker, second_speaker)
+  selectedFaction(first_speaker, second_speaker, "greh")
+end
+
+function precoditionSelectedFaction(first_speaker, second_speaker, faction)
+  return wargreat_actor_hunter.wantedTable[faction].level and true or false
+end
+function precoditionSelectedFaction_stalker(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "stalker")
+end
+function precoditionSelectedFaction_bandit(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "bandit")
+end
+function precoditionSelectedFaction_csky(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "csky")
+end
+function precoditionSelectedFaction_army(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "army")
+end
+function precoditionSelectedFaction_freedom(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "freedom")
+end
+function precoditionSelectedFaction_dolg(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "dolg")
+end
+function precoditionSelectedFaction_ecolog(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "ecolog")
+end
+function precoditionSelectedFaction_killer(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "killer")
+end
+function precoditionSelectedFaction_monolith(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "monolith")
+end
+function precoditionSelectedFaction_zombied(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "zombied")
+end
+function precoditionSelectedFaction_isg(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "isg")
+end
+function precoditionSelectedFaction_darkstalker(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "darkstalker")
+end
+function precoditionSelectedFaction_renegate(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "renegate")
+end
+function precoditionSelectedFaction_varyag(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "varyag")
+end
+function precoditionSelectedFaction_slizni(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "slizni")
+end
+function precoditionSelectedFaction_velhan(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "velhan")
+end
+function precoditionSelectedFaction_fantom(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "fantom")
+end
+function precoditionSelectedFaction_veter(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "veter")
+end
+function precoditionSelectedFaction_osoznanie(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "osoznanie")
+end
+function precoditionSelectedFaction_alfa(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "alfa")
+end
+function precoditionSelectedFaction_apocalypse(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "apocalypse")
+end
+function precoditionSelectedFaction_adinkvizicia(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "adinkvizicia")
+end
+function precoditionSelectedFaction_hunter(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "hunter")
+end
+function precoditionSelectedFaction_voenstal(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "voenstal")
+end
+function precoditionSelectedFaction_mirotvorec(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "mirotvorec")
+end
+function precoditionSelectedFaction_ryskuspecnaz(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "ryskuspecnaz")
+end
+function precoditionSelectedFaction_sby(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "sby")
+end
+function precoditionSelectedFaction_angel(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "angel")
+end
+function precoditionSelectedFaction_posleduden(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "posleduden")
+end
+function precoditionSelectedFaction_greh(first_speaker, second_speaker)
+  return precoditionSelectedFaction(first_speaker, second_speaker, "greh")
+end
+
+function actorHasMoney_10000()
+  return actor_has_money(10000)
+end
+function actorHasMoney_20000()
+  return actor_has_money(20000)
+end
+function actorHasMoney_30000()
+  return actor_has_money(30000)
+end
+function actorHasMoney_40000()
+  return actor_has_money(40000)
+end
+function actorHasMoney_50000()
+  return actor_has_money(50000)
+end
+function actorHasMoney_60000()
+  return actor_has_money(60000)
+end
+function actorHasMoney_70000()
+  return actor_has_money(70000)
+end
+function actorHasMoney_80000()
+  return actor_has_money(80000)
+end
+function actorHasMoney_90000()
+  return actor_has_money(90000)
+end
+function actorHasMoney_100000()
+  return actor_has_money(100000)
+end
+function actorHasMoney_110000()
+  return actor_has_money(110000)
+end
+-- Конец блядских функций
+
+function precondition(first_speaker, second_speaker)
+  return wargreat_actor_hunter:hasAnyFactionLevel()
+end
+
+function initDialog(dialog)
+  saved_dialog = dialog
+
+  add_dialog("", 0, "hunter_dialog_start_0")
+  add_dialog(0, 1, "hunter_dialog_start_1")
+  add_dialog(1, 2, "hunter_dialog_start_20")
+  add_dialog(1, 9999, "hunter_dialog_start_21")
+
+  local hunterListText = ""
+  for faction, obj in pairs(wargreat_actor_hunter.wantedTable) do
+    if obj and obj.level ~= nil then
+      hunterListText = strformat("%s\\n %s (Уровень опасности: %s)", hunterListText, GetString(faction), obj.level)
+    end
+  end
+
+  add_dialog(2, 3, strformat(GetString("hunter_dialog_start_3"), hunterListText))
+
+  i = 4
+  for faction, obj in pairs(wargreat_actor_hunter.wantedTable) do
+    if obj and obj.level ~= nil then
+      local cost = wargreat_actor_hunter.levelCosts[obj.level]
+
+      add_dialog(
+        3,
+        i,
+        strformat(GetString("hunter_dialog_start_4"), GetString(faction)),
+        strformat("wargreat_actor_hunter_dialogs.precoditionSelectedFaction_%s", faction),
+        strformat("wargreat_actor_hunter_dialogs.selectedFaction_%s", faction)
+      )
+      add_dialog(i, i + 100, strformat(GetString("hunter_dialog_start_5"), cost))
+
+      add_dialog(
+        i + 100,
+        i + 1000,
+        "hunter_dialog_start_agree",
+        strformat("wargreat_actor_hunter_dialogs.actorHasMoney_%s", cost),
+        "wargreat_actor_hunter_dialogs.actorAgree"
+      )
+      add_dialog(i + 100, i + 2000, "hunter_dialog_start_cancel")
+
+      add_dialog(i + 1000, i + 9998, "hunter_dialog_start_agree_answer")
+      add_dialog(i + 2000, i + 9999, "hunter_dialog_start_cancel_answer")
+
+      i = i + 1
+    end
+  end
+
+  add_dialog(3, 9999, "hunter_dialog_start_21")
+end

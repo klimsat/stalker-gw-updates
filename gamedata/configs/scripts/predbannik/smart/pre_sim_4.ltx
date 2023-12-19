@@ -1,0 +1,19 @@
+[smart_terrain]
+squad_id = 4
+max_population = 5
+respawn_params = respawn@pre_sim_4
+respawn_idle = 60000
+
+
+[respawn@pre_sim_4]
+spawn_monolith
+
+[spawn_monolith]
+spawn_squads = monolith_sim_squad_advanced, monolith_sim_squad_veteran, monolith_sim_squad_sniper, monolith_sim_squad_sniper
+spawn_num = 2
+
+[exclusive]
+pre_sim_4_camp_work_1 = predbannik\pre_sim_4_smart_logic.ltx
+pre_sim_4_camp_work_2 = predbannik\pre_sim_4_smart_logic.ltx
+pre_sim_4_camp_work_3 = predbannik\pre_sim_4_smart_logic.ltx
+pre_sim_4_camp_work_4 = predbannik\pre_sim_4_smart_logic.ltx

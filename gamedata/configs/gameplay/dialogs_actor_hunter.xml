@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<game_dialogs>
+    <dialog id="dialog_actor_hanter_start">
+        <precondition>wargreat_actor_hunter_dialogs.precondition</precondition>
+        <init_func>wargreat_actor_hunter_dialogs.initDialog</init_func>
+    </dialog>
+</game_dialogs>

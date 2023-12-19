@@ -1,0 +1,301 @@
+;---------------------------------------------------------------------------------------------
+;		Комбенизон ЧВК Альфа
+;---------------------------------------------------------------------------------------------
+[alfa_outfit]:outfit_base
+$spawn                                   = "outfit\alfa_outfit"
+visual                                   = dynamics\outfit\alfa_outfit
+actor_visual                             = actors\stalker_alfa\alfa_mask_2_0.ogf
+npc_visual                               = actors\stalker_alfa\alfa_mask_2_0.ogf
+player_hud_section                       = wpn_hand_alfa_suit
+
+ef_equipment_type                        = 3
+
+inv_name                                 = alfa_outfit_name
+inv_name_short                           = alfa_outfit_name
+description                              = alfa_outfit_description
+
+inv_weight                               = 8.5
+
+inv_grid_x                               = 66
+inv_grid_y                               = 37
+
+upgr_icon_x                              = 1552
+upgr_icon_y                              = 35
+upgr_icon_width                          = 300
+upgr_icon_height                         = 130
+full_icon_name                           = npc_icon_exo_outfit
+
+cost                                     = 19000
+full_scale_icon                          = 2,11	                                       ;иконка сталкера в костюме в полный рост
+artefact_count                           = 2
+
+immunities_sect                          = sect_alfa_outfit_immunities
+
+; LOW-MEDIUM RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1925
+explosion_protection                     = 0.1925
+wound_protection                         = 0.1925
+
+hit_fraction_actor                       = 0.425
+bones_koeff_protection                   = actor_armor_merc_exo
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.75
+
+upgrades                                 = up_gr_firstab_merc_outfit, up_gr_seconab_merc_outfit, up_gr_thirdab_merc_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_svoboda_heavy_outfit
+character_portrait						 = ui_inGame2_alfa_mask_2_0
+
+[sect_alfa_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_alfa_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		Бронежилет ЧВК Альфа
+;---------------------------------------------------------------------------------------------
+[alfa_skat_outfit]:outfit_base
+$spawn                                   = "outfit\alfa_skat_outfit"
+visual                                   = dynamics\outfit\military_outfit
+actor_visual                             = actors\stalker_alfa\alfa_skat_3_0.ogf
+npc_visual                               = actors\stalker_alfa\alfa_skat_3_0.ogf
+player_hud_section                       = actor_hud_military_skat9
+
+ef_equipment_type                        = 3
+
+inv_name                                 = alfa_skat_outfit_name
+inv_name_short                           = alfa_skat_outfit_name
+description                              = alfa_skat_outfit_description
+
+inv_weight                               = 9.0
+
+inv_grid_x                               = 78
+inv_grid_y                               = 34
+
+upgr_icon_x                              = 1552
+upgr_icon_y                              = 35
+upgr_icon_width                          = 300
+upgr_icon_height                         = 130
+full_icon_name                           = npc_icon_exo_outfit
+
+cost                                     = 55000
+full_scale_icon                          = 2,11	                                       ;иконка сталкера в костюме в полный рост
+artefact_count                           = 2
+immunities_sect                          = sect_alfa_skat_outfit_immunities
+
+; LOW-MEDIUM RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1925
+explosion_protection                     = 0.1925
+wound_protection                         = 0.1925
+
+hit_fraction_actor                       = 0.425
+bones_koeff_protection                   = actor_armor_merc_exo
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.75
+
+upgrades                                 = up_gr_firstab_merc_outfit, up_gr_seconab_merc_outfit, up_gr_thirdab_merc_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_svoboda_heavy_outfit
+character_portrait						 = ui_inGame2_alfa_skat_3_0
+
+[sect_alfa_skat_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_alfa_skat_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		Экзоскелет "Альфа"
+;---------------------------------------------------------------------------------------------
+[alfa_exo_outfit]:outfit_exo_base
+$spawn                                   = "outfit\alfa_exo_outfit"
+visual                                   = dynamics\outfit\alfa_exo
+actor_visual                             = actors\stalker_alfa\alfa_exo_face_4_0.ogf
+npc_visual                               = actors\stalker_alfa\alfa_exo_face_4_0.ogf
+player_hud_section                       = act_hand_alfa_exo
+
+inv_name                                 = alfa_exo_outfit_name
+inv_name_short                           = alfa_exo_outfit_name
+description                              = alfa_exo_outfit_description
+
+inv_weight                               = 23.0
+
+inv_grid_width     = 2
+inv_grid_height    = 3
+inv_grid_x         = 46
+inv_grid_y         = 18
+
+upgr_icon_x                              = 1550
+upgr_icon_y                              = 670
+upgr_icon_width                          = 304
+upgr_icon_height                         = 159
+
+cost                                     = 135000
+
+bones_koeff_protection                   = actor_armor_merc_exo
+
+upgrades                                 = up_gr_firstab_merc_exo_outfit, up_gr_seconab_merc_exo_outfit, up_gr_thirdab_merc_exo_outfit, up_gr_fourtab_merc_exo_outfit, up_gr_fifthab_merc_exo_outfit
+
+power_loss                               = 1.1
+additional_inventory_weight              = 60
+additional_inventory_weight2             = 60
+artefact_count                           = 2
+helmet_avaliable					     = false
+
+character_portrait						 = ui_inGame2_alfa_exo_face_4_0
+;---------------------------------------------------------------------------------------------
+;		Leader Alfa Outfit
+;---------------------------------------------------------------------------------------------
+[leader_alfa_outfit]:outfit_base
+$spawn                                   = "outfit\leader_alfa_outfit"
+visual                                   = dynamics\outfit\leader_alfa_outfit
+actor_visual                             = actors\stalker_alfa\alfa_leader.ogf
+npc_visual                               = actors\stalker_alfa\alfa_leader.ogf
+player_hud_section                       = wpn_hand_alfa_suit
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_alfa_outfit_name
+inv_name_short                           = leader_alfa_outfit_name
+description                              = leader_alfa_outfit_description
+
+inv_weight                               = 18
+
+inv_grid_x                               = 66
+inv_grid_y                               = 46
+
+upgr_icon_x                              = 3454
+upgr_icon_y                              = 168
+upgr_icon_width                          = 286
+upgr_icon_height                         = 168
+
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 292340
+
+full_scale_icon                          = 14,11
+
+immunities_sect                          = sect_leader_alfa_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0823
+shock_protection                         = 0.3916
+radiation_protection                     = 0.0138
+chemical_burn_protection                 = 0.0916
+telepatic_protection                     = 0.1110
+strike_protection                        = 0.5437
+explosion_protection                     = 0.5187
+wound_protection                         = 0.5187
+fire_wound_protection                    = 0.2500
+
+hit_fraction_actor                       = 0.15
+control_inertion_factor                  = 2.5
+bones_koeff_protection                   = alfa_leader
+
+nightvision_sect 			             = effector_nightvision_2
+
+power_restore_speed                      = 0.005
+power_loss                               = 0.9
+
+additional_inventory_weight              = 90
+additional_inventory_weight2             = 90
+
+artefact_count                           = 5
+
+helmet_avaliable					     = false
+
+character_portrait						 = ui_inGame2_alfa_leader
+
+[sect_leader_alfa_outfit_immunities]
+burn_immunity                            = 0.0050
+strike_immunity                          = 0.0050
+shock_immunity                           = 0.0200
+wound_immunity                           = 0.0050
+radiation_immunity                       = 0.0000
+telepatic_immunity                       = 0.0000
+chemical_burn_immunity                   = 0.0050
+explosion_immunity                       = 0.0050
+fire_wound_immunity                      = 0.0100
+;---------------------------------------------------------------------------------------------
+;OUTFIT IN AZAZEL MODE: Leader Alfa Outfit
+;---------------------------------------------------------------------------------------------
+[leader_azazel_alfa_outfit]:outfit_leader_exo_base
+$spawn                                   = "outfit\leader_azazel_alfa_outfit"
+visual                                   = dynamics\outfit\leader_alfa_outfit
+actor_visual                             = actors\stalker_alfa\alfa_leader.ogf
+npc_visual                               = actors\stalker_alfa\alfa_leader.ogf
+player_hud_section                       = wpn_hand_alfa_suit
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_alfa_outfit_name
+inv_name_short                           = leader_alfa_outfit_name
+description                              = leader_alfa_outfit_description
+
+inv_weight                               = 18
+
+inv_grid_x                               = 66
+inv_grid_y                               = 46
+
+upgr_icon_x                              = 3454
+upgr_icon_y                              = 168
+upgr_icon_width                          = 286
+upgr_icon_height                         = 168
+
+cost                                     = 292340
+
+artefact_count                           = 1
+
+helmet_avaliable						= false
+
+sprint_allowed							 = true
+
+power_loss                               = 0.75
+
+character_portrait						 = ui_inGame2_alfa_leader
+

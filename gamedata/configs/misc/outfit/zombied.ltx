@@ -1,0 +1,414 @@
+;---------------------------------------------------------------------------------------------
+;       Поврежденая Куртка
+;---------------------------------------------------------------------------------------------
+[zombied_novice_outfit]:outfit_novice_base
+$spawn                                   = "outfit\zombied_novice_outfit"
+visual                                   = dynamics\outfit\zombie_novice
+actor_visual                             = actors\stalker_zombied\stalker_zombied_1.ogf
+npc_visual                               = actors\stalker_zombied\stalker_zombied_1.ogf
+player_hud_section                       = actor_hud_bandit_novice
+
+
+inv_name                                 = zombied_novice_outfit_name
+inv_name_short                           = zombied_novice_outfit_name
+description                              = zombied_novice_outfit_description
+
+inv_grid_height    = 3
+
+inv_grid_x         = 74
+inv_grid_y         = 24
+
+upgr_icon_x                              = 935
+upgr_icon_y                              = 340
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+
+character_portrait						 = ui_inGame2_no_data
+
+upgrades                                 = up_gr_firstab_rookie_outfit, up_gr_seconab_rookie_outfit, up_gr_thirdab_rookie_outfit
+
+;---------------------------------------------------------------------------------------------
+;		Поврежденый Комбинезон Заря
+;---------------------------------------------------------------------------------------------
+[zombied_stalker_outfit]:outfit_base
+$spawn                                   = "outfit\zombied_stalker_outfit"
+visual                                   = dynamics\outfit\stalker_outfit
+actor_visual                             = actors\stalker_zombied\stalker_zombied_13.ogf
+npc_visual                               = actors\stalker_zombied\stalker_zombied_13.ogf
+player_hud_section                       = actor_hud_loner_sunrise
+
+ef_equipment_type                        = 3
+
+inv_name                                 = zombied_stalker_outfit_name
+inv_name_short                           = zombied_stalker_outfit_name
+description                              = zombied_stalker_outfit_description
+
+inv_weight                               = 7.0
+
+inv_grid_x                               = 70
+inv_grid_y                               = 24
+upgr_icon_x                              = 317
+upgr_icon_y                              = 0
+upgr_icon_width                          = 302
+upgr_icon_height                         = 130
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 7500
+full_scale_icon                          = 14,11	                                       ;иконка сталкера в костюме в полный рост
+
+artefact_count                           = 1
+
+immunities_sect                          = sect_zombied_stalker_outfit_immunities
+
+
+; LOW RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1925
+explosion_protection                     = 0.1925
+wound_protection                         = 0.1925
+
+hit_fraction_actor                       = 0.75
+bones_koeff_protection                   = actor_armor_suit
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.75
+
+upgrades                                 = up_gr_firstab_stalker_outfit, up_gr_seconab_stalker_outfit, up_gr_thirdab_stalker_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_stalker_outfit
+character_portrait						 = ui_inGame2_no_data
+
+[sect_zombied_stalker_outfit_immunities]
+burn_immunity                            = 0.03	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.03
+wound_immunity                           = 0.03
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.03
+explosion_immunity                       = 0.03
+fire_wound_immunity                      = 0.015
+
+[sect_zombied_stalker_outfit_immunities_add]
+burn_immunity                            = -0.015	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.015
+wound_immunity                           = -0.015
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.015
+explosion_immunity                       = -0.015
+fire_wound_immunity                      = -0.005
+
+;---------------------------------------------------------------------------------------------
+;		Поврежденый Комбенизон Наемника
+;---------------------------------------------------------------------------------------------
+[zombied_merc_outfit]:outfit_base
+$spawn                                   = "outfit\zombied_merc_outfit"
+visual                                   = dynamics\outfit\zombie_merc
+actor_visual                             = actors\stalker_zombied\stalker_zombied_merc_6_gas.ogf
+npc_visual                               = actors\stalker_zombied\stalker_zombied_merc_6_gas.ogf
+player_hud_section                       = actor_hud_merc_suit
+
+ef_equipment_type                        = 3
+
+inv_name                                 = zombied_merc_outfit_name
+inv_name_short                           = zombied_merc_outfit_name
+description                              = zombied_merc_outfit_description
+
+inv_weight                               = 7.0
+
+inv_grid_x                               = 72
+inv_grid_y                               = 24
+
+upgr_icon_x                              = 1552
+upgr_icon_y                              = 35
+upgr_icon_width                          = 300
+upgr_icon_height                         = 130
+full_icon_name                           = npc_icon_exo_outfit
+
+cost                                     = 8750
+full_scale_icon                          = 2,11	                                       ;иконка сталкера в костюме в полный рост
+artefact_count                           = 2
+immunities_sect                          = sect_zombied_merc_outfit_immunities
+
+; LOW-MEDIUM RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1925
+explosion_protection                     = 0.1925
+wound_protection                         = 0.1925
+
+hit_fraction_actor                       = 0.425
+bones_koeff_protection                   = actor_armor_suit
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.75
+
+upgrades                                 = up_gr_firstab_merc_outfit, up_gr_seconab_merc_outfit, up_gr_thirdab_merc_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_svoboda_heavy_outfit
+character_portrait						 = ui_inGame2_no_data
+
+[sect_zombied_merc_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_zombied_merc_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		Поврежденый Берилл-5М
+;---------------------------------------------------------------------------------------------
+[zombied_specops_outfit]:outfit_base
+$spawn                                   = "outfit\zombied_specops_outfit"
+visual                                   = dynamics\outfit\specops_outfit
+actor_visual                             = actors\stalker_zombied\stalker_zombied_3.ogf
+npc_visual                               = actors\stalker_zombied\stalker_zombied_3.ogf
+player_hud_section                       = actor_hud_military_berill
+
+ef_equipment_type                        = 3
+
+inv_name                                 = zombied_specops_outfit_name
+inv_name_short                           = zombied_specops_outfit_name
+description                              = zombied_specops_outfit_description
+
+inv_weight                               = 9.0
+
+inv_grid_x                               = 8
+inv_grid_y                               = 18
+
+upgr_icon_x                              = 318
+upgr_icon_y                              = 163
+upgr_icon_width                          = 303
+upgr_icon_height                         = 126
+full_icon_name                           = npc_icon_specops_outfit
+
+cost                                     = 15000
+full_scale_icon                          = 4,6	                                       ;иконка сталкера в костюме в полный рост
+power_loss                               = 0.8
+immunities_sect                          = sect_zombied_specops_outfit_immunities
+
+; LOW RESISTANCE
+burn_protection                          = 0.0333
+shock_protection                         = 0.1333
+radiation_protection                     = 0.0050
+chemical_burn_protection                 = 0.0333
+telepatic_protection                     = 0.0
+strike_protection                        = 0.2275
+explosion_protection                     = 0.2275
+wound_protection                         = 0.2275
+
+hit_fraction_actor                       = 0.5
+bones_koeff_protection                   = actor_armor_berill
+
+artefact_count                           = 0
+control_inertion_factor                  = 1.5
+
+upgrades                                 = up_gr_firstab_specops_outfit, up_gr_seconab_specops_outfit, up_gr_thirdab_specops_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_specops
+character_portrait						 = ui_inGame2_no_data
+
+[sect_zombied_specops_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_zombied_specops_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		Поврежденый Экзоскелет Долга
+;---------------------------------------------------------------------------------------------
+[zombied_dolg_exo_outfit]:outfit_exo_base
+$spawn                                   = "outfit\zombied_duty_exo_outfit"
+visual                                   = dynamics\outfit\zombie_exo
+actor_visual                             = actors\stalker_zombied\stalker_zombied4c.ogf
+npc_visual                               = actors\stalker_zombied\stalker_zombied4c.ogf
+player_hud_section                       = actor_hud_dolg_exo
+
+inv_name                                 = zombied_dolg_exo_outfit_name
+inv_name_short                           = zombied_dolg_exo_outfit_name
+description                              = zombied_dolg_exo_outfit_description
+
+inv_weight                               = 25.0
+
+inv_grid_x                               = 76
+inv_grid_y                               = 24
+
+upgr_icon_x                              = 1242
+upgr_icon_y                              = 670
+upgr_icon_width                          = 304
+upgr_icon_height                         = 159
+
+cost                                     = 100000
+
+upgrades                                 = up_gr_firstab_dolg_exo_outfit, up_gr_seconab_dolg_exo_outfit, up_gr_thirdab_dolg_exo_outfit, up_gr_fourtab_dolg_exo_outfit, up_gr_fifthab_dolg_exo_outfit
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+strike_protection                        = 0.3325
+explosion_protection                     = 0.3325
+wound_protection                         = 0.3325
+
+bones_koeff_protection                   = actor_armor_duty_exo
+
+power_loss                               = 1.15
+additional_inventory_weight              = 30
+additional_inventory_weight2             = 30
+artefact_count                           = 0
+helmet_avaliable					= false
+
+character_portrait						 = ui_inGame2_exo_4
+;---------------------------------------------------------------------------------------------
+;		Leader Zombied Outfit
+;---------------------------------------------------------------------------------------------
+[leader_zombied_outfit]:outfit_base
+$spawn                                   = "outfit\leader_zombied_outfit"
+visual                                   = dynamics\outfit\leader_zombied_outfit
+actor_visual                             = actors\stalker_zombied\zombied_leader.ogf
+npc_visual                               = actors\stalker_zombied\zombied_leader.ogf
+player_hud_section                       = wpn_hand_zombied_radiation_suit
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_zombied_outfit_name
+inv_name_short                           = leader_zombied_outfit_name
+description                              = leader_zombied_outfit_description
+
+inv_weight                               = 10
+
+inv_grid_x         						 = 76
+inv_grid_y        						 = 46
+
+upgr_icon_x                              = 3780
+upgr_icon_y                              = 1344
+upgr_icon_width                          = 294
+upgr_icon_height                         = 168
+
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 245500 
+
+full_scale_icon                          = 14,11
+
+immunities_sect                          = sect_leader_zombied_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0719
+shock_protection                         = 0.3507
+radiation_protection                     = 0.0122
+chemical_burn_protection                 = 0.0813
+telepatic_protection                     = 0.0757
+strike_protection                        = 0.5552
+explosion_protection                     = 0.5552
+wound_protection                         = 0.5552
+
+fire_wound_protection                    = 0.2570
+
+hit_fraction_actor                       = 0.15
+control_inertion_factor                  = 2.5
+bones_koeff_protection                   = zombied_leader
+
+nightvision_sect 			             = effector_nightvision_2
+
+power_restore_speed                      = 0.005
+power_loss                               = 0.95
+
+additional_inventory_weight              = 68
+additional_inventory_weight2             = 68
+
+artefact_count                           = 3
+
+helmet_avaliable						 = false
+
+character_portrait						 = ui_inGame2_zombied_3_battlesuit
+
+[sect_leader_zombied_outfit_immunities]
+burn_immunity                            = 0.0001
+strike_immunity                          = 0.0150
+shock_immunity                           = 0.0144
+wound_immunity                           = 0.0001
+radiation_immunity                       = 0.0000
+telepatic_immunity                       = 0.0000
+chemical_burn_immunity                   = 0.0005
+explosion_immunity                       = 0.0001
+fire_wound_immunity                      = 0.0001
+;---------------------------------------------------------------------------------------------
+;OUTFIT IN AZAZEL MODE: Leader Zombied Outfit
+;---------------------------------------------------------------------------------------------
+[leader_azazel_zombied_outfit]:outfit_leader_exo_base
+$spawn                                   = "outfit\leader_azazel_zombied_outfit"
+visual                                   = dynamics\outfit\leader_zombied_outfit
+actor_visual                             = actors\stalker_zombied\zombied_leader.ogf
+npc_visual                               = actors\stalker_zombied\zombied_leader.ogf
+player_hud_section                       = wpn_hand_zombied_radiation_suit
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_zombied_outfit_name
+inv_name_short                           = leader_zombied_outfit_name
+description                              = leader_zombied_outfit_description
+
+inv_weight                               = 10
+
+inv_grid_x         						 = 76
+inv_grid_y        						 = 46
+
+upgr_icon_x                              = 3780
+upgr_icon_y                              = 1344
+upgr_icon_width                          = 294
+upgr_icon_height                         = 168
+
+cost                                     = 245500
+
+artefact_count                           = 1
+
+helmet_avaliable						 = false
+
+sprint_allowed							 = true
+
+power_loss                               = 0.75
+
+character_portrait						 = ui_inGame2_zombied_3_battlesuit
+

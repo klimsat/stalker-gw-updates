@@ -1,0 +1,20 @@
+[smart_terrain]
+squad_id = 17
+max_population = 5
+respawn_params = respawn@pre_baza1
+respawn_idle = 60000
+
+
+
+[respawn@pre_baza1]
+spawn_monolith
+
+[spawn_monolith]
+spawn_squads = monolith_sim_squad_advanced, monolith_sim_squad_veteran, monolith_sim_squad_sniper, monolith_sim_squad_sniper
+spawn_num = 2
+
+[exclusive]
+trader = predbannik\pre_baza1_smart_logic.ltx
+mechanic = predbannik\pre_baza1_smart_logic.ltx
+barmen = predbannik\pre_baza1_smart_logic.ltx
+leader = predbannik\pre_baza1_smart_logic.ltx

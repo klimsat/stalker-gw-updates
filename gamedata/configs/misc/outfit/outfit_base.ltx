@@ -1,0 +1,275 @@
+[outfit_base]
+; delete full_scale_icon	next update- obsolete, use  full_icon_name instead !!!
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+class                                    = EQU_STLK	;Change to E_STLK if you want to use se_item.se_outfit script binding
+cform                                    = skeleton
+
+additional_inventory_weight              = 0	                                       ; +max_walk_weight
+additional_inventory_weight2             = 0	                                       ;	+40 kg
+full_icon_name                           = npc_icon_without_outfit
+slot                                     = 6
+
+inv_grid_width                           = 2
+inv_grid_height                          = 3
+
+default_to_ruck                          = false
+sprint_allowed                           = true
+control_inertion_factor                  = 1
+player_hud_section                       = actor_hud_05
+
+[without_outfit]:outfit_base
+;базовый костюм сталкера - костюм новичка. Обычная одежда туриста - штормовка+сапоги
+full_scale_icon                          = 6,6
+player_hud_section                       = actor_hud_05
+;---------------------------------------------------------------------------------------------
+;		BASE NOVICE
+;---------------------------------------------------------------------------------------------
+[outfit_novice_base]
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+class                                    = EQU_STLK	;Change to E_STLK if you want to use se_item.se_outfit script binding
+cform                                    = skeleton
+
+player_hud_section                       = actor_hud_05
+
+additional_inventory_weight              = 0	                                       ; +max_walk_weight
+additional_inventory_weight2             = 0	                                       ;	+40 kg
+
+default_to_ruck                          = false
+sprint_allowed                           = true
+control_inertion_factor                  = 1
+
+ef_equipment_type                        = 3
+
+full_icon_name                           = npc_icon_novice_outfit
+
+slot                                     = 6
+full_scale_icon                          = 0,11
+
+inv_grid_x         = 14
+inv_grid_y         = 12
+
+upgrades                                 = up_gr_firstab_novice_outfit, up_gr_seconab_novice_outfit, up_gr_thirdab_novice_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_novice_outfit
+
+artefact_count                           = 0
+hit_fraction_actor                       = 0.75
+
+; NO RESISTANCE
+burn_protection                          = 0.0133
+shock_protection                         = 0.0533
+radiation_protection                     = 0.0020
+chemical_burn_protection                 = 0.0133
+telepatic_protection                     = 0.0
+strike_protection                        = 0.0175
+explosion_protection                     = 0.0175
+wound_protection                         = 0.0175
+
+inv_weight                               = 1.0
+
+immunities_sect                          = sect_novice_outfit_immunities
+
+cost                                     = 1500
+
+power_loss                               = 0.65
+
+bones_koeff_protection                   = actor_armor_novice
+
+inv_grid_width                           = 2
+inv_grid_height                          = 2
+
+character_portrait					     = ui_inGame2_no_data
+
+[sect_novice_outfit_immunities]
+burn_immunity                            = 0.025	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.025
+wound_immunity                           = 0.025
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.025
+explosion_immunity                       = 0.025
+fire_wound_immunity                      = 0.01
+
+[sect_novice_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.005
+
+;---------------------------------------------------------------------------------------------
+;		SCIENTIFIC BASE
+;---------------------------------------------------------------------------------------------
+[outfit_scientific_base]
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+class                                    = EQU_STLK	;Change to E_STLK if you want to use se_item.se_outfit script binding
+cform                                    = skeleton
+
+control_inertion_factor                  = 1
+player_hud_section                       = actor_hud_05
+
+additional_inventory_weight              = 0	                                       ; +max_walk_weight
+additional_inventory_weight2             = 0	                                       ;	+40 kg
+
+default_to_ruck                          = false
+sprint_allowed                           = true
+
+ef_equipment_type                        = 2
+slot                                     = 6
+
+full_icon_name                           = npc_icon_scientific_outfit
+helmet_avaliable                         = false
+
+inv_grid_width                           = 2
+inv_grid_height                          = 3
+
+upgrades                                 = up_gr_firstab_scientific_outfit, up_gr_seconab_scientific_outfit, up_gr_thirdab_scientific_outfit, up_gr_fourtab_scientific_outfit, up_gr_fifthab_scientific_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_scientific_outfit
+
+;---------------------------------------------------------------------------------------------
+;		BASE FOR EXO-BASE OUTFITS
+;---------------------------------------------------------------------------------------------
+[outfit_exo_base]
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+class                                    = EQU_STLK	;Change to E_STLK if you want to use se_item.se_outfit script binding
+cform                                    = skeleton
+
+additional_inventory_weight              = 0	                                       ; +max_walk_weight
+additional_inventory_weight2             = 0	                                       ;	+40 kg
+player_hud_section                       = actor_hud_05
+
+discovery_dependency                     =
+installed_upgrades                       =
+
+ef_equipment_type                        = 5
+slot                                     = 6
+
+full_icon_name                           = npc_icon_exo_outfit
+full_scale_icon                          = 2,11
+
+sprint_allowed                           = false
+helmet_avaliable			             = false
+default_to_ruck                          = false
+
+hit_fraction_actor                       = 0.25
+control_inertion_factor                  = 2.5
+
+upgrades                                 = up_gr_firstab_exo_outfit, up_gr_seconab_exo_outfit, up_gr_thirdab_exo_outfit, up_gr_fourtab_exo_outfit, up_gr_fifthab_exo_outfit
+upgrade_scheme                           = upgrade_scheme_exo_outfit
+
+bones_koeff_protection                   = actor_armor_exo
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0533
+shock_protection                         = 0.2133
+radiation_protection                     = 0.0080
+chemical_burn_protection                 = 0.0533
+telepatic_protection                     = 0.0588
+strike_protection                        = 0.3350
+explosion_protection                     = 0.3150
+wound_protection                         = 0.3150
+
+immunities_sect                          = sect_exo_outfit_immunities
+
+inv_grid_width                           = 2
+inv_grid_height                          = 3
+
+[sect_exo_outfit_immunities]
+burn_immunity                            = 0.02	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.02
+shock_immunity                           = 0.06
+wound_immunity                           = 0.02
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.02
+explosion_immunity                       = 0.02
+fire_wound_immunity                      = 0.02
+
+[sect_exo_outfit_immunities_add]
+burn_immunity                            = -0.01	                               ;Параметры, которые будут вычитаться при апгрейде
+strike_immunity                          = -0.01
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+;---------------------------------------------------------------------------------------------
+;		BASE FOR LEADER EXO-BASE OUTFITS
+;---------------------------------------------------------------------------------------------
+[outfit_leader_exo_base]
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+class                                    = EQU_STLK	;Change to E_STLK if you want to use se_item.se_outfit script binding
+cform                                    = skeleton
+
+additional_inventory_weight              = 100	                                       ; +max_walk_weight
+additional_inventory_weight2             = 100	                                       ;	+40 kg
+
+discovery_dependency                     =
+installed_upgrades                       =
+
+ef_equipment_type                        = 5
+slot                                     = 6
+
+full_icon_name                           = npc_icon_exo_outfit
+full_scale_icon                          = 2,11
+
+sprint_allowed                           = true
+helmet_avaliable			             = false
+default_to_ruck                          = false
+
+
+control_inertion_factor                  = 2.5
+
+hit_fraction_actor						 = 0.02
+
+bones_koeff_protection                   = leader_faction
+
+; OVER-HIGH RESISTANCE
+burn_protection                          = 0.8
+shock_protection                         = 0.8
+radiation_protection                     = 0.8
+chemical_burn_protection                 = 0.8
+telepatic_protection                     = 0.8
+strike_protection                        = 0.8
+explosion_protection                     = 0.8
+wound_protection                         = 0.8
+
+immunities_sect                          = sect_leader_exo_outfit_immunities
+
+inv_grid_width                           = 2
+inv_grid_height                          = 3
+
+[sect_leader_exo_outfit_immunities]
+burn_immunity                            = 0.0	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = 0.0
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.0
+explosion_immunity                       = 0.0
+fire_wound_immunity                      = 0.0
+
+[sect_leader_exo_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = -0.01
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025

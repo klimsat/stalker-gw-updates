@@ -1,0 +1,36 @@
+[smart_terrain]
+squad_id = 2
+max_population = 5
+respawn_params = respawn@bar_bar
+respawn_idle = 30000
+
+
+
+[respawn@bar_bar]
+spawn_army@novice
+spawn_army@advanced
+
+[spawn_army@novice]
+spawn_squads = army_sim_squad_novice
+spawn_num = 3
+
+[spawn_army@advanced]
+spawn_squads = army_sim_squad_novice, army_sim_squad_advanced
+spawn_num = 3
+
+[exclusive]
+bar_barman = rostok\bar_barman.ltx
+bar_mechanic = rostok\bar_bar_smart_logic.ltx
+bar_bar_camp_work_1 = rostok\bar_bar_smart_logic.ltx
+bar_bar_camp_work_2 = rostok\bar_bar_smart_logic.ltx
+bar_bar_camp_work_3 = rostok\bar_bar_smart_logic.ltx
+bar_bar_camp_work_4 = rostok\bar_bar_smart_logic.ltx
+bar_bar_camp_work_5 = rostok\bar_bar_smart_logic.ltx
+bar_bar_camp_work_6 = rostok\bar_bar_smart_logic.ltx
+bar_bar_camp_work_7 = rostok\bar_bar_smart_logic.ltx
+bar_bar_camp_work_8 = rostok\bar_bar_smart_logic.ltx
+
+bar_bar_skam_1 = rostok\bar_bar_smart_logic.ltx
+bar_bar_skam_2 = rostok\bar_bar_smart_logic.ltx
+bar_bar_skam_3 = rostok\bar_bar_smart_logic.ltx
+bar_bar_skam_4 = rostok\bar_bar_smart_logic.ltx

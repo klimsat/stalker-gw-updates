@@ -1,0 +1,120 @@
+class "main_menu_debug_dialog"(CUIScriptWnd)
+function main_menu_debug_dialog:__init()
+  super()
+
+  self.faction_info = {}
+  self:InitControls()
+  self:InitCallBacks()
+end
+
+function main_menu_debug_dialog:__finalize()
+end
+
+function main_menu_debug_dialog:InitControls()
+  self:SetWndRect(Frect():set(0, 0, 1024, 768))
+  self:Enable(true)
+
+  local xml = CScriptXmlInit()
+
+  xml:ParseFile("ui_mm_main_debug.xml")
+
+  xml:InitStatic("background", self)
+  xml:InitStatic("lbl_greatwar_options", self)
+
+  self.listbox_sms = xml:InitListBox("listbox_sms", self)
+  self.listbox_sms:SetItemHeight(76)
+  self:Register(self.listbox_sms, "listbox_sms")
+  self:InitSmsList()
+
+  self.listbox_pda = xml:InitListBox("listbox_pda", self)
+  self.listbox_pda:SetItemHeight(76)
+  self:Register(self.listbox_pda, "listbox_pda")
+  self:InitPdaList()
+
+  local btn = xml:Init3tButton("btn_cancel", self)
+  self:Register(btn, "btn_cancel")
+end
+
+function main_menu_debug_dialog:InitCallBacks()
+  self:AddCallback("btn_cancel", ui_events.BUTTON_CLICKED, self.OnBtnCancel, self)
+end
+
+function main_menu_debug_dialog:OnBtnCancel()
+  self.owner:ShowDialog(true)
+  self:HideDialog()
+  self.owner:Show(true)
+end
+
+function main_menu_debug_dialog:OnKeyboard(dik, keyboard_action)
+  local res = CUIScriptWnd.OnKeyboard(self, dik, keyboard_action)
+
+  if res == false then
+    if keyboard_action == ui_events.WINDOW_KEY_PRESSED then
+      if dik == DIK_keys.DIK_ESCAPE then
+        self.owner:ShowDialog(true)
+        self:HideDialog()
+        self.owner:Show(true)
+      end
+    end
+  end
+
+  return res
+end
+
+function main_menu_debug_dialog:InitSmsList()
+  local index = 1
+  for _, faction in pairs(sim_tables.factions) do
+    self.listbox_sms:AddExistingItem(
+      ui_faction_sms_row(self, xml, index, strformat("ui_icon_news_%s", faction), faction)
+    )
+    index = index + 1
+  end
+end
+function main_menu_debug_dialog:InitPdaList()
+  local index = 1
+  for _, faction in pairs(sim_tables.factions) do
+    self.listbox_pda:AddExistingItem(
+      ui_faction_pda_row(self, xml, index, strformat("ui_icon_pda_%s", faction), faction)
+    )
+    index = index + 1
+  end
+end
+
+class "ui_faction_sms_row"(CUIListBoxItem)
+function ui_faction_sms_row:__init(parent, xml, index, icon, faction)
+  super(parent, xml, index, icon, faction)
+  self:GetTextItem():SetText("")
+
+  parent.faction_info[index] = {
+    ["icon_field"] = self:AddIconField(1),
+    ["faction_label"] = self:AddTextField(faction, 1)
+  }
+
+  parent.faction_info[index].icon_field:InitTexture(icon)
+  parent.faction_info[index].icon_field:SetStretchTexture(true)
+  parent.faction_info[index].icon_field:SetWndSize(vector2():set(110, 70))
+  parent.faction_info[index].icon_field:SetWndPos(vector2():set(0, 0))
+
+  parent.faction_info[index].faction_label:SetFont(GetFontLetterica16Russian())
+  parent.faction_info[index].faction_label:SetWndSize(vector2():set(120, 20))
+  parent.faction_info[index].faction_label:SetWndPos(vector2():set(120, 20))
+end
+class "ui_faction_pda_row"(CUIListBoxItem)
+function ui_faction_pda_row:__init(parent, xml, index, icon, faction)
+  super(parent, xml, index, icon, faction)
+  self:GetTextItem():SetText("")
+
+  parent.faction_info[index] = {
+    ["icon_field"] = self:AddIconField(1),
+    ["faction_label"] = self:AddTextField(faction, 1)
+  }
+
+  parent.faction_info[index].icon_field:InitTexture(icon)
+  parent.faction_info[index].icon_field:SetStretchTexture(true)
+  parent.faction_info[index].icon_field:SetWndSize(vector2():set(64, 64))
+  parent.faction_info[index].icon_field:SetWndPos(vector2():set(0, 0))
+
+  parent.faction_info[index].faction_label:SetFont(GetFontLetterica16Russian())
+  parent.faction_info[index].faction_label:SetWndSize(vector2():set(120, 20))
+  parent.faction_info[index].faction_label:SetWndPos(vector2():set(70, 20))
+end

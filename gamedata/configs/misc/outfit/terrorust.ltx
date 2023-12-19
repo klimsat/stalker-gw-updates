@@ -1,0 +1,320 @@
+;---------------------------------------------------------------------------------------------
+;		Leader Terrorust Outfit
+;---------------------------------------------------------------------------------------------
+[leader_terrorust_outfit]:outfit_leader_exo_base
+$spawn                                   = "outfit\leader_terrorust_outfit"
+visual                                   = dynamics\outfit\leader_terrorust_outfit
+actor_visual                             = actors\stalker_haos\terrorust_leader.ogf
+npc_visual                               = actors\stalker_haos\terrorust_leader.ogf
+player_hud_section                       = actor_hud_duty_psz9d
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_terrorust_outfit_name
+inv_name_short                           = leader_terrorust_outfit_name
+description                              = leader_terrorust_outfit_description
+
+inv_weight                               = 30
+
+inv_grid_x         						 = 78
+inv_grid_y        						 = 43
+
+cost                                     = 100000
+
+artefact_count                           = 1
+
+helmet_avaliable						 = false
+
+sprint_allowed							 = true
+
+power_loss                               = 0.75
+
+character_portrait						 = ui_inGame2_haos_leader
+;---------------------------------------------------------------------------------------------
+;		Террористический плащ
+;---------------------------------------------------------------------------------------------
+[terrorust_trenchcoat_outfit]:outfit_novice_base
+$spawn                                   = "outfit\terrorust_trenchcoat_outfit"
+visual                                   = dynamics\outfit\novice_outfit
+actor_visual                             = actors\stalker_bandit\stalker_bandit_4.ogf
+npc_visual                               = actors\stalker_bandit\stalker_bandit_4.ogf
+player_hud_section                       = actor_hud_bandit_trench
+
+
+inv_name                                 = terrorust_trenchcoat_outfit_name
+inv_name_short                           = terrorust_trenchcoat_outfit_name
+description                              = terrorust_trenchcoat_outfit_description
+inv_weight                               = 1.5
+
+inv_grid_height    = 3
+inv_grid_x         = 16
+inv_grid_y         = 31
+
+upgr_icon_x                              = 636
+upgr_icon_y                              = 0
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+
+cost                                     = 3000
+
+immunities_sect                          = sect_trenchcoat_outfit_immunities
+
+; NO RESISTANCE
+burn_protection                          = 0.0233
+shock_protection                         = 0.0933
+radiation_protection                     = 0.0035
+chemical_burn_protection                 = 0.0233
+telepatic_protection                     = 0.0
+strike_protection                        = 0.0350
+explosion_protection                     = 0.0350
+wound_protection                         = 0.0350
+
+bones_koeff_protection                   = actor_armor_trench
+
+character_portrait							 = ui_inGame2_haos_18
+
+[sect_terrorust_trenchcoat_outfit_immunities]
+burn_immunity                            = 0.05	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.05
+wound_immunity                           = 0.05
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.05
+explosion_immunity                       = 0.05
+fire_wound_immunity                      = 0.02
+
+[sect_terrorust_trenchcoat_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.005
+
+;---------------------------------------------------------------------------------------------
+;       Куртка террористов
+;---------------------------------------------------------------------------------------------
+[terrorust_novice_outfit]:outfit_novice_base
+$spawn                                   = "outfit\terrorust_novice_outfit"
+visual                                   = dynamics\outfit\cs_rookie_outfit
+actor_visual                             = actors\stalker_bandit\stalker_bandit_a.ogf
+npc_visual                               = actors\stalker_bandit\stalker_bandit_a.ogf
+player_hud_section                       = actor_hud_bandit_novice
+
+
+inv_name                                 = terrorust_novice_outfit_name
+inv_name_short                           = terrorust_novice_outfit_name
+description                              = terrorust_novice_outfit_description
+
+inv_grid_height    = 3
+inv_grid_x         = 68
+inv_grid_y         = 34
+
+upgr_icon_x                              = 1239
+upgr_icon_y                              = 340
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+
+character_portrait						 = ui_inGame2_haos_15
+
+upgrades                                 = up_gr_firstab_rookie_outfit, up_gr_seconab_rookie_outfit, up_gr_thirdab_rookie_outfit
+
+;---------------------------------------------------------------------------------------------
+;		Террористический комбенизон
+;---------------------------------------------------------------------------------------------
+[terrorust_outfit]:outfit_base
+$spawn                                   = "outfit\terrorust_outfit"
+visual                                   = dynamics\outfit\banditmerc_outfit
+actor_visual                             = actors\stalker_haos\haos_6.ogf
+npc_visual                               = actors\stalker_haos\haos_6.ogf
+player_hud_section                       = actor_hud_bandit_merc
+
+ef_equipment_type                        = 3
+
+inv_name                                 = terrorust_outfit_name
+inv_name_short                           = terrorust_outfit_name
+description                              = terrorust_outfit_description
+
+inv_weight                               = 5.0
+
+inv_grid_x                               = 16
+inv_grid_y                               = 14
+
+upgr_icon_x                              = 1248
+upgr_icon_y                              = 35
+upgr_icon_width                          = 300
+upgr_icon_height                         = 130
+full_icon_name                           = npc_icon_exo_outfit
+
+cost                                     = 17000
+full_scale_icon                          = 2,11	                                       ;иконка сталкера в костюме в полный рост
+artefact_count                           = 3
+immunities_sect                          = sect_terrorust_outfit_immunities
+
+; LOW-MEDIUM RESISTANCE
+burn_protection                          = 0.0333
+shock_protection                         = 0.1333
+radiation_protection                     = 0.0050
+chemical_burn_protection                 = 0.0333
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1750
+explosion_protection                     = 0.1750
+wound_protection                         = 0.1750
+
+hit_fraction_actor                       = 0.425
+bones_koeff_protection                   = actor_armor_bandit
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.75
+
+upgrades                                 = up_gr_firstab_banditmerc_outfit, up_gr_seconab_banditmerc_outfit, up_gr_thirdab_banditmerc_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_svoboda_heavy_outfit
+character_portrait						 = ui_inGame2_haos_6
+
+[sect_terrorust_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_terrorust_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		Террористический плащ УБ-1
+;---------------------------------------------------------------------------------------------
+[terrorust_plash_outfit]:outfit_base
+$spawn                                   = "outfit\terrorust_plash_outfit"
+visual                                   = dynamics\outfit\bandit_specops_outfit
+actor_visual                             = actors\stalker_bandit\stalker_bandit5a.ogf
+npc_visual                               = actors\stalker_bandit\stalker_bandit_5_gasmask.ogf
+player_hud_section                       = actor_hud_duty_psz9d
+
+ef_equipment_type                        = 3
+
+inv_name                                 = terrorust_plash_outfit_name
+inv_name_short                           = terrorust_plash_outfit_name
+description                              = terrorust_plash_outfit_description
+
+inv_weight                               = 9.0
+
+inv_grid_x      = 46
+inv_grid_y	= 37
+
+upgr_icon_x                              = 942
+upgr_icon_y                              = 0
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+full_icon_name                           = npc_icon_bandit_specops_outfit
+
+cost                                     = 16000
+full_scale_icon                          = 4,6	                                       ;иконка сталкера в костюме в полный рост
+power_loss                               = 0.8
+immunities_sect                          = sect_terrorust_plash_outfit_immunities
+
+; LOW RESISTANCE
+burn_protection                          = 0.0333
+shock_protection                         = 0.1333
+radiation_protection                     = 0.0050
+chemical_burn_protection                 = 0.0333
+telepatic_protection                     = 0.0
+strike_protection                        = 0.2275
+explosion_protection                     = 0.2275
+wound_protection                         = 0.2275
+
+hit_fraction_actor                       = 0.5
+bones_koeff_protection                   = actor_armor_berill
+
+artefact_count                           = 0
+control_inertion_factor                  = 1.5
+
+upgrades                                 = up_gr_firstab_specops_outfit, up_gr_seconab_specops_outfit, up_gr_thirdab_specops_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_specops
+character_portrait						 = ui_inGame2_haos_25
+
+[sect_terrorust_plash_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_terrorust_plash_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		Экзоскелет Террорист
+;---------------------------------------------------------------------------------------------
+[terrorust_exo_outfit]:outfit_exo_base
+$spawn                                   = "outfit\terrorust_exo_outfit"
+visual                                   = dynamics\outfit\bandit_exo_outfit
+actor_visual                             = actors\stalker_haos\haos_13.ogf
+npc_visual                               = actors\stalker_haos\haos_13.ogf
+player_hud_section                       = actor_hud_bandit_exo
+
+inv_name                                 = terrorust_exo_outfit_name
+inv_name_short                           = terrorust_exo_outfit_name
+description                              = terrorust_exo_outfit_description
+
+inv_weight                               = 25.0
+
+inv_grid_x                               = 2
+inv_grid_y                               = 36
+
+upgr_icon_x                              = 2500
+upgr_icon_y                              = 0
+upgr_icon_width                          = 350
+upgr_icon_height                         = 200
+
+cost                                     = 115000
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+strike_protection                        = 0.2975
+explosion_protection                     = 0.2975
+wound_protection                         = 0.2975
+
+bones_koeff_protection                   = actor_armor_bandit_exo
+
+power_loss                               = 1.05
+additional_inventory_weight              = 30
+additional_inventory_weight2             = 30
+artefact_count                           = 1
+helmet_avaliable					= false
+
+character_portrait						 = ui_inGame2_haos_13
+

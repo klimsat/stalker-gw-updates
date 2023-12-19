@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+    <string id="st_leader_dead_caption">
+        <text>Новости:</text>
+    </string>
+    <string id="st_leader_dead_msg">
+        <text>Лидер группировки %s - %s мёртв</text>
+    </string>
+    <string id="st_leader_dead_by_actor_msg">
+        <text>Вы убили лидера собственной группировки. Теперь твоя группировка будет охотиться на тебя!</text>
+    </string>
+
+    <string id="st_leader_actor_buy_leader">
+        <text>Теперь Вы являетесь лидером собственной группировки!</text>
+    </string>
+
+
+    <string id="st_dialog_laeder_stalker_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_stalker_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_stalker_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_stalker_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_bandit_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_bandit_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_bandit_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_bandit_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_csky_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_csky_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_csky_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_csky_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_army_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_army_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_army_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_army_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_freedom_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_freedom_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_freedom_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_freedom_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_dolg_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_dolg_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_dolg_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_dolg_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_ecolog_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_ecolog_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_ecolog_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_ecolog_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_killer_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_killer_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_killer_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_killer_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_monolith_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_monolith_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_monolith_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_monolith_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_zombied_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_zombied_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_zombied_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_zombied_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_isg_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_isg_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_isg_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_isg_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_darkstalker_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_darkstalker_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_darkstalker_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_darkstalker_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_renegate_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_renegate_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_renegate_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_renegate_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_varyag_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_varyag_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_varyag_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_varyag_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_slizni_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_slizni_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_slizni_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_slizni_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_velhan_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_velhan_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_velhan_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_velhan_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_fantom_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_fantom_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_fantom_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_fantom_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_veter_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_veter_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_veter_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_veter_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_osoznanie_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_osoznanie_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_osoznanie_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_osoznanie_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_alfa_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_alfa_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_alfa_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_alfa_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_apocalypse_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_apocalypse_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_apocalypse_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_apocalypse_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_adinkvizicia_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_adinkvizicia_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_adinkvizicia_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_adinkvizicia_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_hunter_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_hunter_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_hunter_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_hunter_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_voenstal_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_voenstal_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_voenstal_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_voenstal_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_mirotvorec_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_mirotvorec_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_mirotvorec_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_mirotvorec_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_ryskuspecnaz_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_ryskuspecnaz_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_ryskuspecnaz_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_ryskuspecnaz_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_sby_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_sby_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_sby_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_sby_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_angel_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_angel_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_angel_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_angel_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_posleduden_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_posleduden_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_posleduden_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_posleduden_cancel">
+        <text>Я пас.</text>
+    </string>
+
+    <string id="st_dialog_laeder_greh_start">
+        <text>Хочу выкупить лидерство группировки у тебя.</text>
+    </string>
+    <string id="st_dialog_laeder_greh_start_answer">
+        <text>Цена лидерства - 1.000.000 рублей.</text>
+    </string>
+    <string id="st_dialog_laeder_greh_acept">
+        <text>По рукам!</text>
+    </string>
+    <string id="st_dialog_laeder_greh_cancel">
+        <text>Я пас.</text>
+    </string>
+</string_table>

@@ -1,0 +1,20 @@
+[smart_terrain]
+squad_id = 12
+max_population = 2
+respawn_params = respawn@aes2_monsters2
+respawn_idle = 60000
+
+
+
+[respawn@aes2_monsters2]
+spawn_giants
+
+[spawn_giants]
+spawn_squads = simulation_gigant, simulation_controller, simulation_psy_dog
+spawn_num = 1
+
+[exclusive]
+aes2_monsters2_camp_work_1 = stancia_2\logic_for_smart\aes2_monsters2_smart_logic.ltx
+aes2_monsters2_camp_work_2 = stancia_2\logic_for_smart\aes2_monsters2_smart_logic.ltx
+aes2_monsters2_camp_work_3 = stancia_2\logic_for_smart\aes2_monsters2_smart_logic.ltx
+aes2_monsters2_camp_work_4 = stancia_2\logic_for_smart\aes2_monsters2_smart_logic.ltx

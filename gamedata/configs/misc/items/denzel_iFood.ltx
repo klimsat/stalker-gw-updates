@@ -1,0 +1,54 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;Аддон "iFood" * Автор: Denzel * Спасибо: Old Shit Mod, GeJorge - за разрешённые модели, огромное спасибо Maks'у за подсказки;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[2d_xxl]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency	=
+$spawn					= "food and drugs\2d_xxl"
+cform                   = skeleton
+class					= II_ATTCH
+visual                  = dynamics\devices\dev_xxl\dev_xxl.ogf
+cost					= 5000
+inv_name				= st_2d_xxl
+inv_name_short			= st_2d_xxl
+description				= st_2d_xxl_descr
+inv_weight				= 0.05
+inv_grid_width     = 2
+inv_grid_height    = 2
+inv_grid_x         = 2
+inv_grid_y         = 45
+
+attach_angle_offset		= -0.415, -1.262, 0.808
+;-1.512, -1.392, -0.242
+attach_position_offset	= -0.014, 0.010, 0.020
+;0.010, -0.090, 0.000
+attach_bone_name		= bip01_l_hand
+auto_attach				= false
+
+[2d_travel]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency	=
+$spawn					= "food and drugs\2d_travel"
+cform                   = skeleton
+class					= II_ATTCH
+visual                  = dynamics\devices\dev_travell\dev_travell.ogf
+cost					= 1500
+inv_name				= st_travel
+inv_name_short			= st_travel
+description				= st_travel_descr
+inv_weight				= 0.07
+inv_grid_width     = 2
+inv_grid_height    = 2
+inv_grid_x         = 0
+inv_grid_y         = 45
+attach_angle_offset		= -0.415, -1.262, 0.808
+;-1.512, -1.392, -0.242
+attach_position_offset	= -0.014, 0.010, 0.020
+;0.010, -0.090, 0.000
+attach_bone_name		= bip01_l_hand
+auto_attach				= false
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;При исрользование в своих модах или солянках - указывайте авторство. (Включен аддон iFood от Denzel'a) помоему не плохо звучит? Уважайте чужой труд!;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

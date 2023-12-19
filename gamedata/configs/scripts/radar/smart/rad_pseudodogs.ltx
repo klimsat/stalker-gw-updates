@@ -1,0 +1,19 @@
+[smart_terrain]
+squad_id = 8
+max_population = 2
+respawn_params = respawn@rad_pseudodogs 
+respawn_idle = 30000
+
+
+[respawn@rad_pseudodogs]
+spawn_pseudodogs
+
+[spawn_pseudodogs]
+spawn_squads = simulation_pseudodog
+spawn_num = 3
+
+[exclusive]
+rad_pseudodogs_camp_work_1 = radar\rad_pseudodogs_smart_logic.ltx
+rad_pseudodogs_camp_work_2 = radar\rad_pseudodogs_smart_logic.ltx
+rad_pseudodogs_camp_work_3 = radar\rad_pseudodogs_smart_logic.ltx
+rad_pseudodogs_camp_work_4 = radar\rad_pseudodogs_smart_logic.ltx

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<!-- HOSTAGE RESCUE FOR STALKER TASK -->
+	<string id="simulation_task_7_name">
+		<text>Спасти заложника</text>
+	</string>
+	<string id="simulation_task_7_text">
+		<text>Приятель сталкера попал в плен к бандитам. Необходимо спасти его.</text>
+	</string>
+	<string id="simulation_task_7_about">
+		<text>В общем, тут такое дело... Бандиты взяли в плен моего другана, а один я вытащить его не смогу. Может поможешь? За мной не заржавеет!</text>
+	</string>
+	<string id="simulation_task_7_finish">
+		<text>У тебя получилось! Спасибо, братан. Я уж и не надеялся увидеть его в живых! С меня причитается:</text>
+	</string>
+</string_table>

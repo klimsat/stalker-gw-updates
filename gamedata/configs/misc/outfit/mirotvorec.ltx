@@ -1,0 +1,603 @@
+;---------------------------------------------------------------------------------------------
+;		Миротворческий бронекостюм «Миротворец» 
+;---------------------------------------------------------------------------------------------
+[mirotvorec_military_outfit]:outfit_base
+$spawn                                   = "outfit\mirotvorec_military_outfit"
+visual                                   = dynamics\outfit\military_outfit
+actor_visual                             = actors\stalker_mirotvorec\mirotvorec_skat_gas_4_0.ogf
+npc_visual                               = actors\stalker_mirotvorec\mirotvorec_skat_gas_4_0.ogf
+player_hud_section                       = wpn_hand_mirotvorec_skat
+
+ef_equipment_type                        = 4
+
+inv_name                                 = mirotvorec_military_outfit_name
+inv_name_short                           = mirotvorec_military_outfit_name
+description                              = mirotvorec_military_outfit_description
+
+inv_weight                               = 10.0
+
+inv_grid_x                               = 70
+inv_grid_y                               = 40
+
+upgr_icon_x                              = 1258
+upgr_icon_y                              = 1390
+upgr_icon_width                          = 280
+upgr_icon_height                         = 136
+
+full_icon_name                           = npc_icon_military_outfit
+
+cost                                     = 45000
+full_scale_icon                          = 10,6	                                       ;иконка сталкера в костюме в полный рост
+power_loss                               = 0.9
+immunities_sect                          = sect_military_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0133
+shock_protection                         = 0.0533
+radiation_protection                     = 0.0020
+chemical_burn_protection                 = 0.0133
+telepatic_protection                     = 0.0
+strike_protection                        = 0.2625
+explosion_protection                     = 0.2625
+wound_protection                         = 0.2625
+
+hit_fraction_actor                       = 0.4
+bones_koeff_protection                   = actor_armor_skat
+
+artefact_count                           = 1
+control_inertion_factor                  = 1.8
+
+upgrades                                 = up_gr_firstab_military_outfit, up_gr_seconab_military_outfit, up_gr_thirdab_military_outfit, up_gr_fourtab_military_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_military_outfit
+character_portrait						 = ui_inGame2_mirotvorec_skat_gas_4_0
+
+[sect_mirotvorec_military_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.03
+fire_wound_immunity                      = 0.01
+
+[sect_mirotvorec_military_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.002
+
+;---------------------------------------------------------------------------------------------
+;		Ковбой
+;---------------------------------------------------------------------------------------------
+[mirotvorec_specops_outfit]:outfit_base
+$spawn                                   = "outfit\mirotvorec_specops_outfit"
+visual                                   = dynamics\outfit\specops_outfit
+actor_visual                             = actors\stalker_mirotvorec\mirotvorec_2.ogf
+npc_visual                               = actors\stalker_mirotvorec\mirotvorec_2.ogf
+player_hud_section                       = wpn_hand_mirotvorec_beril
+
+ef_equipment_type                        = 3
+
+inv_name                                 = mirotvorec_specops_outfit_name
+inv_name_short                           = mirotvorec_specops_outfit_name
+description                              = mirotvorec_specops_outfit_description
+
+inv_weight                               = 9.0
+
+inv_grid_x                               = 72
+inv_grid_y                               = 40
+
+upgr_icon_x                              = 944
+upgr_icon_y                              = 1524
+upgr_icon_width                          = 284
+upgr_icon_height                         = 106
+full_icon_name                           = npc_icon_specops_outfit
+
+cost                                     = 27000
+full_scale_icon                          = 4,6	                                       ;иконка сталкера в костюме в полный рост
+power_loss                               = 0.8
+immunities_sect                          = sect_military_outfit_immunities
+
+; LOW RESISTANCE
+burn_protection                          = 0.0333
+shock_protection                         = 0.1333
+radiation_protection                     = 0.0050
+chemical_burn_protection                 = 0.0333
+telepatic_protection                     = 0.0
+strike_protection                        = 0.2275
+explosion_protection                     = 0.2275
+wound_protection                         = 0.2275
+
+hit_fraction_actor                       = 0.5
+bones_koeff_protection                   = actor_armor_berill
+
+artefact_count                           = 1
+control_inertion_factor                  = 1.5
+
+upgrades                                 = up_gr_firstab_specops_outfit, up_gr_seconab_specops_outfit, up_gr_thirdab_specops_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_specops
+character_portrait						 = ui_inGame2_mirotvorec_2
+
+[sect_mirotvorec_specops_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_mirotvorec_specops_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		Комбенизон Миротворца
+;---------------------------------------------------------------------------------------------
+[mirotvorec_stalker_outfit]:outfit_base
+$spawn                                   = "outfit\mirotvorec_stalker_outfit"
+visual                                   = dynamics\outfit\stalker_outfit
+actor_visual                             = actors\stalker_mirotvorec\mirotvorec_kombez_off_gas_mask_1_0.ogf
+npc_visual                               = actors\stalker_mirotvorec\mirotvorec_kombez_off_gas_mask_1_0.ogf
+player_hud_section                       = wpn_hand_mirotvorec_suit
+
+ef_equipment_type                        = 3
+
+inv_name                                 = mirotvorec_stalker_outfit_name
+inv_name_short                           = mirotvorec_stalker_outfit_name
+description                              = mirotvorec_stalker_outfit_description
+
+inv_weight                               = 8.5
+
+inv_grid_x                               = 78
+inv_grid_y                               = 40
+
+upgr_icon_x                              = 946
+upgr_icon_y                              = 1910
+upgr_icon_width                          = 280
+upgr_icon_height                         = 116
+
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 16000
+full_scale_icon                          = 14,11	                                       ;иконка сталкера в костюме в полный рост
+
+artefact_count                           = 3
+
+immunities_sect                          = sect_stalker_outfit_immunities
+
+
+; LOW RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1925
+explosion_protection                     = 0.1925
+wound_protection                         = 0.1925
+
+hit_fraction_actor                       = 0.75
+bones_koeff_protection                   = actor_armor_bandit
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.75
+
+upgrades                                 = up_gr_firstab_stalker_outfit, up_gr_seconab_stalker_outfit, up_gr_thirdab_stalker_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_stalker_outfit
+character_portrait						 = ui_inGame2_mirotvorec_kombez_off_gas_mask_1_0
+
+[sect_mirotvorec_stalker_outfit_immunities]
+burn_immunity                            = 0.03	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.03
+wound_immunity                           = 0.03
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.03
+explosion_immunity                       = 0.03
+fire_wound_immunity                      = 0.015
+
+[sect_mirotvorec_stalker_outfit_immunities_add]
+burn_immunity                            = -0.015	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.015
+wound_immunity                           = -0.015
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.015
+explosion_immunity                       = -0.015
+fire_wound_immunity                      = -0.005
+
+;---------------------------------------------------------------------------------------------
+;		Комбенизон ISMAA
+;---------------------------------------------------------------------------------------------
+[mirotvorec_ismaa_outfit]:outfit_base
+$spawn                                   = "outfit\mirotvorec_ismaa_outfit"
+visual                                   = dynamics\outfit\alfa_outfit
+actor_visual                             = actors\stalker_mirotvorec\mirotvorec_specnaz_2_0.ogf
+npc_visual                               = actors\stalker_mirotvorec\mirotvorec_specnaz_2_0.ogf
+player_hud_section                       = wpn_hand_alfa_suit
+
+ef_equipment_type                        = 3
+
+inv_name                                 = mirotvorec_ismaa_outfit_name
+inv_name_short                           = mirotvorec_ismaa_outfit_name
+description                              = mirotvorec_ismaa_outfit_description
+
+inv_weight                               = 12.5
+
+inv_grid_x                               = 68
+inv_grid_y                               = 40
+
+upgr_icon_x                              = 944
+upgr_icon_y                              = 1385
+upgr_icon_width                          = 290
+upgr_icon_height                         = 134
+
+full_icon_name                           = npc_icon_stalker_outfit
+full_scale_icon                          = 14,11	                                       ;иконка сталкера в костюме в полный рост
+
+cost                                     = 56500
+
+artefact_count                           = 3
+
+immunities_sect                          = sect_mirotvorec_ismaa_outfit_immunities
+
+
+; LOW RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1925
+explosion_protection                     = 0.1925
+wound_protection                         = 0.1925
+
+hit_fraction_actor                       = 0.5
+bones_koeff_protection                   = actor_armor_freedom_exo
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.9
+helmet_avaliable					= false
+
+upgrades                                 = up_gr_firstab_merc_outfit, up_gr_seconab_merc_outfit, up_gr_thirdab_merc_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_svoboda_heavy_outfit
+character_portrait						 = ui_inGame2_mirotvorec_kombez_off_gas_mask_1_0
+
+[sect_mirotvorec_ismaa_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_mirotvorec_ismaa_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		Научный Комбенизон "Миротворец"
+;---------------------------------------------------------------------------------------------
+[mirotvorec_scientific_outfit]:outfit_scientific_base
+$spawn                                   = "outfit\isg_scientific_outfit"
+visual                                   = dynamics\outfit\isg_scientific_outfit
+actor_visual                             = actors\stalker_mirotvorec\mirotvorec_seva_2_0.ogf
+npc_visual                               = actors\stalker_mirotvorec\mirotvorec_seva_2_0.ogf
+player_hud_section                       = act_hand_seva_mirotvorec
+
+inv_name                                 = mirotvorec_scientific_outfit_name
+inv_name_short                           = mirotvorec_scientific_outfit_name
+description                              = mirotvorec_scientific_outfit_description
+
+inv_weight                               = 12.0
+
+inv_grid_width                           = 2
+inv_grid_height                          = 3
+inv_grid_x                               = 54
+inv_grid_y                               = 43
+
+
+upgr_icon_x                              = 1260
+upgr_icon_y                              = 1530
+upgr_icon_width                          = 281
+upgr_icon_height                         = 136
+
+cost                                     = 40000
+full_scale_icon                          = 12,11	                                       ;иконка сталкера в костюме в полный рост
+
+immunities_sect                          = sect_mirotvorec_scientific_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.1033
+shock_protection                         = 0.4133
+radiation_protection                     = 0.0185
+chemical_burn_protection                 = 0.1133
+telepatic_protection                     = 0.06
+strike_protection                        = 0.2
+explosion_protection                     = 0.2
+wound_protection                         = 0.2
+
+hit_fraction_actor                       = 0.65
+bones_koeff_protection                   = actor_armor_duty_seva
+helmet_avaliable					= false
+
+artefact_count                           = 2
+
+nightvision_sect                         = effector_nightvision_2
+
+control_inertion_factor                  = 1.5
+power_loss                               = 0.8
+character_portrait						 = ui_inGame2_no_data
+
+[sect_mirotvorec_scientific_outfit_immunities]
+burn_immunity                            = 0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = 0.03
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.0
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.02
+
+[sect_mirotvorec_scientific_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.0
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		Экзоскелет Миротворца
+;---------------------------------------------------------------------------------------------
+[mirotvorec_military_exo_outfit]:outfit_exo_base
+$spawn                                   = "outfit\mirotvorec_military_exo_outfit"
+visual                                   = dynamics\outfit\military_exo_outfit
+actor_visual                             = actors\stalker_mirotvorec\mirotvorec_exo_5_0.ogf
+npc_visual                               = actors\stalker_mirotvorec\mirotvorec_exo_5_0.ogf
+player_hud_section                       = wpn_hand_exo_mirotvorec
+
+inv_name                                 = mirotvorec_military_exo_outfit_name
+inv_name_short                           = mirotvorec_military_exo_outfit_name
+description                              = mirotvorec_military_exo_outfit_description
+
+inv_weight                               = 20.0
+
+inv_grid_width     = 2
+inv_grid_height    = 3
+inv_grid_x                               = 76
+inv_grid_y                               = 40
+
+upgr_icon_x                              = 938
+upgr_icon_y                              = 1770
+upgr_icon_width                          = 300
+upgr_icon_height                         = 134
+
+sprint_allowed                           = true
+
+cost                                     = 115000
+
+upgrades                                 = up_gr_firstab_monolith_exo_outfit, up_gr_seconab_monolith_exo_outfit, up_gr_thirdab_monolith_exo_outfit, up_gr_fourtab_monolith_exo_outfit, up_gr_fifthab_monolith_exo_outfit
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0333
+shock_protection                         = 0.1333
+radiation_protection                     = 0.0050
+chemical_burn_protection                 = 0.0333
+strike_protection                        = 0.3500
+explosion_protection                     = 0.3500
+wound_protection                         = 0.3500
+
+bones_koeff_protection                   = actor_armor_mirotvorec_exo
+
+power_loss                               = 1.20
+additional_inventory_weight              = 120
+additional_inventory_weight2             = 120
+artefact_count                           = 2
+helmet_avaliable					= false
+
+character_portrait						 = ui_inGame2_mirotvorec_exo_5_0
+
+;---------------------------------------------------------------------------------------------
+;		Полуэкзоскелет Миротворцев
+;---------------------------------------------------------------------------------------------
+[mirotvorec_radiation_outfit]:outfit_exo_base
+$spawn								= "outfit\mirotvorec_radiation_outfit"
+visual								= dynamics\outfit\duty_rad_outfit
+actor_visual						= actors\stalker_mirotvorec\mirotvorec_5_0.ogf
+player_hud_section					= act_hand_rad_mirotvorec
+
+inv_name							= mirotvorec_radiation_outfit_name
+inv_name_short						= mirotvorec_radiation_outfit_name
+description							= mirotvorec_radiation_outfit_description
+
+inv_weight							= 15.0
+
+inv_grid_width     = 2
+inv_grid_height    = 3
+inv_grid_x                               = 74
+inv_grid_y                               = 40
+
+upgr_icon_x							= 936
+upgr_icon_y							= 1638
+upgr_icon_width						= 302
+upgr_icon_height					= 133
+
+cost								= 75000
+
+helmet_avaliable					          = false
+power_loss							            = 1.02
+control_inertion_factor				      = 2.5
+sprint_allowed						          = true
+additional_inventory_weight			    = 0
+additional_inventory_weight2		    = 0
+artefact_count                      = 2
+
+burn_protection                          = 0.11
+radiation_protection                     = 0.016
+chemical_burn_protection                 = 0.11
+fire_wound_immunity                      = 0.105
+wound_protection                         = 0.105
+shock_protection                         = 0.3
+
+immunities_sect                          = sect_mirotvorec_radiation_outfit_immunities
+
+[sect_mirotvorec_radiation_outfit_immunities]
+burn_immunity                            = 0.002	                                       ;eiyooeoeaiou eiioieoaoa naiiai eino?ia
+strike_immunity                          = 0.0
+shock_immunity                           = 0.002
+wound_immunity                           = 0.001
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.002
+explosion_immunity                       = 0.001
+fire_wound_immunity                      = 0.001
+
+upgrades                                 = up_gr_firstab_dolg_rad_outfit, up_gr_seconab_dolg_rad_outfit, up_gr_thirdab_dolg_rad_outfit, up_gr_fourtab_dolg_rad_outfit, up_gr_fifthab_dolg_rad_outfit
+
+character_portrait						           = ui_inGame2_mirotvorec_5_0
+;---------------------------------------------------------------------------------------------
+;		Leader Mirotvorec Outfit
+;---------------------------------------------------------------------------------------------
+[leader_mirotvorec_outfit]:outfit_base
+$spawn                                   = "outfit\leader_mirotvorec_outfit"
+visual                                   = dynamics\outfit\cpt_prais_outfit
+actor_visual                             = actors\stalker_mirotvorec\mirotvorec_prais_1_0.ogf
+npc_visual                               = actors\stalker_mirotvorec\mirotvorec_prais_1_0.ogf
+player_hud_section                       = actor_hud_bandit_novice
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_mirotvorec_outfit_name
+inv_name_short                           = leader_mirotvorec_outfit_name
+description                              = leader_mirotvorec_outfit_description
+
+inv_weight                               = 10
+
+inv_grid_x                               = 72
+inv_grid_y                               = 43
+
+upgr_icon_x							     = 3780
+upgr_icon_y							     = 672
+upgr_icon_width						     = 294
+upgr_icon_height					     = 126
+
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 218145
+
+full_scale_icon                          = 14,11
+
+immunities_sect                          = sect_leader_mirotvorec_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0572
+shock_protection                         = 0.2916
+radiation_protection                     = 0.0100
+chemical_burn_protection                 = 0.0666
+telepatic_protection                     = 0.1110
+strike_protection                        = 0.5625
+explosion_protection                     = 0.5625
+wound_protection                         = 0.5625
+
+fire_wound_protection                    = 0.2500
+
+hit_fraction_actor                       = 0.15
+control_inertion_factor                  = 2.5
+bones_koeff_protection                   = mirotvorec_leader
+
+power_restore_speed                      = 0.005
+power_loss                               = 1.0
+
+additional_inventory_weight              = 100
+additional_inventory_weight2             = 100
+
+artefact_count                           = 5
+
+character_portrait						 = ui_inGame2_mirotvorec_prais_1_0
+
+[sect_leader_mirotvorec_outfit_immunities]
+burn_immunity                            = 0.0050
+strike_immunity                          = 0.0050
+shock_immunity                           = 0.0200
+wound_immunity                           = 0.0050
+radiation_immunity                       = 0.0000
+telepatic_immunity                       = 0.0000
+chemical_burn_immunity                   = 0.0050
+explosion_immunity                       = 0.0050
+fire_wound_immunity                      = 0.0050
+;---------------------------------------------------------------------------------------------
+;OUTFIT IN AZAZEL MODE: Leader Mirotvorec Outfit
+;---------------------------------------------------------------------------------------------
+[leader_azazel_mirotvorec_outfit]:outfit_leader_exo_base
+$spawn                                   = "outfit\leader_azazel_mirotvorec_outfit"
+visual                                   = dynamics\outfit\cpt_prais_outfit
+actor_visual                             = actors\stalker_mirotvorec\mirotvorec_prais_1_0.ogf
+npc_visual                               = actors\stalker_mirotvorec\mirotvorec_prais_1_0.ogf
+player_hud_section                       = actor_hud_bandit_novice
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_mirotvorec_outfit_name
+inv_name_short                           = leader_mirotvorec_outfit_name
+description                              = leader_mirotvorec_outfit_description
+
+inv_weight                               = 10
+
+inv_grid_x                               = 72
+inv_grid_y                               = 43
+
+upgr_icon_x							     = 3780
+upgr_icon_y							     = 672
+upgr_icon_width						     = 294
+upgr_icon_height					     = 126
+
+cost                                     = 218145
+
+artefact_count                           = 1
+
+helmet_avaliable						 = false
+
+sprint_allowed							 = true
+
+power_loss                               = 0.75
+
+character_portrait						 = ui_inGame2_mirotvorec_prais_1_0
+

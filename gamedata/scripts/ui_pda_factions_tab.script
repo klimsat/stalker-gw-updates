@@ -1,0 +1,793 @@
+class "ui_pda_factions_tab"(CUIScriptWnd)
+
+class "pda_list_item_entry"(CUIListBoxItem)
+function pda_list_item_entry:__init()
+  super(25)
+  self.sect = self:GetTextItem()
+  self.sect:SetWndRect(Frect():set(0, 0, 195, 25))
+  self:SetTextColor(GetARGB(100, 255, 255, 255))
+  self.sect:SetFont(GetFontLetterica18Russian())
+  self.sect:SetWndSize(vector2():set(195, 25))
+  self.sect:SetEllipsis(true)
+end
+
+local list = 1 ------- Отвечает за переключение вперед-назад.
+local selectedFactionIndex = nil
+local lastSelectedFactionName = nil -- Имя выбранной гп. Может быть как просто "название" так и "название_идеология". Например: stalker_army
+local selected_relations = nil
+
+local start_points = {}
+local start_base = {}
+local start_res = {}
+local start_last = {}
+local start_level = {}
+
+-------------- Задаем стандартные параметры.
+-------- Названия, из st_notepad.xml
+local start_name = {
+  "stalker",
+  "dolg",
+  "freedom",
+  "csky",
+  "ecolog",
+  "killer",
+  "army",
+  "bandit",
+  "monolith",
+  "isg",
+  "darkstalker",
+  "renegate",
+  "varyag",
+  "slizni",
+  "velhan",
+  "fantom",
+  "veter",
+  "osoznanie",
+  "alfa",
+  "apocalypse",
+  "adinkvizicia",
+  "hunter",
+  "voenstal",
+  "mirotvorec",
+  "ryskuspecnaz",
+  "sby",
+  "angel",
+  "posleduden",
+  "greh",
+  "zombied"
+}
+
+leaders = {
+  stalker = {dead = false, name = "Отец Валерьян"},
+  dolg = {dead = false, name = "Генерал Воронин"},
+  freedom = {dead = false, name = "Лукаш"},
+  csky = {dead = false, name = "Лебедев"},
+  ecolog = {dead = false, name = "Бондарь"},
+  killer = {dead = false, name = "Душман"},
+  army = {dead = false, name = "Генерал Соловьев"},
+  bandit = {dead = false, name = "Султан"},
+  monolith = {dead = false, name = "Харон"},
+  isg = {dead = false, name = "Роберт Краузер"},
+  darkstalker = {dead = false, name = "Тёмный сталкер"},
+  renegate = {dead = false, name = "Косой"},
+  varyag = {dead = false, name = "Бронислав"},
+  slizni = {dead = false, name = "Мутный"},
+  velhan = {dead = false, name = "Князь"},
+  fantom = {dead = false, name = "Мираж"},
+  veter = {dead = false, name = "Вечный"},
+  osoznanie = {dead = false, name = "П.О.С"},
+  alfa = {dead = false, name = "Капитан Есаулов"},
+  apocalypse = {dead = false, name = "Йозеф Бергер"},
+  adinkvizicia = {dead = false, name = "Инквизитор"},
+  hunter = {dead = false, name = "Дэн"},
+  voenstal = {dead = false, name = "Полковник Данилов"},
+  mirotvorec = {dead = false, name = "Генерал Прайс"},
+  ryskuspecnaz = {dead = false, name = "Полковник Смирнов"},
+  sby = {dead = false, name = "Полковник Дегтярёв"},
+  angel = {dead = false, name = "Цербер"},
+  posleduden = {dead = false, name = "Бленд"},
+  greh = {dead = false, name = "Ворон Чернобог"},
+  zombied = {dead = false, name = "Стронглав"}
+}
+
+-------------- Параметры, что будут после сортировки.
+local Max = {}
+local maxName = {}
+local maxPoints = {}
+local maxLast = {}
+
+local name = {}
+local icon = {}
+local points = {}
+local relation = {}
+local base = {}
+local res = {}
+local last = {}
+local level = {}
+
+last_update_timer = nil
+
+function ui_pda_factions_tab:__init()
+  super()
+
+  self.table_relations = {
+    {
+      value = "-4000",
+      cost = 0
+    },
+    {
+      value = "-2000",
+      cost = 0
+    },
+    {
+      value = "-1000",
+      cost = 0
+    },
+    {
+      value = "-500",
+      cost = 0
+    },
+    {
+      value = "+500",
+      cost = 50000
+    },
+    {
+      value = "+1000",
+      cost = 100000
+    },
+    {
+      value = "+2000",
+      cost = 200000
+    },
+    {
+      value = "+4000",
+      cost = 400000
+    }
+  }
+
+  self:InitControls()
+  self:InitCallBacks()
+end
+
+function get_ui()
+  SINGLETON = SINGLETON or ui_pda_factions_tab()
+  SINGLETON:Reset()
+  return SINGLETON
+end
+
+function ui_pda_factions_tab:InitControls()
+  self:SetWndRect(Frect():set(0, 0, 1024, 768))
+  local xml = CScriptXmlInit()
+  self.xml = xml
+  xml:ParseFile("ui_pda_factions_tab.xml")
+  xml:InitFrame("frame1", self)
+  self.button_next = xml:Init3tButton("button_next", self)
+  self.button_back = xml:Init3tButton("button_back", self)
+  self:Register(self.button_next, "button_next")
+  self:Register(self.button_back, "button_back")
+  xml:InitFrame("frame2", self)
+
+  self.hr_1 = xml:InitStatic("hr_1", self)
+
+  self.relation_bar = xml:InitStatic("relation_bar", self)
+  self.relation_text = xml:InitStatic("relation_bar:relation_text", self.relation_bar)
+  self.relation_cost = xml:InitStatic("relation_bar:relation_cost", self.relation_bar)
+
+  self:Register(xml:Init3tButton("relation_bar:button_declare_war", self.relation_bar), "button_declare_war")
+  self:Register(xml:Init3tButton("relation_bar:button_change_relation", self.relation_bar), "button_change_relation")
+
+  self.list_relations = xml:InitComboBox("relation_bar:list_relations", self.relation_bar)
+  self.list_relations:SetAutoDelete(true)
+  self:Register(self.list_relations, "list_relations")
+
+  self.visible_area = xml:InitStatic("visible_area", self)
+  self.scroll_view = xml:InitScrollView("visible_area:scroll_view", self.visible_area)
+  self.faction_name = xml:InitStatic("visible_area:faction_name", self.visible_area)
+  self.faction_leader = xml:InitStatic("visible_area:faction_leader", self.visible_area)
+  self.faction_text = xml:InitStatic("visible_area:faction_text", self.visible_area)
+  self.faction_statistics = xml:InitStatic("visible_area:scroll_view:faction_statistics", self.scroll_view)
+  self.faction_members = xml:InitStatic("visible_area:scroll_view:faction_members", self.scroll_view)
+  self.faction_squads = xml:InitStatic("visible_area:scroll_view:faction_squads", self.scroll_view)
+  self.faction_power = xml:InitStatic("visible_area:scroll_view:faction_power", self.scroll_view)
+  self.faction_relation = xml:InitStatic("visible_area:scroll_view:faction_relation", self.scroll_view)
+  self.faction_money = xml:InitStatic("visible_area:scroll_view:faction_money", self.scroll_view)
+
+  xml:InitStatic("visible_area:hr_2", self.visible_area)
+
+  self.base_list = xml:InitListBox("visible_area:bases_list", self.visible_area)
+  self.base_list:ShowSelectedItem(true)
+  self:Register(self.base_list, "base_list")
+
+  self.vkladka_general_1 = xml:Init3tButton("vkladka_general_1", self)
+  self.selection_1 = xml:InitStatic("vkladka_general_1:selection_1", self.vkladka_general_1)
+  self.Static_name_1 = xml:InitStatic("vkladka_general_1:Static_name_1", self.vkladka_general_1)
+  self.Static_info_11 = xml:InitStatic("vkladka_general_1:Static_info_11", self.vkladka_general_1)
+  self.Static_info_12 = xml:InitStatic("vkladka_general_1:Static_info_12", self.vkladka_general_1)
+  self.Static_icon_1 = xml:InitStatic("vkladka_general_1:Static_icon_1", self.vkladka_general_1)
+  self:Register(self.vkladka_general_1, "vkladka_general_1")
+
+  self.vkladka_general_2 = xml:Init3tButton("vkladka_general_2", self)
+  self.selection_2 = xml:InitStatic("vkladka_general_2:selection_2", self.vkladka_general_2)
+  self.Static_name_2 = xml:InitStatic("vkladka_general_2:Static_name_2", self.vkladka_general_2)
+  self.Static_info_21 = xml:InitStatic("vkladka_general_2:Static_info_21", self.vkladka_general_2)
+  self.Static_info_22 = xml:InitStatic("vkladka_general_2:Static_info_22", self.vkladka_general_2)
+  self.Static_icon_2 = xml:InitStatic("vkladka_general_2:Static_icon_2", self.vkladka_general_2)
+  self:Register(self.vkladka_general_2, "vkladka_general_2")
+
+  self.vkladka_general_3 = xml:Init3tButton("vkladka_general_3", self)
+  self.selection_3 = xml:InitStatic("vkladka_general_3:selection_3", self.vkladka_general_3)
+  self.Static_name_3 = xml:InitStatic("vkladka_general_3:Static_name_3", self.vkladka_general_3)
+  self.Static_info_31 = xml:InitStatic("vkladka_general_3:Static_info_31", self.vkladka_general_3)
+  self.Static_info_32 = xml:InitStatic("vkladka_general_3:Static_info_32", self.vkladka_general_3)
+  self.Static_icon_3 = xml:InitStatic("vkladka_general_3:Static_icon_3", self.vkladka_general_3)
+  self:Register(self.vkladka_general_3, "vkladka_general_3")
+
+  self.vkladka_general_4 = xml:Init3tButton("vkladka_general_4", self)
+  self.selection_4 = xml:InitStatic("vkladka_general_4:selection_4", self.vkladka_general_4)
+  self.Static_name_4 = xml:InitStatic("vkladka_general_4:Static_name_4", self.vkladka_general_4)
+  self.Static_info_41 = xml:InitStatic("vkladka_general_4:Static_info_41", self.vkladka_general_4)
+  self.Static_info_42 = xml:InitStatic("vkladka_general_4:Static_info_42", self.vkladka_general_4)
+  self.Static_icon_4 = xml:InitStatic("vkladka_general_4:Static_icon_4", self.vkladka_general_4)
+  self:Register(self.vkladka_general_4, "vkladka_general_4")
+
+  self.vkladka_general_5 = xml:Init3tButton("vkladka_general_5", self)
+  self.selection_5 = xml:InitStatic("vkladka_general_5:selection_5", self.vkladka_general_5)
+  self.Static_name_5 = xml:InitStatic("vkladka_general_5:Static_name_5", self.vkladka_general_5)
+  self.Static_info_51 = xml:InitStatic("vkladka_general_5:Static_info_51", self.vkladka_general_5)
+  self.Static_info_52 = xml:InitStatic("vkladka_general_5:Static_info_52", self.vkladka_general_5)
+  self.Static_icon_5 = xml:InitStatic("vkladka_general_5:Static_icon_5", self.vkladka_general_5)
+  self:Register(self.vkladka_general_5, "vkladka_general_5")
+
+  self.vkladka_general_6 = xml:Init3tButton("vkladka_general_6", self)
+  self.selection_6 = xml:InitStatic("vkladka_general_6:selection_6", self.vkladka_general_6)
+  self.Static_name_6 = xml:InitStatic("vkladka_general_6:Static_name_6", self.vkladka_general_6)
+  self.Static_info_61 = xml:InitStatic("vkladka_general_6:Static_info_61", self.vkladka_general_6)
+  self.Static_info_62 = xml:InitStatic("vkladka_general_6:Static_info_62", self.vkladka_general_6)
+  self.Static_icon_6 = xml:InitStatic("vkladka_general_6:Static_icon_6", self.vkladka_general_6)
+  self:Register(self.vkladka_general_6, "vkladka_general_6")
+
+  self.message_box_war = CUIMessageBoxEx()
+  self:Register(self.message_box_war, "msg_box")
+
+  self:fillListBox()
+  self:LoadRelations()
+  self.button_next:Show(false)
+  self.button_back:Show(false)
+  self.visible_area:Show(false)
+  self.hr_1:Show(false)
+  self.relation_bar:Show(false)
+  self.selection_1:Show(false)
+  self.selection_2:Show(false)
+  self.selection_3:Show(false)
+  self.selection_4:Show(false)
+  self.selection_5:Show(false)
+  self.selection_6:Show(false)
+  self.faction_money:Show(false)
+end
+
+function ui_pda_factions_tab:LoadRelations()
+  self.list_relations:ClearList()
+
+  for i = 1, #self.table_relations do
+    self.list_relations:AddItem(self.table_relations[i].value, i)
+  end
+
+  selected_relations = self.table_relations[5]
+  self.list_relations:SetText(self.table_relations[5].value)
+
+  local costSelectedRelationsText =
+    strformat(GetString("ui_mm_pda_factions_tab_relation_cost"), selected_relations.cost)
+  self.relation_cost:TextControl():SetText(costSelectedRelationsText)
+end
+
+function ui_pda_factions_tab:fillListBox()
+  if
+    not self or not self.base_list or not sim_factions.faction_information or not lastSelectedFactionName or
+      not sim_factions.faction_information[lastSelectedFactionName]
+   then
+    return
+  end
+
+  local faction = lastSelectedFactionName
+
+  self.base_list:RemoveAll()
+
+  local zones = {
+    base = {},
+    territory = {},
+    point = {},
+    resource = {},
+    camp = {},
+    lair = {}
+  }
+
+  for smartId, _ in pairs(SIMBOARD.smarts) do
+    local smart = alife_object(smartId)
+
+    if smart.owning_faction == faction then
+      if sim_smart.isBase(smart) then
+        table.insert(zones.base, sim_script_to_text.smart_names[smart:name()])
+      elseif sim_smart.isTerritory(smart) then
+        table.insert(zones.territory, sim_script_to_text.smart_names[smart:name()])
+      elseif sim_smart.isResource(smart) then
+        table.insert(zones.resource, sim_script_to_text.smart_names[smart:name()])
+      elseif sim_smart.isPoint(smart) then
+        table.insert(zones.point, sim_script_to_text.smart_names[smart:name()])
+      elseif sim_smart.isLair(smart) then
+        table.insert(zones.lair, sim_script_to_text.smart_names[smart:name()])
+      elseif sim_smart.isCamp(smart) then
+        table.insert(zones.camp, sim_script_to_text.smart_names[smart:name()])
+      end
+    end
+  end
+
+  for key, locations in pairs(zones) do
+    if key == "base" then
+      local text = "Базы:  " .. (#locations or 0)
+      self.base_list:AddTextItem(text)
+    elseif key == "resource" then
+      local text = "Ресурсные точки:  " .. (#locations or 0)
+      self.base_list:AddTextItem(text)
+    elseif key == "territory" then
+      local text = "Территории:  " .. (#locations or 0)
+      self.base_list:AddTextItem(text)
+    elseif key == "point" then
+      local text = "Ключевые точки:  " .. (#locations or 0)
+      self.base_list:AddTextItem(text)
+    elseif key == "lair" then
+      local text = "Логова:  " .. (#locations or 0)
+      self.base_list:AddTextItem(text)
+    elseif key == "camp" then
+      local text = "Лагеря:  " .. (#locations or 0)
+      self.base_list:AddTextItem(text)
+    end
+
+    for key, locationsName in pairs(locations) do
+      local text = "  " .. locationsName
+      self.base_list:AddTextItem(text)
+    end
+  end
+end
+
+function ui_pda_factions_tab:InitCallBacks()
+  self:AddCallback("button_next", ui_events.BUTTON_CLICKED, self.button_next_button_clicked, self)
+  self:AddCallback("button_back", ui_events.BUTTON_CLICKED, self.button_back_button_clicked, self)
+  self:AddCallback("button_declare_war", ui_events.BUTTON_CLICKED, self.button_declare_war_button_clicked, self)
+  self:AddCallback("button_change_relation", ui_events.BUTTON_CLICKED, self.button_change_relation_button_clicked, self)
+  self:AddCallback("vkladka_general_1", ui_events.BUTTON_CLICKED, self.select_faction_1, self)
+  self:AddCallback("vkladka_general_2", ui_events.BUTTON_CLICKED, self.select_faction_2, self)
+  self:AddCallback("vkladka_general_3", ui_events.BUTTON_CLICKED, self.select_faction_3, self)
+  self:AddCallback("vkladka_general_4", ui_events.BUTTON_CLICKED, self.select_faction_4, self)
+  self:AddCallback("vkladka_general_5", ui_events.BUTTON_CLICKED, self.select_faction_5, self)
+  self:AddCallback("vkladka_general_6", ui_events.BUTTON_CLICKED, self.select_faction_6, self)
+  self:AddCallback("list_relations", ui_events.LIST_ITEM_SELECT, self.OnSelectRelations, self)
+  -- message box
+  self:AddCallback("msg_box", ui_events.MESSAGE_BOX_YES_CLICKED, self.OnMsgYes, self)
+end
+
+function ui_pda_factions_tab:OnMsgYes()
+  local actorFaction = sim_brain.actor_faction
+  local toFaction = lastSelectedFactionName
+  local to_faction_text = GetString("st_faction_" .. toFaction)
+  local actor_faction_text = GetString("st_faction_" .. actorFaction)
+
+  utils.news("Объявление войны", "Группировка %s объявила войну группировке %s", actor_faction_text, to_faction_text)
+
+  wargreat_relations.full_relation_table[toFaction][actorFaction] = -10000
+  wargreat_relations.full_relation_table[toFaction][("actor_" .. actorFaction)] = -10000
+  game_relations.change_relation(actorFaction, toFaction, -10000)
+end
+
+function ui_pda_factions_tab:select_faction_1()
+  selectedFactionIndex = 1
+
+  self:select_faction_update()
+end
+function ui_pda_factions_tab:select_faction_2()
+  selectedFactionIndex = 2
+
+  self:select_faction_update()
+end
+function ui_pda_factions_tab:select_faction_3()
+  selectedFactionIndex = 3
+
+  self:select_faction_update()
+end
+function ui_pda_factions_tab:select_faction_4()
+  selectedFactionIndex = 4
+
+  self:select_faction_update()
+end
+function ui_pda_factions_tab:select_faction_5()
+  selectedFactionIndex = 5
+
+  self:select_faction_update()
+end
+function ui_pda_factions_tab:select_faction_6()
+  selectedFactionIndex = 6
+
+  self:select_faction_update()
+end
+
+function ui_pda_factions_tab:OnSelectRelations()
+  selected_relations = self.table_relations[self.list_relations:CurrentID()]
+
+  local costSelectedRelationsText =
+    strformat(GetString("ui_mm_pda_factions_tab_relation_cost"), selected_relations.cost)
+  self.relation_cost:TextControl():SetText(costSelectedRelationsText)
+end
+
+function ui_pda_factions_tab:select_faction_update()
+  last_update_timer = game.time()
+
+  if not selectedFactionIndex then
+    return
+  end
+
+  local m = list * 6 - 5
+
+  lastSelectedFactionName = maxName[m + selectedFactionIndex - 1]
+
+  local faction = lastSelectedFactionName
+  local factionNameText = GetString("st_faction_" .. faction)
+  local relation = game_relations.get_factions_community(sim_brain.actor_faction, faction)
+  local leaderText = "ui_mm_pda_factions_tab_leader"
+
+  if leaders[faction].dead then
+    leaderText = "ui_mm_pda_factions_tab_leader_dead"
+  end
+
+  self.faction_leader:TextControl():SetText(strformat(GetString(leaderText), leaders[faction].name or "Отсутствует"))
+  self.faction_name:TextControl():SetText(factionNameText)
+  self.faction_relation:TextControl():SetText(strformat(GetString("ui_mm_pda_factions_tab_relation"), relation))
+  self.faction_money:TextControl():SetText(
+    strformat(GetString("ui_mm_pda_factions_tab_money"), math.random(130500, 540100))
+  )
+
+  if faction == sim_brain.actor_faction then
+    self.relation_bar:Show(false)
+  else
+    self.relation_bar:Show(true)
+  end
+
+  self.visible_area:Show(true)
+  self:select_faction_update_selections()
+end
+
+function ui_pda_factions_tab:select_faction_update_selections()
+  for index = 1, 6 do
+    self["selection_" .. index]:Show(false)
+  end
+
+  utils.debug("select_faction_update_selections, selectedFactionIndex: %s", selectedFactionIndex)
+
+  if not selectedFactionIndex then
+    return
+  end
+
+  self["selection_" .. selectedFactionIndex]:Show(true)
+end
+
+-------- Кнопка Вперед.
+function ui_pda_factions_tab:button_next_button_clicked()
+  if maxPoints[6 * list + 1] ~= nil then
+    list = list + 1
+  elseif maxPoints[6 * list + 1] == nil then
+    list = 1
+  end
+
+  selectedFactionIndex = nil
+
+  local m = list * 6 - 5
+
+  for index = 1, 6 do
+    if maxName[m + index - 1] == lastSelectedFactionName then
+      selectedFactionIndex = index
+    end
+  end
+
+  self:select_faction_update_selections()
+  self:Reset()
+end
+
+-------- Кнопка Назад.
+function ui_pda_factions_tab:button_back_button_clicked()
+  if list ~= 1 then
+    list = list - 1
+  elseif list == 1 then
+    list = math.ceil(#start_name / 6)
+  end
+
+  selectedFactionIndex = nil
+
+  local m = list * 6 - 5
+
+  for index = 1, 6 do
+    if maxName[m + index - 1] == lastSelectedFactionName then
+      selectedFactionIndex = index
+    end
+  end
+
+  self:select_faction_update_selections()
+  self:Reset()
+end
+
+-------- Кнопка "объявить войну".
+function ui_pda_factions_tab:button_declare_war_button_clicked()
+  local toFaction = lastSelectedFactionName
+
+  self.message_box_war:InitMessageBox("message_box_declare_war_confirm")
+  self.message_box_war:SetText(strformat(GetString("ui_mm_declare_war_confirm"), GetString("st_faction_" .. toFaction)))
+  self.message_box_war:ShowDialog(true)
+end
+
+-------- Кнопка для иземенения отношений.
+function ui_pda_factions_tab:button_change_relation_button_clicked()
+  if not actor_has_money(selected_relations.cost) then
+    utils.news("Изменение отношений", "Недостаточно денег для изменения отношений.")
+    return
+  end
+
+  local actorFaction = sim_brain.actor_faction
+  local toFaction = lastSelectedFactionName
+  local factionNameText = GetString("st_faction_" .. toFaction)
+
+  if selected_relations.cost > 0 then
+    db.actor:give_money(-selected_relations.cost)
+  end
+
+  utils.news("Изменение отношений", "Отношения к группировке %s изменены", factionNameText)
+
+  local value = 0
+
+  if string.find(selected_relations.value, "+", 1, true) == 1 then
+    value = tonumber(string.sub(selected_relations.value, 2, #selected_relations.value))
+  else
+    value = tonumber(selected_relations.value)
+  end
+
+  wargreat_relations.full_relation_table[toFaction][actorFaction] =
+    wargreat_relations.full_relation_table[toFaction][actorFaction] + value
+  wargreat_relations.full_relation_table[toFaction][("actor_" .. actorFaction)] =
+    wargreat_relations.full_relation_table[toFaction][("actor_" .. actorFaction)] + value
+
+  game_relations.change_relation(actorFaction, toFaction, value)
+end
+
+function ui_pda_factions_tab:Update()
+  CUIScriptWnd.Update(self)
+
+  if last_update_timer and last_update_timer > game.time() then
+    return
+  else
+    last_update_timer = game.time() + 1000000
+  end
+
+  self:Reset()
+end
+
+-------- Перезапуск окна.
+function ui_pda_factions_tab:Reset()
+  CUIScriptWnd.Update(self)
+
+  if not sim_brain.initialized then
+    return
+  end
+
+  start_points = {}
+  start_level = {}
+  start_last = {}
+
+  for _, faction_name in pairs(start_name) do
+    local points =
+      1 + sim_factions.faction_information[faction_name].active_npc +
+      sim_factions.faction_information[faction_name].passive_npc +
+      sim_factions.faction_information[faction_name].base_count * 4 +
+      sim_factions.faction_information[faction_name].resource_count * 2
+
+    if points > 1 then
+      table.insert(start_points, points)
+      table.insert(
+        start_last,
+        sim_factions.faction_information[faction_name].active_npc +
+          sim_factions.faction_information[faction_name].passive_npc
+      )
+    else
+      utils.table_remove_item_by_value(start_name, faction_name)
+    end
+  end
+
+  if list == 0 then
+    list = 1
+  end
+
+  local b, s = {}, {}
+  -------- Функция сортировки.
+  local function max3(a)
+    for i = 1, #start_last do
+      s[#s + 1] = 1
+      b[#b + 1] = a[1]
+      for i = 1, #a do
+        if a[i] > b[#b] then
+          b[#b] = a[i]
+          s[#s] = i
+        end
+      end
+      a[s[#s]] = 0
+    end
+    return b, s
+  end
+
+  ------ Переменные, для сортировки. Введены, так как нельзя использовать уже имеющиеся и те что будут. Хз почему.
+  local name = {}
+  local points = {}
+  local last = {}
+
+  for y = 1, #start_points do
+    name[y] = start_name[y]
+    points[y] = start_points[y]
+    last[y] = start_last[y]
+  end
+
+  Max = {}
+  maxName = {}
+  maxPoints = {}
+  maxLast = {}
+
+  maxPoints, Max = max3(points)
+  for i = 1, #start_points do
+    maxName[i] = name[Max[i]]
+    maxLast[i] = last[Max[i]]
+  end
+
+  local m = list * 6 - 5
+
+  for index = 1, 6 do
+    if maxPoints[m + index - 1] then
+      local points = maxPoints[m + index - 1]
+
+      if points == 1 then
+        points = 0
+      end
+
+      self.hr_1:Show(true)
+      self.button_next:Show(true)
+      self.button_back:Show(true)
+
+      self["vkladka_general_" .. index]:Show(true)
+
+      local factionName = maxName[m + index - 1]
+      local factionText = strformat("%s. %s", m + index - 1, GetString("st_faction_" .. factionName))
+      local icon = strformat("ui_icon_news_%s", factionName)
+
+      self["Static_icon_" .. index]:InitTexture(icon)
+      self["Static_name_" .. index]:TextControl():SetText(factionText)
+
+      self["Static_info_" .. index .. "1"]:TextControl():SetText(
+        GetString("pda_last") .. " " .. GetString(maxLast[m + index - 1])
+      )
+      self["Static_info_" .. index .. "2"]:TextControl():SetText(strformat("%s %s", GetString("pda_points"), points))
+
+      if factionName == lastSelectedFactionName then
+        selectedFactionIndex = index
+        self:select_faction_update_selections()
+      end
+    else
+      self["vkladka_general_" .. index]:Show(false)
+    end
+  end
+
+  if selectedFactionIndex then
+    local points = maxPoints[m + selectedFactionIndex - 1]
+
+    if points == 1 then
+      points = 0
+    end
+
+    self.faction_members:TextControl():SetText(
+      strformat(GetString("ui_mm_pda_factions_tab_members"), maxLast[m + selectedFactionIndex - 1])
+    )
+
+    if lastSelectedFactionName then
+      self.faction_squads:TextControl():SetText(
+        strformat(
+          GetString("ui_mm_pda_factions_tab_squads_all"),
+          sim_factions.faction_information[lastSelectedFactionName].squad_count
+        )
+      )
+    end
+    self.faction_power:TextControl():SetText(strformat(GetString("ui_mm_pda_factions_tab_power"), points))
+  end
+
+  self:fillListBox()
+
+  return
+end
+
+function ui_pda_factions_tab:Hide()
+  list = 1
+  self:HideDialog()
+end
+
+function save_state(m_data)
+  if not m_data.start_points then
+    m_data.start_points = start_points
+    m_data.start_base = start_base
+    m_data.start_res = start_res
+    m_data.start_last = start_last
+    m_data.start_level = start_level
+    m_data.start_name = start_name
+    m_data.leaders = leaders
+  end
+
+  m_data.start_points = start_points
+  m_data.start_base = start_base
+  m_data.start_res = start_res
+  m_data.start_last = start_last
+  m_data.start_level = start_level
+  m_data.start_name = start_name
+  m_data.leaders = leaders
+end
+
+function load_state(m_data)
+  if m_data.start_points then
+    start_points = m_data.start_points
+  end
+
+  if m_data.start_base then
+    start_base = m_data.start_base
+  end
+
+  if m_data.start_res then
+    start_res = m_data.start_res
+  end
+
+  if m_data.start_last then
+    start_last = m_data.start_last
+  end
+
+  if m_data.start_level then
+    start_level = m_data.start_level
+  end
+
+  if m_data.start_name then
+    start_name = m_data.start_name
+  end
+
+  if m_data.leaders then
+    leaders = m_data.leaders
+  end
+
+  m_data.start_points = nil
+  m_data.start_base = nil
+  m_data.start_res = nil
+  m_data.start_last = nil
+  m_data.start_level = nil
+  m_data.start_name = nil
+  m_data.leaders = nil
+end
+
+function on_after_factions_update()
+  last_update_timer = game.time()
+end
+
+local function smart_terrain_on_update(smart)
+  local smart_faction = smart.owning_faction
+
+  if smart_faction == "none" or smart_faction == nil then
+    return
+  end
+
+  if utils.table_has_item(start_name, smart_faction) then
+    return
+  end
+
+  table.insert(start_name, smart_faction)
+end
+
+function on_game_start()
+  RegisterScriptCallback("save_state", save_state)
+  RegisterScriptCallback("load_state", load_state)
+  RegisterScriptCallback("on_after_factions_update", on_after_factions_update)
+  RegisterScriptCallback("smart_terrain_on_update", smart_terrain_on_update)
+end

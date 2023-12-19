@@ -1,0 +1,582 @@
+;---------------------------------------------------------------------------------------------
+;		Novice Apocalypse Outfit
+;---------------------------------------------------------------------------------------------
+[apocalypse_novice_outfit]:outfit_base
+$spawn                                   = "outfit\apocalypse_novice_outfit"
+visual                                   = dynamics\outfit\isg_outfit
+actor_visual                             = actors\stalker_apocalypse\stalker_apocalypse_agent_1.ogf
+actor_visual                             = actors\stalker_apocalypse\stalker_apocalypse_agent_1.ogf
+player_hud_section                       = actor_hud_loner_seva
+
+ef_equipment_type                        = 3
+
+inv_name                                 = apocalypse_novice_outfit_name
+inv_name_short                           = apocalypse_novice_outfit_name
+description                              = apocalypse_novice_outfit_description
+
+inv_weight                               = 13.0
+
+inv_grid_width     			 = 2
+inv_grid_height    			 = 3
+inv_grid_x         			 = 60
+inv_grid_y         			 = 40
+
+upgr_icon_x                              = 2520
+upgr_icon_y                              = 1214
+upgr_icon_width                          = 303
+upgr_icon_height                         = 126
+full_icon_name                           = npc_icon_specops_outfit
+
+cost                                     = 12500
+full_scale_icon                          = 4,6	                                       ;иконка сталкера в костюме в полный рост
+power_loss                               = 0.8
+immunities_sect                          = sect_apocalypse_novice_outfit_immunities
+
+; LOW RESISTANCE
+burn_protection                          = 0.0333
+shock_protection                         = 0.1333
+radiation_protection                     = 0.0050
+chemical_burn_protection                 = 0.0333
+telepatic_protection                     = 0.0
+strike_protection                        = 0.2275
+explosion_protection                     = 0.2275
+wound_protection                         = 0.105
+
+hit_fraction_actor                       = 0.5
+bones_koeff_protection                   = actor_armor_berill
+
+artefact_count                           = 1
+control_inertion_factor                  = 1.5
+
+upgrades                                 = up_gr_firstab_specops_outfit, up_gr_seconab_specops_outfit, up_gr_thirdab_specops_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_specops
+character_portrait						 = ui_inGame2_apocalypse_4
+
+[sect_apocalypse_novice_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_apocalypse_novice_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.002
+;---------------------------------------------------------------------------------------------
+;		Night Apocalypse Outfit
+;---------------------------------------------------------------------------------------------
+[apocalypse_night_outfit]:outfit_base
+$spawn                                   = "outfit\apocalypse_night_outfit"
+visual                                   = dynamics\outfit\isg_outfit
+actor_visual                             = actors\stalker_apocalypse\stalker_apocalypse_agent_visor_1.ogf
+actor_visual                             = actors\stalker_apocalypse\stalker_apocalypse_agent_visor_1.ogf
+player_hud_section                       = actor_hud_loner_seva
+
+ef_equipment_type                        = 3
+
+inv_name                                 = apocalypse_night_outfit_name
+inv_name_short                           = apocalypse_night_outfit_name
+description                              = apocalypse_night_outfit_description
+
+inv_weight                               = 14.5
+
+inv_grid_width     			 = 2
+inv_grid_height    			 = 3
+inv_grid_x         			 = 66
+inv_grid_y         			 = 40
+
+upgr_icon_x                              = 2514
+upgr_icon_y                              = 1400
+upgr_icon_width                          = 303
+upgr_icon_height                         = 126
+full_icon_name                           = npc_icon_specops_outfit
+
+cost                                     = 8500
+full_scale_icon                          = 4,6	                                       ;иконка сталкера в костюме в полный рост
+power_loss                               = 0.85
+immunities_sect                          = sect_apocalypse_night_outfit_immunities
+helmet_avaliable			 = false
+nightvision_sect 			 = effector_nightvision_3
+
+; LOW RESISTANCE
+burn_protection                          = 0.0333
+shock_protection                         = 0.1299
+radiation_protection                     = 0.0050
+chemical_burn_protection                 = 0.0333
+telepatic_protection                     = 0.001
+strike_protection                        = 0.2275
+explosion_protection                     = 0.2275
+wound_protection                         = 0.105
+
+hit_fraction_actor                       = 0.5
+bones_koeff_protection                   = actor_armor_berill
+
+artefact_count                           = 1
+control_inertion_factor                  = 1.5
+
+upgrades                                 = up_gr_firstab_specops_outfit, up_gr_seconab_specops_outfit, up_gr_thirdab_specops_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_specops
+character_portrait						 = ui_inGame2_apocalypse_3
+
+[sect_apocalypse_night_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_apocalypse_night_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.002
+;---------------------------------------------------------------------------------------------
+;		Heavy Apocalypse Outfit
+;---------------------------------------------------------------------------------------------
+[apocalypse_heavy_outfit]:outfit_base
+$spawn                                   = "outfit\apocalypse_heavy_outfit"
+visual                                   = dynamics\outfit\military_outfit
+actor_visual                             = actors\stalker_apocalypse\stalker_apocalypse_elite_1.ogf
+npc_visual                               = actors\stalker_apocalypse\stalker_apocalypse_elite_1.ogf
+player_hud_section                       = actor_hud_military_skat9
+
+ef_equipment_type                        = 3
+
+inv_name                                 = apocalypse_heavy_outfit_name
+inv_name_short                           = apocalypse_heavy_outfit_name
+description                              = apocalypse_heavy_outfit_description
+
+inv_weight                               = 25.0
+
+inv_grid_width     			 = 2
+inv_grid_height    			 = 3
+inv_grid_x         			 = 62
+inv_grid_y         			 = 37
+
+sprint_allowed                           = true
+
+upgr_icon_x                              = 648
+upgr_icon_y                              = 353
+upgr_icon_width                          = 280
+upgr_icon_height                         = 145
+
+cost                                     = 125000
+
+burn_protection                          = 0.055
+shock_protection                         = 0.2000
+radiation_protection                     = 0.014
+chemical_burn_protection                 = 0.04
+telepatic_protection                     = 0.0275
+strike_protection                        = 0.3530
+explosion_protection                     = 0.3530
+wound_protection                         = 0.3530
+
+hit_fraction_actor                       = 0.4
+bones_koeff_protection                   = actor_armor_osoznanie_exo
+
+upgrades                                 = up_gr_firstab_military_outfit, up_gr_seconab_military_outfit, up_gr_thirdab_military_outfit, up_gr_fourtab_military_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_military_outfit
+
+nightvision_sect 			 = effector_nightvision_3
+
+power_loss                               = 1.25
+additional_inventory_weight              = 10
+additional_inventory_weight2             = 10
+artefact_count                           = 0
+helmet_avaliable			 = false
+
+character_portrait						 = ui_inGame2_apocalypse_9
+
+immunities_sect                          = sect_apocalypse_heavy_outfit_immunities
+
+[sect_apocalypse_heavy_outfit_immunities]
+burn_immunity                            = 0.03	                                       ;eiyooeoeaiou eiioieoaoa naiiai eino?ia
+strike_immunity                          = 0.0
+shock_immunity                           = 0.03
+wound_immunity                           = 0.03
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.03
+explosion_immunity                       = 0.03
+fire_wound_immunity                      = 0.015
+
+[sect_apocalypse_heavy_outfit_immunities_add]
+burn_immunity                            = -0.015	                                       ;eiyooeoeaiou eiioieoaoa naiiai eino?ia
+strike_immunity                          = 0.0
+shock_immunity                           = -0.015
+wound_immunity                           = -0.015
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.015
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+;---------------------------------------------------------------------------------------------
+;		Radiation Apocalypse Outfit
+;---------------------------------------------------------------------------------------------
+[apocalypse_radiation_outfit]:outfit_exo_base
+$spawn                                   = "outfit\apocalypse_exo_outfit"
+visual									 = dynamics\outfit\duty_rad_outfit
+actor_visual                             = actors\stalker_apocalypse\stalker_apocalypse_visor.ogf
+npc_visual                               = actors\stalker_apocalypse\stalker_apocalypse_visor.ogf
+player_hud_section			 			 = actor_hud_loner_seva
+
+inv_name                                 = apocalypse_radiation_outfit_name
+inv_name_short                           = apocalypse_radiation_outfit_name
+description                              = apocalypse_radiation_outfit_description
+
+inv_weight                               = 20.0
+
+inv_grid_width     			 			 = 2
+inv_grid_height    			 			 = 3
+inv_grid_x         			 			 = 62
+inv_grid_y         			 		     = 40
+
+upgr_icon_x                              = 1870
+upgr_icon_y                              = 1392
+upgr_icon_width						 	 = 303
+upgr_icon_height						 = 162
+
+
+cost                                     = 89000
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0550
+shock_protection                         = 0.0750
+radiation_protection                     = 0.017
+chemical_burn_protection                 = 0.05
+telepatic_protection                     = 0.0300
+strike_protection                        = 0.3425
+explosion_protection                     = 0.3425
+wound_protection                         = 0.3375
+
+bones_koeff_protection                   = actor_armor_duty_exo
+
+power_loss                               = 1.05
+additional_inventory_weight              = 5
+additional_inventory_weight2             = 5
+artefact_count                           = 1
+helmet_avaliable			 = false
+sprint_allowed                           = true
+
+upgrades                                 = up_gr_firstab_dolg_rad_outfit, up_gr_seconab_dolg_rad_outfit, up_gr_thirdab_dolg_rad_outfit, up_gr_fourtab_dolg_rad_outfit, up_gr_fifthab_dolg_rad_outfit
+
+character_portrait						 = ui_inGame2_apocalypse_8
+;---------------------------------------------------------------------------------------------
+;		Scientific Apocalypse Outfit
+;---------------------------------------------------------------------------------------------
+[apocalypse_scientific_outfit]:outfit_scientific_base
+$spawn                                   = "outfit\apocalypse_scientific_outfit"
+visual								= dynamics\outfit\duty_rad_outfit
+actor_visual                             = actors\stalker_apocalypse\stalker_apocalypse_gasmask_1.ogf
+npc_visual                               = actors\stalker_apocalypse\stalker_apocalypse_gasmask_1.ogf
+player_hud_section			 = actor_hud_loner_seva
+
+inv_name                                 = apocalypse_scientific_outfit_name
+inv_name_short                           = apocalypse_scientific_outfit_name
+description                              = apocalypse_scientific_outfit_description
+
+inv_weight                               = 25.0
+
+inv_grid_width     			 = 2
+inv_grid_height    			 = 3
+inv_grid_x         			 = 64
+inv_grid_y         			 = 40
+
+upgr_icon_x                              = 2200
+upgr_icon_y                              = 1396
+upgr_icon_width						= 303
+upgr_icon_height					= 162
+
+cost                                     = 62500
+
+bones_koeff_protection                   = actor_armor_radiation
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.1350
+shock_protection                         = 0.5255
+radiation_protection                     = 0.0250
+chemical_burn_protection                 = 0.1550
+telepatic_protection                     = 0.0635
+strike_protection                        = 0.2150
+explosion_protection                     = 0.2150
+wound_protection                         = 0.2150
+
+power_loss                               = 1.30
+additional_inventory_weight              = 5
+additional_inventory_weight2             = 5
+artefact_count                           = 2
+helmet_avaliable			 = false
+sprint_allowed                           = true
+
+hit_fraction_actor                       = 0.5
+character_portrait						 = ui_inGame2_apocalypse_6
+immunities_sect                          = apocalypse_scientific_outfit_immunities
+
+[apocalypse_scientific_outfit_immunities]
+burn_immunity                            = 0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = 0.02
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.0
+explosion_immunity                       = 0.03
+fire_wound_immunity                      = 0.02
+
+[apocalypse_scientific_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.0
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+;---------------------------------------------------------------------------------------------
+;		Scientific2 Apocalypse Outfit
+;---------------------------------------------------------------------------------------------
+[apocalypse_scientific2_outfit]:outfit_scientific_base
+$spawn                                   = "outfit\apocalypse_scientific2_outfit"
+visual								= dynamics\outfit\scientific_outfit
+actor_visual                             = actors\stalker_apocalypse\stalker_apocalypse_agent_seva.ogf
+npc_visual                               = actors\stalker_apocalypse\stalker_apocalypse_agent_seva.ogf
+player_hud_section			 = actor_hud_loner_seva
+
+inv_name                                 = apocalypse_scientific2_outfit_name
+inv_name_short                           = apocalypse_scientific2_outfit_name
+description                              = apocalypse_scientific2_outfit_description
+
+inv_weight                               = 16.5
+
+inv_grid_width     			 = 2
+inv_grid_height    			 = 3
+inv_grid_x         			 = 66
+inv_grid_y         			 = 43
+
+upgr_icon_x                              = 646
+upgr_icon_y                              = 172
+upgr_icon_width                          = 285
+upgr_icon_height                         = 159
+
+cost                                     = 82500
+
+bones_koeff_protection                   = actor_armor_exo
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.1
+shock_protection                         = 0.4255
+radiation_protection                     = 0.0175
+chemical_burn_protection                 = 0.1150
+telepatic_protection                     = 0.0385
+strike_protection                        = 0.2780
+explosion_protection                     = 0.2780
+wound_protection                         = 0.2780
+
+power_loss                               = 0.75
+additional_inventory_weight              = 5
+additional_inventory_weight2             = 5
+artefact_count                           = 2
+helmet_avaliable			 = false
+sprint_allowed                           = true
+
+hit_fraction_actor                       = 0.5
+character_portrait						 = ui_inGame2_apocalypse_seva
+immunities_sect                          = apocalypse_scientific2_outfit_immunities
+
+[apocalypse_scientific2_outfit_immunities]
+burn_immunity                            = 0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = 0.02
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.0
+explosion_immunity                       = 0.03
+fire_wound_immunity                      = 0.02
+
+[apocalypse_scientific2_outfit_immunities_add]
+burn_immunity                            = -0.009	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = -0.009
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.0
+explosion_immunity                       = -0.009
+fire_wound_immunity                      = -0.002
+;---------------------------------------------------------------------------------------------
+;		Exo Apocalypse Outfit
+;---------------------------------------------------------------------------------------------
+[apocalypse_exo_outfit]:outfit_exo_base
+$spawn                                   = "outfit\apocalypse_exo_outfit"
+visual                                   = dynamics\outfit\military_exo_outfit
+actor_visual                             = actors\stalker_apocalypse\stalker_apocalypse_exo.ogf
+npc_visual                               = actors\stalker_apocalypse\stalker_apocalypse_exo.ogf
+player_hud_section                       = act_hand_alfa_exo
+
+inv_name                                 = apocalypse_exo_outfit_name
+inv_name_short                           = apocalypse_exo_outfit_name
+description                              = apocalypse_exo_outfit_description
+
+inv_weight                               = 45.0
+
+inv_grid_width     			 = 2
+inv_grid_height    			 = 3
+inv_grid_x         			 = 58
+inv_grid_y         			 = 40
+
+upgr_icon_x                              = 2200
+upgr_icon_y                              = 1220
+upgr_icon_width                          = 290
+upgr_icon_height                         = 165
+
+cost                                     = 260000
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.065
+shock_protection                         = 0.2000
+radiation_protection                     = 0.01
+chemical_burn_protection                 = 0.05
+telepatic_protection                     = 0.0400
+strike_protection                        = 0.4500
+explosion_protection                     = 0.4500
+wound_protection                         = 0.4500
+
+bones_koeff_protection                   = actor_armor_zakat_expert_exo
+
+power_loss                               = 1.85
+additional_inventory_weight              = 50
+additional_inventory_weight2             = 50
+artefact_count                           = 1
+helmet_avaliable					     = false
+
+character_portrait						 = ui_inGame2_apocalypse_exo
+;---------------------------------------------------------------------------------------------
+;		Leader Apocalypse Outfit
+;---------------------------------------------------------------------------------------------
+[leader_apocalypse_outfit]:outfit_base
+$spawn                                   = "outfit\leader_apocalypse_outfit"
+visual                                   = dynamics\outfit\leader_apocalypse_outfit
+actor_visual                             = actors\stalker_apocalypse\apocalypse_leader.ogf
+npc_visual                               = actors\stalker_apocalypse\apocalypse_leader.ogf
+player_hud_section                       = actor_hud_military_skat9
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_apocalypse_outfit_name
+inv_name_short                           = leader_apocalypse_outfit_name
+description                              = leader_apocalypse_outfit_description
+
+inv_weight                               = 40.0
+
+inv_grid_x                               = 68
+inv_grid_y                               = 43
+
+upgr_icon_x                              = 3440
+upgr_icon_y                              = 496
+upgr_icon_width                          = 301
+upgr_icon_height                         = 155
+
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 412135
+
+full_scale_icon                          = 14,11
+
+immunities_sect                          = sect_leader_apocalypse_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0969
+shock_protection                         = 0.3750
+radiation_protection                     = 0.0163
+chemical_burn_protection                 = 0.0875
+telepatic_protection                     = 0.0875
+strike_protection                        = 0.6875
+explosion_protection                     = 0.6875
+wound_protection                         = 0.5625
+fire_wound_protection                    = 0.2500
+
+hit_fraction_actor                       = 0.15
+control_inertion_factor                  = 2.5
+bones_koeff_protection                   = apocalypse_leader
+
+nightvision_sect 			             = effector_nightvision_2
+
+power_restore_speed                      = 0.005
+power_loss                               = 1.45
+
+additional_inventory_weight              = 110
+additional_inventory_weight2             = 110
+
+artefact_count                           = 5
+
+helmet_avaliable						 = false
+
+character_portrait						 = ui_inGame2_apocalypse_8
+
+[sect_leader_apocalypse_outfit_immunities]
+burn_immunity            				 = 0.0050
+strike_immunity                          = 0.0050
+shock_immunity                           = 0.0200
+wound_immunity                           = 0.0050
+radiation_immunity                       = 0.0000
+telepatic_immunity                       = 0.0000
+chemical_burn_immunity                   = 0.0050
+explosion_immunity                       = 0.0050
+fire_wound_immunity                      = 0.0100
+;---------------------------------------------------------------------------------------------
+;OUTFIT IN AZAZEL MODE: Leader Apocalypse Outfit
+;---------------------------------------------------------------------------------------------
+[leader_azazel_apocalypse_outfit]:outfit_leader_exo_base
+$spawn                                   = "outfit\leader_azazel_apocalypse_outfit"
+visual                                   = dynamics\outfit\leader_apocalypse_outfit
+actor_visual                             = actors\stalker_apocalypse\apocalypse_leader.ogf
+npc_visual                               = actors\stalker_apocalypse\apocalypse_leader.ogf
+player_hud_section                       = actor_hud_military_skat9
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_apocalypse_outfit_name
+inv_name_short                           = leader_apocalypse_outfit_name
+description                              = leader_apocalypse_outfit_description
+
+inv_weight                               = 40.0
+
+inv_grid_x                               = 68
+inv_grid_y                               = 43
+
+cost                                     = 412135
+
+artefact_count                           = 1
+
+helmet_avaliable						= false
+
+sprint_allowed							 = true
+
+power_loss                               = 0.75
+
+character_portrait						 = ui_inGame2_apocalypse_8

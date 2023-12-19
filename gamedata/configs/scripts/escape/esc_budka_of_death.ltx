@@ -1,0 +1,7 @@
+[logic]
+active = sr_idle@start
+	
+[sr_idle@start]
+on_actor_inside = sr_idle@nil %=kill_actor =play_sound_on_actor(monsters\controller\controller_attack_0)% 
+
+[sr_idle@nil]

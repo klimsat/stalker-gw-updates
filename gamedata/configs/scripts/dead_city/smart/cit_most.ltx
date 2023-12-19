@@ -1,0 +1,17 @@
+[smart_terrain]
+squad_id = 9
+max_population = 2
+respawn_params = respawn@cit_most
+respawn_idle = 30000
+
+
+[respawn@cit_most]
+spawn_pigs
+
+[spawn_pigs]
+spawn_squads = simulation_flesh, simulation_mix_boar_flesh, simulation_boar
+spawn_num = 2
+
+[exclusive]
+cit_most_prone_work_1 = dead_city\cit_most_smart_logic.ltx
+cit_most_prone_work_2 = dead_city\cit_most_smart_logic.ltx

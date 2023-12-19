@@ -1,0 +1,331 @@
+;---------------------------------------------------------------------------------------------
+;		Комбенизон Фантома
+;---------------------------------------------------------------------------------------------
+[fantom_outfit]:outfit_base
+$spawn                                   = "outfit\fantom_outfit"
+visual                                   = dynamics\outfit\fantom_outfit
+actor_visual                             = actors\stalker_fantom\fantom_gas_2_0.ogf
+npc_visual                               = actors\stalker_fantom\fantom_gas_2_0.ogf
+player_hud_section                       = wpn_hand_fantom_suit
+
+ef_equipment_type                        = 3
+
+inv_name                                 = fantom_outfit_name
+inv_name_short                           = fantom_outfit_name
+description                              = fantom_outfit_description
+
+inv_weight                               = 8.5
+
+inv_grid_width     = 2
+inv_grid_height    = 3
+inv_grid_x         = 74
+inv_grid_y         = 27
+
+upgr_icon_x                              = 317
+upgr_icon_y                              = 0
+upgr_icon_width                          = 302
+upgr_icon_height                         = 130
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 17500
+full_scale_icon                          = 14,11	                                       ;иконка сталкера в костюме в полный рост
+
+artefact_count                           = 1
+
+immunities_sect                          = sect_fantom_outfit_immunities
+
+
+; LOW RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1925
+explosion_protection                     = 0.1925
+wound_protection                         = 0.1925
+
+hit_fraction_actor                       = 0.75
+bones_koeff_protection                   = actor_armor_suit
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.75
+
+upgrades                                 = up_gr_firstab_stalker_outfit, up_gr_seconab_stalker_outfit, up_gr_thirdab_stalker_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_stalker_outfit
+character_portrait						 = ui_inGame2_fantom
+
+[sect_fantom_outfit_immunities]
+burn_immunity                            = 0.03	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.03
+wound_immunity                           = 0.03
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.03
+explosion_immunity                       = 0.03
+fire_wound_immunity                      = 0.015
+
+[sect_fantom_outfit_immunities_add]
+burn_immunity                            = -0.015	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.015
+wound_immunity                           = -0.015
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.015
+explosion_immunity                       = -0.015
+fire_wound_immunity                      = -0.005
+
+;---------------------------------------------------------------------------------------------
+;		Научный Комбинезон Фантома
+;---------------------------------------------------------------------------------------------
+[fantom_scientific_outfit]:outfit_scientific_base
+$spawn                                   = "outfit\fantom_scientific_outfit"
+visual                                   = dynamics\outfit\fantom_scientific
+actor_visual                             = actors\stalker_fantom\fantom_seva_2_0.ogf
+npc_visual                               = actors\stalker_fantom\fantom_seva_2_0.ogf
+player_hud_section                       = wpn_hand_fantom_seva
+
+inv_name                                 = fantom_scientific_outfit_name
+inv_name_short                           = fantom_scientific_outfit_name
+description                              = fantom_scientific_outfit_description
+
+inv_weight                               = 12.0
+
+inv_grid_width     = 2
+inv_grid_height    = 3
+inv_grid_x         = 72
+inv_grid_y         = 27
+
+upgr_icon_x                              = 1225
+upgr_icon_y                              = 171
+upgr_icon_width                          = 285
+upgr_icon_height                         = 159
+
+cost                                     = 70000
+full_scale_icon                          = 12,11	                                       ;иконка сталкера в костюме в полный рост
+
+immunities_sect                          = sect_osoznanie_scientific_outfit_immunities
+
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.1033
+shock_protection                         = 0.4133
+radiation_protection                     = 0.0200
+chemical_burn_protection                 = 0.1033
+telepatic_protection                     = 0.0388
+strike_protection                        = 0.1925
+explosion_protection                     = 0.1925
+wound_protection                         = 0.1925
+
+hit_fraction_actor                       = 0.65
+bones_koeff_protection                   = actor_armor_seva
+
+artefact_count                           = 3
+
+nightvision_sect                         = effector_nightvision_2
+
+control_inertion_factor                  = 1.5
+power_loss                               = 0.8
+character_portrait						 = ui_inGame2_fantom
+
+;---------------------------------------------------------------------------------------------
+;		Экзоскелет Фантома
+;---------------------------------------------------------------------------------------------
+[fantom_exo_outfit]:outfit_exo_base
+$spawn                                   = "outfit\fantom_exo_outfit"
+visual                                   = dynamics\outfit\phantom_exo
+actor_visual                             = actors\stalker_fantom\fantom_exo_4_0.ogf
+npc_visual                               = actors\stalker_fantom\fantom_exo_4_0.ogf
+player_hud_section                       = wpn_hand_fantom_exo
+
+inv_name                                 = fantom_exo_outfit_name
+inv_name_short                           = fantom_exo_outfit_name
+description                              = fantom_exo_outfit_description
+
+inv_weight                               = 25.0
+
+inv_grid_x                               = 68
+inv_grid_y                               = 27
+
+upgr_icon_x                              = 1550
+upgr_icon_y                              = 670
+upgr_icon_width                          = 304
+upgr_icon_height                         = 159
+
+cost                                     = 120000
+
+bones_koeff_protection                   = actor_armor_merc_exo
+
+upgrades                                 = up_gr_firstab_merc_exo_outfit, up_gr_seconab_merc_exo_outfit, up_gr_thirdab_merc_exo_outfit, up_gr_fourtab_merc_exo_outfit, up_gr_fifthab_merc_exo_outfit
+
+power_loss                               = 1.1
+additional_inventory_weight              = 30
+additional_inventory_weight2             = 30
+artefact_count                           = 2
+helmet_avaliable					     = false
+
+character_portrait						 = ui_inGame2_fantom
+
+[sect_fantom_exo_immunities_add]
+burn_immunity                            = -0.015	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.015
+wound_immunity                           = -0.015
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.015
+explosion_immunity                       = -0.015
+fire_wound_immunity                      = -0.005
+
+;---------------------------------------------------------------------------------------------
+;		Полуэкзоскелет Фантома
+;---------------------------------------------------------------------------------------------
+[fantom_radiation_outfit]:exo_outfit
+$spawn								= "outfit\fantom_radiation_outfit"
+visual								= dynamics\outfit\fantom_poluexo
+actor_visual						= actors\stalker_fantom\fantom_4_0.ogf
+player_hud_section					= wpn_hand_fantom_radiation_suit
+
+inv_name							= fantom_radiation_outfit_name
+inv_name_short						= fantom_radiation_outfit_name
+description							= fantom_radiation_outfit_description
+
+inv_weight							= 16.0
+
+inv_grid_width     = 2
+inv_grid_height    = 3
+inv_grid_x         = 70
+inv_grid_y         = 27
+
+upgr_icon_x							= 935
+upgr_icon_y							= 509
+upgr_icon_width						= 298
+upgr_icon_height					= 156
+
+cost								= 50000
+
+helmet_avaliable					= false
+power_loss							= 0.9
+control_inertion_factor				= 2.5
+sprint_allowed						= true
+additional_inventory_weight			= 0
+additional_inventory_weight2		= 0
+
+upgrades                                 = up_gr_firstab_rad_outfit, up_gr_seconab_rad_outfit, up_gr_thirdab_rad_outfit, up_gr_fourtab_rad_outfit, up_gr_fifthab_rad_outfit
+
+character_portrait						 = ui_inGame2_fantom
+;---------------------------------------------------------------------------------------------
+;		Leader Fantom Outfit
+;---------------------------------------------------------------------------------------------
+[leader_fantom_outfit]:outfit_base
+$spawn                                   = "outfit\leader_fantom_outfit"
+visual                                   = dynamics\outfit\leader_fantom_outfit
+actor_visual                             = actors\stalker_fantom\fantom_leader.ogf
+npc_visual                               = actors\stalker_fantom\fantom_leader.ogf
+player_hud_section                       = wpn_hand_fantom_radiation_suit
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_fantom_outfit_name
+inv_name_short                           = leader_fantom_outfit_name
+description                              = leader_fantom_outfit_description
+
+inv_weight                               = 15
+
+inv_grid_x         						 = 70
+inv_grid_y         						 = 27
+
+upgr_icon_x                              = 3774
+upgr_icon_y                              = 168
+upgr_icon_width                          = 296
+upgr_icon_height                         = 168
+
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 277340
+
+full_scale_icon                          = 14,11
+
+immunities_sect                          = sect_leader_fantom_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0829
+shock_protection                         = 0.3943
+radiation_protection                     = 0.0138
+chemical_burn_protection                 = 0.0923
+telepatic_protection                     = 0.1124
+strike_protection                        = 0.5471
+explosion_protection                     = 0.5239
+wound_protection                         = 0.5229
+
+fire_wound_protection                    = 0.2520
+
+hit_fraction_actor                       = 0.15
+control_inertion_factor                  = 2.5
+bones_koeff_protection                   = fantom_leader
+
+nightvision_sect 			             = effector_nightvision_2
+
+power_restore_speed                      = 0.005
+power_loss                               = 0.9
+
+additional_inventory_weight              = 60
+additional_inventory_weight2             = 60
+
+artefact_count                           = 5
+
+helmet_avaliable						 = false
+
+character_portrait						 = ui_inGame2_fantom
+
+[sect_leader_fantom_outfit_immunities]
+burn_immunity                            = 0.0000
+strike_immunity                          = 0.0150
+shock_immunity                           = 0.0250
+wound_immunity                           = 0.0000
+radiation_immunity                       = 0.0000
+telepatic_immunity                       = 0.0000
+chemical_burn_immunity                   = 0.0001
+explosion_immunity                       = 0.0001
+fire_wound_immunity                      = 0.0001
+;---------------------------------------------------------------------------------------------
+;OUTFIT IN AZAZEL MODE: Leader Fantom Outfit
+;---------------------------------------------------------------------------------------------
+[leader_azazel_fantom_outfit]:outfit_leader_exo_base
+$spawn                                   = "outfit\leader_azazel_fantom_outfit"
+visual                                   = dynamics\outfit\leader_fantom_outfit
+actor_visual                             = actors\stalker_fantom\fantom_leader.ogf
+npc_visual                               = actors\stalker_fantom\fantom_leader.ogf
+player_hud_section                       = wpn_hand_fantom_radiation_suit
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_fantom_outfit_name
+inv_name_short                           = leader_fantom_outfit_name
+description                              = leader_fantom_outfit_description
+
+inv_weight                               = 15
+
+inv_grid_x         						 = 70
+inv_grid_y         						 = 27
+
+upgr_icon_x                              = 3774
+upgr_icon_y                              = 168
+upgr_icon_width                          = 296
+upgr_icon_height                         = 168
+
+cost                                     = 277340
+
+artefact_count                           = 1
+
+helmet_avaliable						 = false
+
+sprint_allowed							 = true
+
+power_loss                               = 0.75
+
+character_portrait						 = ui_inGame2_fantom_4_0
+

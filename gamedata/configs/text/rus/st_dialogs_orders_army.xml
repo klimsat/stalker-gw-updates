@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="st_army_trader_orders_main">
+		<text>Чи зможеш мені на замовлення дістати дещо - що?</text>
+	</string>
+	<string id="st_army_trader_orders_main_answer">
+		<text>Не питання. Головне язиком менше тріпай, якщо запитають від куди гармата.</text>
+	</string>
+	<string id="st_army_trader_orders_weapons">
+		<text>Зброя потрiбно.</text>
+	</string>
+	<string id="st_army_trader_orders_weapons_answer">
+		<text>З цим проблем в основному немає.</text>
+	</string>
+	<string id="st_army_trader_orders_gen_descr_pistols">
+		<text>Пістолет потрібно.</text>
+	</string>
+	<string id="st_army_trader_orders_gen_descr_rifle">
+		<text>Автомат.</text>
+	</string>
+	<string id="st_army_trader_orders_gen_descr_sniper_rifle">
+		<text>Снайперська гвинтівка.</text>
+	</string>
+	<string id="st_army_trader_orders_gen_descr_havy_rifle">
+		<text>Важка зброя.</text>
+	</string>
+	<string id="st_army_trader_orders_gen_descr_shotguns">
+		<text>Дробовик.</text>
+	</string>
+	<!-- Если расскоментить этот кусок, то он заменит текст-описание оружий для каждой категории который генерируется в скриптах -->
+	<!-- <string id="st_army_trader_orders_gen_descr_pistols_answer">
+		<text>Дезерт Игл, ХПСА - 13, УДП Компакт, Кольт.</text>
+	</string>
+	<string id="st_army_trader_orders_gen_descr_rifle_answer">
+		<text>Абакан, Гроза - Оц14, Ас Вал, Л85, Гроза - 1, Гроза 5*45, ГП36, Вихрь.</text>
+	</string>
+	<string id="st_army_trader_orders_gen_descr_sniper_rifle_answer">
+		<text>Гаусс - Пушка.</text>
+	</string>
+	<string id="st_army_trader_orders_gen_descr_havy_rifle_answer">
+		<text>РПГ, ПКМ, М60, М134.</text>
+	</string> -->
+	<!-- <string id="st_army_trader_orders_explosion_wpn">
+		<text>explosion_wpn.</text>
+	</string> -->
+	<string id="st_army_trader_orders_gen_descr_outfit">
+		<text>Костюм iндивiдуального захисту.</text>
+	</string>
+	<!-- <string id="st_army_trader_orders_outfit_answer">
+		<text>Комбинезон "Инквизитора", Научный Комбинезон "Инквизитор", Тяжелый бронежилет Инквизитора, Экзоскелет Инквизитора.</text>
+	</string> -->
+	<string id="st_army_trader_orders_gen_descr_other">
+		<text>Додаткове спорядження хочу подивитися.</text>
+	</string>
+	<string id="st_army_trader_orders_gen_descr_other_answer">
+		<text>Секунду... Вибирай.</text>
+	</string>
+	<string id="st_army_trader_orders_item_grenade_f1_count_1">
+		<text>Давай одну.</text>
+	</string>
+	<string id="st_army_trader_orders_item_grenade_f1_count_5">
+		<text>Давай 5 штук.</text>
+	</string>
+	<string id="st_army_trader_orders_item_grenade_f1_count_10">
+		<text>Давай 10 штук.</text>
+	</string>
+	<string id="st_army_trader_orders_item_grenade_f1_count_50">
+		<text>Давай 50 штук.</text>
+	</string>
+	<string id="st_army_trader_orders_item_grenade_f1_count_100">
+		<text>Давай 100 штук.</text>
+	</string>
+	<string id="st_army_trader_orders_item_grenade_rgd5_count_1">
+		<text>Давай одну.</text>
+	</string>
+	<string id="st_army_trader_orders_item_grenade_rgd5_count_5">
+		<text>Давай 5 штук.</text>
+	</string>
+	<string id="st_army_trader_orders_item_grenade_rgd5_count_10">
+		<text>Давай 10 штук.</text>
+	</string>
+	<string id="st_army_trader_orders_item_grenade_rgd5_count_50">
+		<text>Давай 50 штук.</text>
+	</string>
+	<string id="st_army_trader_orders_item_grenade_rgd5_count_100">
+		<text>Давай 100 штук.</text>
+	</string>
+	<string id="st_army_trader_orders_item_medkit_count_1">
+		<text>Давай одну.</text>
+	</string>
+	<string id="st_army_trader_orders_item_medkit_count_5">
+		<text>Давай 5 штук.</text>
+	</string>
+	<string id="st_army_trader_orders_item_medkit_count_10">
+		<text>Давай 10 штук.</text>
+	</string>
+	<string id="st_army_trader_orders_item_medkit_count_50">
+		<text>Давай 50 штук.</text>
+	</string>
+	<string id="st_army_trader_orders_item_medkit_count_100">
+		<text>Давай 100 штук.</text>
+	</string>
+	<string id="st_army_trader_orders_item_bandage_count_1">
+		<text>Давай один.</text>
+	</string>
+	<string id="st_army_trader_orders_item_bandage_count_5">
+		<text>Давай 5 штук.</text>
+	</string>
+	<string id="st_army_trader_orders_item_bandage_count_10">
+		<text>Давай 10 штук.</text>
+	</string>
+	<string id="st_army_trader_orders_item_bandage_count_50">
+		<text>Давай 50 штук.</text>
+	</string>
+	<string id="st_army_trader_orders_item_bandage_count_100">
+		<text>Давай 100 штук.</text>
+	</string>
+	<string id="st_army_trader_orders_ammo">
+		<text>Патрони необхiднi.</text>
+	</string>
+	<string id="st_army_trader_orders_ammo_answer">
+		<text>Тобі які? Пістолетні? Проміжні? Або гвинтівок?</text>
+	</string>
+	<string id="st_army_trader_orders_middle_ammo">
+		<text>Проміжні.</text>
+	</string>
+	<string id="st_army_trader_orders_pistol_ammo">
+		<text>Пістолетні.</text>
+	</string>
+	<string id="st_army_trader_orders_rifle_ammo">
+		<text>Гвинтівок.</text>
+	</string>
+	<string id="st_army_trader_orders_spec_ammo">
+		<text>Спеціальні.</text>
+	</string>
+	<string id="st_army_trader_orders_middle_ammo_answer">
+		<text>Ось весь список, вибирай.</text>
+	</string>
+	<string id="st_army_trader_orders_pistol_ammo_answer">
+		<text>Ось весь список, вибирай.</text>
+	</string>
+	<string id="st_army_trader_orders_rifle_ammo_answer">
+		<text>Ось весь список, вибирай.</text>
+	</string>
+	<string id="st_army_trader_orders_spec_ammo_answer">
+		<text>Ось весь список, вибирай.</text>
+	</string>
+	<string id="st_army_trader_orders_kit">
+		<text>Необхiдно купити комплект спорядження.</text>
+	</string>
+	<!-- Если расскоментить этот кусок, то он заменит текст-описание наборов который генерируется в скриптах -->
+	<!-- <string id="st_army_trader_orders_kit_answer">
+		<text>Новичок. Описание. Комбинезон Инквизитора, Абакан, 5.45x39 х3, Хлеб, Аптечка.\nОпытный. Описание. Комбинезон Инквизитора, Г36, 5.56x45 х3, Хлеб, Колбаса, Аптечка, Бинт.\nПрофи. Описание. Вихрь, Комбинезон Инквизитора, Аптечка, Бинт х3, Колбаса, Хлеб, 9.39 х3.\nВетеран. Описание. Гроза 5.45, Тяжелый бронежилет Монолит, Армейская Аптечка, Бинт х5, Тушенка, Колбаса, Хлеб, 5.45x39 х5.\nМастер. Описание. ПКМ, Экзоскелет Инквизитора, Армейская Аптечка х3, Бинт х7, Тушенка х3, Колбаса х3, Хлеб х3, Патроны пулемета х3.</text>
+	</string> -->
+	<string id="st_army_trader_orders_zelen_kit">
+		<text>Зеленый.</text>
+	</string>
+	<string id="st_army_trader_orders_novice_kit">
+		<text>Новачок.</text>
+	</string>
+	<string id="st_army_trader_orders_experience_kit">
+		<text>Досвідчений.</text>
+	</string>
+	<string id="st_army_trader_orders_professional_kit">
+		<text>Профі.</text>
+	</string>
+	<string id="st_army_trader_orders_veteran_kit">
+		<text>Ветеран.</text>
+	</string>
+	<string id="st_army_trader_orders_master_kit">
+		<text>Майстер.</text>
+	</string>
+	<string id="st_army_trader_orders_legend_kit">
+		<text>Легенда.</text>
+	</string>
+	<string id="st_army_trader_orders_rpg_kit">
+		<text>Ракетник.</text>
+	</string>
+	<string id="st_army_trader_orders_sniper_kit">
+		<text>Снайпер.</text>
+	</string>
+	<!-- <string id="st_army_trader_orders_outfit_answer">
+		<text>Майстер.</text>
+	</string> -->
+	
+	<!-- общие для всех или некоторых веток диалога тексты -->
+	<string id="st_army_trader_orders_categoty_list_answer">
+		<text>Зараз є в наявностi:</text>
+	</string>
+	<string id="st_army_trader_orders_cost_item_answer">
+		<text>З тебе %s руб.</text>
+	</string>
+	<string id="st_army_trader_orders_all_items_answer">
+		<text>Скiльки?</text>
+	</string>
+	<string id="st_army_trader_orders_accept">
+		<text>Беру.</text>
+	</string>
+	<string id="st_army_trader_orders_cancel">
+		<text>Менi воно не пiдходить.</text>
+	</string>
+</string_table>

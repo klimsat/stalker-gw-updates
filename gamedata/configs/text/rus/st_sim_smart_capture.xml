@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="st_smart_capture_title">
+		<text>Захват цели</text>
+	</string>
+
+	<string id="st_smart_capture_start_base">
+		<text>Вы захватываете базу %s</text>
+	</string>
+	<string id="st_smart_capture_start_resource">
+		<text>Вы захватываете ресурсную точку %s</text>
+	</string>
+	<string id="st_smart_capture_start_territory">
+		<text>Вы захватываете территорию %s</text>
+	</string>
+	<string id="st_smart_capture_start_point">
+		<text>Вы захватываете ключевую точку %s</text>
+	</string>
+	<string id="st_smart_capture_start_lair">
+		<text>Вы захватываете логово %s</text>
+	</string>
+	<string id="st_smart_capture_start_camp">
+		<text>Вы захватываете лагерь %s</text>
+	</string>
+
+	<string id="st_smart_capture_slow_no_bases_resource">
+		<text>Захват точки ресурсов %s невозможен. Захватите для начала хотя бы одну базу</text>
+	</string>
+	<string id="st_smart_capture_slow_no_bases_territory">
+		<text>Захват территории %s невозможен. Захватите для начала хотя бы одну базу</text>
+	</string>
+	<string id="st_smart_capture_slow_no_bases_point">
+		<text>Захват ключевой точки %s невозможен. Захватите для начала хотя бы одну базу</text>
+	</string>
+	<string id="st_smart_capture_slow_no_bases_lair">
+		<text>Захват логова %s невозможен. Захватите для начала хотя бы одну базу</text>
+	</string>
+	<string id="st_smart_capture_slow_no_bases_camp">
+		<text>Захват лагеря %s невозможен. Захватите для начала хотя бы одну базу</text>
+	</string>
+
+	<string id="st_smart_capture_fast_no_money_resource">
+		<text>Недостаточно денег для захвата ресурсной точки %s, нужно %s руб.</text>
+	</string>
+	<string id="st_smart_capture_fast_no_money_territory">
+		<text>Недостаточно денег для захвата территории %s, нужно %s руб.</text>
+	</string>
+	<string id="st_smart_capture_fast_no_money_point">
+		<text>Недостаточно денег для захвата ключевой точки %s, нужно %s руб.</text>
+	</string>
+	<string id="st_smart_capture_fast_no_money_lair">
+		<text>Недостаточно денег для захвата логова %s, нужно %s руб.</text>
+	</string>
+
+	<string id="st_smart_capture_fast_finish_base">
+		<text>База %s захвачена, награда за захват - %s руб.</text>
+	</string>
+	<string id="st_smart_capture_fast_finish_resource">
+		<text>Точка ресурсов %s захвачена, отряд куплен %s руб.</text>
+	</string>
+	<string id="st_smart_capture_fast_finish_territory">
+		<text>Территория %s захвачена, отряд куплен %s руб.</text>
+	</string>
+	<string id="st_smart_capture_fast_finish_point">
+		<text>Ключевая точка %s захвачена, отряд куплен %s руб.</text>
+	</string>
+	<string id="st_smart_capture_fast_finish_lair">
+		<text>Логово %s захвачено, отряд куплен %s руб.</text>
+	</string>
+	<string id="st_smart_capture_fast_finish_camp">
+		<text>Лагерь %s захвачен, награда за захват - %s руб.</text>
+	</string>
+
+	<string id="st_smart_capture_slow_finish_first_base">
+		<text>База %s захвачена.</text>
+	</string>
+	<string id="st_smart_capture_slow_finish_base">
+		<text>База %s захвачена. Отряд во главе с %s уже выдвигается с позиции %s.</text>
+	</string>
+	<string id="st_smart_capture_slow_finish_resource">
+		<text>Точка ресурсов %s захвачена. Отряд во главе с %s уже выдвигается с позиции %s.</text>
+	</string>
+	<string id="st_smart_capture_slow_finish_territory">
+		<text>Территория %s захвачена. Отряд во главе с %s уже выдвигается с позиции %s.</text>
+	</string>
+	<string id="st_smart_capture_slow_finish_point">
+		<text>Ключевая точка %s захвачена. Отряд во главе с %s уже выдвигается с позиции %s.</text>
+	</string>
+	<string id="st_smart_capture_slow_finish_lair">
+		<text>Логово %s захвачено. Отряд во главе с %s уже выдвигается с позиции %s.</text>
+	</string>
+	<string id="st_smart_capture_slow_finish_camp">
+		<text>Лагерь %s захвачен. Отряд во главе с %s уже выдвигается с позиции %s.</text>
+	</string>
+
+	<string id="st_smart_capture_abort_base">
+		<text>Вы прекратили захват базы %s</text>
+	</string>
+	<string id="st_smart_capture_abort_resource">
+		<text>Вы прекратили захват точки ресурсов %s</text>
+	</string>
+	<string id="st_smart_capture_abort_territory">
+		<text>Вы прекратили захват территории %s</text>
+	</string>
+	<string id="st_smart_capture_abort_point">
+		<text>Вы прекратили захват ключевой точки %s</text>
+	</string>
+	<string id="st_smart_capture_abort_lair">
+		<text>Вы прекратили захват логова %s</text>
+	</string>
+	<string id="st_smart_capture_abort_camp">
+		<text>Вы прекратили захват лагеря %s</text>
+	</string>
+</string_table>

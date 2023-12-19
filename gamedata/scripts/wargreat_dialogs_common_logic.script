@@ -1,0 +1,88 @@
+saved_dialogs = {}
+
+function add_dialog(p_id, id, phrase_id, cond, act, dialog_id)
+  if not (saved_dialogs[dialog_id]) then
+    return
+  end
+
+  -- utils.debug("add_dialog(%s, %s, %s, %s, %s, %s)", p_id, id, phrase_id, cond, act, dialog_id)
+  local phrase = saved_dialogs[dialog_id]:AddPhrase(phrase_id, tostring(id), tostring(p_id), -10000)
+  if not (phrase) then
+    return
+  end
+
+  local phrase_script = phrase:GetPhraseScript()
+
+  -- if string.find(phrase_id, "set_script_text") then
+  --   phrase_script:SetScriptText(phrase_id)
+  -- end
+
+  if (cond) then
+    if (type(cond) == "table") then
+      for _, value in pairs(cond) do
+        if (alun_utils.findfunction(value, _G)) then
+          --table.insert(cond_list,value)
+          phrase_script:AddPrecondition(value)
+        else
+          printf("dialog_manager:Error: No such function exists '%s'", value)
+        end
+      end
+    else
+      if (alun_utils.findfunction(cond, _G)) then
+        --table.insert(cond_list,value)
+        phrase_script:AddPrecondition(cond)
+      else
+        printf("dialog_manager:Error: No such function exists '%s'", cond)
+      end
+    end
+  end
+
+  if (act) then
+    if (type(act) == "table") then
+      for _, value in pairs(act) do
+        if (alun_utils.findfunction(value, _G)) then
+          phrase_script:AddAction(value)
+        else
+          printf("dialog_manager:Error: No such function exists '%s'", value)
+        end
+      end
+    else
+      if (alun_utils.findfunction(act, _G)) then
+        phrase_script:AddAction(act)
+      else
+        printf("dialog_manager:Error: No such function exists '%s'", act)
+      end
+    end
+  end
+  return phrase_script
+end
+
+local id = 0
+local id_nest_step = 300
+local pid = ""
+local id_table = {}
+function parse_dialogs(structure, dialog_id)
+  for _, item in pairs(structure) do
+    local local_id = id + (id_table[id] or 0)
+    local local_pid = pid
+
+    if pid ~= "" and pid % id_nest_step == 0 and id_table[pid] then
+      local_pid = pid + id_table[pid]
+    end
+    if type(item.back_level) == "number" then
+      local_id = local_id - (300 * (2 * item.back_level) + (id_table[id] or 0))
+    end
+
+    add_dialog(local_pid, local_id, item.text, item.condition, item.action, dialog_id)
+
+    if type(item.next) == "table" and #item.next then
+      pid = local_id
+      id = id + id_nest_step
+      parse_dialogs(item.next, dialog_id)
+      id = id - id_nest_step
+      pid = id - id_nest_step
+    end
+
+    id_table[id] = (id_table[id] or 0) + 1
+  end
+end

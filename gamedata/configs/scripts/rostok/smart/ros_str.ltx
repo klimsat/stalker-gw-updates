@@ -1,0 +1,26 @@
+[smart_terrain]
+squad_id = 34
+max_population = 5
+respawn_params = respawn@ros_str
+respawn_idle = 30000
+
+
+
+[respawn@ros_str]
+spawn_army@novice
+spawn_army@advanced
+
+[spawn_army@novice]
+spawn_squads = army_sim_squad_novice
+spawn_num = 3
+
+[spawn_army@advanced]
+spawn_squads = army_sim_squad_novice, army_sim_squad_advanced
+spawn_num = 3
+
+[exclusive]
+ros_str_camp_work_1 = rostok\ros_str_smart_logic.ltx
+ros_str_camp_work_2 = rostok\ros_str_smart_logic.ltx
+ros_str_camp_work_3 = rostok\ros_str_smart_logic.ltx
+ros_str_camp_work_4 = rostok\ros_str_smart_logic.ltx
+ros_str_camp_work_5 = rostok\ros_str_smart_logic.ltx

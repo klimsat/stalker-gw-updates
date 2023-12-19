@@ -1,0 +1,676 @@
+<specific_character id="sim_default_isg_leader_mark" team_default = "1">
+    <name>Роберт Краузер</name>
+    <icon>ui_inGame2_isg_27</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Лидер ИИГ.</bio>
+    <class>sim_default_isg_leader_mark</class>
+    <community>isg</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\isg\</snd_config>
+    <rank>19450</rank>
+    <reputation>1500</reputation>
+    <visual>actors\stalker_isg\isg_leader</visual>
+    <money min="32000" max="101750" infinitive="0"/>
+    <supplies>
+    [spawn] \n
+    wpn_m60 = 1 \n
+    ammo_7.62x51_fmj = 2 \n
+    wpn_desert_eagle_357 \n
+    ammo_357_fmj = 2 \n
+    grenade_f1 = 5 \n
+    medkit = 8 \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs_leaders.xml"
+    <actor_dialog>dialog_leader_isg</actor_dialog>
+</specific_character>
+
+    <!-- 														 -->
+    <!-- 						ISG							 -->
+    <!-- 														 -->
+	<!--  isg zelen  -->
+    <specific_character id="sim_default_isg_0_default_0_0_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio></bio>
+    <class>sim_default_isg_zelen_0</class>
+    <community>isg</community>
+    <snd_config>characters_voice\human_01\isg\</snd_config>
+    <rank>500</rank>
+    <money min="2500" max="5000" infinitive="0"/>
+    <reputation>0</reputation>
+    <visual>actors\stalker_isg\isg_novice_face_0_0</visual>
+    <supplies>
+        [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+	
+    <!--  isg novice  -->
+    <specific_character id="sim_default_isg_0_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio></bio>
+    <class>sim_default_isg_0</class>
+    <community>isg</community>
+    <snd_config>characters_voice\human_01\isg\</snd_config>
+    <rank>1000</rank>
+    <money min="2500" max="5000" infinitive="0"/>
+    <reputation>300</reputation>
+    <visual>actors\stalker_isg\isg_novice_face_0_0</visual>
+    <supplies>
+        [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+<!-- isg advanced -->
+	<specific_character id="sim_default_isg_1_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_2</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_1</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\isg\</snd_config>
+    <rank>5000</rank>
+    <money min="2500" max="5000" infinitive="0"/>
+    <reputation>2029</reputation>
+    <visual>actors\stalker_isg\isg_face_1_0</visual>
+    <supplies>
+       [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+<specific_character id="sim_default_isg_1_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_1</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\isg\</snd_config>
+    <rank>5000</rank>
+    <money min="2500" max="5000" infinitive="0"/>
+    <reputation>2029</reputation>
+    <visual>actors\stalker_isg\isg_off_gas_face_1_0</visual>
+    <supplies>
+       [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+	
+	<specific_character id="sim_default_isg_1_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_1</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\isg\</snd_config>
+    <rank>5000</rank>
+    <money min="2500" max="5000" infinitive="0"/>
+    <reputation>2029</reputation>
+    <visual>actors\stalker_isg\isg_off_gas_face_1_1</visual>
+    <supplies>
+       [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+	
+	<specific_character id="sim_default_isg_1_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_1</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\isg\</snd_config>
+    <rank>5000</rank>
+    <money min="2500" max="5000" infinitive="0"/>
+    <reputation>2029</reputation>
+    <visual>actors\stalker_isg\isg_off_gas_face_1_2</visual>
+    <supplies>
+       [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+	
+	<specific_character id="sim_default_isg_1_default_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_6</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_1</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\isg\</snd_config>
+    <rank>5000</rank>
+    <money min="2500" max="5000" infinitive="0"/>
+    <reputation>2029</reputation>
+    <visual>actors\stalker_isg\isg_off_gas_face_1_3</visual>
+    <supplies>
+       [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+	
+	<specific_character id="sim_default_isg_1_default_5" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_1</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\isg\</snd_config>
+    <rank>5000</rank>
+    <money min="2500" max="5000" infinitive="0"/>
+    <reputation>2029</reputation>
+    <visual>actors\stalker_isg\isg_rukzak_face_1_0</visual>
+    <supplies>
+       [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+	
+	<specific_character id="sim_default_isg_1_default_6" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_8</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_1</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\isg\</snd_config>
+    <rank>5000</rank>
+    <money min="2500" max="5000" infinitive="0"/>
+    <reputation>2029</reputation>
+    <visual>actors\stalker_isg\isg_rukzak_face_1_1</visual>
+    <supplies>
+       [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+	
+	<specific_character id="sim_default_isg_1_default_7" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_1</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\isg\</snd_config>
+    <rank>5000</rank>
+    <money min="2500" max="5000" infinitive="0"/>
+    <reputation>2029</reputation>
+    <visual>actors\stalker_isg\isg_rukzak_face_1_2</visual>
+    <supplies>
+       [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+	
+	<specific_character id="sim_default_isg_1_default_8" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_10</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_1</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\isg\</snd_config>
+    <rank>5000</rank>
+    <money min="2500" max="5000" infinitive="0"/>
+    <reputation>2029</reputation>
+    <visual>actors\stalker_isg\isg_rukzak_face_1_3</visual>
+    <supplies>
+       [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+	
+	<specific_character id="sim_default_isg_1_default_9" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_11</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_1</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\isg\</snd_config>
+    <rank>5000</rank>
+    <money min="2500" max="5000" infinitive="0"/>
+    <reputation>2029</reputation>
+    <visual>actors\stalker_isg\isg_rukzak_face_1_4</visual>
+    <supplies>
+       [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+	
+	<specific_character id="sim_default_isg_1_default_10" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_12</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_1</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\isg\</snd_config>
+    <rank>5000</rank>
+    <money min="2500" max="5000" infinitive="0"/>
+    <reputation>2029</reputation>
+    <visual>actors\stalker_isg\isg_rukzak_face_1_5</visual>
+    <supplies>
+       [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+<!--  isg profi  -->
+    <specific_character id="sim_default_isg_2_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_13</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_2</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\isg\</snd_config>
+    <rank>7000</rank>
+    <money min="2500" max="5000" infinitive="0"/>
+    <reputation>2029</reputation>
+    <visual>actors\stalker_isg\isg_gas_2_0</visual>
+    <supplies>
+         [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+<specific_character id="sim_default_isg_2_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_14</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_2</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\isg\</snd_config>
+    <rank>7000</rank>
+    <money min="2500" max="5000" infinitive="0"/>
+    <reputation>2029</reputation>
+    <visual>actors\stalker_isg\isg_gas_2_1</visual>
+    <supplies>
+         [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+<specific_character id="sim_default_isg_2_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_15</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_2</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\isg\</snd_config>
+    <rank>7000</rank>
+    <money min="2500" max="5000" infinitive="0"/>
+    <reputation>2029</reputation>
+    <visual>actors\stalker_isg\isg_gas_rukzak_2_0</visual>
+    <supplies>
+         [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+<specific_character id="sim_default_isg_2_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_16</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_2</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\isg\</snd_config>
+    <rank>7000</rank>
+    <money min="2500" max="5000" infinitive="0"/>
+    <reputation>2029</reputation>
+    <visual>actors\stalker_isg\isg_merc_gas_2_0</visual>
+    <supplies>
+         [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+<specific_character id="sim_default_isg_2_default_4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_17</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_2</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\isg\</snd_config>
+    <rank>7000</rank>
+    <money min="2500" max="5000" infinitive="0"/>
+    <reputation>2029</reputation>
+    <visual>actors\stalker_isg\isg_merc_gas_2_1</visual>
+    <supplies>
+        [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+<specific_character id="sim_default_isg_2_default_5" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_18</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_2</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\isg\</snd_config>
+    <rank>7000</rank>
+    <money min="2500" max="5000" infinitive="0"/>
+    <reputation>2029</reputation>
+    <visual>actors\stalker_isg\isg_protoexo_gas_2_0</visual>
+    <supplies>
+        [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+<specific_character id="sim_default_isg_2_default_6" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_19</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_2</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\isg\</snd_config>
+    <rank>7000</rank>
+    <money min="2500" max="5000" infinitive="0"/>
+    <reputation>2029</reputation>
+    <visual>actors\stalker_isg\isg_protoexo_gas_2_1</visual>
+    <supplies>
+        [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+<specific_character id="sim_default_isg_2_default_7" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_20</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_2</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\isg\</snd_config>
+    <rank>7000</rank>
+    <money min="2500" max="5000" infinitive="0"/>
+    <reputation>2029</reputation>
+    <visual>actors\stalker_isg\isg_resp_2_0</visual>
+    <supplies>
+        [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+<specific_character id="sim_default_isg_2_default_8" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_21</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_2</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_02\isg\</snd_config>
+    <rank>7000</rank>
+    <money min="2500" max="5000" infinitive="0"/>
+    <reputation>2029</reputation>
+    <visual>actors\stalker_isg\isg_resp_2_1</visual>
+    <supplies>
+        [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+	
+	<!-- isg veteran -->
+	<specific_character id="sim_default_isg_3_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_22</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_3</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\isg\</snd_config>
+    <rank>9000</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>1488</reputation>
+    <visual>actors\stalker_isg\isg_ecolog</visual>
+    <supplies>
+        [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+	
+	<specific_character id="sim_default_isg_3_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_23</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_3</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\isg\</snd_config>
+    <rank>9000</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>1488</reputation>
+    <visual>actors\stalker_isg\isg_seva_3_0</visual>
+    <supplies>
+        [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+	
+	<specific_character id="sim_default_isg_3_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_24</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_3</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\isg\</snd_config>
+    <rank>9000</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>1488</reputation>
+    <visual>actors\stalker_isg\isg_seva_3_1</visual>
+    <supplies>
+        [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+	
+	<specific_character id="sim_default_isg_3_default_3" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_25</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_3</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\isg\</snd_config>
+    <rank>9000</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>1488</reputation>
+    <visual>actors\stalker_isg\isg_seva_3_2</visual>
+    <supplies>
+        [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+	
+    <!--  isg master  -->	
+    <specific_character id="sim_default_isg_4_default_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_26</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_4</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\isg\</snd_config>
+    <rank>11000</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>1488</reputation>
+    <visual>actors\stalker_isg\isg_4_0</visual>
+    <supplies>
+        [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+	
+	<specific_character id="sim_default_isg_4_default_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_27</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_4</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\isg\</snd_config>
+    <rank>11000</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>2088</reputation>
+    <visual>actors\stalker_isg\isg_skat10_4_0</visual>
+    <supplies>
+        [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+	
+	<specific_character id="sim_default_isg_4_default_2" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_28</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_4</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\isg\</snd_config>
+    <rank>11000</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>2088</reputation>
+    <visual>actors\stalker_isg\isg_exo_4_0</visual>
+    <supplies>
+        [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+	
+    <!--  isg legend  -->	
+    <specific_character id="isg_exo_4_0_default_5_0_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_28</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_5</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\isg\</snd_config>
+    <rank>15000</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>1488</reputation>
+    <visual>actors\stalker_isg\isg_exo_4_0</visual>
+    <supplies>
+        [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+	
+	<specific_character id="isg_exo_4_0_default_5_0_1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_28</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_5</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\isg\</snd_config>
+    <rank>15000</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>2088</reputation>
+    <visual>actors\stalker_isg\isg_exo_4_0</visual>
+    <supplies>
+        [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+	
+	<specific_character id="isg_exoseva_4_0_default_5_0_0" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_isg_29</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <class>sim_default_isg_5</class>
+    <community>isg</community> <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_03\isg\</snd_config>
+    <rank>15000</rank>
+    <money min="5000" max="10000" infinitive="0"/>
+    <reputation>2088</reputation>
+    <visual>actors\stalker_isg\isg_exoseva_4_0</visual>
+    <supplies>
+        [spawn]\n
+    </supplies>
+#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_dialogs.xml"
+    <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>

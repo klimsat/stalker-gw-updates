@@ -1,0 +1,32 @@
+[smart_terrain];aver_hizhina
+squad_id = 5
+max_population = 14
+respawn_params = respawn@aver_hizhina
+respawn_idle = 60000
+
+
+[respawn@aver_hizhina]
+spawn_military@novice
+spawn_military@advanced
+spawn_military@sniper
+
+[spawn_military@novice]
+spawn_squads = army_sim_squad_novice
+spawn_num = 3
+
+[spawn_military@advanced]
+spawn_squads = army_sim_squad_novice, army_sim_squad_advanced
+spawn_num = 3
+
+[spawn_military@sniper]
+spawn_squads = army_sim_squad_sniper, army_sim_squad_advanced
+spawn_num = 3
+
+[exclusive]
+mechanic = aver\aver_hizhina_smart_logic.ltx
+aver_hizhina_camp_work_1 = aver\aver_hizhina_smart_logic.ltx
+aver_hizhina_camp_work_2 = aver\aver_hizhina_smart_logic.ltx
+aver_hizhina_camp_work_3 = aver\aver_hizhina_smart_logic.ltx
+aver_hizhina_camp_work_4 = aver\aver_hizhina_smart_logic.ltx
+aver_hizhina_camp_work_5 = aver\aver_hizhina_smart_logic.ltx
+aver_hizhina_camp_work_6 = aver\aver_hizhina_smart_logic.ltx

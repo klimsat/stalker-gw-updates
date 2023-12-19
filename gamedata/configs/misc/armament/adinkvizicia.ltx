@@ -1,0 +1,91 @@
+[zelen]
+; Специальные пропсы
+rank = 0, 2999 ; ранг НПС для которого будет применена данная секция
+random_0 = wpn_l85, 100
+random_1 = wpn_beretta, 100 ; В сумме все числа должны быть = 100
+--one_of_0 = wpn_toz34
+use_ap_ammo = 1 ; бронебойные патроны 0 - выключить, 1 - включить
+medkit = 1, 0.1
+bandage = 1, 0.1
+conserva = 1, 0.1
+bread = 1, 0.1
+kolbasa = 1, 0.1
+baton = 1, 0.1
+;silencer = 1 ; 1 - спавнить ли глушак для оружия если возможно
+; Все остальное. Считается как: название секции предмета = кол-во сколько нужно заспавнить, шанс спавна от 0 до 1
+
+[novice]
+rank = 3000, 4999
+random_0 = wpn_abakan, 100
+random_1 = wpn_beretta96, 100
+use_ap_ammo = 1
+medkit = 1, 0.1
+bandage = 1, 0.1
+conserva = 1, 0.1
+bread = 1, 0.1
+kolbasa = 1, 0.1
+baton = 1, 0.1
+
+[nachunaushu]
+rank = 5000, 6999
+random_0 = wpn_g36, 50, wpn_val, 50
+random_1 = wpn_sig220, 100
+use_ap_ammo = 1
+grenade_rgd5 = 1, 1
+medkit = 1, 0.1
+bandage = 1, 0.1
+conserva = 1, 0.1
+bread = 1, 0.1
+kolbasa = 1, 0.1
+baton = 1, 0.1
+
+[advanced]
+rank = 7000, 8999
+random_0 = wpn_groza, 50, wpn_flamer, 25, wpn_sr3m, 25
+random_1 = wpn_usp, 100
+use_ap_ammo = 1
+grenade_rgd5 = 3, 1
+medkit = 1, 0.1
+bandage = 1, 0.1
+conserva = 1, 0.1
+bread = 1, 0.1
+kolbasa = 1, 0.1
+baton = 1, 0.1
+
+[veteran]
+rank = 9000, 10999
+random_0 = wpn_groza1, 50, wpn_groza_nimble, 50
+random_1 = wpn_colt1911, 100
+use_ap_ammo = 1
+grenade_f1 = 1, 1
+medkit = 1, 0.1
+bandage = 1, 0.1
+conserva = 1, 0.1
+bread = 1, 0.1
+kolbasa = 1, 0.1
+
+[master]
+rank = 11000, 14999
+random_0 = wpn_m60, 25, wpn_pkm, 25, wpn_rpg7, 25, wpn_m134, 25
+random_1 = wpn_desert_eagle, 100
+use_ap_ammo = 1
+grenade_f1 = 3, 1
+medkit = 1, 0.1
+bandage = 1, 0.1
+conserva = 1, 0.1
+bread = 1, 0.1
+kolbasa = 1, 0.1
+baton = 1, 0.1
+
+[legend]
+rank = 15000, 50000
+random_0 = wpn_m60, 25, wpn_pkm, 25, wpn_rpg7, 25, wpn_m134, 20, wpn_rg-6, 5
+random_1 = wpn_desert_eagle_357, 100
+use_ap_ammo = 1
+grenade_f1 = 5, 1
+medkit = 1, 0.1
+bandage = 1, 0.1
+conserva = 1, 0.1
+bread = 1, 0.1
+kolbasa = 1, 0.1
+baton = 1, 0.1

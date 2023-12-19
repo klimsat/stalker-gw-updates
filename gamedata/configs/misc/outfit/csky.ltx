@@ -1,0 +1,705 @@
+;---------------------------------------------------------------------------------------------
+;       CS Novice Outfit
+;---------------------------------------------------------------------------------------------
+[cs_novice_outfit]:outfit_novice_base
+$spawn                                   = "outfit\cs_novice_outfit"
+visual                                   = dynamics\outfit\cs_rookie_outfit
+actor_visual                             = actors\stalker_csky\csky_face_0_0.ogf
+npc_visual                               = actors\stalker_csky\csky_face_0_0.ogf
+player_hud_section                       = actor_hud_cs_novice
+
+
+inv_name                                 = csky_novice_outfit_name
+inv_name_short                           = csky_novice_outfit_name
+description                              = novice_outfit_description
+
+inv_grid_x         = 12
+inv_grid_y         = 11
+
+upgr_icon_x                              = 2196
+upgr_icon_y                              = 1011
+upgr_icon_width                          = 295
+upgr_icon_height                         = 140
+
+character_portrait						 = ui_inGame2_csky_face_0_0
+
+upgrades                                 = up_gr_firstab_rookie_outfit, up_gr_seconab_rookie_outfit, up_gr_thirdab_rookie_outfit
+
+;---------------------------------------------------------------------------------------------
+;		CS-1 body armor
+;---------------------------------------------------------------------------------------------
+[cs_light_novice_outfit]:outfit_base
+$spawn                                   = "outfit\cs_light_novice_outfit"
+visual                                   = dynamics\outfit\cs_light_outfit
+actor_visual                             = actors\stalker_csky\csky_gas_1_7.ogf
+npc_visual                               = actors\stalker_csky\csky_gas_1_7.ogf
+player_hud_section                       = actor_hud_cs1
+
+ef_equipment_type                        = 3
+
+inv_name                                 = csky_light_novice_outfit_name
+inv_name_short                           = csky_light_novice_outfit_name
+description                              = csky_light_novice_outfit_description
+inv_weight                               = 4.5
+
+inv_grid_x                               = 18
+inv_grid_y                               = 33
+
+upgr_icon_x                              = 1830
+upgr_icon_y                              = 215
+upgr_icon_width                          = 305
+upgr_icon_height                         = 131
+full_icon_name                           = npc_icon_svoboda_light_outfit
+
+cost                                     = 5500
+full_scale_icon                          = 10,11	                                       ;иконка сталкера в костюме в полный рост
+
+immunities_sect                          = sect_light_novice_outfit_immunities
+power_loss                               = 0.55
+
+; LOW RESISTANCE
+burn_protection                          = 0.0333
+shock_protection                         = 0.1333
+radiation_protection                     = 0.0050
+chemical_burn_protection                 = 0.0333
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1050
+explosion_protection                     = 0.1050
+wound_protection                         = 0.1050
+
+
+bones_koeff_protection                   = actor_armor_cs1
+hit_fraction_actor                       = 0.3
+artefact_count                           = 1
+control_inertion_factor                  = 1.2
+
+upgrades                                 = up_gr_firstab_cs_light_outfit, up_gr_seconab_cs_light_outfit, up_gr_thirdab_cs_light_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_svoboda_light_outfit
+character_portrait						 = ui_inGame2_csky_off_gas_face_1_0
+
+[sect_light_novice_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.02
+
+[sect_light_novice_outfit_immunities_add]
+burn_immunity                            = 0.02	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = 0.02
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.02
+explosion_immunity                       = 0.02
+fire_wound_immunity                      = 0.015
+
+
+
+;---------------------------------------------------------------------------------------------
+;		CS-2 body armor
+;---------------------------------------------------------------------------------------------
+[cs_light_outfit]:outfit_base
+$spawn                                   = "outfit\cs_light_outfit"
+visual                                   = dynamics\outfit\cs_light_outfit
+actor_visual                             = actors\stalker_csky\csky_gas_3_0.ogf
+npc_visual                               = actors\stalker_csky\csky_gas_3_0.ogf
+player_hud_section                       = actor_hud_cs2
+
+ef_equipment_type                        = 3
+
+inv_name                                 = csky_light_outfit_name
+inv_name_short                           = csky_light_outfit_name
+description                              = csky_light_outfit_description
+inv_weight                               = 6.0
+
+inv_grid_x                               = 0
+inv_grid_y                               = 15
+
+upgr_icon_x                              = 1860
+upgr_icon_y                              = 35
+upgr_icon_width                          = 305
+upgr_icon_height                         = 131
+full_icon_name                           = npc_icon_svoboda_light_outfit
+
+cost                                     = 15500
+full_scale_icon                          = 10,11	                                       ;иконка сталкера в костюме в полный рост
+
+immunities_sect                          = sect_cs_light_outfit_immunities
+power_loss                               = 0.6
+
+; LOW RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1400
+explosion_protection                     = 0.1400
+wound_protection                         = 0.1400
+
+bones_koeff_protection                   = actor_armor_cs2
+hit_fraction_actor                       = 0.3
+artefact_count                           = 2
+control_inertion_factor                  = 1.2
+
+upgrades                                 = up_gr_firstab_cs_light_outfit, up_gr_seconab_cs_light_outfit, up_gr_thirdab_cs_light_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_svoboda_light_outfit
+character_portrait						 = ui_inGame2_csky_gas_3_0 
+
+[sect_cs_light_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.02
+
+[sect_cs_light_outfit_immunities_add]
+burn_immunity                            = 0.02	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = 0.02
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.02
+explosion_immunity                       = 0.02
+fire_wound_immunity                      = 0.015
+
+
+;---------------------------------------------------------------------------------------------
+;		CS-3a Body Armor
+;---------------------------------------------------------------------------------------------
+[cs_medium_outfit]:outfit_base
+$spawn                                   = "outfit\cs_medium_outfit"
+visual                                   = dynamics\outfit\cs_medium_outfit
+actor_visual                             = actors\stalker_csky\csky_gas_2_0.ogf
+npc_visual                               = actors\stalker_csky\csky_gas_2_0.ogf
+player_hud_section                       = actor_hud_cs3a
+
+ef_equipment_type                        = 3
+
+inv_name                                 = csky_medium_outfit_name
+inv_name_short                           = csky_medium_outfit_name
+description                              = csky_medium_outfit_description
+
+inv_weight                               = 7.5
+
+inv_grid_x                               = 18
+inv_grid_y                               = 14
+
+upgr_icon_x                              = 4
+upgr_icon_y                              = 304
+upgr_icon_width                          = 305
+upgr_icon_height                         = 131
+full_icon_name                           = npc_icon_svoboda_heavy_outfit
+
+cost                                     = 17500
+full_scale_icon                          = 2,6	                                       ;иконка сталкера в костюме в полный рост
+
+immunities_sect                          = sect_cs_medium_outfit_immunities
+power_loss                               = 0.75
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0533
+shock_protection                         = 0.2133
+radiation_protection                     = 0.0080
+chemical_burn_protection                 = 0.0533
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1750
+explosion_protection                     = 0.1750
+wound_protection                         = 0.1750
+
+hit_fraction_actor                       = 0.35
+bones_koeff_protection                   = actor_armor_cs3
+
+artefact_count                           = 2
+control_inertion_factor                  = 1.5
+
+upgrades                                 = up_gr_firstab_cs_heavy_outfit, up_gr_seconab_cs_heavy_outfit, up_gr_thirdab_cs_heavy_outfit, up_gr_fourtab_cs_heavy_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_cs_heavy_outfit
+character_portrait						 = ui_inGame2_csky_gas_2_0
+
+[sect_cs_medium_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_cs_medium_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = -0.01
+shock_immunity                           = 0.0
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		CS-3b Body Armor
+;---------------------------------------------------------------------------------------------
+[cs_heavy_outfit]:outfit_base
+$spawn                                   = "outfit\cs_heavy_outfit"
+visual                                   = dynamics\outfit\cs_heavy_outfit
+actor_visual                             = actors\stalker_csky\csky_gas_4_0.ogf
+npc_visual                               = actors\stalker_csky\csky_gas_4_0.ogf
+player_hud_section                       = actor_hud_cs3b
+
+ef_equipment_type                        = 3
+
+inv_name                                 = csky_heavy_outfit_name
+inv_name_short                           = csky_heavy_outfit_name
+description                              = csky_heavy_outfit_description
+
+inv_weight                               = 10.0
+
+inv_grid_x                               = 18
+inv_grid_y                               = 30
+
+upgr_icon_x                              = 1850
+upgr_icon_y                              = 350
+upgr_icon_width                          = 300
+upgr_icon_height                         = 150
+full_icon_name                           = npc_icon_svoboda_heavy_outfit
+
+cost                                     = 27000
+full_scale_icon                          = 2,6	                                       ;иконка сталкера в костюме в полный рост
+
+immunities_sect                          = sect_cs_heavy_outfit_immunities
+power_loss                               = 0.8
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+telepatic_protection                     = 0.0
+strike_protection                        = 0.2100
+explosion_protection                     = 0.2100
+wound_protection                         = 0.2100
+
+hit_fraction_actor                       = 0.45
+bones_koeff_protection                   = actor_armor_duty_suit
+
+artefact_count                           = 1
+control_inertion_factor                  = 1.5
+
+upgrades                                 = up_gr_firstab_cs_heavy_outfit, up_gr_seconab_cs_heavy_outfit, up_gr_thirdab_cs_heavy_outfit, up_gr_fourtab_cs_heavy_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_cs_heavy_outfit
+character_portrait						 = ui_inGame2_csky_gas_4_0
+
+[sect_cs_heavy_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_cs_heavy_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = -0.01
+shock_immunity                           = 0.0
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		CS NBC Outfit
+;---------------------------------------------------------------------------------------------
+[cs_nbc_outfit]:outfit_base
+$spawn 									= "outfit\cs_nbc_outfit"
+visual          						= dynamics\outfit\cs_light_outfit
+actor_visual							= actors\stalker_csky\csky_gas_2_3.ogf
+player_hud_section						= actor_hud_cs1
+
+ef_equipment_type						= 3
+
+inv_name								= cs_nbc_outfit_name
+inv_name_short							= cs_nbc_outfit_name
+description								= cs_nbc_outfit_description
+
+inv_weight								= 10.0
+
+inv_grid_x								= 12
+inv_grid_y								= 34
+
+upgr_icon_x                              = 2179
+upgr_icon_y                              = 340
+upgr_icon_width                          = 300
+upgr_icon_height                         = 157
+full_icon_name							= npc_icon_stalker_outfit
+
+cost									= 17000
+full_scale_icon							= 14,11
+
+artefact_count                 			= 1
+
+immunities_sect							= sect_cs_nbc_outfit_immunities
+
+; LOW RESISTANCE
+burn_protection                          = 0.0833
+shock_protection                         = 0.3333
+radiation_protection                     = 0.0125
+chemical_burn_protection                 = 0.0833
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1925
+explosion_protection                     = 0.1925
+wound_protection                         = 0.1925
+
+hit_fraction_actor						= 0.75
+
+bones_koeff_protection 					= actor_armor_seva
+
+control_inertion_factor 				= 1.2
+power_loss 								= 0.8
+
+nightvision_sect						= effector_nightvision_2
+
+helmet_avaliable	 					= false
+
+upgrades                                 = up_gr_firstab_cs_heavy_outfit, up_gr_seconab_cs_heavy_outfit, up_gr_thirdab_cs_heavy_outfit, up_gr_fourtab_cs_heavy_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_cs_heavy_outfit
+character_portrait						 = ui_inGame2_csky_gas_2_3
+
+[sect_cs_nbc_outfit_immunities]
+burn_immunity				= 0.04
+strike_immunity				= 0.0
+shock_immunity				= 0.04
+wound_immunity				= 0.04
+radiation_immunity			= 0.0
+telepatic_immunity			= 0.0
+chemical_burn_immunity		= 0.04
+explosion_immunity			= 0.04
+fire_wound_immunity			= 0.03
+
+[sect_cs_nbc_outfit_immunities_add]
+burn_immunity				= -0.02
+strike_immunity				= 0.0
+shock_immunity				= -0.02
+wound_immunity				= -0.02
+radiation_immunity			= 0.0
+telepatic_immunity			= 0.0
+chemical_burn_immunity		= -0.02
+explosion_immunity			= -0.02
+fire_wound_immunity			= -0.008
+
+;---------------------------------------------------------------------------------------------
+;		Clear Sunrise Suit
+;---------------------------------------------------------------------------------------------
+[cs_stalker_outfit]:outfit_base
+$spawn                                   = "outfit\cs_stalker_outfit"
+visual                                   = dynamics\outfit\stalker_outfit
+actor_visual                             = actors\stalker_csky\csky_off_gas_face_1_0.ogf
+npc_visual                               = actors\stalker_csky\csky_off_gas_face_1_0.ogf
+player_hud_section                       = actor_hud_cs2
+
+ef_equipment_type                        = 3
+
+inv_name                                 = cs_stalker_outfit_name
+inv_name_short                           = cs_stalker_outfit_name
+description                              = cs_stalker_outfit_description
+
+inv_weight                               = 8.5
+
+inv_grid_x                               = 50
+inv_grid_y                               = 34
+upgr_icon_x                              = 2512
+upgr_icon_y                              = 897
+upgr_icon_width                          = 307
+upgr_icon_height                         = 126
+full_icon_name                           = ui_inGame2_csky_oldgas
+
+cost                                     = 16000
+full_scale_icon                          = 14,11	                                       ;eeiiea noaeea?a a eino?ia a iieiue ?ino
+
+artefact_count                           = 1
+
+immunities_sect                          = sect_cs_stalker_outfit_immunities
+
+
+; LOW RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1925
+explosion_protection                     = 0.1925
+wound_protection                         = 0.1925
+
+hit_fraction_actor                       = 0.75
+bones_koeff_protection                   = actor_armor_suit
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.75
+
+upgrades                                 = up_gr_firstab_cs_light_outfit, up_gr_seconab_cs_light_outfit, up_gr_thirdab_cs_light_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_svoboda_light_outfit
+character_portrait						 = ui_inGame2_csky_gas_1_7
+
+[sect_cs_stalker_outfit_immunities]
+burn_immunity                            = 0.03	                                       ;eiyooeoeaiou eiioieoaoa naiiai eino?ia
+strike_immunity                          = 0.0
+shock_immunity                           = 0.03
+wound_immunity                           = 0.03
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.03
+explosion_immunity                       = 0.03
+fire_wound_immunity                      = 0.015
+
+[sect_cs_stalker_outfit_immunities_add]
+burn_immunity                            = -0.015	                                       ;eiyooeoeaiou eiioieoaoa naiiai eino?ia
+strike_immunity                          = 0.0
+shock_immunity                           = -0.015
+wound_immunity                           = -0.015
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.015
+explosion_immunity                       = -0.015
+fire_wound_immunity                      = -0.005
+
+;---------------------------------------------------------------------------------------------
+;		CS SEVA Suit
+;---------------------------------------------------------------------------------------------
+[cs_scientific_outfit]:outfit_scientific_base
+$spawn                                   = "outfit\cs_scientific_outfit"
+visual                                   = dynamics\outfit\cs_scientific_outfit
+actor_visual                             = actors\stalker_csky\csky_seva_3_0.ogf
+npc_visual                               = actors\stalker_csky\csky_seva_3_0.ogf
+player_hud_section                       = actor_hud_merc_seva
+
+inv_name                                 = cs_scientific_outfit_name
+inv_name_short                           = cs_scientific_outfit_name
+description                              = cs_scientific_outfit_description
+
+inv_weight                               = 12.5
+
+inv_grid_x         = 6
+inv_grid_y         = 33
+
+
+upgr_icon_x                              = 2506
+upgr_icon_y                              = 550
+upgr_icon_width                          = 294
+upgr_icon_height                         = 159
+
+cost                                     = 37000
+full_scale_icon                          = 12,11	                                       ;иконка сталкера в костюме в полный рост
+
+immunities_sect                          = sect_cs_scientific_outfit_immunities
+
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0933
+shock_protection                         = 0.3733
+radiation_protection                     = 0.0140
+chemical_burn_protection                 = 0.0933
+telepatic_protection                     = 0.0588
+strike_protection                        = 0.2100
+explosion_protection                     = 0.2100
+wound_protection                         = 0.2100
+
+hit_fraction_actor                       = 0.65
+bones_koeff_protection                   = actor_armor_duty_seva
+
+artefact_count                           = 0
+
+nightvision_sect                         = effector_nightvision_2
+
+control_inertion_factor                  = 1.5
+power_loss                               = 0.85
+character_portrait						 = ui_inGame2_csky_seva_3_0
+
+[sect_cs_scientific_outfit_immunities]
+burn_immunity                            = 0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = 0.03
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.0
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.02
+
+[sect_cs_scientific_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.0
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		Clear Sky EXOSKELETON
+;---------------------------------------------------------------------------------------------
+[cs_exo_outfit]:outfit_exo_base
+$spawn                                   = "outfit\cs_exo_outfit"
+visual                                   = dynamics\outfit\cs_exo_outfit
+actor_visual                             = actors\stalker_csky\csky_exo_5_0.ogf
+npc_visual                               = actors\stalker_csky\csky_exo_5_0.ogf
+player_hud_section                       = actor_hud_merc_exo
+
+inv_name                                 = cs_exo_outfit_name
+inv_name_short                           = cs_exo_outfit_name
+description                              = cs_exo_outfit_description
+
+inv_weight                               = 25.0
+
+inv_grid_x         						 = 54
+inv_grid_y         					     = 18
+
+upgr_icon_x                              = 938
+upgr_icon_y                              = 1000
+upgr_icon_width                          = 296
+upgr_icon_height                         = 154
+
+cost                                     = 90000
+
+power_loss                               = 1.1
+additional_inventory_weight              = 30
+additional_inventory_weight2             = 30
+artefact_count                           = 2
+helmet_avaliable						 = false
+
+character_portrait						 = ui_inGame2_csky_exo_5_0
+;---------------------------------------------------------------------------------------------
+;		Leader CSky Outfit
+;---------------------------------------------------------------------------------------------
+[leader_csky_outfit]:outfit_base
+$spawn                                   = "outfit\leader_csky_outfit"
+visual                                   = dynamics\outfit\cs_medium_outfit
+actor_visual                             = actors\stalker_csky\csky_leader.ogf
+npc_visual                               = actors\stalker_csky\csky_leader.ogf
+player_hud_section                       = actor_hud_cs3a
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_csky_outfit_name
+inv_name_short                           = leader_csky_outfit_name
+description                              = leader_csky_outfit_description
+
+inv_weight                               = 15
+
+inv_grid_x                               = 18
+inv_grid_y                               = 14
+
+upgr_icon_x                              = 4
+upgr_icon_y                              = 304
+upgr_icon_width                          = 305
+upgr_icon_height                         = 131
+
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 242135
+
+full_scale_icon                          = 14,11	                                      
+
+immunities_sect                          = sect_leader_csky_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0823
+shock_protection                         = 0.3916
+radiation_protection                     = 0.0138
+chemical_burn_protection                 = 0.0916
+telepatic_protection                     = 0.1110
+strike_protection                        = 0.5437
+explosion_protection                     = 0.5187
+wound_protection                         = 0.3937
+fire_wound_protection                    = 0.2500
+
+hit_fraction_actor                       = 0.15
+control_inertion_factor                  = 2.5
+bones_koeff_protection                   = actor_armor_exo
+
+nightvision_sect 			             = effector_nightvision_2
+
+power_restore_speed                      = 0.005
+power_loss                               = 0.9
+
+additional_inventory_weight              = 60
+additional_inventory_weight2             = 60
+
+artefact_count                           = 5
+
+character_portrait						 = ui_inGame2_csky_gas_2_0
+
+[sect_leader_csky_outfit_immunities]
+burn_immunity            				 = 0.0050
+strike_immunity                          = 0.0050
+shock_immunity                           = 0.0200
+wound_immunity                           = 0.0050
+radiation_immunity                       = 0.0000
+telepatic_immunity                       = 0.0000
+chemical_burn_immunity                   = 0.0050
+explosion_immunity                       = 0.0050
+fire_wound_immunity                      = 0.0100
+;---------------------------------------------------------------------------------------------
+;OUTFIT IN AZAZEL MODE: Leader CSky Outfit
+;---------------------------------------------------------------------------------------------
+[leader_azazel_csky_outfit]:outfit_leader_exo_base
+$spawn                                   = "outfit\leader_azazel_csky_outfit"
+visual                                   = dynamics\outfit\cs_medium_outfit
+actor_visual                             = actors\stalker_csky\csky_leader.ogf
+npc_visual                               = actors\stalker_csky\csky_leader.ogf
+player_hud_section                       = actor_hud_cs3a
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_csky_outfit_name
+inv_name_short                           = leader_csky_outfit_name
+description                              = leader_csky_outfit_description
+
+inv_weight                               = 15
+
+inv_grid_x                               = 18
+inv_grid_y                               = 14
+
+upgr_icon_x                              = 4
+upgr_icon_y                              = 304
+upgr_icon_width                          = 305
+upgr_icon_height                         = 131
+
+cost                                     = 242135
+
+artefact_count                           = 1
+
+helmet_avaliable						= false
+
+sprint_allowed							 = true
+
+power_loss                               = 0.75
+
+character_portrait						 = ui_inGame2_csky_holod_1_0
+

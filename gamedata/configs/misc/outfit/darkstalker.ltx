@@ -1,0 +1,324 @@
+;---------------------------------------------------------------------------------------------
+;		Плащ Темного Сталкера
+;---------------------------------------------------------------------------------------------
+[darkstalker_trenchcoat_outfit]:outfit_novice_base
+$spawn                                   = "outfit\darkstalker_trenchcoat_outfit"
+visual                                   = dynamics\outfit\novice_outfit
+actor_visual                             = actors\stalker_darkstalker\patriarch.ogf
+npc_visual                               = actors\stalker_darkstalker\patriarch.ogf
+player_hud_section                       = actor_hud_bandit_trench
+
+
+inv_name                                 = darkstalker_trenchcoat_outfit_name
+inv_name_short                           = darkstalker_trenchcoat_outfit_name
+description                              = darkstalker_trenchcoat_outfit_description
+inv_weight                               = 2.0
+
+inv_grid_height    = 2
+inv_grid_x         = 56
+inv_grid_y         = 32
+
+upgr_icon_x                              = 636
+upgr_icon_y                              = 0
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+
+cost                                     = 7000
+
+immunities_sect                          = sect_trenchcoat_outfit_immunities
+
+; NO RESISTANCE
+burn_protection                          = 0.0233
+shock_protection                         = 0.0933
+radiation_protection                     = 0.0035
+chemical_burn_protection                 = 0.0233
+telepatic_protection                     = 0.0
+strike_protection                        = 0.0350
+explosion_protection                     = 0.0350
+wound_protection                         = 0.0350
+
+bones_koeff_protection                   = actor_armor_trench
+
+character_portrait							 = ui_inGame2_krovosos_in_black_plash
+
+[sect_darkstalker_trenchcoat_outfit_immunities]
+burn_immunity                            = 0.05	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.05
+wound_immunity                           = 0.05
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.05
+explosion_immunity                       = 0.05
+fire_wound_immunity                      = 0.02
+
+[sect_darkstalker_trenchcoat_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.005
+
+;---------------------------------------------------------------------------------------------
+;		УП-1 Темного Сталкера
+;---------------------------------------------------------------------------------------------
+[darkstalker_trenchcoat_brown_outfit]:outfit_base
+$spawn                                   = "outfit\darkstalker_trenchcoat_brown_outfit"
+visual                                   = dynamics\outfit\bandit_commander_outfit
+actor_visual                             = actors\stalker_darkstalker\krovosos_in_brown_plash.ogf
+npc_visual                               = actors\stalker_darkstalker\krovosos_in_brown_plash.ogf
+player_hud_section                       = actor_hud_brown_trench
+
+ef_equipment_type                        = 3
+
+inv_name                                 = darkstalker_trenchcoat_brown_outfit_name
+inv_name_short                           = darkstalker_trenchcoat_brown_outfit_name
+description                              = darkstalker_trenchcoat_brown_outfit_description
+
+inv_weight                               = 5.0
+
+inv_grid_x      						 = 46
+inv_grid_y								 = 37
+
+upgr_icon_x                              = 942
+upgr_icon_y                              = 0
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+full_icon_name                           = npc_icon_dolg_outfit
+
+cost                                     = 17000
+full_scale_icon                          = 8,11	                                       ;иконка сталкера в костюме в полный рост
+
+immunities_sect                          = sect_darkstalker_trenchcoat_brown_outfit_immunities
+
+; LOW RESISTANCE
+burn_protection                          = 0.0333
+shock_protection                         = 0.1333
+radiation_protection                     = 0.0050
+chemical_burn_protection                 = 0.0333
+telepatic_protection                     = 0.0
+strike_protection                        = 0.2100
+explosion_protection                     = 0.2100
+wound_protection                         = 0.2100
+
+hit_fraction_actor                       = 0.6
+bones_koeff_protection                   = actor_armor_duty_suit
+
+artefact_count                           = 1
+control_inertion_factor                  = 1.2
+power_loss                               = 0.6
+
+upgrades                                 = up_gr_firstab_dolg_outfit, up_gr_seconab_dolg_outfit, up_gr_thirdab_dolg_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_dolg_outfit
+character_portrait						 = ui_inGame2_krovosos_in_brown_plash
+
+[sect_darkstalker_trenchcoat_brown_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_darkstalker_trenchcoat_brown_outfit_immunities_add]
+burn_immunity                            = -0.015	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.015
+wound_immunity                           = -0.015
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.015
+explosion_immunity                       = -0.015
+fire_wound_immunity                      = -0.003
+
+;---------------------------------------------------------------------------------------------
+;		Комбенизон Темного Сталкера
+;---------------------------------------------------------------------------------------------
+[darkstalker_outfit]:outfit_base
+$spawn                                   = "outfit\darkstalker_outfit_outfit"
+visual                                   = dynamics\outfit\darkstalker_outfit
+actor_visual                             = actors\stalker_darkstalker\darkstalker_monolith_zombied.ogf
+npc_visual                               = actors\stalker_darkstalker\darkstalker_monolith_zombied.ogf
+player_hud_section                       = actor_hud_loner_sunrise
+
+ef_equipment_type                        = 3
+
+inv_name                                 = darkstalker_outfit_name
+inv_name_short                           = darkstalker_outfit_name
+description                              = darkstalker_outfit_description
+
+inv_weight                               = 8.5
+
+inv_grid_x                               = 64
+inv_grid_y                               = 24
+upgr_icon_x                              = 317
+upgr_icon_y                              = 0
+upgr_icon_width                          = 302
+upgr_icon_height                         = 130
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 16000
+full_scale_icon                          = 14,11	                                       ;иконка сталкера в костюме в полный рост
+
+artefact_count                           = 1
+
+immunities_sect                          = sect_darkstalker_outfit_immunities
+
+
+; LOW RESISTANCE
+burn_protection                          = 0.0433
+shock_protection                         = 0.1733
+radiation_protection                     = 0.0065
+chemical_burn_protection                 = 0.0433
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1925
+explosion_protection                     = 0.1925
+wound_protection                         = 0.1925
+
+hit_fraction_actor                       = 0.75
+bones_koeff_protection                   = actor_armor_suit
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.75
+
+upgrades                                 = up_gr_firstab_stalker_outfit, up_gr_seconab_stalker_outfit, up_gr_thirdab_stalker_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_stalker_outfit
+character_portrait						 = ui_inGame2_darkstalker_monolith_zombied
+
+[sect_darkstalker_outfit_immunities]
+burn_immunity                            = 0.03	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.03
+wound_immunity                           = 0.03
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.03
+explosion_immunity                       = 0.03
+fire_wound_immunity                      = 0.015
+
+[sect_darkstalker_outfit_immunities_add]
+burn_immunity                            = -0.015	                                       
+strike_immunity                          = 0.0
+shock_immunity                           = -0.015
+wound_immunity                           = -0.015
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.015
+explosion_immunity                       = -0.015
+fire_wound_immunity                      = -0.005
+;---------------------------------------------------------------------------------------------
+;		Leader Darkstalker Outfit
+;---------------------------------------------------------------------------------------------
+[leader_darkstalker_outfit]:outfit_base
+$spawn                                   = "outfit\leader_darkstalker_outfit"
+visual                                   = dynamics\outfit\novice_outfit
+actor_visual                             = actors\stalker_darkstalker\darkstalker_leader.ogf
+npc_visual                               = actors\stalker_darkstalker\darkstalker_leader.ogf
+player_hud_section                       = actor_hud_bandit_trench
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_darkstalker_outfit_name
+inv_name_short                           = leader_darkstalker_outfit_name
+description                              = leader_darkstalker_outfit_description
+
+inv_weight                               = 5
+
+inv_grid_x        						 = 16
+inv_grid_y        						 = 31
+
+upgr_icon_x                              = 636
+upgr_icon_y                              = 0
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 139495
+
+full_scale_icon                          = 14,11
+
+immunities_sect                          = sect_leader_darkstalker_outfit_immunities
+
+; LOW RESISTANCE
+burn_protection                          = 0.0666
+shock_protection                         = 0.3416
+radiation_protection                     = 0.0081
+chemical_burn_protection                 = 0.0616
+telepatic_protection                     = 0.0
+strike_protection                        = 0.3031
+explosion_protection                     = 0.3031
+wound_protection                         = 0.3031
+fire_wound_protection                    = 0.1875
+
+hit_fraction_actor                       = 0.50
+control_inertion_factor                  = 1.2
+bones_koeff_protection                   = darkstalker_leader
+
+health_restore_speed                     = 0.0003
+power_loss                               = 0.95
+
+additional_inventory_weight              = 30
+additional_inventory_weight2             = 30
+
+artefact_count                           = 5
+
+character_portrait						 = ui_inGame2_darkstalker_patriarch
+
+[sect_leader_darkstalker_outfit_immunities]
+burn_immunity                            = 0.0150
+strike_immunity                          = 0.0000
+shock_immunity                           = 0.0150
+wound_immunity                           = 0.0150
+radiation_immunity                       = 0.0000
+telepatic_immunity                       = 0.0000
+chemical_burn_immunity                   = 0.0150
+explosion_immunity                       = 0.0150
+fire_wound_immunity                      = 0.0200
+;---------------------------------------------------------------------------------------------
+;OUTFIT IN AZAZEL MODE: Leader Darkstalker Outfit
+;---------------------------------------------------------------------------------------------
+[leader_azazel_darkstalker_outfit]:outfit_leader_exo_base
+$spawn                                   = "outfit\leader_azazel_darkstalker_outfit"
+visual                                   = dynamics\outfit\novice_outfit
+actor_visual                             = actors\stalker_darkstalker\darkstalker_leader.ogf
+npc_visual                               = actors\stalker_darkstalker\darkstalker_leader.ogf
+player_hud_section                       = actor_hud_bandit_trench
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_darkstalker_outfit_name
+inv_name_short                           = leader_darkstalker_outfit_name
+description                              = leader_darkstalker_outfit_description
+
+inv_weight                               = 5
+
+inv_grid_x        						 = 16
+inv_grid_y        						 = 31
+
+upgr_icon_x                              = 636
+upgr_icon_y                              = 0
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+
+cost                                     = 139495
+
+artefact_count                           = 1
+
+helmet_avaliable						 = false
+
+sprint_allowed							 = true
+
+power_loss                               = 0.75
+
+character_portrait						 = ui_inGame2_darkstalker_patriarch
+

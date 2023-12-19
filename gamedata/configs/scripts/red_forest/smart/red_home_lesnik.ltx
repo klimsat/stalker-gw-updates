@@ -1,0 +1,26 @@
+[smart_terrain]
+squad_id = 17
+max_population = 5
+respawn_params = respawn@red_home_lesnik
+respawn_idle = 30000
+
+
+
+[respawn@red_home_lesnik]
+spawn_army@novice
+spawn_army@advanced
+
+[spawn_army@novice]
+spawn_squads = army_sim_squad_novice
+spawn_num = 3
+
+[spawn_army@advanced]
+spawn_squads = army_sim_squad_novice, army_sim_squad_advanced
+spawn_num = 3
+
+[exclusive]
+trader = red_forest\red_home_lesnik_smart_logic.ltx
+mechanic = red_forest\red_home_lesnik_smart_logic.ltx
+medik = red_forest\red_home_lesnik_smart_logic.ltx
+barmen = red_forest\red_home_lesnik_smart_logic.ltx
+leader = red_forest\red_home_lesnik_smart_logic.ltx

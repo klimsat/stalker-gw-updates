@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="st_slizni_trader_orders_main">
+		<text>Пацаны говорят, что заказать можно у тебя вещи. Правда?</text>
+	</string>
+	<string id="st_slizni_trader_orders_main_answer">
+		<text>Конечно, но эта не из дешевых услуг будет.</text>
+	</string>
+	<string id="st_slizni_trader_orders_weapons">
+		<text>Шмаляр хочу заказать.</text>
+	</string>
+	<string id="st_slizni_trader_orders_weapons_answer">
+		<text>Ассортимент не богат, но для пацана, самое то.</text>
+	</string>
+	<string id="st_slizni_trader_orders_gen_descr_pistols">
+		<text>Пистол хочу.</text>
+	</string>
+	<string id="st_slizni_trader_orders_gen_descr_auto_pistols">
+		<text>Пистол - Скорострельный хочу. Все норм пацаны с ними ходят.</text>
+	</string>
+	<string id="st_slizni_trader_orders_gen_descr_rifle">
+		<text>Шмаляр хочу. Чтобы показать, кто тут батя.</text>
+	</string>
+	<string id="st_slizni_trader_orders_gen_descr_shotguns">
+		<text>Дробик хочу. Пусть боятся не только враги, но и чудища.</text>
+	</string>
+	<string id="st_slizni_trader_orders_gen_descr_sniper_rifle">
+		<text>Снайперки показывай.</text>
+	</string>
+	<string id="st_slizni_trader_orders_gen_descr_havy_rifle">
+		<text>Тяжелая волына нужна, а то заебали разные хуи ко мне лезть.</text>
+	</string>
+	<string id="st_slizni_trader_orders_weapon_rpg7">
+		<text>Блять, как меня все заебло! Тащи сюда взрывоопасную малышку.</text>
+	</string>
+	<string id="st_slizni_trader_orders_weapon_rpg7_answer">
+		<text>РПГ - 7у. С тебя 100000 рубасов.</text>
+	</string>
+	<!-- Если расскоментить этот кусок, то он заменит текст-описание оружий для каждой категории который генерируется в скриптах -->
+	<!-- <string id="st_slizni_trader_orders_gen_descr_pistols_answer">
+		<text>Дезерт Игл, ХПСА - 13, УДП Компакт, Кольт.</text>
+	</string>
+	<string id="st_slizni_trader_orders_gen_descr_rifle_answer">
+		<text>Абакан, Гроза - Оц14, Ас Вал, Л85, Гроза - 1, Гроза 5*45, ГП36, Вихрь.</text>
+	</string>
+	<string id="st_slizni_trader_orders_gen_descr_sniper_rifle_answer">
+		<text>Гаусс - Пушка.</text>
+	</string>
+	<string id="st_slizni_trader_orders_gen_descr_havy_rifle_answer">
+		<text>РПГ, ПКМ, М60, М134.</text>
+	</string> -->
+	<!-- <string id="st_slizni_trader_orders_explosion_wpn">
+		<text>explosion_wpn.</text>
+	</string> -->
+	<string id="st_slizni_trader_orders_gen_descr_outfit">
+		<text>Шмотки, норм хочу.</text>
+	</string>
+	<!-- <string id="st_slizni_trader_orders_outfit_answer">
+		<text>Комбинезон "Инквизитора", Научный Комбинезон "Инквизитор", Тяжелый бронежилет Инквизитора, Экзоскелет Инквизитора.</text>
+	</string> -->
+	<string id="st_slizni_trader_orders_gen_descr_other">
+		<text>Дополнительно снаряжение нужно.</text>
+	</string>
+	<string id="st_slizni_trader_orders_gen_descr_other_answer">
+		<text>Не вопрос, че именно?</text>
+	</string>
+	<string id="st_slizni_trader_orders_item_grenade_f1_count_1">
+		<text>Давай одну.</text>
+	</string>
+	<string id="st_slizni_trader_orders_item_grenade_f1_count_5">
+		<text>Давай 5 штук.</text>
+	</string>
+	<string id="st_slizni_trader_orders_item_grenade_f1_count_10">
+		<text>Давай 10 штук.</text>
+	</string>
+	<string id="st_slizni_trader_orders_item_grenade_f1_count_50">
+		<text>Давай 50 штук.</text>
+	</string>
+	<string id="st_slizni_trader_orders_item_grenade_f1_count_100">
+		<text>Давай 100 штук.</text>
+	</string>
+	<string id="st_slizni_trader_orders_item_grenade_rgd5_count_1">
+		<text>>Давай 1 гранату ргд.</text>
+	</string>
+	<string id="st_slizni_trader_orders_item_grenade_rgd5_count_5">
+		<text>Давай 5 шт. гранат ргд. Повеселюсь немного над говнюками.</text>
+	</string>
+	<string id="st_slizni_trader_orders_item_grenade_rgd5_count_10">
+		<text>>Давай 10 шт. гранат ргд. Повеселюсь от души над гоблинами.</text>
+	</string>
+	<string id="st_slizni_trader_orders_item_grenade_rgd5_count_50">
+		<text>>Давай 50 шт. гранат ргд. Покажу им, кто батька тут.</text>
+	</string>
+	<string id="st_slizni_trader_orders_item_grenade_rgd5_count_100">
+		<text>>Давай 100 шт. гранат ргд. Ух! Этот день, они запомнят!</text>
+	</string>
+	<string id="st_slizni_trader_orders_item_medkit_count_1">
+		<text>Давай одну.</text>
+	</string>
+	<string id="st_slizni_trader_orders_item_medkit_count_5">
+		<text>Давай 5 штук.</text>
+	</string>
+	<string id="st_slizni_trader_orders_item_medkit_count_10">
+		<text>Давай 10 штук.</text>
+	</string>
+	<string id="st_slizni_trader_orders_item_medkit_count_50">
+		<text>Давай 50 штук.</text>
+	</string>
+	<string id="st_slizni_trader_orders_item_medkit_count_100">
+		<text>Давай 100 штук.</text>
+	</string>
+	<string id="st_slizni_trader_orders_item_bandage_count_1">
+		<text>Давай один.</text>
+	</string>
+	<string id="st_slizni_trader_orders_item_bandage_count_5">
+		<text>Да пох, 5 давай.</text>
+	</string>
+	<string id="st_slizni_trader_orders_item_bandage_count_10">
+		<text>Штук 10 возьму.</text>
+	</string>
+	<string id="st_slizni_trader_orders_item_bandage_count_50">
+		<text>Штук 50 возьму. Не люблю, когда теку.</text>
+	</string>
+	<string id="st_slizni_trader_orders_item_bandage_count_100">
+		<text>Давай 100ку. Буду непромокаемым.</text>
+	</string>
+	<string id="st_slizni_trader_orders_ammo">
+		<text>Патроны хочу, а то на голяке уже.</text>
+	</string>
+	<string id="st_slizni_trader_orders_ammo_answer">
+		<text>Че какие те? Пистолетные? Промежуточные? Или винтовочные?</text>
+	</string>
+	<string id="st_slizni_trader_orders_middle_ammo">
+		<text>Промежуточные.</text>
+	</string>
+	<string id="st_slizni_trader_orders_pistol_ammo">
+		<text>Пистолетные.</text>
+	</string>
+	<string id="st_slizni_trader_orders_rifle_ammo">
+		<text>Винтовочные.</text>
+	</string>
+	<string id="st_slizni_trader_orders_spec_ammo">
+		<text>Специальные.</text>
+	</string>
+	<string id="st_slizni_trader_orders_middle_ammo_answer">
+		<text>Че именно?</text>
+	</string>
+	<string id="st_slizni_trader_orders_pistol_ammo_answer">
+		<text>Че именно?</text>
+	</string>
+	<string id="st_slizni_trader_orders_rifle_ammo_answer">
+		<text>Че именно?</text>
+	</string>
+	<string id="st_slizni_trader_orders_spec_ammo_answer">
+		<text>Че именно?</text>
+	</string>
+	<string id="st_slizni_trader_orders_kit">
+		<text>Времени нет на перекидывание яиц из стороны в сторону. Покажи мне комплекты.</text>
+	</string>
+	<!-- Если расскоментить этот кусок, то он заменит текст-описание наборов который генерируется в скриптах -->
+	<!-- <string id="st_slizni_trader_orders_kit_answer">
+		<text>Новичок. Описание. Комбинезон Инквизитора, Абакан, 5.45x39 х3, Хлеб, Аптечка.\nОпытный. Описание. Комбинезон Инквизитора, Г36, 5.56x45 х3, Хлеб, Колбаса, Аптечка, Бинт.\nПрофи. Описание. Вихрь, Комбинезон Инквизитора, Аптечка, Бинт х3, Колбаса, Хлеб, 9.39 х3.\nВетеран. Описание. Гроза 5.45, Тяжелый бронежилет Монолит, Армейская Аптечка, Бинт х5, Тушенка, Колбаса, Хлеб, 5.45x39 х5.\nМастер. Описание. ПКМ, Экзоскелет Инквизитора, Армейская Аптечка х3, Бинт х7, Тушенка х3, Колбаса х3, Хлеб х3, Патроны пулемета х3.</text>
+	</string> -->
+	<string id="st_slizni_trader_orders_zelen_kit">
+		<text>Зеленый.</text>
+	</string>
+	<string id="st_slizni_trader_orders_novice_kit">
+		<text>Новичок.</text>
+	</string>
+	<string id="st_slizni_trader_orders_experience_kit">
+		<text>Опытный.</text>
+	</string>
+	<string id="st_slizni_trader_orders_professional_kit">
+		<text>Профи.</text>
+	</string>
+	<string id="st_slizni_trader_orders_veteran_kit">
+		<text>Ветеран.</text>
+	</string>
+	<string id="st_slizni_trader_orders_master_kit">
+		<text>Мастер.</text>
+	</string>
+	<string id="st_slizni_trader_orders_legend_kit">
+		<text>Легенда.</text>
+	</string>
+	<string id="st_slizni_trader_orders_rpg_kit">
+		<text>Ракетчик.</text>
+	</string>
+	<string id="st_slizni_trader_orders_sniper_kit">
+		<text>Снайпер.</text>
+	</string>
+	<!-- <string id="st_slizni_trader_orders_outfit_answer">
+		<text>Мастер.</text>
+	</string> -->
+	
+	<!-- общие для всех или некоторых веток диалога тексты -->
+	<string id="st_slizni_trader_orders_categoty_list_answer">
+		<text>Сейчас есть в наличии:</text>
+	</string>
+	<string id="st_slizni_trader_orders_cost_item_answer">
+		<text>С тебя %s руб.</text>
+	</string>
+	<string id="st_slizni_trader_orders_all_items_answer">
+		<text>В каком количестве нужно?</text>
+	</string>
+	<string id="st_slizni_trader_orders_accept">
+		<text>Класс, беру.</text>
+	</string>
+	<string id="st_slizni_trader_orders_cancel">
+		<text>Хуйня полная.</text>
+	</string>
+</string_table>

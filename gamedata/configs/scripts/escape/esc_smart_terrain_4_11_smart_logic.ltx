@@ -1,0 +1,82 @@
+;------------------------------
+;------- Mutant swarm ----------
+;------------------------------
+
+[logic@faction_base_defense_enemy1]
+active = mob_home@faction_base_defense_enemy1
+suitable = {=target_squad_name(faction_base_defense_flesh_squad)} true
+monster_job = true
+prior = 200
+
+[mob_home@faction_base_defense_enemy1]
+path_home = home_attackers
+home_min_radius = 1
+home_max_radius = 2
+aggressive = true
+panic = 0
+on_timer = 5000 | %=hit_npc_from_actor +mar_smart_terrain_5_12_mutants_to_base%
+
+[logic@faction_base_defense_enemy2]
+active = mob_home@faction_base_defense_enemy2
+suitable = {=target_squad_name(faction_base_defense_boar_squad)} true
+monster_job = true
+prior = 200
+
+[mob_home@faction_base_defense_enemy2]
+path_home = home_attackers
+home_min_radius = 1
+home_max_radius = 2
+aggressive = true
+panic = 0
+on_timer = 5000 | %=hit_npc_from_actor +mar_smart_terrain_5_12_mutants_to_base%
+
+[logic@faction_base_defense_enemy3]
+active = mob_home@faction_base_defense_enemy3
+suitable = {=target_squad_name(faction_base_defense_dog_squad)} true
+monster_job = true
+prior = 200
+
+[mob_home@faction_base_defense_enemy3]
+path_home = home_attackers
+home_min_radius = 1
+home_max_radius = 2
+aggressive = true
+panic = 0
+on_timer = 5000 | %=hit_npc_from_actor +mar_smart_terrain_5_12_mutants_to_base%
+
+;camping
+[logic@esc_smart_terrain_4_11_camp_1_work]
+active = animpoint@esc_smart_terrain_4_11_camp_1_work
+prior = 45
+
+[logic@esc_smart_terrain_4_11_camp_2_work]
+active = animpoint@esc_smart_terrain_4_11_camp_2_work
+prior = 45
+
+[logic@esc_smart_terrain_4_11_camp_3_work]
+active = animpoint@esc_smart_terrain_4_11_camp_3_work
+prior = 45
+
+[logic@esc_smart_terrain_4_11_camp_4_work]
+active = animpoint@esc_smart_terrain_4_11_camp_4_work
+prior = 45
+
+[animpoint@esc_smart_terrain_4_11_camp_1_work]
+cover_name = esc_smart_terrain_4_11_animpoint_kamp1
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@esc_smart_terrain_4_11_camp_2_work]
+cover_name = esc_smart_terrain_4_11_animpoint_kamp2
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@esc_smart_terrain_4_11_camp_3_work]
+cover_name = esc_smart_terrain_4_11_animpoint_kamp3
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@esc_smart_terrain_4_11_camp_4_work]
+cover_name = esc_smart_terrain_4_11_animpoint_kamp4
+use_camp = true
+turn_on_campfire = true

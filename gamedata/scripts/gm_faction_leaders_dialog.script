@@ -1,0 +1,77 @@
+local gs = GetString
+local dialog_structure = {}
+local dialog_id = "dlg_init_leader_%s"
+local leaderCost = 1000000
+
+local function Initialize_dialog(faction)
+  local actor_has_money_fname = "dlg_leader_actor_has_money"
+  local actor_get_leader_fname = strformat("dlg_leader_actor_get_leader_%s", faction)
+
+  if type(_G[actor_has_money_fname]) ~= "function" then
+    _G[actor_has_money_fname] = function(first_speaker, second_speaker)
+      return first_speaker:money() >= leaderCost
+    end
+  end
+  if type(_G[actor_get_leader_fname]) ~= "function" then
+    _G[actor_get_leader_fname] = function(actor, npc)
+      dialogs.relocate_money_from_actor(actor, npc, leaderCost)
+      dialogs.relocate_item_section(second_speaker, "leader_" .. faction .. "_outfit", "in")
+
+      ui_pda_factions_tab.leaders[faction].name = sim_brain.actor_name
+
+      utils.news(gs("st_leader_dead_caption"), gs("st_leader_actor_buy_leader"))
+
+      give_info("actor_bought_leader")
+    end
+  end
+
+  dialog_structure[faction] = {
+    {
+      text = strformat("st_dialog_laeder_%s_start", faction),
+      condition = nil,
+      action = nil,
+      next = {
+        {
+          text = strformat("st_dialog_laeder_%s_start_answer", faction),
+          condition = nil,
+          action = nil,
+          next = {
+            {
+              text = strformat("st_dialog_laeder_%s_acept", faction),
+              condition = actor_has_money_fname,
+              action = actor_get_leader_fname,
+              next = nil
+            },
+            {
+              text = strformat("st_dialog_laeder_%s_cancel", faction),
+              condition = nil,
+              action = nil,
+              next = nil
+            }
+          }
+        }
+      }
+    }
+  }
+end
+
+local function initialize_function(faction)
+  local func_name = strformat("dlg_init_leader_%s", faction)
+
+  if type(_G[func_name]) ~= "function" then
+    _G[func_name] = function(dialog)
+      local id = strformat(dialog_id, faction)
+      wargreat_dialogs_common_logic.saved_dialogs[id] = dialog
+      wargreat_dialogs_common_logic.parse_dialogs(dialog_structure[faction], id)
+    end
+  end
+end
+
+function on_game_start()
+  for _, faction in pairs(sim_tables.factions) do
+    if faction ~= "monster" then
+      Initialize_dialog(faction)
+      initialize_function(faction)
+    end
+  end
+end

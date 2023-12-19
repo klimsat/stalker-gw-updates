@@ -1,0 +1,115 @@
+;camping
+[logic@ds_kem1_animpoint_kamp1]
+active = animpoint@ds_kem1_animpoint_kamp1
+prior = 100
+
+[logic@ds_kem1_animpoint_kamp2]
+active = animpoint@ds_kem1_animpoint_kamp2
+prior = 100
+
+[logic@ds_kem1_animpoint_kamp3]
+active = animpoint@ds_kem1_animpoint_kamp3
+prior = 100
+
+[logic@ds_kem1_animpoint_kamp4]
+active = animpoint@ds_kem1_animpoint_kamp4
+prior = 100
+
+[logic@ds_kem1_animpoint_kamp5]
+active = animpoint@ds_kem1_animpoint_kamp5
+prior = 100
+
+[logic@ds_kem1_animpoint_kamp6]
+active = animpoint@ds_kem1_animpoint_kamp6
+prior = 100
+
+[logic@ds_kem1_animpoint_kamp7]
+active = animpoint@ds_kem1_animpoint_kamp7
+prior = 100
+
+[logic@ds_kem1_animpoint_kamp8]
+active = animpoint@ds_kem1_animpoint_kamp8
+prior = 100
+
+[logic@ds_kem1_animpoint_kamp9]
+active = animpoint@ds_kem1_animpoint_kamp9
+prior = 100
+
+[logic@ds_kem1_animpoint_kamp10]
+active = animpoint@ds_kem1_animpoint_kamp10
+prior = 100
+
+[animpoint@ds_kem1_animpoint_kamp1]
+cover_name = ds_kem1_animpoint_kamp1
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@ds_kem1_animpoint_kamp2]
+cover_name = ds_kem1_animpoint_kamp2
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@ds_kem1_animpoint_kamp3]
+cover_name = ds_kem1_animpoint_kamp3
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@ds_kem1_animpoint_kamp4]
+cover_name = ds_kem1_animpoint_kamp4
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@ds_kem1_animpoint_kamp5]
+cover_name = ds_kem1_animpoint_kamp5
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@ds_kem1_animpoint_kamp6]
+cover_name = ds_kem1_animpoint_kamp6
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@ds_kem1_animpoint_kamp7]
+cover_name = ds_kem1_animpoint_kamp7
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@ds_kem1_animpoint_kamp8]
+cover_name = ds_kem1_animpoint_kamp8
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@ds_kem1_animpoint_kamp9]
+cover_name = ds_kem1_animpoint_kamp9
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@ds_kem1_animpoint_kamp10]
+cover_name = ds_kem1_animpoint_kamp10
+use_camp = true
+turn_on_campfire = true
+
+[logic@mechanic]
+suitable = {=check_npc_name(sim_default_army_mechanic)} true, {=check_npc_name(sim_default_freedom_mechanic)} true, {=check_npc_name(sim_default_bandit_mechanic)} true, {=check_npc_name(sim_default_dolg_mechanic)} true, {=check_npc_name(sim_default_monolith_mechanic)} true, {=check_npc_name(sim_default_stalker_mechanic)} true, {=check_npc_name(sim_default_ecolog_mechanic)} true, {=check_npc_name(sim_default_csky_mechanic)} true, {=check_npc_name(sim_default_killer_mechanic)} true, {=check_npc_name(sim_default_isg_mechanic)} true, {=check_npc_name(sim_default_darkstalker_mechanic)} true, {=check_npc_name(sim_default_renegate_mechanic)} true, {=check_npc_name(sim_default_varyag_mechanic)} true, {=check_npc_name(sim_default_slizni_mechanic)} true, {=check_npc_name(sim_default_velhan_mechanic)} true, {=check_npc_name(sim_default_fantom_mechanic)} true, {=check_npc_name(sim_default_veter_mechanic)} true, {=check_npc_name(sim_default_osoznanie_mechanic)} true, {=check_npc_name(sim_default_alfa_mechanic)} true, {=check_npc_name(sim_default_apocalypse_mechanic)} true, {=check_npc_name(sim_default_adinkvizicia_mechanic)} true, {=check_npc_name(sim_default_hunter_mechanic)} true, {=check_npc_name(sim_default_voenstal_mechanic)} true, {=check_npc_name(sim_default_mirotvorec_mechanic)} true, {=check_npc_name(sim_default_ryskuspecnaz_mechanic)} true, {=check_npc_name(sim_default_sby_mechanic)} true, {=check_npc_name(sim_default_angel_mechanic)} true, {=check_npc_name(sim_default_posleduden_mechanic)} true, {=check_npc_name(sim_default_greh_mechanic)} true
+prior = 200
+active = animpoint@mech2
+level_spot = mechanic
+
+[animpoint@mech2]
+meet = meet
+cover_name = ds_kem1_mechanic
+avail_animations = fold_arms
+combat_ignore_cond = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[meet]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use = true

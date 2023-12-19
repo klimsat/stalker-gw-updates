@@ -1,0 +1,1331 @@
+<specific_character id="sim_default_apocalypse_leader_kramer" team_default = "1">
+    <name>Йозеф Бергер</name>
+    <icon>ui_inGame2_apocalypse_8</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Лидер Апокалипсиса.</bio>
+    <class>sim_default_apocalypse_leader_kramer</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\military\</snd_config>
+    <rank>21090</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\apocalypse_leader</visual>
+    <money min="52000" max="121750" infinitive="0"/>
+    <supplies>
+    [spawn] \n
+    wpn_m134 \n
+    ammo_m134 = 2 \n
+    wpn_desert_eagle_357 \n
+    ammo_357_fmj = 2 \n
+    grenade_f1 = 6 \n
+    medkit_army = 8 \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs_leaders.xml"
+    <actor_dialog>dialog_leader_apocalypse</actor_dialog>
+</specific_character>
+
+<!-- apocalypse Trader -->
+
+<specific_character id="sim_default_apocalypse_trader" team_default="1">
+    <name>Функционал</name>
+    <icon>ui_inGame2_apocalypse_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+
+    <class>sim_default_apocalypse_trader</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+
+    <rank>5000</rank>
+    <reputation>0</reputation>
+    <money min="10000000" max="11000000" infinitive="1" />
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_elite_1</visual>
+#include "gameplay\character_criticals_4.xml"
+    <start_dialog>dialog_hello_apocalypse_zakaz</start_dialog>
+    <actor_dialog>dialog_apocalypse_order</actor_dialog>
+    <actor_dialog>dm_broker_dialog</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_dialog</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_completed_dialog</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_cancel_dialog</actor_dialog>
+    <actor_dialog>dialog_check_rewards</actor_dialog>
+    <actor_dialog>dialog_order_squads_start</actor_dialog>
+    <actor_dialog>dialog_actor_hanter_start</actor_dialog>
+    <actor_dialog>actor_break_dialog</actor_dialog>
+    <actor_dialog>ggggkkh</actor_dialog>
+</specific_character> <!--apocalypse Mechanic	-->
+
+<specific_character id="sim_default_apocalypse_mechanic" team_default="1">
+    <name>Функционал</name>
+    <icon>ui_inGame2_apocalypse_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+
+    <class>sim_default_apocalypse_mechanic</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <mechanic_mode>1</mechanic_mode>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+
+    <rank>5000</rank>
+    <reputation>0</reputation>
+    <money min="10000000" max="11000000" infinitive="1" />
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_elite_1</visual>
+#include "gameplay\character_criticals_4.xml"
+    <actor_dialog>dm_sim_ordered_task_completed_dialog</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_cancel_dialog</actor_dialog>
+    <actor_dialog>dm_tech_repair</actor_dialog>
+    <actor_dialog>actor_break_dialog</actor_dialog>
+</specific_character> <!-- apocalypse Barmen -->
+
+<specific_character id="sim_default_apocalypse_barmen" team_default="1">
+    <name>Функционал</name>
+    <icon>ui_inGame2_apocalypse_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+
+    <class>sim_default_apocalypse_barmen</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+
+    <rank>5000</rank>
+    <reputation>0</reputation>
+    <money min="10000000" max="11000000" infinitive="1" />
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_elite_1</visual>
+#include "gameplay\character_criticals_4.xml"
+    <actor_dialog>dm_sim_ordered_task_dialog</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_completed_dialog</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_cancel_dialog</actor_dialog>
+    <actor_dialog>actor_break_dialog</actor_dialog>
+</specific_character> <!-- apocalypse Medik -->
+
+<specific_character id="sim_default_apocalypse_medik" team_default="1">
+    <name>Функционал</name>
+    <icon>ui_inGame2_apocalypse_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+
+    <class>sim_default_apocalypse_medik</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+
+    <rank>5000</rank>
+    <reputation>0</reputation>
+    <money min="10000000" max="11000000" infinitive="1" />
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_elite_1</visual>
+#include "gameplay\character_criticals_4.xml"
+    <start_dialog>mar_smart_terrain_base_doctor_start</start_dialog>
+    <actor_dialog>mar_smart_terrain_base_doctor_need_health_care</actor_dialog>
+    <actor_dialog>actor_break_dialog</actor_dialog>
+</specific_character> <!-- apocalypse Unik -->
+
+<specific_character id="sim_default_apocalypse_explorer" team_default="1">
+    <name>Функционал</name>
+    <icon>ui_inGame2_apocalypse_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+
+    <class>sim_default_apocalypse_explorer</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+
+    <rank>5000</rank>
+    <reputation>0</reputation>
+    <money min="0" max="19500" infinitive="1" />
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_elite_1</visual>
+#include "gameplay\character_criticals_4.xml"
+    <start_dialog>hello_dialog</start_dialog>
+    <actor_dialog>dialog_explorer_start</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_dialog</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_completed_dialog</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_cancel_dialog</actor_dialog>
+    <actor_dialog>actor_break_dialog</actor_dialog>
+</specific_character>
+
+<specific_character id="sim_default_apocalypse_unik" team_default="1">
+    <name>Функционал</name>
+    <icon>ui_inGame2_apocalypse_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+
+    <class>sim_default_apocalypse_unik</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+
+    <rank>5000</rank>
+    <reputation>0</reputation>
+    <money min="10000000" max="11000000" infinitive="1" />
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_elite_1</visual>
+#include "gameplay\character_criticals_4.xml"
+    <start_dialog>dialog_hello_apocalypse_zakaz</start_dialog>
+    <start_dialog>mar_smart_terrain_base_doctor_start</start_dialog>
+    <actor_dialog>mar_smart_terrain_base_doctor_need_health_care</actor_dialog>
+    <actor_dialog>dialog_apocalypse_order</actor_dialog>
+    <actor_dialog>dm_broker_dialog</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_dialog</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_completed_dialog</actor_dialog>
+    <actor_dialog>dm_sim_ordered_task_cancel_dialog</actor_dialog>
+    <actor_dialog>actor_break_dialog</actor_dialog>
+    <actor_dialog>ggggkkh</actor_dialog>
+</specific_character>
+
+<specific_character id="sim_default_apocalypse_kloniryushi" team_default="1">
+    <name>Номер IX</name>
+    <icon>ui_inGame2_apocalypse_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <hit_probability_factor>100</hit_probability_factor>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_kloniryushi</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_elite_1</visual>
+    <supplies>
+        [spawn] \n
+	wpn_m1000 \n
+	ammo_11.43x23_hydro = 6 \n
+	wpn_colt1911 \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_apocalypse_0_default_0" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_0</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_elite_1</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_0_default_1" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_0</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_agent_1</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_0_default_2" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_0</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_agent_2</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_0_default_3" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_0</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_agent_3</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_0_default_4" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_0</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_agent_4</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_0_default_5" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_0</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_agent_visor_1</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_0_default_6" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_0</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_agent_visor_2</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_0_default_7" team_default="1">
+    <name>GENERATE_NAME_stalker</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_No_Data</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_0</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>3000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\apocalypse_novice_1</visual>
+    <supplies>
+        [spawn] \n
+        wpn_flamer \n
+        ammo_flame = 4 \n
+        wpn_beretta \n
+	ammo_9x19_pbp = 1 \n
+    </supplies>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_apocalypse_1_default_0" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_seva</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_1</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>5000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_agent_seva</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_1_default_1" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_1</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>5000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_blackmask_1</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_1_default_2" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_5</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>5000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_blackmask_2</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_1_default_3" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_1</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>5000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_blackmask_3</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_1_default_4" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_1</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>5000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_blackmask_4</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_apocalypse_2_default_0" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_2</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>7000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_elite_1</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_2_default_1" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_6</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_2</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>7000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_gasmask_1</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_2_default_2" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_6</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_2</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>7000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_gasmask_2</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_2_default_3" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_6</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_2</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>7000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_gasmask_3</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_2_default_4" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_6</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_2</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>7000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_gasmask_4</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_apocalypse_3_default_0" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_3</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>9000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_elite_1</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_3_default_1" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_redeye</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_3</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>9000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_redeye_1</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_3_default_2" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_redeye</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_3</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>9000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_redeye_2</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_3_default_3" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_redeye</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_3</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>9000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_redeye_3</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_3_default_4" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_redeye</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_3</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>9000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_redeye_4</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_apocalypse_4_default_0" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_4</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>11000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_elite_1</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_4_default_1" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_4</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>11000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_tactic_1</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_4_default_2" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_4</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>11000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_tactic_2</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_4_default_3" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_4</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>11000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_elite_1</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_4_default_4" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_4</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>11000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_elite_1</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_4_default_5" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_exo</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_10</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>11000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_exo</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_apocalypse_5_default_0" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_5</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_elite_1</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_5_default_1" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_exo</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_5</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_exo</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_5_default_2" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_5</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_elite_1</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_5_default_3" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_5</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_trooper_2</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_5_default_4" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_5</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_trooper_3</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_5_default_5" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_9</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_5</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_elite_1</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_5_default_6" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_5</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_trooper_5</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_5_default_7" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_5</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_trooper_6</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_5_default_8" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_8</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_5</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_visor</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+
+
+
+<!-- Для проверки. В сквады не включать. -->
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_agent_1" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_agent_1</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_agent_1</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_agent_2" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_agent_2</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_agent_2</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_agent_3" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_agent_3</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_agent_3</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_agent_4" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_4</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_agent_4</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_agent_4</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_agent_visor_1" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_agent_visor_1</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_agent_visor_1</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_agent_visor_2" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_agent_visor_2</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_agent_visor_2</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_agent_seva" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_seva</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_agent_seva</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_agent_seva</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_blackmask_1" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_blackmask_1</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_blackmask_1</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_blackmask_2" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_blackmask_2</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_blackmask_2</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_blackmask_3" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_blackmask_3</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_blackmask_3</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_blackmask_4" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_5</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_blackmask_4</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_blackmask_4</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_gasmask_1" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_6</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_gasmask_1</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_gasmask_1</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_gasmask_2" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_6</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_gasmask_2</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_gasmask_2</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_gasmask_3" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_6</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_gasmask_3</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_gasmask_3</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_gasmask_4" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_6</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_gasmask_4</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_gasmask_4</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_redeye_1" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_redeye</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_redeye_1</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_redeye_1</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_redeye_2" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_redeye</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_redeye_2</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_redeye_2</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_redeye_3" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_redeye</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_redeye_3</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_redeye_3</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_redeye_4" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_redeye</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_redeye_4</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_redeye_4</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_exo" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_exo</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_exo</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_exo</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_tactic_1" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_tactic_1</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_tactic_1</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_tactic_2" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_tactic_2</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_tactic_2</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_tactic_3" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_tactic_3</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_tactic_3</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_tactic_4" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_tactic_4</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_tactic_4</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_trooper_1" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_trooper_1</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_trooper_1</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_trooper_2" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_trooper_2</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_trooper_2</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_trooper_3" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_trooper_3</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_trooper_3</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_trooper_4" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_trooper_4</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_trooper_4</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_trooper_5" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_trooper_5</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_trooper_5</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_trooper_6" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_7</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_trooper_6</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_trooper_6</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+<specific_character id="sim_default_apocalypse_stalker_apocalypse_visor" team_default="1">
+    <name>Функционал</name>
+    <hit_probability_factor>100</hit_probability_factor>
+    <icon>ui_inGame2_apocalypse_8</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Информация отсутствует</bio>
+    <class>sim_default_apocalypse_stalker_apocalypse_visor</class>
+    <community>apocalypse</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <snd_config>characters_voice\human_01\apocalypse\</snd_config>
+    <rank>15000</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_apocalypse\stalker_apocalypse_visor</visual>
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>

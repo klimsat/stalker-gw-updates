@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<game_dialogs>
+    <dialog id="dialog_explorer_start">
+        <init_func>wargreat_dialogs_explorer.initDialog</init_func>
+    </dialog>
+</game_dialogs>

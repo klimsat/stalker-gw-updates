@@ -1,0 +1,154 @@
+<w>
+
+	<file name="ui\new_game\ui_new_game_main">
+		<texture id="ui_new_game_main" x="0" y="0" width="899" height="623" />
+	</file>
+
+	<file name="ui\new_game\ui_new_game_back_t">
+		<texture id="ui_new_game_back" x="0" y="0" width="899" height="623" />
+	</file>
+
+	<file name="ui\new_game\ui_new_game_popup">
+		<texture id="ui_new_game_popup_faction" x="648" y="0" width="376" height="395" />
+		<texture id="ui_new_game_popup_icon" x="431" y="0" width="216" height="515" />
+		<texture id="ui_new_game_black_back" x="649" y="400" width="374" height="114" />
+
+		<texture id="ui_new_game_btn_icon_e" x="268" y="0" width="123" height="87" />
+		<texture id="ui_new_game_btn_icon_h" x="268" y="88" width="123" height="87" />
+		<texture id="ui_new_game_btn_icon_t" x="268" y="88" width="123" height="87" />
+		<texture id="ui_new_game_btn_icon_d" x="268" y="0" width="123" height="87" />
+	</file>
+
+	<!-- Special Player Icons-->
+	<file name="ui\ui_actor_portrets_special">
+		<texture id="ui_inGame2_no_data" x="0" y="0" width="123" height="87" />
+		<texture id="ui_inGame2_Strelok" x="123" y="87" width="123" height="87" />	
+	</file>
+
+	<file name="ui\ui_actor_multiplayer_game_menu">
+		<texture id="ui_new_game_btn_checkbox_e" x="903" y="183" width="44" height="29" />
+		<texture id="ui_new_game_btn_checkbox_h" x="903" y="153" width="44" height="29" />
+		<texture id="ui_new_game_btn_checkbox_t" x="903" y="153" width="44" height="29" />
+		<texture id="ui_new_game_btn_checkbox_d" x="903" y="183" width="44" height="29" />
+	</file>
+
+	<file name="ui\new_game\ui_new_game_icons">
+		<texture id="ui_new_game_flair_bandit" x="0" y="0" width="104" height="84" />
+		<texture id="ui_new_game_flair_dolg" x="0" y="84" width="104" height="84" />
+		<texture id="ui_new_game_flair_ecolog" x="0" y="168" width="104" height="84" />
+		<texture id="ui_new_game_flair_freedom" x="0" y="252" width="104" height="84" />
+		<texture id="ui_new_game_flair_stalker" x="0" y="336" width="104" height="84" />
+		<texture id="ui_new_game_flair_csky" x="0" y="420" width="104" height="84" />
+		<texture id="ui_new_game_flair_killer" x="0" y="504" width="104" height="84" />
+		<texture id="ui_new_game_flair_army" x="0" y="588" width="104" height="84" />
+		<texture id="ui_new_game_flair_monolith" x="0" y="672" width="104" height="84" />
+		<texture id="ui_new_game_flair_isg" x="0" y="756" width="104" height="84" />
+		<texture id="ui_new_game_flair_renegate" x="0" y="840" width="104" height="84" />
+		<texture id="ui_new_game_flair_zombied" x="0" y="924" width="104" height="84" />
+		<texture id="ui_new_game_flair_darkstalker" x="104" y="0" width="104" height="84" />
+		<texture id="ui_new_game_flair_osoznanie" x="104" y="84" width="104" height="84" />
+		<texture id="ui_new_game_flair_fantom" x="104" y="168" width="104" height="84" />
+		<texture id="ui_new_game_flair_ryskuspecnaz" x="104" y="252" width="104" height="84" />
+		<texture id="ui_new_game_flair_voenstal" x="104" y="336" width="104" height="84" />
+		<texture id="ui_new_game_flair_posleduden" x="104" y="420" width="104" height="84" />
+		<texture id="ui_new_game_flair_angel" x="104" y="504" width="104" height="84" />
+		<texture id="ui_new_game_flair_varyag" x="104" y="588" width="104" height="84" />
+		<texture id="ui_new_game_flair_adinkvizicia" x="104" y="672" width="104" height="84" />
+		<texture id="ui_new_game_flair_slizni" x="104" y="756" width="104" height="84" />
+		<texture id="ui_new_game_flair_apocalypse" x="104" y="840" width="104" height="84" />
+		<texture id="ui_new_game_flair_veter" x="104" y="924" width="104" height="84" />
+		<texture id="ui_new_game_flair_mirotvorec" x="208" y="0" width="104" height="84" />
+		<texture id="ui_new_game_flair_alfa" x="208" y="84" width="104" height="84" />
+		<texture id="ui_new_game_flair_hunter" x="208" y="168" width="104" height="84" />
+		<texture id="ui_new_game_flair_velhan" x="208" y="252" width="104" height="84" />
+		<texture id="ui_new_game_flair_sby" x="208" y="336" width="104" height="84" />
+		<texture id="ui_new_game_flair_greh" x="208" y="420" width="104" height="84" />
+	</file>
+
+	<file name="ui\new_game\ui_new_game_models">
+		<texture id="ui_new_game_model_bandit" x="0" y="0" width="120" height="263" />
+		<texture id="ui_new_game_model_csky" x="120" y="0" width="120" height="263" />
+		<texture id="ui_new_game_model_army" x="240" y="0" width="120" height="263" />
+		<texture id="ui_new_game_model_dolg" x="360" y="0" width="120" height="263" />
+		<texture id="ui_new_game_model_ecolog" x="480" y="0" width="120" height="263" />
+		<texture id="ui_new_game_model_freedom" x="600" y="0" width="120" height="263" />
+		<texture id="ui_new_game_model_monolith" x="720" y="0" width="120" height="263" />
+		<texture id="ui_new_game_model_hunter" x="720" y="0" width="120" height="263" />
+		<texture id="ui_new_game_model_killer" x="840" y="0" width="120" height="263" />
+		<texture id="ui_new_game_model_stalker" x="0" y="263" width="120" height="263" />
+		<texture id="ui_new_game_model_regenate" x="120" y="263" width="120" height="263" />
+		<texture id="ui_new_game_model_zombied" x="240" y="263" width="120" height="263" />
+	</file>
+
+	<file name="ui\new_game\ui_new_game_maps_1">
+		<texture id="ui_new_game_map_l03_agroprom" x="0" y="0" width="435" height="310" />
+		<texture id="ui_new_game_map_l07_military" x="435" y="0" width="435" height="310" />
+		<texture id="ui_new_game_map_l12_stancia" x="0" y="310" width="435" height="310" />
+		<texture id="ui_new_game_map_l12_stancia_2" x="0" y="310" width="435" height="310" />
+		<texture id="ui_new_game_map_l01_escape" x="435" y="310" width="435" height="310" />
+		<texture id="ui_new_game_map_l04_darkvalley" x="0" y="620" width="435" height="310" />
+		<texture id="ui_new_game_map_k01_darkscape" x="435" y="620" width="435" height="310" />
+	</file>
+
+	<file name="ui\new_game\ui_new_game_maps_2">
+		<texture id="ui_new_game_map_l09_deadcity" x="0" y="0" width="435" height="310" />
+		<texture id="ui_new_game_map_l02_garbage" x="435" y="0" width="435" height="310" />
+		<texture id="ui_new_game_map_k00_marsh" x="0" y="310" width="435" height="310" />
+		<texture id="ui_new_game_map_l11_hospital" x="435" y="310" width="435" height="310" />
+		<texture id="ui_new_game_map_jupiter" x="0" y="620" width="435" height="310" />
+		<texture id="ui_new_game_map_l10_limansk" x="435" y="620" width="435" height="310" />
+	</file>
+
+	<file name="ui\new_game\ui_new_game_maps_3">
+		<texture id="ui_new_game_map_l11_pripyat" x="0" y="0" width="435" height="310" />
+		<texture id="ui_new_game_map_l10_radar" x="435" y="0" width="435" height="310" />
+		<texture id="ui_new_game_map_l10_red_forest" x="0" y="310" width="435" height="310" />
+		<texture id="ui_new_game_map_l05_bar" x="435" y="310" width="435" height="310" />
+		<texture id="ui_new_game_map_k02_trucks_cemetery" x="0" y="620" width="435" height="310" />
+		<texture id="ui_new_game_map_pripyat" x="435" y="620" width="435" height="310" />
+	</file>
+
+	<file name="ui\new_game\ui_new_game_maps_4">
+		<texture id="ui_new_game_map_l03u_agr_underground" x="0" y="0" width="435" height="310" />
+		<texture id="ui_new_game_map_l06_rostok" x="435" y="0" width="435" height="310" />
+		<texture id="ui_new_game_map_rostok" x="435" y="0" width="435" height="310" />
+		<texture id="ui_new_game_map_l08_yantar" x="0" y="310" width="435" height="310" />
+		<texture id="ui_new_game_map_zaton" x="435" y="310" width="435" height="310" />
+		<texture id="ui_new_game_map_factory" x="0" y="620" width="435" height="310" />
+		<texture id="ui_new_game_map_k03_atp" x="435" y="620" width="435" height="310" />
+	</file>
+
+	<file name="ui\new_game\ui_new_game_maps_5">
+		<texture id="ui_new_game_map_l2_9" x="0" y="0" width="435" height="310" />
+		<texture id="ui_new_game_map_l04u_labx18" x="435" y="0" width="435" height="310" />
+		<texture id="ui_new_game_map_l08u_brainlab" x="0" y="310" width="435" height="310" />
+		<texture id="ui_new_game_map_l10u_bunker" x="435" y="310" width="435" height="310" />
+		<texture id="ui_new_game_map_l12_stancia" x="0" y="620" width="435" height="310" />
+		<texture id="ui_new_game_map_l12u_control_monolith" x="435" y="620" width="435" height="310" />
+	</file>
+
+	<file name="ui\new_game\ui_new_game_maps_6">
+		<texture id="ui_new_game_map_l12u_sarcofag" x="0" y="0" width="435" height="310" />
+		<texture id="ui_new_game_map_l13_generators" x="435" y="0" width="435" height="310" />
+		<texture id="ui_new_game_map_l13u_warlab" x="0" y="310" width="435" height="310" />
+		<texture id="ui_new_game_map_labx8" x="435" y="310" width="435" height="310" />
+		<texture id="ui_new_game_map_peshera" x="0" y="620" width="435" height="310" />
+		<texture id="ui_new_game_map_predban" x="435" y="620" width="435" height="310" />
+	</file>
+
+	<file name="ui\new_game\ui_new_game_maps_7">
+		<texture id="ui_new_game_map_village" x="0" y="0" width="435" height="310" />
+		<texture id="ui_new_game_map_labx27" x="435" y="0" width="435" height="311" />
+		<texture id="ui_new_game_map_hiding_road" x="0" y="311" width="435" height="311" />
+		<texture id="ui_new_game_map_puzir" x="435" y="311" width="435" height="311" />
+		<texture id="ui_new_game_map_aver" x="0" y="622" width="435" height="311" />
+	</file>
+
+  <file name="ui\new_game\ui_new_game_maps_8">
+		<texture id="ui_new_game_map_forgotten" x="0" y="0" width="435" height="311" />
+		<texture id="ui_new_game_map_y04_pole" x="435" y="0" width="435" height="311" />
+		<texture id="ui_new_game_map_gw02_kurchatov" x="0" y="311" width="435" height="311" />
+		<texture id="ui_new_game_map_gw00_science" x="435" y="311" width="435" height="311" />
+		<texture id="ui_new_game_map_gw01_rein" x="0" y="622" width="435" height="311" />
+	</file>
+</w>

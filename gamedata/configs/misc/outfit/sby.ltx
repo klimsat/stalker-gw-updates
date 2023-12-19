@@ -1,0 +1,333 @@
+;---------------------------------------------------------------------------------------------
+;		Скат-9М
+;---------------------------------------------------------------------------------------------
+[sby_military_outfit]:outfit_base
+$spawn                                   = "outfit\sby_military_outfit"
+visual                                   = dynamics\outfit\military_outfit
+actor_visual                             = actors\stalker_sbu\sby_cor_antigaz_4.ogf
+npc_visual                               = actors\stalker_sbu\sby_cor_antigaz_4.ogf
+player_hud_section                       = actor_hud_military_skat9
+
+ef_equipment_type                        = 4
+
+inv_name                                 = sby_military_outfit_name
+inv_name_short                           = sby_military_outfit_name
+description                              = sby_military_outfit_description
+
+inv_weight                               = 10.0
+
+inv_grid_x                               = 78
+inv_grid_y                               = 34
+
+upgr_icon_x                              = 648
+upgr_icon_y                              = 353
+upgr_icon_width                          = 280
+upgr_icon_height                         = 145
+full_icon_name                           = npc_icon_military_outfit
+
+cost                                     = 60000
+full_scale_icon                          = 10,6	                                       ;иконка сталкера в костюме в полный рост
+power_loss                               = 0.9
+immunities_sect                          = sect_military_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0133
+shock_protection                         = 0.0533
+radiation_protection                     = 0.0020
+chemical_burn_protection                 = 0.0133
+telepatic_protection                     = 0.0
+strike_protection                        = 0.2625
+explosion_protection                     = 0.2625
+wound_protection                         = 0.2625
+
+hit_fraction_actor                       = 0.4
+bones_koeff_protection                   = actor_armor_skat
+
+artefact_count                           = 3
+control_inertion_factor                  = 1.8
+
+upgrades                                 = up_gr_firstab_military_outfit, up_gr_seconab_military_outfit, up_gr_thirdab_military_outfit, up_gr_fourtab_military_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_military_outfit
+character_portrait						 = ui_inGame2_sby_cor_antigaz_4
+
+[sect_sby_military_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.03
+fire_wound_immunity                      = 0.01
+
+[sect_sby_military_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.002
+
+;---------------------------------------------------------------------------------------------
+;		Бронежилет СБУ
+;---------------------------------------------------------------------------------------------
+[sby_novice_specops_outfit]:outfit_base
+$spawn                                   = "outfit\sby_novice_specops_outfit"
+visual                                   = dynamics\outfit\specops_outfit
+actor_visual                             = actors\stalker_sbu\sby_beret_red_0_0.ogf
+npc_visual                               = actors\stalker_sbu\sby_beret_red_0_0.ogf
+player_hud_section                       = actor_hud_military_berill
+
+ef_equipment_type                        = 3
+
+inv_name                                 = sby_novice_specops_outfit_name
+inv_name_short                           = sby_novice_specops_outfit_name
+description                              = sby_novice_specops_outfit_description
+
+inv_weight                               = 7.0
+
+inv_grid_x                               = 56
+inv_grid_y                               = 37
+
+upgr_icon_x                              = 318
+upgr_icon_y                              = 163
+upgr_icon_width                          = 303
+upgr_icon_height                         = 126
+full_icon_name                           = npc_icon_specops_outfit
+
+cost                                     = 15000
+full_scale_icon                          = 4,6	                                       ;иконка сталкера в костюме в полный рост
+power_loss                               = 0.8
+immunities_sect                          = sect_military_outfit_immunities
+
+; LOW RESISTANCE
+burn_protection                          = 0.0333
+shock_protection                         = 0.1333
+radiation_protection                     = 0.0050
+chemical_burn_protection                 = 0.0333
+telepatic_protection                     = 0.0
+strike_protection                        = 0.2275
+explosion_protection                     = 0.2275
+wound_protection                         = 0.2275
+
+hit_fraction_actor                       = 0.5
+bones_koeff_protection                   = actor_armor_berill
+
+artefact_count                           = 1
+control_inertion_factor                  = 1.5
+
+upgrades                                 = up_gr_firstab_specops_outfit, up_gr_seconab_specops_outfit, up_gr_thirdab_specops_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_specops
+character_portrait						 = ui_inGame2_sby_beret_red_0_0
+
+[sect_sby_novice_specops_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.01
+
+[sect_sby_novice_specops_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		Армейский бронекостюм «КОРСАР М3М-1А-6»
+;---------------------------------------------------------------------------------------------
+[sby_profi_military_outfit]:outfit_base
+$spawn                                   = "outfit\sby_profi_military_outfit"
+visual                                   = dynamics\outfit\military_outfit
+actor_visual                             = actors\black_soldier_2_0.ogf
+npc_visual                               = actors\black_soldier_2_0.ogf
+player_hud_section                       = actor_hud_duty_psz9d
+
+ef_equipment_type                        = 4
+
+inv_name                                 = sby_profi_military_outfit_name
+inv_name_short                           = sby_profi_military_outfit_name
+description                              = sby_profi_military_outfit_description
+
+inv_weight                               = 11.0
+
+inv_grid_x                               = 62
+inv_grid_y                               = 34
+
+upgr_icon_x                              = 648
+upgr_icon_y                              = 353
+upgr_icon_width                          = 280
+upgr_icon_height                         = 145
+full_icon_name                           = npc_icon_military_outfit
+
+cost                                     = 45000
+full_scale_icon                          = 10,6	                                       ;иконка сталкера в костюме в полный рост
+power_loss                               = 0.9
+immunities_sect                          = sect_military_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0133
+shock_protection                         = 0.0533
+radiation_protection                     = 0.0020
+chemical_burn_protection                 = 0.0133
+telepatic_protection                     = 0.0
+strike_protection                        = 0.2625
+explosion_protection                     = 0.2625
+wound_protection                         = 0.2625
+
+hit_fraction_actor                       = 0.4
+bones_koeff_protection                   = actor_armor_skat
+
+artefact_count                           = 1
+control_inertion_factor                  = 1.8
+
+upgrades                                 = up_gr_firstab_military_outfit, up_gr_seconab_military_outfit, up_gr_thirdab_military_outfit, up_gr_fourtab_military_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_military_outfit
+character_portrait						 = ui_inGame2_No_Data
+
+[sect_sby_profi_military_outfit_immunities]
+burn_immunity                            = 0.04	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.04
+wound_immunity                           = 0.04
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.03
+fire_wound_immunity                      = 0.01
+
+[sect_sby_profi_military_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.002
+;---------------------------------------------------------------------------------------------
+;		Leader SBY Outfit
+;---------------------------------------------------------------------------------------------
+[leader_sby_outfit]:outfit_base
+$spawn                                   = "outfit\leader_sby_outfit"
+visual                                   = dynamics\outfit\military_outfit
+actor_visual                             = actors\stalker_sbu\sby_leader.ogf
+npc_visual                               = actors\stalker_sbu\sby_leader.ogf
+player_hud_section                       = actor_hud_military_skat9
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_sby_outfit_name
+inv_name_short                           = leader_sby_outfit_name
+description                              = leader_sby_outfit_description
+
+inv_weight                               = 6
+
+inv_grid_x         						 = 76
+inv_grid_y        						 = 43
+
+upgr_icon_x                              = 3456
+upgr_icon_y                              = 840
+upgr_icon_width                          = 288
+upgr_icon_height                         = 126
+
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 153545 
+
+full_scale_icon                          = 14,11
+
+immunities_sect                          = sect_leader_sby_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0291
+shock_protection                         = 0.2666
+radiation_protection                     = 0.0062
+chemical_burn_protection                 = 0.0322
+telepatic_protection                     = 0.0000
+strike_protection                        = 0.4781
+explosion_protection                     = 0.4781
+wound_protection                         = 0.4781
+
+fire_wound_protection                    = 0.2500
+
+hit_fraction_actor                       = 0.12
+control_inertion_factor                  = 1.2
+bones_koeff_protection                   = sby_leader
+
+health_restore_speed                     = 0.0006
+bleeding_restore_speed                   = 0.006
+power_restore_speed                      = 0.003
+power_loss                               = 0.65
+
+additional_inventory_weight              = 30
+additional_inventory_weight2             = 30
+
+artefact_count                           = 5
+
+character_portrait						 = ui_inGame2_soldier_degterev_green_4_0
+
+[sect_leader_sby_outfit_immunities]
+burn_immunity                            = 0.0050
+strike_immunity                          = 0.0150
+shock_immunity                           = 0.0300
+wound_immunity                           = 0.0050
+radiation_immunity                       = 0.0000
+telepatic_immunity                       = 0.0000
+chemical_burn_immunity                   = 0.0050
+explosion_immunity                       = 0.0050
+fire_wound_immunity                      = 0.0130
+;---------------------------------------------------------------------------------------------
+;OUTFIT IN AZAZEL MODE: Leader SBY Outfit
+;---------------------------------------------------------------------------------------------
+[leader_azazel_sby_outfit]:outfit_leader_exo_base
+$spawn                                   = "outfit\leader_azazel_sby_outfit"
+visual                                   = dynamics\outfit\military_outfit
+actor_visual                             = actors\stalker_sbu\sby_leader.ogf
+npc_visual                               = actors\stalker_sbu\sby_leader.ogf
+player_hud_section                       = actor_hud_military_skat9
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_sby_outfit_name
+inv_name_short                           = leader_sby_outfit_name
+description                              = leader_sby_outfit_description
+
+inv_weight                               = 6
+
+inv_grid_x         						 = 76
+inv_grid_y        						 = 43
+
+upgr_icon_x                              = 3456
+upgr_icon_y                              = 840
+upgr_icon_width                          = 288
+upgr_icon_height                         = 126
+
+cost                                     = 153545
+
+artefact_count                           = 1
+
+helmet_avaliable						 = false
+
+sprint_allowed							 = true
+
+power_loss                               = 0.75
+
+character_portrait						 = ui_inGame2_soldier_degterev_green_4_0

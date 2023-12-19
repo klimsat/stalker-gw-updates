@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+	<!-- Level Names -->
+	<string id="gw00_science">
+		<text>Научная станция</text>
+	</string>
+	<string id="y04_pole">
+		<text>Поляна</text>
+	</string>
+	<string id="gw01_rein">
+		<text>Укрепрайон</text>
+	</string>
+	<string id="aver">
+		<text>Лесная Чаща</text>
+	</string>
+	<string id="l03_agroprom">
+		<text>НИИ "Агропром"</text>
+	</string>
+	<string id="l03u_agr_underground">
+		<text>Подземелья НИИ «Агропром»</text>
+	</string>
+	<string id="l07_military">
+		<text>Армейские склады</text>
+	</string>
+	<string id="l12_stancia">
+		<text>Юг ЧАЭС</text>
+	</string>
+	<string id="l12_stancia_2">
+		<text>Север ЧАЭС</text>
+	</string>
+	<string id="labx27">
+		<text>X - 27</text>
+	</string>
+	<string id="l01_escape">
+		<text>Кордон</text>
+	</string>
+	<string id="k01_darkscape">
+		<text>Тёмная лощина</text>
+	</string>
+	<string id="l04_darkvalley">
+		<text>Тёмная долина</text>
+	</string>
+	<string id="l09_deadcity">
+		<text>Мёртвый город</text>
+	</string>
+	<string id="l11_hospital">
+		<text>Госпиталь</text>
+	</string>
+	<string id="l02_garbage">
+		<text>Свалка</text>
+	</string>
+	<string id="l13_generators">
+		<text>Генераторы</text>
+	</string>
+	<string id="k00_marsh">
+		<text>Большие Болота</text>
+	</string>
+	 <string id="jupiter">
+		<text>Окрестности «Юпитера»</text>
+	</string>
+		<string id="jupiter_underground">
+		<text>Подземелья «Юпитера»</text>
+	</string>
+	<string id="l08u_brainlab">
+		<text>Лаборатория X-16 (Янтарь)</text>
+	</string>
+	<string id="l04u_labx18">
+		<text>Лаборатория X-18 (Тёмная Долина)</text>
+	</string>
+	<string id="l10u_bunker">
+		<text>Лаборатория Х-10 (Радар)</text>
+	</string>
+	<string id="labx8">
+		<text>Лаборатория X-8 (Окраины)</text>
+	</string>
+	<string id="l10_limansk">
+		<text>Лиманск</text>
+	</string>
+	<string id="l12u_control_monolith">
+		<text>Центр управления Монолитом</text>
+	</string>
+	 <string id="l13u_warlab">
+		<text>Военная лаборатория</text>
+	</string>
+	<string id="pripyat">
+		<text>Восточная Припять</text>
+	</string>
+	<string id="l11_pripyat">
+		<text>Припять</text>
+	</string>
+	<string id="l10_radar">
+		<text>Выжигатель мозгов</text>
+	</string>
+	<string id="l10_red_forest">
+		<text>Рыжий Лес</text>
+	</string>
+	<string id="rostok">
+		<text>Росток</text>
+	</string>
+	<string id="l12u_sarcofag">
+		<text>Саркофаг</text>
+	</string>
+	<string id="l08_yantar">
+		<text>Завод "Янтарь"</text>
+	</string>
+	<string id="zaton">
+		<text>Затон</text>
+	</string>
+        <string id="y04_pole">
+		<text>Поляна</text>
+	</string>
+        <string id="k03_atp">
+		<text>АТП</text>
+	</string>
+        <string id="l2_9">
+		<text>Вокзал</text>
+	</string>
+        <string id="factory">
+		<text>Металлургический завод</text>
+	</string>
+        <string id="gw02_kurchatov">
+		<text>Курчатов - 37</text>
+	</string>
+	<string id="peshera">
+		<text>Пещера</text>
+	</string>
+	<string id="fake_start">
+		<text>Скрытый лагерь</text>
+	</string>
+	<string id="predban">
+		<text>Предбанник</text>
+	</string>
+	<string id="puzir">
+		<text>Забытый лес</text>
+	</string>
+	<string id="hiding_road">
+		<text>Испытательный полигон</text>
+	</string>
+
+	<!-- Level Changers -->
+	<string id="sr_to_mar_lc">
+		<text>На Большие Болота</text>
+	</string>
+	<string id="sr_to_esc_lc">
+		<text>На Кордон</text>
+	</string>
+	<string id="sr_to_pre_lc">
+		<text>На Предбанник</text>
+	</string>
+	<string id="sr_to_ds_lc">
+		<text>В Тёмную Лощину</text>
+	</string>
+	<string id="sr_to_val_lc">
+		<text>В Тёмную Долину</text>
+	</string>
+	<string id="sr_to_puz_lc">
+		<text>В Забытый Лес</text>
+	</string>
+	<string id="sr_to_fsk_lc">
+		<text>В скрытый лагерь</text>
+	</string>
+	<string id="sr_to_gar_lc">
+		<text>На Свалку</text>
+	</string>
+	<string id="sr_to_agr_lc">
+		<text>На НИИ "Агропром"</text>
+	</string>
+	<string id="sr_to_yan_lc">
+		<text>На Завод "Янтарь"</text>
+	</string>
+	<string id="sr_to_hgr_lc">
+		<text>На Испытательный Полигон</text>
+	</string>
+	<string id="sr_to_mlz_lc">
+		<text>На Металлургический Завод</text>
+	</string>
+	<string id="sr_to_rostok_lc">
+		<text>На Завод "Росток"</text>
+	</string>
+	<string id="sr_to_aver_lc">
+		<text>В Лесную Чащу</text>
+	</string>
+	<string id="sr_to_pol_lc">
+		<text>На Поляну</text>
+	</string>
+	<string id="sr_to_mil_lc">
+		<text>На Армейские Склады</text>
+	</string>
+	<string id="sr_to_atp_lc">
+		<text>На АТП</text>
+	</string>
+	<string id="sr_to_dc_lc">
+		<text>В Мёртвый Город</text>
+	</string>
+	<string id="sr_to_vok_lc">
+		<text>На вокзал "Лиманск"</text>
+	</string>
+	<string id="sr_to_red_lc">
+		<text>В Рыжий Лес</text>
+	</string>
+	<string id="sr_to_lim_lc">
+		<text>В Лиманск</text>
+	</string>
+	<string id="sr_to_rad_lc">
+		<text>К Выжигателю Мозгов</text>
+	</string>
+	<string id="sr_to_pri_coc_lc">
+		<text>В Припять</text>
+	</string>
+	<string id="sr_to_pri_cop_lc">
+		<text>В восточную Припять</text>
+	</string>
+	<string id="sr_to_aes_1_lc">
+		<text>К южной части ЧАЭС</text>
+	</string>
+	<string id="sr_to_aes_2_lc">
+		<text>К северной части ЧАЭС</text>
+	</string>
+	<string id="sr_to_gen_lc">
+		<text>К Генераторам</text>
+	</string>
+	<string id="sr_to_kat_lc">
+		<text>В Госпиталь</text>
+	</string>
+	<string id="sr_to_sar_lc">
+		<text>В Саркофаг</text>
+	</string>
+	<string id="sr_to_conm_lc">
+		<text>К центру управления Монолитом</text>
+	</string>
+	<string id="sr_to_warlab_lc">
+		<text>В военную лабораторию</text>
+	</string>
+	<string id="sr_to_x16_lc">
+		<text>В лабораторию Х-16 </text>
+	</string>
+	<string id="sr_to_x18_lc">
+		<text>В лабораторию Х-18 </text>
+	</string>
+	<string id="sr_to_x27_lc">
+		<text>В лабораторию Х-27 </text>
+	</string>
+	<string id="sr_to_x8_lc">
+		<text>В лабораторию Х-8 </text>
+	</string>
+	<string id="sr_to_bun_lc">
+		<text>В лабораторию Х-10 </text>
+	</string>
+	<string id="sr_to_rei_lc">
+		<text>К Укрепрайону</text>
+	</string>
+	<string id="sr_to_sci_lc">
+		<text>На Научную Станцию</text>
+	</string>
+	<string id="sr_to_jup_lc">
+		<text>К окрестностям «Юпитера»</text>
+	</string>
+	<string id="sr_to_jup_un_lc">
+		<text>К подземелью «Юпитера»</text>
+	</string>
+	<string id="sr_to_zat_lc">
+		<text>На Затон</text>
+	</string>
+	<string id="sr_to_agr_un_lc">
+		<text>К подземелью НИИ «Агропром»</text>
+	</string>
+	<string id="sr_to_kur_lc">
+		<text>В Курчатов - 37</text>
+	</string>
+</string_table>

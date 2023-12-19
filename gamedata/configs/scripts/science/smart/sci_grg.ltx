@@ -1,0 +1,23 @@
+[smart_terrain];sci_grg
+squad_id = 8
+max_population = 14
+respawn_params = respawn@sci_grg
+respawn_idle = 60000
+
+
+[respawn@sci_grg]
+spawn_military@novice
+spawn_military@advanced
+spawn_military@sniper
+
+[spawn_military@novice]
+spawn_squads = army_sim_squad_novice
+spawn_num = 3
+
+[spawn_military@advanced]
+spawn_squads = army_sim_squad_novice, army_sim_squad_advanced
+spawn_num = 3
+
+[spawn_military@sniper]
+spawn_squads = army_sim_squad_sniper, army_sim_squad_advanced
+spawn_num = 3

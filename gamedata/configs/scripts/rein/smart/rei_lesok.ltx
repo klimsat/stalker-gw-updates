@@ -1,0 +1,23 @@
+[smart_terrain];rei_lesok
+squad_id = 4
+max_population = 14
+respawn_params = respawn@rei_lesok
+respawn_idle = 60000
+
+
+[respawn@rei_lesok]
+spawn_military@novice
+spawn_military@advanced
+spawn_military@sniper
+
+[spawn_military@novice]
+spawn_squads = army_sim_squad_novice
+spawn_num = 3
+
+[spawn_military@advanced]
+spawn_squads = army_sim_squad_novice, army_sim_squad_advanced
+spawn_num = 3
+
+[spawn_military@sniper]
+spawn_squads = army_sim_squad_sniper, army_sim_squad_advanced
+spawn_num = 3

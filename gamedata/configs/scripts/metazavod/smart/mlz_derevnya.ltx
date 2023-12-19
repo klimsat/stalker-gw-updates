@@ -1,0 +1,31 @@
+[smart_terrain]
+squad_id = 10
+max_population = 5
+respawn_params = respawn@mlz_derevnya
+respawn_idle = 30000
+
+
+
+[respawn@mlz_derevnya]
+spawn_army@novice
+spawn_army@advanced
+
+[spawn_army@novice]
+spawn_squads = army_sim_squad_novice
+spawn_num = 3
+
+[spawn_army@advanced]
+spawn_squads = army_sim_squad_novice, army_sim_squad_advanced
+spawn_num = 3
+
+[exclusive]
+mlz_derevnya_camp_work_1 = metazavod\mlz_derevnya_smart_logic.ltx
+mlz_derevnya_camp_work_2 = metazavod\mlz_derevnya_smart_logic.ltx
+mlz_derevnya_camp_work_3 = metazavod\mlz_derevnya_smart_logic.ltx
+mlz_derevnya_camp_work_4 = metazavod\mlz_derevnya_smart_logic.ltx
+mlz_derevnya_camp_work_5 = metazavod\mlz_derevnya_smart_logic.ltx
+mlz_derevnya_camp_work_6 = metazavod\mlz_derevnya_smart_logic.ltx
+mlz_derevnya_camp_work_7 = metazavod\mlz_derevnya_smart_logic.ltx
+trader = metazavod\mlz_derevnya_smart_logic.ltx
+mechanic = metazavod\mlz_derevnya_smart_logic.ltx
+medic = metazavod\mlz_derevnya_smart_logic.ltx

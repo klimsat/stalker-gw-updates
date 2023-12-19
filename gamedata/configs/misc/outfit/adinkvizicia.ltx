@@ -1,0 +1,357 @@
+;---------------------------------------------------------------------------------------------
+;		Комбинезон Адской Инквизиции
+;---------------------------------------------------------------------------------------------
+[adinkvizicia_outfit]:outfit_base
+$spawn                                   = "outfit\adinkvizicia_stalker_outfit"
+visual                                   = dynamics\outfit\monolith_outfit
+actor_visual                             = actors\stalker_adinkvizicia\adinkvizicia_rukzak_mask_0_0.ogf
+npc_visual                               = actors\stalker_adinkvizicia\adinkvizicia_rukzak_mask_0_0.ogf
+player_hud_section                       = actor_hud_monolith_suit
+
+ef_equipment_type                        = 3
+
+inv_name                                 = adinkvizicia_outfit_name
+inv_name_short                           = adinkvizicia_outfit_name
+description                              = adinkvizicia_outfit_description
+
+inv_weight                               = 8.5
+
+inv_grid_x                               = 58
+inv_grid_y                               = 37
+
+upgr_icon_x                              = 1515
+upgr_icon_y                              = 210
+upgr_icon_width                          = 302
+upgr_icon_height                         = 130
+
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 17500
+
+full_scale_icon                          = 14,11	                                       ;иконка сталкера в костюме в полный рост
+
+artefact_count                           = 2
+
+immunities_sect                          = sect_adinkvizicia_outfit_immunities
+
+; LOW-MEDIUM RESISTANCE
+burn_protection                          = 0.0470
+shock_protection                         = 0.1766
+radiation_protection                     = 0.0110
+chemical_burn_protection                 = 0.0440
+telepatic_protection                     = 0.0
+strike_protection                        = 0.1945
+explosion_protection                     = 0.1955
+wound_protection                         = 0.1925
+
+hit_fraction_actor                       = 0.75
+bones_koeff_protection                   = actor_adin_outfit
+
+control_inertion_factor                  = 1.2
+power_loss                               = 0.75
+
+upgrades                                 = up_gr_firstab_monolith_outfit, up_gr_seconab_monolith_outfit, up_gr_thirdab_monolith_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_stalker_outfit
+character_portrait						 = ui_inGame2_adinkvizicia_rukzak_gas_0_0
+
+[sect_adinkvizicia_outfit_immunities]
+burn_immunity                            = 0.03	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.03
+wound_immunity                           = 0.03
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.03
+explosion_immunity                       = 0.03
+fire_wound_immunity                      = 0.015
+
+[sect_adinkvizicia_outfit_immunities_add]
+burn_immunity                            = -0.015	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = -0.015
+wound_immunity                           = -0.015
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = -0.015
+explosion_immunity                       = -0.015
+fire_wound_immunity                      = -0.005
+
+;---------------------------------------------------------------------------------------------
+;		Научный Комбинезон "Инквизитор"
+;---------------------------------------------------------------------------------------------
+[adinkvizicia_scientific_outfit]:outfit_scientific_base
+$spawn                                   = "outfit\adinkvizicia_scientific_outfit"
+visual                                   = dynamics\outfit\scientific_outfit
+actor_visual                             = actors\stalker_adinkvizicia\adinkvizicia_seva_2_0.ogf
+npc_visual                               = actors\stalker_adinkvizicia\adinkvizicia_seva_2_0.ogf
+player_hud_section                       = actor_hud_loner_seva
+
+inv_name                                 = adinkvizicia_scientific_outfit_name
+inv_name_short                           = adinkvizicia_scientific_outfit_name
+description                              = adinkvizicia_scientific_outfit_description
+
+inv_weight                               = 13.0
+
+inv_grid_x                               = 64
+inv_grid_y                               = 37
+
+upgr_icon_x                              = 646
+upgr_icon_y                              = 172
+upgr_icon_width                          = 285
+upgr_icon_height                         = 159
+
+cost                                     = 37000
+full_scale_icon                          = 12,11	                                       ;иконка сталкера в костюме в полный рост
+
+immunities_sect                          = sect_scientific_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.1033
+shock_protection                         = 0.4133
+radiation_protection                     = 0.0155
+chemical_burn_protection                 = 0.1033
+telepatic_protection                     = 0.0588
+strike_protection                        = 0.1925
+explosion_protection                     = 0.1925
+wound_protection                         = 0.1925
+
+hit_fraction_actor                       = 0.65
+bones_koeff_protection                   = actor_armor_seva
+
+artefact_count                           = 1
+
+nightvision_sect                         = effector_nightvision_2
+
+control_inertion_factor                  = 1.5
+power_loss                               = 0.8
+character_portrait						 = ui_inGame2_adinkvizicia_seva_2_0
+
+[sect_adinkvizicia_scientific_outfit_immunities]
+burn_immunity                            = 0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = 0.03
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.0
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.02
+
+[sect_adinkvizicia_scientific_outfit_immunities_add]
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
+strike_immunity                          = 0.0
+shock_immunity                           = 0.0
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.0
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.0025
+
+;---------------------------------------------------------------------------------------------
+;		Полуэкзоскелет Адской Инквизиции
+;---------------------------------------------------------------------------------------------
+[adinkvizicia_radiation_outfit]:monolith_exo_outfit
+$spawn								= "outfit\adinkvizicia_radiation_outfit"
+visual								= dynamics\outfit\monolith_rad_outfit
+actor_visual						= actors\stalker_adinkvizicia\adinkvizicia_4_1.ogf
+player_hud_section					= actor_hud_monolith_radiation
+
+inv_name							= adinkvizicia_radiation_outfit_name
+inv_name_short						= adinkvizicia_radiation_outfit_name
+description							= adinkvizicia_radiation_outfit_description
+
+inv_weight							= 17.0
+
+inv_grid_x							= 58
+inv_grid_y							= 27
+
+upgr_icon_x							= 1240
+upgr_icon_y							= 509
+upgr_icon_width						= 296
+upgr_icon_height					= 157
+
+burn_protection                          = 0.0600
+shock_protection                         = 0.2200
+radiation_protection                     = 0.0080
+chemical_burn_protection                 = 0.0533
+telepatic_protection                     = 0.0600
+strike_protection                        = 0.3400
+explosion_protection                     = 0.3400
+wound_protection                         = 0.3400
+
+cost								= 80000
+
+bones_koeff_protection                   = actor_armor_adin_exo
+
+helmet_avaliable					= false
+power_loss							= 0.9
+control_inertion_factor				= 2.5
+sprint_allowed						= true
+additional_inventory_weight			= 0
+additional_inventory_weight2		= 0
+
+upgrades                                 = up_gr_firstab_monolith_rad_outfit, up_gr_seconab_monolith_rad_outfit, up_gr_thirdab_monolith_rad_outfit, up_gr_fourtab_monolith_rad_outfit, up_gr_fifthab_monolith_rad_outfit
+
+character_portrait						 = ui_inGame2_adinkvizicia_4_1
+
+;---------------------------------------------------------------------------------------------
+;		Экзоскелет Инквизитор
+;---------------------------------------------------------------------------------------------
+[adinkvizicia_exo_outfit]:outfit_exo_base
+$spawn                                   = "outfit\monolith_exo_outfit"
+visual                                   = dynamics\outfit\monolith_exo_outfit
+actor_visual                             = actors\stalker_adinkvizicia\adinkvizicia_exo_4_0.ogf
+npc_visual                               = actors\stalker_adinkvizicia\adinkvizicia_exo_4_0.ogf
+player_hud_section                       = actor_hud_monolith_exo
+
+inv_name                                 = adinkvizicia_exo_outfit_name
+inv_name_short                           = adinkvizicia_exo_outfit_name
+description                              = adinkvizicia_exo_outfit_description
+
+inv_weight                               = 25.0
+
+inv_grid_x                               = 56
+inv_grid_y                               = 27
+
+upgr_icon_x                              = 1540
+upgr_icon_y                              = 510
+upgr_icon_width                          = 304
+upgr_icon_height                         = 159
+
+cost                                     = 180000
+
+upgrades                                 = up_gr_firstab_monolith_exo_outfit, up_gr_seconab_monolith_exo_outfit, up_gr_thirdab_monolith_exo_outfit, up_gr_fourtab_monolith_exo_outfit, up_gr_fifthab_monolith_exo_outfit
+
+; MEDIUM RESISTANCE
+burn_protection                          = 0.0600
+shock_protection                         = 0.2240
+radiation_protection                     = 0.0090
+chemical_burn_protection                 = 0.0550
+telepatic_protection                     = 0.0620
+strike_protection                        = 0.3420
+explosion_protection                     = 0.3420
+wound_protection                         = 0.3420
+
+bones_koeff_protection                   = actor_armor_adin_exo
+
+power_loss                               = 1.1
+additional_inventory_weight              = 100
+additional_inventory_weight2             = 100
+artefact_count                           = 1
+helmet_avaliable					= false
+
+character_portrait						 = ui_inGame2_adinkvizicia_exo_4_1
+;---------------------------------------------------------------------------------------------
+;		Leader Adinkvizicia Outfit
+;---------------------------------------------------------------------------------------------
+[leader_adinkvizicia_outfit]:outfit_base
+$spawn                                   = "outfit\leader_adinkvizicia_outfit"
+visual                                   = dynamics\outfit\adinkvizicia_tank_exo_outfit
+actor_visual                             = actors\stalker_adinkvizicia\adinkvizicia_leader.ogf
+npc_visual                               = actors\stalker_adinkvizicia\adinkvizicia_leader.ogf
+player_hud_section                       = actor_hud_monolith_exo
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_adinkvizicia_outfit_name
+inv_name_short                           = leader_adinkvizicia_outfit_name
+description                              = leader_adinkvizicia_outfit_description
+
+inv_weight                               = 20
+
+inv_grid_x                               = 68
+inv_grid_y                               = 46
+
+upgr_icon_x                              = 3444
+upgr_icon_y                              = 0
+upgr_icon_width                          = 294
+upgr_icon_height                         = 165
+
+full_icon_name                           = npc_icon_stalker_outfit
+
+cost                                     = 322135 
+
+full_scale_icon                          = 14,11	                                       ;иконка сталкера в костюме в полный рост
+
+immunities_sect                          = sect_leader_adinkvizicia_outfit_immunities
+
+; MEDIUM RESISTANCE (25% up from base of coolest outfit this faction with all upgrades)			
+burn_protection                          = 0.0906
+shock_protection                         = 0.4050
+radiation_protection                     = 0.0150
+chemical_burn_protection                 = 0.0875
+telepatic_protection                     = 0.1150
+strike_protection                        = 0.5525
+explosion_protection                     = 0.5525
+wound_protection                         = 0.5525
+
+fire_wound_protection					 = 0.25
+
+
+hit_fraction_actor                       = 0.15
+control_inertion_factor                  = 2.5
+bones_koeff_protection                   = adinkvizicia_leader
+
+nightvision_sect 			             = effector_nightvision_2
+
+power_restore_speed                    	 = 0.005
+power_loss                               = 0.9
+
+additional_inventory_weight              = 110
+additional_inventory_weight2             = 110
+
+artefact_count                           = 5
+
+helmet_avaliable					     = false
+
+character_portrait						 = ui_inGame2_adinkvizicia_exo_4_1
+
+[sect_leader_adinkvizicia_outfit_immunities]  ;after apply upgrades
+burn_immunity                            = 0.0050
+strike_immunity                          = 0.0050
+shock_immunity                           = 0.0200
+wound_immunity                           = 0.0050
+radiation_immunity                       = 0.0000
+telepatic_immunity                       = 0.0000
+chemical_burn_immunity                   = 0.0050
+explosion_immunity                       = 0.0050
+fire_wound_immunity                      = 0.0100
+;---------------------------------------------------------------------------------------------
+;OUTFIT IN AZAZEL MODE: Leader Adinkvizicia Outfit
+;---------------------------------------------------------------------------------------------
+[leader_azazel_adinkvizicia_outfit]:outfit_leader_exo_base
+$spawn                                   = "outfit\leader_azazel_adinkvizicia_outfit"
+visual                                   = dynamics\outfit\adinkvizicia_tank_exo_outfit
+actor_visual                             = actors\stalker_adinkvizicia\adinkvizicia_leader.ogf
+npc_visual                               = actors\stalker_adinkvizicia\adinkvizicia_leader.ogf
+player_hud_section                       = actor_hud_monolith_exo
+
+ef_equipment_type                        = 3
+
+inv_name                                 = leader_adinkvizicia_outfit_name
+inv_name_short                           = leader_adinkvizicia_outfit_name
+description                              = leader_adinkvizicia_outfit_description
+
+inv_weight                               = 20
+
+inv_grid_x                               = 68
+inv_grid_y                               = 46
+
+upgr_icon_x                              = 3444
+upgr_icon_y                              = 0
+upgr_icon_width                          = 294
+upgr_icon_height                         = 165
+
+cost                                     = 322135
+
+artefact_count                           = 1
+
+helmet_avaliable						= false
+
+sprint_allowed							 = true
+
+power_loss                               = 0.75
+
+character_portrait						 = ui_inGame2_adinkvizicia_exo_5_0

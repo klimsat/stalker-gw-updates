@@ -1,0 +1,281 @@
+-- Extensions to Game Options
+--- IMPORTANT! SEE opt_menu_on_init to add a new game options (new as of 5/28/2016)
+
+function get_config(menu, opt_name)
+  local config = {
+    file = axr_main.config,
+    section = "mm_options"
+  }
+
+  if type(opt_name) == "string" then
+    local cfg = strformat("%s_config", opt_name)
+    local cfg_sect = strformat("%s_config_section", opt_name)
+
+    if menu[cfg] ~= nil and menu[cfg_sect] ~= nil then
+      config = {
+        file = menu[cfg],
+        section = menu[cfg_sect]
+      }
+    end
+  end
+
+  return config
+end
+
+function get_list_key(item, ctrl)
+  local c = item.ctrl or ctrl
+
+  if type(item.list) ~= "table" then
+    return c:GetText()
+  end
+
+  local option = item.list_pref or item.id
+  local selected = c:GetText()
+
+  for _, value in pairs(item.list) do
+    local str_id = strformat("ui_mm_list_%s_item_%s", option, value)
+    if GetString(str_id) == selected or value == selected then
+      return value
+    end
+  end
+
+  for _, value in pairs(item.list) do
+    local str_id = strformat("ui_mm_list_%s_item_%s", option, value)
+    if GetString(str_id) == item.default then
+      return value
+    end
+  end
+
+  return item.list[1]
+end
+
+function get_list_text_str(option, key)
+  return strformat("ui_mm_list_%s_item_%s", option, key)
+end
+
+function set_list_text_str(v, value, id)
+  local str_id = get_list_text_str(id or v.list_pref or v.id, value)
+  local text = GetString(str_id)
+
+  if text == str_id then
+    text = value
+  end
+
+  return text
+end
+
+local function save_old_value_before(key, value)
+  if key == "pda_smart_icons_size" then
+    local pda_smart_icons_size_old = axr_main.config:r_value("mm_options", key, 2, 24)
+
+    sim_smart.pda_smart_icons_size_old = pda_smart_icons_size_old
+    sim_smart.pda_smart_icons_size_new = value
+  end
+  if key == "pda_smart_icons_color" then
+    local pda_smart_icons_color_old = axr_main.config:r_value("mm_options", key, 0, "default")
+
+    sim_smart.pda_smart_icons_color_old = pda_smart_icons_color_old
+    sim_smart.pda_smart_icons_color_new = value
+  end
+end
+local function save_old_value_after(key)
+  if key == "pda_smart_icons_size" or key == "pda_smart_icons_color" then
+    sim_smart.rerender_smart_icons()
+    sim_smart.rerender_smart_none_icons()
+  end
+end
+
+function opt_menu_on_init(menu)
+  local need_save
+
+  for name, t in pairs(menu.options) do
+    local config = get_config(menu, name)
+
+    for i = 1, #t do
+      local v = t[i]
+
+      if not v.disabled and not v.not_option and v.default ~= nil then
+        if v.typ == "check" then
+          if not (config.file:line_exist(config.section, "enable_" .. v.id)) then
+            config.file:w_value(config.section, "enable_" .. v.id, v.default)
+            need_save = true
+          end
+        elseif v.typ == "listbox" and not config.file:line_exist(config.section, v.id) then
+          local str = table.concat(v.default, ", ")
+          config.file:w_value(config.section, v.id, str)
+          need_save = true
+        elseif v.typ ~= "line" and v.typ ~= "label" and not config.file:line_exist(config.section, v.id) then
+          config.file:w_value(config.section, v.id, v.default)
+          need_save = true
+        end
+      end
+    end
+
+    if need_save then
+      config.file:save()
+    end
+  end
+end
+
+local function accept_values(menu, optMgr, v, config)
+  local precondition = type(v.precondition) == "function" and v.precondition() or type(v.precondition) ~= "function"
+
+  if not v.disabled and not v.not_option and precondition and v.typ ~= "label" then
+    if v.typ == "check" then
+      if v.ctrl then
+        config.file:w_value(config.section, "enable_" .. v.id, v.ctrl:GetCheck())
+      end
+    elseif v.typ == "radio" then
+      config.file:w_value(config.section, v.id, v.ctrl:GetActiveId() or v.default)
+    elseif v.typ == "listbox" then
+      local list_size = v.ctrl:GetSize()
+      local t = {}
+
+      for i = 1, list_size do
+        local item = v.ctrl:GetItemByIndex(i)
+
+        if item then
+          table.insert(t, item:GetTextItem():GetText())
+        end
+      end
+
+      local str = table.concat(v.default, ", ")
+
+      if #t > 0 then
+        str = table.concat(t, ", ")
+      end
+
+      config.file:w_value(config.section, v.id, str)
+    elseif v.typ == "input" then
+      -- elseif v.typ == "track" then
+      -- 	config.file:w_value(config.section, v.id, v.ctrl:GetIValue() or v.default)
+      config.file:w_value(config.section, v.id, v.ctrl:GetText() or v.default)
+    elseif v.typ == "list" then
+      if type(v.default) == "boolean" then
+        config.file:w_value(config.section, v.id, v.ctrl:GetText() == "true" or false)
+      elseif type(v.default) == "number" then
+        save_old_value_before(v.id, v.ctrl:GetText())
+        config.file:w_value(config.section, v.id, tonumber(v.ctrl:GetText()) or v.default)
+        save_old_value_after(v.id, v.ctrl:GetText())
+      else
+        local value = get_list_key(v)
+
+        save_old_value_before(v.id, value)
+        config.file:w_value(config.section, v.id, value)
+        save_old_value_after(v.id, value)
+      end
+    end
+    if v.on_accept then
+      v.on_accept(menu, optMgr, v)
+    end
+  end
+end
+function opt_menu_on_accept(menu, optMgr, console)
+  for name, t in pairs(menu.options) do
+    local config = get_config(menu, name)
+
+    for i = 1, #t do
+      local v = t[i]
+
+      if #v > 0 then
+        for i2 = 1, #v do
+          local line = v[i2]
+          accept_values(menu, optMgr, line, config)
+        end
+      else
+        accept_values(menu, optMgr, v, config)
+      end
+    end
+
+    config.file:save()
+  end
+end
+
+function set_values(menu, optMgr, v, config, from_default)
+  local precondition = type(v.precondition) == "function" and v.precondition() or type(v.precondition) ~= "function"
+
+  if not v.disabled and not v.not_option and precondition and v.typ ~= "label" then
+    if v.typ == "check" then
+      if v.ctrl then
+        local value = from_default and v.default or config.file:r_value(config.section, "enable_" .. v.id, 1, v.default)
+        v.ctrl:SetCheck(value)
+      end
+    elseif v.typ == "radio" then
+      -- elseif v.typ == "track" then
+      -- 	if v.ctrl then
+      -- 		local value = config.file:r_value(config.section, v.id, 2, v.default)
+      -- 		v.ctrl:SetCurrentValue(value)
+      -- 	end
+      if v.ctrl then
+        local value = from_default and v.default or config.file:r_value(config.section, v.id, 0, v.default)
+        v.ctrl:SetActiveTab(tostring(value))
+      end
+    elseif v.typ == "input" then
+      if v.ctrl then
+        local value = from_default and v.default or config.file:r_value(config.section, v.id, 0, v.default)
+        v.ctrl:SetText(tostring(value))
+      end
+    elseif v.typ == "listbox" then
+      if v.ctrl then
+        local value = from_default and v.default or config.file:r_value(config.section, v.id, 0, v.default)
+        local t = value
+
+        if type(value) == "string" then
+          t = alun_utils.split(value, ", ")
+        end
+
+        v.ctrl:RemoveAll()
+
+        for i = 1, #t do
+          v.ctrl:AddTextItem(t[i])
+        end
+      end
+    elseif v.typ == "list" then
+      if type(v.default) == "boolean" then
+        v.ctrl:SetText(from_default and v.default or config.file:r_value(config.section, v.id, 1, v.default))
+      elseif type(v.default) == "number" then
+        v.ctrl:SetText(from_default and v.default or config.file:r_value(config.section, v.id, 2, v.default))
+      else
+        local value = from_default and v.default or config.file:r_value(config.section, v.id, 0, v.default)
+        local text = set_list_text_str(v, value)
+
+        v.ctrl:SetText(text)
+      end
+    end
+    if v.on_set_values then
+      v.on_set_values(menu, optMgr, v)
+    end
+  end
+end
+function opt_menu_on_set_values(menu, optMgr)
+  for name, t in pairs(menu.options) do
+    local config = get_config(menu, name)
+
+    for i = 1, #t do
+      local v = t[i]
+
+      if #v > 0 then
+        for i2 = 1, #v do
+          local line = v[i2]
+          set_values(menu, optMgr, line, config)
+        end
+      else
+        set_values(menu, optMgr, v, config)
+      end
+    end
+  end
+end
+
+function get_character_icon_list()
+  local t = {"ui_inGame2_Strelok"}
+  local faction = character_community(db.actor):sub(7)
+  local ini = ini_file("plugins\\faction_portraits.ltx")
+  local section = faction .. "_portraits"
+  local n = ini:section_exist(section) and ini:line_count(section) or 0
+  for i = 0, n - 1 do
+    local result, id, value = ini:r_line(section, i, "", "")
+    table.insert(t, id)
+  end
+
+  return t
+end

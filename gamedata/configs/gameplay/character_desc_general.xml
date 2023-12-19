@@ -1,0 +1,430 @@
+<?xml version='1.0' encoding="windows-1251"?>
+<xml>
+#include "gameplay\character_desc_general_dolg.xml"
+#include "gameplay\character_desc_general_freedom.xml"
+#include "gameplay\character_desc_general_killer.xml"
+#include "gameplay\character_desc_general_bandit.xml"
+#include "gameplay\character_desc_general_army.xml"
+
+#include "gameplay\character_desc_general_stalker.xml"
+
+#include "gameplay\character_desc_general_monolith.xml"
+#include "gameplay\character_desc_general_zombied.xml"
+#include "gameplay\character_desc_general_renegate.xml"
+#include "gameplay\character_desc_general_isg.xml"
+#include "gameplay\character_desc_general_darkstalker.xml"
+#include "gameplay\character_desc_general_varyag.xml"
+#include "gameplay\character_desc_general_slizni.xml"
+#include "gameplay\character_desc_general_osoznanie.xml"
+#include "gameplay\character_desc_general_apocalypse.xml"
+#include "gameplay\character_desc_general_alfa.xml"
+#include "gameplay\character_desc_general_fantom.xml"
+#include "gameplay\character_desc_general_veter.xml"
+#include "gameplay\character_desc_general_adinkvizicia.xml"
+#include "gameplay\character_desc_general_velhan.xml"
+#include "gameplay\character_desc_general_zakat.xml"
+#include "gameplay\character_desc_general_voenstal.xml"
+#include "gameplay\character_desc_general_mirotvorec.xml"
+#include "gameplay\character_desc_general_ryskuspecnaz.xml"
+#include "gameplay\character_desc_general_sby.xml"
+#include "gameplay\character_desc_general_angel.xml"
+#include "gameplay\character_desc_general_posleduden.xml"
+#include "gameplay\character_desc_general_hunter.xml"
+#include "gameplay\character_desc_general_greh.xml"
+#include "gameplay\character_desc_general_csky.xml"
+#include "gameplay\character_desc_general_ecolog.xml"
+
+#include "gameplay\character_desc_debug_models.xml"
+    <!-- 											 -->
+    <!--				 Actor 						 -->
+    <!-- 											 -->
+    <specific_character id="actor" no_random="1">
+        <name>st_actor_generic_name</name>
+        <icon>ui_inGame2_neutral_1</icon>
+        <map_icon x="2" y="5"></map_icon>
+        <team>Actor</team>
+        <!-- must remain empty for faction select feature -->
+        <supplies></supplies>
+        <money min="1" max="1" infinitive="0" />
+        <class>actor</class>
+        <community>actor</community>
+        <rank>0</rank>
+        <reputation>0</reputation>
+        <visual>actors\stalker_neutral\stalker_neutral_1</visual>
+        <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+    <!-- START FACTION DIVERSITY	-->
+    <specific_character id="actor_stalker" no_random="1">
+        <name>GENERATE_NAME_stalker</name>
+        <icon>ui_inGame2_neutral_0</icon>
+        <map_icon x="2" y="5"></map_icon>
+        <team>Actor</team>
+        <supplies></supplies>
+        <money min="500" max="500" infinitive="0" />
+        <class>actor</class>
+        <community>actor_stalker</community>
+        <rank>0</rank>
+        <reputation>0</reputation>
+        <visual>actors\stalker_neutral\stalker_neutral_0</visual>
+        <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+    <specific_character id="actor_bandit" no_random="1">
+        <name>GENERATE_NAME_stalker</name>
+        <icon>ui_inGame2_bandit_a</icon>
+        <map_icon x="2" y="5"></map_icon>
+        <team>Actor</team>
+        <supplies></supplies>
+        <money min="500" max="500" infinitive="0" />
+        <class>actor</class>
+        <community>actor_bandit</community>
+        <rank>0</rank>
+        <reputation>0</reputation>
+        <visual>actors\stalker_bandit\stalker_bandit_a</visual>
+        <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+    <specific_character id="actor_dolg" no_random="1">
+        <name>GENERATE_NAME_stalker</name>
+        <icon>ui_inGame2_neutral_1</icon>
+        <map_icon x="2" y="5"></map_icon>
+        <team>Actor</team>
+        <supplies></supplies>
+        <money min="500" max="500" infinitive="0" />
+        <class>actor</class>
+        <community>actor_dolg</community>
+        <rank>0</rank>
+        <reputation>0</reputation>
+        <visual>actors\stalker_neutral\stalker_neutral_1</visual>
+        <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+    <specific_character id="actor_freedom" no_random="1">
+        <name>GENERATE_NAME_stalker</name>
+        <icon>ui_inGame2_neutral_1</icon>
+        <map_icon x="2" y="5"></map_icon>
+        <team>Actor</team>
+        <supplies></supplies>
+        <money min="500" max="500" infinitive="0" />
+        <class>actor</class>
+        <community>actor_freedom</community>
+        <rank>0</rank>
+        <reputation>0</reputation>
+        <visual>actors\stalker_neutral\stalker_neutral_1</visual>
+        <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+    <specific_character id="actor_army" no_random="1">
+        <name>GENERATE_NAME_stalker</name>
+        <icon>ui_inGame2_neutral_1</icon>
+        <map_icon x="2" y="5"></map_icon>
+        <team>Actor</team>
+        <supplies></supplies>
+        <money min="500" max="500" infinitive="0" />
+        <class>actor</class>
+        <community>actor_army</community>
+        <rank>0</rank>
+        <reputation>0</reputation>
+        <visual>actors\stalker_neutral\stalker_neutral_1</visual>
+        <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+    <specific_character id="actor_csky" no_random="1">
+        <name>GENERATE_NAME_stalker</name>
+        <icon>ui_inGame2_csky_4</icon>
+        <map_icon x="2" y="5"></map_icon>
+        <team>Actor</team>
+        <supplies></supplies>
+        <money min="500" max="500" infinitive="0" />
+        <class>actor</class>
+        <community>actor_csky</community>
+        <rank>0</rank>
+        <reputation>0</reputation>
+        <visual>actors\stalker_nebo\stalker_nebo_r2</visual>
+        <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+    <specific_character id="actor_ecolog" no_random="1">
+        <name>GENERATE_NAME_stalker</name>
+        <icon>ui_inGame2_neutral_1</icon>
+        <map_icon x="2" y="5"></map_icon>
+        <team>Actor</team>
+        <supplies></supplies>
+        <money min="500" max="500" infinitive="0" />
+        <class>actor</class>
+        <community>actor_ecolog</community>
+        <rank>0</rank>
+        <reputation>0</reputation>
+        <visual>actors\stalker_neutral\stalker_neutral_1</visual>
+        <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+    <specific_character id="actor_killer" no_random="1">
+        <name>GENERATE_NAME_stalker</name>
+        <icon>ui_inGame2_mercen_2_mask</icon>
+        <map_icon x="2" y="5"></map_icon>
+        <team>Actor</team>
+        <supplies></supplies>
+        <money min="500" max="500" infinitive="0" />
+        <class>actor</class>
+        <community>actor_killer</community>
+        <rank>0</rank>
+        <reputation>0</reputation>
+        <visual>actors\stalker_merc\stalker_mercen2a_mask</visual>
+        <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+    <specific_character id="actor_monolith" no_random="1">
+        <name>GENERATE_NAME_stalker</name>
+        <icon>ui_inGame2_neutral_1w</icon>
+        <map_icon x="2" y="5"></map_icon>
+        <team>Actor</team>
+        <supplies></supplies>
+        <money min="500" max="500" infinitive="0" />
+        <class>actor</class>
+        <community>actor_monolith</community>
+        <rank>0</rank>
+        <reputation>0</reputation>
+        <visual>actors\stalker_neutral\stalker_neutral1b</visual>
+        <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+    <specific_character id="actor_zombied" no_random="1">
+        <name>GENERATE_NAME_stalker</name>
+        <icon>ui_inGame2_Zombied_1</icon>
+        <map_icon x="2" y="5"></map_icon>
+        <team>Actor</team>
+        <supplies></supplies>
+        <money min="500" max="500" infinitive="0" />
+        <class>actor</class>
+        <community>actor_zombied</community>
+        <rank>0</rank>
+        <reputation>0</reputation>
+        <visual>actors\stalker_zombied\stalker_zombied_1</visual>
+        <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+    <!-- END FACTION DIVERSITY	-->
+    <specific_character id="mp_actor" no_random="1">
+        <name>actor_name</name>
+        <icon>ui_inGame2_neutral_1</icon>
+        <map_icon x="2" y="5"></map_icon>
+        <team>mp_actor</team>
+        <supplies />
+        <class>mp_actor</class>
+        <community>actor</community>
+        <rank>0</rank>
+        <reputation>0</reputation>
+        <visual>actors\stalker_neutral\stalker_neutral_1</visual>
+        <terrain_sect>stalker_terrain</terrain_sect>
+    </specific_character>
+
+    <specific_character id="actor_visual_stalker" team_default="1">
+        <name>GENERATE_NAME_stalker</name>
+        <icon>ui_inGame2_Hero</icon>
+        <map_icon x="1" y="0"></map_icon>
+        <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+        <class>actor_visual_stalker</class>
+        <community>ecolog</community>
+        <terrain_sect>stalker_terrain</terrain_sect>
+        <snd_config>characters_voice\human_01\stalker\</snd_config>
+        <rank>103</rank>
+        <reputation>321</reputation>
+        <visual>actors\stalker_hero\stalker_hero_1</visual>
+        <supplies>
+        [spawn] \n
+        device_torch = 1 \n
+        wpn_binoc = 1 \n
+        wpn_knife = 1 \n
+        hand_radio = 1 \n
+        hand_radio_r = 1 \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
+    </supplies>
+        #include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+    <specific_character id="stalker_general_default" team_default="1">
+        <name>GENERATE_NAME_stalker</name>
+        <icon>ui_inGame2_neutral_1</icon>
+        <map_icon x="1" y="0"></map_icon>
+        <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+        <class>Stalker_general</class>
+        <community>stalker</community>
+        <terrain_sect>stalker_terrain</terrain_sect>
+        <snd_config>characters_voice\human_01\stalker\</snd_config>
+        <rank>42</rank>
+        <reputation>0</reputation>
+        <visual>actors\stalker_neutral\stalker_neutral_1</visual>
+        <supplies>
+        [spawn] \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
+    </supplies>
+        #include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+    <specific_character id="stalker_dolg_default" team_default="1">
+        <name>GENERATE_NAME_stalker</name>
+        <icon>ui_inGame2_Dolg_2</icon>
+        <map_icon x="1" y="0"></map_icon>
+        <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+        <class>Stalker_dolg</class>
+        <community>dolg</community>
+        <terrain_sect>stalker_terrain</terrain_sect>
+        <snd_config>characters_voice\human_01\stalker\</snd_config>
+        <rank>822</rank>
+        <reputation>0</reputation>
+        <visual>actors\stalker_dolg\stalker_dolg_2</visual>
+        <supplies>
+        [spawn] \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
+    </supplies>
+        #include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+    <specific_character id="stalker_freedom_default" team_default="1">
+        <name>GENERATE_NAME_stalker</name>
+        <icon>ui_inGame2_Freedom_2_mask</icon>
+        <map_icon x="1" y="0"></map_icon>
+        <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+        <class>Stalker_freedom</class>
+        <community>freedom</community>
+        <terrain_sect>stalker_terrain</terrain_sect>
+        <snd_config>characters_voice\human_01\stalker\</snd_config>
+        <rank>2808</rank>
+        <reputation>0</reputation>
+        <visual>actors\stalker_freedom\stalker_freedom_2_mask</visual>
+        <supplies>
+        [spawn] \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
+    </supplies>
+        #include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+    <specific_character id="stalker_bandit_default" team_default="1">
+        <name>GENERATE_NAME_stalker</name>
+        <icon>ui_inGame2_bandit_1</icon>
+        <map_icon x="1" y="0"></map_icon>
+        <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+        <class>Stalker_bandit</class>
+        <community>bandit</community>
+        <terrain_sect>stalker_terrain</terrain_sect>
+        <snd_config>characters_voice\human_01\stalker\</snd_config>
+        <rank>98</rank>
+        <reputation>0</reputation>
+        <visual>actors\stalker_bandit\stalker_bandit_1</visual>
+        <supplies>
+        [spawn] \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
+    </supplies>
+        #include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+    <specific_character id="stalker_general_veteran_default" team_default="1">
+        <name>GENERATE_NAME_stalker</name>
+        <icon>ui_inGame2_neutral_3</icon>
+        <map_icon x="1" y="0"></map_icon>
+        <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+        <class>Stalker_general_veteran</class>
+        <community>stalker</community>
+        <terrain_sect>stalker_terrain</terrain_sect>
+        <snd_config>characters_voice\human_01\stalker\</snd_config>
+        <rank>8304</rank>
+        <reputation>0</reputation>
+        <visual>actors\stalker_neutral\stalker_neutral_3</visual>
+        <supplies>
+        [spawn] \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
+    </supplies>
+        #include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+    <specific_character id="stalker_monolith_default" team_default="1">
+        <name>GENERATE_NAME_stalker</name>
+        <icon>ui_inGame2_monolit_2</icon>
+        <map_icon x="1" y="0"></map_icon>
+        <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+        <class>stalker_monolith_default</class>
+        <community>monolith</community>
+        <terrain_sect>stalker_terrain</terrain_sect>
+        <snd_config>characters_voice\human_01\monolith\</snd_config>
+        <rank>1492</rank>
+        <reputation>0</reputation>
+        <visual>actors\stalker_monolith\stalker_monolith_2</visual>
+        <supplies>
+        [spawn] \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
+    </supplies>
+        #include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+    <!--  test_killer  -->
+    <specific_character id="test_killer" team_default="1">
+        <name>GENERATE_NAME_stalker</name>
+        <icon>ui_inGame2_merc_2</icon>
+        <map_icon x="1" y="0"></map_icon>
+        <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+        <class>test_killer</class>
+        <community>killer</community>
+        <terrain_sect>stalker_terrain</terrain_sect>
+        <snd_config>characters_voice\human_01\stalker\</snd_config>
+        <rank>6969</rank>
+        <money min="1500" max="2500" infinitive="0" />
+        <reputation>488</reputation>
+        <visual>actors\stalker_merc\stalker_merc_2</visual>
+        <supplies>
+        [spawn] \n
+    </supplies>
+        #include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+    <specific_character id="test_silencer_character" team_default="1">
+        <name>GENERATE_NAME_stalker</name>
+        <icon>ui_inGame2_merc_2</icon>
+        <map_icon x="1" y="0"></map_icon>
+        <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+        <class>test_silencer_character</class>
+        <community>killer</community>
+        <terrain_sect>stalker_terrain</terrain_sect>
+        <snd_config>characters_voice\human_01\stalker\</snd_config>
+        <rank>7397</rank>
+        <reputation>2407</reputation>
+        <money min="1000" max="2000" infinitive="0" />
+        <visual>actors\stalker_merc\stalker_merc_2</visual>
+        <supplies>
+        [spawn] \n
+        wpn_lr300 = 1, silencer \n
+        ammo_5.56x45_ss190 = 1 \n
+        wpn_colt1911 \n
+        ammo_11.43x23_fmj  = 1 \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs_2.xml"
+    </supplies>
+        #include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+    </specific_character>
+
+</xml>

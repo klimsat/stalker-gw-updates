@@ -1,0 +1,310 @@
+costs_by_smart = {}
+
+local dialog_was_init = false
+local cost_current_level = 1500
+local cost_other_level = 5000
+local price_good_friend_coff = 0.004
+local price_friend_coff = 0.005
+local price_coff = 0.002
+local dialog_id = "dialog_explorer_start"
+local dialog_structure = {}
+
+function initDialog(dialog)
+  wargreat_dialogs_common_logic.saved_dialogs[dialog_id] = dialog
+  wargreat_dialogs_common_logic.parse_dialogs(dialog_structure, dialog_id)
+end
+
+function level_has_smarts_condition(first_speaker, second_speaker, lvl)
+  local smarts =
+    utils.join_tables_index(
+    sim_levels.level_information[lvl].base_smarts,
+    sim_levels.level_information[lvl].camp_smarts
+  )
+  local has_smarts = false
+
+  for i = 1, #smarts do
+    local smart = alife_object(smarts[i])
+
+    local has = smart_condition(first_speaker, second_speaker, smart)
+    if not has_smarts and has then
+      return has
+    end
+  end
+
+  return has_smarts
+end
+function level_has_no_smarts_condition(first_speaker, second_speaker, lvl)
+  local has = level_has_smarts_condition(first_speaker, second_speaker, lvl)
+  return not has
+end
+
+function has_any_level(first_speaker, second_speaker)
+  local has = false
+
+  for level_id, props in pairs(sim_levels.level_information) do
+    local smarts = utils.join_tables_index(props.base_smarts, props.camp_smarts)
+
+    for i = 1, #smarts do
+      local smart = alife_object(smarts[i])
+
+      if not has then
+        has = smart_condition(first_speaker, second_speaker, smart)
+      end
+    end
+  end
+
+  return has
+end
+function has_no_any_level(first_speaker, second_speaker, lvl)
+  local has = has_any_level(first_speaker, second_speaker, lvl)
+  return not has
+end
+
+function smart_condition(first_speaker, second_speaker, smart)
+  local npc = dialogs.who_is_npc(first_speaker, second_speaker)
+  local squad = get_object_squad(npc)
+  local npc_smart_id = squad and squad.smart_id
+  local actor_faction = sim_brain.actor_faction
+  local smart_faction = smart.owning_faction or "none"
+
+  if npc_smart_id == smart.id then
+    return false
+  end
+
+  if smart_faction == "none" then
+    return false
+  end
+
+  local relation = game_relations.get_factions_community(actor_faction, smart_faction)
+
+  if relation < 0 then
+    return false
+  end
+
+  return true
+end
+function smart_action(first_speaker, second_speaker, smart)
+  local cost = costs_by_smart[smart:name()]
+
+  news_manager.relocate_money(db.actor, "out", -cost)
+  db.actor:give_money(-cost)
+  utils.news_params(
+    ("Финансовые операции"),
+    (strformat("Вы оплатили услуги проводника: -%s руб.", cost)),
+    getSenderSmsIcon(sim_brain.actor_faction),
+    0,
+    15000
+  )
+
+  dialogs.break_dialog(first_speaker, second_speaker)
+  xr_effects.disable_ui()
+  level.add_pp_effector("surge_fade.ppe", 11, false)
+
+  time.setTimeout(
+    function()
+      _G.JumpToSmart(smart)
+
+      xr_effects.enable_ui()
+    end,
+    2000
+  )
+end
+function choose_smart_action(first_speaker, second_speaker, smart)
+  local cost = costs_by_smart[smart:name()]
+  local smart_name_text = sim_script_to_text.smart_names[smart:name()] or smart:name()
+  local npc = dialogs.who_is_npc(first_speaker, second_speaker)
+
+  utils.news_params(
+    "Проводник:",
+    strformat(GetString("st_dialog_explorer_choose_smart_cost_sms"), smart_name_text, cost),
+    npc:character_icon(),
+    0,
+    15000
+  )
+end
+function actor_has_money(first_speaker, second_speaker, smart)
+  if not db.actor then
+    return false
+  end
+
+  return db.actor:money() >= costs_by_smart[smart:name()]
+end
+
+local function initialize_dialog_structure()
+  local has_any_level_func_name = "dialog_explorer_has_any_level"
+  _G[has_any_level_func_name] = function(first_speaker, second_speaker)
+    return wargreat_dialogs_explorer.has_any_level(first_speaker, second_speaker)
+  end
+  local has_no_any_level_func_name = "dialog_explorer_has_no_any_level"
+  _G[has_no_any_level_func_name] = function(first_speaker, second_speaker)
+    return wargreat_dialogs_explorer.has_no_any_level(first_speaker, second_speaker)
+  end
+
+  dialog_structure = nil
+  dialog_structure = {
+    {
+      text = "st_dialog_explorer_start",
+      condition = nil,
+      action = nil,
+      next = {
+        {
+          text = "st_dialog_explorer_start_answer",
+          condition = has_any_level_func_name,
+          action = nil,
+          next = {}
+        },
+        {
+          text = "st_dialog_explorer_choose_level_answer_no_levels",
+          condition = has_no_any_level_func_name,
+          action = nil,
+          next = nil
+        }
+      }
+    }
+  }
+
+  local sim = alife()
+  local actor = sim:actor()
+  local actor_level = game_graph():vertex(actor.m_game_vertex_id):level_id()
+
+  for i = 1, #sim_tables.active_levels do
+    local lvl = sim_tables.active_levels[i]
+    local smarts =
+      utils.join_tables_index(
+      sim_levels.level_information[lvl].base_smarts,
+      sim_levels.level_information[lvl].camp_smarts
+    )
+    local level_name = sim:level_name(lvl)
+    local level_text_name = GetString(level_name)
+    local condition_level_has_smarts_func_name = strformat("dialog_explorer_condition_level_has_smarts_%s", level_name)
+
+    _G[condition_level_has_smarts_func_name] = function(first_speaker, second_speaker)
+      return wargreat_dialogs_explorer.level_has_smarts_condition(first_speaker, second_speaker, lvl)
+    end
+
+    local item_lvl = {
+      text = level_text_name,
+      condition = condition_level_has_smarts_func_name,
+      action = nil,
+      next = {
+        {
+          text = "st_dialog_explorer_choose_level_answer",
+          condition = nil,
+          action = nil,
+          next = {}
+        }
+      }
+    }
+
+    for i = 1, #smarts do
+      local smart = alife_object(smarts[i])
+      local smart_level = game_graph():vertex(smart.m_game_vertex_id):level_id()
+      local smart_name = sim_script_to_text.smart_names[smart:name()] or smart:name()
+      local dist = tonumber(string.format("%.0f", utils.get_dist_actor_to_smart(smart)))
+      local action_func_name = strformat("dialog_explorer_tp_action_on_%s_%s", level_name, smart:name())
+      local condition_func_name = strformat("dialog_explorer_condition_on_%s_%s", level_name, smart:name())
+      local actor_faction = sim_brain.actor_faction
+      local smart_faction = smart.owning_faction
+      local relation = game_relations.get_factions_community(actor_faction, smart_faction)
+      local coff_dist = tonumber(string.format("%.0f", dist * price_coff))
+
+      if relation and actor_faction ~= smart_faction then
+        if relation >= 0 and relation <= 999 then
+          coff_dist = tonumber(string.format("%.0f", dist * price_friend_coff))
+        elseif relation >= 1000 then
+          coff_dist = tonumber(string.format("%.0f", dist * price_good_friend_coff))
+        end
+      end
+
+      local cost = coff_dist
+
+      if actor_level == smart_level then
+        cost = cost + cost_current_level
+      else
+        cost = cost + cost_other_level
+      end
+
+      costs_by_smart[smart:name()] = cost
+
+      local condition_func_cost_tp = strformat("dialog_explorer_condition_actor_has_money_%s", smart:name())
+      local choose_smart_action = strformat("dialog_explorer_condition_choose_smart_%s", smart:name())
+      _G[action_func_name] = function(first_speaker, second_speaker)
+        wargreat_dialogs_explorer.smart_action(first_speaker, second_speaker, smart)
+      end
+      _G[condition_func_name] = function(first_speaker, second_speaker)
+        return wargreat_dialogs_explorer.smart_condition(first_speaker, second_speaker, smart)
+      end
+      _G[condition_func_cost_tp] = function(first_speaker, second_speaker)
+        return wargreat_dialogs_explorer.actor_has_money(first_speaker, second_speaker, smart)
+      end
+      _G[choose_smart_action] = function(first_speaker, second_speaker)
+        wargreat_dialogs_explorer.choose_smart_action(first_speaker, second_speaker, smart)
+      end
+
+      local item_smart = {
+        text = smart_name,
+        condition = condition_func_name,
+        action = choose_smart_action,
+        next = {
+          {
+            text = "st_dialog_explorer_choose_smart_answer",
+            next = {
+              {
+                text = "st_dialog_explorer_choose_smart_accept",
+                condition = condition_func_cost_tp,
+                action = action_func_name,
+                next = nil
+              },
+              {
+                text = "st_dialog_explorer_choose_smart_discard",
+                next = nil
+              }
+            }
+          }
+        }
+      }
+
+      table.insert(item_lvl.next[1].next, item_smart)
+    end
+
+    table.insert(
+      item_lvl.next[1].next,
+      {
+        text = "st_dialog_explorer_choose_level_back",
+        next = {
+          {
+            text = "",
+            back_level = 2
+          }
+        }
+      }
+    )
+    table.insert(dialog_structure[1].next[1].next, item_lvl)
+  end
+end
+
+local function save_state(m_data)
+  if (not m_data.dialog_explorer) then
+    m_data.dialog_explorer = {}
+  end
+
+  m_data.dialog_explorer.dialog_was_init = dialog_was_init
+  m_data.dialog_explorer.dialog_structure = dialog_structure
+end
+
+local function load_state(m_data)
+  if (not m_data.dialog_explorer) then
+    return
+  end
+
+  dialog_was_init = m_data.dialog_explorer.dialog_was_init
+  dialog_structure = m_data.dialog_explorer.dialog_structure
+
+  m_data.dialog_explorer = nil
+end
+
+function on_game_start()
+  -- RegisterScriptCallback("save_state", save_state)
+  -- RegisterScriptCallback("load_state", load_state)
+  RegisterScriptCallback("sim_initialized", initialize_dialog_structure)
+end
