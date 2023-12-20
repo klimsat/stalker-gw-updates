@@ -14,6 +14,8 @@ gamedata/levels/
 gamedata/levels/
 gamedata/levels/
 
+gamedata/configs/axr_options.ltx
+
 *.exe
 *.dat
 *.xr
