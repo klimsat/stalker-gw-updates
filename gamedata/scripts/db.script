@@ -28,6 +28,7 @@ level_doors = {} -- Содержит список всех дверей на уровне (чтобы нпс могли по не
 no_weap_zones = {}
 spawned_vertex_by_id = {}
 dynamic_ltx = {}
+actor_binder = nil
 vehicle = nil
 
 function add_enemy(obj)

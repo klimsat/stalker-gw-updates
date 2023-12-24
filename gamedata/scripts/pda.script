@@ -214,7 +214,7 @@ function fill_primary_objects()
     {target = "gar_smart_terrain_5_6_anomaly_spot", hint = "st_gar_smart_terrain_5_6_anomaly_spot_name"},
     {target = "gar_smart_terrain_1_7_anomaly_spot", hint = "st_gar_smart_terrain_1_7_anomaly_spot_name"},
     {target = "agr_smart_terrain_1_3_anomaly_spot", hint = "st_agr_smart_terrain_1_3_anomaly_spot_name"},
-    -- {target = "agr_smart_terrain_4_4_near_3_anomaly_spot", hint = "st_agr_smart_terrain_4_4_near_3_anomaly_spot_name"},
+    {target = "agr_smart_terrain_3_5_anomaly_spot", hint = "st_agr_smart_terrain_3_5_anomaly_spot_name"},
     {target = "agr_smart_terrain_5_7_anomaly_spot", hint = "st_agr_smart_terrain_5_7_anomaly_spot_name"},
     {target = "agr_smart_terrain_5_2_anomaly_spot", hint = "st_agr_smart_terrain_5_2_anomaly_spot_name"},
     {target = "agr_smart_terrain_1_2_anomaly_spot", hint = "st_agr_smart_terrain_1_2_anomaly_spot_name"},

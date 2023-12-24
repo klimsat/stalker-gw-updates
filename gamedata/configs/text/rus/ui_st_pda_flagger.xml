@@ -51,7 +51,7 @@
 		<text>Атаковать (последний отряд)</text>
 	</string>
 	<string id="ui_st_flagger_attack_one_smart">
-		<text>Атака с «%s» (1 отряд)</text>
+		<text>Атака с «%s» (1 отряд из %s)</text>
 	</string>
 	<string id="ui_st_flagger_attack_all_smart">
 		<text>Атака с «%s» (все отряды)</text>
@@ -66,13 +66,13 @@
 		<text>Захватить</text>
 	</string>
 	<string id="ui_st_flagger_capture_one">
-		<text>Захватить (1 отряд)</text>
+		<text>Захватить (1 отряд из %s)</text>
 	</string>
 	<string id="ui_st_flagger_capture_last">
 		<text>Захватить (последний отряд)</text>
 	</string>
 	<string id="ui_st_flagger_capture_one_smart">
-		<text>Захват с «%s» (1 отряд)</text>
+		<text>Захват с «%s» (1 отряд из %s)</text>
 	</string>
 	<string id="ui_st_flagger_capture_all_smart">
 		<text>Захват с «%s» (все отряды)</text>
@@ -93,7 +93,7 @@
 		<text>Отправить на защиту (последний отряд)</text>
 	</string>
 	<string id="ui_st_flagger_defence_one_smart">
-		<text>Защита с «%s» (1 отряд)</text>
+		<text>Защита с «%s» (1 отряд из %s)</text>
 	</string>
 	<string id="ui_st_flagger_defence_all_smart">
 		<text>Защита с «%s» (все отряды)</text>

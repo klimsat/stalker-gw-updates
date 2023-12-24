@@ -90,7 +90,7 @@ use_camp = true
 turn_on_campfire = true
 
 [logic@mechanic]
-suitable = {=check_npc_name(sim_default_army_mechanic)} true, {=check_npc_name(sim_default_freedom_mechanic)} true, {=check_npc_name(sim_default_bandit_mechanic)} true, {=check_npc_name(sim_default_dolg_mechanic)} true, {=check_npc_name(sim_default_monolith_mechanic)} true, {=check_npc_name(sim_default_stalker_mechanic)} true, {=check_npc_name(sim_default_ecolog_mechanic)} true, {=check_npc_name(sim_default_csky_mechanic)} true, {=check_npc_name(sim_default_killer_mechanic)} true, {=check_npc_name(sim_default_isg_mechanic)} true, {=check_npc_name(sim_default_darkstalker_mechanic)} true, {=check_npc_name(sim_default_renegate_mechanic)} true, {=check_npc_name(sim_default_varyag_mechanic)} true, {=check_npc_name(sim_default_slizni_mechanic)} true, {=check_npc_name(sim_default_velhan_mechanic)} true, {=check_npc_name(sim_default_fantom_mechanic)} true, {=check_npc_name(sim_default_veter_mechanic)} true, {=check_npc_name(sim_default_osoznanie_mechanic)} true, {=check_npc_name(sim_default_alfa_mechanic)} true, {=check_npc_name(sim_default_apocalypse_mechanic)} true, {=check_npc_name(sim_default_adinkvizicia_mechanic)} true, {=check_npc_name(sim_default_hunter_mechanic)} true, {=check_npc_name(sim_default_voenstal_mechanic)} true, {=check_npc_name(sim_default_mirotvorec_mechanic)} true, {=check_npc_name(sim_default_ryskuspecnaz_mechanic)} true, {=check_npc_name(sim_default_sby_mechanic)} true, {=check_npc_name(sim_default_angel_mechanic)} true, {=check_npc_name(sim_default_posleduden_mechanic)} true, {=check_npc_name(sim_default_greh_mechanic)} true
+suitable = {=is_npc_match(mechanic)} true
 prior = 200
 active = animpoint@mech2
 level_spot = mechanic

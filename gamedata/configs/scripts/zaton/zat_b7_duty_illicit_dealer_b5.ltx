@@ -1,6 +1,6 @@
 [logic@zat_b7_bandit_boss_sultan_b5]
 active = walker@start
-suitable = {=check_npc_name(zat_b7_duty_illicit_dealer) -zat_b5_trader_death} true
+suitable = {=is_npc_match(trader)} true
 prior = 100
 post_combat_time = 0,0 ;5,5
 on_death = death

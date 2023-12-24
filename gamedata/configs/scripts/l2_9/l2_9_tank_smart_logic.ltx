@@ -37,7 +37,7 @@ turn_on_campfire = true
 
 ;mechanic
 [logic@mechanic]
-suitable = {=check_npc_name(sim_default_army_mechanic)} true, {=check_npc_name(sim_default_freedom_mechanic)} true, {=check_npc_name(sim_default_bandit_mechanic)} true, {=check_npc_name(sim_default_dolg_mechanic)} true, {=check_npc_name(sim_default_monolith_mechanic)} true, {=check_npc_name(sim_default_stalker_mechanic)} true, {=check_npc_name(sim_default_ecolog_mechanic)} true, {=check_npc_name(sim_default_csky_mechanic)} true, {=check_npc_name(sim_default_killer_mechanic)} true, {=check_npc_name(sim_default_isg_mechanic)} true, {=check_npc_name(sim_default_darkstalker_mechanic)} true, {=check_npc_name(sim_default_renegate_mechanic)} true, {=check_npc_name(sim_default_varyag_mechanic)} true, {=check_npc_name(sim_default_slizni_mechanic)} true, {=check_npc_name(sim_default_velhan_mechanic)} true, {=check_npc_name(sim_default_fantom_mechanic)} true, {=check_npc_name(sim_default_veter_mechanic)} true, {=check_npc_name(sim_default_osoznanie_mechanic)} true, {=check_npc_name(sim_default_alfa_mechanic)} true, {=check_npc_name(sim_default_apocalypse_mechanic)} true, {=check_npc_name(sim_default_adinkvizicia_mechanic)} true, {=check_npc_name(sim_default_hunter_mechanic)} true, {=check_npc_name(sim_default_voenstal_mechanic)} true, {=check_npc_name(sim_default_mirotvorec_mechanic)} true, {=check_npc_name(sim_default_ryskuspecnaz_mechanic)} true, {=check_npc_name(sim_default_sby_mechanic)} true, {=check_npc_name(sim_default_angel_mechanic)} true, {=check_npc_name(sim_default_posleduden_mechanic)} true, {=check_npc_name(sim_default_greh_mechanic)} true
+suitable = {=is_npc_match(mechanic)} true
 prior = 100
 active = animpoint@tech
 level_spot = mechanic
@@ -54,7 +54,7 @@ corpse_detection_enabled = false
 
 ;trader
 [logic@trader]
-suitable = {=check_npc_name(sim_default_army_trader)} true, {=check_npc_name(sim_default_freedom_trader)} true, {=check_npc_name(sim_default_bandit_trader)} true, {=check_npc_name(sim_default_dolg_trader)} true, {=check_npc_name(sim_default_monolith_trader)} true, {=check_npc_name(sim_default_stalker_trader)} true, {=check_npc_name(sim_default_ecolog_trader)} true, {=check_npc_name(sim_default_csky_trader)} true, {=check_npc_name(sim_default_killer_trader)} true, {=check_npc_name(sim_default_isg_trader)} true, {=check_npc_name(sim_default_darkstalker_trader)} true, {=check_npc_name(sim_default_renegate_trader)} true, {=check_npc_name(sim_default_varyag_trader)} true, {=check_npc_name(sim_default_slizni_trader)} true, {=check_npc_name(sim_default_velhan_trader)} true, {=check_npc_name(sim_default_fantom_trader)} true, {=check_npc_name(sim_default_veter_trader)} true, {=check_npc_name(sim_default_osoznanie_trader)} true, {=check_npc_name(sim_default_alfa_trader)} true, {=check_npc_name(sim_default_apocalypse_trader)} true, {=check_npc_name(sim_default_adinkvizicia_trader)} true, {=check_npc_name(sim_default_hunter_trader)} true, {=check_npc_name(sim_default_voenstal_trader)} true, {=check_npc_name(sim_default_mirotvorec_trader)} true, {=check_npc_name(sim_default_ryskuspecnaz_trader)} true, {=check_npc_name(sim_default_sby_trader)} true, {=check_npc_name(sim_default_angel_trader)} true, {=check_npc_name(sim_default_posleduden_trader)} true, {=check_npc_name(sim_default_greh_trader)} true
+suitable = {=is_npc_match(trader)} true
 prior = 100
 active = animpoint@trade
 level_spot = trader

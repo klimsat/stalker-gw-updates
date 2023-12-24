@@ -1627,9 +1627,6 @@ function actor_on_save(binder, packet)
     alun_utils.w_stpk(packet, "bool", mgr.ui_disabled, "CSurgeManager:ui_disabled")
     alun_utils.w_stpk(packet, "bool", mgr.blowout_sound, "CSurgeManager:blowout_sound")
 
-    --alun_utils.w_stpk(packet,"stringZ",mgr.surge_message,"CSurgeManager:surge_message")
-    --alun_utils.w_stpk(packet,"stringZ",mgr.surge_task_sect,"CSurgeManager:surge_task_sect")
-
     alun_utils.w_stpk(packet, "u32", mgr.game_time_factor, "CSurgeManager:game_time_factor")
   end
   alun_utils.w_stpk(packet, "u32", mgr._delta, "CSurgeManager:_delta")
@@ -1650,8 +1647,8 @@ function actor_on_load(binder, packet)
   set_save_marker(packet, "load", false, "SurgeHide")
   mgr.finished = packet:r_bool()
   mgr.started = packet:r_bool()
-
   mgr.last_surge_time = utils.r_CTime(packet, "surge_manager") or game.get_game_time()
+
   if (mgr.started) then
     mgr.inited_time = utils.r_CTime(packet, "surge_manager") or game.get_game_time()
     mgr.task_given = packet:r_bool()
@@ -1660,8 +1657,6 @@ function actor_on_load(binder, packet)
     mgr.ui_disabled = packet:r_bool()
     mgr.blowout_sound = packet:r_bool()
 
-    --mgr.surge_message = packet:r_stringZ()
-    --mgr.surge_task_sect = packet:r_stringZ()
     mgr.game_time_factor = packet:r_u32()
     mgr:finalize()
     mgr.blowout_waves = empty_table(mgr.blowout_waves)

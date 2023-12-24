@@ -46,7 +46,7 @@ local function follow_to_target(se_obj)
     for _, object_id in pairs(selectedTargets) do
       local object = alife_object(object_id)
 
-      if object and IsSquad(object) then
+      if object and IsSquad(object) and not IsUniqSquad(squad) then
         set_target(object, se_obj.id)
       end
     end
@@ -122,7 +122,7 @@ local function select_all_squads(se_obj)
     local squad = alife_object(squadId)
     local squad_level = squad and sim:level_name(game_graph():vertex(squad.m_game_vertex_id):level_id()) or nil
 
-    if IsSquad(squad) and squad_level == selected_level and not IsLeaderSquad(squad) then
+    if IsSquad(squad) and not IsUniqSquad(squad) and squad_level == selected_level and not IsLeaderSquad(squad) then
       selectOne(squadId)
     end
   end
@@ -271,7 +271,7 @@ local event_table = {
           local relation = game_relations.get_factions_community(sim_brain.actor_faction, targetFaction)
 
           if
-            sim_smart.isNotUniqueSquad(squad:section_name()) and selectedSquad == nil and
+            not IsUniqSquad(squad) and selectedSquad == nil and
               (not sim_tables.ignore[squad:section_name()] or not IsLeaderSquad(squad)) and
               (DEV_DEBUG or (sim_brain.actor_faction == targetFaction and relation and relation >= 4000))
            then
@@ -526,7 +526,7 @@ function setTargetForSmartSquads(targetId, action, countStr, fromSmartName)
     if IsSmart(smart) then
       local hasTakeSquad = nil
       for _, squad in pairs(SIMBOARD.smarts[smart.id].squads) do
-        if IsSquad(squad) and sim_smart.isNotUniqueSquad(squad:section_name()) and hasTakeSquad == nil then
+        if IsSquad(squad) and not IsUniqSquad(squad) and hasTakeSquad == nil then
           set_target(squad, targetId)
           hasTakeSquad = true
           randId = nil
@@ -543,7 +543,7 @@ function setTargetForSmartSquads(targetId, action, countStr, fromSmartName)
       if IsSmart(smart) then
         if fromSmartName ~= nil and fromSmartName == smart:name() then
           for _, squad in pairs(SIMBOARD.smarts[smart.id].squads) do
-            if IsSquad(squad) then
+            if IsSquad(squad) and not IsUniqSquad(squad) then
               set_target(squad, targetId)
             end
           end
@@ -552,7 +552,7 @@ function setTargetForSmartSquads(targetId, action, countStr, fromSmartName)
           end
         elseif fromSmartName == nil then
           for _, squad in pairs(SIMBOARD.smarts[smart.id].squads) do
-            if IsSquad(squad) then
+            if IsSquad(squad) and not IsUniqSquad(squad) then
               set_target(squad, targetId)
             end
           end
@@ -622,7 +622,7 @@ local function map_spot_menu_add_property(ui, id, level_name)
 
   if
     id and IsSquad(se_obj) and
-      (utils.isSameFactionSquad(se_obj) or utils.canControlMonsters(se_obj) or
+      ((not IsUniqSquad(se_obj) and utils.isSameFactionSquad(se_obj)) or utils.canControlMonsters(se_obj) or
         (DEV_DEBUG and not utils.isSameFactionSquad(se_obj)))
    then
     local squadProps = sim_tables.registered_squads[se_obj:get_squad_community()][id]
@@ -755,11 +755,11 @@ local function map_spot_menu_add_property(ui, id, level_name)
       local smart = alife_object(smartId)
 
       if IsSmart(smart) then
-        local squadCount = sim_smart.get_squad_count(smart)
+        local squadCount = sim_smart.get_squad_count_without_unique(smart, smart.owning_faction)
 
         if squadCount > 1 then
           add_item(
-            strformat("ui_st_flagger_%s_one", action),
+            strformat(gs(strformat("ui_st_flagger_%s_one", action)), squadCount),
             function()
               event_table[strformat("ui_st_flagger_%s_one", action)](se_obj)
             end
@@ -774,34 +774,43 @@ local function map_spot_menu_add_property(ui, id, level_name)
         end
       end
     else
+      local restTargets = {}
       for _, smartId in pairs(selectedTargets) do
         local smart = alife_object(smartId)
 
         if IsSmart(smart) then
-          local squadCount = sim_smart.get_squad_count(smart)
+          local squadCount = sim_smart.get_squad_count_without_unique(smart, smart.owning_faction)
           local targetName = sim_script_to_text.smart_names[smart:name()] or smart:name()
 
           if squadCount > 1 then
             add_item(
-              strformat(gs(strformat("ui_st_flagger_%s_one_smart", action)), targetName),
+              strformat(gs(strformat("ui_st_flagger_%s_one_smart", action)), targetName, squadCount),
               function()
                 event_table[strformat(strformat("ui_st_flagger_%s_one_smart", action), targetName)](se_obj, smart)
               end
             )
             add_item(
-              strformat(gs(strformat("ui_st_flagger_%s_all_smart", action)), targetName),
+              strformat(gs(strformat("ui_st_flagger_%s_all_smart", action)), targetName, squadCount),
               function()
                 event_table[strformat(strformat("ui_st_flagger_%s_all_smart", action), targetName)](se_obj, smart)
               end
             )
           else
-            add_item(
-              strformat(gs(strformat("ui_st_flagger_%s_last_smart", action)), targetName),
-              function()
-                event_table[strformat(strformat("ui_st_flagger_%s_last_smart", action), targetName)](se_obj, smart)
-              end
-            )
+            table.insert(restTargets, smartId)
           end
+        end
+      end
+      for _, smartId in pairs(restTargets) do
+        local smart = alife_object(smartId)
+
+        if IsSmart(smart) then
+          local targetName = sim_script_to_text.smart_names[smart:name()] or smart:name()
+          add_item(
+            strformat(gs(strformat("ui_st_flagger_%s_last_smart", action)), targetName),
+            function()
+              event_table[strformat(strformat("ui_st_flagger_%s_last_smart", action), targetName)](se_obj, smart)
+            end
+          )
         end
       end
     end

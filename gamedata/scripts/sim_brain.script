@@ -84,8 +84,8 @@ function squad_on_npc_creation(squad, se_obj, spawn_smart)
     return
   end
 
-  if not (ignore[squad:section_name()]) then
-    if (not squad.registered_in_simultaion) then
+  if not sim_tables.ignore[squad:section_name()] then
+    if not squad.registered_in_simultaion then
       local faction = squad:get_squad_community()
 
       if (sim_tables.registered_squads[faction]) then
@@ -221,13 +221,14 @@ function fill_start_position()
 
   setting_ini = ini_file(string.format("misc\\simulations\\%s.ltx", sector))
 
-  local squad_section, count, li, lc, faction
+  local squad_section, count, li, lc
   setting_ini:section_for_each(
     function(section)
       lc = setting_ini:line_count(section)
       for li = 0, lc - 1 do
         local smart = SIMBOARD.smarts_by_names[section]
         if (smart) then
+          local faction
           _, squad_section, str_count = setting_ini:r_line(section, li, "", "")
 
           if str_count ~= "" then
@@ -246,7 +247,7 @@ function fill_start_position()
             spawn_leader = false
           end
 
-          if string.find(enabled_factions, faction) and spawn_leader then
+          if (string.find(enabled_factions, faction) or faction == "trader") and spawn_leader then
             utils.debug("sim_brain spawn_leader: [%s][%s]", spawn_leader, squad_section)
             for _ = 1, count do
               local squad = SIMBOARD:create_squad(smart, squad_section)

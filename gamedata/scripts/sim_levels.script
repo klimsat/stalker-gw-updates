@@ -66,7 +66,7 @@ function update_level(lvl)
     for i, sm in pairs(level_information[lvl].smarts) do
       local smart = sm and alife_object(sm)
 
-      if (smart and smart.owning_faction) then
+      if smart and smart.owning_faction then
         local smart_faction = smart.owning_faction
 
         local information = get_information_object(lvl, smart_faction)

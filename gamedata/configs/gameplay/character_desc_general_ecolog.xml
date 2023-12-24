@@ -13,7 +13,7 @@
     <money min="22000" max="61750" infinitive="0"/>
     <supplies>
     [spawn] \n
-    wpn_hk417 = 1, silencer = 1 \n
+    wpn_hk417 = 1, silencer \n
     ammo_7.62x51_fmj = 2 \n
     wpn_sig220 \n
     ammo_11.43x23_fmj = 2 \n

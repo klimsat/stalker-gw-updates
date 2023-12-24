@@ -35,15 +35,15 @@
 	</context_menu>
 	<context_list>
 		<file_item>
-			<main width="230" height="18"/>
-			<fn width="230" height="18"/>
+			<main width="260" height="18"/>
+			<fn width="260" height="18"/>
 			<fd width="50" height="18"/>
 		</file_item>
-		<form x="0" y="0" width="230" height="400" stretch="1">
-			<list_frame x="0" y="0" width="230" height="400">
+		<form x="0" y="0" width="260" height="400" stretch="1">
+			<list_frame x="0" y="0" width="260" height="400">
 				<texture>ui_icons_PDA_tooltips</texture>
 			</list_frame>
-			<list x="10" y="10" width="215" height="380" item_height="22" can_select="1" always_show_scroll="0">
+			<list x="10" y="10" width="245" height="380" item_height="22" can_select="1" always_show_scroll="0">
 				<font font="letterica16"/>
 			</list>
 		</form>

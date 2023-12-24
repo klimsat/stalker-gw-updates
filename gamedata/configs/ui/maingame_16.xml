@@ -164,45 +164,24 @@
     </quick_slot3_text>
 
 	<hud_states x="0" y="0" width="1024" height="768" stretch="1">
-<!--
-		<bleeding_level_1 x="150" y="-42" width="13" height="26" light_anim="ui_slow_blinking" la_cyclic="1" la_texture="1" la_text="0" la_alpha="1" stretch="1">
-			<texture r="255" g="0"  b="0" a="255">ui_inGame2_blood_icon_part_1</texture>
-		</bleeding_level_1>
-		<bleeding_level_2 x="147" y="-47" width="18" height="34" light_anim="ui_slow_blinking" la_cyclic="1" la_texture="1" la_text="0" la_alpha="1" stretch="1">
-			<texture r="255" g="0"  b="0" a="255">ui_inGame2_blood_icon_part_2</texture>
-		</bleeding_level_2>
-		<bleeding_level_3 x="144" y="-52" width="24" height="43" light_anim="ui_slow_blinking" la_cyclic="1" la_texture="1" la_text="0" la_alpha="1" stretch="1">
-			<texture r="255" g="0"  b="0" a="255">ui_inGame2_blood_icon_part_3</texture>
-		</bleeding_level_3>
-
-		<radiation_level_1 x="143" y="-93" width="23" height="29" light_anim="ui_slow_blinking" la_cyclic="1" la_texture="1" la_text="0" la_alpha="1" stretch="1">
-			<texture r="255" g="255" b="0" a="255">ui_inGame2_radiation_icon_part_1</texture>
-		</radiation_level_1>
-		<radiation_level_2 x="141" y="-96" width="27" height="35" light_anim="ui_slow_blinking" la_cyclic="1" la_texture="1" la_text="0" la_alpha="1" stretch="1">
-			<texture r="255" g="255" b="0" a="255">ui_inGame2_radiation_icon_part_2</texture>
-		</radiation_level_2>
-		<radiation_level_3 x="138" y="-100" width="33" height="43" light_anim="ui_slow_blinking" la_cyclic="1" la_texture="1" la_text="0" la_alpha="1" stretch="1">
-			<texture r="255" g="255" b="0" a="255">ui_inGame2_radiation_icon_part_3</texture>
-		</radiation_level_3>
--->
 		<indik_rad x="24" y="230" width="29" height="33" stretch="1"/>
 		<indik_fire x="60" y="230" width="29" height="33" stretch="1"/>
 		<indik_psi x="96" y="230" width="29" height="33" stretch="1"/>
 		<indik_acid x="132" y="230" width="29" height="33" stretch="1"/>
 
-		<back x="0" y="660" width="1030" height="125" stretch="1">
-			<texture>hud_back</texture>
+		<back x="0" y="697" width="1024" height="63" stretch="1">
+			<texture>hud_back_bars</texture>
 		</back>
 
-		<progress_bar_health x="32" y="714" width="84" height="16" horz="1" min="0" max="100" pos="0">
+		<progress_bar_health x="32" y="714" width="89" height="16" horz="1" min="0" max="100" pos="0">
 			<progress><!-- light_anim="ui_blinking_1" la_cyclic="0" la_texture="1" la_text="0" la_alpha="1" stretch="1"-->
-				<texture>ui\hud_bar_health</texture>
+				<texture>hud_health_bar</texture>
 			</progress>
 		</progress_bar_health>
 
-	    <progress_bar_stamina x="32" y="731" width="84" height="16" horz="1" min="0" max="100" pos="0">
+	    <progress_bar_stamina x="32" y="735" width="89" height="8" horz="1" min="0" max="100" pos="0">
 	        <progress><!-- light_anim="ui_blinking_1" la_cyclic="0" la_texture="1" la_text="0" la_alpha="1" stretch="1"-->
-		        <texture>ui\hud_bar_stamina</texture>
+		        <texture>hud_stamina_bar</texture>
 	        </progress>
 	    </progress_bar_stamina>
 		
@@ -212,11 +191,11 @@
 			<text complex_mode="0" font="graffiti32" r="255" g="255" b="255" align="r" vert_align="t">ammo</text>
 		</static_cur_ammo>
 		
-	    <static_fmj_ammo x="890" y="705" width="30" height="19">
+	    <static_fmj_ammo x="884" y="705" width="30" height="19">
 	        <text align="r" complex_mode="0" font="graffiti22" r="245" g="245" b="245" >fmj</text>
 	    </static_fmj_ammo>
 
-	    <static_ap_ammo x="915" y="705" width="30" height="19">
+	    <static_ap_ammo x="926" y="705" width="30" height="19">
 	        <text align="r" complex_mode="0" font="graffiti22" r="245" g="245" b="245" >ap</text>
 	    </static_ap_ammo>
 		

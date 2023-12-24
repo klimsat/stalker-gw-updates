@@ -550,6 +550,11 @@ function set_target(squad, targetId)
   if not IsSquad(squad) then
     return
   end
+  if not targetId then
+    return
+  end
+
+  local target = alife_object(targetId)
 
   if (sim_tables.ignore[squad:section_name()] or IsLeaderSquad(squad)) then
     return
@@ -560,8 +565,6 @@ function set_target(squad, targetId)
   if target_squad_id then
     squad:reset_follow_logic()
   end
-
-  local target = targetId and alife_object(targetId)
 
   if not IsSmart(target) and not IsSquad(target) then
     return

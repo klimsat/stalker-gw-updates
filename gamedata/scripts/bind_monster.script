@@ -380,60 +380,42 @@ function generic_object_binder:net_destroy()
   end
 
   object_binder.net_destroy(self)
-  --alun_utils.debug_write("generic_object_binder:net_destroy END")
 end
 
 function generic_object_binder:reload(section)
-  --printf("start generic_object_binder:reload(): self.object:name()='%s' section=%s", self.object:name(),section)
-  --alun_utils.debug_write(strformat("--------%s:reload START",self.object and self.object:name()))
   object_binder.reload(self, section)
-  --alun_utils.debug_write(strformat("--------%s:reload END",self.object and self.object:name()))
-  --printf("end generic_object_binder:reload(): self.object:name()='%s' section=%s", self.object:name(),section)
 end
 
 function generic_object_binder:net_save_relevant()
-  --printf("generic_object_binder:net_save_relevant(): self.object:name()='%s'", self.object:name())
   return true
 end
 
 function generic_object_binder:save(packet)
-  utils.debug("generic_object_binder:save, packet:w_tell: %s | r_tell: %s", packet:w_tell(), packet:r_tell())
   set_save_marker(packet, "save", false, "generic_object_binder")
   object_binder.save(self, packet)
   set_save_marker(packet, "save", true, "generic_object_binder")
-  if (USE_MARSHAL) then
-    return
-  end
-  --alun_utils.debug_write("\n-------bind_monster save start------ "..self.object:name(),true)
-  xr_logic.save_obj(self.object, packet)
-  --alun_utils.debug_write("\n-------bind_monster save END----------"..self.object:name(),true)
 end
 
 function generic_object_binder:load(reader)
-  self.loaded = true
   set_save_marker(reader, "load", false, "generic_object_binder")
   object_binder.load(self, reader)
   set_save_marker(reader, "load", true, "generic_object_binder")
-  if (USE_MARSHAL) then
-    if (self.object) then -- ??
-      self:load_state()
-    end
-    return
+
+  self.loaded = true
+
+  if USE_MARSHAL then
+    self:load_state()
   end
-  --alun_utils.debug_write("\n-------bind_monster load start------ "..self.object:name(),true)
-  xr_logic.load_obj(self.object, reader)
-  --alun_utils.debug_write("\n--------bind monster load END -------"..self.object:name())
 end
 -----------------------------------------------------------------------------------------------------------------
 function generic_object_binder:save_state(m_data)
   if self == nil or self.object == nil or self.object:id() == 65535 then
-    printf(
+    utils.error(
       "generic_object_binder:save_state, self or self.object is nil, %s, %s, %s",
       self,
       self.id,
       self and self.object
     )
-    callstack()
     return
   end
 
@@ -448,8 +430,7 @@ function generic_object_binder:save_state(m_data)
     state = {}
   end
 
-  state.xr_logic = empty_table(state.xr_logic)
-
+  state.xr_logic = {}
   state.xr_logic.ini_filename = st.ini_filename
   state.xr_logic.section_logic = st.section_logic
   state.xr_logic.active_section = st.active_section
@@ -457,8 +438,16 @@ function generic_object_binder:save_state(m_data)
   state.xr_logic.activation_time = (st.activation_time or 0) - time_global()
   state.xr_logic.activation_game_time = st.activation_game_time
 
+  utils.debug(
+    "bind_monster.save_state, obj=[%s], ini_filename=[%s] section_logic=[%s] active_section=[%s] gulag_name=[%s]",
+    self.object:name(),
+    state.xr_logic.ini_filename,
+    state.xr_logic.section_logic,
+    state.xr_logic.active_section,
+    state.xr_logic.gulag_name
+  )
+
   db.storage[id].pstor = db.storage[id].pstor or {}
-  --alun_utils.debug_write(strformat("generic_object_binder:save_state %s AFTER",self.object:name()))
 end
 
 function generic_object_binder:load_state()
@@ -470,7 +459,6 @@ function generic_object_binder:load_state()
   local id = self.object:id()
   db.storage[id] = db.storage[id] or {}
   local st = db.storage[id]
-  --alun_utils.debug_write(strformat("generic_object_binder:load_state %s BEFORE",self.object:name()))
 
   st.loaded_ini_filename = state.xr_logic.ini_filename
   st.loaded_section_logic = state.xr_logic.section_logic
@@ -490,5 +478,4 @@ function generic_object_binder:load_state()
     db.storage[id].pstor_ctime = state.pstor_ctime
     state.pstor_ctime = nil
   end
-  --alun_utils.debug_write(strformat("generic_object_binder:load_state %s AFTER",self.object:name()))
 end

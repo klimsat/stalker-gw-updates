@@ -89,6 +89,8 @@ function addonAzazelFactionChooser:__init(mainmenuReference)
 
   self.checkBoxesList = {
     "doNotPlayAnimation",
+    "random",
+    "doNotRebornInSquadMember",
     "findNearest",
     "rebornInLeaders"
   }
@@ -114,6 +116,8 @@ function addonAzazelFactionChooser:InitControls()
   self.label_dead = xml:InitStatic("label_static_dead", self)
   self.label_chooseFaction = xml:InitStatic("label_static_chooseFaction", self)
   self.label_doNotPlayAnimation = xml:InitStatic("label_static_doNotPlayAnimation", self)
+  self.label_random = xml:InitStatic("label_static_random", self)
+  self.label_doNotRebornInSquadMember = xml:InitStatic("label_static_doNotRebornInSquadMember", self)
   self.label_findNearest = xml:InitStatic("label_static_findNearest", self)
   self.label_rebornInLeaders = xml:InitStatic("label_static_rebornInLeaders", self)
 
@@ -165,6 +169,8 @@ function addonAzazelFactionChooser:InitControls()
     self["checkbox_" .. self.checkBoxesList[i] .. "_unchecked"]:Show(not addon_azazel_menu[self.checkBoxesList[i]])
     self["checkbox_" .. self.checkBoxesList[i] .. "_checked"]:Show(addon_azazel_menu[self.checkBoxesList[i]])
   end
+
+  self:SwitchCheckbox("doNotRebornInSquadMember")
 end
 
 function addonAzazelFactionChooser:InitCallBacks()
@@ -199,6 +205,15 @@ end
 
 function addonAzazelFactionChooser:OnCheckBox_doNotPlayAnimation()
   self:SwitchCheckbox("doNotPlayAnimation")
+end
+function addonAzazelFactionChooser:OnCheckBox_doNotRebornInSquadMember()
+  self:SwitchCheckbox("doNotRebornInSquadMember")
+end
+
+function addonAzazelFactionChooser:OnCheckBox_random()
+  self:SwitchCheckbox("random")
+
+  self:UpdateOkVisibility()
 end
 
 function addonAzazelFactionChooser:OnCheckBox_findNearest()
@@ -380,6 +395,11 @@ function addonAzazelFactionChooser:UpdateOkVisibility()
       self.btn_ok:Show(true)
       return
     end
+  end
+
+  if addon_azazel_menu.random then
+    self.btn_ok:Show(true)
+    return
   end
 
   self.btn_ok:Show(false)

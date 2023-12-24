@@ -4,11 +4,11 @@
 -- Adapted the script for modification Call of Chernobyl "Global War" Alpha 0.4
 -- =======================================================================================
 local azazel_death = false
+enabled = false
+doNotRebornInSquadMember = false
 
 local function on_game_load()
-  local azazel = axr_main.config:r_value("character_creation", "new_game_azazel_mode", 1, false)
-
-  if not azazel or not has_alife_info("story_mode_disabled") then
+  if not enabled then
     return
   end
 
@@ -44,7 +44,7 @@ function addon_healActor()
 end
 
 function addon_playAnimation()
-  if not (ui_addon_azazel_faction_chooser.addon_azazel_menu["doNotPlayAnimation"]) then
+  if not ui_addon_azazel_faction_chooser.addon_azazel_menu["doNotPlayAnimation"] then
     level.disable_input()
     level.add_cam_effector("camera_effects\\prison_1.anm", 210409, false, "azazel_mode.cam_effector_end")
     bind_stalker_ext.invulnerable_time = time_global() + 30000
@@ -54,13 +54,11 @@ end
 local addonAllPossibleStalkers = {}
 
 local function actor_on_before_death(whoID, flags)
-  local azazel = axr_main.config:r_value("character_creation", "new_game_azazel_mode", 1, false)
-
-  if not azazel or not has_alife_info("story_mode_disabled") then
+  if not enabled then
     return
   end
 
-  if not (ui_addon_azazel_faction_chooser.addon_azazel_menu) then
+  if not ui_addon_azazel_faction_chooser.addon_azazel_menu then
     ui_addon_azazel_faction_chooser.addon_azazel_menu = {}
   end
 
@@ -83,9 +81,7 @@ local function actor_on_before_death(whoID, flags)
         se_obj.group_id ~= 65535)
      then
       if (IsSurvivalMode() or get_object_story_id(se_obj.group_id) == nil) then
-        if (axr_companions.companion_squads[se_obj.group_id]) then
-          --elseif (se_obj:community() == character_community(db.actor):sub(7)) then
-          --table.insert(faction_mates,se_obj.id)
+        if axr_companions.companion_squads[se_obj.group_id] and not doNotRebornInSquadMember then
           squad_mates[#squad_mates + 1] = se_obj.id
         else
           avail_entities[#avail_entities + 1] = se_obj.id
@@ -115,14 +111,19 @@ function addonStep2(actorStillHasCompanions)
   local sim = alife()
   local se_obj
   local factionsPool = ui_addon_azazel_faction_chooser.addon_azazel_menu.factionsPool
+  local randomChoose = ui_addon_azazel_faction_chooser.addon_azazel_menu.random
 
-  if (actorStillHasCompanions) then
+  if ui_addon_azazel_faction_chooser.addon_azazel_menu.doNotRebornInSquadMember ~= nil then
+    doNotRebornInSquadMember = ui_addon_azazel_faction_chooser.addon_azazel_menu.doNotRebornInSquadMember
+  end
+
+  if actorStillHasCompanions and not doNotRebornInSquadMember then
     se_obj = alife_object(addonAllPossibleStalkers[math.random(#addonAllPossibleStalkers)])
   else
     local stalkersOfSelectedFactions = {}
     for i = 1, #addonAllPossibleStalkers do
       local stalkerFaction = alife_object(addonAllPossibleStalkers[i]):community()
-      if (factionsPool[stalkerFaction]) then
+      if factionsPool[stalkerFaction] or randomChoose then
         table.insert(stalkersOfSelectedFactions, addonAllPossibleStalkers[i])
       end
     end
@@ -564,7 +565,9 @@ local function save_state(m_data)
     m_data.azazel_state = {}
   end
 
+  m_data.azazel_state.enabled = enabled
   m_data.azazel_state.azazel_death = azazel_death
+  m_data.azazel_state.doNotRebornInSquadMember = doNotRebornInSquadMember
 end
 
 local function load_state(m_data)
@@ -573,6 +576,8 @@ local function load_state(m_data)
   end
 
   azazel_death = m_data.azazel_state.azazel_death or false
+  enabled = m_data.azazel_state.enabled or false
+  doNotRebornInSquadMember = m_data.azazel_state.doNotRebornInSquadMember or false
 end
 
 function on_game_start()

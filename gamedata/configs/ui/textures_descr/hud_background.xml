@@ -1,0 +1,8 @@
+<w>
+    <file name="ui\hud_back">
+		<texture id="hud_back_bars" x="0" y="0" width="1024" height="63" />
+		<texture id="hud_back_ammo" x="103" y="0" width="127" height="63" />
+		<texture id="hud_health_bar" x="0" y="63" width="89" height="16" />
+		<texture id="hud_stamina_bar" x="0" y="79" width="89" height="8" />
+	</file>
+</w>

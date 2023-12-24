@@ -175,7 +175,7 @@ function on_game_start()
 end
 
 function companion_squad_can_teleport(squad)
-  if IsLeaderSquad(squad) then
+  if IsUniqSquad(squad) then
     return false
   end
   local id = squad:commander_id()

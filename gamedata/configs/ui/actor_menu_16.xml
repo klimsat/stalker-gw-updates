@@ -176,7 +176,7 @@
 		<text align="l" font="letterica16" color="ui_7"/>
 	</partner_weight>
 
-	<!-- partner  ---------------------------------------------------------------- -->
+	<!-- partner -->
 	<left_delimiter x="102" y="226" width="273" height="163" stretch="1">
 		<texture>ui_inGame2_center_trade_devider</texture>
 		<trade_caption x="118" y="74" width="48" height="16">
@@ -189,7 +189,7 @@
 			<text align="l" font="letterica16" color="ui_3"/>
 		</trade_weight_max>
 	</left_delimiter>
-	<!-- actor  ---------------------------------------------------------------- -->
+	<!-- actor -->
 	<right_delimiter x="648" y="226" width="273" height="163" stretch="1">
 	    <texture>ui_inGame2_center_trade_devider</texture>
 	    <trade_caption x="118" y="74" width="48" height="16">

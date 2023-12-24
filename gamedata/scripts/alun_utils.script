@@ -1754,21 +1754,13 @@ function w_stpk(stpk, typ, n, info)
       stpk:w_stringZ("nil")
     end
   elseif (typ == "CTime") then
-    --[[
-		if (n and type(n) == "userdata" and n.timeToString) then
-			utils.w_CTime(stpk,n)
-		else
-			--printf("w_stpk:Debug: CTime is nil [%s]",info)
-			utils.w_CTime(stpk,nil)
-		end
-		--]]
     utils.w_CTime(stpk, n)
   else
     isError = true
   end
 
-  if (isError) then
-    printf(
+  if isError then
+    utils.error(
       "w_stpk:CRITICAL ERROR: write %s (%s) TrueType=%s [%s]   | Packet:w_tell()=>%s",
       typ,
       type(n) ~= "userdata" and tostring(n) or "userdata",
@@ -1776,8 +1768,6 @@ function w_stpk(stpk, typ, n, info)
       info,
       stpk:w_tell()
     )
-  else
-    --printf("w_stpk:DEBUG: write %s (%s) TrueType=%s [%s]   | Packet:w_tell()=>%s",typ,type(n) ~= "userdata" and tostring(n) or "userdata",type(n),info,stpk:w_tell())
   end
 end
 

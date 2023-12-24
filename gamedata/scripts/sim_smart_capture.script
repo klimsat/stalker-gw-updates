@@ -189,9 +189,13 @@ function finish_slow_capture(smart)
     return
   end
 
-  local nearest_smart_id, nearest_smart_name = sim_smart.get_nearest_base(smart, actor_faction)
+  local nearest_smart_id, nearest_smart_name = sim_smart.get_nearest_base_on_same_level(smart, actor_faction)
+  if not nearest_smart_id then
+    nearest_smart_id, nearest_smart_name = sim_smart.get_nearest_base_on_other_levels(smart, actor_faction)
+  end
   if nearest_smart_id then
-    local squad = sim_squad.create_squad(alife_object(nearest_smart_id), actor_faction, smart, nil, nil, 1)
+    local fromSmart = alife_object(nearest_smart_id)
+    local squad = sim_squad.create_squad(fromSmart, actor_faction, smart, nil, nil, 1)
     if squad then
       local commanderID = squad:commander_id()
       local commander = commanderID and alife_object(commanderID)

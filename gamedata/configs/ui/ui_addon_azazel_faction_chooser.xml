@@ -141,15 +141,23 @@
 	</label_static_chooseFaction>
 
 	<label_static_doNotPlayAnimation x="110" y="25">
-    <text r="190" g="190" b="190" font="letterica18" align="l" vert_align="c">st_addon_azazel_faction_chooser_label_doNotPlayAnimation</text>
+        <text r="190" g="190" b="190" font="letterica18" align="l" vert_align="c">st_addon_azazel_faction_chooser_label_doNotPlayAnimation</text>
 	</label_static_doNotPlayAnimation>
 
 	<label_static_findNearest x="110" y="55">
-    <text r="190" g="190" b="190" font="letterica18" align="l" vert_align="c">st_addon_azazel_faction_chooser_label_findNearest</text>
+        <text r="190" g="190" b="190" font="letterica18" align="l" vert_align="c">st_addon_azazel_faction_chooser_label_findNearest</text>
 	</label_static_findNearest>
+
+    <label_static_random x="110" y="85">
+        <text r="190" g="190" b="190" font="letterica18" align="l" vert_align="c">st_addon_azazel_faction_chooser_label_random</text>
+    </label_static_random>
+
+    <label_static_doNotRebornInSquadMember x="110" y="115">
+        <text r="190" g="190" b="190" font="letterica18" align="l" vert_align="c">st_addon_azazel_faction_chooser_label_doNotRebornInSquadMember</text>
+    </label_static_doNotRebornInSquadMember>
 	
 	<label_static_rebornInLeaders x="800" y="55">
-    <text r="190" g="190" b="190" font="letterica18" align="l" vert_align="c">st_addon_azazel_faction_chooser_label_rebornInLeaders</text>
+        <text r="190" g="190" b="190" font="letterica18" align="l" vert_align="c">st_addon_azazel_faction_chooser_label_rebornInLeaders</text>
 	</label_static_rebornInLeaders>
 	
 	<checkbox_rebornInLeaders_checked x="770" y="48" width="32" height="32">
@@ -187,5 +195,29 @@
         <texture x="0" y="0" width="32" height="32">ui\ui_addon_azazel_faction_chooser_icons</texture>
     </auto_static>
 	</checkbox_findNearest_unchecked>
+
+	<checkbox_random_checked x="80" y="78" width="32" height="32">
+    <auto_static width="20" height="20" stretch="1">
+        <texture x="32" y="0" width="32" height="32">ui\ui_addon_azazel_faction_chooser_icons</texture>
+    </auto_static>
+    </checkbox_random_checked>
+
+    <checkbox_random_unchecked x="80" y="78" width="32" height="32">
+    <auto_static width="20" height="20" stretch="1">
+        <texture x="0" y="0" width="32" height="32">ui\ui_addon_azazel_faction_chooser_icons</texture>
+    </auto_static>
+    </checkbox_random_unchecked>
+
+	<checkbox_doNotRebornInSquadMember_checked x="80" y="108" width="32" height="32">
+    <auto_static width="20" height="20" stretch="1">
+        <texture x="32" y="0" width="32" height="32">ui\ui_addon_azazel_faction_chooser_icons</texture>
+    </auto_static>
+    </checkbox_doNotRebornInSquadMember_checked>
+
+    <checkbox_doNotRebornInSquadMember_unchecked x="80" y="108" width="32" height="32">
+    <auto_static width="20" height="20" stretch="1">
+        <texture x="0" y="0" width="32" height="32">ui\ui_addon_azazel_faction_chooser_icons</texture>
+    </auto_static>
+    </checkbox_doNotRebornInSquadMember_unchecked>
 
 </addonAzazelFactionChooser>

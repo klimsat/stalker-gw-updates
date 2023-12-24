@@ -109,7 +109,7 @@ turn_on_campfire = false
 
 
 [logic@trader]
-suitable = {=check_npc_name(sim_default_army_trader)} true, {=check_npc_name(sim_default_freedom_trader)} true, {=check_npc_name(sim_default_bandit_trader)} true, {=check_npc_name(sim_default_dolg_trader)} true, {=check_npc_name(sim_default_monolith_trader)} true, {=check_npc_name(sim_default_stalker_trader)} true, {=check_npc_name(sim_default_ecolog_trader)} true, {=check_npc_name(sim_default_csky_trader)} true, {=check_npc_name(sim_default_killer_trader)} true, {=check_npc_name(sim_default_isg_trader)} true, {=check_npc_name(sim_default_darkstalker_trader)} true, {=check_npc_name(sim_default_renegate_trader)} true, {=check_npc_name(sim_default_varyag_trader)} true, {=check_npc_name(sim_default_slizni_trader)} true, {=check_npc_name(sim_default_velhan_trader)} true, {=check_npc_name(sim_default_fantom_trader)} true, {=check_npc_name(sim_default_veter_trader)} true, {=check_npc_name(sim_default_osoznanie_trader)} true, {=check_npc_name(sim_default_alfa_trader)} true, {=check_npc_name(sim_default_ansf_trader)} true, {=check_npc_name(sim_default_adinkvizicia_trader)} true, {=check_npc_name(sim_default_hunter_trader)} true, {=check_npc_name(sim_default_voenstal_trader)} true, {=check_npc_name(sim_default_mirotvorec_trader)} true, {=check_npc_name(sim_default_ryskuspecnaz_trader)} true, {=check_npc_name(sim_default_sby_trader)} true, {=check_npc_name(sim_default_angel_trader)} true, {=check_npc_name(sim_default_posleduden_trader)} true, {=check_npc_name(sim_default_greh_trader)} true
+suitable = {=is_npc_match(trader)} true
 prior = 200
 trade = misc\trade\magazin_knigi.ltx
 active = animpoint@trade
@@ -126,7 +126,7 @@ help_wounded_enabled = false
 corpse_detection_enabled = false
 
 [logic@barmen]
-suitable = {=check_npc_name(sim_default_army_barmen)} true, {=check_npc_name(sim_default_freedom_barmen)} true, {=check_npc_name(sim_default_bandit_barmen)} true, {=check_npc_name(sim_default_dolg_barmen)} true, {=check_npc_name(sim_default_monolith_barmen)} true, {=check_npc_name(sim_default_stalker_barmen)} true, {=check_npc_name(sim_default_ecolog_barmen)} true, {=check_npc_name(sim_default_csky_barmen)} true, {=check_npc_name(sim_default_killer_barmen)} true, {=check_npc_name(sim_default_isg_barmen)} true, {=check_npc_name(sim_default_darkstalker_barmen)} true, {=check_npc_name(sim_default_renegate_barmen)} true, {=check_npc_name(sim_default_varyag_barmen)} true, {=check_npc_name(sim_default_slizni_barmen)} true, {=check_npc_name(sim_default_velhan_barmen)} true, {=check_npc_name(sim_default_fantom_barmen)} true, {=check_npc_name(sim_default_veter_barmen)} true, {=check_npc_name(sim_default_osoznanie_barmen)} true, {=check_npc_name(sim_default_alfa_barmen)} true, {=check_npc_name(sim_default_apocalypse_barmen)} true, {=check_npc_name(sim_default_adinkvizicia_barmen)} true, {=check_npc_name(sim_default_hunter_barmen)} true, {=check_npc_name(sim_default_voenstal_barmen)} true, {=check_npc_name(sim_default_mirotvorec_barmen)} true, {=check_npc_name(sim_default_ryskuspecnaz_barmen)} true, {=check_npc_name(sim_default_sby_barmen)} true, {=check_npc_name(sim_default_angel_barmen)} true, {=check_npc_name(sim_default_posleduden_barmen)} true, {=check_npc_name(sim_default_greh_barmen)} true
+suitable = {=is_npc_match(barmen)} true
 prior = 1000
 active = animpoint@barmen
 level_spot = trader

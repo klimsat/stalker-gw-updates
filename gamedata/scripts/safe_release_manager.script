@@ -36,26 +36,27 @@ function execute_destroy_callback()
     for id, name in pairs(objects_to_release) do
       local se_obj = alife_object(id)
       if se_obj and se_obj:name() == name then
-        local dist = sim:actor().position:distance_to_sqr(se_obj.position)
         local npc_level_id =
           se_obj and se_obj.m_game_vertex_id and game_graph():vertex(se_obj.m_game_vertex_id):level_id()
         local current_level = game_graph():vertex(sim:actor().m_game_vertex_id):level_id()
 
-        if dist > SWITCH_REMOVE_DIST then
-          if se_obj.online then
-            -- prevent from coming online ever again
-            sim:set_switch_online(id, false)
-            sim:set_switch_offline(id, true)
-            -- force offline
-            se_obj:switch_offline()
+        if se_obj.online then
+          -- prevent from coming online ever again
+          sim:set_switch_online(id, false)
+          sim:set_switch_offline(id, true)
+          -- force offline
+          se_obj:switch_offline()
+        else
+          if IsSquad(se_obj) then
+            SIMBOARD:remove_squad(se_obj)
           else
             alife_release(se_obj)
-            objects_to_release[id] = nil
-            db.del_stalker_by_id(id)
+          end
+          objects_to_release[id] = nil
+          db.del_stalker_by_id(id)
 
-            if db.storage[id] and db.storage[id].object then
-              db.storage[id].object = nil
-            end
+          if db.storage[id] and db.storage[id].object then
+            db.storage[id].object = nil
           end
         end
       else

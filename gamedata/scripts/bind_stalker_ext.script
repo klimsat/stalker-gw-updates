@@ -35,7 +35,7 @@ end
 -------------------
 -- actor_on_net_spawn
 -------------------
-function actor_on_net_spawn()
+function actor_on_net_spawn(binder)
   local con = get_console()
   if (axr_main.config:r_value("mm_options", "hardcore_ai_aim", 1, false)) then
     con:execute("ai_aim_max_angle 20.0")

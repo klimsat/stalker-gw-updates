@@ -4,10 +4,17 @@ local function npc_on_death(npc, who)
   local section = npc:section()
   local faction = npc:character_community()
 
-  if not string.find(section, "_leader_") then
+  if npc:id() ~= 0 and not string.find(section, "_leader_") then
     return
   end
+
   local npc_name = npc:character_name()
+
+  if npc:id() == 0 then
+    npc_name = sim_brain.actor_name
+    faction = sim_brain.actor_faction
+  end
+
   local name = ui_pda_factions_tab.leaders[faction].name
 
   if npc_name ~= name then
@@ -15,7 +22,7 @@ local function npc_on_death(npc, who)
   end
 
   local actorFaction = sim_brain.actor_faction
-  local IsActorKiller = who:id() == 0
+  local IsActorKiller = (type(who.id) == "function" and who:id() or who.id) == 0
   local actorFullFaction = db.actor:character_community()
 
   if IsActorKiller then
@@ -60,10 +67,7 @@ local function RenameDisabledLaders()
 end
 
 local function actor_on_before_death(whoID, flags)
-  if whoID == 0 then
-    return
-  end
-  local actor_name = db.actor:character_name()
+  local actor_name = sim_brain.actor_name
   local name = ui_pda_factions_tab.leaders[sim_brain.actor_faction].name
 
   if actor_name ~= name then

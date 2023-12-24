@@ -1015,12 +1015,13 @@ function IsSquad(o, c)
   return c and c == clsid.online_offline_group_s or false
 end
 
-function includes(...)
-  local ret = {}
+function includes(str, ...)
   for _, k in ipairs({...}) do
-    ret[k] = true
+    if string.match(str, k) then
+      return true
+    end
   end
-  return ret
+  return false
 end
 
 function IsUniqSquad(obj)
@@ -1031,9 +1032,9 @@ function IsUniqSquad(obj)
     utils.error("In IsUniqSquad. Passed arg is not a squad. obj=[%s] name=[%s] clsid=[%s]", obj, obj:name(), obj.clsid)
   end
 
-  return includes("trader", "mechanic", "barmen", "medik", "medic", "unik", "explorer", "leader")[
-    string.match(type(obj.section_name) == "function" and obj:section_name() or obj:name(), "sim_squad_(.*)")
-  ]
+  local section = type(obj.section_name) == "function" and obj:section_name() or obj:name()
+
+  return includes(section, "trader", "mechanic", "barmen", "medik", "medic", "unik", "explorer", "leader")
 end
 function IsUniqNpc(obj)
   if not obj then
@@ -1043,12 +1044,9 @@ function IsUniqNpc(obj)
     utils.error("In IsUniqNpc. Passed arg is not a stalker. obj=[%s]  name=[%s] clsid=[%s]", obj, obj:name(), obj.clsid)
   end
 
-  return includes("trader", "mechanic", "barmen", "medik", "medic", "unik", "explorer", "leader")[
-    string.match(
-      type(obj.section_name) == "function" and obj:section_name() or obj:name(),
-      "sim_default_[a-zA-Z]+_([a-zA-Z]+)"
-    )
-  ]
+  local section = type(obj.section_name) == "function" and obj:section_name() or obj:name()
+
+  return includes(section, "trader", "mechanic", "barmen", "medik", "medic", "unik", "explorer", "leader")
 end
 function IsLeaderNpc(obj)
   if not obj then

@@ -73,30 +73,26 @@ local function on_game_load(binder)
       config:w_value("character_creation", "new_game_difficulty")
       need_save = true
     end
-  --[[
-		if (config:r_value("character_creation","new_game_economy_goodwill",2)) then
-			alife_storage_manager.get_state().economy_goodwill = config:r_value("character_creation","new_game_economy_goodwill",2)
-			config:w_value("character_creation","new_game_economy_goodwill")
-			need_save = true
-		end
-		if (config:r_value("character_creation","new_game_economy_money",2)) then
-			alife_storage_manager.get_state().economy_money = config:r_value("character_creation","new_game_economy_money",2)
-			config:w_value("character_creation","new_game_economy_money")
-			need_save = true
-		end
-		if (config:r_value("character_creation","new_game_economy_wpn",2)) then
-			alife_storage_manager.get_state().economy_wpn = config:r_value("character_creation","new_game_economy_wpn",2)
-			config:w_value("character_creation","new_game_economy_wpn")
-			need_save = true
-		end
-		if (config:r_value("character_creation","new_game_economy_loot",2)) then
-			alife_storage_manager.get_state().economy_loot = config:r_value("character_creation","new_game_economy_loot",2)
-			config:w_value("character_creation","new_game_economy_loot")
-			need_save = true
-		end
-		--]]
   end
 
+  local azazelEnabled = config:r_value("character_creation", "new_game_azazel_mode", 1, false)
+  if azazelEnabled then
+    config:w_value("character_creation", "new_game_azazel_mode")
+    azazel_mode.enabled = azazelEnabled
+    need_save = true
+  end
+
+  -- Name
+  local new_character_name = config:r_value("character_creation", "new_game_character_name", 0, "")
+  if (new_character_name and new_character_name ~= "") then
+    config:w_value("character_creation", "new_game_character_name")
+
+    need_save = true
+
+    new_character_name = new_character_name:gsub("_", " ")
+    sim_brain.actor_name = new_character_name
+    se_actor:set_character_name(new_character_name)
+  end
   -- Name
   local new_character_name = config:r_value("character_creation", "new_game_character_name", 0, "")
   if (new_character_name and new_character_name ~= "") then
@@ -111,9 +107,8 @@ local function on_game_load(binder)
 
   -- Icon
   local new_character_icon = config:r_value("character_creation", "new_game_icon", 0, "")
-  if (new_character_icon and new_character_icon ~= "") then
-    db.actor_binder.character_icon = new_character_icon
-
+  if (new_character_icon and new_character_icon ~= "" and binder.character_icon == nil) then
+    binder.character_icon = new_character_icon
     config:w_value("character_creation", "new_game_icon")
     need_save = true
   end
@@ -1775,7 +1770,7 @@ function faction_ui:OnRandomize()
 
   -- Name
   local subset
-  if includes("army", "ryskuspecnaz", "sby", "dolg")[self.selected_faction] then
+  if includes(self.selected_faction, "army", "ryskuspecnaz", "sby", "dolg") then
     subset = random_choice("private", "sergeant", "senior_sergeant", "lieutenant", "captain")
   else
     subset = random_choice("stalker", "bandit", "science")
@@ -1916,11 +1911,6 @@ function faction_ui:OnStartGame()
     else
       axr_main.config:w_value("mm_options", "enable_respawn_" .. faction, false)
     end
-  end
-
-  local new_character_icon = axr_main.config:r_value("character_creation", "new_game_icon", 0, self.selected_icon)
-  if db.actor_binder and db.actor_binder.character_icon then
-    db.actor_binder.character_icon = new_character_icon
   end
 
   axr_main.config:w_value("character_creation", "new_game_enabled_factions", table.concat(tbl_enabled_faction, ", "))

@@ -1,9 +1,8 @@
 [logic@jup_b6_scientist_nuclear_physicist]
-suitable = {=check_npc_name(jup_b6_scientist_nuclear_physicist)} true, {=check_npc_name(sim_default_army_trader)} true, {=check_npc_name(sim_default_freedom_trader)} true, {=check_npc_name(sim_default_bandit_trader)} true, {=check_npc_name(sim_default_dolg_trader)} true, {=check_npc_name(sim_default_monolith_trader)} true, {=check_npc_name(sim_default_stalker_trader)} true, {=check_npc_name(sim_default_ecolog_trader)} true, {=check_npc_name(sim_default_csky_trader)} true, {=check_npc_name(sim_default_killer_trader)} true
-trade = misc\trade\trade_hermann.ltx
+suitable = {=is_npc_match(trader)} true
+trade = misc\trade\trade_medic.ltx
 prior = 200
 active = walker@meet
-level_spot = trader
 
 [walker@meet]
 path_walk = nuc_walk

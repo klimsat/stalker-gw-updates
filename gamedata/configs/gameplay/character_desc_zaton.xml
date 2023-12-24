@@ -1501,7 +1501,7 @@
         [spawn] \n
         wpn_lr300 = 1, scope \n
         ammo_5.56x45_ap = 1 \n
-        wpn_usp = 1, silencer = 1 \n
+        wpn_usp = 1, silencer \n
         ammo_11.43x23_hydro = 1 \n
         grenade_f1 = 4 \n
 #include "gameplay\character_food.xml"
